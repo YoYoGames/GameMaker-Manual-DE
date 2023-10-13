@@ -4,10 +4,10 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>time_source_reconfigure</title>
+  <title>zeit_quelle_rekonfigurieren</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Reference page for time_source_reconfigure" />
@@ -15,11 +15,11 @@
   <meta name="search-keywords" content="time_source_reconfigure" />
 </head>
 <body>
-  <h1>time_source_reconfigure</h1>
-  <p>This function is used to modify the core properties of a <span data-keyref="Type_Resource_TimeSource">Time Source</span>, without having to create an entirely new one.</p>
-  <p>You specify an existing <span data-keyref="Type_Resource_TimeSource">Time Source</span>, and then set the properties that are also set in <a href="time_source_create.htm"><span class="inline">time_source_create()</span></a>, except the parent. Read that page for detailed information on these properties.</p>
-  <p>The specified <span data-keyref="Type_Resource_TimeSource">Time Source</span> will be reset and deactivated, and will need to be <a href="time_source_start.htm">started</a> again.</p>
-  <p> </p>
+  <h1>zeit_quelle_rekonfigurieren</h1>
+  <p>Diese Funktion wird verwendet, um die Haupteigenschaften einer <span data-keyref="Type_Resource_TimeSource">Zeitquelle</span> zu ändern, ohne eine völlig neue Zeitquelle erstellen zu müssen.</p>
+  <p>Sie geben eine vorhandene <span data-keyref="Type_Resource_TimeSource">Zeitquelle</span> an und legen dann die Eigenschaften fest, die auch in <a href="time_source_create.htm"><span class="inline">time_source_create()</span></a>festgelegt sind, außer der übergeordneten. Ausführliche Informationen zu diesen Eigenschaften finden Sie auf dieser Seite.</p>
+  <p>Die angegebene <span data-keyref="Type_Resource_TimeSource">Zeitquelle</span> wird zurückgesetzt und deaktiviert und muss dann neu <a href="time_source_start.htm">gestartet</a> werden.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">time_source_reconfigure(id, period, units, callback, [args, repetitions, expiry_type]);</p>
   <table>
@@ -31,69 +31,69 @@
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>id</td>
-        <td><span data-keyref="Type_ID_TimeSource"><a href="../../../../GameMaker_Language/GML_Reference/Time_Sources/time_source_create.htm" target="_blank">Time Source ID</a></span></td>
-        <td>The <span data-keyref="Type_Resource_TimeSource">Time Source</span> to reconfigure</td>
+        <td><span class="notranslate">id</span></td>
+        <td><span data-keyref="Type_ID_TimeSource"><a href="../../../../GameMaker_Language/GML_Reference/Time_Sources/time_source_create.htm" target="_blank">Zeitquellen-ID</a></span></td>
+        <td><span class="notranslate">The <span data-keyref="Type_Resource_TimeSource">Time Source</span> zu rekonfigurieren</td>
       </tr>
       <tr>
-        <td>period</td>
+        <td><span class="notranslate">period</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The period that the <span data-keyref="Type_Resource_TimeSource">Time Source</span> runs for, in the given units</td>
+        <td><span class="notranslate">The period that the <span data-keyref="Type_Resource_TimeSource">Time Source</span> läuft für, in den angegebenen Einheiten</td>
       </tr>
       <tr>
-        <td>units</td>
-        <td><span data-keyref="Type_Constant_TimeSource_Unit"><a href="../../../../GameMaker_Language/GML_Reference/Time_Sources/Time_Source_Units.htm" target="_blank">Time Source Unit Constant</a></span></td>
-        <td>The units that the given period is in</td>
+        <td><span class="notranslate">units</span></td>
+        <td><span data-keyref="Type_Constant_TimeSource_Unit"><a href="../../../../GameMaker_Language/GML_Reference/Time_Sources/Time_Source_Units.htm" target="_blank">Zeitquelle Einheit Konstante</a></span></td>
+        <td><span class="notranslate">The units that the given period is in</span></td>
       </tr>
       <tr>
-        <td>callback</td>
-        <td><span data-keyref="Type_Method"><a href="../../../../GameMaker_Language/GML_Overview/Method_Variables.htm" target="_blank">Method</a></span></td>
-        <td>The method to call when the <span data-keyref="Type_Resource_TimeSource">Time Source</span> expires</td>
+        <td><span class="notranslate">callback</span></td>
+        <td><span data-keyref="Type_Method"><a href="../../../../GameMaker_Language/GML_Overview/Method_Variables.htm" target="_blank">Methode</a></span></td>
+        <td><span class="notranslate">The method to call when the <span data-keyref="Type_Resource_TimeSource">Time Source</span> Läuft ab</td>
       </tr>
       <tr>
-        <td>args</td>
+        <td><span class="notranslate">args</span></td>
         <td><span data-keyref="Type_Array"><a href="../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span></td>
-        <td><span class="optional">OPTIONAL</span> An array containing the arguments to pass into the method</td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> Ein Array, das die <span class="notranslate">arguments</span> enthält, die an die Methode übergeben wird</td>
       </tr>
       <tr>
-        <td>repetitions</td>
+        <td><span class="notranslate">repetitions</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td><span class="optional">OPTIONAL</span> The number of times the <span data-keyref="Type_Resource_TimeSource">Time Source</span> should repeat, or -1 for indefinite repetition</td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> Die Anzahl der Wiederholungen der <span data-keyref="Type_Resource_TimeSource">Zeitquelle</span>, oder -1 für unbestimmte Wiederholungen</td>
       </tr>
       <tr>
-        <td>expiry_type</td>
-        <td><span data-keyref="Type_Constant_TimeSource_Expiry"><a href="../../../../GameMaker_Language/GML_Reference/Time_Sources/Time_Source_Expiry_Types.htm" target="_blank">Time Source Expiry Constant</a></span></td>
-        <td><span class="optional">OPTIONAL</span> Whether the <span data-keyref="Type_Resource_TimeSource">Time Source</span> expires on the frame nearest to its expiry, or on the next frame</td>
+        <td><span class="notranslate">expiry_type</span></td>
+        <td><span data-keyref="Type_Constant_TimeSource_Expiry"><a href="../../../../GameMaker_Language/GML_Reference/Time_Sources/Time_Source_Expiry_Types.htm" target="_blank">Zeitquelle Verfallskonstante</a></span></td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> ob die <span data-keyref="Type_Resource_TimeSource">Zeitquelle</span> in dem Frame, der ihrem Ablauf am nächsten liegt, oder im nächsten Frame abläuft</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">function change_spawn_delay(new_delay)<br />
     {<br />
         time_source_reconfigure(obj_game.spawn_time_source, new_delay, time_source_units_frames, obj_game.spawn_method, [], -1);<br />
         time_source_start(obj_game.spawn_time_source);<br />
     }</p>
-  <p>This creates a new function that changes the spawn delay used for in-game enemies.</p>
-  <p>Assuming the game uses a <span data-keyref="Type_Resource_TimeSource">Time Source</span> called <span class="inline2">obj_game.spawn_time_source</span> to spawn enemies, that <span data-keyref="Type_Resource_TimeSource">Time Source</span> will need to be updated once the spawn delay changes.</p>
-  <p>This function does exactly that, reconfiguring the <span data-keyref="Type_Resource_TimeSource">Time Source</span> with the new delay and then <a href="time_source_start.htm">starting it</a> again.</p>
-  <p> </p>
-  <p> </p>
+  <p>Damit wird eine neue Funktion erstellt, die die Spawn-Verzögerung für Gegner im Spiel ändert.</p>
+  <p>Angenommen, das Spiel verwendet eine <span data-keyref="Type_Resource_TimeSource">Zeitquelle</span> namens <span class="inline2">obj_game.spawn_time_source</span>, um Feinde zu spawnen, dann muss diese <span data-keyref="Type_Resource_TimeSource">Zeitquelle</span> aktualisiert werden, sobald sich die Spawn-Verzögerung ändert.</p>
+  <p>Diese Funktion tut genau das, indem sie die <span data-keyref="Type_Resource_TimeSource">Zeitquelle</span> mit der neuen Verzögerung rekonfiguriert und <a href="time_source_start.htm">sie</a> dann wieder <a href="time_source_start.htm">startet</a>.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Time_Sources.htm">Time Sources</a></div>
-        <div>Next: <a data-xref="{title}" href="time_source_reset.htm">time_source_reset</a></div>
+        <div>Zurück: <a data-xref="{title}" href="Time_Sources.htm">Zeit-Quellen</a></div>
+        <div>Weiter: <a data-xref="{title}" href="time_source_reset.htm">time_source_reset</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 time_source_reconfigure

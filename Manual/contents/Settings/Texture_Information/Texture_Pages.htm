@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Texture Pages</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>Textur-Seiten</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains how texture pages work" />
   <meta name="rh-index-keywords" content="Texture Groups - Texture Pages,Texture Pages" />
@@ -14,34 +14,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Texture Pages</h1>
-  <p>When you create a game with <span data-keyref="GameMaker Name">GameMaker</span>, you will surely have created graphics - Sprites, Tile Sets and Fonts - to go along with it. These graphics are stored on <strong>Texture Pages</strong> which <span data-keyref="GameMaker Name">GameMaker</span> builds for you from all the image assets that your game contains. Below is an example of a complete texture page:</p>
-  <p><img alt="Texture Page Example" class="center" src="../../assets/Images/Settings/Texture_Page_Example.png" />As you can see, the game graphics are all jumbled up together in such a way that they all fit on a power of 2 sized page, eg 512x512, 1024x512 etc... up to a maximum size of 4096x4096 pixels page. Note that the maximum size of a texture page will depend on the chosen export platform, as some targets will not permit pages larger than 2048x2048px, and even then, the maximum available size may not be optimal for all the devices that use the target platform OS.</p>
-  <p>Note too that if your images have a lot of empty space (i.e.: transparent pixels) around them, then they will be cropped by default to remove any of these &quot;invisible&quot; pixels and pack as many images as possible onto a single texture page. If this is not what you wish to happen, then you need to disable it from the <a href="../Texture_Groups.htm">Texture Groups</a> window.</p>
-  <p>It is important to understand how the different available texture settings will affect an image, so let&#39;s look at the <a href="../../The_Asset_Editors/Sprites.htm">Sprite Editor</a> section titled <strong>Texture Settings</strong>, shown below:</p>
-  <p><img alt="Texture Page Options" class="center" src="../../assets/Images/Settings/Texture_Page_Options.png" />Here you can define how the image is to be stored on the texture page, as well as whether it has to be stored separately. You can also set which texture page it has to be assigned to as well as a few other options (explained in depth on the <a href="../../The_Asset_Editors/Sprites.htm">Sprite Editor</a> page).</p>
-  <h2>Tile Horizontally &amp; Tile Vertically</h2>
-  <p>These relate to how the edges of the image will be created when placed on the texture page.</p>
-  <p>An image that is to be tiled will have the edges (horizontal or vertical) added to by the edges from the opposite side, while if no tiling is selected the sprite will be <em>clamped </em>and the edges pixels will be repeated (note that tilesets also have a setting for the output border width, found in the <a href="../../The_Asset_Editors/Tile_Sets.htm">Tile Set Properties</a> which does the same thing, only for each tile in the set). The following image illustrates this:</p>
-  <p><img alt="Texture Page Results" class="center" src="../../assets/Images/Settings/Texture_Page_Results.png" /></p>
-  <h2 id="h">Separate Texture Page</h2>
-  <p>Underneath those settings is the <strong>Separate Texture Page </strong>setting. This option will force <span data-keyref="GameMaker Name">GameMaker</span> to place this image on its own unique texture page and there are no options associated with this as the tiling or clamping is controlled directly through code. This is most commonly used for texturing 3D models (in which case the texture should be a power of 2, eg: 128x128, 512x512, 256x1024, etc...), but you can use it to force any image to be drawn to its own unique page.</p>
-  <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> Take care when using this option as you can quickly use up all the available texture memory, especially on mobile devices, if you have too many texture pages.</p>
-  <p>If you assign the sprite a separate texture page, you can also set whether it&#39;s <a href="Dynamic_Textures.htm">dynamic</a> or not.</p>
-  <p>You can also set which <a href="../Texture_Groups.htm">Texture Group</a> the sprite is assigned to.</p>
-  <p>It should be noted that in the individual platform tabs that can be found in the <a href="../Game_Options.htm">Game Options</a> there is a button that permits you to view the texture pages that you have defined, just as they would be created for each target. This is very handy for working out how many pages are being created and what&#39;s on them.</p>
-  <p>Should you have a texture in your game that is larger than the maximum selected texture page size, then this will be <em>scaled down by half </em>(and half again if necessary) until it fits on the maximum page size. It will <em>not </em>be split into sections over various texture pages. This means that when you test your game on Windows, Ubuntu (Linux) or MacOS the game may look fine as you are using larger texture pages, but on iOS (or any of the other targets that require a smaller texture page size for optimal performance) the texture may look blurred or have artefacts. It is essential that you make sure your images are all able to fit on the smallest of the texture page sizes that your game will use, and if not then you should split them into smaller images and then draw them together in your game to give the illusion of one large, complete, image.</p>
-  <p class="note"><span data-conref="../../assets/snippets/Tag_note.hts"> </span> Before you go off splitting up your graphics over various texture pages, you should be aware that this is not always necessary, nor is it always the most efficient way to work. Some games may be more CPU bound than GPU bound (see the section on <a href="../../Introduction/Debugging.htm">Debugging</a> for more information) and those games will not benefit greatly from this optimisation, and you should also consider whether it would not be better to have all your images on two texture pages and swap between them rather than spread out over several, which is just wasting memory.</p>
-  <p> </p>
-  <p> </p>
+  <h1>Textur-Seiten</h1>
+  <p>Wenn Sie ein Spiel mit <span data-keyref="GameMaker Name">GameMaker</span> erstellen, haben Sie sicherlich auch Grafiken erstellt - <span class="notranslate">sprites</span>, Tilesets und Schriftarten - die dazu gehören. Diese Grafiken werden auf <strong>Texture Pages</strong> gespeichert, die <span data-keyref="GameMaker Name">GameMaker</span> für Sie aus allen
+    Bildressourcen erstellt, die Ihr Spiel enthält. Im Folgenden sehen Sie ein Beispiel für eine fertige Textur-Seite:</p>
+  <p><img>Wie Sie sehen können, sind die Spielgrafiken so angeordnet, dass sie alle auf eine Seite in der Größe einer Potenz von 2 passen, z. B. 512x512, 1024x512
+    usw... bis zu einer maximalen Größe von 4096x4096 Pixel Seite. Beachten Sie, dass die maximale Größe einer Texturseite von dem gewählten Export <span class="notranslate">platform</span> abhängt, da einige Ziele keine Seiten mit einer Größe von mehr als 2048x2048px zulassen, und selbst dann ist die maximal verfügbare Größe
+    möglicherweise nicht für alle Geräte, die das Zielsystem <span class="notranslate">platform</span> verwenden, optimal ist.</p>
+  <p>Wenn Ihre Bilder viel leeren Raum (d. h. transparente Pixel) haben, werden sie standardmäßig beschnitten, um diese &quot;unsichtbaren&quot; Pixel zu entfernen und so viele Bilder wie möglich auf eine einzige Texturseite zu packen. Wenn
+    Sie dies nicht wünschen, müssen Sie dies im Fenster <a href="../Texture_Groups.htm">Texturgruppen</a> deaktivieren.</p>
+  <p>Es ist wichtig zu verstehen, wie sich die verschiedenen verfügbaren Textureinstellungen auf ein Bild auswirken, also schauen wir uns den Abschnitt <strong>Textureinstellungen</strong> im <a href="../../The_Asset_Editors/Sprites.htm">Sprite-Editor</a> an, der unten abgebildet ist:</p>
+  <p><img>Hier können Sie festlegen, wie das Bild auf der Texturseite gespeichert werden soll und ob es ein Bild speziell für die Verwendung mit 3D ist und separat gespeichert werden muss.
+    separat gespeichert werden soll und welcher Texturseite (falls vorhanden) es zugewiesen werden soll, sowie einige andere Optionen (ausführlich erklärt auf der Seite <a href="../../The_Asset_Editors/Sprites.htm">Sprite-Editor</a> ). Die Optionen, an denen wir interessiert sind, sind die
+    ersten beiden: Horizontal kacheln und Vertikal kacheln. Diese beziehen sich darauf, wie die Kanten des Bildes erstellt werden, wenn es auf der Texturseite platziert wird.</p>
+  <p>Bei einem Bild, das gekachelt werden soll, werden die Ränder (horizontal oder vertikal) durch die Ränder der gegenüberliegenden Seite ergänzt, während, wenn keine Kachelung ausgewählt ist, die <span class="notranslate">sprite</span> <em>geklammert </em>wird und die Randpixel wiederholt werden (beachten Sie, dass Kachelsätze auch eine Einstellung für die
+    eine Einstellung für die Breite des Ausgaberandes haben, die in den <a href="../../The_Asset_Editors/Tile_Sets.htm">Eigenschaften des Kachelsatzes</a> zu finden ist und die das Gleiche bewirkt, nur für jede Kachel im Satz). Das folgende Bild veranschaulicht dies:</p>
+  <p><img>Unterhalb dieser Einstellungen befindet sich die Einstellung <strong>Separate Texture Page </strong>. Mit dieser Option wird <span data-keyref="GameMaker Name">GameMaker</span> gezwungen, dieses Bild
+    auf einer eigenen Texturseite zu platzieren, und es gibt keine Optionen, die damit verbunden sind, da die Kachelung oder Einspannung direkt über <span class="notranslate">code</span> gesteuert wird. Dies wird am häufigsten für die Texturierung von 3D-Modellen verwendet (in diesem Fall sollte die Textur eine Potenz von 2 sein, z. B.: 128x128,
+    512x512, 256x1024, etc...), aber Sie können damit auch jedes Bild auf eine eigene Seite zeichnen lassen.</p>
+  <p class="note"><strong>HINWEIS</strong>: Seien Sie vorsichtig, wenn Sie diese Option verwenden, da Sie schnell den gesamten verfügbaren Texturspeicher verbrauchen können, insbesondere auf mobilen Geräten, wenn Sie zu viele Texturseiten haben.</p>
+  <p>Wenn Ihr Spiel umfangreich ist und viele künstlerische Ressourcen enthält, kann es sein, dass die Art und Weise, wie <span data-keyref="GameMaker Name">GameMaker</span> diese Seiten automatisch erstellt, nicht optimal ist, um das Zielgerät optimal zu nutzen, denn wenn ein Raum in Ihrem Spiel
+    Wenn ein Raum in Ihrem Spiel Ressourcen von 4 verschiedenen Texturseiten benötigt, muss das Gerät diese Seiten ständig in den (und aus dem) Speicher auslagern, was zu Leistungseinbußen führen kann. Zu diesem Zweck haben Sie die Möglichkeit, dem <span data-keyref="GameMaker Name">GameMaker</span> mitzuteilen, welche Bilder
+    welche Bilder auf einer bestimmten Texturseite platziert werden sollen, indem Sie sie bestimmten <strong>Texturgruppen</strong> zuweisen. Das Ziel ist es, die Anzahl der Tauschvorgänge in einem Spiel zu minimieren (Texturseiten können im Fenster <a href="../Texture_Groups.htm">Texturgruppen</a> hinzugefügt werden).</p>
+  <p>Es sei darauf hingewiesen, dass es auf den einzelnen Registerkarten <span class="notranslate">platform</span> in den <a href="../Game_Options.htm">Spieloptionen</a> eine Schaltfläche gibt, mit der Sie die von Ihnen definierten Texturseiten anzeigen können, so wie sie für jedes
+    Ziel erstellt werden. Dies ist sehr praktisch, um herauszufinden, wie viele Seiten erstellt werden und was sich auf ihnen befindet.</p>
+  <p>Sollten Sie eine Textur in Ihrem Spiel haben, die größer ist als die maximal gewählte Texturseitengröße, dann wird diese <em>um die Hälfte </em>(und ggf. nochmals um die Hälfte) <em>verkleinert </em>, bis sie auf die maximale Seitengröße passt. Sie wird <em>nicht </em>in Abschnitte aufgeteilt
+    Abschnitte über verschiedene Texturseiten aufgeteilt. Das bedeutet, wenn Sie Ihr Spiel auf <span class="notranslate">Windows</span>, <span class="notranslate">Ubuntu</span> (<span class="notranslate">Linux</span>) oder MacOS testen, kann das Spiel gut aussehen, da Sie größere Texturseiten verwenden, aber auf <span class="notranslate">iOS</span> (oder einem der anderen Ziele, die eine kleinere Texturseite
+    (oder anderen Zielen, die für eine optimale Leistung eine kleinere Texturseite erfordern) kann die Textur verschwommen aussehen oder Artefakte aufweisen. Es ist wichtig, dass Sie sicherstellen, dass Ihre Bilder alle auf die kleinste der Texturseitengrößen passen, die Ihr Spiel verwenden wird, und wenn nicht, sollten Sie sie
+    Wenn nicht, sollten Sie sie in kleinere Bilder aufteilen und diese dann in Ihrem Spiel zusammenfügen, um die Illusion eines großen, vollständigen Bildes zu erzeugen.</p>
+  <p class="note"><strong>HINWEIS</strong>: Bevor Sie damit beginnen, Ihre Grafiken auf verschiedene Texturseiten aufzuteilen, sollten Sie sich darüber im Klaren sein, dass dies nicht immer notwendig ist und auch nicht immer die effizienteste Arbeitsweise darstellt. Einige Spiele sind mehr an die CPU als an die GPU gebunden (siehe
+    Weitere Informationen finden Sie im Abschnitt " <a href="../../Introduction/Debugging.htm">Debugging"</a> ), und diese Spiele werden von dieser Optimierung nicht sehr profitieren.
+    Texturseiten zu haben und zwischen ihnen zu wechseln, anstatt sie auf mehrere Seiten zu verteilen, was nur Speicherverschwendung bedeutet.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Texture_Groups.htm">Texture Groups</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Dynamic_Textures.htm">Dynamic Textures</a></div>
+        <div style="float:left">Zurück: <a href="../Texture_Groups.htm">Textur-Gruppen</a></div>
+        <div style="float:right">Nächste: <a href="Non-Bitmap_Sprites.htm">Nicht-Bitmap-Sprites</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 Texture Pages

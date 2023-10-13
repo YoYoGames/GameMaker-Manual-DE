@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Buffers</title>
+  <title>Puffer</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for the Buffer functions" />
   <meta name="rh-index-keywords" content="" />
@@ -14,86 +14,87 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Buffers</span></h1>
-  <p>A buffer is a region of physical memory used to temporarily hold data while it is being moved from one place to another or manipulated in some way, for example you can use a buffer to hold packet data awaiting transmission over a network or for storing a packet that has been received over a network. <span data-keyref="GameMaker Name">GameMaker</span> has a number of specific functions related to creating, modifying and loading/saving buffers, but before using them please note the following points:</p>
+  <h1>Puffer</h1>
+  <p>Ein <span class="notranslate">buffer</span> ist ein Bereich des physischen Speichers, der verwendet wird, um Daten vorübergehend zu speichern, während sie von einem Ort zu einem anderen verschoben oder auf irgendeine Weise manipuliert werden. Sie können zum Beispiel ein <span class="notranslate">buffer</span> verwenden, um Paketdaten zu speichern, die auf die Übertragung über ein Netzwerk warten, oder um ein Paket zu speichern, das über ein Netzwerk empfangen wurde. <span data-keyref="GameMaker Name">GameMaker</span> verfügt über eine Reihe spezifischer Funktionen zum Erstellen, Ändern und Laden/Speichern von <span class="notranslate">buffers</span>. Bevor Sie diese nutzen, beachten Sie bitte die folgenden Punkte:</p>
   <ul class="colour">
-    <li>When a buffer is created, it is automatically cleared and filled to 0.</li>
-    <li>The &quot;size&quot; argument of the buffer functions always refers to the size <i>in bytes</i> of the buffer.</li>
-    <li>The &quot;Alignment&quot; argument refers to how data is stored within a buffer. If your alignment is set to say, 4, and you write a single piece of data which is 1 byte in size then do a <span class="inline3_func"><a data-xref="{title}" href="buffer_tell.htm">buffer_tell</a></span>, you&#39;ll get an offset of 1. However, if you write another piece of data, also 1 byte in size, then do a <span class="inline3_func"><a data-xref="{title}" href="buffer_tell.htm">buffer_tell</a></span>, you&#39;ll get an offset of 5 as the alignment has &quot;padded&quot; the data to that size. Alignment only affects <i>where</i> things are written to, so if you do a <span class="inline3_func"><a data-xref="{title}" href="buffer_tell.htm">buffer_tell</a></span> after you write something, it&#39;ll return the current write position which immediately follows the data you&#39;ve written. Note, however, that if you then write another piece of data, internally the buffer will move the write position along to the next multiple of the alignment size before actually writing the piece of data.</li>
-    <li>When dealing with &quot;offset&quot;, this is the value <i>in bytes</i> to offset the data by within the given buffer. So if your buffer is 2 byte aligned and you want to skip the first 4 aligned places, you would have an offset of <span class="inline">2 * 4 bytes</span>.</li>
-    <li>Some of the buffer functions also create a new buffer (like <span class="inline3_func"><a data-xref="{title}" href="buffer_load.htm">buffer_load</a></span> for example). Remember that these buffers will also need to be removed from memory when not in use using the <span class="inline3_func"><a data-xref="{title}" href="buffer_delete.htm">buffer_delete</a></span> function.</li>
-    <li>The memory used for creating buffers is <i>system memory</i> so even when the game doesn&#39;t have focus, any data stored in a buffer should be safe, however if the app is closed or re-started then it will be lost.</li>
+    <li>Wenn eine <span class="notranslate">buffer</span> erstellt wird, wird sie automatisch geleert und auf 0 aufgefüllt.</li>
+    <li>Die &quot;Größe&quot; <span class="notranslate">argument</span> der <span class="notranslate">buffer</span> Funktionen bezieht sich immer auf die Größe <i>in Bytes</i> der <span class="notranslate">buffer</span>.</li>
+    <li>Die &quot;Ausrichtung&quot; <span class="notranslate">argument</span> bezieht sich auf die Art und Weise, wie Daten innerhalb einer <span class="notranslate">buffer</span> gespeichert werden. Wenn Ihre Ausrichtung z.B. auf 4 eingestellt ist und Sie ein einzelnes Datenstück mit einer Größe von 1 Byte schreiben und dann eine <span class="inline">buffer_tell</span> ausführen, erhalten Sie einen Versatz von 1. Wenn Sie jedoch ein weiteres Datenstück mit einer Größe von ebenfalls 1 Byte schreiben und dann eine <span class="inline">buffer_tell</span> ausführen, erhalten Sie einen Versatz von 5, da die Ausrichtung die Daten auf diese Größe &quot;aufgefüllt&quot; hat. Die Ausrichtung wirkt sich nur darauf aus <i>, wohin</i> die Daten geschrieben werden. Wenn Sie also <span class="inline">buffer_tell</span> ausführen, nachdem Sie etwas geschrieben haben, wird die aktuelle Schreibposition zurückgegeben, die unmittelbar auf die geschriebenen Daten folgt. Beachten Sie jedoch, dass <span class="notranslate">buffer</span> die Schreibposition intern auf das nächste Vielfache der Ausrichtungsgröße verschiebt, bevor die Daten tatsächlich geschrieben werden, wenn Sie ein weiteres Stück Daten schreiben.</li>
+    <li>Beim &quot;Offset&quot; handelt es sich um den Wert <i>in Bytes</i>, um den die Daten innerhalb der angegebenen <span class="notranslate">buffer</span> versetzt werden sollen. Wenn Ihre <span class="notranslate">buffer</span> also 2 Byte ausgerichtet ist und Sie die ersten 4 ausgerichteten Stellen überspringen wollen, würden Sie einen Offset von <span class="inline">2 * 4 bytes</span> verwenden.</li>
+    <li>Einige der Funktionen von <span class="notranslate">buffer</span> erstellen auch ein neues <span class="notranslate">buffer</span> (wie z. B. <span class="inline">buffer_load</span> ). Denken Sie daran, dass auch diese <span class="notranslate">buffers</span> aus dem Speicher entfernt werden müssen, wenn sie nicht mit der Funktion <span class="inline">buffer_delete</span> verwendet werden.</li>
+    <li>Der Speicher, der für die Erstellung von <span class="notranslate">buffers</span> verwendet wird, ist der <i>Systemspeicher</i>. Daher sollten alle Daten, die in <span class="notranslate">buffer</span> gespeichert sind, auch dann sicher sein, wenn das Spiel nicht fokussiert ist; wird die App jedoch geschlossen oder neu gestartet, gehen sie verloren.</li>
   </ul>
-  <p>The following pages explain how buffers work within the context of <span data-keyref="GameMaker Name">GameMaker</span> and contain a couple of code examples for those users that are unsure of how to use them:</p>
+  <p>Die folgenden Seiten erklären, wie <span class="notranslate">buffers</span> im Kontext von <span data-keyref="GameMaker Name">GameMaker</span> funktioniert, und enthalten einige <span class="notranslate">code</span> Beispiele für diejenigen, die nicht wissen, wie man sie benutzt:</p>
   <ul class="colour">
-    <li><a href="../../../Additional_Information/Guide_To_Using_Buffers.htm">Using Buffers</a></li>
+    <li><a href="../../../Additional_Information/Guide_To_Using_Buffers.htm">Puffer verwenden</a></li>
   </ul>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_important.hts"> </span> When you create a buffer, the index value used to identify it is an integer value starting at 0. These indices are re-used by <span data-keyref="GameMaker Name">GameMaker</span>, so a destroyed buffer index value may be used by a newly created one afterwards, and we recommend that you set any variable that holds a buffer index to -1 after having destroyed the buffer.</p>
-  <p>The following functions exist for you to use with binary buffers in your games:</p>
+  <p class="note"><em><strong>WICHTIG!</strong></em> Wenn Sie ein <span class="notranslate">buffer</span> erstellen, ist der Indexwert, mit dem es identifiziert wird, ein ganzzahliger Wert, der bei 0 beginnt. Diese Indizes werden von <span class="notranslate">GameMaker</span> wiederverwendet, so dass ein zerstörter <span class="notranslate">buffer</span> Indexwert anschließend von einem neu erstellten verwendet werden kann, und wir empfehlen, dass Sie jede Variable, die einen Pufferindex enthält, auf -1 setzen, nachdem Sie das <span class="notranslate">buffer</span> zerstört haben.</p>
+  <p>Die folgenden Funktionen stehen Ihnen für die Verwendung mit binären <span class="notranslate">buffers</span> in Ihren Spielen zur Verfügung:</p>
   <ul class="colour">
-    <li><a href="buffer_exists.htm">buffer_exists</a></li>
-    <li><a href="buffer_create.htm">buffer_create</a></li>
-    <li><a href="buffer_create_from_vertex_buffer.htm">buffer_create_from_vertex_buffer</a></li>
-    <li><a href="buffer_create_from_vertex_buffer_ext.htm">buffer_create_from_vertex_buffer_ext</a></li>
-    <li><a href="buffer_delete.htm">buffer_delete</a></li>
-    <li><a href="buffer_read.htm">buffer_read</a></li>
-    <li><a href="buffer_write.htm">buffer_write</a></li>
-    <li><a href="buffer_fill.htm">buffer_fill</a></li>
-    <li><a href="buffer_seek.htm">buffer_seek</a></li>
-    <li><a href="buffer_tell.htm">buffer_tell</a></li>
-    <li><a href="buffer_peek.htm">buffer_peek</a></li>
-    <li><a href="buffer_poke.htm">buffer_poke</a></li>
-    <li><a href="buffer_save.htm">buffer_save</a></li>
-    <li><a href="buffer_save_ext.htm">buffer_save_ext</a></li>
-    <li><a href="buffer_save_async.htm">buffer_save_async</a></li>
-    <li><a href="buffer_load.htm">buffer_load</a></li>
-    <li><a href="buffer_load_ext.htm">buffer_load_ext</a></li>
-    <li><a href="buffer_load_async.htm">buffer_load_async</a></li>
-    <li><a href="buffer_load_partial.htm">buffer_load_partial</a></li>
-    <li><a href="buffer_compress.htm">buffer_compress</a></li>
-    <li><a href="buffer_decompress.htm">buffer_decompress</a></li>
-    <li><a href="buffer_async_group_begin.htm">buffer_async_group_begin</a></li>
-    <li><a href="buffer_async_group_option.htm">buffer_async_group_option</a></li>
-    <li><a href="buffer_async_group_end.htm">buffer_async_group_end</a></li>
-    <li><a href="buffer_copy.htm">buffer_copy</a></li>
-    <li><a href="buffer_copy_from_vertex_buffer.htm">buffer_copy_from_vertex_buffer</a></li>
-    <li><a href="buffer_get_type.htm">buffer_get_type</a></li>
-    <li><a href="buffer_get_alignment.htm">buffer_get_alignment</a></li>
-    <li><a href="buffer_get_address.htm">buffer_get_address</a></li>
-    <li><a href="buffer_get_size.htm">buffer_get_size</a></li>
-    <li><a href="buffer_get_surface.htm">buffer_get_surface</a></li>
-    <li><a href="buffer_set_surface.htm">buffer_set_surface</a></li>
-    <li><a href="buffer_resize.htm">buffer_resize</a></li>
-    <li><a href="buffer_sizeof.htm">buffer_sizeof</a></li>
-    <li><a href="buffer_md5.htm">buffer_md5</a></li>
-    <li><a href="buffer_sha1.htm">buffer_sha1</a></li>
-    <li><a href="buffer_crc32.htm">buffer_crc32</a></li>
-    <li><a href="buffer_base64_encode.htm">buffer_base64_encode</a></li>
-    <li><a href="buffer_base64_decode.htm">buffer_base64_decode</a></li>
-    <li><a href="buffer_base64_decode_ext.htm">buffer_base64_decode_ext</a></li>
+    <li><a href="buffer_exists.htm"><span class="notranslate">buffer_exists</span></a></li>
+    <li><a href="buffer_create.htm"><span class="notranslate">buffer_create</span></a></li>
+    <li><a href="buffer_create_from_vertex_buffer.htm"><span class="notranslate">buffer_create_from_vertex_buffer</span></a></li>
+    <li><a href="buffer_create_from_vertex_buffer_ext.htm"><span class="notranslate">buffer_create_from_vertex_buffer_ext</span></a></li>
+    <li><a href="buffer_delete.htm"><span class="notranslate">buffer_delete</span></a></li>
+    <li><a href="buffer_read.htm"><span class="notranslate">buffer_read</span></a></li>
+    <li><a href="buffer_write.htm"><span class="notranslate">buffer_write</span></a></li>
+    <li><a href="buffer_fill.htm"><span class="notranslate">buffer_fill</span></a></li>
+    <li><a href="buffer_seek.htm"><span class="notranslate">buffer_seek</span></a></li>
+    <li><a href="buffer_tell.htm"><span class="notranslate">buffer_tell</span></a></li>
+    <li><a href="buffer_peek.htm"><span class="notranslate">buffer_peek</span></a></li>
+    <li><a href="buffer_poke.htm"><span class="notranslate">buffer_poke</span></a></li>
+    <li><a href="buffer_save.htm"><span class="notranslate">buffer_save</span></a></li>
+    <li><a href="buffer_save_ext.htm"><span class="notranslate">buffer_save_ext</span></a></li>
+    <li><a href="buffer_save_async.htm"><span class="notranslate">buffer_save_async</span></a></li>
+    <li><a href="buffer_load.htm"><span class="notranslate">buffer_load</span></a></li>
+    <li><a href="buffer_load_ext.htm"><span class="notranslate">buffer_load_ext</span></a></li>
+    <li><a href="buffer_load_async.htm"><span class="notranslate">buffer_load_async</span></a></li>
+    <li><a href="buffer_load_partial.htm"><span class="notranslate">buffer_load_partial</span></a></li>
+    <li><a href="buffer_compress.htm"><span class="notranslate">buffer_compress</span></a></li>
+    <li><a href="buffer_decompress.htm"><span class="notranslate">buffer_decompress</span></a></li>
+    <li><a href="buffer_async_group_begin.htm"><span class="notranslate">buffer_async_group_begin</span></a></li>
+    <li><a href="buffer_async_group_option.htm"><span class="notranslate">buffer_async_group_option</span></a></li>
+    <li><a href="buffer_async_group_end.htm"><span class="notranslate">buffer_async_group_end</span></a></li>
+    <li><a href="buffer_copy.htm"><span class="notranslate">buffer_copy</span></a></li>
+    <li><a href="buffer_copy_from_vertex_buffer.htm"><span class="notranslate">buffer_copy_from_vertex_buffer</span></a></li>
+    <li><a href="buffer_get_type.htm"><span class="notranslate">buffer_get_type</span></a></li>
+    <li><a href="buffer_get_alignment.htm"><span class="notranslate">buffer_get_alignment</span></a></li>
+    <li><a href="buffer_get_address.htm"><span class="notranslate">buffer_get_address</span></a></li>
+    <li><a href="buffer_get_size.htm"><span class="notranslate">buffer_get_size</span></a></li>
+    <li><a href="buffer_get_surface.htm"><span class="notranslate">buffer_get_surface</span></a></li>
+    <li><a href="buffer_set_surface.htm"><span class="notranslate">buffer_set_surface</span></a></li>
+    <li><a href="buffer_resize.htm"><span class="notranslate">buffer_resize</span></a></li>
+    <li><a href="buffer_sizeof.htm"><span class="notranslate">buffer_sizeof</span></a></li>
+    <li><a href="buffer_md5.htm"><span class="notranslate">buffer_md5</span></a></li>
+    <li><a href="buffer_sha1.htm"><span class="notranslate">buffer_sha1</span></a></li>
+    <li><a href="buffer_crc32.htm"><span class="notranslate">buffer_crc32</span></a></li>
+    <li><a href="buffer_base64_encode.htm"><span class="notranslate">buffer_base64_encode</span></a></li>
+    <li><a href="buffer_base64_decode.htm"><span class="notranslate">buffer_base64_decode</span></a></li>
+    <li><a href="buffer_base64_decode_ext.htm"><span class="notranslate">buffer_base64_decode_ext</span></a></li>
     <li><a href="buffer_set_used_size.htm">buffer_set_used_size</a></li>
   </ul>
-  <p> </p>
-  <p>There are also two extra functions related to buffers that can be used to save and load game states (note that they require a buffer to have been created previously):</p>
+  <p> </p>
+  <p>Es gibt auch zwei zusätzliche Funktionen im Zusammenhang mit <span class="notranslate">buffers</span>, die zum Speichern und Laden von Spielzuständen verwendet werden können (beachten Sie, dass diese Funktionen voraussetzen, dass zuvor eine <span class="notranslate">buffer</span> erstellt wurde):</p>
   <ul class="colour">
-    <li><a href="../General_Game_Control/game_load_buffer.htm">game_load_buffer</a></li>
-    <li><a href="../General_Game_Control/game_save_buffer.htm">game_save_buffer</a></li>
+    <li><a href="../General_Game_Control/game_load_buffer.htm"><span class="notranslate">game_load_buffer</span></a></li>
+    <li><a href="../General_Game_Control/game_save_buffer.htm"><span class="notranslate">game_save_buffer</span></a></li>
   </ul>
-  <p> </p>
-  <p>Finally, you can also use special <b>Vertex Buffers</b> to create your own custom primitives or models, etc... You can find out more about these from the following section of the manual:</p>
+  <p> </p>
+  <p>Schließlich können Sie auch spezielle <b>Vertex-Puffer</b> verwenden, um Ihre eigenen Primitive oder Modelle zu erstellen, etc. Mehr darüber erfahren Sie im folgenden Abschnitt des Handbuchs:</p>
   <ul class="colour">
-    <li><a href="../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">Primitive Building</a></li>
+    <li><a href="../Drawing/Primitives/Primitives_And_Vertex_Formats.htm">Primitives Gebäude</a></li>
   </ul>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../GML_Reference.htm">GML Reference</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="../OS_And_Compiler/OS_And_Compiler.htm">OS And Compiler</a></div>
+        <div style="float:left">Zurück: <a href="../GML_Reference.htm">GML-Referenz</a></div>
+        <div style="float:right">Nächste: <a href="../UWP_And_XBox_Live/UWP_And_XBox_Live.htm">UWP und XBox Live</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 Buffers

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>ds_list_mark_as_list</title>
+  <title>ds_liste_markieren_als_liste</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for ds_list_mark_as_list" />
   <meta name="rh-index-keywords" content="ds_list_mark_as_list" />
@@ -14,33 +14,33 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_mark_as_list</h1>
-  <p>This function will &quot;mark&quot; (or &quot;flag&quot;) a given position within a previously created DS list as holding another DS list. This functionality is required when encoding JSON strings (which you can create using <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a>), but can also be useful when nesting data-structures, as items marked in this way will automatically be garbage collected (destroyed) when the parent DS list is destroyed. This means that you do not have to manually go through the list contents and destroy the marked data structures individually before destroying the &quot;parent&quot; list. However, if you delete the list position individually, the DS list it contained will <i>not</i> be garbage collected and you should call the appropriate DS list destroy function before deleting the item from the parent list position. Also note that if you call the function <a href="ds_list_clear.htm"><span class="inline">ds_list_clear()</span></a> on a list, any items flagged as lists will be destroyed as well when the list is cleared.</p>
-  <p>It is also worth noting that if the position that has been marked changes within the list, the &quot;mark&quot; will move with it, so if you have marked position 3 in the list (for example) and then insert 2 more items below it so it moves up to position 5, it will <i>still</i> be marked as a list.</p>
-  <p> </p>
+  <h1>ds_liste_markieren_als_liste</h1>
+  <p>Diese Funktion &quot;markiert&quot; (oder &quot;kennzeichnet&quot;) eine bestimmte Position innerhalb einer zuvor erstellten DS-Liste als eine andere DS-Liste enthaltend. Diese Funktionalität ist erforderlich, wenn JSON-Strings kodiert werden (die Sie mit <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a>), kann aber auch bei der Verschachtelung von Datenstrukturen nützlich sein, da auf diese Weise markierte Elemente automatisch entsorgt (zerstört) werden, wenn die übergeordnete DS-Liste zerstört wird. Dies bedeutet, dass Sie nicht manuell durch den Listeninhalt gehen und die markierten Datenstrukturen einzeln zerstören müssen, bevor Sie die &quot;übergeordnete&quot; Liste zerstören. Wenn Sie jedoch die Listenposition einzeln löschen, wird die darin enthaltene DS-Liste <i>nicht</i> gelöscht, und Sie sollten die entsprechende Funktion zum Zerstören der DS-Liste aufrufen, bevor Sie das Element der übergeordneten Listenposition löschen. Beachten Sie auch, dass bei einem Aufruf der Funktion <a href="ds_list_clear.htm"><span class="inline">ds_list_clear()</span></a> für eine Liste aufrufen, werden alle Elemente, die als Listen gekennzeichnet sind, ebenfalls zerstört, wenn die Liste geleert wird.</p>
+  <p>Wenn sich die markierte Position innerhalb der Liste ändert, verschiebt sich auch die &quot;Markierung&quot;. Wenn Sie also z. B. die Position 3 in der Liste markiert haben und dann zwei weitere Elemente darunter einfügen, so dass die Liste auf Position 5 rückt, wird sie <i>weiterhin</i> als Liste markiert.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">ds_list_mark_as_list(id, pos);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Beschreibung</th>
      </tr>
       <tr>
-        <td>id</td><td><span data-keyref="Type_ID_DS_List"></span></td>
-        <td>The id of the list to mark.</td>
+        <td><span class="notranslate">id</span></td><td><span data-keyref="Type_ID_DS_List"></span></td>
+        <td><span class="notranslate">The id of the list to mark.</span></td>
      </tr>
       <tr>
-        <td>pos</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The position within the list to mark.</td>
+        <td><span class="notranslate">pos</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The position within the list to mark.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_ID_DS_List">DS List ID</span> or -1 (if it fails)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">var j_list = ds_list_create();<br />
     var sub_list = ds_list_create();<br />
     ds_list_add(sub_list, health);<br />
@@ -48,18 +48,18 @@
     ds_list_add(sub_list, score);<br />
     ds_list_add(j_list, sub_list);<br />
     ds_list_mark_as_list(j_list, 0);</p>
-  <p>The above code creates two DS list, then populates one with various values from global variables. This list is then added into the second list, and the position &quot;marked&quot; as such so that it can be correctly encoded later.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> erstellt zwei DS-Listen und füllt dann eine mit verschiedenen Werten aus globalen Variablen. Diese Liste wird dann in die zweite Liste eingefügt und die Position als solche &quot;markiert&quot;, damit sie später korrekt kodiert werden kann.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="DS_Lists.htm">DS Lists</a></div>
-        <div style="float:right">Next: <a href="ds_list_mark_as_map.htm">ds_list_mark_as_map</a></div>
+        <div style="float:left">Zurück: <a href="DS_Lists.htm">DS-Listen</a></div>
+        <div style="float:right">Nächste: <a href="ds_list_mark_as_map.htm"><span class="notranslate">ds_list_mark_as_map</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 ds_list_mark_as_list

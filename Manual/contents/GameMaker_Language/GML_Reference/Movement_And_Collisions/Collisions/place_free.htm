@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>place_free</title>
+  <title>platz_frei</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that gives an overview of the funtion place_free" />
   <meta name="rh-index-keywords" content="place_free" />
@@ -15,51 +15,51 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>place_free</h1>
-  <p>You can use this function to check and see if the calling instance would collide with any instance <i>flagged as <b>solid</b></i> in your game. Now, it should be noted that for this to work, the instance running the code must have a valid collision mask (either for the sprite itself, or through the <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/mask_index.htm"><span class="inline">mask_index</span></a>) and it will only register collisions with those solid flagged instances that also have a valid mask.</p>
-  <p>The function itself basically works by taking the instance and testing for collisions with only solid flagged instances when placed at the position specified by the x/y arguments. The collision checking can be either precise or based on the bounding box of the instance, depending on what kind of collision mask has been selected.</p>
-  <p>Note that the given x/y coordinates will be floored to the nearest integer before the check is performed.</p>
-  <p> </p>
+  <h1>platz_frei</h1>
+  <p>Du kannst diese Funktion verwenden, um zu überprüfen, ob die aufrufende Instanz mit einer Instanz kollidiert, <i>die</i> in deinem Spiel <i>als <b>solide</b></i> gekennzeichnet ist. Es sollte beachtet werden, dass die Instanz, die <span class="notranslate">code</span> ausführt, eine gültige Kollisionsmaske haben muss (entweder für die <span class="notranslate">sprite</span> selbst oder durch die <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/mask_index.htm"><span class="inline">mask_index</span></a>) und sie wird nur Kollisionen mit Instanzen registrieren, die ebenfalls eine gültige Maske haben.</p>
+  <p>Die Funktion selbst funktioniert im Wesentlichen so, dass sie die Instanz nimmt und auf Kollisionen mit nur soliden markierten Instanzen prüft, wenn sie an der durch die x/y <span class="notranslate">arguments</span> angegebenen Position platziert wird. Die Kollisionsprüfung kann entweder präzise sein oder auf dem Begrenzungsrahmen der Instanz basieren, je nachdem, welche Art von Kollisionsmaske ausgewählt wurde.</p>
+  <p>Beachten Sie, dass die angegebenen x/y-Koordinaten vor der Prüfung auf die nächstliegende ganze Zahl heruntergerechnet werden.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">place_free(x, y);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Beschreibung</th>
      </tr>
       <tr>
-        <td>x</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x position to check.</td>
+        <td><span class="notranslate">x</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The x position to check.</span></td>
      </tr>
       <tr>
-        <td>y</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y position to check.</td>
+        <td><span class="notranslate">y</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The y position to check.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">if place_free(mouse_x, mouse_y)<br />
     {<br />
         x = mouse_x;<br />
         y = mouse_y;<br />
     }</p>
-  <p>The above code will check for a collision with any solid flagged instance if the calling instance were to be placed at the same position as the mouse. If there is no collision detected, then the instance has its x/y coordinates set to those of the mouse.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> prüft, ob eine Kollision mit einer fest markierten Instanz vorliegt, wenn die aufrufende Instanz an der gleichen Position wie die Maus platziert wird. Wenn keine Kollision festgestellt wird, werden die x/y-Koordinaten der Instanz auf die der Maus gesetzt.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Collisions.htm">Collisions</a></div>
-        <div style="float:right">Next: <a href="place_meeting.htm">place_meeting</a></div>
+        <div style="float:left">Zurück: <a href="Collisions.htm">Kollisionen</a></div>
+        <div style="float:right">Nächste: <a href="place_meeting.htm"><span class="notranslate">place_meeting</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 place_free

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_ugc_request_item_details</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_ugc_request_item_details" />
+  <meta name="rh-index-keywords" content="steam_ugc_request_item_details" />
+  <meta name="search-keywords" content="steam_ugc_request_item_details" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_ugc_request_item_details</h1>
+  <p>Diese Funktion kann verwendet werden, um Informationen über eine bestimmte Datei-ID abzurufen. Sie geben die Datei-ID und ein maximales Alter für die Überprüfung an (weitere Informationen finden Sie in den <span class="notranslate">Steam</span> docs), dann gibt die Funktion einen eindeutigen asynchronen ID-Wert zurück, der zur korrekten Überprüfung der Details im <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">Steam-Async-Ereignis</a> verwendet werden kann. Dieses Ereignis hat die <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> DS-Map, die mit den folgenden Schlüssel/Wert-Paaren aufgefüllt wird:</p>
+  <ul class="colour">
+    <li>&quot;<b>id</b>&quot; - Die asynchrone ID, die von der Funktion zurückgegeben wird, die das Ereignis ausgelöst hat</li>
+    <li>&quot;<b>result</b>&quot; - Das Ergebnis der Operation (ein reeller Wert). Dies ist entweder die Konstante <span class="notranslate">GML</span> <tt>ugc_result_success</tt> oder eine andere reelle Zahl. Sie sollten also auf diese Konstante prüfen, um sicherzustellen, dass der Aufruf erfolgreich war, und wenn andernfalls etwas nicht korrekt funktioniert hat. Die übrigen möglichen Werte, die zurückgegeben werden, werden als Ergebnis des <span class="notranslate">Steam</span> &quot;EResult&quot;-Wertes angezeigt, und Sie sollten in der Datei <tt>steamclientpublic.h</tt> in den SDK-Headern alle 89 möglichen Werte finden.</li>
+    <li>&quot;<b>event_type</b>&quot; - Die Zeichenfolge<b>&quot;ugc_item_details</b>&quot;.</li>
+    <li>&quot;<b>cached_data</b>&quot; - Ist <tt>true</tt>, wenn die zurückgegebenen Daten von der lokalen <span class="notranslate">cache</span> stammen, oder <tt>false</tt>, wenn sie vom Server stammen.</li>
+    <li>&quot;<b>published_file_id&quot;</b>&quot; - enthält die eindeutige Kennung der veröffentlichten Datei für das Element</li>
+    <li>&quot;<b>file_type</b>&quot; - Der Typ der verwendeten Datei</li>
+    <li>&quot;<b>creator_app_id</b>&quot; - Die <span class="notranslate">Steam</span> ID des Artikelerstellers</li>
+    <li>&quot;<b>consumer_app_id</b>&quot; - Die <span class="notranslate">Steam</span> ID des Artikels consumer</li>
+    <li>&quot;<b>Titel</b>&quot; - Der Titel des Artikels</li>
+    <li>&quot;<b>description</b>&quot; - Die Beschreibung des Artikels</li>
+    <li>&quot;<b>steam_id_owner</b>&quot; - Die <span class="notranslate">Steam</span> ID des Eigentümers des Artikels</li>
+    <li>&quot;<b>time_created</b>&quot; - Die Zeit, zu der das Objekt erstmals erstellt wurde</li>
+    <li>&quot;<b>time_updated</b>&quot; - Das letzte Mal, dass der Artikel aktualisiert wurde</li>
+    <li>&quot;<b>time_added_to_user_list</b>&quot; - Der Zeitpunkt, zu dem der Artikel abonniert wurde</li>
+    <li>&quot;<b>visibility</b>&quot; - Die Sichtbarkeit des Objekts (siehe <a href="steam_ugc_set_item_visibility.htm"><tt>steam_ugc_set_item_visibility()</tt></a> für die zurückgegebenen Konstanten)</li>
+    <li>&quot;<b>banned</b>&quot; - Ob der Artikel verboten wurde<tt>(true</tt>) oder nicht<tt>(false</tt>)</li>
+    <li>&quot;<b>accepted_for_use</b>&quot; - Angabe, ob der Gegenstand zur Verwendung zugelassen wurde<tt>(true</tt>) oder nicht<tt>(false</tt>)</li>
+    <li>&quot;<b>tags_truncated</b>&quot; - Kurzversion der Tags als Array</li>
+    <li>&quot;<b>Tags</b>&quot; - Ein Array mit den Tags für den Artikel</li>
+    <li>&quot;<b>handle_file</b>&quot; - Der eindeutige Datei-Handle für das Element</li>
+    <li>&quot;<b>handle_preview_file</b>&quot; - Das eindeutige Handle für die Bildvorschau für den Artikel (kann als <span class="notranslate">argument</span> verwendet werden mit <a href="steam_ugc_download.htm"><tt>steam_ugc_download()</tt></a> um ein Vorschaubild herunterzuladen)</li>
+    <li>&quot;<b>Dateiname</b>&quot; - Der Name der Artikeldatei</li>
+    <li>&quot;<b>file_size</b>&quot; - Die Größe der Artikeldatei</li>
+    <li>&quot;<b>preview_file_size</b>&quot; - Die Größe des Vorschaubildes</li>
+    <li>&quot;<b>url</b>&quot; - Die vollständige URL für den Artikel</li>
+    <li>&quot;<b>votes_up</b>&quot; - Die Anzahl der erhaltenen Up-Votes</li>
+    <li>&quot;<b>votes_down</b>&quot; - Die Anzahl der erhaltenen Abwärtsstimmen</li>
+    <li>&quot;<b>Punktzahl</b>&quot; - Die Gesamtpunktzahl des Artikels</li>
+    <li>&quot;<b>account_id_owner</b>&quot; - Die Account-ID des <span class="notranslate">Steam</span> ID-Besitzers (diese kann in der Funktion <a href="steam_ugc_create_query_user_ex.htm"><tt>steam_ugc_create_query_user_ex()</tt></a>)</li>
+  </ul>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_ugc_request_item_details(published_file_id, max_age_seconds);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">published_file_id</span></td>
+        <td>Die eindeutige Datei-ID für die zu prüfende UGC.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">max_age_seconds</span></td>
+        <td>Das &quot;Alter&quot; der zu prüfenden Daten (empfohlen 30 - 60 Sekunden).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code">Async ID</p>
+  <p> </p>
+  <h4>Erweitertes Beispiel:</h4>
+  <p>In diesem Beispiel senden wir eine Detailanfrage für ein Element und analysieren dann die resultierende <tt>async_load</tt> DS-Map, um einige Variablen zu setzen. Zunächst senden wir die Anfrage ab:</p>
+  <p class="code">steam_details = steam_ugc_request_item_details(global.fileID, 60);</p>
+  <p>Die obige <span class="notranslate">code</span> fordert Details zum Element mit der in der globalen Variable gespeicherten Datei-ID an und löst ein <span class="notranslate">Steam</span> Async-Ereignis mit den zurückgegebenen Informationen aus. In diesem Ereignis können wir dann die Karte parsen und einige der Werte in Variablen speichern, die dann verwendet werden können, um die Informationen für den Benutzer anzuzeigen:</p>
+  <p class="code">var map_id = async_load[? &quot;id&quot;];<br />
+    var result = async_load[? &quot;result&quot;];<br />
+    if (map_id == steam_details) &amp;&amp; (result == ugc_result_success)<br />
+    {<br />
+        mTitle = async_load[? &quot;title&quot;];<br />
+        mDesc = async_load[? &quot;description&quot;];<br />
+        mTags = async_load[? &quot;tags&quot;];<br />
+        m_hPreviewFile = async_load[? &quot;handle_preview_file&quot;];<br />
+        m_hOwnerSteamId = async_load[? &quot;steam_id_owner&quot;];<br />
+        mOwnerAccountId = async_load[? &quot;account_id_owner&quot;];<br />
+        mPubFileId = async_load[? &quot;published_file_id&quot;];<br />
+        mScore = async_load[? &quot;score&quot;];<br />
+    }</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Zurück: <a href="Steam_UGC.htm">UGC</a></div>
+        <div style="float:right">Nächste: <a href="steam_ugc_create_query_user.htm"><span class="notranslate">steam_ugc_create_query_user</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_ugc_request_item_details
+-->
+  <!-- TAGS
+steam_ugc_request_item_details
+-->
+</body>
+</html>

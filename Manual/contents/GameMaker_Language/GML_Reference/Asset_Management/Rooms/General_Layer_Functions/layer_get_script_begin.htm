@@ -6,7 +6,7 @@
   <title>layer_get_script_begin</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function layer_get_script_begin" />
   <meta name="rh-index-keywords" content="layer_get_script_begin" />
@@ -16,45 +16,45 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>layer_get_script_begin</h1>
-  <p>You supply the layer ID (which you get when you create the layer using <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) or the layer name (as a string - this will have a performance impact) and this function will return the <a href="../../../../GML_Overview/Script_Functions.htm">script function</a> index of the function assigned to run at the beginning of rendering for that layer, or it will return -1 if no function is assigned. You can assign script functions to a layer with <span class="inline"><a href="layer_script_begin.htm">layer_script_begin()</a></span> and <span class="inline"><a href="layer_script_end.htm">layer_script_end()</a></span>.</p>
-  <p> </p>
+  <p>Sie geben die Ebenen-ID (die Sie beim Erstellen der Ebene mit <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) oder den Ebenennamen (als String - dies wirkt sich auf die Leistung aus) und diese Funktion gibt den <a href="../../../../GML_Overview/Script_Functions.htm">Skriptfunktionsindex</a> der Funktion zurück, die zu Beginn des Renderings für diese Ebene ausgeführt werden soll, oder sie gibt -1 zurück, wenn keine Funktion zugewiesen ist. Mit <span class="inline"><a href="layer_script_begin.htm">layer_script_begin()</a></span> und <span class="inline"><a href="layer_script_end.htm">layer_script_end()</a></span> können Sie einer Ebene <span class="notranslate">script</span> Funktionen zuweisen.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">layer_get_script_begin(layer_id);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>layer_id</td>
-        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">String</a></span> or <span data-keyref="Type_ID_Layer"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/General_Layer_Functions/layer_get_id.htm">Layer ID</a></span></td>
-        <td>The unique ID value of the layer to target (or the layer name as a string)</td>
+        <td><span class="notranslate">layer_id</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Zeichenfolge</a></span> oder <span data-keyref="Type_ID_Layer"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/General_Layer_Functions/layer_get_id.htm">Ebene ID</a></span></td>
+        <td><span class="notranslate">The unique ID value of the layer to target (or the layer name as a string)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Function_Script"><a data-rhwidget="HyperlinkPopover" href="../../../../../../GameMaker_Language/GML_Overview/Script_Functions.htm">Script Function</a></span> or -1 (if no function is assigned)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">if layer_get_script_begin(layer) == -1<br />
     {<br />
         layer_script_begin(layer, scr_SetShaderValues);<br />
     }</p>
-  <p>The above code will check to see if the layer that the instance running the code has a script function assigned to it and if it doesn&#39;t one is assigned.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> prüft, ob der Ebene, auf der die Instanz <span class="notranslate">code</span> läuft, eine <span class="notranslate">script</span> Funktion zugewiesen ist, und wenn nicht, wird eine zugewiesen.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="General_Layer_Functions.htm">General Layer Functions</a></div>
-        <div style="float:right">Next: <a href="layer_get_script_end.htm">layer_get_script_end</a></div>
+        <div style="float:left">Zurück: <a href="General_Layer_Functions.htm">Allgemeine Funktionen der Ebene</a></div>
+        <div style="float:right">Nächste: <a href="layer_get_script_end.htm"><span class="notranslate">layer_get_script_end</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 layer_get_script_begin

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Draw Sprite Transformed</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>Zeichnen Sprite transformiert</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Draw Sprite Transformed action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Draw Sprite Transformed" />
@@ -14,72 +14,76 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Draw Sprite Transformed Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Sprite_Transformed.png" /> Draw Sprite Transformed</h1>
-  <p>This function will draw the given sprite similar to the action <a href="Draw_Sprite.htm">Draw Sprite</a> but with additional options to change the scale, blending, rotation and frame of the sprite being drawn. Changing these values does <i>not</i> modify the resource in any way (only how it is drawn), and you can use any of the available <a href="../Instance/Set_Instance_Variable.htm">sprite property variables</a> instead of direct values for all the arguments in the function. The image below illustrates how different values affect the drawing of the sprite:</p>
+  <h1><img> Zeichnen <span class="notranslate">Sprite</span> Transformiert</h1>
+  <p>Diese Funktion zeichnet das angegebene <span class="notranslate">sprite</span> ähnlich wie die Aktion <a href="Draw_Sprite.htm">Sprite zeichnen</a>, aber mit zusätzlichen Optionen, um die Skalierung, das Blending, die Rotation und den Rahmen des <span class="notranslate">sprite</span> zu ändern. Das Ändern dieser Werte verändert <i>nicht</i> 
+    Die Ressource wird in keiner Weise verändert (nur die Art und Weise, wie sie gezeichnet wird), und Sie können alle verfügbaren <a href="../Instance/Set_Instance_Variable.htm">Sprite-Eigenschaftsvariablen</a> anstelle von direkten Werten für alle <span class="notranslate">arguments</span> in der Funktion verwenden. Das folgende Bild veranschaulicht
+    wie sich verschiedene Werte auf das Zeichnen des Sprites auswirken:</p>
+  <p><img alt="Draw Sprite Transformed Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Sprite_Transformed.png" /></p>
+  <p class="note"><b><span class="note">HINWEIS</span> </b>Die Farbüberblendung wird für das HTML5-Ziel nur empfohlen, wenn WebGL aktiviert ist, obwohl Sie die Überblendungsfarbe auch dann einstellen können, wenn sie nicht aktiviert ist, und die <span class="notranslate">sprite</span> wird normal überblendet. Allerdings wird beim Überblenden auf diese Weise ein Duplikat
+    <span class="notranslate">sprite</span> das dann in <span class="notranslate">cache</span> gespeichert und bei Bedarf verwendet wird. Dies ist bei weitem nicht optimal, und wenn Sie mehrere Farbwechsel verwenden, wird die Leistung Ihres Spiels verlangsamt, es sei denn, Sie aktivieren WebGL. Wenn Sie WebGL nicht verwenden möchten, können Sie die
+    die Größe der Schrift <span class="notranslate">cache</span> einstellen, um dies zu begrenzen, wenn es notwendig ist. <span class="inline"><span style="font-size:14px;"><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_set_cache_size.htm">sprite_set_cache_size()</a>.</span></p>
+  <p class="note"><b>HINWEIS</b>: Diese Aktion ist nur für die verschiedenen <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Zieh-Ereignisse</a> gedacht und wird nicht gezogen, wenn sie anderweitig verwendet wird.</p>
+  <p> </p>
+  <h4>Aktion Syntax:</h4>
   <p><img alt="Transformed Sprite Examples" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/spr_ext.png" /></p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> Colour blending is only recommended for the HTML5 target when WebGL is enabled, although you can still set the blending colour if it is not enabled and it will blend the sprite as normal. However all blending in this way creates a duplicate sprite which is then stored in the cache and used when required. This is far from optimal and if you use multiple colour changes it will slow down your games performance unless you activate WebGL. if you do not wish to use WebGL, then you can set the font cache size to try and limit this should it be necessary using the function <span class="inline"><span style="font-size:14px;"><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Manipulation/sprite_set_cache_size.htm">sprite_set_cache_size()</a>.</span></span></p>
-  <div data-conref="../../../assets/snippets/Note_Action_Only_For_Draw_Events.hts"> </div>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Draw Sprite Transformed Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Sprite_Transformed.png" /></p>
-  <h4>Arguments:</h4>
+  <h4>Argumente:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>Sprite</td>
-        <td>The sprite to draw</td>
+        <td><span class="notranslate">Sprite</span></td>
+        <td>Die <span class="notranslate">sprite</span> zu zeichnen</td>
       </tr>
       <tr>
-        <td>Frame</td>
-        <td>The sprite frame to draw (use the built in variable <span class="inline">image_index</span> for the current frame)</td>
+        <td><span class="notranslate">Frame</span></td>
+        <td>Der <span class="notranslate">sprite</span> Frame, der gezeichnet werden soll (verwenden Sie die eingebaute Variable <span class="inline">image_index</span> für den aktuellen Frame)</td>
       </tr>
       <tr>
-        <td>X</td>
-        <td>The x position to draw at within the room</td>
+        <td><span class="notranslate">X</span></td>
+        <td>Die X-Position, an der innerhalb des Raums gezeichnet werden soll</td>
       </tr>
       <tr>
-        <td>Y</td>
-        <td>The y position to draw at within the room</td>
+        <td><span class="notranslate">Y</span></td>
+        <td>Die y-Position, an der innerhalb des Raums gezeichnet werden soll</td>
       </tr>
       <tr>
-        <td>Scale X</td>
-        <td>The scale factor for the X axis (use the built in variable <span class="inline">image_xscale</span> for the current X scale)</td>
+        <td><span class="notranslate">Scale X</span></td>
+        <td>Der Skalierungsfaktor für die X-Achse (verwenden Sie die eingebaute Variable <span class="inline">image_xscale</span> für die aktuelle X-Skala)</td>
       </tr>
       <tr>
-        <td>Scale Y</td>
-        <td>The scale factor for the Y axis (use the built in variable <span class="inline">image_yscale</span> for the current Y scale)</td>
+        <td><span class="notranslate">Scale Y</span></td>
+        <td>Der Skalierungsfaktor für die Y-Achse (verwenden Sie die eingebaute Variable <span class="inline">image_yscale</span> für die aktuelle Y-Skala)</td>
       </tr>
       <tr>
-        <td>Rotation</td>
-        <td>The draw angle for the sprite (from 0 to 360, rotating anticlockwise where 0 is to the right - use the built in variable <span class="inline">image_angle</span> for the current rotation)</td>
+        <td><span class="notranslate">Rotation</span></td>
+        <td>Der Ziehwinkel für die <span class="notranslate">sprite</span> (von 0 bis 360, gegen den Uhrzeigersinn drehend, wobei 0 nach rechts ist - verwenden Sie die eingebaute Variable <span class="inline">image_angle</span> für die aktuelle Drehung)</td>
       </tr>
       <tr>
-        <td>Colour</td>
-        <td>The colour to blend with the sprite (default is white, and you can use the built in variable <span class="inline">image_blend</span> for the current colour)</td>
+        <td><span class="notranslate">Colour</span></td>
+        <td>Die Farbe, die mit <span class="notranslate">sprite</span> gemischt werden soll (Standard ist weiß, und Sie können die eingebaute Variable <span class="inline">image_blend</span> für die aktuelle Farbe verwenden)</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Draw Sprite Transformed Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Sprite_Transformed.png" />The above action block code checks a variable and if it is set to <span class="inline">true</span> then the sprite is drawn with random scaling along the x and y axis and blended with the colour red, otherwise the sprite is drawn using the default transforms.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p><img>Der obige Aktionsblock <span class="notranslate">code</span> prüft eine Variable, und wenn sie auf <span class="inline">true</span> gesetzt ist, wird <span class="notranslate">sprite</span> mit zufälliger Skalierung entlang der x- und y-Achse gezeichnet und mit der Farbe Rot überblendet, andernfalls wird <span class="notranslate">sprite</span> mit den Standardtransformationen gezeichnet.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Drawing_Actions.htm">Drawing Actions</a></div>
-        <div style="float:right">Next: <a href="Draw_Stacked_Sprites.htm">Draw Stacked Sprites</a></div>
+        <div style="float:left">Zurück: <a href="Drawing_Actions.htm">Zeichnungsaktionen</a></div>
+        <div style="float:right">Nächste: <a href="Draw_Stacked_Sprites.htm">Gestapelte Sprites zeichnen</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
-Action - Draw Sprite Transformed
+Action - Draw <span class="notranslate">Sprite</span> Transformed
 -->
   <!-- TAGS
 action_draw_sprite_transformed

@@ -6,7 +6,7 @@
   <title>layer_background_alpha</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function layer_background_alpha" />
   <meta name="rh-index-keywords" content="layer_background_alpha" />
@@ -16,47 +16,47 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>layer_background_alpha</h1>
-  <p>This function controls the alpha (transparency) of the background sprite. You give the background element ID (which you get when you create a background element using <a href="layer_background_create.htm"><span class="inline">layer_background_create()</span></a> or when
-    you use the function <a href="layer_background_get_id.htm"><span class="inline">layer_background_get_id()</span></a>), and then set the alpha value to use. Alpha can be between 0 (fully transparent) and 1 (fully opaque) with the default alpha value for the background
-    element being 1. Note that if the layer the background element has been assigned to is not visible - or the element itself has been made invisible - you will not see any difference with this function until the layer or element has been made visible
-    again.</p>
-  <p> </p>
+  <p>Diese Funktion steuert das Alpha (Transparenz) des Hintergrunds <span class="notranslate">sprite</span>. Sie geben die ID des Hintergrundelements an (die Sie erhalten, wenn Sie ein Hintergrundelement mit <a href="layer_background_create.htm"><span class="inline">layer_background_create()</span></a> oder wenn
+    Sie verwenden die Funktion <a href="layer_background_get_id.htm"><span class="inline">layer_background_get_id()</span></a>), und legen dann den zu verwendenden Alphawert fest. Alpha kann zwischen 0 (völlig transparent) und 1 (völlig undurchsichtig) liegen, wobei der Standard-Alpha-Wert für das Hintergrundelement
+    Element ist 1. Beachten Sie, dass, wenn die Ebene, der das Hintergrundelement zugewiesen wurde, nicht sichtbar ist - oder das Element selbst unsichtbar gemacht wurde - Sie mit dieser Funktion keinen Unterschied sehen werden, bis die Ebene oder das Element wieder sichtbar gemacht wurde
+    wieder sichtbar gemacht wird.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">layer_background_alpha(background_element_id, alpha);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Beschreibung</th>
      </tr>
       <tr>
-        <td>background_element_id</td><td><span data-keyref="Type_ID_Element_Background"></span></td>
-        <td>The unique ID value of the background element to change</td>
+        <td><span class="notranslate">background_element_id</span></td><td><span data-keyref="Type_ID_Element_Background"></span></td>
+        <td><span class="notranslate">The unique ID value of the background element to change</span></td>
      </tr>
       <tr>
-        <td>alpha</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The alpha for background sprite, from 0 to 1 (default is 1)</td>
+        <td><span class="notranslate">alpha</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The alpha for background sprite, from 0 to 1 (default is 1)</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">var lay_id = layer_get_id(&quot;Background_sky&quot;);<br/> var back_id = layer_background_get_id(lay_id);<br/> layer_background_alpha(back_id, random(1));</p>
-  <p>The above code gets the ID value of the background assigned to the layer &quot;Background_sky&quot; and then sets its alpha to a random value between 0 and 1.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> ruft den ID-Wert des Hintergrunds ab, der der Ebene &quot;Background_sky&quot; zugewiesen ist, und setzt dann dessen Alpha auf einen Zufallswert zwischen 0 und 1.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Background_Layers.htm">Background Layers</a></div>
-        <div style="float:right">Next: <a href="layer_background_index.htm">layer_background_index</a></div>
+        <div style="float:left">Zurück: <a href="Background_Layers.htm">Hintergrund-Ebenen</a></div>
+        <div style="float:right">Nächste: <a href="layer_background_index.htm"><span class="notranslate">layer_background_index</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 layer_background_alpha

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Leistung_Zunahme</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for achievement_increment" />
+  <meta name="rh-index-keywords" content="achievement_increment" />
+  <meta name="search-keywords" content="achievement_increment" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Leistung_Zunahme</h1>
+  <p>Spiele können Errungenschaften haben, die keinen Abschlusswert haben, und so können Sie diese Funktion verwenden, um diese Errungenschaft um einen bestimmten Betrag zu erhöhen. An <span class="notranslate">Android</span> senden Sie die ID der Errungenschaft als String (dies ist die eindeutige ID der Errungenschaft, die beim Einrichten der Errungenschaft zugewiesen wurde).
+    zugewiesen wurde), während Sie auf allen anderen <span class="notranslate">platforms</span> den definierten Namen der Leistung als String übergeben und dann den tatsächlichen Wert der Leistung angeben, um den sie erhöht werden soll.</p>
+  <p>Die Funktion löst ein <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">soziales asynchrones Ereignis</a> aus, wobei die zurückgegebene <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a>    DS-Map die folgenden Schlüssel/Wert-Paare enthält:</p>
+  <ul class="colour">
+    <li>&quot;<b>type</b>&quot; - Dies ist der Typ des Ereignisses, das ausgelöst wurde. Für diese Funktion ist dies die Zeichenkette &quot;<tt>achievement_increment_result</tt>&quot;.</li>
+    <li>&quot;<b>id</b>&quot; - Dies ist die ID des Ereignisses, und für diese Funktion wird eine <span class="notranslate">GML</span> Konstante <tt>GooglePlayServices_EVENT_ID_INCREMENT_ACHIEVEMENT</tt> zurückgegeben.</li>
+    <li>&quot;<b>achievement_id</b>&quot; - Dies ist die eindeutige ID der Leistung, die inkrementiert wurde.</li>
+    <li>&quot;<b>Status</b>&quot; - Dieser Wert ist 1, wenn die Leistung erfolgreich erhöht wurde, oder 0, wenn die Anfrage fehlgeschlagen ist.</li>
+    <li>&quot;<b>complete</b>&quot; - Dieser Wert ist 1, wenn die Leistung bis zu diesem Inkrement abgeschlossen wurde, oder 0, wenn der Antrag fehlgeschlagen ist.</li>
+  </ul>
+  <p> </p>
+  <h4><b>Syntax:</b></h4>
+  <p class="code">achievement_increment(name, value)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">name</span></td>
+        <td>Der Name/die ID der Leistung.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">value</span></td>
+        <td>Der Wert, der als Inkrement gesendet werden soll.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p class="code">achievement_increment(global.Achievement[0], score);</p>
+  <p>Die obige <span class="notranslate">code</span> fügt den aktuellen Punktestand des Spielers zum Erfolg mit der ID hinzu, die im globalen Array gespeichert ist.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Zurück: <a href="Achievements_And_Leaderboards.htm">Errungenschaften und Bestenlisten</a></div>
+        <div style="float:right">Nächste: <a href="achievement_show_achievements.htm"><span class="notranslate">achievement_show_achievements</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
+  </div>
+  <!-- KEYWORDS
+achievement_increment
+-->
+  <!-- TAGS
+achievement_increment
+-->
+</body>
+</html>

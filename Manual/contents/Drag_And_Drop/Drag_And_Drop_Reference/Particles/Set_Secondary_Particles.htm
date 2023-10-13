@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Set Secondary Particles</title>
+  <title>Sekundäre Partikel einstellen</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Set Secondary Particles action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Set Secondary Particles" />
@@ -14,59 +14,59 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set Secondary Particles Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Secondary_Particles.png" /> Set Secondary Particles</h1>
-  <p>This action permits you to use a second particle type along with the primary particle. You give the primary particle type ID value (which should be the same as the value used when you created the particle using the <a href="Create_Particle_Type.htm">Create Particle Type</a>    action) and then you can choose to have it emit a secondary particle type each game frame that it exists and/or at the end of each primary particle&#39;s lifespan. You must give another particle ID value for the &quot;Secondary&quot; and then a number
-    to be created in the &quot;Count&quot;.</p>
-  <p>If the Event selected is &quot;Per Step&quot; then each game frame that a primary particle exists on screen it will emit the given number of secondary particles - for example, you could have a rocket with &quot;flame&quot; particles, and each flame
-    particle emits a secondary &quot;smoke&quot; particle. If the event is set to &quot;On Death&quot;, then the secondary particles will now only be emitted when a particle of the primary type reaches the end of its lifespan - for example, you could
-    have an &quot;explosion&quot; particle that emits a &quot;dust&quot; particle at the end of its life.</p>
-  <p>It is important to note that you <i>cannot</i> use the same particle type ID as the primary particle as for secondary particles, and that you can very quickly encounter performance issues when using this action as it&#39;s easy to create thousands of
-    particles very quickly this way - so take care to limit the lifespan and number of particles being created by both the primary and secondary particle types. Also note that you can assign a secondary particle to any particle type and so can create
-    &quot;particle chains&quot; where one particle creates another each step and then this particle creates another when it reaches the end of its lifespan, etc... Although, again, care should be taken when chaining particles in this way to make sure
-    that performance does not suffer. You can also call this action twice for a single particle type and have it stream on step as well as burst on death.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Set Secondary Particles Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Set_Secondary_Particles.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Sekundäre Partikel einstellen</h1>
+  <p>Mit dieser Aktion können Sie einen zweiten Partikeltyp zusammen mit dem primären Partikel verwenden. Du gibst den ID-Wert des primären Partikeltyps an (der derselbe sein sollte wie der Wert, den du bei der Erstellung des Partikels mit der Aktion " <a href="Create_Particle_Type.htm">Partikeltyp erstellen"</a> verwendet hast) und dann kannst du wählen, ob der Partikel einen sekundären Partikeltyp bei jedem Spielframe, den er existiert, und/oder am Ende der Lebensdauer des primären Partikels emittieren soll. Du musst einen anderen Partikel-ID-Wert für &quot;Secondary&quot; angeben und dann eine Zahl
+    die in der &quot;Anzahl&quot; erstellt werden soll.</p>
+  <p>Wenn als Ereignis &quot;Pro Schritt&quot; ausgewählt ist, wird bei jedem Spielbild, bei dem ein Primärpartikel auf dem Bildschirm vorhanden ist, die angegebene Anzahl von Sekundärpartikeln emittiert - zum Beispiel könnten Sie eine Rakete mit &quot;Flammen&quot;-Partikeln haben, und jedes Flammen
+    Partikel ein sekundäres &quot;Rauch&quot;-Partikel abgibt. Wenn das Ereignis auf &quot;Bei Tod&quot; eingestellt ist, werden die sekundären Partikel nur dann emittiert, wenn ein Partikel des primären Typs das Ende seiner Lebensdauer erreicht - zum Beispiel könnte man
+    einen &quot;Explosions&quot;-Partikel haben, der am Ende seiner Lebensdauer einen &quot;Staub&quot;-Partikel abgibt.</p>
+  <p>Es ist wichtig zu beachten, dass Sie <i>nicht</i> dieselbe Partikeltyp-ID als Primärpartikel wie für Sekundärpartikel verwenden <i>können</i> und dass Sie sehr schnell Leistungsprobleme bekommen können, wenn Sie diese Aktion verwenden, da es einfach ist, auf diese Weise sehr schnell Tausende von Partikeln zu erstellen.
+    Achten Sie also darauf, die Lebensdauer und die Anzahl der Partikel zu begrenzen, die sowohl vom primären als auch vom sekundären Partikeltyp erstellt werden. Beachten Sie auch, dass Sie jedem Partikeltyp einen Sekundärpartikel zuweisen können und so
+    &quot;Partikelketten&quot; erstellen können, bei denen ein Partikel bei jedem Schritt einen anderen erzeugt und dieser Partikel wiederum einen anderen erzeugt, wenn er das Ende seiner Lebensdauer erreicht, usw... Aber auch hier sollte man vorsichtig sein, wenn man Partikel auf diese Weise verkettet, um sicherzustellen, dass
+    dass die Leistung nicht leidet. Sie können diese Aktion auch zweimal für einen einzelnen Partikeltyp aufrufen und ihn bei jedem Schritt strömen und beim Tod platzen lassen.</p>
+  <p> </p>
+  <h4>Aktion Syntax:</h4>
+  <p><img alt="Set Secondary Particles Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Set_Secondary_Particles.png" /></p>
+  <h4>Argumente:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>Type ID</td>
-        <td>The ID value for the particle type to give the secondary particle to</td>
+        <td><span class="notranslate">Type ID</span></td>
+        <td>Der ID-Wert für den Partikeltyp, dem der sekundäre Partikel zugeordnet werden soll</td>
       </tr>
       <tr>
-        <td>Event</td>
-        <td>When to create the secondary particle, either &quot;Per Step&quot; or &quot;On Death&quot;</td>
+        <td><span class="notranslate">Event</span></td>
+        <td>Wann das Sekundärteilchen erzeugt werden soll, entweder &quot;pro Schritt&quot; oder &quot;bei Tod&quot;.</td>
       </tr>
       <tr>
-        <td>Secondary</td>
-        <td>The ID value for the particle type to emit in the chosen secondary Event</td>
+        <td><span class="notranslate">Secondary</span></td>
+        <td>Der ID-Wert für den Partikeltyp, der im gewählten sekundären Ereignis emittiert werden soll</td>
       </tr>
       <tr>
-        <td>Count</td>
-        <td>The number of secondary particles to be created in the chosen secondary Event</td>
+        <td><span class="notranslate">Count</span></td>
+        <td>Die Anzahl der sekundären Partikel, die in dem gewählten sekundären Ereignis erstellt werden sollen</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Set Secondary Particles Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Set_Secondary_Particles.png" />The above action block code will assign two secondary particles to
-    the particle with the ID stored in the variable &quot;p_fire&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p><img>Der obige Aktionsblock <span class="notranslate">code</span> wird zwei sekundäre Partikel zuweisen
+    dem Partikel mit der in der Variablen &quot;p_fire&quot; gespeicherten ID zu.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Actions.htm">Particle Actions</a></div>
-        <div style="float:right">Next: <a href="Burst_Particles.htm">Burst Particles</a></div>
+        <div style="float:left">Zurück: <a href="Particle_Actions.htm">Teilchen-Aktionen</a></div>
+        <div style="float:right">Nächste: <a href="Burst_Particles.htm">Partikel platzen lassen</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Secondary Particles

@@ -6,7 +6,7 @@
   <title>get_save_filename</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for get_save_filename" />
   <meta name="rh-index-keywords" content="get_save_filename" />
@@ -15,51 +15,51 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>get_save_filename</h1>
-  <p>This function opens a dialogue and asks the player for a filename to save to with the given filter. The filter has the form &quot;<i>name1|mask1|name2|mask2|...</i>&quot;, where the mask may contain the different options with a semicolon between them and you can also use a &quot;*&quot; to mean any string. For example: &quot;<i>bitmaps|*.bmp;*.wmf</i>&quot;, would ask the user to select the name of a bitmap file from the system, but only those that have the two specified extensions (<span class="inline">bmp</span> and <span class="inline">png</span>). this function does <b>not</b> save the file itself! It only returns a string with the full name and path of the file. If the user presses &quot;<b>Cancel</b>&quot; an empty string &quot;&quot; is returned.</p>
-  <p>An important thing to note when using this function is that it grants you certain permissions for that file, for the duration of your game. So, once you get the file path from the user, you can access it again and again without having to ask, and the permission applies to reading <i>and</i> writing equally.</p>
-  <p class="note"><b>NOTE</b>: This function is only valid on the Windows and macOS targets.</p>
-  <p> </p>
+  <p>Diese Funktion öffnet einen Dialog und fragt den Spieler nach einem Dateinamen, der mit dem angegebenen Filter gespeichert werden soll. Der Filter hat die Form &quot;<i>Name1|Maske1|Name2|Maske2|...</i>&quot;, wobei die Maske die verschiedenen Optionen mit einem Semikolon dazwischen enthalten kann und ein &quot;*&quot; für eine beliebige Zeichenfolge stehen kann. Zum Beispiel: &quot;<i>bitmaps|*.bmp;*.wmf</i>&quot;, würde den Benutzer auffordern, den Namen einer Bitmap-Datei aus dem System auszuwählen, aber nur solche, die die beiden angegebenen Erweiterungen haben (<span class="inline">bmp</span> und <span class="inline">png</span>). Diese Funktion speichert die Datei selbst <b>nicht</b>! Sie gibt nur eine Zeichenkette mit dem vollständigen Namen und Pfad der Datei zurück. Wenn der Benutzer &quot;<b>Abbrechen</b>&quot; drückt, wird eine leere Zeichenkette &quot;&quot; zurückgegeben.</p>
+  <p>Wichtig bei der Verwendung dieser Funktion ist, dass sie Ihnen für die Dauer Ihres Spiels bestimmte Rechte für diese Datei gewährt. Sobald Sie also den Dateipfad vom Benutzer erhalten haben, können Sie immer wieder darauf zugreifen, ohne fragen zu müssen, und die Berechtigung gilt für das Lesen <i>und</i> Schreiben gleichermaßen.</p>
+  <p class="note"><b>HINWEIS</b>: Diese Funktion ist nur für die Ziele <span class="notranslate">Windows</span> und <span class="notranslate">macOS</span> gültig.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">get_save_filename(filter, fname);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Beschreibung</th>
      </tr>
       <tr>
-        <td>filter</td><td><span data-keyref="Type_String"></span></td>
-        <td>The file type filter and/or name.</td>
+        <td><span class="notranslate">filter</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The file type filter and/or name.</span></td>
      </tr>
       <tr>
-        <td>fname</td><td><span data-keyref="Type_String"></span></td>
-        <td>The suggested filename to use.</td>
+        <td><span class="notranslate">fname</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The suggested filename to use.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_String"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">var file;<br />
     file = get_save_filename(&quot;screenshot|*.png&quot;, &quot;&quot;);<br />
     if file != &quot;&quot;<br />
     {<br />
         screen_save(file);<br />
     }</p>
-  <p>The above code will ask the user to select an image file name file for saving then check the returned file name and path, and if it is not an empty string it takes a screen shot and saves it using the given name.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>In der obigen <span class="notranslate">code</span> wird der Benutzer aufgefordert, eine Bilddatei zum Speichern auszuwählen. Anschließend werden der zurückgegebene Dateiname und der Pfad überprüft, und wenn es sich nicht um eine leere Zeichenfolge handelt, wird ein Bildschirmfoto erstellt und unter dem angegebenen Namen gespeichert.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="File_System.htm">File System</a></div>
-        <div style="float:right">Next: <a href="get_save_filename_ext.htm">get_save_filename_ext</a></div>
+        <div style="float:left">Zurück: <a href="File_System.htm">Dateisystem</a></div>
+        <div style="float:right">Nächste: <a href="get_save_filename_ext.htm"><span class="notranslate">get_save_filename_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 get_save_filename

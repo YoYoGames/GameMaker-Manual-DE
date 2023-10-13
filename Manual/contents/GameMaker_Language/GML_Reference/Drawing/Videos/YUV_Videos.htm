@@ -4,10 +4,10 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>YUV Videos</title>
+  <title>YUV-Videos</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Information on drawing YUV videos" />
   <meta name="template" content="../../../../assets/masterpages/Manual_Page.htt" />
@@ -16,27 +16,27 @@
   <meta name="condition-tags" content="" />
 </head>
 <body>
-  <h1>YUV Videos</h1>
-  <p>Platforms that use the YUV colour format for videos require extra steps for drawing those videos. This involves using a shader to draw two surfaces on a primitive quad.</p>
-  <p>Read the <span class="inline"><a href="video_draw.htm">video_draw()</a></span> reference page first for information on what data that function returns for YUV videos, and then continue reading below for instructions on using that data to draw the video.</p>
-  <h2>YUV Shader</h2>
-  <p>Create a shader asset in your project, and replace its Fragment Shader (<span class="inline2">.fsh</span>) code with this:</p>
+  <h1>YUV-Videos</h1>
+  <p>Plattformen, die das YUV-Farbformat für Videos verwenden, erfordern zusätzliche Schritte zum Zeichnen dieser Videos. Dazu gehört die Verwendung eines Shaders zum Zeichnen von zwei Flächen auf einem primitiven Quad.</p>
+  <p>Lesen Sie zunächst die Referenzseite <span class="inline"><a href="video_draw.htm">video_draw()</a></span>, um zu erfahren, welche Daten diese Funktion für YUV-Videos zurückgibt, und lesen Sie dann weiter unten, um Anweisungen zur Verwendung dieser Daten zum Zeichnen des Videos zu erhalten.</p>
+  <h2>YUV-Shader</h2>
+  <p>Erstellen Sie ein Shader-Asset in Ihrem Projekt und ersetzen Sie dessen Fragment-Shader (<span class="inline2">.fsh</span>) <span class="notranslate">code</span> durch dieses:</p>
   <pre>//
-// CUSTOM fragment shader for handling YUV content
+// CUSTOM-Fragment-Shader zur Behandlung von YUV-Inhalten
 //
-varying vec2 v_vTexcoord;
-varying vec4 v_vColour;
-uniform sampler2D v_chroma;
+variierender vec2 v_vTexcoord;
+variierender vec4 v_vColour;
+einheitlicher Sampler2D v_chroma;
 const float x = 1.164383;
 const float y = 1.138393;
-const float z = 1.138393;
-const vec3 src_bias = vec3(16.0 / 255.0, 128.0 / 255.0, 128.0 / 255.0);
-const mat3 src_xform = mat3(1.00000000 * x,  0.00000000 * y,  1.57480000 * z,
-                            1.00000000 * x, -0.18732427 * y, -0.46812427 * z,
-			    1.00000000 * x,  1.85560000 * y,  0.00000000 * z);
+const float z = 1.138393; const float z = 1.138393;
+const vec3 src_bias = vec3(16,0 / 255,0, 128,0 / 255,0, 128,0 / 255,0);
+const mat3 src_xform = mat3(1.00000000 * x, 0.00000000 * y, 1.57480000 * z,
+                            1,00000000 * x, -0,18732427 * y, -0,46812427 * z,
+			    1,00000000 * x, 1,85560000 * y, 0,00000000 * z);
 void main()
 {
-    float yy = texture2D(gm_BaseTexture, vec2(v_vTexcoord.x, v_vTexcoord.y)).r;
+    float yy = texture2D(gm_BaseTextur, vec2(v_vTexkoordinate.x, v_vTexkoordinate.y)).r;
     vec2 cbcr = texture2D(v_chroma, vec2(v_vTexcoord.x, v_vTexcoord.y)).rg;
     vec3 yuv = vec3(yy, cbcr);
     yuv -= src_bias;
@@ -45,33 +45,33 @@ void main()
 }
   
 </pre>
-  <h2>Get Sampler</h2>
-  <p>In the Create event of your object, get the sampler ID of the <span class="inline2">v_chroma</span> shader uniform, only if the video is YUV:</p>
+  <h2>Sampler holen</h2>
+  <p>Holen Sie sich im Create-Ereignis Ihres Objekts die Sampler-ID des <span class="inline2">v_chroma-Shaders</span> uniform, nur wenn das Video YUV ist:</p>
   <pre>var _format = video_get_format();
-if (_format == video_format_yuv)
+wenn (_format == video_format_yuv)
 {
     videochromasampler = shader_get_sampler_index(shader_YUV, &quot;v_chroma&quot;);
 }
 </pre>
-  <h2 id="h">Draw Video</h2>
-  <p>In the Draw event of your object, call <span class="inline"><a href="video_draw.htm">video_draw()</a></span>, and if its first array position is <strong>0</strong> (meaning the video is playing), draw the video.</p>
-  <p>In the code below, we&#39;re using a switch statement on the <span class="inline"><a href="video_get_format.htm">video_get_format()</a></span> function. If the video is using the RGBA format, then it simply draws the surface in position <span class="inline2">[1]</span> of the array.</p>
-  <p>If the video is using the YUV format, it uses the shader to draw the two surfaces (in positions <span class="inline2">[1]</span> and <span class="inline2">[2]</span>) onto a primitive quad.</p>
+  <h2 id="h">Video zeichnen</h2>
+  <p>Rufen Sie im Draw-Ereignis Ihres Objekts <span class="inline"><a href="video_draw.htm">video_draw()</a></span> auf, und wenn die erste Array-Position <strong>0</strong> ist (was bedeutet, dass das Video abgespielt wird), zeichnen Sie das Video.</p>
+  <p>In der folgenden <span class="notranslate">code</span> verwenden wir eine <span class="notranslate">switch</span> -Anweisung für die Funktion <span class="inline"><a href="video_get_format.htm">video_get_format()</a></span>. Wenn das Video das RGBA-Format verwendet, wird die Fläche einfach an der Position <span class="inline2">[1]</span> des Arrays gezeichnet.</p>
+  <p>Wenn das Video das YUV-Format verwendet, werden die beiden Flächen (an den Positionen <span class="inline2">[1]</span> und <span class="inline2">[2]</span>) mit Hilfe des Shaders auf ein primitives Quad gezeichnet.</p>
   <pre>var _data = video_draw();
 if(_data[0] == 0)
 {
 	switch(video_get_format())
 	{
-		case video_format_rgba:
+		Fall video_format_rgba:
 			var _surf = _data[1];
 			draw_surface(_surf,0,0);
-		break;
+		brechen;
 	
-		//  #### YUV PART HERE ####
+		// #### YUV-TEIL HIER ####
 		case video_format_yuv:
 			var _surf = _data[1];
 			var _chromasurf = _data[2];
-			if(surface_exists(_surf) and surface_exists(_chromasurf))
+			if(surface_exists(_surf) und surface_exists(_chromasurf))
 			{
 				shader_set(shader_YUV);
 			
@@ -94,34 +94,34 @@ if(_data[0] == 0)
 	}
 }
   </pre>
-  <p>The code under <span class="inline2">case video_format_yuv:</span> does the following:</p>
+  <p>Die <span class="notranslate">code</span> unter <span class="inline2">case video_format_yuv:</span> tut Folgendes:</p>
   <ul class="colour">
-    <li>Gets the video surface (<span class="inline2">_surf</span>) and the chroma surface (<span class="inline2">_chromasurf</span>)</li>
-    <li>Makes sure that they exist, using <span class="inline"><a href="../Surfaces/surface_exists.htm">surface_exist()</a></span>
+    <li>Ermittelt die Videofläche<span class="inline2">(_surf</span>) und die Chromafläche<span class="inline2">(_chromasurf</span>)</li>
+    <li>Stellt sicher, dass sie existieren, indem er <span class="inline"><a href="../Surfaces/surface_exists.htm">surface_exist()</a></span>
       <ul>
-        <li>Sets the shader to <span class="inline2">shader_YUV</span> (which is our newly created YUV shader)</li>
-        <li>Gets the textures of both surfaces</li>
-        <li>Assigns the texture of the chroma surface to the sampler we retrieved in the Create event</li>
-        <li>Disables texture filtering</li>
-        <li>Begins drawing a triangle strip primitive, with the video surface&#39;s texture assigned to it</li>
-        <li>Draws a rectangle to cover the video surface, uses the width and height of the chroma surface for that rectangle</li>
-        <li>Ends the primitive</li>
-        <li>Re-enables texture filtering and resets the shader</li>
+        <li>Setzt den Shader auf <span class="inline2">shader_YUV</span> (das ist unser neu erstellter YUV-Shader)</li>
+        <li>Ruft die Texturen beider Oberflächen ab</li>
+        <li>Weist die Textur der Chroma-Oberfläche dem Sampler zu, den wir im Create-Event abgerufen haben</li>
+        <li>Deaktiviert die Texturfilterung</li>
+        <li>Beginnt mit dem Zeichnen eines dreieckigen Streifenprimitivs, dem die Textur der Videooberfläche zugewiesen wird</li>
+        <li>Zeichnet ein Rechteck, das die Videofläche abdeckt, und verwendet die Breite und Höhe der Chroma-Oberfläche für dieses Rechteck</li>
+        <li>Beendet das Primitiv</li>
+        <li>Aktiviert erneut die Texturfilterung und setzt den Shader zurück</li>
       </ul>
     </li>
   </ul>
-  <p>Here the main video surface is being drawn by the primitive, and the chroma surface is being blended on to it by the shader. That is the reason why the texture of the chroma surface was passed into the shader via a sampler.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Hier wird die Hauptvideofläche vom Primitiv gezeichnet, und die Chroma-Fläche wird vom Shader darauf geblendet. Aus diesem Grund wurde die Textur der Chroma-Oberfläche über einen Sampler an den Shader übergeben.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{text}" href="Videos.htm#h1">Video Playback</a></div>
-        <div>Next: <a data-xref="{title}" href="video_set_volume.htm">video_set_volume</a></div>
+        <div>Zurück: <a data-xref="{text}" href="Videos.htm#h1">Video-Wiedergabe</a></div>
+        <div>Weiter: <a data-xref="{title}" href="video_set_volume.htm">video_set_volume</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 YUV	Videos

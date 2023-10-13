@@ -6,7 +6,7 @@
   <title>ini_key_exists</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for ini_key_exists" />
   <meta name="rh-index-keywords" content="ini_key_exists" />
@@ -16,49 +16,49 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>ini_key_exists</h1>
-  <p>This function checks to see if a key exists in the currently open ini and will return <span class="inline">true</span> if it does or <span class="inline">false</span> otherwise. This is not a necessary check to prevent errors as, when a key does not exist, reading from a non-existent key will just return a default value. It can be useful to see if an ini file has saved specific data and a few other things, however.</p>
-  <p> </p>
+  <p>Diese Funktion prüft, ob ein Schlüssel in der aktuell geöffneten ini-Datei vorhanden ist und gibt in diesem Fall <span class="inline">true</span> zurück, andernfalls <span class="inline">false</span>. Diese Prüfung ist nicht notwendig, um Fehler zu vermeiden, denn wenn ein Schlüssel nicht existiert, wird beim Lesen aus einem nicht existierenden Schlüssel einfach ein Standardwert zurückgegeben. Es kann jedoch nützlich sein, um zu sehen, ob eine Ini-Datei bestimmte Daten und einige andere Dinge gespeichert hat.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">ini_key_exists(section, key);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Beschreibung</th>
      </tr>
       <tr>
-        <td>section</td><td><span data-keyref="Type_String"></span></td>
-        <td>The section in the open .ini file to check a key in.</td>
+        <td><span class="notranslate">section</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The section in the open .ini file to check a key in.</span></td>
      </tr>
       <tr>
-        <td>key</td><td><span data-keyref="Type_String"></span></td>
-        <td>The key to check for.</td>
+        <td><span class="notranslate">key</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The key to check for.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">ini_open(&quot;savedata.ini&quot;);<br />
     if !ini_key_exists(&quot;save1&quot;, &quot;name&quot;)<br />
     {<br />
         global.name = &quot;Player1&quot;;<br />
     }<br />
     ini_close();</p>
-  <p>This will set variable global.name to &quot;Player1&quot; if no such key as &quot;name&quot; exists.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Dadurch wird die Variable global.name auf &quot;Player1&quot; gesetzt, wenn kein Schlüssel mit dem Namen &quot;name&quot; existiert.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Ini_Files.htm">Ini Files</a></div>
-        <div style="float:right">Next: <a href="ini_section_exists.htm">ini_section_exists</a></div>
+        <div style="float:left">Zurück: <a href="Ini_Files.htm">Ini Files</a></div>
+        <div style="float:right">Nächste: <a href="ini_section_exists.htm"><span class="notranslate">ini_section_exists</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 ini_key_exists

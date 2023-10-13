@@ -6,7 +6,7 @@
   <title>try / catch / finally</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the try / catch / finally functions" />
   <meta name="rh-index-keywords" content="try,catch,finally" />
@@ -15,15 +15,15 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>try / catch / finally</h1>
-  <p>The <span class="inline">try</span>, <span class="inline">catch</span> and <span class="inline">finally</span> statements can be used in your game for error checking and permit you to test out blocks of code and control what happens if any <a href="../../../Additional_Information/Errors/Runner_Errors.htm">runtime exceptions</a> occur. Using these will prevent the exception ending the game and showing the standard error message to the user, but this means that you will have to handle what happens next in that case, like saving out log files - for example - and ending the game gracefully (note that if you choose to do nothing, your game may become unstable and not perform correctly).</p>
-  <p>At it&#39;s most basic the <span class="inline">try</span> syntax is as follows:</p>
+  <p>Die Anweisungen <span class="inline">try</span>, <span class="inline">catch</span> und <span class="inline">finally</span> können in Ihrem Spiel zur Fehlerprüfung verwendet werden und erlauben es Ihnen, Blöcke von <span class="notranslate">code</span> zu testen und zu kontrollieren, was passiert, wenn irgendwelche <a href="../../../Additional_Information/Errors/Runner_Errors.htm">Laufzeitausnahmen</a> auftreten. Die Verwendung dieser Anweisungen verhindert, dass die Ausnahme das Spiel beendet und dem Benutzer die Standardfehlermeldung anzeigt, aber das bedeutet, dass Sie sich darum kümmern müssen, was in diesem Fall als Nächstes passiert, wie z. B. das Speichern von Protokolldateien und das ordnungsgemäße Beenden des Spiels (beachten Sie, dass Ihr Spiel instabil werden und nicht mehr richtig funktionieren kann, wenn Sie nichts unternehmen).</p>
+  <p>Im Grunde genommen sieht die <span class="inline">try</span> <span class="notranslate">syntax</span> folgendermaßen aus:</p>
   <p class="code">try<br />
     {<br />
         &lt;statement1&gt;;<br />
         &lt;statement2&gt;;<br />
         ...<br />
     }</p>
-  <p>However, having a <span class="inline">try</span> without anything to actually handle any exceptions the code may produce will not be very helpful, so we usually pair it with a <span class="inline">catch</span>, with the following syntax:</p>
+  <p>Ein <span class="inline">try</span> ohne etwas, das Ausnahmen behandelt, die <span class="notranslate">code</span> auslöst, ist jedoch nicht sehr hilfreich, daher wird es normalerweise mit einem <span class="inline">catch</span> gepaart, mit der folgenden Syntax:</p>
   <p class="code">try<br />
     {<br />
         &lt;statement1&gt;;<br />
@@ -36,14 +36,14 @@
         &lt;statement2&gt;;<br />
         ...<br />
     }</p>
-  <p>What <span class="inline">catch</span> does is permit you to run extra code supplied in the following block when an exception from the previous <span class="inline">try</span> has been caught. If this is a runtime exception, then the supplied variable can be used to access a <a href="../Structs.htm">struct</a> which will contain the following information:</p>
+  <p>Die Funktion von <span class="inline">catch</span> besteht darin, die im folgenden Block gelieferte zusätzliche <span class="notranslate">code</span> auszuführen, wenn eine Ausnahme aus dem vorherigen <span class="inline">try</span> abgefangen wurde. Wenn es sich um eine <span class="notranslate">runtime</span> Ausnahme handelt, kann die übergebene Variable verwendet werden, um auf eine <a href="../Structs.htm">Struktur</a> zuzugreifen, die die folgenden Informationen enthält:</p>
   <p class="code">{<br />
     message : &quot;&quot;,               // a string that is a short message for this exception<br />
     longMessage : &quot;&quot;,           // a string that is a longer message for this exception<br />
     script : &quot;&quot;,                // a string that describes where the exception came from<br />
     stacktrace : [ &quot;&quot;, &quot;&quot; ],    // an array of strings that is the stack frame the exception was generated<br />
     }</p>
-  <p>A simple example of use is shown below:</p>
+  <p>Ein einfaches Beispiel für die Verwendung ist unten dargestellt:</p>
   <p class="code">var a = 0, b = 0, c = 0;<br />
     try<br />
     {<br />
@@ -56,21 +56,21 @@
         show_debug_message(_exception.script);<br />
         show_debug_message(_exception.stacktrace);<br />
     }</p>
-  <p>It may be that you want to run some code regardless of whether an exception was thrown or not, and so for that you can add in a <span class="inline">finally</span> block. The <span class="inline">finally</span> syntax is:</p>
+  <p>Es kann sein, dass Sie einige <span class="notranslate">code</span> unabhängig davon ausführen möchten, ob eine Ausnahme ausgelöst wurde oder nicht, und dafür können Sie einen <span class="inline">finally</span> -Block einfügen. Die <span class="inline">finally</span> <span class="notranslate">syntax</span> ist:</p>
   <p class="code">finally<br />
     {<br />
         &lt;statement1&gt;;<br />
         &lt;statement2&gt;;<br />
         etc...<br />
     }</p>
-  <p>It is worth noting that you can have any combination of these together, ie:</p>
+  <p>Es ist erwähnenswert, dass Sie jede beliebige Kombination von diesen zusammen haben können, d.h.:</p>
   <ul class="colour">
     <li><span class="inline">try</span> / <span class="inline">finally</span></li>
     <li><span class="inline">try</span> / <span class="inline">catch</span></li>
     <li><span class="inline">try</span> / <span class="inline">catch</span> / <span class="inline">finally</span></li>
   </ul>
-  <p>Note that within the <span class="inline">finally</span> block you <em>cannot </em>use <a href="break.htm"><span class="inline">break</span></a>, <a href="continue.htm"><span class="inline">continue</span></a>, <a href="exit.htm"><span class="inline">exit</span></a> or <a href="return.htm"><span class="inline">return</span></a> statements as they have no meaning in this context and the compiler will generate an error if they are used.</p>
-  <p>Finally, you can also nest various <span class="inline">try</span> / <span class="inline">catch</span> / <span class="inline">finally</span> within each other, for example:</p>
+  <p>Beachten Sie, dass Sie innerhalb des <span class="inline">finally</span> -Blocks <em>nicht </em>mit <a href="break.htm"><span class="inline">break</span></a>, <a href="continue.htm"><span class="inline">continue</span></a>, <a href="exit.htm"><span class="inline">exit</span></a> oder <a href="return.htm"><span class="inline">return</span></a> Anweisungen nicht verwenden können, da sie in diesem Zusammenhang keine Bedeutung haben und <span class="notranslate">compiler</span> einen Fehler erzeugt, wenn sie verwendet werden.</p>
+  <p>Schließlich können Sie auch verschiedene <span class="inline">try</span> / <span class="inline">catch</span> / <span class="inline">finally</span> ineinander verschachteln, zum Beispiel:</p>
   <p class="code">var a = 0, b = 0, c = 0;<br />
     try<br />
     {<br />
@@ -95,18 +95,18 @@
     {<br />
         show_debug_message(&quot;a = &quot; + string(a));<br />
     }</p>
-  <p>It is worth noting that you can take over the default GML error message and use your own handler code by calling the function <a href="../../GML_Reference/Debugging/exception_unhandled_handler.htm"><span class="inline">exception_unhandled_handler()</span></a>. This <a href="../Runtime_Functions.htm">runtime function</a> permits you to supply a custom <a href="../Method_Variables.htm">method</a> to use that will be called whenever any unhandled exceptions occur in your game.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Es ist erwähnenswert, dass Sie die Standard-Fehlermeldung <span class="notranslate">GML</span> übernehmen und Ihren eigenen Handler <span class="notranslate">code</span> verwenden können, indem Sie die Funktion <a href="../../GML_Reference/Debugging/exception_unhandled_handler.htm"><span class="inline">exception_unhandled_handler()</span></a>. Diese <a href="../Runtime_Functions.htm">Laufzeitfunktion</a> erlaubt es Ihnen, eine eigene <a href="../Method_Variables.htm"><span class="notranslate">method</span></a> zu verwenden, die immer dann aufgerufen wird, wenn in Ihrem Spiel eine unbehandelte Ausnahme auftritt.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Language_Features.htm">Language Features</a></div>
-        <div style="float:right">Next: <a href="throw.htm">throw</a></div>
+        <div style="float:left">Zurück: <a href="../Language_Features.htm">Sprachliche Merkmale</a></div>
+        <div style="float:right">Nächste: <a href="throw.htm"><span class="notranslate">throw</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 try

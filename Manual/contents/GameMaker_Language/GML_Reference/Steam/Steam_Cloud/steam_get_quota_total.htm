@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_get_quota_total</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_get_quota_total" />
+  <meta name="rh-index-keywords" content="steam_get_quota_total" />
+  <meta name="search-keywords" content="steam_get_quota_total" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_get_quota_total</h1>
+  <p>Wenn Sie die <span class="notranslate">Steam</span> Cloud zum Speichern und Synchronisieren von Dateien verwenden, müssen Sie ein <i>Kontingent</i> für den Speicherplatz einrichten, den Ihr Spiel benötigen wird. Dieses Kontingent wird für jedes Cloud-fähige Spiel pro Benutzer und pro Spiel festgelegt. Wenn das Kontingent für Spiel X beispielsweise 1 Megabyte beträgt, kann jedes <span class="notranslate">Steam</span> -Konto, dem Spiel X gehört, maximal 1 Megabyte an Daten zu diesem Spiel in der Cloud speichern. Alle anderen Cloud-fähigen Spiele, die der Benutzer besitzt (z. B. Spiel Y), sind von den von Spiel X gespeicherten Daten nicht betroffen. Das Standardkontingent für neue Steamworks-Spiele beträgt ein Gigabyte, aber Sie können dies über das Steamworks-Kontrollfeld für Ihr Spiel ändern.</p>
+  <p class="note"><b>HINWEIS</b>: Sobald das Kontingent erschöpft ist <b>,</b> werden Dateien <b>nicht mehr</b> geschrieben. Wenn Sie es für möglich halten, dass das Kontingent für den Benutzer Ihres Spiels erschöpft sein könnte, sollten Sie <span class="notranslate">code</span> erstellen, um damit umzugehen, denn wenn Sie nichts tun, lassen Sie die Benutzer in einer Situation zurück, in der sie nicht in der Lage sind, Dinge zu beheben, und das wird zu einer schlechten Erfahrung mit Ihrem Spiel führen.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_get_quota_total();</p>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p class="code">if steam_is_cloud_enabled_for_app()<br />
+    {<br />
+        quota = steam_get_quota_total();<br />
+    }</p>
+  <p>Die obige <span class="notranslate">code</span> prüft, ob die <span class="notranslate">steam</span> Cloud für das Spiel aktiviert ist, und wenn ja, ermittelt sie die Größe des Speicherkontingents und speichert sie in einer Variablen.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Zurück: <a href="Steam_Cloud.htm">Dampfwolke</a></div>
+        <div style="float:right">Nächste: <a href="steam_get_quota_free.htm"><span class="notranslate">steam_get_quota_free</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_get_quota_total
+-->
+  <!-- TAGS
+steam_get_quota_total
+-->
+</body>
+</html>

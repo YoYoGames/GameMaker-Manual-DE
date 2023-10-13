@@ -2,62 +2,62 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Code Snippets</title>
-    <meta name="generator" content="Adobe RoboHelp 2020"/>
-    <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
-    <script src="../../assets/scripts/main_script.js" type="module"></script>
-    <meta name="rh-authors" content="Mark Alexander"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Code-Schnipsel</title>
+    <meta name="generator" content="Adobe RoboHelp 2020" />
+    <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
+    <script src="../../assets/scripts/main_script.js"></script>
+    <meta name="rh-authors" content="Mark Alexander" />
     <meta name="topic-comment" content="Page detailing how to create your own code snippets
-"/>
-    <meta name="rh-index-keywords" content="Code Editor - Snippets"/>
-    <meta name="search-keywords" content="snippet,snippets,code snippets"/>
+" />
+    <meta name="rh-index-keywords" content="Code Editor - Snippets" />
+    <meta name="search-keywords" content="snippet,snippets,code snippets" />
   </head>
   <body><!--<div class="body-scroll" style="top: 150px;">-->
-    <h1>Code Snippets</h1>
-    <p>A very handy tool you have at your disposal when editing your code is the use of <strong>Code Snippets</strong>. When using the script editor, you can press <span class="inline">F4</span> to open the code snippet pop-up, which permits you to select one of the commonly used code methods from a list:</p>
-    <p><img alt="Code Snippets Window" class="center" src="../../assets/Images/Asset_Editors/CodeSnippets_IDE.png"/>From this window you can select with the mouse the snippet to use, or you can press the associated hotkey listed on the right. This will add the snippet to your code for editing.</p>
-    <p>You can also define your own code snippets if you want to. Before doing this, you&#39;ll need to create a file called &quot;<span class="inline">snippets.txt</span>&quot; in one of the following directories:</p>
+    <h1>Code-Schnipsel</h1>
+    <p>Ein sehr praktisches Werkzeug, das Ihnen bei der Bearbeitung Ihrer <span class="notranslate">code</span> zur Verfügung steht, ist die Verwendung von <strong>Code-Snippets</strong>. Wenn Sie den Editor <span class="notranslate">script</span> verwenden, können Sie <span class="inline">F4</span> drücken, um das Pop-up-Fenster <span class="notranslate">code</span> zu öffnen, in dem Sie eine der häufig verwendeten Methoden <span class="notranslate">code</span> aus einer Liste auswählen können:</p>
+    <p><img>In diesem Fenster können Sie das zu verwendende Snippet mit der Maus auswählen oder den zugehörigen Hotkey auf der rechten Seite drücken. Dadurch wird das Snippet zur Bearbeitung zu Ihrem <span class="notranslate">code</span> hinzugefügt.</p>
+    <p>Sie können auch Ihre eigenen <span class="notranslate">code</span> Schnipsel definieren, wenn Sie das möchten. Dazu müssen Sie eine Datei mit dem Namen &quot;<span class="inline">snippets.txt</span>&quot; in einem der folgenden Verzeichnisse erstellen:</p>
     <ul class="colour">
-      <li>Windows: <span class="inline">%ProgramData%\GameMaker\User\</span></li>
+      <li>Fenster: <span class="inline">%ProgramData%\GameMaker\User\</span></li>
       <li>macOS: <span class="inline">/Users/Shared/GameMaker/User/</span></li>
     </ul>
-    <p>This folder is <em>not </em>modified during any update to <span data-keyref="GameMaker Name">GameMaker</span>, so your edited file will remain intact (but any edits to the base snippets file in the install directory will be reverted).</p>
-    <p>Once the file is created in the User directory, you can edit it with any text editor following these rules:</p>
+    <p>Dieser Ordner wird bei einem Update von <span data-keyref="GameMaker Name">GameMaker</span> <em>nicht </em>verändert, so dass Ihre bearbeitete Datei erhalten bleibt (aber alle Änderungen an der Snippets-Basisdatei im Installationsverzeichnis werden rückgängig gemacht).</p>
+    <p>Sobald die Datei im Benutzerverzeichnis erstellt ist, können Sie sie mit einem beliebigen Texteditor bearbeiten, indem Sie diese Regeln befolgen:</p>
     <ul class="colour">
-      <li>Each snippet has to be on a separate line (there should be no blank lines)</li>
-      <li>Each snippet must start with the hotkey to be used followed by &quot;<span class="inline">-</span>&quot; and then the name of the snippet (which is what is shown in the menu) followed by a colon &quot;<span class="inline">:</span>&quot;, eg:</li>
+      <li>Jedes Snippet muss in einer eigenen Zeile stehen (es sollten keine Leerzeilen vorhanden sein)</li>
+      <li>Jedes Snippet muss mit dem zu verwendenden Hotkey beginnen, gefolgt von &quot;<span class="inline">-</span>&quot; und dann dem Namen des Snippets (der im Menü angezeigt wird), gefolgt von einem Doppelpunkt &quot;<span class="inline">:</span>&quot;, z. B:</li>
     </ul>
-    <p class="code" style="margin-left: 100px">I - Instance Create:</p>
-    <p style="margin-left: 60px">After the colon you add the snippet of code</p>
-    <p class="code" style="margin-left: 100px">I - Instance Create:instance_create_layer(x, y, |layer|, object);</p>
-    <p>The code that you add must also follow a specific format where:</p>
+    <p class="code" style="margin-left: 100px">I - Instanz erstellen:</p>
+    <p style="margin-left: 60px">Nach dem Doppelpunkt fügen Sie den folgenden Codeschnipsel ein</p>
+    <p class="code" style="margin-left: 100px">I - Instanz erstellen:instance_create_layer(x, y, |layer|, object);</p>
+    <p>Die <span class="notranslate">code</span>, die Sie hinzufügen, müssen auch ein bestimmtes Format haben, bei dem:</p>
     <ul class="colour">
-      <li>All code is on a single line</li>
-      <li>You use &quot;<span class="inline">$</span>&quot; for a newline
+      <li>Alle <span class="notranslate">code</span> befinden sich in einer einzigen Zeile.</li>
+      <li>Sie verwenden &quot;<span class="inline">$</span>&quot; für einen Zeilenumbruch
         <ul>
-          <li><span class="note">NOTE</span> When creating multiple newlines, there needs to be a space between each &quot;<span class="inline">$</span>&quot; sign. For example, you would write <span class="inline2">$ $ $</span> to add three newlines.</li>
+          <li><span class="note">HINWEIS</span> Wenn Sie mehrere Zeilenumbrüche erstellen, muss zwischen jedem &quot;<span class="inline">$</span>&quot; Zeichen ein Leerzeichen stehen. Sie würden zum Beispiel <span class="inline2">$ $ $</span> schreiben, um drei Zeilenumbrüche einzufügen.</li>
         </ul>
       </li>
-      <li>You put the text that needs to be highlighted between &quot;<span class="inline">|</span>&quot; symbols. The Code Editor will automatically select this text for editing when the snippet is added.</li>
+      <li>Sie setzen den Text, der hervorgehoben werden soll, zwischen die Symbole &quot;<span class="inline">|</span>&quot;. Der <span class="notranslate">Code</span> Editor wählt diesen Text automatisch zur Bearbeitung aus, wenn das Snippet hinzugefügt wird.</li>
     </ul>
-    <p>See the examples that are already in the base snippets file to see how it is set up following the rules above. You can find the base file in the <span data-keyref="GameMaker Name">GameMaker</span> install directory:</p>
+    <p>Sehen Sie sich die Beispiele an, die bereits in der Basisdatei der Snippets enthalten sind, um zu sehen, wie sie nach den oben genannten Regeln aufgebaut sind. Sie finden die Basisdatei im <span data-keyref="GameMaker Name">GameMaker-Installationsverzeichnis</span>:</p>
     <ul class="colour">
-      <li>Windows: <span class="inline"><span data-keyref="GameMaker Name">GameMaker</span>\TextEditor\snippets.txt</span></li>
-      <li>macOS: <span class="inline">/Applications/<span data-keyref="GameMaker Name">GameMaker</span>.app/Contents/MonoBundle/TextEditor/snippets.txt</span></li>
+      <li>Windows: <span class="inline"><span data-keyref="GameMaker Name">GameMaker</span>\TextEditor\snippets.txt</li>
+      <li>macOS: <span class="inline">/Applications/<span data-keyref="GameMaker Name">GameMaker</span>.app/Contents/MonoBundle/TextEditor/snippets.txt</li>
     </ul>
-    <p><img alt="Code Snippets Example" class="center" src="../../assets/Images/Asset_Editors/CodeSnippets_Example.png"/></p>
-    <p> </p>
-    <p> </p>
-    <p> </p>
+    <p><img alt="Code Snippets Window" class="center" src="../../assets/Images/Asset_Editors/CodeSnippets_IDE.png"/></p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
     <div class="footer">
       <div class="buttons">
         <div class="clear">
-          <div style="float:left">Back: <a href="../Scripts.htm">The Script Editor</a></div>
-          <div style="float:right">Next: <a href="Editing_Code.htm">Editing Code</a></div>
+          <div style="float:left">Zurück: <a href="../Scripts.htm">Der <span class="notranslate">Script</span> Editor</a></div>
+          <div style="float:right">Weiter: <a href="Editing_Code.htm">Code bearbeiten</a></div>
         </div>
       </div>
-      <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+      <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
     </div>
     <!-- KEYWORDS
 Snippets

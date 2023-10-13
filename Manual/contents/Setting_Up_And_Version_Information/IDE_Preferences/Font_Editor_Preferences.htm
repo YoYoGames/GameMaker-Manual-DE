@@ -1,51 +1,51 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Font Editor Preferences</title>
-  <meta name="generator" content="Adobe RoboHelp 2020"/>
-  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css"/>
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="The Font Editor Preferences"/>
-  <meta name="rh-index-keywords" content="Prefs - Fonts"/>
-  <meta name="search-keywords" content="Font Prefs,Font Editor Preferences"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Schriftarten-Editor-Einstellungen</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
+  <script src="../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="The Font Editor Preferences" />
+  <meta name="rh-index-keywords" content="Prefs - Fonts" />
+  <meta name="search-keywords" content="Font Prefs,Font Editor Preferences" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Font Editor Preferences</h1>
-  <p><img alt="Font Editor Preferences" class="center" src="../../assets/Images/Setup_And_Version/Preferences/FontEditor_Prefs.png" style="cursor: nesw-resize;"/>The <strong>Font Editor Preferences</strong> are used to define how the <a href="../../The_Asset_Editors/Fonts.htm">Font Editor</a> behaves.
-    The different options available are listed below along with a description of what each one does.</p>
+  <h1>Schriftarten-Editor-Einstellungen</h1>
+  <p><img>In den <strong>Einstellungen für den Schriftarten-Editor</strong> können Sie festlegen, wie sich der <a href="../../The_Asset_Editors/Fonts.htm">Schriftarten-Editor</a> verhält.
+    Die verschiedenen verfügbaren Optionen sind unten aufgeführt, zusammen mit einer Beschreibung der jeweiligen Funktion.</p>
   <ul class="colour">
-    <li><strong>Update Fonts imported from <span data-keyref="GameMaker Name">GameMaker</span> 1 projects</strong>: When this is checked, <span data-keyref="GameMaker Name">GameMaker</span> will attempt to update fonts and regenerate their texture. This will happen only if:
+    <li><strong>Aus <span data-keyref="GameMaker Name">GameMaker</span></strong> 1-Projekten importierte Schriftarten aktualisieren: Wenn diese Option aktiviert ist, versucht <span data-keyref="GameMaker Name">GameMaker</span>, die Schriftarten zu aktualisieren und ihre Textur neu zu generieren. Dies geschieht nur, wenn:
       <ul class="Disc">
-        <li>This preference is enabled</li>
-        <li>The font is available on the machine</li>
-        <li><span data-keyref="GameMaker Name">GameMaker</span> can locate a matching face in the font family (this is the most likely cause of inconsistency on import)</li>
+        <li>Diese Voreinstellung ist aktiviert</li>
+        <li>Die Schriftart ist auf dem Rechner verfügbar</li>
+        <li><span data-keyref="GameMaker Name">GameMaker</span> kann eine passende Schrift in der Schriftfamilie finden (dies ist die wahrscheinlichste Ursache für Inkonsistenzen beim Import)</li>
       </ul>
-      Note that it will also happen if the <span data-keyref="GameMaker Name">GameMaker</span> 1 font does not have a <a class="glossterm" data-glossterm="Cache" href="#">cached</a> font texture. If a legacy font cannot be updated, then <span data-keyref="GameMaker Name">GameMaker</span> will default to using the cached
-      font texture, and the Font Editor will no longer permit you to edit the font, showing an option to backup and update to another:<br/>
-      <br/>
-      <img alt="Font Editor Backup And Upgrade" class="center" src="../../assets/Images/Setup_And_Version/Preferences/FontEditor_Backup.png"/>Clicking this will enable you to edit the font, either adding the missing font or setting another one, and the
-      backed up font is stored in the font asset folder, as <span class="inline">&lt;font name&gt;.yy.gms1</span> and <span class="inline">&lt;font name&gt;.png.gms1</span>. To restore these files, manually delete the <span class="inline">&lt;font name&gt;.yy</span>      files and replace them with these by removing the <span class="inline">.gms1</span> extension from the filenames. <em> <strong>Important!</strong></em> All assets store their names in the <span class="inline">.yy</span> file, so you must edit these
-      and put the right name of the resource in the <span class="inline">&lt;name&gt;</span> field as well (if different).</li>
-    <li><strong>Automatic choice for failed content regeneration dialog</strong>: When you go to regenerate a font asset texture, you are shown a warning. Setting this option to &quot;OK&quot; will mean that the font is regenerated without the warning being
-      shown.</li>
-    <li><strong>Automatic choice for failed font regeneration dialog</strong>: When regeneration of a font asset texture fails, you are shown a warning. Setting this option to &quot;OK&quot; will skip showing the message.</li>
-    <li><strong>Automatic choice for upgrading imported legacy fonts</strong>: When you import a legacy project, you may get a warning about legacy fonts and the offer to upgrade. Setting this option to &quot;OK&quot; will okay the update automatically without
-      showing this message.</li>
+      Beachten Sie, dass dies auch geschieht, wenn die <span data-keyref="GameMaker Name">GameMaker</span> 1-Schriftart keine <a class="glossterm" data-glossterm="Cache" href="#">zwischengespeicherte</a> Schrifttextur hat. Wenn eine Legacy-Schrift nicht aktualisiert werden kann, verwendet <span data-keyref="GameMaker Name">GameMaker</span> standardmäßig die zwischengespeicherte
+      Schrifttextur zu verwenden, und der Schrift-Editor erlaubt Ihnen nicht mehr, die Schrift zu bearbeiten, sondern zeigt eine Option zum Sichern und Aktualisieren an:<br>
+      <br>
+      <img>Wenn Sie auf diese Option klicken, können Sie die Schriftart bearbeiten und entweder die fehlende Schriftart hinzufügen oder eine andere einstellen.
+      Die gesicherte Schriftart wird im Font-Asset-Ordner gespeichert, als <span class="inline">&lt;font name&gt;.yy.gms1</span> und <span class="inline">&lt;font name&gt;.png.gms1</span>. Um diese Dateien wiederherzustellen, löschen Sie manuell die Dateien <span class="inline">&lt;font name&gt;.yy</span> und ersetzen Sie sie durch diese, indem Sie die Erweiterung <span class="inline">.gms1</span> aus den Dateinamen entfernen. <em> <strong>Wichtig!</strong></em> Die Namen aller Assets werden in der Datei <span class="inline">.yy</span> gespeichert, daher müssen Sie diese
+      bearbeiten und den richtigen Namen der Ressource auch in das Feld <span class="inline">&lt;name&gt;</span> eintragen (falls abweichend).</li>
+    <li><strong>Automatische Auswahl des Dialogs für die fehlgeschlagene Regeneration von Inhalten</strong>: Wenn Sie eine Font-Asset-Textur neu generieren wollen, wird eine Warnung angezeigt. Wenn Sie diese Option auf &quot;OK&quot; setzen, wird die Schrift neu generiert, ohne dass die Warnung angezeigt wird.
+      angezeigt.</li>
+    <li><strong>Automatische Auswahl des Dialogs für fehlgeschlagene Schriftenregenerierung</strong>: Wenn die Regeneration einer Font-Asset-Textur fehlschlägt, wird eine Warnung angezeigt. Wenn Sie diese Option auf &quot;OK&quot; setzen, wird die Meldung nicht mehr angezeigt.</li>
+    <li><strong>Automatische Auswahl für das Upgrade von importierten Legacy-Schriften</strong>: Wenn Sie ein Legacy-Projekt importieren, erhalten Sie möglicherweise eine Warnung über Legacy-Schriften und das Angebot, diese zu aktualisieren. Wenn Sie diese Option auf &quot;OK&quot; setzen, wird die Aktualisierung automatisch genehmigt, ohne
+      diese Meldung angezeigt wird.</li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../IDE_Preferences.htm">IDE Preferences</a></div>
-        <div style="float:right">Next: <a href="Room_Editor_Preferences.htm">Room Editor Preferences</a></div>
+        <div style="float:left">Zurück: <a href="../IDE_Preferences.htm">IDE-Einstellungen</a></div>
+        <div style="float:right">Weiter: <a href="Room_Editor_Preferences.htm">Raum-Editor-Einstellungen</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 Preferences - Font Editor

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>xboxlive_fire_event</title>
+  <title>xboxlive_feuer_ereignis</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for xboxlive_fire_event" />
   <meta name="rh-index-keywords" content="xboxlive_fire_event" />
@@ -14,50 +14,50 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>xboxlive_fire_event</h1>
-  <p>This function can be used to fire a stat event. The &quot;event_name&quot; argument is the name of the event to be fired as defined in the XDP console for your game, and the following additional parameters will also depend on what you have a set up for the stat. The function will return 0 if the event was sent (and should be received/processed by the server) or -1 if there was an error (ie: your event was not setup as the event manifest file included in the project says another number).</p>
-  <p> </p>
+  <h1>xboxlive_feuer_ereignis</h1>
+  <p>Diese Funktion kann verwendet werden, um ein Statusereignis auszulösen. Der &quot;event_name&quot; <span class="notranslate">argument</span> ist der Name des auszulösenden Ereignisses, wie er in der XDP-Konsole für Ihr Spiel definiert ist, und die folgenden zusätzlichen Parameter hängen auch davon ab, was Sie für den Status eingerichtet haben. Die Funktion gibt 0 zurück, wenn das Ereignis gesendet wurde (und von <span class="notranslate">server</span> empfangen/verarbeitet werden sollte), oder -1, wenn ein Fehler aufgetreten ist (d.h. Ihr Ereignis wurde nicht eingerichtet, da die im Projekt enthaltene Ereignis-Manifestdatei eine andere Zahl angibt).</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">xboxlive_fire_event(event_name, [stat_parameters...]);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>event_name</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The name of the event to fire.</td>
+        <td><span class="notranslate">event_name</span></td>
+        <td><span data-keyref="Type_String">Zeichenfolge</span></td>
+        <td><span class="notranslate">The name of the event to fire.</span></td>
       </tr>
       <tr>
-        <td>stat_parameters</td>
-        <td><span data-keyref="Type_Any">Variable</span></td>
-        <td><span class="optional">OPTIONAL</span> Additional parameters to add to the event.</td>
+        <td><span class="notranslate">stat_parameters</span></td>
+        <td><span data-keyref="Type_Any">Variabel</span></td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> Zusätzliche Parameter, die dem Ereignis hinzugefügt werden sollen.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">var _user = xboxlive_get_user(0);<br />
     var _uid = xboxlive_user_id_for_user(_user);<br />
     result = xboxlive_fire_event(&quot;PlayerSessionStart&quot;, _uid, global.guid_str, 0, 42, 42);</p>
-  <p>The above code gets some information about the user then fires off a stat event along with this (and additional) data.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> erhält einige Informationen über den Benutzer und feuert dann ein stat-Ereignis zusammen mit diesen (und zusätzlichen) Daten ab.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Stats_And_Leaderboards.htm">Stats And Leaderboards</a></div>
-        <div style="float:right">Next: <a href="xboxlive_stats_setup.htm"> xboxlive_stats_setup </a></div>
+        <div style="float:left">Zurück: <a href="Stats_And_Leaderboards.htm">Statistiken und Ranglisten</a></div>
+        <div style="float:right">Weiter: <a href="xboxlive_stats_setup.htm"> xboxlive_stats_setup </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_fire_event

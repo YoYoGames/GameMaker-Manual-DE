@@ -6,7 +6,7 @@
   <title>physics_particle_delete_region_poly</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_particle_delete_region_poly" />
   <meta name="rh-index-keywords" content="physics_particle_delete_region_poly" />
@@ -15,28 +15,28 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>physics_particle_delete_region_poly</h1>
-  <p>With this function you can delete (remove) all the particles that fall within the bounds of the defined polygonal area from the physics simulation in the current room. The function takes a (previously created) <a href="../../Data_Structures/DS_Lists/DS_Lists.htm"><span class="inline">ds_list()</span></a> containing the x/y position of each point of the polygon, with the even numbered positions in the list being the x coordinates, and odd numbered positions the y coordinates, ie: for a triangle, your list would have six entries, with entry 0, 2, and 4 being the x coordinates and 1, 3, and 5 being the y coordinates. The polygon will then be used to delete all the particles that fall within the defined area.</p>
-  <p>Note that the polygon defined must have <i>at least</i> three points, and <i>at most</i> 8.</p>
-  <p> </p>
+  <p>Mit dieser Funktion können Sie alle Partikel, die innerhalb der Grenzen des definierten Polygonbereichs liegen, aus der Physiksimulation im aktuellen Raum löschen (entfernen). Die Funktion nimmt eine (zuvor erstellte) <a href="../../Data_Structures/DS_Lists/DS_Lists.htm"><span class="inline">ds_list()</span></a> die die x/y-Position jedes Punktes des Polygons enthält, wobei die geradzahligen Positionen in der Liste die x-Koordinaten und die ungeradzahligen Positionen die y-Koordinaten sind, d.h. für ein Dreieck würde Ihre Liste sechs Einträge haben, wobei die Einträge 0, 2 und 4 die x-Koordinaten und 1, 3 und 5 die y-Koordinaten sind. Das Polygon wird dann verwendet, um alle Partikel zu löschen, die in den definierten Bereich fallen.</p>
+  <p>Beachten Sie, dass das definierte Polygon <i>mindestens</i> drei und <i>höchstens</i> 8 Punkte haben muss.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">physics_particle_delete_region_poly(pointList)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Beschreibung</th>
      </tr>
       <tr>
-        <td>pointList</td><td><span data-keyref="Type_ID_DS_List"></span></td>
-        <td>A ds_list of points to use to create the polygon.</td>
+        <td><span class="notranslate">pointList</span></td><td><span data-keyref="Type_ID_DS_List"></span></td>
+        <td><span class="notranslate">A ds_list of points to use to create the polygon.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">var list = ds_list_create(p_list);<br />
     for (var i = 0; i &lt; 5; i ++;)<br />
     {<br />
@@ -45,18 +45,18 @@
     }<br />
     physics_particle_delete_region_poly(p_list);<br />
     ds_list_destroy(p_list);</p>
-  <p>The above code will delete all particles found in the polygonal area defined by the points added to the <span class="inline">DS List</span>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> löscht alle Partikel, die sich in dem polygonalen Bereich befinden, der durch die zur <span class="inline">DS List</span> hinzugefügten Punkte definiert ist.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Soft_Body_Particles.htm">Soft Body Particles</a></div>
-        <div style="float:right">Next: <a href="physics_particle_draw.htm">physics_particle_draw</a></div>
+        <div style="float:left">Zurück: <a href="Soft_Body_Particles.htm">Weiche Körperteilchen</a></div>
+        <div style="float:right">Nächste: <a href="physics_particle_draw.htm"><span class="notranslate">physics_particle_draw</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_delete_region_poly

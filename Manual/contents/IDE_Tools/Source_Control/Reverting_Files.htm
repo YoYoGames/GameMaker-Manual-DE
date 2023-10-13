@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Reverting Files</title>
+  <title>Dateien rückgängig machen</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Section that covers Source Control reverting files" />
   <meta name="rh-index-keywords" content="Source Control - Reverting Files" />
@@ -14,59 +14,59 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Reverting Files</h1>
-  <p>In the previous sections you&#39;ve seen how to <a href="Repository_Options.htm">create a repository</a> and <a href="Standard_Workflow.htm">commit things to it</a>, but what happens if you make a mistake and want to &quot;roll back&quot; to a previous commit? Let&#39;s make a deliberate error and see how we can deal with it then...</p>
-  <p>First of all create a new resource - in this example we&#39;ll make a Script resource - and initially you&#39;ll see no status icon since as far as source control is concerned it doesn&#39;t exist exist yet. In the script resource add a simple line of code, like:</p>
+  <h1>Dateien rückgängig machen</h1>
+  <p>In den vorangegangenen Abschnitten haben Sie gesehen, wie man <a href="Repository_Options.htm">ein Repository erstellt</a> und <a href="Standard_Workflow.htm">Dinge dorthin überträgt</a>, aber was passiert, wenn Sie einen Fehler machen und zu einer früheren Übertragung zurückkehren wollen? Lassen Sie uns einen absichtlichen Fehler machen und sehen, wie wir dann damit umgehen können...</p>
+  <p>Erstellen Sie zunächst eine neue Ressource - in diesem Beispiel eine Ressource <span class="notranslate">Script</span> - und Sie werden zunächst kein Statussymbol sehen, da die Ressource für die Versionskontrolle noch nicht existiert. In der Ressource <span class="notranslate">script</span> fügen Sie eine einfache Zeile <span class="notranslate">code</span> ein, etwa so:</p>
   <p class="code">show_debug_message(&quot;Hello World&quot;);</p>
-  <p>If you now close the code editor, the script will save and the modified file icon <img alt="SCM Modified Icon" class="icon" src="../../assets/Images/Icons/SCM_Modified.png" /> will appear beside it in the <a href="../../Introduction/The_Asset_Browser.htm">Asset Browser</a>. Now, open up the <strong>Commit </strong>window and you&#39;ll see there are four staged changes, as new resources automatically get added:</p>
-  <p><img alt="Source Control Staged Changes" class="center" src="../../assets/Images/IDE Tools/SCM_StagedChanges.png" />The changes staged will be:</p>
+  <p>Wenn Sie nun den Editor <span class="notranslate">code</span> schließen, wird die Datei <span class="notranslate">script</span> gespeichert und das geänderte Dateisymbol <img> erscheint neben ihr im <a href="../../Introduction/The_Asset_Browser.htm">Asset-Browser</a>. Wenn Sie nun das Fenster " <strong>Commit" </strong>öffnen, sehen Sie, dass die Änderungen in vier Stufen erfolgen, da neue Ressourcen automatisch hinzugefügt werden:</p>
+  <p><img>Die Änderungen werden wie folgt aussehen:</p>
   <ul class="colour">
-    <li>the <span class="inline">.yyp</span> project file</li>
-    <li>a view file</li>
-    <li>the GML script itself</li>
-    <li>the <span class="inline">.yy</span> file referencing it</li>
+    <li>die Projektdatei <span class="inline">.yyp</span> </li>
+    <li>eine Ansichtsdatei</li>
+    <li>die <span class="notranslate">GML</span> <span class="notranslate">script</span> selbst</li>
+    <li>die Datei <span class="inline">.yy</span>, die darauf verweist</li>
   </ul>
-  <p>You should type in a commit message and then click the <strong>Commit </strong>button, just as we explained previously. Now, we go back to our script and change the line of code to (for example):</p>
+  <p>Sie sollten eine Commit-Nachricht eingeben und dann auf die Schaltfläche <strong>Commit </strong>klicken, so wie wir es zuvor erklärt haben. Jetzt gehen wir zurück zu unserem <span class="notranslate">script</span> und ändern die Zeile von <span class="notranslate">code</span> in (zum Beispiel):</p>
   <p class="code">show_debug_message(&quot;Hello World, how are you?&quot;);</p>
-  <p>When we close the code editor, again a red icon <img alt="SCM Modified Icon" class="icon" src="../../assets/Images/Icons/SCM_Modified.png" /> will be shown beside the script, but we&#39;ve realised that we made a mistake with our code and we want to roll back to a previous version to fix it (obviously, you could just open the script and fix it easily, since the example is so simple, but in large projects that&#39;s not normally a feasible approach). What we need to do is <strong>revert </strong>our changes.</p>
-  <p>To revert a change we first need to open up the commit window again, so we go to <strong>Source Control</strong> &gt; <strong>Commit Changes</strong> once more. Our changed file will again be staged ready for committing, but this isn&#39;t what we want so we click the button <strong>Unstage All</strong> to take it out of the staging area.</p>
-  <p>If we now right click <strong><img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /></strong> on the file we changed we&#39;ll get a context menu with an option to <strong>Revert Path</strong>:</p>
-  <p><img alt="Source Control Revert Path" class="center" src="../../assets/Images/IDE Tools/SCM_RevertPath.png" />When you select this option, you will revert the files back to the previous state that they were in.</p>
-  <p class="note"><strong>IMPORTANT!</strong> When you revert you will get a message asking you to reload or save the current project due to the file checker detecting changes on disk:<br />
-    <img alt="Source Control Warning" class="center" src="../../assets/Images/IDE Tools/SCM_Warning.png" />You must hit Reload and not save, as saving will save what is memory rather than reloading the reverted files.
+  <p>Wenn wir den <span class="notranslate">code</span> -Editor schließen, wird wieder ein rotes Symbol <img> neben <span class="notranslate">script</span> angezeigt, aber wir haben festgestellt, dass wir mit unserem <span class="notranslate">code</span> einen Fehler gemacht haben, und wir wollen zu einer früheren Version zurückgehen, um ihn zu beheben (natürlich könnten Sie einfach <span class="notranslate">script</span> öffnen und den Fehler beheben, da das Beispiel so einfach ist, aber in großen Projekten ist das normalerweise kein gangbarer Weg). Was wir tun müssen, ist unsere Änderungen <strong>rückgängig zu machen </strong>.</p>
+  <p>Um eine Änderung rückgängig zu machen, müssen wir zunächst das Übergabefenster erneut öffnen, also gehen wir noch einmal zu <strong>Versionsverwaltung</strong> &gt; <strong>Änderungen übergeben</strong>. Unsere geänderte Datei wird wieder zum Übertragen bereitgestellt, aber das ist nicht das, was wir wollen, also klicken wir auf die Schaltfläche <strong>Unstage All</strong>, um sie aus dem Bereitstellungsbereich zu entfernen.</p>
+  <p>Wenn wir nun mit der rechten Maustaste <strong><img></strong> auf die geänderte Datei klicken, wird ein Kontextmenü mit der Option " <strong>Pfad zurücksetzen"</strong> angezeigt:</p>
+  <p><img>Wenn Sie diese Option wählen, werden die Dateien in den vorherigen Zustand zurückversetzt, in dem sie sich befanden.</p>
+  <p class="note"><strong>WICHTIG!</strong> Wenn Sie eine Rückgängigmachung durchführen, erhalten Sie eine Meldung, in der Sie aufgefordert werden, das aktuelle Projekt neu zu laden oder zu speichern, da die Dateiprüfung Änderungen auf der Festplatte festgestellt hat:<br>
+    <img>. Sie müssen auf "Neu laden" und nicht auf "Speichern" klicken, da beim Speichern der Speicherinhalt gespeichert wird, anstatt die rückgängig gemachten Dateien neu zu laden.
   </p>
-  <p>That&#39;s all great for when you edit something and want to change back without having already performed a commit, but what about when you have committed one or more changes and want to roll back to a <em>previous </em>commit? Well, let&#39;s edit our script again to say:</p>
+  <p>Das ist großartig, wenn Sie etwas bearbeiten und zurückgehen wollen, ohne bereits einen Commit durchgeführt zu haben, aber was ist, wenn Sie eine oder mehrere Änderungen vorgenommen haben und zu einem <em>früheren </em>Commit zurückgehen wollen? Nun, lassen Sie uns unser <span class="notranslate">script</span> noch einmal bearbeiten, um zu sagen:</p>
   <p class="code">show_debug_message(&quot;This is a bad idea&quot;);</p>
-  <p>Now we commit it as before to get it under source control. So, this was a bad idea and we want to roll back, which means to start with we need to open the <strong>Source Control</strong> &gt; <strong>View History</strong> window. Here we will see a list of all previous commits now in this window, starting with the initial commit, the commit for the script, and then the commit for the script that we have edited as a &quot;bad idea&quot;:</p>
-  <p><img alt="Source Control Bad Idea History" class="center" src="../../assets/Images/IDE Tools/SCM_BadIdea.png" />We now have two choices. We can revert an entire revision - which will revert all files that were changed to those of the chosen commit - or we can choose to revert a path - which will simply revert a single file. Let&#39;s do the first option to start with:</p>
+  <p>Jetzt übertragen wir es wie zuvor, um es unter die Versionskontrolle zu bekommen. Das war also eine schlechte Idee und wir wollen es rückgängig machen, was bedeutet, dass wir zunächst das Fenster <strong>Versionsverwaltung</strong> &gt; <strong>Verlauf anzeigen</strong> öffnen müssen. In diesem Fenster sehen wir nun eine Liste aller bisherigen Commits, beginnend mit dem ersten Commit, dem Commit für die <span class="notranslate">script</span> und dann dem Commit für die <span class="notranslate">script</span>, die wir als &quot;schlechte Idee&quot; bearbeitet haben:</p>
+  <p><img>Wir haben nun zwei Möglichkeiten. Wir können eine ganze Revision rückgängig machen - dann werden alle Dateien, die geändert wurden, auf die des gewählten Commits zurückgesetzt - oder wir können einen Pfad zurücksetzen - dann wird nur eine einzelne Datei zurückgesetzt. Beginnen wir mit der ersten Option:</p>
   <ul class="colour">
-    <li>Right click <strong><img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /></strong> our second commit in the <strong>Commit History</strong> pane (the &quot;Hello World&quot; commit).</li>
-    <li>Select <strong>Revert To This Revision</strong> and then choose <strong>ReLoad</strong> on the warning message.</li>
+    <li>Klicken Sie mit der rechten Maustaste <strong><img></strong> unseren zweiten Commit im <strong>Commit-Verlaufsfenster</strong> (den &quot;Hello World&quot;-Commit).</li>
+    <li>Wählen Sie " <strong>Zu dieser Revision zurückkehren"</strong> und dann " <strong>Neu laden"</strong> in der Warnmeldung.</li>
   </ul>
-  <p>You should see that the script now has a red status icon <img alt="SCM Modified Icon" class="icon" src="../../assets/Images/Icons/SCM_Modified.png" />, and if we open it up, we&#39;ll have the following:</p>
-  <p><img alt="Source Control Revert To Revision" class="center" src="../../assets/Images/IDE Tools/SCM_RevertToRevision.png" />We can then do a commit on the project and we&#39;ll be back to where we were once again. However we can also undo that action for the file and get our &quot;bad idea&quot; commit back by doing the following:</p>
+  <p>Sie sollten sehen, dass <span class="notranslate">script</span> jetzt ein rotes Statussymbol <img> hat, und wenn wir es öffnen, sehen wir Folgendes:</p>
+  <p><img>Wir können dann einen Commit für das Projekt durchführen und sind wieder da, wo wir waren. Wir können aber auch diese Aktion für die Datei rückgängig machen und unsere &quot;schlechte Idee&quot; zurückholen, indem wir folgendes tun:</p>
   <ul class="colour">
-    <li>Open the <strong>Commit Changes</strong> window.</li>
-    <li>Unstage the script with the &quot;Hello World&quot; code in it.</li>
-    <li>Right click <strong><img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /></strong> and <strong>Revert Path</strong>.</li>
+    <li>Öffnen Sie das Fenster <strong>Änderungen festschreiben</strong>.</li>
+    <li>Deaktivieren Sie die <span class="notranslate">script</span> mit dem &quot;Hello World&quot; <span class="notranslate">code</span> darin.</li>
+    <li>Klicken Sie mit der rechten Maustaste <strong><img></strong> und <strong>Pfad umkehren</strong>.</li>
   </ul>
-  <p>Now we are back to having the erroneous file in the project again! Well, we can take this opportunity to revert only that file path instead of reverting everything to a previous revision. For that we need to do the following:</p>
+  <p>Jetzt haben wir wieder die fehlerhafte Datei im Projekt! Wir können diese Gelegenheit nutzen, um nur den Dateipfad wiederherzustellen, anstatt alles auf eine frühere Revision zurückzusetzen. Dazu müssen wir folgendes tun:</p>
   <ul class="colour">
-    <li>Open the <strong>View History</strong> window.</li>
-    <li>Click on the second commit (the &quot;Hello World&quot; commit).</li>
-    <li>Right click <strong><img alt="RMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_RMB.png" width="21" /></strong> on our script GML in the Files pane and select <strong>Revert Path</strong>.</li>
+    <li>Öffnen Sie das Fenster <strong>Verlauf anzeigen</strong>.</li>
+    <li>Klicken Sie auf die zweite Übertragung (die &quot;Hello World&quot;-Übertragung).</li>
+    <li>Klicken Sie mit der rechten Maustaste <strong><img></strong> auf unsere <span class="notranslate">script</span> <span class="notranslate">GML</span> im Dateifenster und wählen Sie <strong>Pfad wiederherstellen</strong>.</li>
   </ul>
-  <p>We should be back to having our &quot;Hello World&quot; code and we can then do a fresh commit to update the source control again with the corrected file.</p>
-  <p> </p>
-  <p> </p>
+  <p>Wir sollten wieder unser &quot;Hello World&quot; <span class="notranslate">code</span> haben und wir können dann eine neue Übergabe durchführen, um die Versionskontrolle mit der korrigierten Datei zu aktualisieren.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Source_Control.htm">Source Control</a></div>
-        <div style="float:right">Next: <a href="Cloning_A_Repository.htm">Cloning A Repository</a> </div>
+        <div style="float:left">Zurück: <a href="../Source_Control.htm">Quellenkontrolle</a></div>
+        <div style="float:right">Nächste: <a href="Cloning_A_Repository.htm">Klonen eines Repositorys</a> </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 Source Control Reverting Files

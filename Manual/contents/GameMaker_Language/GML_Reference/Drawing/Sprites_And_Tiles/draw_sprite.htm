@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>draw_sprite</title>
+  <title>zeichnen_sprite</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for draw_sprite" />
   <meta name="rh-index-keywords" content="draw_sprite" />
@@ -15,60 +15,60 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_sprite</h1>
-  <p>This function draws the given sprite and sub-image at a position within the game room. For the sprite you can use the instance variable <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_index.htm"><span class="inline">sprite_index</span></a> to get the current sprite that is assigned to the instance running the code, or you can use any other sprite asset. The same goes for the sub-image, as this can also be set to the instance variable <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/image_index.htm"><span class="inline">image_index</span></a> which will set the sub-image to that selected for the current instance sprite (note, that you can draw a different sprite and still use the sub-image value for the current instance), or you can use any other value for this to draw a specific sub-image of the chosen sprite. If the value is larger than the number of sub-images, then <span data-keyref="GameMaker Name">GameMaker</span> will automatically loop the number to select the corresponding image (for example, if the sprite being drawn has 5 sub-images numbered 0 to 4 and we set the index value to 7, then the function will draw sub-image 3, numbered 0). Finally, the x and y position is the position within the room that the sprite will be drawn, and it is centered on the sprite <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">x offset</a> and <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">y offset</a>.</p>
-  <p class="note"><span class="note">NOTE</span> This function may not work as expected when using skeleton animation sprites, and you may find that the function only draws the first frame of the default pose. You should be using the <span class="inline">draw_skeleton_*</span> functions instead.</p>
-  <p> </p>
+  <h1>zeichnen_sprite</h1>
+  <p>Diese Funktion zeichnet das angegebene <span class="notranslate">sprite</span> und das Unterbild an einer Position innerhalb des Spielraums. Für die <span class="notranslate">sprite</span> kannst du die Instanzvariable <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_index.htm"><span class="inline">sprite_index</span></a> verwenden, um die aktuelle <span class="notranslate">sprite</span> zu erhalten, die der Instanz zugewiesen ist, auf der <span class="notranslate">code</span> läuft, oder du kannst jedes andere <span class="notranslate">sprite</span> Asset verwenden. Das Gleiche gilt für das Sub-Image, das ebenfalls auf die Instanzvariable gesetzt werden kann <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/image_index.htm"><span class="inline">image_index</span></a> gesetzt werden, wodurch das Sub-Image auf das für die aktuelle Instanz <span class="notranslate">sprite</span> ausgewählte gesetzt wird (beachten Sie, dass Sie ein anderes <span class="notranslate">sprite</span> zeichnen und trotzdem den Sub-Image-Wert für die aktuelle Instanz verwenden können), oder Sie können einen beliebigen anderen Wert dafür verwenden, um ein bestimmtes Sub-Image des gewählten <span class="notranslate">sprite</span> zu zeichnen. Wenn der Wert größer ist als die Anzahl der Unterbilder, wählt <span data-keyref="GameMaker Name">GameMaker</span> automatisch <span class="notranslate">loop</span>, um das entsprechende Bild auszuwählen (wenn z. B. das <span class="notranslate">sprite</span>, das gezeichnet werden soll, 5 Unterbilder mit den Nummern 0 bis 4 hat und wir den Indexwert auf 7 setzen, dann zeichnet die Funktion das Unterbild 3 mit der Nummer 0). Schließlich ist die x- und y-Position die Position innerhalb des Raums, an der <span class="notranslate">sprite</span> gezeichnet wird, und sie ist zentriert auf den <span class="notranslate">sprite</span> <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">x-Offset</a> und <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">y-Offset</a>.</p>
+  <p class="note"><span class="note">HINWEIS</span> Diese Funktion funktioniert möglicherweise nicht wie erwartet, wenn Sie die Skelettanimation <span class="notranslate">sprites</span> verwenden, und Sie werden feststellen, dass die Funktion nur das erste Bild der Standardpose zeichnet. Sie sollten stattdessen die <span class="inline">draw_skeleton_*</span> Funktionen verwenden.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">draw_sprite(sprite, subimg, x, y);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>sprite</td>
-        <td><span data-keyref="Type_Asset_Sprite"><a href="../../../../../The_Asset_Editors/Sprites.htm" target="_blank">Sprite Asset</a></span></td>
-        <td>The index of the sprite to draw.</td>
+        <td><span class="notranslate">sprite</span></td>
+        <td><span data-keyref="Type_Asset_Sprite"><a href="../../../../../The_Asset_Editors/Sprites.htm" target="_blank">Sprite-Asset</a></span></td>
+        <td><span class="notranslate">The index of the sprite to draw.</span></td>
       </tr>
       <tr>
-        <td>subimg</td>
+        <td><span class="notranslate">subimg</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The sub-image (frame) of the sprite to draw (image_index or -1 correlate to the current frame of animation in the object).</td>
+        <td><span class="notranslate">The sub-image (frame) of the sprite to draw (image_index or -1 correlate to the current frame of animation in the object).</span></td>
       </tr>
       <tr>
-        <td>x</td>
+        <td><span class="notranslate">x</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x coordinate of where to draw the sprite.</td>
+        <td><span class="notranslate">The x coordinate of where to draw the sprite.</span></td>
       </tr>
       <tr>
-        <td>y</td>
+        <td><span class="notranslate">y</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y coordinate of where to draw the sprite.</td>
+        <td><span class="notranslate">The y coordinate of where to draw the sprite.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">draw_sprite(sprite_index, image_index, x, y);<br />
     draw_sprite(spr_Halo, 0, x, y-32);</p>
-  <p>This will draw the instances assigned sprite (sprite_index) with the current sub-image at the x and y position of the instance within the room. It will then draw the first frame of the sprite indexed by &quot;spr_Halo&quot; at the same x and y position but 32 pixels &#39;above&#39;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Dies zeichnet die Instanz, der <span class="notranslate">sprite</span> (sprite_index) zugewiesen ist, mit dem aktuellen Teilbild an der x- und y-Position der Instanz innerhalb des Raumes. Dann wird das erste Bild des <span class="notranslate">sprite</span>, das durch &quot;spr_Halo&quot; indiziert ist, an der gleichen x- und y-Position gezeichnet, aber 32 Pixel &quot;darüber&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprites_And_Tiles.htm">Sprites And Tiles</a></div>
-        <div style="float:right">Next: <a href="draw_sprite_ext.htm">draw_sprite_ext</a></div>
+        <div style="float:left">Zurück: <a href="Sprites_And_Tiles.htm">Sprites und Kacheln</a></div>
+        <div style="float:right">Nächste: <a href="draw_sprite_ext.htm"><span class="notranslate">draw_sprite_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 draw_sprite

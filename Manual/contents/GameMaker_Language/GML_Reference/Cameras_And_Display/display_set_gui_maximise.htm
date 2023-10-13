@@ -6,7 +6,7 @@
   <title>display_set_gui_maximise</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for display_set_gui_maximise" />
   <meta name="rh-index-keywords" content="display_set_gui_maximise,display_set_gui_maximize" />
@@ -16,66 +16,66 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>display_set_gui_maximise</h1>
-  <p>This function can be used to maximise the GUI layer and set it to be scaled and offset in relation to the screen dimensions, rather than the default application surface position and dimensions. By default, the GUI layer is 1:1 with the application surface resolution and drawn at the (0,0) position of the surface too. However this is not always what you want and so you can use this function to set it to be drawn relative to the absolute (0,0) position of the display or game window. What arguments you provide to this function will depend on the effect you wish it to have on the GUI layer. Simply calling the function with no arguments will set the GUI layer to be drawn at the (0,0) position of the screen or game window, with the width and height being scaled to fit the whole area:</p>
+  <p>Mit dieser Funktion kann die GUI-Ebene maximiert und so eingestellt werden, dass sie in Bezug auf die Bildschirmabmessungen skaliert und verschoben wird, anstatt die Standardposition und -abmessungen der Anwendungsoberfläche zu verwenden. Standardmäßig ist die GUI-Ebene 1:1 mit der Auflösung der Anwendungsoberfläche und wird ebenfalls an der Position (0,0) der Oberfläche gezeichnet. Dies ist jedoch nicht immer das, was Sie wollen, und deshalb können Sie diese Funktion verwenden, um sie relativ zur absoluten (0,0)-Position des Anzeige- oder Spielfensters zu zeichnen. Welche <span class="notranslate">arguments</span> Sie dieser Funktion übergeben, hängt von dem Effekt ab, den Sie auf die GUI-Ebene haben möchten. Wenn Sie die Funktion ohne <span class="notranslate">arguments</span> aufrufen, wird die GUI-Ebene an der Position (0,0) des Bildschirms oder des Spielfensters gezeichnet, wobei die Breite und Höhe so skaliert wird, dass sie in den gesamten Bereich passt:</p>
   <p class="code">display_set_gui_maximise();</p>
-  <p>However, you can set the <i>scaling factor</i> for the GUI layer, and the width and height will be scaled by that amount. Remember that the GUI layer is always made to fit the size of the display or game window, or the application surface, so setting this value to anything other than 1 basically scales the pixel count along the width and height. If your display is 1024x768 and you set the scaling factor to scale by 0.5, then your GUI layer will be half the size of the display, effectively doubling the pixel size:</p>
+  <p>Sie können jedoch den <i>Skalierungsfaktor</i> für die GUI-Ebene festlegen, und die Breite und Höhe werden um diesen Wert skaliert. Denken Sie daran, dass die GUI-Ebene immer an die Größe des Bildschirms, des Spielfensters oder der Anwendungsoberfläche angepasst wird. Wenn Sie also einen anderen Wert als 1 einstellen, wird die Anzahl der Pixel in Breite und Höhe skaliert. Wenn Ihr Bildschirm eine Größe von 1024x768 hat und Sie den Skalierungsfaktor auf 0,5 setzen, dann wird Ihre GUI-Ebene die Hälfte der Größe des Bildschirms haben, was effektiv eine Verdoppelung der Pixelgröße bedeutet:</p>
   <p class="code">display_set_gui_maximise(0.5, 0.5);</p>
-  <p>Setting the values in this way will also set the draw position to the (0,0) of the display or game window, so you can provide offset values to &quot;move&quot; the (0,0) position:</p>
+  <p>Wenn Sie die Werte auf diese Weise einstellen, wird auch die Zeichenposition auf die (0,0) des Anzeige- oder Spielfensters gesetzt, so dass Sie Offset-Werte angeben können, um die (0,0)-Position zu &quot;verschieben&quot;:</p>
   <p class="code">var pos = application_get_position();<br />
     display_set_gui_maximise(0.5, 0.5, pos[0], pos[1]);</p>
-  <p>Finally, you can reset the GUI layer using this function by setting the scaling factors to -1. This will set the GUI layer to have a 1:1 scale again and set the draw position to the (0,0) position of the application surface rather than the display or window.</p>
+  <p>Schließlich können Sie mit dieser Funktion die GUI-Ebene zurücksetzen, indem Sie die Skalierungsfaktoren auf -1 setzen. Dadurch wird die GUI-Ebene wieder auf einen Maßstab von 1:1 gesetzt und die Zeichenposition auf die (0,0)-Position der Anwendungsoberfläche und nicht auf die Anzeige oder das Fenster gesetzt.</p>
   <p class="code">display_set_gui_maximise(-1, -1);</p>
-  <p> </p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">display_set_gui_maximise(<i>xscale, yscale, xoffset, yoffset</i>);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>xscale</td>
+        <td><span class="notranslate">xscale</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td><span class="optional">OPTIONAL</span> The horizontal scaling factor (use -1 to reset to default).</td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> Der horizontale Skalierungsfaktor (verwenden Sie -1, um auf den Standardwert zurückzusetzen).</td>
       </tr>
       <tr>
-        <td>yscale</td>
+        <td><span class="notranslate">yscale</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td><span class="optional">OPTIONAL</span> The vertical scaling factor (use -1 to reset to default).</td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> Der vertikale Skalierungsfaktor (verwenden Sie -1, um auf den Standardwert zurückzusetzen).</td>
       </tr>
       <tr>
-        <td>xoffset</td>
+        <td><span class="notranslate">xoffset</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td><span class="optional">OPTIONAL</span> The x offset position for drawing.</td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> Die x-Versatzposition für das Zeichnen.</td>
       </tr>
       <tr>
-        <td>yoffset</td>
+        <td><span class="notranslate">yoffset</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td><span class="optional">OPTIONAL</span> The y offset position for drawing.</td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> Die y-Versatzposition für das Zeichnen.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">display_set_gui_size(display_get_width() / 2, display_get_height() / 2);<br />
     display_set_gui_maximise(2, 2, 0, 0);</p>
-  <p>The above code will lock the draw GUI event to the given width and height, scaling all components to fit the display, using that proportion.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> sperrt das GUI-Ereignis auf die angegebene Breite und Höhe und skaliert alle Komponenten so, dass sie in das Display passen.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Cameras_And_Display.htm">Cameras And Display</a></div>
-        <div style="float:right">Next: <a href="display_set_ui_visibility.htm">display_set_ui_visibility</a></div>
+        <div style="float:left">Zurück: <a href="Cameras_And_Display.htm">Kameras und Display</a></div>
+        <div style="float:right">Nächste: <a href="display_set_ui_visibility.htm"><span class="notranslate">display_set_ui_visibility</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 display_set_gui_maximise

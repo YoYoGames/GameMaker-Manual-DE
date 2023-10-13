@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>window_handle</title>
+  <title>fenster_handle</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for window_handle" />
   <meta name="rh-index-keywords" content="window_handle" />
@@ -15,53 +15,53 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>window_handle</h1>
-  <p>With this function you can get the internal Windows id value (the HWND, a <i>pointer</i>). This function is really only useful for extension writers who need the <span class="inline">window handle</span> to call Windows API&#39;s in DLL code (the returned pointer should be cast into a string and then in the C++ just cast it to an HWND). The table below shows the platforms supported along with what they return:</p>
+  <h1>fenster_handle</h1>
+  <p>Mit dieser Funktion können Sie den internen <span class="notranslate">Windows</span> id-Wert (den HWND, einen <i>Zeiger</i>) erhalten. Diese Funktion ist wirklich nur für Autoren von Erweiterungen nützlich, die die <span class="inline">window handle</span> benötigen, um <span class="notranslate">Windows</span> APIs in der DLL <span class="notranslate">code</span> aufzurufen (der zurückgegebene Zeiger sollte in einen String umgewandelt werden und dann in C++ einfach in ein HWND umgewandelt werden). Die folgende Tabelle zeigt die unterstützten <span class="notranslate">platforms</span> und was sie zurückgeben:</p>
   <table>
     <tbody>
       <tr>
-        <th>Platform</th>
-        <th>Returns</th>
+        <th>Plattform</th>
+        <th>Rückgabe</th>
       </tr>
       <tr>
         <td>Windows</td>
-        <td>Window HWND</td>
+        <td>Fenster HWND</td>
       </tr>
       <tr>
         <td>macOS</td>
-        <td>NSWindow class</td>
+        <td>NSWindow-Klasse</td>
       </tr>
       <tr>
-        <td>Ubuntu (Linux)</td>
-        <td>XWindow handle</td>
+        <td>Ubuntu (<span class="notranslate">Linux</span>)</td>
+        <td>XWindow-Handle</td>
       </tr>
       <tr>
         <td>HTML5</td>
-        <td>Canvas ID</td>
+        <td>Segeltuch-ID</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">window_handle();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Pointer">Pointer</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">win_id = windows_handle();</p>
-  <p>The above code will store the game window id in a variable.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> speichert die Spielfenster-ID in einer Variablen.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../The_Game_Window/The_Game_Window.htm">The Game Window</a></div>
-        <div style="float:right">Next: <a href="../The_Game_Window/window_get_caption.htm">window_get_caption</a></div>
+        <div style="float:left">Zurück: <a href="../The_Game_Window/The_Game_Window.htm">Das Spielfenster</a></div>
+        <div style="float:right">Nächste: <a href="../The_Game_Window/window_get_caption.htm"><span class="notranslate">window_get_caption</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 window_handle

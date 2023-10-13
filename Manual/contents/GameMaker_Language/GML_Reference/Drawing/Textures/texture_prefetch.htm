@@ -6,7 +6,7 @@
   <title>texture_prefetch</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for ​texture_prefetch" />
   <meta name="rh-index-keywords" content="texture_prefetch" />
@@ -15,46 +15,46 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>texture_prefetch</h1>
-  <p>This function can be used to &quot;prefetch&quot; a texture page or a group of texture pages, ie: load them into VRAM when required. You supply the unique <b>texture page ID</b> (as returned by the <span class="inline">texturegroup_*</span> functions) to prefetch a single page, or you can supply a <b>texture group name</b> (as defined in the <a href="../../../../Settings/Texture_Groups.htm">Texture Group Editor</a>) to prefetch all the texture pages in the group.</p>
-  <p> </p>
+  <p>Diese Funktion kann verwendet werden, um eine Texturseite oder eine Gruppe von Texturseiten &quot;vorzuholen&quot;, d.h. sie bei Bedarf in den VRAM zu laden. Sie geben die eindeutige <b>ID der Texturseite</b> an (wie sie von den <span class="inline">texturegroup_*</span> Funktionen zurückgegeben wird), um eine einzelne Seite vorzuholen, oder Sie können einen <b>Texturgruppennamen</b> angeben (wie im <a href="../../../../Settings/Texture_Groups.htm">Texturgruppen-Editor</a> definiert), um alle Texturseiten der Gruppe vorzuholen.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">texture_prefetch(tex_id);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>tex_id</td>
-        <td><span data-keyref="Type_Pointer_Texture">Texture Pointer</span> or <span data-keyref="Type_String">String</span></td>
-        <td>The texture page pointer <i>or</i> a texture group name (a string)</td>
+        <td><span class="notranslate">tex_id</span></td>
+        <td><span data-keyref="Type_Pointer_Texture">Textur Zeiger</span> oder <span data-keyref="Type_String">String</span></td>
+        <td><span class="notranslate">The texture page pointer <i>or</i> a texture group name (a string)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">var _tex_array = texturegroup_get_textures( &quot;MainMenu&quot;);<br />
     for (var i = 0; i &lt; array_length(_tex_array); ++i;)<br />
     {<br />
         texture_prefetch(_tex_array[i]);<br />
     }</p>
-  <p>The above code will prefetch all the texture pages under the texture group &quot;MainMenu&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> wird alle Texturseiten unter der Texturgruppe &quot;MainMenu&quot; vorwegnehmen.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Textures.htm">Textures</a></div>
-        <div style="float:right">Next: <a href="texture_flush.htm">texture_flush</a></div>
+        <div style="float:left">Zurück: <a href="Textures.htm">Texturen</a></div>
+        <div style="float:right">Nächste: <a href="texture_flush.htm"><span class="notranslate">texture_flush</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 texture_prefetch

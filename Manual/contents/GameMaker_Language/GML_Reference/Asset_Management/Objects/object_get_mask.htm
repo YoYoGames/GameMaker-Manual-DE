@@ -6,7 +6,7 @@
   <title>object_get_mask</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function object_get_mask" />
   <meta name="rh-index-keywords" content="object_get_mask" />
@@ -16,43 +16,43 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>object_get_mask</h1>
-  <p>This function will tell you whether the object you are checking has a mask index or not, and if it does then it will return the index of that mask (which is a sprite asset), or -1 if it does not. Please note that this is not an instance function! You can have an object with no mask while an instance of that same object can have one and vice-versa, or they can even have different masks. You can set an individual instances mask index using the <a href="../Sprites/Sprite_Instance_Variables/mask_index.htm"><span class="inline">mask_index</span></a> instance variable.</p>
-  <p> </p>
+  <p>Diese Funktion sagt Ihnen, ob das zu prüfende Objekt einen Maskenindex hat oder nicht, und wenn ja, dann gibt sie den Index dieser Maske zurück (das ist ein <span class="notranslate">sprite</span> asset), oder -1, wenn nicht. Bitte beachten Sie, dass es sich hierbei nicht um eine Instanzfunktion handelt! Sie können ein Objekt ohne Maske haben, während eine Instanz desselben Objekts eine haben kann und umgekehrt, oder sie können sogar unterschiedliche Masken haben. Sie können den Maskenindex einer einzelnen Instanz mit der <a href="../Sprites/Sprite_Instance_Variables/mask_index.htm"><span class="inline">mask_index</span></a> Instanz-Variable setzen.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">object_get_mask(obj);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Beschreibung</th>
      </tr>
       <tr>
-        <td>obj</td><td><span data-keyref="Type_Asset_Object"></span></td>
-        <td>The index of the object to check</td>
+        <td><span class="notranslate">obj</span></td><td><span data-keyref="Type_Asset_Object"></span></td>
+        <td><span class="notranslate">The index of the object to check</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Asset_Sprite">Sprite Asset</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">if (mask_index != object_get_mask(object_index))<br />
     {<br />
         mask_index = object_get_mask(object_index);<br />
     }</p>
-  <p>The above example will check the mask index of the instance against the mask of the object_index of the instance. If they are not the same, then it will assign the same mask as the one the object index has to the instance.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Im obigen Beispiel wird der Maskenindex der Instanz mit der Maske des object_index der Instanz verglichen. Wenn sie nicht übereinstimmen, wird der Instanz die gleiche Maske zugewiesen, die der Objektindex hat.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Objects.htm">Objects</a></div>
-        <div style="float:right">Next: <a href="object_get_parent.htm">object_get_parent</a></div>
+        <div style="float:left">Zurück: <a href="Objects.htm">Objekte</a></div>
+        <div style="float:right">Nächste: <a href="object_get_parent.htm"><span class="notranslate">object_get_parent</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 object_get_mask

@@ -6,7 +6,7 @@
   <title>debug_get_callstack</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for debug_get_callstack" />
   <meta name="rh-index-keywords" content="debug_get_callstack" />
@@ -16,35 +16,35 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>debug_get_callstack</h1>
-  <p>This function generates an array of strings as the &quot;callstack&quot; where the current script is listed first, and then all the other scripts that were run in order for the current script to be executed. The exact string format will vary depending on the target platform chosen, but it will mostly have the script/event name, then a colon : and the line number, similar to this:</p>
+  <p>Diese Funktion generiert ein Array von Strings als &quot;Callstack&quot;, in dem das aktuelle <span class="notranslate">script</span> zuerst aufgelistet ist und dann alle anderen <span class="notranslate">scripts</span>, die ausgeführt wurden, damit das aktuelle <span class="notranslate">script</span> ausgeführt werden konnte. Das genaue Format der Zeichenkette hängt von dem gewählten Ziel <span class="notranslate">platform</span> ab, aber meistens besteht es aus dem Skript-/Ereignisnamen, dann einem Doppelpunkt : und der Zeilennummer, ähnlich wie hier:</p>
   <p class="code"><span class="inline">&quot;gml_Script_script2:1&quot;<br />
       &quot;gml_Script_script1:32&quot;<br />
       &quot;gml_Script_script0:64&quot;<br />
       &quot;gml_Object_object0_Create_0:1&quot;</span></p>
-  <p>The function allows for an optional argument to be passed in, which is the maximum depth of the returned callstack. This value is the number of scripts that are included in the returned array starting from the current script. If this argument is not specified, then the full callstack will be returned.</p>
-  <p>Note that the returned array will always contain 0 in its last position, after listing the callstack scripts.</p>
-  <p> </p>
+  <p>Die Funktion ermöglicht die Übergabe eines optionalen <span class="notranslate">argument</span>, der die maximale Tiefe des zurückgegebenen Aufrufstapels angibt. Dieser Wert ist die Anzahl der <span class="notranslate">scripts</span>, die in dem zurückgegebenen Array enthalten sind, beginnend mit dem aktuellen <span class="notranslate">script</span>. Wenn dieses Argument nicht angegeben wird, wird der vollständige Aufrufstapel zurückgegeben.</p>
+  <p>Beachten Sie, dass das zurückgegebene Array immer 0 an der letzten Position enthält, nachdem der Aufrufstapel <span class="notranslate">scripts</span> aufgelistet wurde.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">debug_get_callstack([maxdepth])</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>[maxdepth]</td>
+        <td><span class="notranslate">[maxdepth]</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td><span class="optional">OPTIONAL</span> The maximum depth of the callstack that is returned</td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> Die maximale Tiefe des zurückgegebenen Aufrufstapels</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Array">Array</span></p>
-  <p> </p>
-  <h4><b>Example:</b></h4>
+  <p> </p>
+  <h4><b>Beispiel:</b></h4>
   <p class="code">if debug_mode<br />
     {<br />
         if keyboard_check(vk_escape)<br />
@@ -56,18 +56,18 @@
             }<br />
         }<br />
     }</p>
-  <p>The above code checks to see if debug mode is enabled and if it is, checks to see if a key is being held down. In that case, it outputs the current call stack to the console, with a maximum depth of 4.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> prüft, ob der Debug-Modus aktiviert ist, und wenn ja, ob eine Taste gedrückt gehalten wird. In diesem Fall wird der aktuelle Aufrufstapel auf der Konsole ausgegeben, mit einer maximalen Tiefe von 4.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Debugging.htm">Debugging</a></div>
-        <div style="float:right">Next: <a href="exception_unhandled_handler.htm">exception_unhandled_handler</a></div>
+        <div style="float:left">Zurück: <a href="Debugging.htm">Fehlersuche</a></div>
+        <div style="float:right">Nächste: <a href="exception_unhandled_handler.htm"><span class="notranslate">exception_unhandled_handler</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 debug_get_callstack

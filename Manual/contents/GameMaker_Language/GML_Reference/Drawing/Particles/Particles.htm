@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Particles</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>Partikel</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for the Particle functions and variables" />
   <meta name="rh-index-keywords" content="" />
@@ -14,62 +14,56 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Particles</span></h1>
-  <p>For complex things in <span data-keyref="GameMaker Name">GameMaker</span> you would normally have an <a href="../../../../The_Asset_Editors/Objects.htm">object</a> and create <a href="../../Asset_Management/Instances/Instances.htm">instances</a> of that object around the room. However, for graphics effects, this can be expensive as every instance comes with a &quot;cost&quot; in processing due to the variables it contains and the code it has in the different events. You can reduce this cost by turning to <a href="../../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm">tilemap layers</a> and <a href="../../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm">asset layers</a> for drawing your graphics needs but those are generally static and cannot be changed or moved around much. However, there is one other option for drawing fast yet versatile graphics effects in your games, and that is to use <i>particles</i>.</p>
-  <p><strong>Particles </strong>are graphic resources that have certain properties which are defined within a <i>particle system</i>. These properties cannot be manipulated directly for individual particles, but are changed through the code that is used to define the individual particle and the system that it belongs to. They are very useful for creating beautiful and flashy effects (or subtle and discreet ones!) like explosions, decals, rain, snow, star fields and debris in a game without the CPU overhead that using instances has.</p>
-  <p>The basic setup for a particle system follows three steps, with the third step being optional depending on how you wish to create your particle effects within the room:</p>
+  <h1>Partikel</h1>
+  <p>Für komplexe Dinge in <span data-keyref="GameMaker Name">GameMaker</span> würde man normalerweise ein <a href="../../../../The_Asset_Editors/Objects.htm">Objekt</a> haben und <a href="../../Asset_Management/Instances/Instances.htm">Instanzen</a> dieses Objekts im Raum erzeugen. Bei Grafikeffekten kann dies jedoch teuer werden, da jede Instanz aufgrund der enthaltenen Variablen und der <span class="notranslate">codes</span> in den verschiedenen Ereignissen &quot;Kosten&quot; für die Verarbeitung mit sich bringt. Sie können diese Kosten reduzieren, indem Sie <a href="../../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm">Kachel-</a> und <a href="../../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm">Asset-Ebenen</a> zum Zeichnen Ihrer Grafiken verwenden, aber diese sind in der Regel statisch und können nicht verändert oder verschoben werden. Es gibt jedoch noch eine andere Möglichkeit, um schnelle und dennoch vielseitige Grafikeffekte in Ihren Spielen zu zeichnen, und zwar die Verwendung von <i>Partikeln</i>.</p>
+  <p><strong>Partikel </strong>sind Grafikressourcen, die bestimmte Eigenschaften haben, die innerhalb eines <i>Partikelsystems</i> definiert sind. Diese Eigenschaften können nicht direkt für einzelne Partikel manipuliert werden, sondern werden durch die <span class="notranslate">code</span> geändert, die verwendet wird, um den einzelnen Partikel und das System, zu dem er gehört, zu definieren. Sie sind sehr nützlich, um schöne und auffällige Effekte (oder subtile und diskrete!) wie Explosionen, Abziehbilder, Regen, Schnee, Sternenfelder und Trümmer in einem Spiel zu erzeugen, ohne den CPU-Overhead, den die Verwendung von Instanzen hat.</p>
+  <p>Die grundlegende Einrichtung eines Partikelsystems erfolgt in drei Schritten, wobei der dritte Schritt optional ist, je nachdem, wie Sie Ihre Partikeleffekte im Raum erzeugen möchten:</p>
   <ul class="colour">
-    <li><b>Create a particle system</b>: The particle system is like a container that we will use to hold our different particle types ready for use. We use code to define a series of visual aspects and behaviours for our particles, and then we place them in the &quot;container&quot; so that we can take them out and use them whenever and wherever we need later.</li>
-    <li><b>Create particle types</b>: Particle types are the graphic effect itself. You can have many different types, each with their own range of colours, alphas, sizes and movements, but its important to note that you <i>do not have control over individual particles</i>. You define a series of parameters and the particle will be created to have a random spread of behaviours chosen from them.</li>
-    <li><b>Create emitters</b>: Emitters are an option that can be used to burst or stream particles from within very clearly defined limits. They are optional because you can create particles from any instance using the <span class="inline3_func"><a data-xref="{title}" href="Particle_Systems/part_particles_create.htm">part_particles_create</a></span> and <span class="inline3_func"><a data-xref="{title}" href="Particle_Systems/part_particles_create_colour.htm">part_particles_create_colour</a></span>
-      <font face="menlo, consolas, monospace"><span style="font-size: 17px;"> </span></font>functions but they are not always adequate for every situation.
-    </li>
+    <li><b>Erstellen Sie ein Partikelsystem</b>: Das Partikelsystem ist wie ein Container, in dem wir unsere verschiedenen Partikeltypen zur Verwendung bereithalten. Wir verwenden <span class="notranslate">code</span>, um eine Reihe von visuellen Aspekten und Verhaltensweisen für unsere Partikel zu definieren, und dann legen wir sie in den &quot;Container&quot;, so dass wir sie herausnehmen und verwenden können, wann und wo immer wir sie später brauchen.</li>
+    <li><b>Erstellen Sie Partikeltypen</b>: Partikeltypen sind der eigentliche Grafikeffekt. Sie können viele verschiedene Arten haben, jede mit ihrer eigenen Palette von Farben, Alphas, Größen und Bewegungen, aber es ist wichtig zu beachten, dass Sie <i>keine Kontrolle über einzelne Partikel haben</i>. Sie legen eine Reihe von Parametern fest, und die Partikel werden mit einer zufälligen Auswahl von Verhaltensweisen erstellt, die aus diesen Parametern ausgewählt werden.</li>
+    <li><b>Emitter erstellen</b>: Emitter sind eine Option, die verwendet werden kann, um Partikel innerhalb klar definierter Grenzen zum Platzen zu bringen oder auszustoßen. Sie sind optional, da du Partikel aus jeder Instanz mit den <a href="Particle_Systems/part_particles_create.htm"><span class="inline">part_particles_create()</span></a> und <a href="Particle_Systems/part_particles_create_colour.htm"><span class="inline">part_particles_create_colour()</span></a> Funktionen erstellen können, aber sie sind nicht immer für jede Situation geeignet.</li>
   </ul>
-  <p>Although particles are an excellent tool for creating effects, they do come with certain restrictions and good practices which need to be followed unless you want your game to suffer from poor performance or even potentially crash:</p>
+  <p>Obwohl Partikel ein hervorragendes Werkzeug für die Erstellung von Effekten sind, unterliegen sie gewissen Einschränkungen und bewährten Verfahren, die befolgt werden müssen, wenn Sie nicht wollen, dass Ihr Spiel unter schlechter Leistung leidet oder sogar abstürzt:</p>
   <ul class="colour">
-    <li>Particle systems, particles and emitters take up memory and as such you should be very careful how you use them as it is very easy to cause a memory leak which will slow down and eventually crash your game. One way to cope with this is to have a <i>global</i> system with everything defined at the start of the game and removed at the end, but if you want a dynamic system then each particle and emitter (and the system itself) should be destroyed the moment it is no longer needed.</li>
-    <li>Particles may be fast and light on the CPU, but they still require <i>some</i> processing and so you shouldn&#39;t have 40,000 of them bursting across the screen at a time. Limit them to those that are necessary to achieve a specific effect and no more.</li>
-    <li>If you define your own particle sprite instead of using one of the 14 included sprites, you should try to keep them as small as possible to achieve the effect you require.</li>
-    <li>Particles do <i>not</i> interact with anything. Should you need them to have any type of interaction with the user or any other instances in your game, you should be looking at using instances instead as particles are purely graphic.</li>
-    <li>Even though there is no technical limit to the amount of systems, emitters and particles you can create in one game, you should try and limit everything to the minimum number possible to keep memory use as low as possible.</li>
-    <li>On mobile devices, take care with particles as <i>drawing</i> them can be slow if they cover a large area of the screen (over-draw on mobile devices is one of the main causes of slowdown).</li>
-    <li>With HTML5 there is no additive blending, and unless you have WebGL enabled, you cannot have colour blending either.</li>
+    <li>Partikelsysteme, Partikel und Emitter benötigen viel Speicherplatz und man sollte daher sehr vorsichtig sein, wie man sie verwendet, da es sehr leicht zu einem Speicherleck kommen kann, das das Spiel verlangsamt und schließlich zum Absturz bringt. Eine Möglichkeit, damit umzugehen, ist ein <i>globales</i> System, bei dem alles zu Beginn des Spiels definiert und am Ende entfernt wird. Wenn Sie jedoch ein dynamisches System wünschen, sollten alle Partikel und Emitter (und das System selbst) in dem Moment zerstört werden, in dem sie nicht mehr benötigt werden.</li>
+    <li>Partikel mögen zwar schnell sein und die CPU entlasten, aber sie erfordern dennoch eine <i>gewisse</i> Verarbeitung, und deshalb sollten Sie nicht 40.000 von ihnen gleichzeitig über den Bildschirm schießen lassen. Beschränken Sie sie auf diejenigen, die notwendig sind, um einen bestimmten Effekt zu erzielen und nicht mehr.</li>
+    <li>Wenn Sie Ihre eigenen Partikel <span class="notranslate">sprite</span> definieren, anstatt einen der 14 mitgelieferten <span class="notranslate">sprites</span> zu verwenden, sollten Sie versuchen, sie so klein wie möglich zu halten, um den gewünschten Effekt zu erzielen.</li>
+    <li>Partikel interagieren <i>nicht</i> mit irgendetwas. Sollten Sie sie benötigen, um irgendeine Art von Interaktion mit dem Benutzer oder anderen Instanzen in Ihrem Spiel zu haben, sollten Sie stattdessen Instanzen verwenden, da Partikel rein grafisch sind.</li>
+    <li>Obwohl es keine technische Begrenzung für die Anzahl der Systeme, Emitter und Partikel gibt, die Sie in einem Spiel erstellen können, sollten Sie versuchen, alles auf ein Minimum zu beschränken, um den Speicherbedarf so gering wie möglich zu halten.</li>
+    <li>Auf mobilen Geräten sollten Sie vorsichtig mit Partikeln umgehen, da das <i>Zeichnen</i> von Partikeln sehr langsam sein kann, wenn sie einen großen Bereich des Bildschirms bedecken (übermäßiges Zeichnen auf mobilen Geräten ist eine der Hauptursachen für Verlangsamung).</li>
+    <li>Bei HTML5 gibt es keine additive Überblendung, und wenn Sie WebGL nicht aktiviert haben, können Sie auch keine Farbüberblendung vornehmen.</li>
   </ul>
-  <p>The easiest way of creating particles in your game with <span data-keyref="GameMaker Name">GameMaker</span> is to use the built-in effects mechanism. These effects are created using an internal particle system which is basically a very fast method for drawing graphical effects only and as such you do not have to worry about all the details (like memory management) when using these functions. You simply specify the type of effect, the position where it must be created, the size you want it to be and finally, its colour then let <span data-keyref="GameMaker Name">GameMaker</span> do all the work.</p>
-  <div data-conref="../../../../assets/snippets/Note_tip_use_particle_system_editor.hts"> </div>
-  <p>The following functions exist for creating the built-in particle effects:</p>
+  <p>Der einfachste Weg, Partikel in Ihrem Spiel mit <span data-keyref="GameMaker Name">GameMaker</span> zu erstellen, ist die Verwendung des eingebauten Effektmechanismus. Diese Effekte werden mit Hilfe eines internen Partikelsystems erstellt, das im Grunde eine sehr schnelle Methode zum Zeichnen von grafischen Effekten ist, so dass Sie sich bei der Verwendung dieser Funktionen nicht um alle Details (wie die Speicherverwaltung) kümmern müssen. Du gibst einfach die Art des Effekts an, die Position, an der er erzeugt werden soll, die Größe, die er haben soll, und schließlich seine Farbe und lässt <span data-keyref="GameMaker Name">GameMaker</span> die ganze Arbeit machen.</p>
+  <p>Für die Erstellung der eingebauten Partikeleffekte gibt es die folgenden Funktionen:</p>
   <ul class="colour">
-    <li><a data-xref="{title}" href="effect_create_depth.htm">effect_create_depth</a></li>
-    <li><a data-xref="{title}" href="effect_create_layer.htm">effect_create_layer</a></li>
-    <li><a href="effect_create_below.htm">effect_create_below</a> <span data-conref="../../../../assets/snippets/Tag_deprecated.hts"> </span></li>
-    <li><a href="effect_create_above.htm">effect_create_above</a> <span data-conref="../../../../assets/snippets/Tag_deprecated.hts"> </span></li>
-    <li><a href="effect_clear.htm">effect_clear</a></li>
+    <li><a href="effect_create_below.htm"><span class="notranslate">effect_create_below</span></a></li>
+    <li><a href="effect_create_above.htm"><span class="notranslate">effect_create_above</span></a></li>
+    <li><a href="effect_clear.htm"><span class="notranslate">effect_clear</span></a></li>
   </ul>
-  <p>Even though these effects are limited in scope and customisation, they can still be used to create some simple, great effects with very little effort. For example by creating a small puff of grey smoke below a moving missile in each step, a pretty convincing smoke trail is created, so even when you are an expert in particles it pays to remember that these effects exist as they can still save you some time.</p>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> also has a function to retrieve information on <span data-keyref="Type_Asset_ParticleSystem"><a href="The_Asset_Editors/Particle_Systems.htm" target="_blank">Particle System Asset</a></span><a href="Particle_Systems/Particle_Systems.htm">s</a> created with <a data-xref="{title}" href="../../../../The_Asset_Editors/Particle_Systems.htm">The Particle System Editor</a>:</p>
+  <p> </p>
+  <p>Auch wenn der Umfang und die Anpassungsmöglichkeiten dieser Effekte begrenzt sind, lassen sich mit ihnen doch einige einfache, großartige Effekte mit sehr wenig Aufwand erzielen. Wenn Sie zum Beispiel bei jedem Schritt eine kleine graue Rauchwolke unter einer sich bewegenden Rakete erzeugen, entsteht eine ziemlich überzeugende Rauchfahne. Selbst wenn Sie ein Experte für Partikel sind, lohnt es sich also, daran zu denken, dass es diese Effekte gibt, denn sie können Ihnen immer noch etwas Zeit sparen.</p>
+  <p>Das wahre Potenzial von Partikeln liegt jedoch in der Gestaltung und Erstellung eigener Effekte mit den leistungsstarken Funktionen, die Ihnen <span class="notranslate">GameMaker Language</span> zur Verfügung stellt. In jedem der folgenden Abschnitte erfahren Sie mehr darüber:</p>
   <ul class="colour">
-    <li><a data-xref="{title}" href="particle_get_info.htm">particle_get_info</a></li>
+    <li><a href="Particle_Systems/Particle_Systems.htm"><label for="two">Partikel-Systeme</label></a></li>
+    <li><a href="Particle_Types/Particle_Types.htm"><label for="three">Partikel-Typen</label></a></li>
+    <li><a href="Particle_Emitters/Particle_Emitters.htm"><label for="four">Partikel-Emitter</label></a></li>
   </ul>
-  <p>However, the true potential of particles is in designing and creating your own effects using the powerful functions that the GameMaker Language supplies to you. You can find out more from each of the following sections:</p>
+  <p> </p>
+  <p><label for="four">Auf der folgenden Seite finden Sie außerdem einen Abschnitt, der Ihnen einen grundlegenden Leitfaden für die Gestaltung und Erstellung von Partikeln für Ihre Spiele bietet:</label></p>
   <ul class="colour">
-    <li><a href="Particle_Systems/Particle_Systems.htm"><label for="two">Particle Systems</label></a></li>
-    <li><a href="Particle_Types/Particle_Types.htm"><label for="three">Particle Types</label></a></li>
-    <li><a href="Particle_Emitters/Particle_Emitters.htm"><label for="four">Particle Emitters</label></a></li>
+    <li><a href="../../../../Additional_Information/Guide_To_Using_Particles.htm">Leitfaden zur Verwendung von Partikeln</a></li>
   </ul>
-  <p><label for="four">There is also a section that gives you a basic guide on how to design and create particles for your games (using <span data-keyref="GML_Code">GML Code</span> or <span data-keyref="GML_Visual">GML Visual</span>) on the following page:</label></p>
-  <ul class="colour">
-    <li><a href="../../../../Additional_Information/Guide_To_Using_Particles.htm">Guide To Using Particles</a></li>
-  </ul>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="../Drawing.htm">Drawing</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="../Textures/Textures.htm">Textures</a></div>
+        <div style="float:left">Zurück: <a href="../Drawing.htm">Zeichnung</a></div>
+        <div style="float:right">Nächste: <a href="../Textures/Textures.htm">Texturen</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 Particles

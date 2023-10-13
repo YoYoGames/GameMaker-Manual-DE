@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_ugc_create_query_user_ex</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_ugc_create_query_user_ex" />
+  <meta name="rh-index-keywords" content="steam_ugc_create_query_user_ex,ugc_list_Published,ugc_list_VotedOn,ugc_list_VotedUp,ugc_list_VotedDown,ugc_list_WillVoteLater,ugc_list_Favorited,ugc_list_Subscribed,ugc_list_UsedOrPlayed,ugc_list_Followed,ugc_match_Items,ugc_match_Items_Mtx,ugc_match_Items_ReadyToUse,ugc_match_Collections,ugc_match_Artwork,ugc_match_Videos,ugc_match_Screenshots,ugc_match_AllGuides,ugc_match_WebGuides,ugc_match_IntegratedGuides,ugc_match_UsableInGame,ugc_match_ControllerBindings,ugc_sortorder_CreationOrderDesc,ugc_sortorder_CreationOrderAsc,ugc_sortorder_TitleAsc,ugc_sortorder_LastUpdatedDesc,ugc_sortorder_SubscriptionDateDesc,ugc_sortorder_VoteScoreDesc,ugc_sortorder_ForModeration" />
+  <meta name="search-keywords" content="steam_ugc_create_query_user_ex,ugc_list_Published,ugc_list_VotedOn,ugc_list_VotedUp,ugc_list_VotedDown,ugc_list_WillVoteLater,ugc_list_Favorited,ugc_list_Subscribed,ugc_list_UsedOrPlayed,ugc_list_Followed,ugc_match_Items,ugc_match_Items_Mtx,ugc_match_Items_ReadyToUse,ugc_match_Collections,ugc_match_Artwork,ugc_match_Videos,ugc_match_Screenshots,ugc_match_AllGuides,ugc_match_WebGuides,ugc_match_IntegratedGuides,ugc_match_UsableInGame,ugc_match_ControllerBindings,ugc_sortorder_CreationOrderDesc,ugc_sortorder_CreationOrderAsc,ugc_sortorder_TitleAsc,ugc_sortorder_LastUpdatedDesc,ugc_sortorder_SubscriptionDateDesc,ugc_sortorder_VoteScoreDesc,ugc_sortorder_ForModeration" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_ugc_create_query_user_ex</h1>
+  <p>Diese Funktion kann verwendet werden, um die UGC-Datenbank abzufragen. Die Funktion benötigt den ID-Wert für den Benutzer und die ID des Spiels, das den Gegenstand verbrauchen wird und/oder die ID des Spiels, das den Gegenstand erstellt hat. Sie müssen auch die folgenden Konstanten verwenden
+    für die Art der abzufragenden Daten, die Art des abzufragenden Gegenstands und die Reihenfolge, in der die zurückgegebenen Gegenstände sortiert werden sollen, sowie eine Seitenzahl - beachten Sie, dass eine Abfrage <i>maximal</i> 50 Gegenstände zurückgeben kann.</p>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Listenart Konstante</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td>ugc_list_veröffentlicht</td>
+        <td>Siehe die <a href="https://partner.steamgames.com/documentation/ugc#QueryContent">Steam-Dokumentation</a>.</td>
+      </tr>
+      <tr>
+        <td>ugc_list_VotedOn</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_list_VotedUp</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_list_VotedDown</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_list_WillVoteLater</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_list_Favoriten</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_list_abonniert</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_list_UsedOrPlayed</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_list_Followed</td>
+        <td>-</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Spieltyp Konstante</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td>ugc_match_Items</td>
+        <td>Siehe die <a href="https://partner.steamgames.com/documentation/ugc#QueryContent">Steam-Dokumentation</a>.</td>
+      </tr>
+      <tr>
+        <td>ugc_match_Items_Mtx</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_match_Items_ReadyToUse</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_match_Collections</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_match_Artwork</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_match_Videos</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_match_Screenshots</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_match_AllGuides</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_match_WebGuides</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_match_IntegratedGuides</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_match_UsableInGame</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_match_ControllerBindings</td>
+        <td>-</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Sortierreihenfolge Konstante</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td>ugc_sortorder_CreationOrderDesc</td>
+        <td>Siehe die <a href="https://partner.steamgames.com/documentation/ugc#QueryContent">Steam-Dokumentation</a>.</td>
+      </tr>
+      <tr>
+        <td>ugc_sortorder_CreationOrderAsc</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_sortorder_TitelAsc</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_sortorder_LastUpdatedDesc</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_sortorder_SubscriptionDateDesc</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_sortorder_VoteScoreDesc</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>ugc_sortorder_ForModeration</td>
+        <td>-</td>
+      </tr>
+    </tbody>
+  </table>
+  <p><br> Die Funktion gibt einen eindeutigen Abfrage-Handle-Wert zurück, der in einer Variablen zur Verwendung in den anderen Abfragefunktionen gespeichert werden sollte. Beachten Sie, dass diese Funktion die Abfrage nur vorbereitet, aber nicht tatsächlich sendet - dafür müssen Sie die Funktion
+    <a href="steam_ugc_send_query.htm"><tt>steam_ugc_send_query()</tt></a> - aufrufen, und Sie können weitere <tt>steam_ugc_query_*()</tt> -Funktionen verwenden, um die Suchanfrage zu verfeinern, bevor sie tatsächlich gesendet wird.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_ugc_create_query_user_ex(list_type, match_type, sort_order, page, account_id, creator_app_id, consumer_app_id);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">list_type</span></td>
+        <td>Der Typ der zu erstellenden Datenliste (siehe unten aufgeführte Konstanten).</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">match_type</span></td>
+        <td>Der Typ der abzufragenden UGC-Elemente (siehe unten aufgeführte Konstanten).</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">sort_order</span></td>
+        <td>Die Art und Weise, wie die Daten geordnet werden sollen (siehe unten aufgeführte Konstanten).</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">page</span></td>
+        <td>Die abzufragende Seitenzahl.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">account_id</span></td>
+        <td>Die <span class="notranslate">Steam</span> Konto-ID.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">creator_app_id</span></td>
+        <td>Die App-ID des Artikelerstellers.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">consumer_app_id</span></td>
+        <td>Die ID der Verbraucheranwendung.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code">Query Handle</p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p class="code">query_handle = steam_ugc_create_query_user_ex(ugc_list_Published, ugc_match_Items, ugc_sortorder_TitleAsc, page, global.AccountID, 0, global.GameID);</p>
+  <p>Die obige <span class="notranslate">code</span> erstellt eine Abfrageanfrage und speichert deren Handle in einer Variablen zur späteren Verwendung.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Zurück: <a href="Steam_UGC.htm">UGC</a></div>
+        <div style="float:right">Nächste: <a href="steam_ugc_create_query_all.htm"><span class="notranslate">steam_ugc_create_query_all</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_ugc_create_query_user_ex
+ugc_list_Published
+ugc_list_VotedOn
+ugc_list_VotedUp
+ugc_list_VotedDown
+ugc_list_WillVoteLater
+ugc_list_Favorited
+ugc_list_Subscribed
+ugc_list_UsedOrPlayed
+ugc_list_Followed
+ugc_match_Items
+ugc_match_Items_Mtx
+ugc_match_Items_ReadyToUse
+ugc_match_Collections
+ugc_match_Artwork
+ugc_match_Videos
+ugc_match_Screenshots
+ugc_match_AllGuides
+ugc_match_WebGuides
+ugc_match_IntegratedGuides
+ugc_match_UsableInGame
+ugc_match_ControllerBindings
+ugc_sortorder_CreationOrderDesc
+ugc_sortorder_CreationOrderAsc
+ugc_sortorder_TitleAsc
+ugc_sortorder_LastUpdatedDesc
+ugc_sortorder_SubscriptionDateDesc
+ugc_sortorder_VoteScoreDesc
+ugc_sortorder_ForModeration
+-->
+  <!-- TAGS
+steam_ugc_create_query_user_ex
+-->
+</body>
+</html>

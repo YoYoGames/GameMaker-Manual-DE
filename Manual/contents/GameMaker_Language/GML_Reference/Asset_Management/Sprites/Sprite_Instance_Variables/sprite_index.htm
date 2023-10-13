@@ -6,7 +6,7 @@
   <title>sprite_index</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function sprite_index" />
   <meta name="rh-index-keywords" content="sprite_index" />
@@ -15,15 +15,15 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>sprite_index</h1>
-  <p>This variable returns the index of the current sprite for the instance, or -1 if the instance has no sprite associated with it. You can change it to give the instance a different sprite by giving it the name of a sprite from the resource tree or by using a variable that has an externally loaded sprite indexed in it. Changing the sprite does not change the index of the currently visible frame, so if you change the sprite on frame number 3, the new sprite will be drawn with that frame visible (assuming it has the same number of frames).</p>
-  <p> </p>
+  <p>Diese Variable gibt den Index der aktuellen <span class="notranslate">sprite</span> für die Instanz zurück, oder -1, wenn die Instanz nicht mit <span class="notranslate">sprite</span> verknüpft ist. Du kannst sie ändern, um der Instanz einen anderen <span class="notranslate">sprite</span> zu geben, indem du ihr den Namen einer <span class="notranslate">sprite</span> aus dem Ressourcenbaum gibst oder indem du eine Variable verwendest, in der ein extern geladenes <span class="notranslate">sprite</span> indiziert ist. Das Ändern von <span class="notranslate">sprite</span> ändert nicht den Index des aktuell sichtbaren Frames. Wenn du also <span class="notranslate">sprite</span> auf Frame Nummer 3 änderst, wird das neue <span class="notranslate">sprite</span> mit diesem sichtbaren Frame gezeichnet (vorausgesetzt, es hat die gleiche Anzahl von Frames).</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">sprite_index;</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Asset_Sprite">Sprite Asset</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">with (obj_Check)<br />
     {<br />
         if !collision_line(x, y, other.x, other.y, obj_Wall, false, true)<br />
@@ -35,18 +35,18 @@
             sprite_index = spr_clear;<br />
         }<br />
     }</p>
-  <p>The above code will loop through all instances of &quot;obj_Check&quot; checking for a collision line between them and the instance running the code. The sprite of those instances will be changed depending on the return value (true or false) for the collision line.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> <span class="notranslate">code</span> Die obige <span class="notranslate">loop</span> durchläuft alle Instanzen von &quot;obj_Check&quot; und prüft, ob eine Kollisionslinie zwischen ihnen und der Instanz, die <span class="notranslate">code</span> ausführt, besteht. Die <span class="notranslate">sprite</span> dieser Instanzen wird je nach dem Rückgabewert (true oder false) für die Kollisionslinie geändert.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Instance_Variables.htm">Sprite Instance Variables</a></div>
-        <div style="float:right">Next: <a href="sprite_width.htm">sprite_width</a></div>
+        <div style="float:left">Zurück: <a href="Sprite_Instance_Variables.htm">Sprite-Instanz-Variablen</a></div>
+        <div style="float:right">Nächste: <a href="sprite_width.htm"><span class="notranslate">sprite_width</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_index

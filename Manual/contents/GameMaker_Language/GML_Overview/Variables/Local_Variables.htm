@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Local Variables</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>Lokale Variablen</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining local variables" />
   <meta name="rh-index-keywords" content="var,Local Variables" />
@@ -14,8 +14,8 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">Local Variables</span></h1>
-  <p>A <strong>local</strong> variable is one that we create for a specific <strong>event</strong> or <strong>function</strong> <i>only</i> and then discard when the event or function has finished. If it is created in a custom function then the local variable is only available to the function and then discarded when the function has finished. Why would we need them? Well, variables take up space in memory and it may be that we are only going to use them for one operation or function in which case we only need to have it in memory for that short time that it&#39;s used. This keeps your code base clean and tidy as well as keeping memory space optimised for the things that really need it. To declare a local variable we use the <span class="inline"><strong><span class="inline">var</span></strong></span> operator like this:</p>
+  <h1>Lokale Variablen</h1>
+  <p>Eine <strong>lokale</strong> Variable wird <i>nur</i> für ein bestimmtes <strong>Ereignis</strong> oder eine bestimmte <strong>Funktion</strong> erstellt und nach Beendigung des Ereignisses oder der Funktion verworfen. Wenn sie in einer benutzerdefinierten Funktion erstellt wird, ist die lokale Variable nur für die Funktion verfügbar und wird nach Beendigung der Funktion verworfen. Wozu brauchen wir sie? Nun, Variablen benötigen Speicherplatz, und es kann sein, dass wir sie nur für einen Vorgang oder eine Funktion verwenden, in diesem Fall müssen wir sie nur für die kurze Zeit, in der sie verwendet wird, im Speicher haben. So bleibt die Basis von <span class="notranslate">code</span> sauber und aufgeräumt und der Speicherplatz wird für die Dinge optimiert, die ihn wirklich brauchen. Um eine lokale Variable zu deklarieren, verwenden wir den <span class="inline"><strong><span class="inline">var</span> Operator wie folgt:</p>
   <p class="code">var _i, _num, _str;<br />
     _i = 0;<br />
     _num = 24.5;<br />
@@ -31,44 +31,44 @@
     var _num = 24.5;<br />
     var _str = &quot;Hello World&quot;;
   </p>
-  <p>All of the variables created in this way will be &quot;forgotten&quot; (ie: removed from memory) at the end of the event (or function) in which they were created. You should be careful that the name you give all <span class="inline">var</span> declared variables does not coincide with another instance variable within the object running the code, and also make sure that you have no intention of using the value stored in that variable outside of the event or function you declare it in (in the examples above, all the <span class="inline">var</span> declared variables have been defined with the underscore &quot;_&quot; preceding the variable name, but this is not required and is done simply to make it more obvious in the code that we are dealing with a local variable). That said, if you find yourself in a situation where you think a local variable <em>should</em> be the same as an instance variable, then you can use the <span class="inline">self</span> <a href="../Instance_Keywords.htm">keyword</a> to identify the instance variable as separate, for example:</p>
+  <p>Alle auf diese Weise erstellten Variablen werden am Ende des Ereignisses (oder der Funktion), in der sie erstellt wurden, &quot;vergessen&quot; (d.h. aus dem Speicher entfernt). Sie sollten darauf achten, dass der Name, den Sie allen <span class="inline">var</span> deklarierten Variablen geben, nicht mit einer anderen Instanzvariablen innerhalb des Objekts übereinstimmt, das die <span class="notranslate">code</span> ausführt, und stellen Sie außerdem sicher, dass Sie nicht die Absicht haben, den in dieser Variable gespeicherten Wert außerhalb des Ereignisses oder der Funktion zu verwenden, in der Sie sie deklarieren (in den obigen Beispielen wurden alle <span class="inline">var</span> deklarierten Variablen mit dem Unterstrich &quot;_&quot; vor dem Variablennamen definiert, aber das ist nicht erforderlich und wird nur gemacht, um auf <span class="notranslate">code</span> deutlicher zu machen, dass es sich um eine lokale Variable handelt). Wenn Sie sich jedoch in einer Situation befinden, in der Sie denken, dass eine lokale Variable dasselbe sein <em>sollte</em> wie eine Instanzvariable, dann können Sie das <a href="../Instance_Keywords.htm">Schlüsselwort</a> <span class="inline">self</span> verwenden, um die Instanzvariable als separat zu kennzeichnen, zum Beispiel:</p>
   <p class="code">var hp = 10;<br />
     with (obj_Enemy)<br />
     {<br />
         self.hp -= hp;<br />
     }</p>
-  <p>Local variables are used a lot in programs, especially in loops for counting <a class="glossterm" data-glossterm="iteration" href="#">iteration</a><span class="glossextra">s</span>, or when using a value several times in one operation that is not going to be repeated again. Here are another couple of examples:</p>
+  <p>Lokale Variablen werden häufig in Programmen verwendet, insbesondere in <span class="notranslate">loops</span> zum Zählen von <a class="glossterm" data-glossterm="Iteration" href="#">Iterationen</a>oder wenn ein Wert mehrmals in einer Operation verwendet wird, die nicht mehr wiederholt werden soll. Hier sind ein paar weitere Beispiele:</p>
   <p class="code">var _i = 0;<br />
     repeat (10)<br />
     {<br />
         inventory[_i] = 0;<br />
         _i += 1;<br />
     }</p>
-  <p>The above code creates a local variable called &quot;<span class="inline">_i</span>&quot; and sets it to 0, all in the same line. Note that in previous versions of <i>GameMaker</i> you had to declare your local variables first and <i>then</i> assign them values, but in this version you can declare <i>and</i> assign them a value at the same time. The above code then uses this variable to initialize an <a href="../Arrays.htm">array</a>. As the variable &quot;<span class="inline">_i</span>&quot; is not going to be used for any further functions in the instance other than this, it can be local in scope. Here is one more example:</p>
+  <p>Die obige <span class="notranslate">code</span> erstellt eine lokale Variable namens &quot;<span class="inline">_i</span>&quot; und setzt sie auf 0, alles in der gleichen Zeile. Beachten Sie, dass Sie in früheren Versionen von <i>GameMaker</i> Ihre lokalen Variablen zuerst deklarieren und ihnen <i>dann</i> Werte zuweisen mussten, aber in dieser Version können Sie sie gleichzeitig deklarieren <i>und</i> ihnen einen Wert zuweisen. Die obige <span class="notranslate">code</span> verwendet diese Variable dann, um ein <a href="../Arrays.htm">Array</a> zu initialisieren. Da die Variable &quot;<span class="inline">_i</span>&quot; für keine weiteren Funktionen in der Instanz außer dieser verwendet werden soll, kann sie im Anwendungsbereich lokal sein. Hier ist ein weiteres Beispiel:</p>
   <p class="code">var _x, _y;<br />
     _x = x - 32 + irandom(64);<br />
     _y = y - 32 + irandom(64);<br />
     instance_create_layer(_x, _y, &quot;Effects&quot;, obj_blood);</p>
-  <p>Here we have used the local variables &quot;<span class="inline">_x</span>&quot; and &quot;<span class="inline">_y</span>&quot; to store some random coordinates that we then use to create an instance. In this example you can see that it is not strictly necessary that we use these variables but for the sake of readability and ease of use, we do. It is MUCH clearer and obvious what we are doing there than if we used this code:</p>
+  <p>Hier haben wir die lokalen Variablen &quot;<span class="inline">_x</span>&quot; und &quot;<span class="inline">_y</span>&quot; verwendet, um einige zufällige Koordinaten zu speichern, die wir dann zur Erstellung einer Instanz verwenden. In diesem Beispiel können Sie sehen, dass es nicht unbedingt notwendig ist, diese Variablen zu verwenden, aber aus Gründen der Lesbarkeit und der Benutzerfreundlichkeit tun wir es. Es ist VIEL klarer und offensichtlicher, was wir hier tun, als wenn wir diesen Code verwenden würden:</p>
   <p class="code">instance_create_layer(x - 32 + irandom(64), y - 32 + irandom(64), &quot;Effects&quot;, obj_guts);</p>
-  <p>One other thing about <span class="inline">var</span> declared local variables should be noted... Since they are unique to the event or function that runs them, they can be used in any other instances through code too! This means that we can use these variables to set and change things in other instances using the &quot;<span class="inline">with()</span>&quot; construct (see the section on <a href="../Variables_And_Variable_Scope.htm">variable scope</a> for more information). The actual code itself would look something like this:</p>
+  <p>Eine weitere Sache über <span class="inline">var</span> deklarierte lokale Variablen sollte beachtet werden... Da sie für das Ereignis oder die Funktion, die sie ausführt, eindeutig sind, können sie über <span class="notranslate">code</span> auch in allen anderen Instanzen verwendet werden! Das bedeutet, dass wir diese Variablen verwenden können, um Dinge in anderen Instanzen zu setzen und zu ändern, indem wir das &quot;<span class="inline">with()</span>&quot; Konstrukt verwenden (siehe den Abschnitt über <a href="../Variables_And_Variable_Scope.htm">Variablenumfang</a> für weitere Informationen). Die eigentliche <span class="notranslate">code</span> würde etwa so aussehen:</p>
   <p class="code">var num = instance_number(obj_Enemy);<br />
     with (obj_Enemy)<br />
     {<br />
         if num&gt;10 instance_destroy();<br />
     }</p>
-  <p>The above code works because the <span class="inline">var</span> declared variable is local to the <i>event</i> (or function) it is contained in, not the instance, nor the game world, and so can be used in any function in any object as long as it is in the same code block.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> funktioniert, weil die <span class="inline">var</span> deklarierte Variable lokal für das <i>Ereignis</i> (oder die Funktion) ist, in der sie enthalten ist, nicht für die Instanz oder die Spielwelt, und daher in jeder Funktion in jedem Objekt verwendet werden kann, solange sie sich im selben <span class="notranslate">code</span> Block befindet.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Variables_And_Variable_Scope.htm">Variables And Variables Scope</a></div>
-        <div style="float:right">Next: <a href="Instance_Variables.htm">Instance Variables</a></div>
+        <div style="float:left">Zurück: <a href="../Variables_And_Variable_Scope.htm">Variablen und Variablenumfang</a></div>
+        <div style="float:right">Nächste: <a href="Instance_Variables.htm">Instanz-Variablen</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 local variables

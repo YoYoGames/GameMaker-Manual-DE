@@ -6,7 +6,7 @@
   <title>fps</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for fps" />
   <meta name="rh-index-keywords" content="fps" />
@@ -15,32 +15,32 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>fps</h1>
-  <p>In <span data-keyref="GameMaker Name">GameMaker</span> there are two main ways that can be used to tell the speed at which your game runs. The <a href="../General_Game_Control/game_get_speed.htm"><span class="inline">game speed</span></a> (as specified in the Game Options) and the <span class="inline">fps</span> (frames per second). These values are often confused, but basically one is the number of game steps that <span data-keyref="GameMaker Name">GameMaker</span> is supposed to be completing in a second, while the other (the fps) is the number of CPU steps that <span data-keyref="GameMaker Name">GameMaker</span> is actually completing in a second <i>up to a maximum value of the room speed itself</i>. To get the true fps, ie. the actual number of cpu steps per game step, use the <a href="fps_real.htm"><span class="inline">fps_real</span></a> variable.</p>
-  <p>This <b>read-only</b> variable returns the current fps as an integer value. Please note that the function will only update once every step of your game and so may appear to &quot;jump&quot; from one value to another, but this is quite normal.</p>
-  <p> </p>
+  <p>In <span data-keyref="GameMaker Name">GameMaker</span> gibt es zwei Möglichkeiten, um die Geschwindigkeit zu bestimmen, mit der dein Spiel läuft. Die <a href="../General_Game_Control/game_get_speed.htm"><span class="inline">game speed</span></a> (wie in den Spieloptionen angegeben) und die <span class="inline">fps</span> (Bilder pro Sekunde). Diese Werte werden oft verwechselt, aber im Grunde ist der eine die Anzahl der Spielschritte, die <span data-keyref="GameMaker Name">GameMaker</span> in einer Sekunde ausführen sollte, während der andere (die fps) die Anzahl der CPU-Schritte ist, die <span data-keyref="GameMaker Name">GameMaker</span> tatsächlich in einer Sekunde <i>bis zu einem Maximalwert der Raumgeschwindigkeit selbst</i> ausführt. Um die wahre fps zu erhalten, d.h. die tatsächliche Anzahl von CPU-Schritten pro Spielschritt, verwenden Sie die <a href="fps_real.htm"><span class="inline">fps_real</span></a> Variable.</p>
+  <p>Diese <b>schreibgeschützte</b> Variable gibt den aktuellen fps-Wert als Integer-Wert zurück. Bitte beachten Sie, dass die Funktion nur einmal pro Spielschritt aktualisiert wird und daher von einem Wert zum anderen zu &quot;springen&quot; scheint, aber das ist ganz normal.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">fps</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">if debug_mode<br />
     {<br />
         draw_text(32, 32, &quot;FPS = &quot; + string(fps));<br />
     }</p>
-  <p>The above code will check to see if the game is in debug mode and if it is it will display the current fps on the screen.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> prüft, ob sich das Spiel im Debug-Modus befindet, und wenn dies der Fall ist, werden die aktuellen fps auf dem Bildschirm angezeigt.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Debugging.htm">Debugging</a></div>
-        <div style="float:right">Next: <a href="fps_real.htm">fps_real</a></div>
+        <div style="float:left">Zurück: <a href="Debugging.htm">Fehlersuche</a></div>
+        <div style="float:right">Nächste: <a href="fps_real.htm"><span class="notranslate">fps_real</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 fps

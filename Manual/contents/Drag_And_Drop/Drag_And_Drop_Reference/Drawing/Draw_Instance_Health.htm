@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Draw Instance Health</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>Gesundheit der Instanz zeichnen</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Draw Instance Health action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Draw Instance Health" />
@@ -14,73 +14,76 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Draw Instance Health Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Instance_Health.png" width="32" /> Draw Instance Health</h1>
-  <p>With this action you can draw a coloured bar to show a graphic representation of the instance variable <span class="inline">health</span> (when you use <i>any</i> &quot;health&quot; action in <span data-keyref="GameMaker Name">GameMaker</span> the instance that calls it will have a new instance scope variable called <span class="inline">health</span> added). The amount to be displayed is a percentage value that falls within the range of 0 - 100. You can set the direction anchor for drawing the healthbar (from left-to-right or right-to-left and top-to-bottom or bottom-to-top) as well as the position, either within the room or relative to the instance calling the action. You can also set the colour to be blended from each of the four corners of the healthbar, creating gradients from red to green (for example, but you can use any colours). Below you can see an image of how a simple healthbar looks with the different options:</p>
-  <p><b><img alt="Different Healthbar Settings" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/Healthbars_Example.png" /></b></p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> This action is only for use in the various <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw Events</a>, and will not draw anything if used elsewhere.</p>
-  <p> </p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Draw Instance Health Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/a_Drawing_Draw_Instance_Health.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Gesundheit der Instanz zeichnen</h1>
+  <p>Mit dieser Aktion können Sie einen farbigen Balken zeichnen, um eine grafische Darstellung der Instanzvariablen <span class="inline">health</span> zu zeigen (wenn Sie <i>eine beliebige</i> &quot;Gesundheits&quot;-Aktion in <span data-keyref="GameMaker Name">GameMaker</span> verwenden, wird der Instanz, die sie aufruft, eine neue Instanzbereich
+    Variable namens <span class="inline">health</span> hinzugefügt). Der Wert, der angezeigt werden soll, ist ein Prozentwert, der in den Bereich von 0 - 100 fällt. Du kannst den Richtungsanker für das Zeichnen der Gesundheitsleiste festlegen (von links nach rechts oder von rechts nach links und von oben nach unten oder von unten nach oben)
+    sowie die Position, entweder innerhalb des Raumes oder relativ zu der Instanz, die die Aktion aufruft. Du kannst auch die Farbe einstellen, die von jeder der vier Ecken des Gesundheitsbalkens überblendet werden soll, und so Farbverläufe von Rot zu Grün erzeugen (zum Beispiel, aber du kannst
+    beliebige Farben verwenden). Unten sehen Sie ein Bild, wie eine einfache Gesundheitsleiste mit den verschiedenen Optionen aussieht:</p>
+  <p><b><img alt="Draw Instance Health Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/i_Drawing_Draw_Instance_Health.png" width="32" /></b></p>
+  <p class="note"><b>HINWEIS</b>: Diese Aktion ist nur für die verschiedenen <a href="../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Zieh-Ereignisse</a> gedacht und wird nicht gezogen, wenn sie anderweitig verwendet wird.</p>
+  <p> </p>
+  <p> </p>
+  <h4>Aktion Syntax:</h4>
+  <p><img alt="Different Healthbar Settings" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/Healthbars_Example.png"/></p>
+  <h4>Argumente:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>Direction</td>
-        <td>The direction to draw the healthbar contents</td>
+        <td><span class="notranslate">Direction</span></td>
+        <td>Die Richtung, in der der Inhalt der Gesundheitsleiste gezeichnet wird</td>
       </tr>
       <tr>
-        <td>Left</td>
-        <td>The position of the left side of the healthbar</td>
+        <td><span class="notranslate">Left</span></td>
+        <td>Die Position der linken Seite der Gesundheitsleiste</td>
       </tr>
       <tr>
-        <td>Top</td>
-        <td>The position of the top of the healthbar</td>
+        <td><span class="notranslate">Top</span></td>
+        <td>Die Position des oberen Teils der Gesundheitsleiste</td>
       </tr>
       <tr>
-        <td>Right</td>
-        <td>The position of the right side of the healthbar</td>
+        <td><span class="notranslate">Right</span></td>
+        <td>Die Position der rechten Seite der Gesundheitsleiste</td>
       </tr>
       <tr>
-        <td>Bottom</td>
-        <td>The position of the bottom of the healthbar</td>
+        <td><span class="notranslate">Bottom</span></td>
+        <td>Die Position des unteren Teils der Gesundheitsleiste</td>
       </tr>
       <tr>
-        <td>Background</td>
-        <td>The colour to draw as the background on the healthbar</td>
+        <td><span class="notranslate">Background</span></td>
+        <td>Die Farbe, die als Hintergrund für die Gesundheitsleiste verwendet werden soll</td>
       </tr>
       <tr>
-        <td>Outline</td>
-        <td>The colour to use to outline the healthbar</td>
+        <td><span class="notranslate">Outline</span></td>
+        <td>Die Farbe, mit der die Gesundheitsleiste umrandet wird</td>
       </tr>
       <tr>
-        <td>Min Colour</td>
-        <td>The colour to blend from the minimum value</td>
+        <td><span class="notranslate">Min Colour</span></td>
+        <td>Die zu mischende Farbe ab dem Mindestwert</td>
       </tr>
       <tr>
-        <td>Max Colour</td>
-        <td>The colour to blend from the maximum value</td>
+        <td><span class="notranslate">Max Colour</span></td>
+        <td>Die zu überblendende Farbe ab dem Maximalwert</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Draw Instance Health Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Drawing/e_Drawing_Draw_Instance_Health.png" />The above action block code draws a healthbar in the top left of the screen.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p><img>Der obige Aktionsblock <span class="notranslate">code</span> zeichnet eine Gesundheitsleiste oben links auf dem Bildschirm.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Drawing_Actions.htm">Drawing Actions</a></div>
-        <div style="float:right">Next: <a href="Draw_Instance_Lives.htm">Draw Instance Lives</a></div>
+        <div style="float:left">Zurück: <a href="Drawing_Actions.htm">Zeichnungsaktionen</a></div>
+        <div style="float:right">Nächste: <a href="Draw_Instance_Lives.htm">Instanz zeichnen lebt</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Draw Instance Health

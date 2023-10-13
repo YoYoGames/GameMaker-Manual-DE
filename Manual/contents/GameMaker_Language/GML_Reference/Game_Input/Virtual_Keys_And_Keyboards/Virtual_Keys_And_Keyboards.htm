@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Virtual Keys And Virtual Keyboards</title>
+  <title>Virtuelle Tasten und virtuelle Tastaturen</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for Virtual Keys And Virtual Keyboards" />
   <meta name="rh-index-keywords" content="" />
@@ -14,58 +14,58 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Virtual Keys And Virtual Keyboards</h1>
-  <p><b></b>When developing games for touchscreen devices, it&#39;s often important to get keyboard input from the user. When using <span data-keyref="GameMaker Name">GameMaker</span> this can be done in one of two ways:</p>
+  <h1>Virtuelle Tasten und virtuelle Tastaturen</h1>
+  <p><b></b>Bei der Entwicklung von Spielen für Touchscreen-Geräte ist es oft wichtig, Tastatureingaben vom Benutzer zu erhalten. Bei der Verwendung von <span data-keyref="GameMaker Name">GameMaker</span> kann dies auf zwei Arten geschehen:</p>
   <ul class="colour">
-    <li>Create your own on-screen <b>virtual keys</b> to get input</li>
-    <li>Pop up the OS <b>virtual keyboard</b> and get input from that</li>
+    <li>Erstellen Sie Ihre eigenen <b>virtuellen Tasten</b> auf dem Bildschirm, um Eingaben zu erhalten</li>
+    <li>Die <b>virtuelle Tastatur</b> des Betriebssystems einblenden und Eingaben über diese Tastatur abrufen</li>
   </ul>
-  <p>What you use will depend very much on the game and what you need, but in general you would use virtual keys when you want to have onscreen buttons for player control or for menus, while you&#39;d use the virtual keyboard when you need player input, like getting a name or setting a value.</p>
-  <p>In order for your games to work properly on mobile devices with a touch screen, you may need to be able to assign areas of the screen to respond to certain things when they are touched by the user. This is done by assigning a &quot;virtual Key&quot; to an internally mapped standard keyboard key and then using the keyboard events that they generate to control your application. It is worth noting that these &quot;virtual keys&quot; are mapped to the <i>screen</i> position rather than room position and so the x/y values are absolute, based on the display size. This means that you don&#39;t need to worry about the use of views or the relative room coordinates, and can simply define the keys in the Create Event of an object (you only need to define a virtual key once per-room), then draw your key sprites in the <a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw GUI Event</a>, sizing the GUI layer to be the same as the screen.</p>
-  <p class="note"><b><span class="note">NOTE</span> </b>These functions will not work on the Windows, Ubuntu (Linux), nor the MacOS, target platforms using a touch screen, although they will receive mouse clicks as &quot;touches&quot;.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> These functions are supported in the HTML5 and GX.games targets.</p>
-  <p>The available virtual key functions are:</p>
+  <p>Was Sie verwenden, hängt stark vom Spiel und Ihren Bedürfnissen ab, aber im Allgemeinen verwenden Sie virtuelle Tasten, wenn Sie Bildschirmtasten für die Spielersteuerung oder für Menüs benötigen, während Sie die virtuelle Tastatur verwenden, wenn Sie Spielereingaben benötigen, z. B. um einen Namen zu erhalten oder einen Wert einzustellen.</p>
+  <p>Damit Ihre Spiele auf mobilen Geräten mit Touchscreen richtig funktionieren, müssen Sie möglicherweise Bereiche des Bildschirms zuweisen können, die auf bestimmte Dinge reagieren, wenn sie vom Benutzer berührt werden. Dazu weisen Sie einer intern zugeordneten Standardtastaturtaste eine &quot;virtuelle Taste&quot; zu und verwenden dann die von ihr erzeugten Tastaturereignisse zur Steuerung Ihrer Anwendung. Es sei darauf hingewiesen, dass diese &quot;virtuellen Tasten&quot; der Position des <i>Bildschirms</i> und nicht der Position des Raums zugeordnet sind, so dass die x/y-Werte absolut sind und auf der Bildschirmgröße basieren. Das bedeutet, dass Sie sich keine Gedanken über die Verwendung von Ansichten oder die relativen Raumkoordinaten machen müssen. Sie können die Tasten einfach im Create-Event eines Objekts definieren (Sie müssen eine virtuelle Taste nur einmal pro Raum definieren) und dann Ihre Taste <span class="notranslate">sprites</span> im <a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw-GUI-Event</a> zeichnen, wobei die Größe der GUI-Ebene mit der des Bildschirms übereinstimmen sollte.</p>
+  <p class="note"><b><span class="note">HINWEIS</span> </b>Diese Funktionen funktionieren weder auf dem <span class="notranslate">Windows</span>, <span class="notranslate">Ubuntu</span> (<span class="notranslate">Linux</span>) noch auf dem MacOS, Ziel <span class="notranslate">platforms</span> mit einem Touchscreen, obwohl sie Mausklicks als &quot;Berührungen&quot; empfangen.</p>
+  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> Diese Funktionen werden von den HTML5- und Opera GX-Zielen unterstützt.</p>
+  <p>Die verfügbaren virtuellen Tastenfunktionen sind:</p>
   <ul class="colour">
-    <li><a href="virtual_key_add.htm">virtual_key_add</a></li>
-    <li><a href="virtual_key_show.htm">virtual_key_show</a></li>
-    <li><a href="virtual_key_hide.htm">virtual_key_hide</a></li>
-    <li><a href="virtual_key_delete.htm">virtual_key_delete</a></li>
+    <li><a href="virtual_key_add.htm"><span class="notranslate">virtual_key_add</span></a></li>
+    <li><a href="virtual_key_show.htm"><span class="notranslate">virtual_key_show</span></a></li>
+    <li><a href="virtual_key_hide.htm"><span class="notranslate">virtual_key_hide</span></a></li>
+    <li><a href="virtual_key_delete.htm"><span class="notranslate">virtual_key_delete</span></a></li>
   </ul>
-  <p> </p>
-  <p>If you require text or numeric input in your game on a touchscreen device, then you can use the <b>virtual keyboard</b> functions provided to use the device OS keyboard. These functions will call up or hide the OS keyboard and accept input from it, however it will <i>not</i> trigger the regular keyboard events, but rather update the <span class="inline"><a href="../Keyboard_Input/keyboard_string.htm">keyboard_string</a></span> variable with the user input (this is due to the fact that the virtual keyboard can input whole words and not just single characters).</p>
-  <p>Opening or closing the virtual keyboard will generate <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events.htm">System Asynchronous Events</a>, in which the <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> DS map will be populated with the following key/value pairs:</p>
+  <p> </p>
+  <p>Wenn Sie in Ihrem Spiel auf einem Touchscreen-Gerät eine Text- oder Zahleneingabe benötigen, können Sie die Funktionen für die <b>virtuelle Tastatur</b> nutzen, um die OS-Tastatur des Geräts zu verwenden. Diese Funktionen rufen die OS-Tastatur auf oder blenden sie aus und akzeptieren Eingaben von ihr, lösen jedoch <i>nicht</i> die regulären Tastaturereignisse aus, sondern aktualisieren die Variable <span class="inline"><a href="../Keyboard_Input/keyboard_string.htm">keyboard_string</a></span> mit den Benutzereingaben (dies ist darauf zurückzuführen, dass die virtuelle Tastatur ganze Wörter und nicht nur einzelne Zeichen eingeben kann).</p>
+  <p>Das Öffnen oder Schließen der virtuellen Tastatur erzeugt <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events.htm">asynchrone Systemereignisse</a>, bei denen die <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> DS-Map mit den folgenden Schlüssel/Wert-Paaren gefüllt wird:</p>
   <ul class="colour">
-    <li>&quot;<b>event_type</b>&quot; - the type of system event received, which will be &quot;<b>virtual keyboard status</b>&quot; for virtual keyboards.</li>
-    <li>&quot;<b>screen_height</b>&quot; - the height of the virtual keyboard (in pixels). This will be 0 if the keyboard is invisible.</li>
-    <li>&quot;<b>keyboard_status</b>&quot; - the current status of the keyboard, returned as one of the following strings:
+    <li>&quot;<b>event_type</b>&quot; - die Art des empfangenen Systemereignisses, bei<b>virtuellen</b> Tastaturen ist dies &quot;<b>virtual keyboard status</b>&quot;.</li>
+    <li>&quot;<b>screen_height</b>&quot; - die Höhe der virtuellen Tastatur (in Pixel). Dieser Wert ist 0, wenn die Tastatur unsichtbar ist.</li>
+    <li>&quot;<b>keyboard_status</b>&quot; - der aktuelle Status der Tastatur, zurückgegeben als eine der folgenden Zeichenketten:
       <ul class="colour">
-        <li>&quot;hiding&quot;</li>
-        <li>&quot;hidden&quot;</li>
-        <li>&quot;showing&quot;</li>
-        <li>&quot;visible&quot;</li>
+        <li>&quot;versteckt&quot;</li>
+        <li>&quot;versteckt&quot;</li>
+        <li>&quot;zeigend&quot;</li>
+        <li>&quot;sichtbar&quot;</li>
       </ul>
     </li>
   </ul>
-  <p>The available virtual keyboard functions are:</p>
-  <p class="note"><b><span class="note">NOTE</span> </b>These functions are only valid for the <strong>Android</strong> (including <strong>AndroidTV</strong>), and <strong>iOS </strong>(including <strong>tvOS</strong>) target platforms.</p>
+  <p>Die verfügbaren Funktionen der virtuellen Tastatur sind:</p>
+  <p class="note"><b><span class="note">HINWEIS</span> </b>Diese Funktionen sind nur für die Zielsysteme <strong>Android</strong> (einschließlich <strong>AndroidTV</strong>), <strong>iOS </strong>(einschließlich <strong>tvOS</strong>) und <strong>UWP </strong>gültig <span class="notranslate">platforms</span>.</p>
   <ul class="colour">
-    <li><a href="keyboard_virtual_show.htm">keyboard_virtual_show</a></li>
-    <li><a href="keyboard_virtual_hide.htm">keyboard_virtual_hide</a></li>
-    <li><a href="keyboard_virtual_status.htm">keyboard_virtual_status</a></li>
-    <li><a href="keyboard_virtual_height.htm">keyboard_virtual_height</a></li>
+    <li><a href="keyboard_virtual_show.htm"><span class="notranslate">keyboard_virtual_show</span></a></li>
+    <li><a href="keyboard_virtual_hide.htm"><span class="notranslate">keyboard_virtual_hide</span></a></li>
+    <li><a href="keyboard_virtual_status.htm"><span class="notranslate">keyboard_virtual_status</span></a></li>
+    <li><a href="keyboard_virtual_height.htm"><span class="notranslate">keyboard_virtual_height</span></a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Game_Input.htm">Game Input</a></div>
-        <div style="float:right">Next: <a href="../Keyboard_Input/Keyboard_Input.htm">Keyboard Input</a></div>
+        <div style="float:left">Zurück: <a href="../Game_Input.htm">Spiel-Eingabe</a></div>
+        <div style="float:right">Nächste: <a href="../Keyboard_Input/Keyboard_Input.htm">Tastatureingabe</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 Virtual Keys

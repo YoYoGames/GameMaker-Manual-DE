@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>buffer_poke</title>
+  <title>Puffer_Stange</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_poke" />
   <meta name="rh-index-keywords" content="buffer_poke,buffer_u8,buffer_s8,buffer_u16,buffer_s16,buffer_u32,buffer_s32,buffer_u64,buffer_f16,buffer_f32,buffer_f64,buffer_bool,buffer_string,buffer_text" />
@@ -14,58 +14,58 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_poke</h1>
-  <p>With the <a href="buffer_write.htm"><span class="inline">buffer_write()</span></a> function, you can write data to the given buffer at the current &quot;seek&quot; position, with each piece of data advancing this position by the bytes being written or read. However, it may be necessary for you to change a given piece of data without wanting to change the current seek position, and that&#39;s when you would use this function. You simply supply the function with a buffer index, and then the offset position from the buffer start (in bytes) within that buffer to write to, as well as the data type and the value to be written.</p>
-  <p> </p>
+  <h1>Puffer_Stange</h1>
+  <p>Mit der Funktion <a href="buffer_write.htm"><span class="inline">buffer_write()</span></a> können Sie Daten in die angegebene <span class="notranslate">buffer</span> an der aktuellen &quot;Suchposition&quot; schreiben, wobei jedes Datenstück diese Position um die geschriebenen oder gelesenen Bytes vorverlegt. Es kann jedoch notwendig sein, ein bestimmtes Datenstück zu ändern, ohne die aktuelle Suchposition zu ändern, und in diesem Fall würden Sie diese Funktion verwenden. Sie geben der Funktion einfach einen <span class="notranslate">buffer</span> -Index und die Offset-Position vom <span class="notranslate">buffer</span> -Start (in Bytes) innerhalb dieses <span class="notranslate">buffer</span> an, in das geschrieben werden soll, sowie den Datentyp und den zu schreibenden Wert.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">buffer_poke(buffer, offset, type, value);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>buffer</td>
-        <td><span data-keyref="Type_ID_Buffer">Buffer ID</span></td>
-        <td>The index of the buffer to use.</td>
+        <td><span class="notranslate">buffer</span></td>
+        <td><span data-keyref="Type_ID_Buffer">Puffer-ID</span></td>
+        <td><span class="notranslate">The index of the buffer to use.</span></td>
       </tr>
       <tr>
-        <td>offset</td>
+        <td><span class="notranslate">offset</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The offset position (in bytes) within the buffer to write the given data to.</td>
+        <td><span class="notranslate">The offset position (in bytes) within the buffer to write the given data to.</span></td>
       </tr>
       <tr>
-        <td>type</td>
-        <td><span data-keyref="Type_Constant_Buffer_Data_Type">Buffer Data Type Constant</span></td>
-        <td>The type of data that is to be written to the buffer (see the list of constants <a href="buffer_write.htm">here</a>).</td>
+        <td><span class="notranslate">type</span></td>
+        <td><span data-keyref="Type_Constant_Buffer_Data_Type">Puffer Datentyp Konstante</span></td>
+        <td><span class="notranslate">The type of data that is to be written to the buffer (see the list of constants <a href="buffer_write.htm">here</a>).</span></td>
       </tr>
       <tr>
-        <td>value</td>
-        <td><span data-keyref="Type_Any">Variable</span></td>
-        <td>The data to add to the buffer, in accordance with the type specified.</td>
+        <td><span class="notranslate">value</span></td>
+        <td><span data-keyref="Type_Any">Variabel</span></td>
+        <td><span class="notranslate">The data to add to the buffer, in accordance with the type specified.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">buffer_poke(buff, 3, buffer_u8, colour_get_blue(image_blend));</p>
-  <p>The above code will add the blue component value of the colour used for the image blend into the buffer indexed in the variable &quot;buff&quot;, at the third position in the buffer and as an unsigned 8bit value.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> fügt den Wert der Blaukomponente der für die Bildüberblendung verwendeten Farbe in die <span class="notranslate">buffer</span> ein, die in der Variablen &quot;buff&quot; an der dritten Position in der <span class="notranslate">buffer</span> indiziert ist und einen vorzeichenlosen 8-Bit-Wert darstellt.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a href="buffer_save.htm">buffer_save</a></div>
+        <div style="float:left">Zurück: <a href="Buffers.htm">Puffer</a></div>
+        <div style="float:right">Nächste: <a href="buffer_save.htm"><span class="notranslate">buffer_save</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_poke

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Destroy Particle Emitter</title>
+  <title>Partikelemitter zerstören</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Destroy Particle Emitter action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Destroy Particle Emitter" />
@@ -14,46 +14,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Destroy Particle Emitter Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Destroy_Particle_Emitter.png" width="32" /> Destroy Particle Emitter</h1>
-  <p>This action will &quot;destroy&quot; the given particle emitter, ie: free up the memory used by the particle emitter. You supply the particle system ID that the emitter belongs to (as returned by the action <a href="Create_Particle_System.htm">Create Particle System</a>)
-    and then the actual emitter ID (as returned by the action <a href="Create_Particle_Emitter.htm">Create Particle Emitter</a>). This action should be called whenever you no longer need a particle emitter in your game, or whenever you wish to re-create
-    the particle emitter (for example, just before calling a <a href="../Game/Restart_Game.htm">Game Restart</a>). Note that if the particle system the emitter has been assigned to has <i>not</i> been flagged as <b>Persistent</b> then you do <i>not need to call this action</i>,
-    as the emitter will be automatically cleaned up on room end along with the particle system.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Destroy Particle Emitter Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Destroy_Particle_Emitter.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Partikelemitter zerstören</h1>
+  <p>Diese Aktion &quot;zerstört&quot; den angegebenen Partikelemitter, d.h. sie gibt den vom Partikelemitter verwendeten Speicher frei. Du gibst die ID des Partikelsystems an, zu dem der Emitter gehört (wie von der Aktion <a href="Create_Particle_System.htm">Partikelsystem erstellen</a> zurückgegeben)
+    und dann die eigentliche Emitter-ID (die von der Aktion <a href="Create_Particle_Emitter.htm">Partikelemitter erstellen</a> zurückgegeben wird). Diese Aktion sollte immer dann aufgerufen werden, wenn du einen Partikelemitter in deinem Spiel nicht mehr benötigst, oder wenn du den Emitter neu erstellen möchtest
+    Partikelemitter neu erstellen willst (z.B. kurz vor dem Aufruf eines <a href="../Game/Restart_Game.htm">Game Restart</a>). Beachte, dass du <i>diese Aktion nicht aufrufen</i> musst, wenn das Partikelsystem, dem der Emitter zugewiesen wurde, <i>nicht</i> als <b>persistent</b> gekennzeichnet wurde,
+    da der Emitter zusammen mit dem Partikelsystem automatisch im Raum aufgeräumt wird.</p>
+  <p> </p>
+  <h4>Aktion Syntax:</h4>
+  <p><img alt="Destroy Particle Emitter Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Destroy_Particle_Emitter.png" width="32" /></p>
+  <h4>Argumente:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>System</td>
-        <td>The ID value of the system that contains the emitter</td>
+        <td><span class="notranslate">System</span></td>
+        <td>Der ID-Wert des Systems, das den Emitter enthält</td>
       </tr>
       <tr>
-        <td>Emitter</td>
-        <td>The ID value of the emitter to destroy</td>
+        <td><span class="notranslate">Emitter</span></td>
+        <td>Der ID-Wert des zu zerstörenden Emitters</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Destroy Particle Emitter Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Destroy_Particle_Emitter.png" />The above action block code will check an instance variable and
-    if it is over 100 it will destroy the emitter assigned to the instance and then go to the next room.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p><img>Der obige Aktionsblock <span class="notranslate">code</span> wird eine Instanzvariable überprüfen und
+    wenn sie über 100 liegt, wird der Emitter, der der Instanz zugewiesen ist, zerstört und dann zum nächsten Raum gewechselt.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Actions.htm">Particle Actions</a></div>
-        <div style="float:right">Next: <a href="Emit_Particles.htm">Emit Particles</a></div>
+        <div style="float:left">Zurück: <a href="Particle_Actions.htm">Teilchen-Aktionen</a></div>
+        <div style="float:right">Nächste: <a href="Emit_Particles.htm">Partikel emittieren</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Destroy Particle Emitter

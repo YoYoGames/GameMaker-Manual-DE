@@ -6,7 +6,7 @@
   <title>xboxlive_stats_add_user</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for xboxlive_stats_add_user" />
   <meta name="rh-index-keywords" content="xboxlive_stats_add_user,achievement_stat_event" />
@@ -15,52 +15,52 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_stats_add_user</h1>
-  <p>This function can be used to add a given user ID pointer to the statistics manager. This must be done before using any of the other stats functions to automatically sync the game with the XBox Live server and retrieve the latest values. You supply the user ID as returned by (for example) the function <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>, and the function will will return -1 if there was an error or if the user ID is invalid, or any other value if the function was successfully called.</p>
-  <p>The function will generate a callback which will trigger a <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">System Asynchronous Event</a>. This event will have the special DS map <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> which should then be parsed for the following keys:</p>
+  <p>Diese Funktion kann verwendet werden, um einen bestimmten Benutzer-ID-Zeiger zum Statistik-Manager hinzuzufügen. Dies muss geschehen, bevor Sie eine der anderen Statistikfunktionen verwenden, um das Spiel automatisch mit XBox Live <span class="notranslate">server</span> zu synchronisieren und die neuesten Werte abzurufen. Sie geben die Benutzer-ID an, die (zum Beispiel) von der Funktion <a href="../Users_And_Accounts/xboxlive_get_user.htm"><span class="inline">xboxlive_get_user()</span></a>zurückgegeben wird, und die Funktion gibt -1 zurück, wenn ein Fehler aufgetreten ist oder die Benutzer-ID ungültig ist, oder einen beliebigen anderen Wert, wenn die Funktion erfolgreich aufgerufen wurde.</p>
+  <p>Die Funktion erzeugt einen Callback, der ein <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/System.htm">asynchrones Systemereignis</a> auslöst. Dieses Ereignis hat die spezielle DS-Map <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> die dann nach den folgenden Schlüsseln geparst werden sollte:</p>
   <ul>
-    <li>&quot;<b>id</b>&quot; - Will hold the constant <span class="inline">achievement_stat_event</span></li>
-    <li>&quot;<b>eventname</b>&quot; - Will hold the string &quot;<i>LocalUserAdded</i>&quot;</li>
-    <li>&quot;<b>userid</b>&quot; - The user ID associated with the request</li>
-    <li>&quot;<b>error</b>&quot; - 0 if successful, some other value if there has been an error</li>
-    <li>&quot;<b>errormessage</b>&quot; - A string with an error message, if any is available</li>
+    <li>&quot;<b>id</b>&quot; - wird die Konstante halten <span class="inline">achievement_stat_event</span></li>
+    <li>&quot;<b>eventname</b>&quot; - Enthält die Zeichenfolge &quot;<i>LocalUserAdded</i>&quot;.</li>
+    <li>&quot;<b>userid</b>&quot; - Die mit der Anfrage verbundene Benutzer-ID</li>
+    <li>&quot;<b>error</b>&quot; - 0 bei Erfolg, ein anderer Wert, wenn ein Fehler aufgetreten ist</li>
+    <li>&quot;<b>errormessage</b>&quot; - Eine Zeichenkette mit einer Fehlermeldung, falls eine vorhanden ist</li>
   </ul>
-  <p> </p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">xboxlive_stats_add_user(user_id);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Beschreibung</th>
      </tr>
       <tr>
-        <td>user_id</td><td><span data-keyref="Type_ID_Xbox_User"></span></td>
-        <td>The user ID (a pointer) to add</td>
+        <td><span class="notranslate">user_id</span></td><td><span data-keyref="Type_ID_Xbox_User"></span></td>
+        <td><span class="notranslate">The user ID (a pointer) to add</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">for(var i = 0; i &lt; xboxlive_get_user_count(); ++i;)<br />
     {<br />
         user_id[i] = xboxlive_get_user(i);<br />
         xboxlive_stats_add_user(user_id[i]);<br />
     }</p>
-  <p>The above code will get the number of user accounts available then loop through them and assign the account ID to an array, as well as register the user with the stats manager.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> wird die Anzahl der verfügbaren Benutzerkonten ermitteln, dann <span class="notranslate">loop</span> durchgehen und die Konto-ID einem Array zuweisen, sowie den Benutzer beim Statistikmanager registrieren.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Stats_And_Leaderboards.htm">Stats And Leaderboards</a></div>
-        <div style="float:right">Next: <a href="xboxlive_stats_remove_user.htm">xboxlive_stats_remove_user</a></div>
+        <div style="float:left">Zurück: <a href="Stats_And_Leaderboards.htm">Statistiken und Ranglisten</a></div>
+        <div style="float:right">Nächste: <a href="xboxlive_stats_remove_user.htm"><span class="notranslate">xboxlive_stats_remove_user</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_stats_add_user

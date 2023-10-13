@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>Time Sources</title>
+  <title>Zeit-Quellen</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../assets/css/default.css" />
   <meta name="template" content="../../../assets/masterpages/Manual_Page.htt" />
@@ -14,51 +14,50 @@
   <meta name="search-keywords" content="Time Sources" />
 </head>
 <body>
-  <h1><span data-field="title" data-format="default">Time Sources</span></h1>
-  <p>A &quot;<span data-keyref="Type_Resource_TimeSource">Time Source</span>&quot; is a custom timer you create. It runs for a given period of time, and at the end, it expires.</p>
-  <p>A <span data-keyref="Type_Resource_TimeSource">Time Source</span> (TS) has the ability to call a custom method (&quot;callback&quot;) on expiring.</p>
-  <p><img class="center" src="../../../assets/Images/Scripting_Reference/GML/Reference/Time_Sources/time_sources_flow.png" />It&#39;s also able to repeat a certain of amount of times, or forever. Each repetition of a <span data-keyref="Type_Resource_TimeSource">Time Source</span> is known as a &quot;rep&quot;.</p>
-  <h2>How to Use Time Sources?</h2>
-  <p>Create and start a <span data-keyref="Type_Resource_TimeSource">Time Source</span> that calls a custom method:</p>
+  <h1>Zeit-Quellen</h1>
+  <p>Eine &quot;<span data-keyref="Type_Resource_TimeSource">Zeitquelle</span>&quot; ist ein benutzerdefinierter Zeitgeber, den Sie erstellen. Er läuft für eine bestimmte Zeitspanne und läuft am Ende ab.</p>
+  <p>Eine <span data-keyref="Type_Resource_TimeSource">Zeitquelle</span> (TS) hat die Möglichkeit, bei Ablauf eine benutzerdefinierte Methode (&quot;Callback&quot;) aufzurufen.</p>
+  <p><img>Sie ist auch in der Lage, sich eine bestimmte Anzahl von Malen oder für immer zu wiederholen. Jede Wiederholung einer <span data-keyref="Type_Resource_TimeSource">Zeitquelle</span> wird als &quot;Wiederholung&quot; bezeichnet.</p>
+  <h2>Wie verwendet man Zeitquellen?</h2>
+  <p>Erstellen und starten Sie eine <span data-keyref="Type_Resource_TimeSource">Zeitquelle</span>, die eine benutzerdefinierte Methode aufruft:</p>
   <ul class="colour">
-    <li>Call <a href="time_source_create.htm"><span class="inline">time_source_create()</span></a> / <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Time_Sources/Create_Time_Source.htm">Create Time Source</a> to create a <span data-keyref="Type_Resource_TimeSource">Time Source</span>
+    <li>Rufen Sie  auf. <a href="time_source_create.htm"><span class="inline">time_source_create()</span></a> / <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Time_Sources/Create_Time_Source.htm">Zeitquelle erstellen</a>, um eine <span data-keyref="Type_Resource_TimeSource">Zeitquelle</span>zu erstellen
       <ul>
-        <li>Specify whether this inherits from the Global <span data-keyref="Type_Resource_TimeSource">Time Source</span>, the Game <span data-keyref="Type_Resource_TimeSource">Time Source</span> or a custom <span data-keyref="Type_Resource_TimeSource">Time Source</span></li>
-        <li>Specify the period of time it runs for, and the units used (seconds or frames)</li>
-        <li>Specify a custom method or script function, with an argument array to pass into that method</li>
-        <li>Optionally, specify the number of times it should repeat
+        <li>Geben Sie an, ob sie von der globalen <span data-keyref="Type_Resource_TimeSource">Zeitquelle</span>, der <span data-keyref="Type_Resource_TimeSource">Spielzeitquelle</span> oder einer benutzerdefinierten <span data-keyref="Type_Resource_TimeSource">Zeitquelle</span> erbt.</li>
+        <li>Geben Sie die Zeitspanne und die verwendeten Einheiten an (Sekunden oder Frames)</li>
+        <li>Geben Sie eine benutzerdefinierte Methode oder <span class="notranslate">script</span> Funktion an, mit einem <span class="notranslate">argument</span> Array, das an die Methode übergeben wird.</li>
+        <li>Geben Sie optional an, wie oft der Vorgang wiederholt werden soll.
           <ul>
-            <li>By default it runs only once</li>
+            <li>Standardmäßig wird es nur einmal ausgeführt</li>
           </ul>
         </li>
       </ul>
     </li>
-    <li>Call <a href="time_source_start.htm"><span class="inline">time_source_start()</span></a> / <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Time_Sources/Start_Time_Source.htm">Start Time Source</a> to start that <span data-keyref="Type_Resource_TimeSource">Time Source</span> immediately, or call it later when you need it to start</li>
+    <li>Rufen Sie  auf. <a href="time_source_start.htm"><span class="inline">time_source_start()</span></a> / <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Time_Sources/Start_Time_Source.htm">Zeitquelle starten</a>, um die <span data-keyref="Type_Resource_TimeSource">Zeitquelle</span> sofort zu starten oder sie später aufzurufen, wenn sie gestartet werden soll</li>
   </ul>
-  <p>Doing this will cause the <span data-keyref="Type_Resource_TimeSource">Time Source</span> to run, and after the specified period, it will expire and call your specified method.</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_important.hts"> </span> Even though <span data-field="title" data-format="default">Time Sources</span> can expire at any moment, <span data-keyref="GameMaker Name">GameMaker</span> will only &quot;know&quot; about this when the <span data-field="title" data-format="default">Time Sources</span> are updated/&quot;ticked&quot;, which happens between the Begin Step and Step event for all <span data-field="title" data-format="default">Time Sources</span>. At this moment the callback functions will also be executed for those <span data-field="title" data-format="default">Time Sources</span> that have expired or are about to expire (depending on their <a href="Time_Source_Expiry_Types.htm">expiry type</a>). See <a data-xref="{title}" href="../../../The_Asset_Editors/Object_Properties/Event_Order.htm">Event Order</a> for more details.</p>
-  <h2>Built-In Time Sources</h2>
-  <p>A <span data-keyref="Type_Resource_TimeSource">Time Source</span> can inherit from either of the two built-in <span data-keyref="Type_Resource_TimeSource">Time Source</span>s, or from a custom <span data-keyref="Type_Resource_TimeSource">Time Source</span>.</p>
-  <p>See: <a data-xref="{title}" href="Built_In_Time_Sources.htm">Built-In Time Sources</a></p>
-  <h2 id="h">Simple Timers</h2>
-  <p>While setting up a time source doesn&#39;t take many lines of code, it can be convenient to quickly set up and manage a timer using a single function.</p>
-  <p>The following two functions provide a simpler, shorthand way of creating a <span data-keyref="Type_Resource_TimeSource">Time Source</span> and stopping it: </p>
+  <p>Dadurch wird die <span data-keyref="Type_Resource_TimeSource">Zeitquelle</span> ausgeführt, und nach der angegebenen Zeitspanne läuft sie ab und ruft die von Ihnen angegebene Methode auf.</p>
+  <h2>Eingebaute Zeitquellen</h2>
+  <p>Eine <span data-keyref="Type_Resource_TimeSource">Zeitquelle</span> kann von einer der beiden eingebauten <span data-keyref="Type_Resource_TimeSource">Zeitquellen</span>oder von einer benutzerdefinierten <span data-keyref="Type_Resource_TimeSource">Zeitquelle</span> erben.</p>
+  <p>Siehe: <a data-xref="{title}" href="Built_In_Time_Sources.htm">Eingebaute Zeitquellen</a></p>
+  <h2 id="h">Einfache Zeitschaltuhren</h2>
+  <p>Die Einrichtung einer Zeitquelle erfordert zwar nicht viele Zeilen <span class="notranslate">code</span>, aber es kann bequem sein, eine Zeitschaltuhr mit einer einzigen Funktion schnell einzurichten und zu verwalten.</p>
+  <p>Die folgenden beiden Funktionen bieten einen einfacheren, kurzen Weg, um eine <span data-keyref="Type_Resource_TimeSource">Zeitquelle</span> zu erstellen und zu stoppen: </p>
   <ul class="Disc">
-    <li><a data-xref="{title}" href="call_later.htm">call_later</a></li>
-    <li><a data-xref="{title}" href="call_cancel.htm">call_cancel</a></li>
+    <li><a data-xref="{title}" href="call_later.htm">Anruf_später</a></li>
+    <li><a data-xref="{title}" href="call_cancel.htm">Anruf_Abbrechen</a></li>
   </ul>
-  <p class="note"><span class="note">NOTE</span> You cannot use the <span data-keyref="Type_Resource_TimeSource">Time Source</span> functions with the <span data-keyref="Type_Resource_TimeSource">Time Source</span> IDs used by these functions. See <a href="call_later.htm">call_later</a> for more information.</p>
-  <h2>Function List</h2>
-  <p>The following functions are used to create and modify <span data-keyref="Type_Resource_TimeSource">Time Source</span>s:</p>
+  <p class="note"><span class="note">HINWEIS</span> Sie können die <span data-keyref="Type_Resource_TimeSource">Zeitquellenfunktionen</span> nicht mit den von diesen Funktionen verwendeten <span data-keyref="Type_Resource_TimeSource">Zeitquellen-IDs</span> verwenden. Siehe <a href="call_later.htm">call_later</a> für weitere Informationen.</p>
+  <h2>Funktionsliste</h2>
+  <p>Die folgenden Funktionen werden zum Erstellen und Ändern von <span data-keyref="Type_Resource_TimeSource">Zeitquellen</span>verwendet:</p>
   <ul class="colour">
-    <li><a data-xref="{title}" href="time_source_create.htm">time_source_create</a></li>
-    <li><a data-xref="{title}" href="time_source_destroy.htm">time_source_destroy</a></li>
-    <li><a data-xref="{title}" href="time_source_start.htm">time_source_start</a></li>
-    <li><a data-xref="{title}" href="time_source_stop.htm">time_source_stop</a></li>
-    <li><a data-xref="{title}" href="time_source_pause.htm">time_source_pause</a></li>
-    <li><a data-xref="{title}" href="time_source_resume.htm">time_source_resume</a></li>
-    <li><a data-xref="{title}" href="time_source_reconfigure.htm">time_source_reconfigure</a></li>
-    <li><a data-xref="{title}" href="time_source_reset.htm">time_source_reset</a></li>
+    <li><a data-xref="{title}" href="time_source_create.htm">zeit_quelle_erstellen</a></li>
+    <li><a data-xref="{title}" href="time_source_destroy.htm">zeit_quelle_zerstören</a></li>
+    <li><a data-xref="{title}" href="time_source_start.htm">zeit_quelle_start</a></li>
+    <li><a data-xref="{title}" href="time_source_stop.htm">zeit_quelle_stop</a></li>
+    <li><a data-xref="{title}" href="time_source_pause.htm">zeit_quelle_pause</a></li>
+    <li><a data-xref="{title}" href="time_source_resume.htm">zeit_quelle_wiederaufnahme</a></li>
+    <li><a data-xref="{title}" href="time_source_reconfigure.htm">zeit_quelle_rekonfigurieren</a></li>
+    <li><a data-xref="{title}" href="time_source_reset.htm">zeit_quelle_zuruecksetzen</a></li>
     <li><a data-xref="{title}" href="time_source_get_children.htm">time_source_get_children</a></li>
     <li><a data-xref="{title}" href="time_source_get_parent.htm">time_source_get_parent</a></li>
     <li><a data-xref="{title}" href="time_source_get_period.htm">time_source_get_period</a></li>
@@ -66,34 +65,34 @@
     <li><a data-xref="{title}" href="time_source_get_reps_remaining.htm">time_source_get_reps_remaining</a></li>
     <li><a data-xref="{title}" href="time_source_get_state.htm">time_source_get_state</a></li>
     <li><a data-xref="{title}" href="time_source_get_time_remaining.htm">time_source_get_time_remaining</a></li>
-    <li><a data-xref="{title}" href="time_source_get_units.htm">time_source_get_units</a></li>
-    <li><a data-xref="{title}" href="time_source_exists.htm">time_source_exists</a></li>
+    <li><a data-xref="{title}" href="time_source_get_units.htm">zeit_quelle_get_units</a></li>
+    <li><a data-xref="{title}" href="time_source_exists.htm">zeit_quelle_existiert</a></li>
   </ul>
-  <p>Each <span class="inline2">get_*</span> function will return <span class="inline2">undefined</span> if the specified <span data-keyref="Type_Resource_TimeSource">Time Source</span> doesn&#39;t exist.</p>
-  <p>The following helper functions are provided for converting time periods:</p>
+  <p>Jede <span class="inline2">get_*-Funktion</span> gibt <span class="inline2">undefiniert</span> zurück, wenn die angegebene <span data-keyref="Type_Resource_TimeSource">Zeitquelle</span> nicht existiert.</p>
+  <p>Für die Konvertierung von Zeiträumen stehen die folgenden Hilfsfunktionen zur Verfügung:</p>
   <ul class="colour">
-    <li><a data-xref="{title}" href="time_seconds_to_bpm.htm">time_seconds_to_bpm</a></li>
-    <li><a data-xref="{title}" href="time_bpm_to_seconds.htm">time_bpm_to_seconds</a></li>
+    <li><a data-xref="{title}" href="time_seconds_to_bpm.htm">zeit_sekunden_bis_bpm</a></li>
+    <li><a data-xref="{title}" href="time_bpm_to_seconds.htm">zeit_bpm_zu_sekunden</a></li>
   </ul>
-  <p> </p>
-  <p>Also see: <a href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Time_Sources/Time_Sources_(GML_Visual).htm">GML Visual - Time Sources</a></p>
-  <h2>Constants</h2>
-  <p>The following constants are used with <span data-keyref="Type_Resource_TimeSource">Time Source</span> functions:</p>
+  <p> </p>
+  <p>Siehe auch: <a href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Time_Sources/Time_Sources_(GML_Visual).htm">GML Visual - Zeitquellen</a></p>
+  <h2>Konstanten</h2>
+  <p>Die folgenden Konstanten werden bei <span data-keyref="Type_Resource_TimeSource">Zeitquellenfunktionen</span> verwendet:</p>
   <ul class="colour">
-    <li><a data-xref="{title}" href="Built_In_Time_Sources.htm">Built-In Time Sources</a></li>
-    <li><a data-xref="{title}" href="Time_Source_Units.htm">Time Source Units</a></li>
-    <li><a data-xref="{title}" href="Time_Source_Expiry_Types.htm">Time Source Expiry Types</a></li>
-    <li><a data-xref="{title}" href="Time_Source_States.htm">Time Source States</a></li>
+    <li><a data-xref="{title}" href="Built_In_Time_Sources.htm">Eingebaute Zeitquellen</a></li>
+    <li><a data-xref="{title}" href="Time_Source_Units.htm">Zeitquelle Einheiten</a></li>
+    <li><a data-xref="{title}" href="Time_Source_Expiry_Types.htm">Zeitquelle Verfallsarten</a></li>
+    <li><a data-xref="{title}" href="Time_Source_States.htm">Zeitquellenstaaten</a></li>
   </ul>
-  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="../GML_Reference.htm">GML Code Reference</a></div>
-        <div>Next: <a data-xref="{title}" href="../Physics/Physics.htm">Physics</a></div>
+        <div>Zurück: <a data-xref="{title}" href="../GML_Reference.htm">GML <span class="notranslate">Code</span> Referenz</a></div>
+        <div>Nächste: <a data-xref="{title}" href="../Physics/Physics.htm">Physik</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
 </body>
 </html>

@@ -6,7 +6,7 @@
   <title>vertex_freeze</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for vertex_freeze" />
   <meta name="rh-index-keywords" content="vertex_freeze" />
@@ -15,44 +15,44 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>vertex_freeze</h1>
-  <p>This function can be used to &quot;freeze&quot; a vertex buffer. This buffer becomes <b>read-only</b>, meaning that should you need to change it, you would have to delete the whole buffer and re-create it. A frozen buffer can be submitted to the shader faster than a normal, dynamic buffer and is recommended for those effects that require an unchanging custom primitive for the duration of a level or the game.</p>
-  <p>The function will return 0 on successfully freezing the specified vertex buffer, however if it failed for any reason, it will return -1.</p>
-  <p> </p>
+  <p>Diese Funktion kann verwendet werden, um einen Scheitelpunkt <span class="notranslate">buffer</span>&quot;einzufrieren&quot;. Diese <span class="notranslate">buffer</span> wird <b>schreibgeschützt</b>, was bedeutet, dass Sie, wenn Sie sie ändern möchten, die gesamte <span class="notranslate">buffer</span> löschen und neu erstellen müssen. Ein eingefrorenes <span class="notranslate">buffer</span> kann dem Shader schneller übergeben werden als ein normales, dynamisches <span class="notranslate">buffer</span> und wird für jene Effekte empfohlen, die ein unveränderliches benutzerdefiniertes Primitiv für die Dauer eines Levels oder des Spiels benötigen.</p>
+  <p>Die Funktion gibt 0 zurück, wenn das Einfrieren des angegebenen Scheitelpunkts <span class="notranslate">buffer</span> erfolgreich war. Wenn es jedoch aus irgendeinem Grund fehlgeschlagen ist, gibt sie -1 zurück.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">vertex_freeze(buffer);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>buffer</td>
-        <td><span data-keyref="Type_ID_Buffer_Vertex">Vertex Buffer ID</span></td>
-        <td>The vertex buffer to freeze.</td>
+        <td><span class="notranslate">buffer</span></td>
+        <td><span data-keyref="Type_ID_Buffer_Vertex">Vertex <span class="notranslate">Buffer</span> ID</span></td>
+        <td><span class="notranslate">The vertex buffer to freeze.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span> (0 for success, -1 for failure)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">// Create event<br />
     vertex_freeze(vbuff);</p>
-  <p>The above code will freeze the given vertex buffer in the Create event, so it can be used as a &quot;static&quot; buffer in other events for faster access.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> friert den angegebenen Vertex <span class="notranslate">buffer</span> im Create-Ereignis ein, so dass er als &quot;statisches&quot; <span class="notranslate">buffer</span> in anderen Ereignissen für schnelleren Zugriff verwendet werden kann.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Primitives_And_Vertex_Formats.htm">Primitives And Vertex Formats</a></div>
-        <div style="float:right">Next: <a href="vertex_freeze.htm">vertex_submit</a></div>
+        <div style="float:left">Zurück: <a href="Primitives_And_Vertex_Formats.htm">Primitive und Vertex-Formate</a></div>
+        <div style="float:right">Nächste: <a href="vertex_freeze.htm"><span class="notranslate">vertex_submit</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 vertex_freeze

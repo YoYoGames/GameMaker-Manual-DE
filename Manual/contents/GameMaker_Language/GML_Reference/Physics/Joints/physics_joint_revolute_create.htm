@@ -6,7 +6,7 @@
   <title>physics_joint_revolute_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_joint_revolute_create" />
   <meta name="rh-index-keywords" content="physics_joint_revolute_create" />
@@ -15,83 +15,83 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_joint_revolute_create</h1>
-  <p>A revolute joint forces two bodies to share a common anchor point (often called a hinge point) and the joint has a single degree of freedom - the relative rotation of the two bodies around this point. To specify a revolute you need to provide two instances and a single anchor point in the room, as you can see in the image provided:</p>
-  <p><img alt="Revolute joint anchor points illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/revolute_joint_image_1.png" />If you look at the image, you can see that the two instances have been created to over-lap and at the point where they are touching, we have defined a revolute joint. Now, this joint can be limited in its freedom of rotation thanks to the &quot;ang_min_limit&quot; and &quot;ang_max_limit&quot; values. How does this work? Well, let&#39;s look at another image:</p>
-  <p><img alt="Revolute joint angle limits illustration" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Physics/revolute_joint_image_2.png" />As you can see, angles in the physics world are <i>not</i> the same as the standard <span data-keyref="GameMaker Name">GameMaker</span> angles where right is 0 degrees and then it goes anti-clockwise so that up is 90, left is 180, and down is 270. No, when dealing with the revolute joint, the 0 degrees axis runs from the joint position to the origin of the second instance defined by the function and the angles are then calculated in a clockwise direction. If you switch on angle limiting, the limits are defined as being relative to this 0 degree axis and the limit range <i>should include zero</i>, otherwise the joint will lurch when the room begins. Finally, you can define the joint as having a motor or not. This means that when uninfluenced by a collision the joint will move in a direction, which is defined by the motor speed with a positive number being clockwise and a negative number being anti-clockwise. The &quot;max_motor_torque&quot; argument is for limiting the speed of the rotation so that you don&#39;t get a perpetually accelerating motor and to limit the influence that a collision may have on the rotation. In this way you can use a joint motor to simulate joint friction by setting joint speed to zero and maximum torque to some small, but significant value. The motor will try to prevent the joint from rotating, but will yield to a significant load.</p>
-  <p>As with all the joints, if you set the &quot;col&quot; value to <span class="inline">true</span> then the two instances can interact and collide with each other but <i>only</i> if they have collision events, however if it is set to <span class="inline">false</span>, they will not collide no matter what.</p>
-  <p> </p>
+  <h1>physik_gelenk_revolute_erzeugen</h1>
+  <p>Ein Revolventengelenk zwingt zwei Körper dazu, einen gemeinsamen Ankerpunkt (oft als Scharnierpunkt bezeichnet) zu teilen, und das Gelenk hat einen einzigen Freiheitsgrad - die relative Drehung der beiden Körper um diesen Punkt. Um eine Drehverbindung anzugeben, müssen Sie zwei Instanzen und einen einzelnen Ankerpunkt im Raum angeben, wie Sie in der Abbildung sehen können:</p>
+  <p><img>Wenn Sie sich das Bild ansehen, können Sie erkennen, dass die beiden Instanzen so erstellt wurden, dass sie sich überlappen, und an dem Punkt, an dem sie sich berühren, haben wir ein Drehgelenk definiert. Dieses Gelenk kann nun dank der Werte &quot;ang_min_limit&quot; und &quot;ang_max_limit&quot; in seiner Drehfreiheit eingeschränkt werden. Wie funktioniert das? Schauen wir uns ein anderes Bild an:</p>
+  <p><img>Wie Sie sehen können, entsprechen die Winkel in der Physikwelt <i>nicht</i> den Standardwinkeln von <span data-keyref="GameMaker Name">GameMaker</span>, bei denen rechts 0 Grad ist und es dann gegen den Uhrzeigersinn weitergeht, so dass oben 90, links 180 und unten 270 ist. Nein, wenn es sich um ein Drehgelenk handelt, verläuft die 0-Grad-Achse von der Gelenkposition zum Ursprung der zweiten durch die Funktion definierten Instanz, und die Winkel werden dann im Uhrzeigersinn berechnet. Wenn Sie <span class="notranslate">switch</span> für die Winkelbegrenzung verwenden, werden die Grenzen relativ zu dieser 0-Grad-Achse definiert, und der Grenzbereich <i>sollte den Wert Null einschließen</i>, da das Gelenk sonst am Anfang des Raumes schlingert. Schließlich können Sie festlegen, ob das Gelenk einen Motor hat oder nicht. Das bedeutet, dass sich das Gelenk, wenn es nicht durch eine Kollision beeinflusst wird, in eine Richtung bewegt, die durch die Motordrehzahl definiert ist, wobei eine positive Zahl für den Uhrzeigersinn und eine negative Zahl für den Gegenuhrzeigersinn steht. Das &quot;max_motor_torque&quot; <span class="notranslate">argument</span> dient dazu, die Rotationsgeschwindigkeit zu begrenzen, um einen ständig beschleunigenden Motor zu vermeiden und um den Einfluss einer Kollision auf die Rotation zu begrenzen. Auf diese Weise können Sie einen Gelenkmotor verwenden, um Gelenkreibung zu simulieren, indem Sie die Gelenkgeschwindigkeit auf Null und das maximale Drehmoment auf einen kleinen, aber signifikanten Wert setzen. Der Motor wird versuchen, die Drehung des Gelenks zu verhindern, wird aber bei einer erheblichen Belastung nachgeben.</p>
+  <p>Wie bei allen Gelenken, wenn Sie die &quot;col&quot; Wert auf <span class="inline">true</span> dann die beiden Instanzen können interagieren und miteinander kollidieren, aber <i>nur</i>, wenn sie Kollisions-Ereignisse haben, aber wenn es auf <span class="inline">false</span> eingestellt ist, werden sie nicht kollidieren, egal was.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">physics_joint_revolute_create(inst1, inst2, w_anchor_x, w_anchor_y, ang_min_limt, ang_max_limit, ang_limit, max_motor_torque, motor_speed, motor, col)</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>inst1</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The first instance to connect with the joint</td>
+        <td><span class="notranslate">inst1</span></td>
+        <td><span data-keyref="Type_ID_Instance">Instanz-ID</span></td>
+        <td><span class="notranslate">The first instance to connect with the joint</span></td>
       </tr>
       <tr>
-        <td>inst2</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The second instance to connect with the joint</td>
+        <td><span class="notranslate">inst2</span></td>
+        <td><span data-keyref="Type_ID_Instance">Instanz-ID</span></td>
+        <td><span class="notranslate">The second instance to connect with the joint</span></td>
       </tr>
       <tr>
-        <td>w_anchor_x</td>
+        <td><span class="notranslate">w_anchor_x</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The x coordinate for the joint, within the game world</td>
+        <td><span class="notranslate">The x coordinate for the joint, within the game world</span></td>
       </tr>
       <tr>
-        <td>w_anchor_y</td>
+        <td><span class="notranslate">w_anchor_y</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The y coordinate for the joint, within the game world</td>
+        <td><span class="notranslate">The y coordinate for the joint, within the game world</span></td>
       </tr>
       <tr>
-        <td>ang_min_limit</td>
+        <td><span class="notranslate">ang_min_limit</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The lower permitted limit for the joint angle</td>
+        <td><span class="notranslate">The lower permitted limit for the joint angle</span></td>
       </tr>
       <tr>
-        <td>ang_max_limit</td>
+        <td><span class="notranslate">ang_max_limit</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The upper permitted limit for the joint angle</td>
+        <td><span class="notranslate">The upper permitted limit for the joint angle</span></td>
       </tr>
       <tr>
-        <td>ang_limit</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether the to limit the angle of the joint (true) or not (false)</td>
+        <td><span class="notranslate">ang_limit</span></td>
+        <td><span data-keyref="Type_Bool">Boolesche</span></td>
+        <td><span class="notranslate">Whether the to limit the angle of the joint (true) or not (false)</span></td>
       </tr>
       <tr>
-        <td>max_motor_torque</td>
+        <td><span class="notranslate">max_motor_torque</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>Sets the maximum motor torque used to achieve the desired motor speed (in Newtons per meter)</td>
+        <td><span class="notranslate">Sets the maximum motor torque used to achieve the desired motor speed (in Newtons per meter)</span></td>
       </tr>
       <tr>
-        <td>motor_speed</td>
+        <td><span class="notranslate">motor_speed</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>This is the speed at which the motor should rotate</td>
+        <td><span class="notranslate">This is the speed at which the motor should rotate</span></td>
       </tr>
       <tr>
-        <td>motor</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether the motor should be active (true) or not (false)</td>
+        <td><span class="notranslate">motor</span></td>
+        <td><span data-keyref="Type_Bool">Boolesche</span></td>
+        <td><span class="notranslate">Whether the motor should be active (true) or not (false)</span></td>
       </tr>
       <tr>
-        <td>col</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether the two instances can collide (true) or not (false)</td>
+        <td><span class="notranslate">col</span></td>
+        <td><span data-keyref="Type_Bool">Boolesche</span></td>
+        <td><span class="notranslate">Whether the two instances can collide (true) or not (false)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_ID_Physics_Joint">Physics Joint ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">var mainFixture, o_id;<br />
     mainFixture = physics_fixture_create();<br />
     physics_fixture_set_circle_shape(mainFixture, sprite_get_width(sprite_index) / 2);<br />
@@ -100,18 +100,18 @@
     physics_fixture_bind(mainFixture, o_id);<br />
     physics_joint_revolute_create(id, o_id, x+25, y, -90, 90, 1, 0, 0, 0, 0);<br />
     physics_fixture_delete(mainFixture);</p>
-  <p>The above code creates and defines a new fixture and then creates an instance of &quot;obj_Door&quot;, binding the created fixture to the two new objects. They are then joined by a revolute joint with no motor and the angles limited to a +/- 90 degree swing. Finally the fixture is deleted as it is no longer needed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> erstellt und definiert eine neue Halterung und erstellt dann eine Instanz von &quot;obj_Door&quot;, wobei die erstellte Halterung an die beiden neuen Objekte gebunden wird. Die beiden Objekte werden dann durch ein Drehgelenk ohne Motor verbunden, wobei die Winkel auf +/- 90 Grad begrenzt sind. Schließlich wird die Vorrichtung gelöscht, da sie nicht mehr benötigt wird.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Joints.htm">Joints</a></div>
-        <div style="float:right">Next: <a href="physics_joint_prismatic_create.htm">physics_joint_prismatic_create</a></div>
+        <div style="float:left">Rücken: <a href="Joints.htm">Gelenke</a></div>
+        <div style="float:right">Nächste: <a href="physics_joint_prismatic_create.htm"><span class="notranslate">physics_joint_prismatic_create</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 physics_joint_revolute_create

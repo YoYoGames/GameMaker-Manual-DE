@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_activate_overlay</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_activate_overlay" />
+  <meta name="rh-index-keywords" content="steam_activate_overlay,ov_friends,ov_community,ov_players,ov_settings,ov_gamegroup,ov_achievements" />
+  <meta name="search-keywords" content="steam_activate_overlay,ov_friends,ov_community,ov_players,ov_settings,ov_gamegroup,ov_achievements" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_activate_overlay</h1>
+  <p>Das <span class="notranslate">Steam</span> Overlay ist ein Teil der <span class="notranslate">Steam</span> Benutzeroberfläche, die über fast jedes Spiel, das über <span class="notranslate">Steam</span> gestartet wird, aktiviert werden kann. Es ermöglicht dem Benutzer den Zugriff auf seine Freundesliste, den Webbrowser, den Chat und den Kauf von DLC im Spiel. Die Standardtaste für den Zugriff auf das Overlay während eines Spiels ist SHIFT+TAB, aber Sie können mit dieser Funktion auch eine beliebige Seite des Overlays aufrufen. Sie nimmt eine der sechs unten aufgeführten <b>Konstanten</b> an:</p>
+  <blockquote>
+    <p> </p>
+    <table>
+      <tbody>
+        <tr>
+          <th>Konstante</th>
+          <th>Beschreibung</th>
+        </tr>
+        <tr>
+          <td><span class="notranslate">ov_friends</span></td>
+          <td>Die Freundeseite für den aktuellen Benutzer</td>
+        </tr>
+        <tr>
+          <td><span class="notranslate">ov_community</span></td>
+          <td>Die Gemeinschaftsseite für Ihr Spiel</td>
+        </tr>
+        <tr>
+          <td><span class="notranslate">ov_players</span></td>
+          <td>Die Seite mit den anderen Spielern, die dasselbe Spiel spielen oder mit denen Sie kürzlich gespielt haben</td>
+        </tr>
+        <tr>
+          <td><span class="notranslate">ov_settings</span></td>
+          <td>Die <span class="notranslate">Steam</span> Client-Overlay-Einstellungen</td>
+        </tr>
+        <tr>
+          <td><span class="notranslate">ov_gamegroup</span></td>
+          <td>Öffnet den <span class="notranslate">Steam</span> Community-Webbrowser zur offiziellen Spielgruppe für dieses Spiel</td>
+        </tr>
+        <tr>
+          <td><span class="notranslate">ov_achievements</span></td>
+          <td>Die Seite mit den Erfolgen für Ihr Spiel</td>
+        </tr>
+      </tbody>
+    </table>
+  </blockquote>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_activate_overlay(overlayindex);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">overlayindex</span></td>
+        <td>Der Seitenindex der <span class="notranslate">Steam</span> API UI, der angezeigt werden soll (siehe unten aufgeführte Konstanten).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p class="code">var key = keyboard_lastkey;<br />
+    switch (key)<br />
+    {<br />
+        case vk_f1: steam_activate_overlay(ov_friends); break;<br />
+        case vk_f2: steam_activate_overlay(ov_community); break;<br />
+        case vk_f3: steam_activate_overlay(ov_players); break;<br />
+        case vk_f4: steam_activate_overlay(ov_settings); break;<br />
+        case vk_f5: steam_activate_overlay(ov_gamegroup); break;<br />
+        case vk_f6: steam_activate_overlay(ov_achievements); break;<br />
+    }</p>
+  <p>Das obige <span class="notranslate">code</span> fragt die zuletzt gedrückte Taste ab, und wenn es eine der Funktionstasten von 1 bis 6 ist, wird die entsprechende Seite des Overlays <span class="notranslate">Steam</span> geöffnet.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Zurück: <a href="Steam_Overlay.htm">Dampf-Overlay</a></div>
+        <div style="float:right">Nächste: <a href="steam_activate_overlay_browser.htm"><span class="notranslate">steam_activate_overlay_browser</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_activate_overlay
+ov_friends
+ov_community
+ov_players
+ov_settings
+ov_gamegroup
+ov_achievements
+-->
+  <!-- TAGS
+steam_activate_overlay
+-->
+</body>
+</html>

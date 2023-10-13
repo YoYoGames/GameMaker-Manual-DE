@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Set Sprite</title>
+  <title>Sprite setzen</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Set Sprite action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Set Sprite" />
@@ -14,46 +14,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set Sprite Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Set_Sprite.png" /> Set Sprite</h1>
-  <p>This action block sets the <span class="inline">sprite_index</span> of the instance to another sprite from the Asset Browser. You select the sprite to change to, and then give the image (animation frame) to show. Note that if you don&#39;t want the sprite to animate after
-    setting the frame, you&#39;ll need to use the <a href="Set_Animation_Speed.htm">Set Animation Speed</a> action and set it to 0, or if you want the sprite to continue animating then set the value to use the <span class="inline">image_index</span> built-in variable variable
-    instead.</p>
-  <p>Changing the sprite will also change the collision mask of the instance, unless you have also specified a separate <span class="inline">mask_index</span> in the <a href="../../../The_Asset_Editors/Objects.htm">Object Editor</a>. Please note that for changes in this action
-    to be visible, the instance should have either <i>no</i> draw event (and so <span data-keyref="GameMaker Name">GameMaker</span> will default draw the sprite) or be drawn using <a href="../Drawing/Draw_Self.htm">Draw Self</a> action.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Set Sprite Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Set_Sprite.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Sprite setzen</h1>
+  <p>Dieser Aktionsblock setzt die <span class="inline">sprite_index</span> der Instanz auf eine andere <span class="notranslate">sprite</span> aus dem Asset-Browser. Sie wählen die <span class="notranslate">sprite</span> aus, zu der Sie wechseln möchten, und geben dann das Bild (Animationsframe) an, das angezeigt werden soll. Wenn Sie nicht möchten, dass <span class="notranslate">sprite</span> nach dem Setzen des Rahmens animiert wird
+    Wenn du nicht willst, dass <span class="inline">image_index</span> nach dem Setzen des Rahmens animiert wird, musst du die Aktion " <a href="Set_Animation_Speed.htm">Animationsgeschwindigkeit festlegen</a> " verwenden und den Wert auf 0 setzen, oder wenn du willst, dass <span class="notranslate">sprite</span> weiter animiert wird, musst du den Wert so setzen, dass er die eingebaute Variable 
+    stattdessen.</p>
+  <p>Wenn Sie die <span class="notranslate">sprite</span> ändern, wird auch die Kollisionsmaske der Instanz geändert, es sei denn, Sie haben im <a href="../../../The_Asset_Editors/Objects.htm">Objekteditor</a> auch eine separate <span class="inline">mask_index</span> angegeben. Bitte beachten Sie, dass Änderungen in dieser Aktion
+    sichtbar sind, sollte die Instanz entweder <i>kein</i> Draw-Ereignis haben (so dass <span data-keyref="GameMaker Name">GameMaker</span> standardmäßig die <span class="notranslate">sprite</span> zeichnet) oder mit der Aktion <a href="../Drawing/Draw_Self.htm">Draw Self</a> gezeichnet werden.</p>
+  <p> </p>
+  <h4>Aktion Syntax:</h4>
+  <p><img alt="Set Sprite Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Set_Sprite.png" /></p>
+  <h4>Argumente:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>Sprite</td>
-        <td>The new sprite to use (-1 if you want to remove the sprite).</td>
+        <td><span class="notranslate">Sprite</span></td>
+        <td>Die neu zu verwendende <span class="notranslate">sprite</span> (-1, wenn Sie <span class="notranslate">sprite</span> entfernen möchten).</td>
       </tr>
       <tr>
-        <td>Frame</td>
-        <td>The animation frame to show initially (if no extra frames are used, then use 0).</td>
+        <td><span class="notranslate">Frame</span></td>
+        <td>Der Animationsrahmen, der anfangs angezeigt werden soll (wenn keine zusätzlichen Rahmen verwendet werden, verwenden Sie 0).</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p>The above action block code sets a new sprite as well as a number of other properties for how that sprite is to be displayed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p>Der obige Aktionsblock <span class="notranslate">code</span> legt eine neue <span class="notranslate">sprite</span> sowie eine Reihe anderer Eigenschaften fest, die bestimmen, wie <span class="notranslate">sprite</span> angezeigt werden soll.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Instance_Actions_Library.htm">Instance Actions</a></div>
-        <div style="float:right">Next: <a href="Set_Instance_Rotation.htm">Set Instance Rotation</a></div>
+        <div style="float:left">Zurück: <a href="Instance_Actions_Library.htm">Instanz-Aktionen</a></div>
+        <div style="float:right">Weiter: <a href="Set_Instance_Rotation.htm">Drehung der Instanz festlegen</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Sprite

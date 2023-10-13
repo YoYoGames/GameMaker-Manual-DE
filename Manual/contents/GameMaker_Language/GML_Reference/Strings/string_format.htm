@@ -6,7 +6,7 @@
   <title>string_format</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for string_format" />
   <meta name="rh-index-keywords" content="string_format" />
@@ -15,57 +15,55 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">string_format</span></h1>
-  <p>This function converts a real number into a string, where you can specify how many digits are visible on each side of the decimal.</p>
-  <p>The <span class="inline2">total</span> argument is the number of digits on the left side of the decimal, and if this is higher than your value allows, spaces are inserted to fill the remaining digits. The <span class="inline2">dec</span> argument is the number of digits on the right side of the decimal, and if this is more than the decimal digits in your number, zeroes are inserted to keep your given number of digits.</p>
-  <p>The default format is no extra spaces on the left, and only two decimal places on the right, e.g. <span class="inline2">&quot;265.73&quot;</span>.</p>
-  <p> </p>
+  <h1>string_format</h1>
+  <p>Wandelt eine reelle Zahl in eine Zeichenkette mit eigener Formatierung um, wobei Sie wählen können, wie viele &quot;Stellen&quot; in der Zeichenkette gespeichert werden und wie viele Nachkommastellen ebenfalls gespeichert werden. Beides kann sehr praktisch sein, denn manche Spiele bevorzugen es, einen Spielstand als eine bestimmte Anzahl von Ziffern anzuzeigen, während die Kontrolle über die Nachkommastellen gut für eine hohe Genauigkeit sein kann, die die zwei Nachkommastellen von <a href="string.htm"><span class="inline">string()</span></a> nicht bieten können. Wenn die Anzahl der angegebenen Stellen größer ist als der anzuzeigende Wert und/oder die Anzahl plus die angegebenen Nachkommastellen kleiner ist als die Gesamtzahl der Stellen, dann werden Leerzeichen vor dem Wert hinzugefügt, um die Differenz auszugleichen (siehe das Beispiel unten). Ist der angegebene Wert kleiner als die Gesamtzahl und die Anzahl der einzubeziehenden Dezimalstellen, werden rechts vom Dezimalkomma Nullen hinzugefügt. Das Standardformat ist ohne zusätzliche Leerzeichen auf der linken Seite und mit nur zwei Dezimalstellen auf der rechten Seite, z. B. &quot;265,73&quot;.</p>
+  <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">string_format(val, total, dec);</p>
+  <p class="code">string_format(val, tot, dec);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>val</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The real number to be converted to a string.</td>
+        <td><span class="notranslate">val</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The real number to be turned into a string.</span></td>
       </tr>
       <tr>
-        <td>total</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The number of places of the main number to be shown (left side of decimal). Spaces will be inserted to match this.</td>
+        <td><span class="notranslate">tot</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The total number of places of the main number to be shown. Zeroes or spaces will be inserted to match this.</span></td>
       </tr>
       <tr>
-        <td>dec</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The number of decimal places to be included (right side of decimal). Zeroes will be inserted to match this.</td>
+        <td><span class="notranslate">dec</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The number of decimal places to be included.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code"><span data-keyref="Type_String">String</span></p>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">str1 = string_format(1234, 8, 0);<br />
     str2 = string_format(pi, 1, 10);<br />
     str3 = string_format(pi, 5, 5);</p>
-  <p>This will set <span class="inline">str1</span> to <span class="inline2">&quot;    1234&quot;</span>, <span class="inline">str2</span> to <span class="inline2">&quot;3.1415926536&quot;</span> and <span class="inline">str3</span> to <span class="inline2">&quot;    3.14159&quot;</span>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Dadurch wird <span class="inline">str1</span> auf &quot;1234&quot;, <span class="inline">str2</span> auf &quot;3,1415926535&quot; und <span class="inline">str3</span> auf &quot;3,14159&quot; gesetzt.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Strings.htm">Strings</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="string_insert.htm">string_insert</a></div>
+        <div style="float:left">Zurück: <a href="Strings.htm">Streicher</a></div>
+        <div style="float:right">Nächste: <a href="string_insert.htm"><span class="notranslate">string_insert</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 string_format

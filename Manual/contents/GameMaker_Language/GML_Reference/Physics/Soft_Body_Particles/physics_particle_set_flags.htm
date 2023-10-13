@@ -6,7 +6,7 @@
   <title>physics_particle_set_flags</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_particle_set_flags" />
   <meta name="rh-index-keywords" content="physics_particle_set_flags,phy_particle_flag_water,phy_particle_flag_zombie,phy_particle_flag_wall,phy_particle_flag_spring,phy_particle_flag_elastic,phy_particle_flag_viscous,phy_particle_flag_powder,phy_particle_flag_tensile,phy_particle_flag_colourmixing,phy_particle_flag_colormixing" />
@@ -15,93 +15,93 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>physics_particle_set_flags</h1>
-  <p>With this function you can change the particle flags for an individual particle. The <span class="inline">index</span> value is the particle ID as returned by the function <a href="physics_particle_create.htm"><span class="inline">physics_particle_create()</span></a>, while the flags are the return value of a combination of the following <b>constants</b>:</p>
+  <p>Mit dieser Funktion können Sie den Partikel <span class="notranslate">flags</span> für einen einzelnen Partikel ändern. Der Wert <span class="inline">index</span> ist die Partikel-ID, wie sie von der Funktion <a href="physics_particle_create.htm"><span class="inline">physics_particle_create()</span></a>zurückgegeben wird, während die <span class="notranslate">flags</span> der Rückgabewert einer Kombination der folgenden <b>Konstanten</b> ist:</p>
   <table>
     <tbody>
       <tr>
-        <th>Constant</th>
-        <th>Description</th>
+        <th>Konstante</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_water</span></td>
-        <td>The default properties for a soft body particle.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_water</span></td>
+        <td>Die Standardeigenschaften für einen Weichkörperpartikel.</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_zombie</span></td>
-        <td>A zombie particle is one that will be destroyed in a single step with all others flagged in this way.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_zombie</span></td>
+        <td>Ein Zombiepartikel ist ein Partikel, der in einem einzigen Schritt zerstört wird, während alle anderen auf diese Weise gekennzeichnet sind.</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_wall</span></td>
-        <td>This defines the particle as <i>static</i>, essentially creating it as an immovable object in the physics simulation, as they will remain in a fixed position no matter what collides with them. You should use this flag rather than set the density to 0.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_wall</span></td>
+        <td>Damit wird das Partikel als <i>statisch</i> definiert, was es zu einem unbeweglichen Objekt in der Physiksimulation macht, da es in einer festen Position bleibt, egal was mit ihm kollidiert. Sie sollten dieses Flag verwenden, anstatt die Dichte auf 0 zu setzen.</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_spring</span></td>
-        <td>Spring particles produce the effect of being attached to one another, as if by a spring. Particles created with this flag are &quot;connected&quot; in pairs, with each particle being connected to the one that was closest to it at the time of creation. Once paired, particles do not change &quot;partners&quot; , and the farther an external force pulls them from one another, the greater the power with which they will collide when that external force is removed. Note that no matter how far paired particles get from each another, the connection between them will not snap.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_spring</span></td>
+        <td>Federpartikel erzeugen den Effekt, dass sie wie durch eine Feder miteinander verbunden sind. Teilchen, die mit dieser Flagge erzeugt werden, sind paarweise &quot;verbunden&quot;, wobei jedes Teilchen mit demjenigen verbunden ist, das ihm zum Zeitpunkt der Erzeugung am nächsten war. Einmal gepaart, wechseln die Teilchen ihre &quot;Partner&quot; nicht mehr, und je weiter eine äußere Kraft sie voneinander wegzieht, desto größer ist die Kraft, mit der sie kollidieren, wenn diese äußere Kraft wegfällt. Beachten Sie, dass die Verbindung zwischen gepaarten Teilchen nicht abreißt, egal wie weit sie sich voneinander entfernen.</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_elastic</span></td>
-        <td>Elastic particles deform and may also bounce when they collide with other rigid bodies in the physics simulation.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_elastic</span></td>
+        <td>Elastische Partikel verformen sich und können auch abprallen, wenn sie mit anderen starren Körpern in der Physiksimulation zusammenstoßen.</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_viscous</span></td>
-        <td>A viscous particle is one that exhibits &quot;clinginess&quot; or &quot;stickiness&quot;, like oil. Viscous particles will clump and stick together more.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_viscous</span></td>
+        <td>Ein zähflüssiges Teilchen ist ein Teilchen, das &quot;klebrig&quot; ist, wie Öl. Viskose Partikel verklumpen und kleben stärker zusammen.</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_powder</span></td>
-        <td>Powder particles produce a scattering effect such as you might see with sand or dust.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_powder</span></td>
+        <td>Puderpartikel erzeugen einen Streueffekt, wie man ihn bei Sand oder Staub beobachten kann.</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_tensile</span></td>
-        <td>Tensile particles are used to produce the effect of surface tension, or the taut curvature on the surface of a body of liquid. They might be used, for example, to create the surface tension you would see on a drop of water. Once the tension is broken, the particles bounce as if they were elastic, but also continue to attract each other. As a result, particles tend to form clusters as they bounce.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_tensile</span></td>
+        <td>Zugpartikel werden verwendet, um den Effekt der Oberflächenspannung oder die gespannte Krümmung der Oberfläche einer Flüssigkeit zu erzeugen. Sie können zum Beispiel verwendet werden, um die Oberflächenspannung eines Wassertropfens zu erzeugen. Sobald die Spannung gebrochen ist, prallen die Teilchen ab, als ob sie elastisch wären, ziehen sich aber auch weiterhin gegenseitig an. Infolgedessen neigen die Teilchen dazu, beim Aufprall Cluster zu bilden.</td>
       </tr>
       <tr>
-        <td><span class="inline">phy_particle_flag_colourmixing</span></td>
-        <td>Colour-mixing particles take on some of the colour of other particles with which they collide. Note that if only one of the two colliding particles is a colour-mixing one, the other particle retains its pre-collision colour.</td>
+        <td><span class="notranslate"><span class="inline">phy_particle_flag_colourmixing</span></td>
+        <td>Farbmischende Partikel nehmen einen Teil der Farbe anderer Partikel an, mit denen sie kollidieren. Wenn nur eines der beiden kollidierenden Teilchen ein farbmischendes Teilchen ist, behält das andere Teilchen seine Farbe vor dem Zusammenstoß.</td>
       </tr>
     </tbody>
   </table>
-  <p>These flags use bit-masking to create a final output value that is then checked to set the different basic properties of the particle (with the base property always being that of <span class="inline">phy_particle_flag_water</span>). For example, if you want to simulate a viscous liquid with surface tension you would use the <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitwise <i>or</i></a> &quot;|&quot; to mask off the appropriate bits as shown in the example below. In this way you can set different properties (other than the global properties) for each individual particle created, should you wish.</p>
-  <p> </p>
+  <p>Diese <span class="notranslate">flags</span> verwenden Bit-Maskierung, um einen endgültigen Ausgabewert zu erzeugen, der dann geprüft wird, um die verschiedenen grundlegenden Eigenschaften des Partikels einzustellen (wobei die Basiseigenschaft immer die von <span class="inline">phy_particle_flag_water</span> ist). Wenn Sie z. B. eine viskose Flüssigkeit mit Oberflächenspannung simulieren möchten, maskieren Sie die entsprechenden Bits <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitweise <i>oder</i></a> mit &quot;|&quot;, wie im folgenden Beispiel gezeigt. Auf diese Weise können Sie, wenn Sie möchten, für jedes einzelne erstellte Partikel unterschiedliche Eigenschaften (abgesehen von den globalen Eigenschaften) festlegen.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">physics_particle_set_flags(index, flags)</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>index</td>
-        <td><span data-keyref="Type_ID_Phy_Particle">Physics Particle ID</span></td>
-        <td>The index of the particle.</td>
+        <td><span class="notranslate">index</span></td>
+        <td><span data-keyref="Type_ID_Phy_Particle">Physik Teilchen-ID</span></td>
+        <td><span class="notranslate">The index of the particle.</span></td>
       </tr>
       <tr>
-        <td>flags</td>
-        <td><span data-keyref="Type_Constant_Phy_Particle_Flag">Physics Particle Flag Constant</span>(s)</td>
-        <td>The flags to set on the particle.</td>
+        <td><span class="notranslate">flags</span></td>
+        <td><span data-keyref="Type_Constant_Phy_Particle_Flag">Physik Teilchen Flagge Konstante</span>(n)</td>
+        <td><span class="notranslate">The flags to set on the particle.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">var flags = phy_particle_flag_water | phy_particle_flag_viscous | phy_particle_flag_tensile;<br />
     physics_particle_set_flags(p, flags);</p>
-  <p>The above code will create a variable to store the flags value and then use it to set the flags on a previously created particle with the index stored in the variable &quot;p&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> erstellt eine Variable, um den Wert <span class="notranslate">flags</span> zu speichern, und verwendet sie dann, um den Wert <span class="notranslate">flags</span> auf ein zuvor erstelltes Partikel mit dem in der Variablen &quot;p&quot; gespeicherten Index zu setzen.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Soft_Body_Particles.htm">Soft Body Particles</a></div>
-        <div style="float:right">Next: <a href="physics_particle_set_category_flags.htm">physics_particle_set_category_flags</a></div>
+        <div style="float:left">Zurück: <a href="Soft_Body_Particles.htm">Weiche Körperteilchen</a></div>
+        <div style="float:right">Nächste: <a href="physics_particle_set_category_flags.htm"><span class="notranslate">physics_particle_set_category_flags</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 physics_particle_set_flags

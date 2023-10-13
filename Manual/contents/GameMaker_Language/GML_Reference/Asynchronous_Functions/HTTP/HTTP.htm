@@ -6,7 +6,7 @@
   <title>HTTP</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference section for all the HTTP functions" />
   <meta name="rh-index-keywords" content="" />
@@ -15,31 +15,39 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>HTTP</h1>
-  <p>This section lists all the different Asynchronous HTTP functions available in <span data-keyref="GameMaker Name">GameMaker</span>. These functions will generate an <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">Asynchronous HTTP Event</a> in all instances that have it:</p>
+  <p>In diesem Abschnitt werden die verschiedenen asynchronen HTTP-Funktionen aufgeführt, die in <span data-keyref="GameMaker Name">GameMaker</span> verfügbar sind. Diese Funktionen erzeugen ein <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/HTTP.htm">asynchrones HTTP-Ereignis</a> in allen Instanzen, die es haben:</p>
   <ul class="colour">
-    <li><a href="http_request.htm">http_request</a></li>
-    <li><a href="http_get.htm">http_get</a></li>
-    <li><a href="http_get_file.htm">http_get_file</a></li>
-    <li><a href="http_post_string.htm">http_post_string</a></li>
+    <li><a href="http_request.htm"><span class="notranslate">http_request</span></a></li>
+    <li><a href="http_get.htm"><span class="notranslate">http_get</span></a></li>
+    <li><a href="http_get_file.htm"><span class="notranslate">http_get_file</span></a></li>
+    <li><a href="http_post_string.htm"><span class="notranslate">http_post_string</span></a></li>
   </ul>
-  <h2 id="h">Cross Domain Issues</h2>
-  <p>Please note that the above <span class="inline">http_*</span> functions may not function as expected due to <strong>cross domain security</strong> issues. This means that requests to your server or attempts to load resources from across domains are blocked and may appear to return blank results or 404 errors.</p>
-  <p>For image load or HTTP requests where determining or setting their cross-origin type is important, the following functions exist:</p>
+  <p> </p>
+  <p>Bitte beachten Sie, dass die oben genannten Funktionen von <span class="inline">http_*</span> aufgrund von <strong>domänenübergreifenden Sicherheitsproblemen</strong> möglicherweise nicht wie erwartet funktionieren. Dies bedeutet, dass Anfragen an Ihre <span class="notranslate">server</span> oder Versuche, Ressourcen von anderen Domains zu laden, blockiert werden und leere Ergebnisse oder 404-Fehler zurückgeben können. Eine Möglichkeit, dieses Problem zu umgehen, besteht darin, <span class="notranslate">server</span> in PHP einzubinden, das bestimmten Domains den Zugriff auf <span class="notranslate">server</span> erlaubt (dies ist auch eine Möglichkeit, Ihre Ressourcen zu schützen und <span class="notranslate">servers</span> zu blockieren, die nicht in der PHP-Zulassungsliste enthalten sind).</p>
+  <p>Im Folgenden finden Sie ein Beispiel für PHP <span class="notranslate">code</span>, das Sie dafür verwenden können:</p>
+  <p class="code">$http_origin = $_SERVER[&#39;HTTP_ORIGIN&#39;];<br />
+    if ($http_origin == &quot;http://127.0.0.1:51268&quot;)<br />
+    {<br />
+        header(&quot;Access-Control-Allow-Origin: *&quot;);<br />
+    }</p>
+  <p>Für Bildladeanfragen, bei denen es wichtig ist, den herkunftsübergreifenden Typ zu bestimmen oder einzustellen, gibt es die folgenden Funktionen:</p>
   <ul class="colour">
-    <li><a href="http_get_request_crossorigin.htm">http_get_request_crossorigin</a></li>
-    <li><a href="http_set_request_crossorigin.htm">http_set_request_crossorigin</a></li>
+    <li><a href="http_get_request_crossorigin.htm"><span class="notranslate">http_get_request_crossorigin</span></a></li>
+    <li><a href="http_set_request_crossorigin.htm"><span class="notranslate">http_set_request_crossorigin</span></a></li>
   </ul>
-  <p>In most cases these functions should not need to be used, but if the game is stored on a secured server - where certain assets may require basic authentication to be accessed and are generating security errors when loading - setting the cross-origin type for image requests to <span class="inline2">&quot;use-credentials&quot;</span> may be necessary (as opposed to the default <span class="inline2">&quot;anonymous&quot;</span> setting).</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p>In den meisten Fällen sollten diese Funktionen nicht verwendet werden müssen, aber wenn das Spiel auf einer gesicherten Website ( <span class="notranslate">server</span> ) gespeichert ist - wo der Zugriff auf bestimmte Inhalte eine grundlegende Authentifizierung erfordert und beim Laden Sicherheitsfehler erzeugt - kann es notwendig sein, den Cross-Origin-Typ für Bildanforderungen auf &quot;use-credentials&quot; zu setzen (im Gegensatz zur Standardeinstellung &quot;anonymous&quot;).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Asynchronous_Functions.htm">Asynchronous Functions</a></div>
-        <div style="float:right">Next: <a href="../Dialog/Dialog.htm">Dialog</a></div>
+        <div style="float:left">Zurück: <a href="../Asynchronous_Functions.htm">Asynchrone Funktionen</a></div>
+        <div style="float:right">Nächste: <a href="../Dialog/Dialog.htm">Dialog</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 HTTP Functions

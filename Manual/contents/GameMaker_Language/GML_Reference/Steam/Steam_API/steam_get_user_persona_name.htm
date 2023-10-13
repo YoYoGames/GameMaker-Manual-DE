@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_get_user_persona_name</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_get_user_persona_name" />
+  <meta name="rh-index-keywords" content="steam_get_user_persona_name" />
+  <meta name="search-keywords" content="steam_get_user_persona_name" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_get_user_persona_name</h1>
+  <p>Diese Funktion kann verwendet werden, um den Benutzernamen (Bildschirmname) für eine bestimmte Benutzer-ID abzurufen. Sie geben die Benutzer-ID an, und die Funktion gibt einen eindeutigen Async-ID-Wert zurück, der verwendet werden kann, um die Details im <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">Async-Ereignis von Steam</a> korrekt zu überprüfen.
+    Dieses Ereignis enthält die <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> DS-Map, die mit den folgenden Schlüssel/Wert-Paaren befüllt wird:</p>
+  <ul class="colour">
+    <li>&quot;<b>id</b>&quot; - Die asynchrone ID, die von der Funktion zurückgegeben wird, die das Ereignis ausgelöst hat</li>
+    <li>&quot;<b>event_type</b>&quot; - Die Zeichenfolge &quot;<b>user_persona_name</b>&quot;</li>
+    <li>&quot;<b>steamid&quot;</b>&quot; - Der <span class="notranslate">Steam</span> ID-Wert, der verwendet wird, um den Benutzernamen zu erhalten.</li>
+    <li>&quot;<b>persona_name</b>&quot; - Der Benutzername für die angegebene <span class="notranslate">Steam</span> ID</li>
+  </ul>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_get_user_persona_name(steamID);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">steamID</span></td>
+        <td>Die eindeutige <span class="notranslate">Steam</span> ID für einen Benutzer.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p class="code">request = steam_get_user_persona_name(global.UGC_UserID);</p>
+  <p>Die obige <span class="notranslate">code</span> fragt den Benutzernamen der in der globalen Variablen &quot;UGC_UserID&quot; gespeicherten Benutzer-ID ab und speichert den zurückgegebenen Wert in einer Variablen, die im Async-Ereignis geparst wird.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Zurück: <a href="Steam_API.htm">Allgemein <span class="notranslate">Steam</span> API</a></div>
+        <div style="float:right">Nächste: <a href="steam_is_user_logged_on.htm"><span class="notranslate">steam_is_user_logged_on</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_get_user_persona_name
+-->
+  <!-- TAGS
+steam_get_user_persona_name
+-->
+</body>
+</html>

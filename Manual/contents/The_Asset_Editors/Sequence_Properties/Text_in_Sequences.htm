@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>Text in Sequences</title>
+  <title>Text in Sequenzen</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../assets/css/default.css" />
   <meta name="template" content="../../assets/masterpages/Manual_Page.htt" />
@@ -14,76 +14,76 @@
   <meta name="search-keywords" content="Text in Sequences, animate text" />
 </head>
 <body>
-  <h1>Text in Sequences</h1>
-  <p>Text tracks can be added to a Sequence through the editor. This is done by selecting the <img class="icon" height="24" src="../../assets/Images/Icons/Icon_TextButton.png" width="24" /> <strong>Add a Text Track</strong> button from the Canvas Toolbox, and then clicking (and optionally dragging) in the Canvas to create a text track.</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextOverview.png" /></p>
-  <p>This page covers the following topics:</p>
+  <h1>Text in Sequenzen</h1>
+  <p>Textspuren können über den Editor zu einem <span class="notranslate">Sequence</span> hinzugefügt werden. Dazu wählen Sie in der Canvas-Toolbox die Schaltfläche <img> <strong>Textspur hinzufügen</strong> und klicken (und ziehen) dann in die Leinwand, um eine Textspur zu erstellen.</p>
+  <p><img class="icon" height="24" src="../../assets/Images/Icons/Icon_TextButton.png" width="24" /></p>
+  <p>Diese Seite behandelt die folgenden Themen:</p>
   <ol class="Decimal">
-    <li><a href="#s1">Creating Text</a></li>
-    <li><a href="#s2">Modifying Text</a></li>
-    <li><a href="#s3">Font Assets</a></li>
-    <li><a href="#s4">Parameters</a></li>
-    <li><a href="#s5">Inspector</a></li>
+    <li><a href="#s1">Text erstellen</a></li>
+    <li><a href="#s2">Ändern von Text</a></li>
+    <li><a href="#s3">Schriftart Assets</a></li>
+    <li><a href="#s4">Parameter</a></li>
+    <li><a href="#s5">Inspektor</a></li>
   </ol>
-  <h2 id="s1">Creating Text</h2>
-  <p>There are two ways of creating a text track. After selecting the <img class="icon" height="24" src="../../assets/Images/Icons/Icon_TextButton.png" width="24" /> <strong>Text</strong> tool from the Toolbox, you can:</p>
+  <h2 id="s1">Text erstellen</h2>
+  <p>Es gibt zwei Möglichkeiten, eine Textspur zu erstellen. Nachdem Sie das Werkzeug <img> <strong>Text</strong> aus dem Werkzeugkasten ausgewählt haben, können Sie:</p>
   <ul class="colour">
-    <li><strong>Click once in the canvas</strong>: This creates an &quot;unwrapped&quot; text track. This means the text can be as long as you want and it will stay on one line. Wrapping can easily be enabled later through the <a href="../../IDE_Tools/The_Inspector.htm">Inspector</a>.<br />
+    <li><strong>Klicken Sie einmal in die Leinwand</strong>: Dadurch wird eine &quot;nicht umrahmte&quot; Textspur erstellt. Das heißt, der Text kann so lang sein, wie Sie wollen, und er bleibt in einer Zeile. Der Umbruch kann später leicht über den <a href="../../IDE_Tools/The_Inspector.htm">Inspektor</a> aktiviert werden.<br>
       <video class="center" src="../../assets/Videos/AssetEditors/SeqTextUnwrapped.mp4" width="700" height="330" controls=""></video>
     </li>
-    <li><strong>Click and drag in the canvas</strong>: This creates a &quot;wrapped&quot; text track, meaning the text only displays inside a frame. The size of this frame is set by dragging while creating the text track. Its size can also be changed later via parameter tracks or the Inspector. <video class="center" src="../../assets/Videos/AssetEditors/SeqTextWrapped.mp4" width="700" height="330" controls=""></video> It is recommended to use wrapped text tracks as it makes it much easier to align your text and get consistent results while animating.</li>
+    <li><strong>Klicken und ziehen Sie im Canvas</strong>: Dadurch wird eine &quot;umrahmte&quot; Textspur erstellt, d. h. der Text wird nur innerhalb eines Rahmens angezeigt. Die Größe dieses Rahmens wird durch Ziehen bei der Erstellung der Textspur festgelegt. Die Größe kann auch später über Parameterspuren oder den Inspektor geändert werden. <video class="center" src="../../assets/Videos/AssetEditors/SeqTextWrapped.mp4" width="700" height="330" controls=""></video> Es wird empfohlen, umrahmte Textspuren zu verwenden, da es dadurch viel einfacher ist, den Text auszurichten und konsistente Ergebnisse bei der Animation zu erzielen.</li>
   </ul>
-  <h2 id="s2">Modifying Text</h2>
-  <p>When you create a new text track, GameMaker opens the <a href="../../IDE_Tools/The_Inspector.htm">Inspector</a> and automatically selects the <strong>Text</strong> field, allowing you to start writing your text.</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextEditFromInspector.png" />To edit the text for a track at any time, simply select that track, go into the Inspector and modify the <strong>Text</strong> field again.</p>
-  <p class="note_heading">Resize Behaviour</p>
-  <p class="note">Resizing your text track in the Canvas will work differently depending on whether your text track is <strong>wrapped</strong> or <strong>unwrapped</strong>.<br />
-    <br />
-    If unwrapped, your text track will be scaled, similar to how you scale sprites and objects. However, resizing a <strong>wrapped</strong> text track modifies its <strong>frame size</strong> instead of modifying its scale values.<br />
-    <img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextResizeBehaviour.png" />To scale a wrapped text track, use <a data-height="650" data-rhwidget="HyperlinkPopover" data-width="360" href="The_Sequence_Canvas.htm#gizmos">Gizmos</a> instead, or edit the values in the Scale parameter track manually.
+  <h2 id="s2">Ändern von Text</h2>
+  <p>Wenn Sie eine neue Textspur erstellen, öffnet <span class="notranslate">GameMaker</span> den <a href="../../IDE_Tools/The_Inspector.htm">Inspektor</a> und wählt automatisch das <strong>Textfeld</strong> aus, damit Sie mit dem Schreiben Ihres Textes beginnen können.</p>
+  <p><img>Um den Text für eine Spur jederzeit zu bearbeiten, wählen Sie einfach diese Spur aus, gehen in den Inspektor und ändern das <strong>Textfeld</strong> erneut.</p>
+  <p class="note_heading">Verhalten bei Größenänderung</p>
+  <p class="note">Die Größenänderung Ihrer Textspur im Canvas funktioniert unterschiedlich, je nachdem, ob Ihre Textspur <strong>umbrochen</strong> oder <strong>nicht umbrochen</strong> ist.<br>
+    <br>
+    Wenn sie nicht umrahmt ist, wird Ihre Textspur skaliert, ähnlich wie Sie <span class="notranslate">sprites</span> und Objekte skalieren. Wenn Sie jedoch die Größe einer <strong>umrahmten</strong> Textspur ändern, wird die <strong>Rahmengröße</strong> geändert, nicht die Skalierungswerte.<br>
+    <img>Um eine umrahmte Textspur zu skalieren, verwenden Sie stattdessen <a data-height="650" data-rhwidget="HyperlinkPopover" data-width="360" href="The_Sequence_Canvas.htm#gizmos">Gizmos</a>, oder bearbeiten Sie die Werte in der Parameterspur Skalierung manuell.
   </p>
-  <h2 id="s3">Font Assets</h2>
-  <p>Text tracks are tied to <a href="../Fonts.htm">Font assets</a>. When you create a new text track, it will look for a font asset within your project, and use the one that was last added. If your project has no fonts, it will automatically create a new font asset.</p>
-  <p>When you delete a font, all text tracks that use that font are deleted as well, so ensure you don&#39;t accidentally delete font assets that are used in Sequences.</p>
-  <h2 id="s4">Parameters</h2>
-  <p>You can modify and animate all the usual parameters that are provided for a sprite track, like Position, Rotation, Scale, Origin and Colour Multiply. Using these parameters you can move and rotate your text, make it bigger or smaller, and change its colour and alpha.</p>
-  <p>There are some text-specific parameters provided as well, which can also be animated:<img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextParameters.png" /></p>
+  <h2 id="s3">Schriftart Assets</h2>
+  <p>Textspuren sind an <a href="../Fonts.htm">Font-Assets</a> gebunden. Wenn Sie eine neue Textspur erstellen, wird in Ihrem Projekt nach einem Schrift-Asset gesucht und das zuletzt hinzugefügte verwendet. Wenn Ihr Projekt keine Schriftarten enthält, wird automatisch ein neues Schriftarten-Asset erstellt.</p>
+  <p>Wenn Sie eine Schriftart löschen, werden alle Textspuren, die diese Schriftart verwenden, ebenfalls gelöscht. Stellen Sie also sicher, dass Sie nicht versehentlich Schriftarten löschen, die in <span class="notranslate">Sequences</span> verwendet werden.</p>
+  <h2 id="s4">Parameter</h2>
+  <p>Sie können alle üblichen Parameter, die für eine <span class="notranslate">sprite</span> Spur zur Verfügung stehen, wie Position, Drehung, Skalierung, Ursprung und Farbmultiplikation ändern und animieren. Mit diesen Parametern können Sie Ihren Text verschieben und drehen, ihn vergrößern oder verkleinern und seine Farbe und sein Alpha ändern.</p>
+  <p>Es gibt auch einige textspezifische Parameter, die ebenfalls animiert werden können:<img></p>
   <ul class="colour">
-    <li><strong>Character Spacing</strong>: This is the space between each character (in pixels).<br />
-      <img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextCharacterSpacing.png" />
+    <li><strong>Zeichenabstand</strong>: Dies ist der Abstand zwischen den einzelnen Zeichen (in Pixeln).<br>
+      <img>
     </li>
-    <li><strong>Line Spacing</strong>: This is the space between each line of text (in pixels).<br />
-      <img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextLineSpacing.png" />
+    <li><strong>Zeilenabstand</strong>: Dies ist der Abstand zwischen den einzelnen Textzeilen (in Pixeln).<br>
+      <img>
     </li>
-    <li><strong>Paragraph Scaling</strong>: This is the space between each paragraph of text (in pixels). A new paragraph starts when you add a line break manually by pressing <img class="icon" height="20" src="../../assets/Images/Icons/Icon_Enter.png" width="55" />.<br />
-      <img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextParagraphSpacing.png" />
+    <li><strong>Absatzskalierung</strong>: Dies ist der Abstand zwischen den einzelnen Textabschnitten (in Pixeln). Ein neuer Absatz beginnt, wenn Sie manuell einen Zeilenumbruch hinzufügen, indem Sie <img> drücken.<br>
+      <img>
     </li>
-    <li><strong>Frame Size</strong>: This is the size of the text&#39;s frame, and is only used when <strong>Wrap</strong> is enabled in the Inspector (see its section below for more information).</li>
+    <li><strong>Rahmengröße</strong>: Dies ist die Größe des Textrahmens und wird nur verwendet, wenn der <strong>Umbruch</strong> im Inspektor aktiviert ist (weitere Informationen dazu finden Sie im Abschnitt unten).</li>
   </ul>
-  <p> </p>
-  <h2 id="s5">Inspector</h2>
-  <p>There are some properties that can only be changed through the Inspector. Such properties cannot be animated as they are not parameter tracks, but simple options that apply to the whole track.</p>
-  <p>The Inspector shows you the following properties when a text track is selected:</p>
-  <p class="note"><span class="note">NOTE</span> The Inspector should open automatically when you create or select a text track, but if your Inspector is closed, you can open it manually from the <a href="../../IDE_Navigation/Menus/The_Windows_Menu.htm">Windows</a> menu at the top.</p>
-  <p><img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextInspector.png" /></p>
-  <p>Some of the parameter tracks (such as <strong>Colour</strong>, <strong>Character Spacing</strong>, <strong>Line Spacing</strong>, etc.) are included here, and changing them will create a keyframe at the playhead if <img class="icon" src="../../assets/Images/Icons/Icon_Seq_Record.png" /> <strong>Automatically record changes</strong> is enabled, or modify the selected keyframe. The rest of the options are &quot;static&quot; (as they cannot be animated) and are as follows:</p>
+  <p> </p>
+  <h2 id="s5">Inspektor</h2>
+  <p>Es gibt einige Eigenschaften, die nur über den Inspektor geändert werden können. Solche Eigenschaften können nicht animiert werden, da sie keine Parameterspuren sind, sondern einfache Optionen, die für die gesamte Spur gelten.</p>
+  <p>Der Inspektor zeigt Ihnen die folgenden Eigenschaften an, wenn eine Textspur ausgewählt ist:</p>
+  <p class="note"><span class="note">HINWEIS</span> Der Inspektor sollte sich automatisch öffnen, wenn Sie eine Textspur erstellen oder auswählen. Wenn der Inspektor jedoch geschlossen ist, können Sie ihn manuell über das <a href="../../IDE_Navigation/Menus/The_Windows_Menu.htm">Windows-Menü</a> oben öffnen.</p>
+  <p><img class="center" src="../../assets/Images/Asset_Editors/Sequences_Text/SeqTextOverview.png" /></p>
+  <p>Einige der Parameterspuren (z. B. <strong>Farbe</strong>, <strong>Zeichenabstand</strong>, <strong>Zeilenabstand</strong> usw.) sind hier enthalten, und ihre Änderung erzeugt einen Keyframe am Abspielkopf, wenn <img> <strong>Änderungen automatisch aufzeichnen</strong> aktiviert ist, oder ändert den ausgewählten Keyframe. Die übrigen Optionen sind &quot;statisch&quot; (da sie nicht animiert werden können) und lauten wie folgt:</p>
   <ul class="colour">
-    <li>At the top it shows you the font asset that is selected. You can use this option to select an existing font asset, or create a new one and assign it to the selected text track.</li>
-    <li><strong>Text</strong>: This is the text that is displayed on your text track. You can enter multiple lines here, however empty lines will not be displayed.</li>
-    <li><strong>Alignment</strong>: Here you can change how your text is aligned within the frame horizontally (left, centre, right, justified) and vertically (bottom, top, middle). This only applies when the <strong>Wrap</strong> option is enabled.</li>
-    <li><strong>Wrap</strong>: This controls whether the text should automatically wrap within the defined frame. When this is enabled, your text will automatically move to the next line when it hits the end of the frame, and will always be cut off if the text happens to be longer than the height of the frame. When this is disabled, all of your text will be displayed on a single line, and the frame will not be displayed in the canvas anymore.</li>
+    <li>Im oberen Bereich wird das ausgewählte Schrift-Asset angezeigt. Mit dieser Option können Sie ein vorhandenes Schrift-Asset auswählen oder ein neues erstellen und es der ausgewählten Textspur zuweisen.</li>
+    <li><strong>Text</strong>: Dies ist der Text, der auf Ihrer Textspur angezeigt wird. Sie können hier mehrere Zeilen eingeben, leere Zeilen werden jedoch nicht angezeigt.</li>
+    <li><strong>Ausrichten</strong>: Hier können Sie festlegen, wie Ihr Text innerhalb des Rahmens horizontal (links, mittig, rechts, ausgerichtet) und vertikal (unten, oben, Mitte) ausgerichtet wird. Dies gilt nur, wenn die Option <strong>Umbruch</strong> aktiviert ist.</li>
+    <li><strong>Umbruch</strong>: Hier wird festgelegt, ob der Text innerhalb des festgelegten Rahmens automatisch umbrochen werden soll. Wenn dies aktiviert ist, springt Ihr Text automatisch in die nächste Zeile, wenn er das Ende des Rahmens erreicht, und wird immer abgeschnitten, wenn der Text länger als die Höhe des Rahmens ist. Wenn diese Funktion deaktiviert ist, wird Ihr gesamter Text in einer einzigen Zeile angezeigt, und der Rahmen wird nicht mehr im Canvas angezeigt.</li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="../Sequences.htm">Sequences</a></div>
-        <div>Next: <a data-xref="{title}" href="Clipping_Masks.htm">Clipping Masks</a></div>
+        <div>Zurück: <a data-xref="{title}" href="../Sequences.htm">Sequenzen</a></div>
+        <div>Nächste: <a data-xref="{title}" href="Clipping_Masks.htm">Freistellungsmasken</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
 </body>
 </html>

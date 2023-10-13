@@ -6,7 +6,7 @@
   <title>audio_emitter_falloff</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function audio_emitter_falloff" />
   <meta name="rh-index-keywords" content="audio_emitter_falloff" />
@@ -15,61 +15,61 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>audio_emitter_falloff</h1>
-  <p>With this function you can set the fall-off distance for an emitter. This is the distance from the <i>listener</i> the emitter has to be before the sound will have &quot;fallen off&quot; to a volume of 0. The default value for this is 100, but beware of setting this to any value lower than 1 as that will make any sound played through this emitter inaudible to the <i>listener</i>, however any other value will cause the sound to fade away the further that the emitter is from the <i>listener</i>.</p>
-  <p>How the sound itself is heard will depend on the falloff reference (which is the distance under which the volume for the source would normally drop by half) and the roll off factor (which affects the sound past the falloff reference distance only). The default factor is normally 1, and the effect of the different falloff values will depend on the model chosen.</p>
-  <p>For a complete guide to the different falloff models and how these values are used, please see the function <span class="inline"><a href="../audio_falloff_set_model.htm">audio_falloff_set_model()</a>.</span></p>
-  <p> </p>
+  <p>Mit dieser Funktion können Sie die Fall-Off-Distanz für einen Emitter einstellen. Dies ist die Entfernung, die der Emitter vom <i>Hörer</i> entfernt sein muss, bevor der Ton auf eine Lautstärke von 0 &quot;abfällt&quot;. Der Standardwert für diesen Wert ist 100, aber Vorsicht, wenn Sie diesen Wert auf einen niedrigeren Wert als 1 setzen, da dies jeden Ton, der durch diesen Emitter gespielt wird, für den <i>Hörer</i> unhörbar macht.</p>
+  <p>Wie der Klang selbst gehört wird, hängt von der Abschwächungsreferenz (das ist die Entfernung, unter der die Lautstärke der Quelle normalerweise um die Hälfte abfällt) und dem Abschwächungsfaktor (der den Klang nur über die Abschwächungsreferenzentfernung hinaus beeinflusst) ab. Der Standardfaktor ist normalerweise 1, und die Wirkung der verschiedenen Abfallwerte hängt vom gewählten Modell ab.</p>
+  <p>Eine vollständige Anleitung zu den verschiedenen Falloff-Modellen und zur Verwendung dieser Werte finden Sie in der Funktion <span class="inline"><a href="../audio_falloff_set_model.htm">audio_falloff_set_model()</a>.</span></p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">audio_emitter_falloff(emitter, falloff_ref, falloff_max, falloff_factor);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>emitter</td>
-        <td><span data-keyref="Type_ID_Audio_Emitter">Audio Emitter ID</span></td>
-        <td>The index of the emitter to change.</td>
+        <td><span class="notranslate">emitter</span></td>
+        <td><span data-keyref="Type_ID_Audio_Emitter">Audio-Sender-ID</span></td>
+        <td><span class="notranslate">The index of the emitter to change.</span></td>
       </tr>
       <tr>
-        <td>falloff_ref</td>
+        <td><span class="notranslate">falloff_ref</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The falloff reference relative to the listener (clamp).</td>
+        <td><span class="notranslate">The falloff reference relative to the listener (clamp).</span></td>
       </tr>
       <tr>
-        <td>falloff_max</td>
+        <td><span class="notranslate">falloff_max</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The maximum falloff distance relative to the listener.</td>
+        <td><span class="notranslate">The maximum falloff distance relative to the listener.</span></td>
       </tr>
       <tr>
-        <td>falloff_factor</td>
+        <td><span class="notranslate">falloff_factor</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The falloff factor (default 1).</td>
+        <td><span class="notranslate">The falloff factor (default 1).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">s_emit = audio_emitter_create();<br />
     audio_emitter_position(s_emit, x, y, 0);<br />
     audio_emitter_falloff(s_emit, 100, 300, 1);</p>
-  <p>The above code creates an audio emitter and assigns its index to the variable &quot;s_emit&quot;. This emitter is then placed at the position of the instance creating it and is given a fall-off distance of 300, meaning that when the emitter is further than 300 pixels from the <i>listener</i> position it will be silent. Its falloff factor is the default 1 and the falloff reference is 100, so at 100 pixels from the listener the falloff will start.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> erstellt einen Audioemitter und weist seinen Index der Variablen &quot;s_emit&quot; zu. Dieser Emitter wird dann an der Position der Instanz, die ihn erstellt, platziert und erhält eine Falloff-Distanz von 300, was bedeutet, dass der Emitter, wenn er weiter als 300 Pixel von der Position des <i>Zuhörers</i> entfernt ist, stumm wird. Sein Falloff-Faktor ist der Standardwert 1 und die Falloff-Referenz ist 100, so dass der Falloff bei 100 Pixeln vom Hörer beginnt.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Audio_Emitters.htm">Audio Emitters</a></div>
-        <div style="float:right">Next: <a href="audio_emitter_gain.htm">audio_emitter_gain</a></div>
+        <div style="float:left">Zurück: <a href="Audio_Emitters.htm">Audio-Emitter</a></div>
+        <div style="float:right">Nächste: <a href="audio_emitter_gain.htm"><span class="notranslate">audio_emitter_gain</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 audio_emitter_falloff

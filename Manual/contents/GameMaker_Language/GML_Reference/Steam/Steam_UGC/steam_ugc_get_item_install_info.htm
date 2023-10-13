@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_ugc_get_item_install_info</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_ugc_get_item_install_info" />
+  <meta name="rh-index-keywords" content="steam_ugc_get_item_install_info" />
+  <meta name="search-keywords" content="steam_ugc_get_item_install_info" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_ugc_get_item_install_info</h1>
+  <p>Diese Funktion kann verwendet werden, um Informationen über ein bestimmtes veröffentlichtes Dateielement abzurufen, das abonniert und in den lokalen Speicherbereich <span class="notranslate">Steam</span> für Ihr Spiel heruntergeladen wurde. Sie geben die Element-ID an und liefern den Index einer leeren <a href="../../Data_Structures/DS_Maps/DS_Maps.htm">DS-Map</a>, die dann mit den folgenden Schlüssel/Wert-Paaren gefüllt wird, wenn das Element existiert:</p>
+  <ul class="colour">
+    <li>&quot;<b>size_on_disk</b>&quot; - Die Dateigröße auf der Festplatte (in Bytes)</li>
+    <li>&quot;<b>legacy_item</b>&quot; - Wird <tt>true</tt> oder <tt>false</tt> sein, je nachdem, ob es sich um eine Legacy-Datei handelt oder nicht.</li>
+    <li>&quot;<b>folder</b>&quot; - Dies ist der vollständige Pfad zum installierten Inhalt (siehe &quot;Item Installation&quot; in <span class="notranslate">Steam</span> SDK docs, da &quot;legacy&quot; Artikel, die mit der alten Methode hochgeladen wurden, anders behandelt werden).</li>
+  </ul>
+  <p>Wenn das Element existiert, gibt die Funktion <tt>true</tt> zurück und füllt die Karte auf, andernfalls gibt sie <tt>false</tt> zurück und die Karte bleibt leer.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_ugc_get_item_install_info(published_file_id, info_map);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">published_file_id</span></td>
+        <td>Der eindeutige Handle für die zu aktualisierende UGC.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">info_map</span></td>
+        <td>Ein (zuvor erstellter) DS-Map-Index.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p class="code">var item_map = ds_map_create();<br/> steam_ugc_get_item_install_info(global.fileID, item_map);</p>
+  <p>Die obige <span class="notranslate">code</span> fragt den Installationsstatus des Elements ab, das in der globalen Variable &quot;fileID&quot; indiziert ist, und verwendet eine <tt>DS Map</tt>, um die Informationen zu speichern.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Zurück: <a href="Steam_UGC.htm">UGC</a></div>
+        <div style="float:right">Nächste: <a href="steam_ugc_get_item_update_info.htm"><span class="notranslate">steam_ugc_get_item_update_info</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_ugc_get_item_install_info
+-->
+  <!-- TAGS
+steam_ugc_get_item_install_info
+-->
+</body>
+</html>

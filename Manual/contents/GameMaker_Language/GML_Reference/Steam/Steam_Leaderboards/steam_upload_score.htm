@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_upload_score</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_upload_score" />
+  <meta name="rh-index-keywords" content="steam_upload_score" />
+  <meta name="search-keywords" content="steam_upload_score" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_upload_score</h1>
+  <p>Diese Funktion sendet einen Spielstand an das angegebene Leaderboard. Der hochzuladende Punktestand ist eine reale Zahl, und der Name des Leaderboards ist ein String, der definiert wurde, als man das Leaderboard mit der Funktion <a href="steam_create_leaderboard.htm"><tt>steam_create_leaderboard()</tt></a>. Wenn die Funktion fehlschlägt, gibt sie den Wert -1 zurück, während ein erfolgreicher Beitrag eine eindeutige ID für den Upload zurückgibt und ein asynchrones <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">Steam-Ereignis</a> auslöst. Dieses Ereignis erstellt eine <tt>DS-Map</tt> in der eingebauten Variablen <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> mit den folgenden Schlüssel/Wert-Paaren:</p>
+  <ul class="colour">
+    <li>&quot;<b>event_type</b>&quot; - Dieser Schlüssel enthält den Wert &quot;<b>leaderboard_upload</b>&quot;, wenn er durch diese Funktion ausgelöst wird.</li>
+    <li>&quot;<b>lb_name</b>&quot; - Dieser Schlüssel enthält den Namen der Rangliste, die auf</li>
+    <li>&quot;<b>Erfolg</b>&quot; - 1, wenn der Beitrag erfolgreich war, 0, wenn er fehlgeschlagen ist</li>
+    <li>&quot;<b>updated</b>&quot; - Wird 1 sein, wenn der Punktestand in der Rangliste tatsächlich aktualisiert wurde (d.h.: der neue Punktestand war besser), ansonsten 0</li>
+    <li>&quot;<b>post_id</b>&quot; - Dieser Schlüssel sollte mit dem vom Upload-Aufruf zurückgegebenen ID-Wert übereinstimmen</li>
+    <li>&quot;<b>score</b>&quot; - Dieser Schlüssel enthält den Punktestand, der gebucht wurde</li>
+  </ul>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_upload_score(lb_name, score);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">lb_name</span></td>
+        <td>Der Name des Leaderboards, in das Sie die Ergebnisse hochladen (eine Zeichenkette).</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">score</span></td>
+        <td>Die hochzuladende Punktzahl (eine echte Zahl).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Erweitertes Beispiel:</h4>
+  <p>In diesem Beispiel laden wir zunächst einen Spielstand hoch und analysieren dann die <tt>async_load-Map</tt>, die bei Erfolg zurückgegeben wird. Die folgende <span class="notranslate">code</span> zeigt ein typisches Beispiel für das Hochladen:</p>
+  <p class="code">if (hp &lt;= 0)<br />
+        {<br />
+        upload_ID = steam_upload_score(&quot;Game Scores&quot;, score);<br />
+        if (!upload_ID)<br />
+            {<br />
+            alarm[0] = room_speed;<br />
+            }<br />
+        }</p>
+  <p>Beachten Sie, dass wir einen Alarm eingestellt haben, wenn der Aufruf fehlschlägt. Dies würde verwendet werden, um den Upload zu einem späteren Zeitpunkt erneut zu versuchen, und Sie können dort zusätzliche <span class="notranslate">code</span> hinzufügen, um den Upload erneut zu versuchen oder den Spielstand in einer Textdatei zu speichern, falls er weiterhin fehlschlägt, usw... Wir fügen nun das Folgende in das <b>async-Ereignis von Steam</b> für die Instanz hinzu, die die Spielstände kontrolliert:</p>
+  <p class="code">var type = ds_map_find_value(async_load, &quot;event_type&quot;);<br />
+    if (type == &quot;leaderboard_upload&quot;)<br />
+    {<br />
+        var lb_ID = ds_map_find_value(async_load, &quot;post_id&quot;);<br />
+        if lb_ID == upload_ID<br />
+        {<br />
+            var lb_name = ds_map_find_value(async_load, &quot;lb_name&quot;);<br />
+            var lb_done = ds_map_find_value(async_load, &quot;success&quot;);<br />
+            var lb_score = ds_map_find_value(async_load, &quot;score&quot;);<br />
+            var lb_updated = ds_map_find_value(async_load, &quot;updated&quot;);<br />
+            show_debug_message(&quot;leaderboard post id:&quot; + string(lb_ID) + &quot; to lb:&quot; + string(lb_name) + &quot; with score:&quot; + string(lb_score) + &quot; updated=&quot; + string(lb_updated));<br />
+            if (lb_done)<br />
+            {<br />
+                show_debug_message(&quot;- Succeeded&quot;);<br />
+            }<br />
+            else<br />
+            {<br />
+                show_debug_message(&quot;- Failed&quot;);<br />
+            }<br />
+        }<br />
+    }</p>
+  <p>Im Beispiel werden die Rückgabewerte einfach als Debug-Meldungen in das Fenster <span class="notranslate">compiler</span> ausgegeben, aber Sie können dieses Ereignis verwenden, um die Informationen auf jede beliebige Weise zu verarbeiten.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Zurück: <a href="Steam_Leaderboards.htm">Bestenlisten</a></div>
+        <div style="float:right">Nächste: <a href="steam_upload_score_buffer.htm"><span class="notranslate">steam_upload_score_buffer</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_upload_score
+-->
+  <!-- TAGS
+steam_upload_score
+-->
+</body>
+</html>

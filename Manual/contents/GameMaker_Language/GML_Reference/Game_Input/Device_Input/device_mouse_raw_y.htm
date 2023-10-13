@@ -6,7 +6,7 @@
   <title>device_mouse_raw_y</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for device_mouse_raw_y" />
   <meta name="rh-index-keywords" content="device_mouse_raw_y" />
@@ -16,45 +16,45 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>device_mouse_raw_y</h1>
-  <p>This function returns raw y position of the touch on a device. What this means is that it returns the actual device definition of the y position that is being touched, <i>not</i> the <span data-keyref="GameMaker Name">GameMaker</span> one, and as such will ignore things like view position and scaling. Note that the maximum number of device touches that can be detected will depend very much on the device being used and the OS it runs</p>
-  <p class="note"><b>NOTE</b>: This function is very much device dependent and you should experiment first with the desired target module and device to see what exactly is returned.</p>
-  <p> </p>
+  <p>Diese Funktion gibt die rohe y-Position der Berührung auf einem Gerät zurück. Das bedeutet, dass sie die tatsächliche Gerätedefinition der y-Position, die berührt wird, zurückgibt, <i>nicht</i> die <span data-keyref="GameMaker Name">GameMaker-Definition</span>, und daher Dinge wie Ansichtsposition und Skalierung ignoriert. Beachten Sie, dass die maximale Anzahl von Geräteberührungen, die erkannt werden können, sehr stark vom verwendeten Gerät und dem darauf laufenden Betriebssystem abhängt</p>
+  <p class="note"><b>HINWEIS</b>: Diese Funktion ist stark geräteabhängig und Sie sollten zunächst mit dem gewünschten Ziel <span class="notranslate">module</span> und dem Gerät experimentieren, um zu sehen, was genau zurückgegeben wird.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">device_mouse_raw_y(device);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Beschreibung</th>
      </tr>
       <tr>
-        <td>device</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The device (from 0 - <i>n</i>) that is being checked.</td>
+        <td><span class="notranslate">device</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The device (from 0 - <i>n</i>) that is being checked.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">if device_mouse_check_button(0, mb_left) &amp;&amp; device_mouse_check_button(1, mb_left)<br />
     {<br />
         x_av = mean(device_mouse_raw_x(0), device_mouse_raw_x(1));<br />
         y_av = mean(device_mouse_raw_y(0), device_mouse_raw_y(1));<br />
     }</p>
-  <p>The above code checks to see if device1 and device2 are being pressed, and if they are it calculates the average position of the x/y coordinates between each press point.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> prüft, ob Gerät1 und Gerät2 gedrückt werden, und wenn dies der Fall ist, wird die durchschnittliche Position der x/y-Koordinaten zwischen den einzelnen Druckpunkten berechnet.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Device_Input.htm">Device Input</a></div>
-        <div style="float:right">Next: <a href="device_mouse_x_to_gui.htm">device_mouse_x_to_gui</a></div>
+        <div style="float:left">Zurück: <a href="Device_Input.htm">Geräteeingabe</a></div>
+        <div style="float:right">Nächste: <a href="device_mouse_x_to_gui.htm"><span class="notranslate">device_mouse_x_to_gui</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 device_mouse_raw_y

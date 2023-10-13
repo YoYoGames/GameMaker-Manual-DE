@@ -7,7 +7,7 @@
   <title>rollback_get_player_prefs</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" />
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Reference page for rollback_get_player_prefs" />
@@ -17,12 +17,12 @@
 </head>
 <body>
   <h1>rollback_get_player_prefs</h1>
-  <p>This function returns the preferences set for the given player ID.</p>
-  <p>If a player ID is not specified, the function must be called inside a player instance, in which case the preferences for that player will be returned.</p>
-  <p>You can also use the instance variable <span class="inline"><a href="../Rollback_Variables/player_prefs.htm">player_prefs</a></span>.</p>
-  <p>This function returns the last preferences that were synchronised for the given player, so setting the preferences will not immediately update the preferences that this function returns.</p>
-  <p>Please read: <a data-xref="{title}" href="../Rollback_Preferences.htm">Player Preferences</a></p>
-  <p> </p>
+  <p>Diese Funktion gibt die Einstellungen für die angegebene Spieler-ID zurück.</p>
+  <p>Wird keine Spieler-ID angegeben, muss die Funktion innerhalb einer Spielerinstanz aufgerufen werden. In diesem Fall werden die Einstellungen für diesen Spieler zurückgegeben.</p>
+  <p>Sie können auch die Instanzvariable <span class="inline"><a href="../Rollback_Variables/player_prefs.htm">player_prefs</a></span> verwenden.</p>
+  <p>Diese Funktion gibt die letzten Einstellungen zurück, die für den angegebenen Spieler synchronisiert wurden. Das Setzen der Einstellungen aktualisiert also nicht sofort die Einstellungen, die diese Funktion zurückgibt.</p>
+  <p>Bitte lesen: <a data-xref="{title}" href="../Rollback_Preferences.htm">Spieler-Einstellungen</a></p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">rollback_get_player_prefs([player_id]);</p>
   <table>
@@ -34,36 +34,36 @@
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>player_id</td>
+        <td><span class="notranslate">player_id</span></td>
         <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td><span class="optional">OPTIONAL</span> The ID of the player for which preferences are returned.</td>
+        <td><span class="notranslate"><span class="optional">OPTIONAL</span> Die ID des Spielers, für den die Einstellungen zurückgegeben werden.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Any"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm#variable" target="_blank">Any</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code" id="p">var _my_prefs = rollback_get_player_prefs();<br />
-    <br />
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p class="code" id="p">var _my_prefs = rollback_get_player_prefs();<br>
+    <br>
     image_index = _my_prefs.character;
   </p>
-  <p>The above code gets the preferences set for the current player, and applies a preference to an instance variable.</p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> ruft die für den aktuellen Spieler festgelegten Einstellungen ab und wendet eine Einstellung auf eine Instanzvariable an.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Rollback_Functions.htm">Rollback Functions</a></div>
-        <div>Next: <a data-xref="{title}" href="rollback_create_game.htm">rollback_create_game</a></div>
+        <div>Zurück: <a data-xref="{title}" href="Rollback_Functions.htm">Rollback-Funktionen</a></div>
+        <div>Weiter: <a data-xref="{title}" href="rollback_create_game.htm">rollback_create_game</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 rollback_get_player_prefs

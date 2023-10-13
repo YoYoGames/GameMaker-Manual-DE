@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>While</title>
+  <title>Während</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the While action" />
   <meta name="rh-index-keywords" content="GML Visual Action - While" />
@@ -14,54 +14,54 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="While Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/i_Loops_While.png" /> While</h1>
-  <p>The <b>While</b> action is used to perform loops that only terminate when a specific condition returns <span class="inline">true</span>. For example, you can use a variable and set it to <span class="inline">false</span> then run the While loop and have it checking this variable, then at
-    some time in the loop you set the variable to <span class="inline">true</span> and the loop will terminate. Note that no matter where you set the condition within the while loop, <i>all</i> actions within the loop will be run to the end before the rest of the script
-    or event continues, changing the condition does not instantly break out of the loop.</p>
-  <p>When you add a While action into your code, you need to supply the variable to check, what kind of check to perform (less than, greater than, equals, etc...), and the value to check the variable against (you can also flag <i>not</i> to have the While
-    loop check to see if the condition is <i>not</i> true). You then add the actions to be performed within the While loop, much as you would add an action to an &quot;if&quot;, ie: dropping it to the side of the action rather than under it:</p>
-  <p><img alt="While drop actions" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/While_Drop.png" />All actions added to the side will be included in the While and will be performed before the event or script
-    continues with the actions added under (as shown in the example below). Note that you can end any loop prematurely if you call the <a href="Break.htm">Break</a> action.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="While Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/a_Loops_While.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Während</h1>
+  <p>Die <b>While-Aktion</b> wird verwendet, um <span class="notranslate">loops</span> auszuführen, die nur beendet wird, wenn eine bestimmte Bedingung zurückkommt <span class="inline">true</span>. Sie können z. B. eine Variable verwenden und sie auf <span class="inline">false</span> setzen, dann die While-Aktion <span class="notranslate">loop</span> ausführen und diese Variable überprüfen lassen.
+    zu einem bestimmten Zeitpunkt in <span class="notranslate">loop</span> die Variable auf <span class="inline">true</span> setzen und <span class="notranslate">loop</span> wird beendet. Beachten Sie, dass unabhängig davon, wo Sie die Bedingung innerhalb der while <span class="notranslate">loop</span> setzen, <i>alle</i> Aktionen innerhalb der <span class="notranslate">loop</span> bis zum Ende ausgeführt werden, bevor der Rest des Skripts
+    Wenn Sie die Bedingung ändern, wird die <span class="notranslate">loop</span> nicht sofort abgebrochen.</p>
+  <p>Wenn Sie eine While-Aktion in Ihre <span class="notranslate">code</span> einfügen, müssen Sie die zu prüfende Variable, die Art der Prüfung (kleiner als, größer als, gleich usw.) und den Wert, gegen den die Variable geprüft werden soll, angeben (Sie können auch festlegen, <i>dass</i> die While
+    <span class="notranslate">loop</span> Prüfung, um zu sehen, ob die Bedingung <i>nicht</i> wahr ist). Anschließend fügen Sie die auszuführenden Aktionen in die While-Anweisung <span class="notranslate">loop</span> ein, ähnlich wie Sie eine Aktion zu einem &quot;if&quot; hinzufügen würden, d. h. Sie fügen sie neben der Aktion ein und nicht unter ihr:</p>
+  <p><img>Alle Aktionen, die der Seite hinzugefügt werden, werden in das "While" aufgenommen und ausgeführt, bevor das Ereignis oder Skript
+    mit den darunter hinzugefügten Aktionen fortfährt (wie im folgenden Beispiel gezeigt). Beachten Sie, dass Sie jede <span class="notranslate">loop</span> vorzeitig beenden können, wenn Sie die <a href="Break.htm">Break-Aktion</a> aufrufen.</p>
+  <p> </p>
+  <h4>Aktion Syntax:</h4>
+  <p><img alt="While Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/i_Loops_While.png" /></p>
+  <h4>Argumente:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>Variable</td>
-        <td>The variable to use in the check</td>
+        <td><span class="notranslate">Variable</span></td>
+        <td>Die für die Prüfung zu verwendende Variable</td>
       </tr>
       <tr>
-        <td>Is</td>
-        <td>The type of evaluation to perform (less than, greater than, equal to, greater than or equal to and less than or equal to)</td>
+        <td><span class="notranslate">Is</span></td>
+        <td>Die Art der durchzuführenden Bewertung (kleiner als, größer als, gleich, größer oder gleich und kleiner oder gleich)</td>
       </tr>
       <tr>
-        <td>Value</td>
-        <td>The value to check the variable against</td>
+        <td><span class="notranslate">Value</span></td>
+        <td>Der Wert, gegen den die Variable geprüft wird</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="While Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Loops/e_Loops_While.png" />The above action block code creates a temporary local variable and sets it to <span class="inline">false</span>. This variable is
-    then checked in the While loop action and while it returns false the loop will run. In the loop we get two temporary local variables for a random x/y position in the room then we check that position for a collision. If no collision is found, the initial
-    variable is set to <span class="inline">true</span>, ending the loop. After the loop has ended an new instance is created at the random position that we discovered to have no collisions.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p><img>Der obige Aktionsblock <span class="notranslate">code</span> erstellt eine temporäre lokale Variable und setzt sie auf <span class="inline">false</span>. Diese Variable wird
+    wird dann in der Aktion While <span class="notranslate">loop</span> überprüft, und solange sie false zurückgibt, wird <span class="notranslate">loop</span> ausgeführt. In <span class="notranslate">loop</span> erhalten wir zwei temporäre lokale Variablen für eine zufällige x/y-Position im Raum und überprüfen dann diese Position auf eine Kollision. Wenn keine Kollision gefunden wird, wird die ursprüngliche
+    Variable auf <span class="inline">true</span> gesetzt, wodurch <span class="notranslate">loop</span> beendet wird. Nachdem <span class="notranslate">loop</span> beendet wurde, wird eine neue Instanz an der zufälligen Position erstellt, die keine Kollisionen aufweist.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Loop_Actions.htm">Loop Actions</a></div>
-        <div style="float:right">Next: <a href="For.htm">For</a></div>
+        <div style="float:left">Zurück: <a href="Loop_Actions.htm">Schleifen-Aktionen</a></div>
+        <div style="float:right">Nächste: <a href="For.htm">Für</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 Action - While

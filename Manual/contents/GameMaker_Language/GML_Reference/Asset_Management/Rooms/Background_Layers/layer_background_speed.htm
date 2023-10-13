@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>layer_background_speed</title>
+  <title>Schicht_Hintergrund_Geschwindigkeit</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function layer_background_speed" />
   <meta name="rh-index-keywords" content="layer_background_speed" />
@@ -15,50 +15,50 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_background_speed</h1>
-  <p>This function can be used to set the speed of an animating sprite that has been assigned to a background element. You give the background element ID (which you get when you create a background element using <a href="layer_background_create.htm"><span class="inline">layer_background_create()</span></a> or when you use the function <a href="layer_background_get_id.htm"><span class="inline">layer_background_get_id()</span></a>), and then set the animation speed. If the IDE has set the animation speed for the sprite used to be calculated as Frames Per Game Frame, then the speed value given is a <i>multiplier</i>, with 1 being the default value, and setting it to 0.5 will half the animation speed, while setting it to 2 will double it. However, if the IDE has set the animation speed for the sprite used to be calculated as Frames Per Second, then the speed value given is a literal frames per second value, so setting this to 5, for example, will set the animation to loop 5 frames every second that the game runs. If the background element has no sprite attached or the sprite used has no sub-images, this function will have no effect.</p>
-  <p> </p>
+  <h1>Schicht_Hintergrund_Geschwindigkeit</h1>
+  <p>Mit dieser Funktion können Sie die Geschwindigkeit eines animierenden <span class="notranslate">sprite</span> einstellen, das einem Hintergrundelement zugewiesen wurde. Sie geben die ID des Hintergrundelements an (die Sie erhalten, wenn Sie ein Hintergrundelement mit <a href="layer_background_create.htm"><span class="inline">layer_background_create()</span></a> oder wenn Sie die Funktion <a href="layer_background_get_id.htm"><span class="inline">layer_background_get_id()</span></a>), und legen dann die Animationsgeschwindigkeit fest. Wenn auf <span class="notranslate">IDE</span> festgelegt wurde, dass die Animationsgeschwindigkeit für das verwendete <span class="notranslate">sprite</span> als Frames Per Game Frame berechnet wird, dann ist der angegebene Geschwindigkeitswert ein <i>Multiplikator</i>, wobei 1 der Standardwert ist und die Einstellung auf 0,5 die Animationsgeschwindigkeit halbiert, während die Einstellung auf 2 die Geschwindigkeit verdoppelt. Wenn jedoch auf <span class="notranslate">IDE</span> die Animationsgeschwindigkeit für <span class="notranslate">sprite</span> als Frames pro Sekunde berechnet wird, dann ist der angegebene Geschwindigkeitswert ein buchstäblicher Wert für Frames pro Sekunde. Wenn dieser Wert beispielsweise auf 5 gesetzt wird, wird die Animation auf <span class="notranslate">loop</span> 5 Frames pro Sekunde, in der das Spiel läuft, eingestellt. Wenn dem Hintergrundelement kein <span class="notranslate">sprite</span> angehängt ist oder das verwendete <span class="notranslate">sprite</span> keine Unterbilder hat, hat diese Funktion keine Wirkung.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">layer_background_speed(background_element_id, speed);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>background_element_id</td>
-        <td><span data-keyref="Type_ID_Element_Background">Background Element ID</span></td>
-        <td>The unique ID value of the background element to change</td>
+        <td><span class="notranslate">background_element_id</span></td>
+        <td><span data-keyref="Type_ID_Element_Background">Hintergrund Element ID</span></td>
+        <td><span class="notranslate">The unique ID value of the background element to change</span></td>
       </tr>
       <tr>
-        <td>speed</td>
+        <td><span class="notranslate">speed</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The speed multiplier/value to use for the element</td>
+        <td><span class="notranslate">The speed multiplier/value to use for the element</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">var lay_id = layer_get_id(&quot;Background_water&quot;);<br />
     var back_id = layer_background_get_id(lay_id);<br />
     layer_background_speed(back_id, 0.5);</p>
-  <p>The above code will get the layer ID for the layer named &quot;Background_water&quot; and then use that to get the ID of the background element on that layer. This ID is then used to change the element image speed.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> ermittelt die Ebenen-ID für die Ebene &quot;Hintergrund_Wasser&quot; und verwendet diese dann, um die ID des Hintergrundelements auf dieser Ebene zu ermitteln. Diese ID wird dann verwendet, um die Bildgeschwindigkeit des Elements zu ändern.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Background_Layers.htm">Background Layers</a></div>
-        <div style="float:right">Next: <a href="layer_background_get_xscale.htm">layer_background_xscale</a></div>
+        <div style="float:left">Zurück: <a href="Background_Layers.htm">Hintergrund-Ebenen</a></div>
+        <div style="float:right">Nächste: <a href="layer_background_get_xscale.htm"><span class="notranslate">layer_background_xscale</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 layer_background_speed

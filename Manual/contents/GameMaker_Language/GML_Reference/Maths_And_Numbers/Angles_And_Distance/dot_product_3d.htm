@@ -2,15 +2,15 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>dot_product_3d</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Reference page for dot_product_3d"/>
-  <meta name="rh-index-keywords" content="dot_product_3d"/>
-  <meta name="search-keywords" content="dot_product_3d"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>punkt_produkt_3d</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for dot_product_3d" />
+  <meta name="rh-index-keywords" content="dot_product_3d" />
+  <meta name="search-keywords" content="dot_product_3d" />
   <meta name="is_pure" content="true" />
 </head>
 
@@ -19,83 +19,83 @@
 
 
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>dot_product_3d</h1>
-  <p>The dot product is a value expressing the angular relationship between two vectors and is found by taking two vectors, multiplying them together and then adding the results. The name &quot;dot product&quot; is derived from the centered dot &quot;·&quot;
-    that is often used to designate this operation (the alternative name &quot;scalar product&quot; emphasizes the scalar rather than vector nature of the result).</p>
-  <p>The actual mathematical formula can be written like this:</p>
+  <h1>punkt_produkt_3d</h1>
+  <p>Das Punktprodukt ist ein Wert, der das Winkelverhältnis zwischen zwei <span class="notranslate">vectors</span> ausdrückt und durch Multiplikation von zwei <span class="notranslate">vectors</span> und anschließender Addition der Ergebnisse ermittelt wird. Der Name &quot;Punktprodukt&quot; leitet sich von dem zentrierten Punkt &quot;-&quot; ab
+    abgeleitet, der häufig zur Bezeichnung dieser Operation verwendet wird (die alternative Bezeichnung &quot;Skalarprodukt&quot; betont eher die skalare als die <span class="notranslate">vector</span> Natur des Ergebnisses).</p>
+  <p>Die eigentliche mathematische Formel kann wie folgt geschrieben werden:</p>
   <p><img alt="Dot Product formula" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image.png"/></p>
-  <p>In 2D, the dot product of vectors <span class="inline">a[x1,y1]</span> and <span class="inline">b[x2,y2]</span> is <span class="inline">x1x2 + y1y2</span>, so in 3D, the dot product of vectors <span class="inline">a[x1,y1,z1]</span> and <span class="inline">b[x1,y1,z1]</span>    is <span class="inline">x1x2 + y1y2 + z1z2</span>. So, the dot_product_3d in <span data-keyref="GameMaker Name">GameMaker</span> is calculated as:</p>
+  <p>In 2D ist das Punktprodukt von <span class="notranslate">vectors</span> <span class="inline">a[x1,y1]</span> und <span class="inline">b[x2,y2]</span> gleich <span class="inline">x1x2 + y1y2</span>, in 3D ist das Punktprodukt von <span class="notranslate">vectors</span> <span class="inline">a[x1,y1,z1]</span> und <span class="inline">b[x1,y1,z1]</span> gleich <span class="inline">x1x2 + y1y2 + z1z2</span>. Das Punktprodukt_3d in <span data-keyref="GameMaker Name">GameMaker</span> wird also wie folgt berechnet:</p>
   <p class="code">a · b = (x1*x2) + (y1*y2) + (z1*z2);</p>
-  <p>The curious thing about the dot product is the relationship it has to the angle formed by the input vectors which can be expressed as:</p>
+  <p>Das Kuriose am Punktprodukt ist die Beziehung, die es zum Winkel hat, der durch die Eingabe <span class="notranslate">vectors</span> gebildet wird, und die wie folgt ausgedrückt werden kann:</p>
   <p class="code">a · b = (length of a) * (length of b) * cos(angle)</p>
-  <p>That is to say, the dot product of two vectors will be equal to the cosine of the angle between those vectors, multiplied by the lengths of each of them. Here is an image to illustrate:</p>
+  <p>Das heißt, das Punktprodukt von zwei <span class="notranslate">vectors</span> ist gleich dem Kosinus des Winkels zwischen diesen <span class="notranslate">vectors</span>, multipliziert mit den Längen der beiden. Hier ist ein Bild zur Veranschaulichung:</p>
   <p><img alt="Dot Product ilustration" class="center" height="143" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_image_2.png" width="406"/></p>
-  <p class="note"><strong>NOTE</strong>: For more information on vectors, see <a href="../../../../Additional_Information/Vectors.htm">here</a>.</p>
-  <p>There are a few things that we can now state from any two vectors in relation to the result of their dot product:</p>
+  <p class="note"><strong>HINWEIS</strong>: Weitere Informationen über <span class="notranslate">vectors</span> finden Sie <a href="../../../../Additional_Information/Vectors.htm">hier</a>.</p>
+  <p>Es gibt ein paar Dinge, die wir jetzt von zwei beliebigen <span class="notranslate">vectors</span> in Bezug auf das Ergebnis ihres Punktprodukts feststellen können:</p>
   <ul class="colour">
-    <li>If a and b are perpendicular (at 90 degrees to each other), the result of the dot product will be zero, because <span class="inline">cos(ang)</span> will be zero</li>
-    <li>If the angle between a and b are less than 90 degrees, the dot product will be positive (greater than zero), as <span class="inline">cos(ang)</span> will be positive</li>
-    <li>If the angle between a and b are greater than 90 degrees, the dot product will be negative (less than zero), as <span class="inline">cos(ang)</span> will be negative</li>
+    <li>Wenn a und b senkrecht zueinander stehen (im Winkel von 90 Grad), ist das Ergebnis des Punktprodukts gleich Null, da <span class="inline">cos(ang)</span> gleich Null ist.</li>
+    <li>Wenn der Winkel zwischen a und b kleiner als 90 Grad ist, ist das Punktprodukt positiv (größer als Null), da <span class="inline">cos(ang)</span> positiv ist.</li>
+    <li>Wenn der Winkel zwischen a und b größer als 90 Grad ist, ist das Punktprodukt negativ (kleiner als Null), da <span class="inline">cos(ang)</span> negativ ist.</li>
   </ul>
-  <p>So what does this mean for those of us that make games? Well, this mathematical relationship can be used in quite a few circumstances, but the best way to see it is to build an actual scenario and see for yourself what is going on. One of the simplest
-    ways to do this is to generate a simple &quot;height&quot; check for an enemy in, say, a platform game so that the enemy will &quot;see&quot; the player if they are above the plane formed by the enemy <i>normal</i> vector and the 3d floor.</p>
-  <p><img alt="Dot product 3D example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/dot_product_3d_image.png"/>Basically, we are getting the vector normal from the enemy perpendicular to the floor and then we are
-    getting the vector of the player to the enemy. We will then get the dot_product of these vectors, and if the result is positive the player is &quot;above&quot; the enemy floor plane and if it is negative he is below. The actual code to get this working
-    is supplied in the example below.</p>
-  <p> </p>
+  <p>Was bedeutet das nun für uns, die wir Spiele entwickeln? Nun, diese mathematische Beziehung kann unter vielen Umständen verwendet werden, aber am besten sieht man sie, wenn man ein tatsächliches Szenario erstellt und selbst sieht, was vor sich geht. Eine der einfachsten
+    Eine der einfachsten Möglichkeiten, dies zu tun, besteht darin, eine einfache &quot;Höhen&quot;-Prüfung für einen Feind in einem Spiel (z. B. <span class="notranslate">platform</span> ) zu erstellen, so dass der Feind den Spieler &quot;sieht&quot;, wenn er sich über der Ebene befindet, die von der gegnerischen <i>normalen</i> <span class="notranslate">vector</span> und dem 3D-Boden gebildet wird.</p>
+  <p><img>Im Grunde genommen erhalten wir die <span class="notranslate">vector</span> Normale vom Feind senkrecht zum Boden und dann
+    die <span class="notranslate">vector</span> des Spielers zum Feind. Wir erhalten dann das Punktprodukt dieser <span class="notranslate">vectors</span>, und wenn das Ergebnis positiv ist, befindet sich der Spieler &quot;über&quot; der feindlichen Bodenebene, und wenn es negativ ist, befindet er sich darunter. Das aktuelle <span class="notranslate">code</span>, um dies zu erreichen
+    ist im folgenden Beispiel enthalten.</p>
+  <p> </p>
   <h4><b>Syntax:</b></h4>
   <p class="code">dot_product_3d(x1, y1, z1, x2, y2, z2)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Beschreibung</th>
      </tr>
       <tr>
-        <td>x1</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x coordinate of the first vector.</td>
+        <td><span class="notranslate">x1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The x coordinate of the first vector.</span></td>
      </tr>
       <tr>
-        <td>y1</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y coordinate of the first vector.</td>
+        <td><span class="notranslate">y1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The y coordinate of the first vector.</span></td>
      </tr>
       <tr>
-        <td>z1</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The z coordinate of the first vector.</td>
+        <td><span class="notranslate">z1</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The z coordinate of the first vector.</span></td>
      </tr>
       <tr>
-        <td>x2</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The x coordinate of the second vector.</td>
+        <td><span class="notranslate">x2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The x coordinate of the second vector.</span></td>
      </tr>
       <tr>
-        <td>y2</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The y coordinate of the second vector.</td>
+        <td><span class="notranslate">y2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The y coordinate of the second vector.</span></td>
      </tr>
       <tr>
-        <td>z2</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The z coordinate of the second vector.</td>
+        <td><span class="notranslate">z2</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The z coordinate of the second vector.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Real"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">var x1, y1, x2, y2;<br/> x1 = 0;<br/> y1 = 1;<br/> z1 = 0;<br/> x2 = o_Player.x - x;<br/> y2 = o_Player.y - y;<br/> z2 = o_Player.z - z; if dot_product_3d(x1, y1, z1, x2, y2, z2) &gt; 0 above=true else above=false;</p>
-  <p>The above code creates a vector normal along the instances y (up) axis, and then gets the vector of the player object &quot;o_Player&quot; to itself. Finally it calculates the dot product of these two vectors and if it is greater tan 0 it sets the variable
-    &quot;above&quot; to true, and if it is less than or equal to 0 it sets it to &quot;false&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> erstellt eine <span class="notranslate">vector</span> Normale entlang der y-Achse (nach oben) der Instanz und erhält dann die <span class="notranslate">vector</span> des Player-Objekts &quot;o_Player&quot; zu sich selbst. Schließlich wird das Punktprodukt dieser beiden <span class="notranslate">vectors</span> berechnet und wenn es größer als 0 ist, wird die Variable
+    &quot;oben&quot; auf &quot;wahr&quot;, und wenn es kleiner oder gleich 0 ist, wird es auf &quot;falsch&quot; gesetzt.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Angles_And_Distance.htm">Angles And Distance</a></div>
-        <div style="float:right">Next: <a href="dot_product_normalised.htm">dot_product_normalised</a></div>
+        <div style="float:left">Zurück: <a href="Angles_And_Distance.htm">Winkel und Abstand</a></div>
+        <div style="float:right">Nächste: <a href="dot_product_normalised.htm"><span class="notranslate">dot_product_normalised</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 dot_product_3d

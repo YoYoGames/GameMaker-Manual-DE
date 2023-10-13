@@ -6,7 +6,7 @@
   <title>sprite_delete</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function sprite_delete" />
   <meta name="rh-index-keywords" content="sprite_delete" />
@@ -15,43 +15,43 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>sprite_delete</h1>
-  <p>This function will delete a sprite from the game, freeing any memory that was reserved for it. This is a very important function for those moments when you need to create and change sprites from external sources (like loading a sprite from a file with
-    <span class="inline"><a href="sprite_add.htm">sprite_add()</a></span>, or duplicating a sprite using <span class="inline"><a href="sprite_duplicate.htm">sprite_duplicate()</a></span>) and should always be used to remove those assets that are no longer
-    needed by a game, or to clear an indexed asset from a variable before re-assigning another asset to that variable. <b>This cannot be used to delete sprites that are included in the game as part of the assets in the Asset Browser</b>.</p>
-  <p> </p>
+  <p>Diese Funktion löscht ein <span class="notranslate">sprite</span> aus dem Spiel und gibt den dafür reservierten Speicher frei. Dies ist eine sehr wichtige Funktion für die Momente, in denen Sie <span class="notranslate">sprites</span> aus externen Quellen erstellen und ändern müssen (wie das Laden einer <span class="notranslate">sprite</span> aus einer Datei mit
+   <span class="inline"><a href="sprite_add.htm">sprite_add()</a></span> oder das Duplizieren eines <span class="notranslate">sprite</span> mit <span class="inline"><a href="sprite_duplicate.htm">sprite_duplicate()</a></span>) und sollte immer verwendet werden, um nicht mehr benötigte Assets zu entfernen
+    nicht mehr benötigt werden, oder um ein indiziertes Asset aus einer Variablen zu löschen, bevor ein anderes Asset dieser Variablen neu zugewiesen wird. <b>Dies kann nicht verwendet werden, um <span class="notranslate">sprites</span> zu löschen, die im Spiel als Teil der Assets im Asset-Browser enthalten sind</b>.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">sprite_delete(index);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Beschreibung</th>
      </tr>
       <tr>
-        <td>index</td><td><span data-keyref="Type_Asset_Sprite"></span></td>
-        <td>The index of the sprite to be deleted.</td>
+        <td><span class="notranslate">index</span></td><td><span data-keyref="Type_Asset_Sprite"></span></td>
+        <td><span class="notranslate">The index of the sprite to be deleted.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns</h4>
+  <p> </p>
+  <h4>Rückgabe</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">var spr = sprite_create_from_surface(application_surface, 0, 0, 32, 32, false, false, 16, 16);<br/> sprite_merge(spr_Player, spr);<br/> sprite_delete(spr);
   </p>
-  <p>The above code creates a local variable and then stores the index of the sprite created from the application surface. This sprite is then merged with the asset indexed in the variable &quot;spr_Player&quot; before being removed from memory again.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> erstellt eine lokale Variable und speichert dann den Index der <span class="notranslate">sprite</span>, die von der Anwendungsoberfläche erstellt wurde. Diese <span class="notranslate">sprite</span> wird dann mit dem in der Variablen &quot;spr_Player&quot; indizierten Asset zusammengeführt, bevor sie wieder aus dem Speicher entfernt wird.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sprite_Manipulation.htm">Sprite Manipulation</a></div>
-        <div style="float:right">Next: <a href="sprite_set_alpha_from_sprite.htm">sprite_set_alpha_from_sprite</a></div>
+        <div style="float:left">Zurück: <a href="Sprite_Manipulation.htm">Sprite-Manipulation</a></div>
+        <div style="float:right">Nächste: <a href="sprite_set_alpha_from_sprite.htm"><span class="notranslate">sprite_set_alpha_from_sprite</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 sprite_delete

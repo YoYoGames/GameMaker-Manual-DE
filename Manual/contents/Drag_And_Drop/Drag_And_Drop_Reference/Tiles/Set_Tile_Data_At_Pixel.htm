@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Set Tile Data At Pixel</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>Kacheldaten am Pixel einstellen</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Set Tile Data At Pixel action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Set Tile Data At Pixel" />
@@ -14,52 +13,56 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set Tile Data At Pixel Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Set_Tile_Data_At_Pixel.png" /> Set Tile Data At Pixel</h1>
-  <p>With this action you can set the tile data for a tile cell found at a specific position on a <a class="glossterm" data-glossterm="tile map" href="#">tile map</a> layer. The tile data is simply a value that reflects the index of the tile along with the flip, mirror, and rotate values, as well as any custom tile masks that you have used. With this action you first supply the layer to target using the name of the layer (a string) as defined in the room editor, and then the x and y axis in the room to set the tile data for. Note that the tile data will be set for the tile map &quot;cell&quot; in which the given position lands. For example, if your tile set tiles are 16x16, then the tile map layer will hold tiles in cells of 16x16 pixels, so if you use this action to target the room position (8, 8), you will be changing the tile in the cell (0, 0) of the tile map.<b></b></p>
-  <div data-conref="../../../assets/snippets/Note_Selected_Layer_Must_Be_Tile_Map_Layer.hts"> </div>
-  <p>The final argument for the action is the tile data itself. You would normally retrieve the tile data for the tile map cell using the action <a href="Set_Tile_Data_At_Pixel.htm">Get Tile Data At Pixel</a> and then manipulate it using the action <a href="Set_Tile_Data_Transform.htm">Set Tile Data Transform</a> before setting it again with this action. For more information on tile data, please see the GML section on <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">Tile Map Functions</a>.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Set Tile Data At Pixel Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/a_Tiles_Set_Tile_Data_At_Pixel.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Kacheldaten am Pixel einstellen</h1>
+  <p>Mit dieser Aktion können Sie die Kacheldaten für eine Kachelzelle festlegen, die sich an einer bestimmten Position auf einer <a class="glossterm" data-glossterm="Kachelkarte" href="#">Kachelkartenebene</a> befindet. Die Kacheldaten sind einfach ein Wert, der den Index der Kachel zusammen mit den
+    Spiegeln, Drehen und Spiegeln sowie alle benutzerdefinierten Kachelmasken, die Sie verwendet haben. Bei dieser Aktion geben Sie zunächst die Ebene an, die Sie anvisieren möchten, indem Sie den Namen der Ebene (eine Zeichenkette), wie im Raumeditor definiert, und dann die x- und y-Achse im Raum
+    für die die Kacheldaten festgelegt werden sollen. Beachten Sie, dass die Kacheldaten für die &quot;Zelle&quot; der Kachelkarte gesetzt werden, in der die angegebene Position liegt. Wenn Ihre Kacheln zum Beispiel 16x16 groß sind, dann enthält die Kachelkartenebene Kacheln in Zellen von 16x16 Pixeln, also
+    Wenn Sie diese Aktion für die Raumposition (8, 8) verwenden, ändern Sie die Kachel in der Zelle (0, 0) der Kachelübersicht.<b></b></p>
+  <p class="note"><b>HINWEIS</b>: Die ausgewählte Ebene <i>muss</i> im Raumeditor als Kachelkartenebene definiert worden sein, andernfalls können Fehler auftreten.</p>
+  <p>Die endgültige <span class="notranslate">argument</span> für die Aktion sind die Kacheldaten selbst. Normalerweise würden Sie die Kacheldaten für die Kachelkartenzelle mit der Aktion <a href="Set_Tile_Data_At_Pixel.htm">Kacheldaten bei Pixel</a> abrufen und dann mit der Aktion <a href="Set_Tile_Data_Transform.htm">Kacheldaten transformieren</a> bearbeiten, bevor Sie sie mit dieser Aktion wieder einstellen. Weitere Informationen zu Kacheldaten finden Sie unter <span class="notranslate">GML</span> im Abschnitt über <a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">Kachelkartenfunktionen</a>.</p>
+  <p> </p>
+  <h4>Aktion Syntax:</h4>
+  <p><img alt="Set Tile Data At Pixel Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/i_Tiles_Set_Tile_Data_At_Pixel.png"/></p>
+  <h4>Argumente:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>Layer</td>
-        <td>The layer with the tile map to target</td>
+        <td><span class="notranslate">Layer</span></td>
+        <td>Die Ebene mit der anvisierten Kachelkarte</td>
       </tr>
       <tr>
-        <td>X</td>
-        <td>The position along the horizontal (X) axis to set the tile-data for</td>
+        <td><span class="notranslate">X</span></td>
+        <td>Die Position auf der horizontalen Achse (X), für die die Kacheldaten festgelegt werden sollen</td>
       </tr>
       <tr>
-        <td>Y</td>
-        <td>The position along the vertical (Y) axis to set the tile-data</td>
+        <td><span class="notranslate">Y</span></td>
+        <td>Die Position auf der vertikalen (Y-)Achse, an der die Kacheldaten gesetzt werden sollen</td>
       </tr>
       <tr>
-        <td>Data</td>
-        <td>The tile-data to use for setting the cell at the position</td>
+        <td><span class="notranslate">Data</span></td>
+        <td>Die Kacheldaten, die zum Setzen der Zelle an der Position verwendet werden sollen</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Set Tile Data At Pixel Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Tiles/e_Tiles_Set_Tile_Data_At_Pixel.png" />The above action block code tests for a mouse click and when one is received it retrieves the tile-data for the cell that coincides with the mouse position. This data is then modified and returned to the tile map layer, rotating the tile in that cell.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p><img>Der obige Aktionsblock <span class="notranslate">code</span> testet auf einen Mausklick und wenn ein solcher empfangen wird
+    ruft er die Kacheldaten für die Zelle ab, die mit der Mausposition übereinstimmt. Diese Daten werden dann geändert und an die Kachelkartenebene zurückgegeben, wobei die Kachel in dieser Zelle gedreht wird.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Tile_Actions.htm">Tile Actions</a></div>
-        <div style="float:right">Next: <a href="Get_Tile_Data_At_Pixel.htm">Get Tile Data At Pixel</a></div>
+        <div style="float:left">Zurück: <a href="Tile_Actions.htm">Kachel-Aktionen</a></div>
+        <div style="float:right">Nächste: <a href="Get_Tile_Data_At_Pixel.htm">Kacheldaten bei Pixel abrufen</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Tile Data At Pixel
@@ -67,5 +70,5 @@ Action - Set Tile Data At Pixel
   <!-- TAGS
 action_tile_set_data_at_pixel
 -->
-</body>
-</html>
+
+</body></html>

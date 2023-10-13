@@ -2,55 +2,55 @@
 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Open Ini File</title>
-  <meta name="generator" content="Adobe RoboHelp 2019"/>
-  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page that explains the Open Ini File action"/>
-  <meta name="rh-index-keywords" content="GML Visual Action - Open Ini File"/>
-  <meta name="search-keywords" content="Open Ini File"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Ini-Datei öffnen</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <script src="../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page that explains the Open Ini File action" />
+  <meta name="rh-index-keywords" content="GML Visual Action - Open Ini File" />
+  <meta name="search-keywords" content="Open Ini File" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Open Ini File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Open_Ini_File.png"/> Open Ini File</h1>
-  <p>With this action you can open an Ini file for reading and/or writing. If the Ini file does not exist at the location you are checking, <span data-keyref="GameMaker Name">GameMaker</span> may create one, but <i>only</i> if you write data to it. If you have only read information from
-    the Ini file, then the default values for the read function will be returned, but the Ini file will not actually be created.</p>
-  <p>Please note that you can only have <i>one Ini file open at any one time</i> and remember to use <a href="Close_Ini_File.htm">Close Ini File</a> once you&#39;re finished reading/writing from the Ini file as the information is not actually stored to disk
-    until then (it is stored in memory until the file is closed).</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Open Ini File Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/a_Files_Open_Ini_File.png"/></p>
-  <h4>Arguments:</h4>
+  <h1><img> Ini-Datei öffnen</h1>
+  <p>Mit dieser Aktion können Sie eine Ini-Datei zum Lesen und/oder Schreiben öffnen. Wenn die Ini-Datei an dem Ort, den du prüfst, nicht existiert, kann <span data-keyref="GameMaker Name">GameMaker</span> eine erstellen, aber <i>nur</i>, wenn du Daten in sie schreibst. Wenn du nur Informationen aus der Ini-Datei gelesen hast
+    der Ini-Datei gelesen haben, werden die Standardwerte für die Lesefunktion zurückgegeben, aber die Ini-Datei wird nicht tatsächlich erstellt.</p>
+  <p>Bitte beachten Sie, dass <i>immer</i> nur <i>eine Ini-Datei geöffnet</i> sein kann und dass Sie die <a href="Close_Ini_File.htm">Ini-Datei schließen</a> müssen, wenn Sie mit dem Lesen/Schreiben der Ini-Datei fertig sind, da die Informationen bis dahin nicht auf der Festplatte gespeichert werden.
+    gespeichert werden (sie werden im Speicher gehalten, bis die Datei geschlossen wird).</p>
+  <p> </p>
+  <h4>Aktion Syntax:</h4>
+  <p><img alt="Open Ini File Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/i_Files_Open_Ini_File.png"/></p>
+  <h4>Argumente:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>Filename</td>
-        <td>The name - as a string and with the <span class="inline">.ini</span> extension - of the file to open</td>
+        <td><span class="notranslate">Filename</span></td>
+        <td>Der Name der zu öffnenden Datei - als Zeichenfolge und mit der Erweiterung <span class="inline">.ini</span> </td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Open Ini File Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Files/e_Files_Open_Ini_File.png"/>The above action block code will open an ini file for use, then get the value associated with
-    the &quot;name&quot; key under the &quot;player&quot; header. If the name returned matches the default name value (ie: the file, section or key does <i>not</i> exist) then the file has a global variable written to it before being closed (and writing
-    the new data to disk).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p><img>Der obige Aktionsblock <span class="notranslate">code</span> öffnet eine Ini-Datei zur Verwendung und ruft dann den Wert ab, der mit
+    dem Schlüssel &quot;name&quot; unter der Kopfzeile &quot;player&quot; zugeordnet ist. Wenn der zurückgegebene Name mit dem Standardwert für den Namen übereinstimmt (d. h. die Datei, der Abschnitt oder der Schlüssel existiert <i>nicht</i> ), wird eine globale Variable in die Datei geschrieben, bevor sie geschlossen wird (und die neuen Daten auf die Festplatte geschrieben werden).
+    die neuen Daten auf die Festplatte geschrieben werden).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="File_Actions.htm">File Actions</a></div>
-        <div style="float:right">Next: <a href="Close_Ini_File.htm">Close Ini File</a></div>
+        <div style="float:left">Zurück: <a href="File_Actions.htm">Datei-Aktionen</a></div>
+        <div style="float:right">Nächste: <a href="Close_Ini_File.htm">Ini-Datei schließen</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Open Ini File

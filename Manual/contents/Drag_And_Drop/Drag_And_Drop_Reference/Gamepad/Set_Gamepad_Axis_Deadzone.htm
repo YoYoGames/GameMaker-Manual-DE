@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Set Gamepad Axis Deadzone</title>
+  <title>Gamepad-Achsen-Totzone einstellen</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Set Gamepad Axis Deadzone action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Set Gamepad Axis Deadzone" />
@@ -14,47 +14,47 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Gamepad Set Axis Deadzone Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_Set_Axis_Deadzone.png" /> Set Gamepad Axis Deadzone</h1>
-  <p>This action can be used to set the &quot;dead zone&quot; of the gamepad stick axis. You specify the gamepad index to set, and then set a value from 0 to 1 and if the input amount is lower than the given value, the gamepad stick axis is considered to
-    be at 0. Note that this is a global setting that will affect <i>all</i> axis of the stick connected.</p>
-  <p>Note that this does not modify the output of the <a href="Get_Gamepad_Axis.htm">Get Gamepad Axis</a> action, which will always return a value from -1 and 0, and 0 and 1. For example, setting the deadzone to 0.2 will mean that pushing the stick right will
-    only start returning a value from 0 - 1 when the <em>raw</em> axis value is over 0.2 - so when the raw value is 0.2, the return value will be 0, when the raw value is at 0.5, the return value will be 0.375, or if the raw value is 0.9, then the return
-    value would be 0.875.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Set Axis Deadzone action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/a_GamePad_Set_Axis_Deadzone.png" /></p>
-  <p> </p>
-  <h4>Arguments:</h4>
+  <h1><img> Gamepad-Achsen-Totzone einstellen</h1>
+  <p>Mit dieser Aktion kann die &quot;tote Zone&quot; der Gamepad-Stick-Achse festgelegt werden. Du gibst den Gamepad-Index an, der eingestellt werden soll, und stellst dann einen Wert zwischen 0 und 1 ein, und wenn der Eingabebetrag niedriger als der angegebene Wert ist, wird die Gamepad-Stick-Achse als 0 betrachtet.
+    Beachten Sie, dass dies eine globale Einstellung ist, die sich auf <i>alle</i> Achsen des angeschlossenen Sticks auswirkt.</p>
+  <p>Beachten Sie, dass dies die Ausgabe der Aktion " <a href="Get_Gamepad_Axis.htm">Get Gamepad Axis</a> " nicht verändert, die immer einen Wert zwischen -1 und 0 bzw. 0 und 1 zurückgibt. Wenn Sie beispielsweise die Totzone auf 0,2 setzen, bedeutet dies, dass das Drücken des Knüppels nach rechts
+    erst dann einen Wert von 0 bis 1 zurückgibt, wenn der <em>Rohwert</em> der Achse über 0,2 liegt - wenn der Rohwert also 0,2 ist, ist der Rückgabewert 0, wenn der Rohwert 0,5 ist, ist der Rückgabewert 0,375, oder wenn der Rohwert 0,9 ist, ist der
+    Wert 0,875 sein.</p>
+  <p> </p>
+  <h4>Aktion Syntax:</h4>
+  <p><img alt="Gamepad Set Axis Deadzone Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/i_GamePad_Set_Axis_Deadzone.png" /></p>
+  <p> </p>
+  <h4>Argumente:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>Gamepad</td>
-        <td>The gamepad index.</td>
+        <td><span class="notranslate">Gamepad</span></td>
+        <td>Der Gamepad-Index.</td>
       </tr>
       <tr>
-        <td>Deadzone</td>
-        <td>The deadzone value (0 - 1)</td>
+        <td><span class="notranslate">Deadzone</span></td>
+        <td>Der Wert der Totzone (0 - 1)</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Set Axis Deadzone example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Gamepad/e_GamePad_Set_Axis_Deadzone.png" />The above action block code sets the deadzone for all gamepad indices to 0.2.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p><img>Der obige Aktionsblock <span class="notranslate">code</span> setzt die Totzone für alle Gamepad-Indizes auf 0,2.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Gamepad_Actions.htm">Gamepad Actions</a></div>
-        <div style="float:right">Next: <a href="If_Gamepad_Button_Pressed.htm">If Gamepad Button Pressed</a></div>
+        <div style="float:left">Zurück: <a href="Gamepad_Actions.htm">Gamepad-Aktionen</a></div>
+        <div style="float:right">Nächste: <a href="If_Gamepad_Button_Pressed.htm">Wenn die Gamepad-Taste gedrückt wird</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Gamepad Set Axis Deadzone

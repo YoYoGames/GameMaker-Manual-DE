@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>clickable_add</title>
+  <title>anklickbar_hinzufügen</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for clickable_add" />
   <meta name="rh-index-keywords" content="clickable_add" />
@@ -15,150 +15,150 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>clickable_add</h1>
-  <p>With this function you can create a custom, clickable, icon that acts as a &quot;button&quot; outside of the game canvas, but within the browser window itself. The function will return an ID value which must be stored in a variable to be used in all further button functions that reference the new clickable. This function is very useful to prevent the browser creating a pop-up window when clicking on the button as it is all done through <span data-keyref="GameMaker Name">GameMaker</span> itself.</p>
-  <p>You must first set the position, which is relative to the (0,0) of the browser window (top left corner) and then give the texture page entry for the sprite you wish the button icon to have (see: <a href="../Asset_Management/Sprites/Sprite_Information/sprite_get_tpe.htm"><span class="inline">sprite_get_tpe()</span></a>). You can then specify either a URL to open or a script (from the Asset Browser of <span data-keyref="GameMaker Name">GameMaker</span>) to be opened or run. The &quot;target&quot; parameter that you specify is the same as the standard JavaScript &quot;name&quot; value when you use the <span class="inline">open()</span> method (be aware that all but &#39;_self&#39; may result in the browser blocking, or asking the user if they wish to allow it) and the &quot;params&quot; argument is the same as the JavaScript &quot;specs&quot; parameter for controlling what properties the new window/tab should display (not all browsers may support all features). If you are using the icon to run an internal script, these last two arguments can be left as empty strings &quot;&quot;.</p>
-  <p>Valid targets are:</p>
+  <h1>anklickbar_hinzufügen</h1>
+  <p>Mit dieser Funktion können Sie ein benutzerdefiniertes, anklickbares Symbol erstellen, das als &quot;Schaltfläche&quot; außerhalb des Spiel-Canvas, aber innerhalb des Browserfensters selbst fungiert. Die Funktion gibt einen ID-Wert zurück, der in einer Variablen gespeichert werden muss, um in allen weiteren Schaltflächenfunktionen verwendet zu werden, die auf die neue klickbare Schaltfläche verweisen. Diese Funktion ist sehr nützlich, um zu verhindern, dass der Browser ein Popup-Fenster erzeugt, wenn man auf die Schaltfläche klickt, da dies alles von <span data-keyref="GameMaker Name">GameMaker</span> selbst erledigt wird.</p>
+  <p>Sie müssen zuerst die Position festlegen, die relativ zur (0,0) des Browserfensters (linke obere Ecke) ist, und dann den Eintrag der Texturseite für die <span class="notranslate">sprite</span> angeben, die das Symbol der Schaltfläche haben soll (siehe: <a href="../Asset_Management/Sprites/Sprite_Information/sprite_get_tpe.htm"><span class="inline">sprite_get_tpe()</span></a>). Sie können dann entweder eine URL angeben, die geöffnet werden soll, oder eine <span class="notranslate">script</span> (aus dem Asset Browser von <span data-keyref="GameMaker Name">GameMaker</span>), die geöffnet oder ausgeführt werden soll. Der &quot;target&quot;-Parameter, den Sie angeben, ist derselbe wie der Standard-JavaScript-&quot;name&quot;-Wert, wenn Sie die <span class="inline">open()</span> -Methode verwenden (beachten Sie, dass alle außer &quot;_self&quot; dazu führen können, dass der Browser den Aufruf blockiert oder den Benutzer fragt, ob er ihn zulassen möchte), und der &quot;params&quot;-Parameter <span class="notranslate">argument</span> ist derselbe wie der JavaScript-&quot;specs&quot;-Parameter zur Steuerung der Eigenschaften, die das neue Fenster/der neue Tab anzeigen soll (nicht alle Browser unterstützen möglicherweise alle Funktionen). Wenn Sie das Symbol verwenden, um ein internes <span class="notranslate">script</span> auszuführen, können die letzten beiden <span class="notranslate">arguments</span> als leere Strings &quot;&quot; belassen werden.</p>
+  <p>Gültige Ziele sind:</p>
   <table>
     <tbody>
       <tr>
-        <th>Target</th>
-        <th>Description</th>
+        <th>Ziel</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
         <td>_blank</td>
-        <td>Opens the linked document in a new window or tab.</td>
+        <td>Öffnet das verknüpfte Dokument in einem neuen Fenster oder einer neuen Registerkarte.</td>
       </tr>
       <tr>
         <td>_self</td>
-        <td>Opens the linked document in the same frame as it was clicked (this is default).</td>
+        <td>Öffnet das verknüpfte Dokument in demselben Rahmen, in dem es angeklickt wurde (Standardeinstellung).</td>
       </tr>
       <tr>
-        <td>_parent</td>
-        <td>Opens the linked document in the parent frame.</td>
+        <td>_Eltern</td>
+        <td>Öffnet das verknüpfte Dokument im übergeordneten Rahmen.</td>
       </tr>
       <tr>
         <td>_top</td>
-        <td>Opens the linked document in the full body of the window.</td>
+        <td>Öffnet das verknüpfte Dokument im Volltext des Fensters.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p>Valid parameters are:</p>
+  <p> </p>
+  <p>Gültige Parameter sind:</p>
   <table>
     <tbody>
       <tr>
-        <th>Parameters</th>
-        <th>Description</th>
+        <th>Parameter</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td><b>&#39;height=[</b>px<b>]&#39;</b></td>
-        <td>The height of the window, with the minimum value being 100.</td>
+        <td><b>height=[px</b><b>]'</b></td>
+        <td>Die Höhe des Fensters, wobei der Mindestwert 100 beträgt.</td>
       </tr>
       <tr>
-        <td><b>&#39;width=[</b>px<b>]&#39;</b></td>
-        <td>The width of the window, with the minimum value being 100.</td>
+        <td><b>width=[px</b><b>]'</b></td>
+        <td>Die Breite des Fensters, wobei der Mindestwert 100 beträgt.</td>
       </tr>
       <tr>
-        <td><b>&#39;left=[</b>px<b>]&#39;</b></td>
-        <td>The left position of the window.</td>
+        <td><b>left=[px</b><b>]'</b></td>
+        <td>Die linke Position des Fensters.</td>
       </tr>
       <tr>
-        <td><b>&#39;top=[</b>px<b>]&#39;</b></td>
-        <td>The top position of the window (IE only).</td>
+        <td><b>'top=[px</b><b>]'</b></td>
+        <td>Die obere Position des Fensters (nur IE).</td>
       </tr>
       <tr>
-        <td><b>&#39;location=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display the address field (default is 1).</td>
+        <td><b>location=[</b>boolean<b>]'</b></td>
+        <td>Ob das Adressfeld angezeigt werden soll oder nicht (Standardwert ist 1).</td>
       </tr>
       <tr>
-        <td><b>&#39;menubar=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display the menu bar (default is 1).</td>
+        <td><b>menubar=[</b>boolean<b>]'</b>.</td>
+        <td>Ob die Menüleiste angezeigt werden soll oder nicht (Standard ist 1).</td>
       </tr>
       <tr>
-        <td><b>&#39;resizable=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not the window is resizable (default is 1).</td>
+        <td><b>resizable=[</b>boolean<b>]'</b></td>
+        <td>Ob das Fenster in der Größe veränderbar ist oder nicht (Standard ist 1).</td>
       </tr>
       <tr>
-        <td><b>&#39;scrollbars=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display scroll bars (default is 1).</td>
+        <td><b>scrollbars=[</b>boolean<b>]'</b>.</td>
+        <td>Ob Bildlaufleisten angezeigt werden sollen oder nicht (Standard ist 1).</td>
       </tr>
       <tr>
-        <td><b>&#39;status=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to add a status bar (default is 1).</td>
+        <td><b>status=[</b>boolesch<b>]'</b></td>
+        <td>Ob eine Statusleiste hinzugefügt werden soll oder nicht (Standard ist 1).</td>
       </tr>
       <tr>
-        <td><b>&#39;titlebar=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display the title bar. This is ignored unless the calling application is an HTML Application or a trusted dialog box (default is 1);</td>
+        <td><b>titlebar=[</b>boolean<b>]'</b></td>
+        <td>Ob die Titelleiste angezeigt werden soll oder nicht. Dies wird ignoriert, es sei denn, die aufrufende Anwendung ist eine HTML-Anwendung oder ein vertrauenswürdiges Dialogfeld (Standardwert ist 1);</td>
       </tr>
       <tr>
-        <td><b>&#39;toolbar=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display the browser toolbar (default is yes).</td>
+        <td><b>toolbar=[</b>boolean<b>]'</b></td>
+        <td>Ob die Browser-Symbolleiste angezeigt werden soll oder nicht (Standardeinstellung ist ja).</td>
       </tr>
     </tbody>
   </table>
-  <p><br />
-    It is also worth noting that if the URL argument you pass in is the name of a <a href="../../GML_Overview/Script_Functions.htm">script function</a> (ie: it doesn&#39;t start with &quot;http://&quot;) AND the script is called <span class="inline"><b>gmcallback_*</b></span> then you can get direct feeds into an html5 event. <span data-keyref="GameMaker Name">GameMaker</span> script function names are <i>not</i> obfuscated if they begin with <span class="inline">gmcallback_</span>.</p>
-  <p> </p>
+  <p><br>
+    Es ist auch erwähnenswert, dass, wenn die URL <span class="notranslate">argument</span>, die Sie übergeben, der Name einer <a href="../../GML_Overview/Script_Functions.htm">Script-Funktion</a> ist (d.h. sie beginnt nicht mit &quot;http://&quot;) UND die <span class="notranslate">script</span> heißt <span class="inline"><b>gmcallback_*</b></span>, dann können Sie direkte Feeds in ein html5-Ereignis erhalten. <span data-keyref="GameMaker Name">GameMaker-Script-Funktionsnamen</span> werden <i>nicht</i> verschleiert, wenn sie mit <span class="inline">gmcallback_</span> beginnen.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">clickable_add(x, y, tpe, url, target, params);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>x</td>
+        <td><span class="notranslate">x</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The x position within the <i>window</i>.</td>
+        <td><span class="notranslate">The x position within the <i>window</i>.</span></td>
       </tr>
       <tr>
-        <td>y</td>
+        <td><span class="notranslate">y</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The y position within the <i>window</i>.</td>
+        <td><span class="notranslate">The y position within the <i>window</i>.</span></td>
       </tr>
       <tr>
-        <td>tpe</td>
-        <td><span data-keyref="Type_TPE">Texture Page Entry</span></td>
-        <td>The texture page entry for the sprite to be used.</td>
+        <td><span class="notranslate">tpe</span></td>
+        <td><span data-keyref="Type_TPE">Textur Seiteneintrag</span></td>
+        <td><span class="notranslate">The texture page entry for the sprite to be used.</span></td>
       </tr>
       <tr>
-        <td>url</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The URL (website address) to link to, or the script to be run.</td>
+        <td><span class="notranslate">url</span></td>
+        <td><span data-keyref="Type_String">Zeichenfolge</span></td>
+        <td><span class="notranslate">The URL (website address) to link to, or the script to be run.</span></td>
       </tr>
       <tr>
-        <td>target</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>This is the target area to open the URL in (see description).</td>
+        <td><span class="notranslate">target</span></td>
+        <td><span data-keyref="Type_String">Zeichenfolge</span></td>
+        <td><span class="notranslate">This is the target area to open the URL in (see description).</span></td>
       </tr>
       <tr>
-        <td>params</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The various parameters for the icon (see description).</td>
+        <td><span class="notranslate">params</span></td>
+        <td><span data-keyref="Type_String">Zeichenfolge</span></td>
+        <td><span class="notranslate">The various parameters for the icon (see description).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_ID_Clickable">Clickable ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">home_but = clickable_add(32, 32, sprite_get_tpe(spr_MS_Home, 0), &quot;http://macsweeney_games.com&quot;, &quot;_blank&quot;, &quot;width=700, height=500, menubar=0, toolbar=0, scrollbars=0&quot;);</p>
-  <p>The above code creates a clickable DOM icon at the position (32, 32) of the page that the game canvas is running on. The icon uses the sprite referenced from the texture page as &quot;spr_MS_Home&quot; and when clicked the icon will open a new window for the specified URL and with the defined properties for that window.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> erstellt ein anklickbares DOM-Symbol an der Position (32, 32) der Seite, auf der das Game Canvas ausgeführt wird. Das Symbol verwendet die <span class="notranslate">sprite</span>, die von der Texturseite als &quot;spr_MS_Home&quot; referenziert wird, und wenn das Symbol angeklickt wird, öffnet sich ein neues Fenster für die angegebene URL und mit den definierten Eigenschaften für dieses Fenster.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Web_And_HTML5.htm">Web And HTML5</a></div>
-        <div style="float:right">Next: <a href="clickable_add_ext.htm">clickable_add_ext</a></div>
+        <div style="float:left">Zurück: <a href="Web_And_HTML5.htm">Web und HTML5</a></div>
+        <div style="float:right">Nächste: <a href="clickable_add_ext.htm"><span class="notranslate">clickable_add_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 clickable_add

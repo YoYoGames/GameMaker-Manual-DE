@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>font_texture_page_size</title>
+  <title>schrift_textur_seite_grösse</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function font_texture_page_size" />
   <meta name="rh-index-keywords" content="font_texture_page_size" />
@@ -14,36 +14,36 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>font_texture_page_size</h1>
-  <p>This <b>built-in variable</b> can be used to either get or set the texture page size when using the function <a href="font_add.htm"><span class="inline">font_add()</span></a>. On adding a font using that function, <span data-keyref="GameMaker Name">GameMaker</span> will create a texture page cache of the required glyphs up to the size defined by this variable. The process is as follows:</p>
+  <h1>schrift_textur_seite_grösse</h1>
+  <p>Diese <b>eingebaute Variable</b> kann verwendet werden, um die Größe der Texturseite zu ermitteln oder festzulegen, wenn die Funktion <a href="font_add.htm"><span class="inline">font_add()</span></a>. Wenn Sie eine Schriftart mit dieser Funktion hinzufügen, erstellt <span data-keyref="GameMaker Name">GameMaker</span> eine Texturseite <span class="notranslate">cache</span> mit den erforderlichen Glyphen bis zu der durch diese Variable festgelegten Größe. Der Vorgang ist wie folgt:</p>
   <ul class="colour">
-    <li>Each character you use is cached from the font into a texture page</li>
-    <li>When the texture page is full (because you use big characters or a lot of different characters) <span data-keyref="GameMaker Name">GameMaker</span> will remove characters from the cache and replace them with new ones you need</li>
-    <li><span data-keyref="GameMaker Name">GameMaker</span> tries not to make the texture too big because not all devices can cope with large textures, and it tries not to make the texture too small because removing and re-adding characters to the texture takes CPU time and causes your game to run slowly</li>
+    <li>Jedes Zeichen, das Sie verwenden, wird von der Schrift in einer Texturseite zwischengespeichert</li>
+    <li>Wenn die Texturseite voll ist (weil Sie große Zeichen oder viele verschiedene Zeichen verwenden), entfernt <span data-keyref="GameMaker Name">GameMaker</span> Zeichen von der <span class="notranslate">cache</span> und ersetzt sie durch neue, die Sie benötigen.</li>
+    <li><span data-keyref="GameMaker Name">GameMaker</span> versucht, die Textur nicht zu groß zu machen, weil nicht alle Geräte mit großen Texturen umgehen können, und er versucht, die Textur nicht zu klein zu machen, weil das Entfernen und Wiedereinfügen von Zeichen in die Textur CPU-Zeit in Anspruch nimmt und das Spiel langsam läuft.</li>
   </ul>
-  <p>If you think you require a larger or a smaller texture page size than the default 1024px that <span data-keyref="GameMaker Name">GameMaker</span> uses, you can set the value using this built in variable. If you are not using the <span class="inline">font_add()</span> function, then setting this will have no effect on your games performance as fonts added in the IDE are cached on the regular texture pages (which you can control from the <a href="../../../../The_Asset_Editors/Fonts.htm">Font Editor</a> and the <a href="../../../../Settings/Game_Options.htm">Game Options</a> for the target platform).</p>
-  <p> </p>
+  <p>Wenn Sie glauben, dass Sie eine größere oder kleinere Texturseitengröße als die standardmäßige 1024px benötigen, die <span data-keyref="GameMaker Name">GameMaker</span> verwendet, können Sie den Wert mit dieser eingebauten Variablen einstellen. Wenn Sie die Funktion <span class="inline">font_add()</span> nicht verwenden, hat diese Einstellung keine Auswirkungen auf die Leistung Ihres Spiels, da die in <span class="notranslate">IDE</span> hinzugefügten Schriftarten auf den regulären Texturseiten zwischengespeichert werden (was Sie über den <a href="../../../../The_Asset_Editors/Fonts.htm">Schriftarteneditor</a> und die <a href="../../../../Settings/Game_Options.htm">Spieloptionen</a> für das Ziel <span class="notranslate">platform</span> steuern können).</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">font_texture_page_size;</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span> (maximum width/height in pixels)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code"><span data-keyref="Type_Real">Real</span> (maximum width/height in pixels)</p>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">font_texture_page_size = 512;<br />
     newfont = font_add(&quot;Arial&quot;, 24, true, true, 32, 128);</p>
-  <p>The above code sets the font cache texture page to a maximum size of 512px and then adds a new font to the game.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> setzt die Schriftart <span class="notranslate">cache</span> texture page auf eine maximale Größe von 512px und fügt dann eine neue Schriftart zum Spiel hinzu.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Fonts.htm">Fonts</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="font_set_cache_size.htm">font_set_cache_size</a></div>
+        <div style="float:left">Zurück: <a href="Fonts.htm">Schriftarten</a></div>
+        <div style="float:right">Nächste: <a href="font_get_name.htm"><span class="notranslate">font_get_name</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 font_texture_page_size
