@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Right Mouse Button Menu Options</title>
+  <title>Menüoptionen der rechten Maustaste</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Article explaining the right mouse button menu options
 " />
@@ -15,69 +15,66 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Right Mouse Button Menu Options</h1>
-  <p>When working on your GML Visual code, you can click the right mouse button <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> on the action, on the workspace, or on the text in the shortlist on the left
-    to open up the Right Mouse button menu:</p>
-  <p><img alt="GML Visual RMB Menu" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_RMB_Menu.png" />This menu has the following options:</p>
+  <h1>Menüoptionen der rechten Maustaste</h1>
+  <p>Wenn Sie auf Ihrem <span class="notranslate">GML</span> Visual <span class="notranslate">code</span> arbeiten, können Sie mit der rechten Maustaste <img> auf die Aktion, auf das <span class="notranslate">workspace</span> oder auf den Text in der linken Auswahlliste klicken
+    um das Menü der rechten Maustaste zu öffnen:</p>
+  <p><img>Dieses Menü bietet die folgenden Optionen:</p>
   <ul class="colour">
-    <li><strong>Cut </strong>/ <strong>Copy </strong>/ <strong>Paste</strong>: This will permit you cut, copy or paste any action that is selected in the workspace. Note that you can use <img alt="Shift Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Shift.png"
-        width="55" /> + <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> outside of the actions and drag, or use <img alt="Control Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Ctrl.png"
-        width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> on individual actions,
-      to select more than one and apply the command to all of them.</li>
-    <li><strong>Comment </strong>/ <strong>Remove Comment</strong>: This option permits you to add and remove comments from your GML Visual code blocks. When you select Comment, text editor will be opened to the right of the selected GML Visual block, and there you can
-      add any text you require, whether it be a reminder to change something, or a helpful comment for a tutorial, or even instructions for your teammates:<br/>
-      <img alt="GML Visual Comments" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Add_Comment.gif" />Once you have added the comment, you can click on it and drag it to position it vertically and horizontally - although
-      only to the right of the parent node - and collapsing the GML Visual node will also collapse the comment and show a summary of its contents (in which case it cannot be repositioned). If the comment is no longer required, then you can either delete all
-      the text in the comment, or use the <strong>Remove Comment </strong>option from the menu. Note that when you copy a node, the comment will be copied along with it, and if you convert the node from GML Visual to GML, then the comment will be preserved
-      and added to the GML that is created, as illustrated in the image below:<br/>
-      <img alt="GML Visual Comments In GML" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Comments_In_GML.png" />As mentioned above, a comment can only be applied to a single node, but you can expand it to cover multiple
-      nodes by simply adding in line breaks to extend it - although this may require you to re-position the comment to prevent overlaps with subsequent nodes:<br/>
-      <img alt="GML Visual Comment Over Multiple Nodes" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Comments_Extended.png" />Once a comment has been added, you can select the &quot;<strong>Comment</strong>&quot; option
-      again from the RMB menu or you can double click <img alt="LMB Icon" class="icon" height="24" src="../../assets/Images/Icons/Icon_LMB.png" width="21" /> on it to enable editing.</li>
-    <li><strong>Disable </strong>/ <strong>Enable</strong>: These commands can be used disable or enable the action (or actions) selected. When an action is disabled, it is still visible in the workspace but it will not run when you compile the game. In this
-      way you can add/remove actions for testing and debugging. The image below shows some GML Visual code with actions disabled:<br/>
-      <img alt="GML Visual Disable Actions" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_Disable_Actions.png" />You can see that the actions &quot;If Score&quot; and &quot;Go To Next Room&quot; have been disabled -
-      they have been grayed out, visually - and so they will be skipped when the game is tested or compiled.</li>
-    <li><strong>Toggle Breakpoint</strong>: This command will toggle a breakpoint on or off for the selected action. A breakpoint is simply a point in the GML Visual code where the <a href="../../IDE_Tools/The_Debugger.htm">debugger</a> should stop when the game
-      is being run in Debug Mode. An action with a breakpoint assigned to it will be highlighted, as shown in the image below (the &quot;If Health&quot; action has been set as a breakpoint):<br/>
-      <img alt="GML Visual Breakpoint" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_ToggleBreakpoint.png" /></li>
-    <li><strong>Delete All Breakpoints</strong>: With this command you can remove all breakpoints form the GML Visual code.</li>
-    <li><strong>Collapse All</strong> / <strong>Expand All</strong>: GML Visual actions can be either collapsed or expanded, where a collapsed action will simply show the name of the action but not any of the internal values thus maximising the available space
-      for the workspace. For example:<br/>
-      <img alt="GML Visual Collapsed Actions" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_CollapseActions.png" />As you can see, the actions take up much less space, and you can still see what they do from the short
-      description given to the right. You can select the &quot;Expand All&quot; option to undo this for every node in the workspace.</li>
-    <li><strong>Reset Layout</strong>: This will reset the GML Visual workspace, setting the zoom level to 100%, focusing on the currently selected action, and expanding any (and all) collapsed actions too.</li>
-    <li><strong>Live Preview</strong>: When you select this option, you will enable or disable the GML Visual to GML (GameMaker Language) code preview window. This is explained in more detail on the page <a href="Changing_DnD_To_Code.htm">Changing GML Visual To Code</a>.</li>
-    <li><strong>Convert To GML</strong>: This will convert all your actions in the current event to GML (GameMaker Language) code. Be very careful with this as <em>you cannot convert GML back into the GML Visual actions that it was created from</em>. You can convert
-      the event back to a GML Visual event from code, but any code will simply be wrapped in an <a href="../Drag_And_Drop_Reference/Common/Execute_Code.htm">Execute Code</a> action. This is explained in more detail on the page <a href="Changing_DnD_To_Code.htm">Changing GML Visual To Code</a>.</li>
-    <li><strong>Window</strong>: This section opens the following sub-menu:<br/>
-      <img alt="GML Visual Window Options" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_WindowOptions.png" />The menu items available here are:
+    <li><strong>Ausschneiden / </strong> <strong>Kopieren / </strong> <strong>Einfügen</strong>: Damit können Sie jede Aktion, die in <span class="notranslate">workspace</span> ausgewählt ist, ausschneiden, kopieren oder einfügen. Beachten Sie, dass Sie <img> + <img> außerhalb der Aktionen verwenden und ziehen können, oder <img> / <img> + <img> für einzelne Aktionen verwenden können,
+      um mehr als eine Aktion auszuwählen und den Befehl auf alle anzuwenden.</li>
+    <li><strong>Kommentar / </strong> <strong>Kommentar entfernen</strong>: Mit dieser Option können Sie Kommentare zu Ihren <span class="notranslate">GML</span> Visual <span class="notranslate">code</span> Blöcken hinzufügen oder entfernen. Wenn Sie Kommentar wählen, wird rechts neben dem ausgewählten <span class="notranslate">GML</span> Visual-Block ein Texteditor geöffnet, in dem Sie
+      einen beliebigen Text hinzufügen, sei es eine Erinnerung, etwas zu ändern, ein hilfreicher Kommentar für ein Tutorial oder sogar Anweisungen für Ihre Teamkollegen:<br>
+      <img>Sobald Sie den Kommentar hinzugefügt haben, können Sie ihn anklicken und ziehen, um ihn vertikal und horizontal zu positionieren - allerdings
+      Wenn Sie den Knoten <span class="notranslate">GML</span> Visual einklappen, wird auch der Kommentar eingeklappt und eine Zusammenfassung seines Inhalts angezeigt (in diesem Fall kann er nicht neu positioniert werden). Wenn der Kommentar nicht mehr benötigt wird, können Sie entweder den gesamten
+      den gesamten Text im Kommentar löschen oder die Option <strong>Kommentar entfernen </strong>aus dem Menü verwenden. Beachten Sie, dass beim Kopieren eines Knotens der Kommentar mitkopiert wird, und wenn Sie den Knoten von <span class="notranslate">GML</span> Visual in <span class="notranslate">GML</span> konvertieren, bleibt der Kommentar erhalten
+      beibehalten und zu dem erstellten <span class="notranslate">GML</span> hinzugefügt, wie in der folgenden Abbildung dargestellt:<br>
+      <img>Wie oben erwähnt, kann ein Kommentar nur auf einen einzelnen Knoten angewendet werden, aber Sie können ihn auf mehrere
+      Sie können ihn jedoch auf mehrere Knoten ausdehnen, indem Sie einfach Zeilenumbrüche einfügen, um ihn zu verlängern - allerdings müssen Sie dann möglicherweise den Kommentar neu positionieren, um Überschneidungen mit nachfolgenden Knoten zu vermeiden:<br>
+      <img>Sobald ein Kommentar hinzugefügt wurde, können Sie die Option &quot;<strong>Kommentar</strong>&quot;
+      aus dem RMB-Menü auswählen oder auf <img> doppelklicken, um die Bearbeitung zu aktivieren.</li>
+    <li><strong>Deaktivieren / </strong> <strong>Aktivieren</strong>: Mit diesen Befehlen können Sie die ausgewählte Aktion (oder Aktionen) deaktivieren oder aktivieren. Wenn eine Aktion deaktiviert ist, ist sie immer noch auf <span class="notranslate">workspace</span> sichtbar, aber sie wird nicht ausgeführt, wenn Sie das Spiel kompilieren. Auf diese
+      können Sie auf diese Weise Aktionen zum Testen und <span class="notranslate">debugging</span> hinzufügen/entfernen. Die folgende Abbildung zeigt einige <span class="notranslate">GML</span> Visual <span class="notranslate">code</span> mit deaktivierten Aktionen:<br>
+      <img>Sie können sehen, dass die Aktionen &quot;If Score&quot; und &quot;Go To Next Room&quot; deaktiviert wurden -
+      Sie wurden visuell ausgegraut - und werden daher übersprungen, wenn das Spiel getestet oder kompiliert wird.</li>
+    <li><strong>Haltepunkt umschalten</strong>: Dieser Befehl schaltet einen Haltepunkt für die ausgewählte Aktion ein oder aus. Ein Haltepunkt ist einfach ein Punkt in <span class="notranslate">GML</span> Visual <span class="notranslate">code</span>, an dem der <a href="../../IDE_Tools/The_Debugger.htm">Debugger</a> anhalten soll, wenn das Spiel
+      im Debug-Modus ausgeführt wird. Eine Aktion, der ein Haltepunkt zugewiesen wurde, wird hervorgehoben, wie in der Abbildung unten gezeigt (die Aktion &quot;Wenn Gesundheit&quot; wurde als Haltepunkt festgelegt):<br>
+      <img></li>
+    <li><strong>Alle Haltepunkte löschen</strong>: Mit diesem Befehl können Sie alle Haltepunkte aus dem <span class="notranslate">GML</span> Visual <span class="notranslate">code</span> entfernen.</li>
+    <li><strong>Alles einklappen</strong> / <strong>Alles ausklappen</strong>: <span class="notranslate">GML</span> Visuelle Aktionen können entweder eingeklappt oder ausgeklappt werden, wobei bei einer eingeklappten Aktion lediglich der Name der Aktion, nicht aber die internen Werte angezeigt werden, so dass der verfügbare Platz
+      für die Seite <span class="notranslate">workspace</span>. Beispiel:<br>
+      <img>Wie Sie sehen können, nehmen die Aktionen viel weniger Platz ein, und Sie können immer noch aus der kurzen Beschreibung auf der rechten Seite sehen, was sie tun.
+      Beschreibung auf der rechten Seite. Sie können die Option &quot;Alle erweitern&quot; wählen, um dies für jeden Knoten in <span class="notranslate">workspace</span> rückgängig zu machen.</li>
+    <li><strong>Layout zurücksetzen</strong>: Damit wird <span class="notranslate">GML</span> Visual <span class="notranslate">workspace</span> zurückgesetzt, die Zoomstufe auf 100 % gesetzt, der Fokus auf die aktuell ausgewählte Aktion gesetzt und alle eingeklappten Aktionen aufgeklappt (und alle anderen).</li>
+    <li><strong>Live-Vorschau</strong>: Wenn Sie diese Option wählen, aktivieren oder deaktivieren Sie das Vorschaufenster <span class="notranslate">GML</span> Visual to <span class="notranslate">GML</span> (<span class="notranslate">GameMaker Language</span>) <span class="notranslate">code</span>. Dies wird auf der Seite <a href="Changing_DnD_To_Code.htm">Ändern von <span class="notranslate">GML</span> Visuell in Code</a> näher erläutert.</li>
+    <li><strong>In GML konvertieren</strong>: Damit werden alle Ihre Aktionen in der aktuellen Veranstaltung in <span class="notranslate">GML</span> (<span class="notranslate">GameMaker Language</span>) <span class="notranslate">code</span> konvertiert. Seien Sie dabei sehr vorsichtig, denn <em>Sie können <span class="notranslate">GML</span> nicht zurück in die <span class="notranslate">GML</span> Visual Actions konvertieren, aus der es erstellt wurde</em>. Sie können
+      aus <span class="notranslate">GML</span> in ein <span class="notranslate">code</span> Visual-Ereignis zurückverwandeln, aber jede <span class="notranslate">code</span> wird einfach in eine <a href="../Drag_And_Drop_Reference/Common/Execute_Code.htm">Execute Code-Aktion</a> verpackt. Dies wird auf der Seite <a href="Changing_DnD_To_Code.htm">Ändern von <span class="notranslate">GML</span> Visual in Code</a> näher erläutert.</li>
+    <li><strong>Fenster</strong>: Dieser Abschnitt öffnet das folgende Untermenü:<br>
+      <img>Die hier verfügbaren Menüpunkte sind:
       <ul>
-        <li><strong>Go To Object</strong>: This will pan the workspace to the object that is calling the event</li>
-        <li><strong>Open Inherited Event</strong>: This option is only available if the object being edited is a child of a parent object, and will open the event being edited of the parent object and pan the workspace to it.</li>
-        <li><strong>Single Pane </strong>/ <strong>2 Columns</strong> / <strong>3 Columns</strong>: These options can be used to split the current workspace into 1, 2 or 3 different &quot;panes&quot;. Each pane is a separate workspace that can have scripts
-          or events dragged onto them so you can edit and compare 2 or more GML Visual code blocks at a time. The image below shows two scripts in one window shown in their own workspace pane:<br/>
-          <img alt="GML Visual Split Workspace Panes" class="center" src="../../assets/Images/Scripting_Reference/Drag_And_Drop/Overview/DnD_SplitPaneWindow.png" /></li>
+        <li><strong>Zum Objekt gehen</strong>: Damit wird die Seite <span class="notranslate">workspace</span> zu dem Objekt verschoben, das das Ereignis aufruft.</li>
+        <li><strong>Geerbtes Ereignis öffnen</strong>: Diese Option ist nur verfügbar, wenn das zu bearbeitende Objekt ein untergeordnetes Objekt eines übergeordneten Objekts ist, und öffnet das zu bearbeitende Ereignis des übergeordneten Objekts und verschiebt die <span class="notranslate">workspace</span> dorthin.</li>
+        <li><strong>Einzelner Bereich / </strong> <strong>2 Spalten</strong> / <strong>3 Spalten</strong>: Diese Optionen können verwendet werden, um das aktuelle <span class="notranslate">workspace</span> in 1, 2 oder 3 verschiedene &quot;Fenster&quot; aufzuteilen. Jeder Bereich ist ein separates <span class="notranslate">workspace</span>, auf das Skripte
+          oder Ereignisse auf sie gezogen werden können, so dass Sie 2 oder mehr <span class="notranslate">GML</span> Visual <span class="notranslate">code</span> Blöcke gleichzeitig bearbeiten und vergleichen können. Die folgende Abbildung zeigt zwei <span class="notranslate">scripts</span> in einem Fenster, die in einem eigenen <span class="notranslate">workspace</span> Fensterbereich angezeigt werden:<br>
+          <img></li>
       </ul>
     </li>
   </ul>
-  <p>The following two options are only available when the RMB menu is opened on a GML Visual node:</p>
+  <p>Die folgenden beiden Optionen sind nur verfügbar, wenn das RMB-Menü auf einem <span class="notranslate">GML</span> Visual-Knoten geöffnet ist:</p>
   <ul class="colour">
-    <li><strong>Pan</strong>: When selecting this option on any node, the workspace will pan to ring that node to the center.</li>
-    <li><strong>Show Help...</strong>: Selecting this will open the Manual in a new workspace on the page relevant to the node that has been selected. You can also achieve the same results by using <img alt="Icon F1" class="icon" height="20" src="../../assets/Images/Icons/Icon_f1.png"
-        width="55" /> on the node.</li>
+    <li><strong>Schwenken</strong>: Wenn Sie diese Option für einen beliebigen Knoten auswählen, schwenkt die <span class="notranslate">workspace</span> so, dass dieser Knoten in der Mitte liegt.</li>
+    <li><strong>Hilfe anzeigen.</strong>.. : Wenn Sie dies auswählen, wird das Handbuch in einem neuen <span class="notranslate">workspace</span> auf der Seite geöffnet, die für den ausgewählten Knoten relevant ist. Sie können das gleiche Ergebnis auch mit <img> auf dem Knoten erreichen.</li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../../Content.htm">Index</a></div>
-        <div style="float:right">Next: <a href="Constructing_Action_Block_Code.htm">Constructing Action Block Code</a></div>
+        <div style="float:left">Zurück: <a href="../../Content.htm">Index</a></div>
+        <div style="float:right">Nächste: <a href="Constructing_Action_Block_Code.htm">Konstruktion von Aktionsblock-Code</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 GML Visual RMB Options

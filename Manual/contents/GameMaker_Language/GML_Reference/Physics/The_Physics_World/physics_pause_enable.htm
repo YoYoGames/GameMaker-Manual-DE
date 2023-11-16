@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physics_pause_enable</title>
+  <title>physik_pause_aktivieren</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for physics_pause_enable" />
   <meta name="rh-index-keywords" content="physics_pause_enable" />
@@ -14,47 +14,47 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_pause_enable</h1>
-  <p>Normally for a physics simulation to work, it must be continuous and cannot be stopped and started, or have instances suddenly moved from one place to another in the room. However, there are moments when you <i>need</i> to pause the simulation as (for example) the device os has paused, and so you would use this function. It pauses the simulation if the flag is set to <span class="inline">true</span> and no further physics calculations will be done until the flag is set to <span class="inline">false</span> again.</p>
-  <p class="note"><b>NOTE</b>: This is of particular use should you wish to deactivate all the instances in a room as even when deactivated a physical body will still continue being calculated and simulated in the physics world.</p>
-  <p> </p>
+  <h1>physik_pause_aktivieren</h1>
+  <p>Damit eine Physiksimulation funktioniert, muss sie normalerweise kontinuierlich ablaufen und darf nicht angehalten und wieder gestartet werden, und die Instanzen dürfen nicht plötzlich von einem Ort zum anderen im Raum verschoben werden. Es gibt jedoch Momente, in denen die Simulation angehalten werden <i>muss</i>, weil z. B. das Betriebssystem des Geräts pausiert hat, und dann wird diese Funktion verwendet. Sie unterbricht die Simulation, wenn das Flag auf <span class="inline">true</span> gesetzt ist, und es werden keine weiteren Physikberechnungen durchgeführt, bis das Flag wieder auf <span class="inline">false</span> gesetzt wird.</p>
+  <p class="note"><b>HINWEIS</b>: Dies ist besonders nützlich, wenn Sie alle Instanzen in einem Raum deaktivieren möchten, da ein physischer Körper auch nach der Deaktivierung weiterhin in der Physikwelt berechnet und simuliert wird.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">physics_pause_enable(flag)</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Beschreibung</th>
      </tr>
       <tr>
-        <td>flag</td><td><span data-keyref="Type_Bool"></span></td>
-        <td>This can be set to <span class="inline">true</span> to pause the simulation, or <span class="inline">false</span> to start it again.</td>
+        <td><span class="notranslate">flag</span></td><td><span data-keyref="Type_Bool"></span></td>
+        <td><span class="notranslate">This can be set to <span class="inline">true</span> um die Simulation anzuhalten, oder <span class="inline">false</span>, um sie erneut zu starten.</td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">if os_is_paused()<br />
     {<br />
         physics_pause_enable(true);<br />
         instance_deactivate_all(true);<br />
         instance_create_layer(x, y, &quot;Controllers&quot;, obj_PauseMenu);<br />
     }</p>
-  <p>The code above checks to see if the OS has been paused and if it has then it pauses the physics world, deactivates everything except itself, and then creates a pause menu instance.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Das obige <span class="notranslate">code</span> prüft, ob das Betriebssystem angehalten wurde, und wenn dies der Fall ist, hält es die Physikwelt an, deaktiviert alles außer sich selbst und erstellt dann eine Instanz des Pausenmenüs.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="The_Physics_World.htm">The Physics World</a></div>
-        <div style="float:right">Next: <a href="physics_world_create.htm">physics_world_create</a></div>
+        <div style="float:left">Zurück: <a href="The_Physics_World.htm">Die Welt der Physik</a></div>
+        <div style="float:right">Nächste: <a href="physics_world_create.htm"><span class="notranslate">physics_world_create</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 physics_pause_enable

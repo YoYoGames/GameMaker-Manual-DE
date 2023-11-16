@@ -6,7 +6,7 @@
   <title>animcurve_destroy</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function animcurve_destroy" />
   <meta name="rh-index-keywords" content="animcurve_destroy" />
@@ -15,43 +15,42 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>animcurve_destroy</h1>
-  <p>This function destroy an animation curve previously created with the function <a href="animcurve_create.htm"><span class="inline">animcurve_create()</span></a>.</p>
-  <p>Calling this function will remove the animation curve from memory and clean up any channels or points that it contains as well (these never need to be cleaned up manually). Note that you <b>cannot destroy any animation curves created in the asset browser</b>, only those created at runtime.</p>
-  <p> </p>
+  <p>Diese Funktion kann verwendet werden, um Animationskurven zu zerstören, die zuvor mit der Funktion <a href="animcurve_create.htm"><span class="inline">animcurve_create()</span></a>. Der Aufruf dieser Funktion entfernt die Animationskurve aus dem Speicher und bereinigt auch alle Kanäle oder Punkte, die sie enthält (diese müssen nie manuell bereinigt werden). Beachten Sie, dass Sie <b>keine Animationskurven zerstören können, die im Asset-Browser erstellt wurden</b>, sondern nur solche, die auf <span class="notranslate">runtime</span> erstellt wurden.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">animcurve_destroy(curve_struct);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>curve_struct</td>
-        <td><span data-keyref="Type_Struct_AnimCurve"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/animcurve_get.htm" target="_blank">Animation Curve Struct</a></span></td>
-        <td>The pointer to the curve struct to destroy.</td>
+        <td><span class="notranslate">curve_struct</span></td>
+        <td><span data-keyref="Type_Struct_AnimCurve">Animation Kurve Struktur</span></td>
+        <td><span class="notranslate">The pointer to the curve struct to destroy.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">animcurve_destroy(my_curve);</p>
-  <p>The above code will destroy the (previously created) animation curve struct indexed in the variable &quot;<span class="inline">my_curve</span>&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> zerstört die (zuvor erstellte) Animationskurvenstruktur, die in der Variablen &quot;<span class="inline">my_curve</span>&quot; indiziert ist.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Animation_Curves.htm">Animation Curves</a></div>
-        <div style="float:right">Next: <a href="animcurve_get.htm">animcurve_get</a></div>
+        <div style="float:left">Zurück: <a href="Animation_Curves.htm">Animation Kurven</a></div>
+        <div style="float:right">Nächste: <a href="animcurve_get.htm"><span class="notranslate">animcurve_get</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 animcurve_destroy

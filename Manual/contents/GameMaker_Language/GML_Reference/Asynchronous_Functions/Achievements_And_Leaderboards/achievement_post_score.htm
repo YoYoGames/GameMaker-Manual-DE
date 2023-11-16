@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>leistung_post_score</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for achievement_post_score" />
+  <meta name="rh-index-keywords" content="achievement_post_score" />
+  <meta name="search-keywords" content="achievement_post_score" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>leistung_post_score</h1>
+  <p>Mit dieser Funktion können Sie Ihren Punktestand an den gewählten Leaderboard- und Achievement-Dienst senden. Auf <span class="notranslate">Android</span> senden Sie die ID der Punktetabelle als String (dies ist die eindeutige Leaderboard-ID, die beim Einrichten des Leaderboards zugewiesen wurde), während Sie auf
+    allen anderen <span class="notranslate">platforms</span> geben Sie den definierten Namen der Bestenliste als String und dann den aktuellen Punktestand an. Die Funktion löst ein <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">soziales asynchrones Ereignis</a> aus, wobei die zurückgegebene <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> DS-Map die folgenden Schlüssel/Wert-Paare enthält:</p>
+  <ul class="colour">
+    <li>&quot;<b>type</b>&quot; - Dies ist der Typ des Ereignisses, das ausgelöst wurde. Für diese Funktion ist dies die Zeichenkette &quot;<tt>achievement_post_score_result</tt>&quot;.</li>
+    <li>&quot;<b>id</b>&quot; - Dies ist die ID des Ereignisses, und für diese Funktion wird eine <span class="notranslate">GML</span> Konstante <tt>GooglePlayServices_EVENT_ID_POST_SCORE</tt> zurückgegeben.</li>
+    <li>&quot;<b>leaderboard_id</b>&quot; - Dies ist die eindeutige ID des Leaderboards, das aktualisiert wurde.</li>
+    <li>&quot;<b>Status</b>&quot; - Dieser Wert ist 1, wenn die Werte erfolgreich aktualisiert wurden, oder 0, wenn die Anfrage fehlgeschlagen ist.</li>
+    <li>&quot;<b>daily_new_best</b>&quot; - Dieser Wert ist 1, wenn die eingereichte Punktzahl die beste des letzten Tages ist, andernfalls 0.</li>
+    <li>&quot;<b>daily_best</b>&quot; - Hier wird die höchste Punktzahl des Benutzers vom letzten Spieltag gespeichert.</li>
+    <li>&quot;<b>weekly_new_best</b>&quot; - Dieser Wert ist 1, wenn die eingereichte Punktzahl die beste des Nutzers in der letzten Woche war, andernfalls 0.</li>
+    <li>&quot;<b>weekly_best</b>&quot; - Hier wird die höchste Punktzahl des Nutzers in der letzten Woche gespeichert.</li>
+    <li>&quot;<b>all_time_new_best</b>&quot; - Dieser Wert ist 1, wenn die eingereichte Punktzahl die beste aller Zeiten des Benutzers war, andernfalls 0.</li>
+    <li>&quot;<b>all_time_best</b>&quot; - Hier wird die beste Punktzahl des Benutzers aller Zeiten gespeichert.</li>
+  </ul>
+  <p> </p>
+  <h4><b>Syntax:</b></h4>
+  <p class="code">achievement_post_score(leaderboard, score)</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">leaderboard</span></td>
+        <td>Der Name/die ID der Bestenliste.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">score</span></td>
+        <td>Die zu sendende Partitur.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Erweitertes Beispiel:</h4>
+  <p class="code">if achievement_available()<br/>     {<br/>     achievement_post_score(global.LeaderboardID, 1000);<br/>     }</p>
+  <p>Die obige <span class="notranslate">code</span> prüft, ob der gewählte Leaderboard- und Achievement-Dienst verfügbar ist, und wenn ja, wird eine Punktzahl in die Punktetabelle &quot;Leaderboard&quot; eingetragen. Dies löst ein soziales Async-Ereignis aus, das wie folgt geparst werden kann:</p>
+  <p class="code">if async_load[? &quot;id&quot;] == GooglePlayServices_EVENT_ID_POST_SCORE<br/>     {
+    <br/>     if async_load[? &quot;type&quot;] == &quot;achievement_post_score_result&quot;<br/>         {
+    <br/>         if async_load[? &quot;status&quot;] == 1<br/>             {
+    <br/>             global.Best_Day = async_load[? &quot;daily_best&quot;];<br/>             global.Best_Week = async_load[? &quot;weekly_best&quot;];<br/>             global.Best = async_load[? &quot;all_time_best&quot;];<br/>             }
+    <br/>         }
+    <br/>     }
+  </p>
+  <p>Die obige <span class="notranslate">code</span> prüft die <tt>async_load</tt> DS-Map auf die Schlüssel &quot;id&quot; und &quot;type&quot;, die dieser Funktion entsprechen, und prüft dann den Status des Ereignisses. Wenn der Status 1 ist, werden einige Werte aus der DS-Map in globalen
+    Variablen gespeichert.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Zurück: <a href="Achievements_And_Leaderboards.htm">Errungenschaften und Bestenlisten</a></div>
+        <div style="float:right">Nächste: <a href="achievement_increment.htm"><span class="notranslate">achievement_increment</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
+  </div>
+  <!-- KEYWORDS
+achievement_post_score
+-->
+  <!-- TAGS
+achievement_post_score
+-->
+</body>
+</html>

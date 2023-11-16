@@ -6,7 +6,7 @@
   <title>uwp_suspend</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for uwp_suspend" />
   <meta name="rh-index-keywords" content="uwp_suspend" />
@@ -14,33 +14,33 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>uwp_suspend<span class="misspell-word"> <span data-conref="../../../assets/snippets/Tag_obsolete.hts"> </span></span></h1>
-  <p>This function indicates to the system that the app has finished saving data following detection of a suspension request. Calling this function is a requirement for Xbox One submission, and it should always be used in conjunction with the function <a href="uwp_is_suspending.htm"><span class="inline">uwp_is_suspending()</span></a>, as shown in the example below.</p>
-  <p> </p>
+  <h1>uwp_suspend</h1>
+  <p>Diese Funktion zeigt dem System an, dass die App die Speicherung der Daten nach der Erkennung einer Aussetzungsanforderung abgeschlossen hat. Der Aufruf dieser Funktion ist eine Voraussetzung für die Übermittlung an Xbox One und sollte immer in Verbindung mit der Funktion <a href="uwp_is_suspending.htm"><span class="inline">uwp_is_suspending()</span></a>verwendet werden, wie im folgenden Beispiel gezeigt.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">uwp_suspend();</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code"><span data-keyref="Type_Void"></span></p>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">if uwp_is_suspending()<br />
     {<br />
         scr_Save_Game_Data();<br />
         uwp_suspend();<br />
     }</p>
-  <p>The above code checks to see if the app is going into suspension and if it is it calls a script to save the game data before suspending the game.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> prüft, ob die App in die Unterbrechung geht, und wenn ja, ruft sie <span class="notranslate">script</span> auf, um die Spieldaten zu speichern, bevor sie das Spiel unterbricht.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="UWP_And_XBox_Live.htm">UWP And XBox Live</a></div>
-        <div style="float:right">Next: <a href="uwp_is_suspending.htm">uwp_is_suspending</a></div>
+        <div style="float:left">Zurück: <a href="UWP_And_XBox_Live.htm">UWP und XBox Live</a></div>
+        <div style="float:right">Nächste: <a href="uwp_is_suspending.htm"><span class="notranslate">uwp_is_suspending</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 uwp_suspend

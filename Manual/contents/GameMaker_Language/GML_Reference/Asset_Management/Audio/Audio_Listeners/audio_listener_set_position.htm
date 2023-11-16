@@ -6,7 +6,7 @@
   <title>audio_listener_set_position</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function audio_listener_set_position" />
   <meta name="rh-index-keywords" content="audio_listener_set_position" />
@@ -15,61 +15,61 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>audio_listener_set_position</h1>
-  <p>With this function you can change the position of a given <i>listener</i> within the 3D audio space. The default listener index is 0, but you can use the function <a href="audio_get_listener_info.htm"><span class="inline">audio_get_listener_info()</span></a> to get the different indices available for the target platform. The example image below shows the default position for the listener in the audio space:</p>
-  <p><img alt="Audio Listener Spacial Position Diagram" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Listener.png" />As you can see, the default position is (0, 0, 0) but you would normally use this function to move the listener around with the player object within your game and so change the way audio created by emitters is heard by the player, for example, in the image below of a top down game, the player instance sets the listener which will cause the audio from the various emitters to &quot;change&quot; as the player moves around the level:</p>
-  <p><img alt="Audio Listener Game Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Game.png" /></p>
-  <p> </p>
+  <p>Mit dieser Funktion können Sie die Position eines bestimmten <i>Hörers</i> innerhalb des 3D-Audio-Raums ändern. Der Standard-Hörerindex ist 0, aber Sie können die Funktion <a href="audio_get_listener_info.htm"><span class="inline">audio_get_listener_info()</span></a> verwenden, um die verschiedenen verfügbaren Indizes für das Ziel <span class="notranslate">platform</span> zu erhalten. Das Beispielbild unten zeigt die Standardposition für den Hörer im Audioraum:</p>
+  <p><img>Wie du sehen kannst, ist die Standardposition (0, 0, 0), aber normalerweise würdest du diese Funktion verwenden, um den Hörer mit dem Spielerobjekt innerhalb deines Spiels zu bewegen und so die Art und Weise zu ändern, in der Audio, das von Emittern erzeugt wird, vom Spieler gehört wird, z.B. in dem Bild unten eines Top-Down-Spiels, setzt die Spielerinstanz den Hörer, was dazu führt, dass sich das Audio von den verschiedenen Emittern &quot;ändert&quot;, wenn der Spieler sich im Level bewegt:</p>
+  <p><img alt="Audio Listener Spacial Position Diagram" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Listener.png" /></p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">audio_listener_set_position(index, x, y, z);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>index</td>
-        <td><span data-keyref="Type_Real">Real</span> or <span data-keyref="Type_ID_Audio_Listener">Audio Listener ID</span></td>
-        <td>The listener to set the position of (default 0).</td>
+        <td><span class="notranslate">index</span></td>
+        <td><span data-keyref="Type_Real">Real-</span> oder <span data-keyref="Type_ID_Audio_Listener">Audio-Hörer-ID</span></td>
+        <td><span class="notranslate">The listener to set the position of (default 0).</span></td>
       </tr>
       <tr>
-        <td>x</td>
+        <td><span class="notranslate">x</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The x position of the listener (default 0).</td>
+        <td><span class="notranslate">The x position of the listener (default 0).</span></td>
       </tr>
       <tr>
-        <td>y</td>
+        <td><span class="notranslate">y</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The y position of the listener (default 0).</td>
+        <td><span class="notranslate">The y position of the listener (default 0).</span></td>
       </tr>
       <tr>
-        <td>z</td>
+        <td><span class="notranslate">z</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The z position of the listener (default 0).</td>
+        <td><span class="notranslate">The z position of the listener (default 0).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">var _vmat = camera_get_view_mat(view_camera[0]);<br />
     audio_listener_set_position(global.Player_Listener, _vmat[0], _vmat[1], _vmat[2]);<br />
     audio_listener_set_orientation(info[? &quot;index&quot;], _vmat[3], _vmat[4], _vmat[5], _vmat[6], _vmat[7], _vmat[8]);</p>
-  <p>The above code retrieves the view matrix for camera view [0] and then uses it to set the audio listener position and orientation for the listener with the ID stored in the global variable &quot;Player_Listener&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> ruft die Ansichtsmatrix für die Kameraansicht [0] ab und verwendet sie dann, um die Position und Ausrichtung des Audio-Hörers für den Hörer mit der in der globalen Variable &quot;Player_Listener&quot; gespeicherten ID festzulegen.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Audio_Listeners.htm">Audio Listeners</a></div>
-        <div style="float:right">Next: <a href="audio_listener_set_velocity.htm">audio_listener_set_velocity</a></div>
+        <div style="float:left">Zurück: <a href="Audio_Listeners.htm">Audio-Hörer</a></div>
+        <div style="float:right">Nächste: <a href="audio_listener_set_velocity.htm"><span class="notranslate">audio_listener_set_velocity</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 audio_listener_set_position

@@ -6,7 +6,7 @@
   <title>gamepad_axis_value</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for gamepad_axis_value" />
   <meta name="rh-index-keywords" content="gamepad_axis_value" />
@@ -16,51 +16,51 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gamepad_axis_value</h1>
-  <p>You can use this function to get the value of the different axes from a given gamepad slot. You supply the gamepad slot index to check, along with either an axis index constant (as listed <a href="Gamepad_Input.htm">here</a>), or an integer value between <span class="inline">0</span> and <span class="inline"><a href="gamepad_axis_count.htm">gamepad_axis_count()</a></span><span class="inline">-1</span>. The returned value will be between <span class="inline">-1</span> and <span class="inline">1</span> for each of the available horizontal and vertical axes.</p>
-  <p>Note that the returned value is normalised to take into consideration the value set for the axis deadzone (using the function <span class="inline"><a href="gamepad_set_axis_deadzone.htm">gamepad_set_axis_deadzone()</a></span>), and so will always be between -1 and 0, and 0 and 1. For example, setting the deadzone to 0.2 will mean that pushing the stick right will only start returning a value from 0 - 1 when the <em>raw</em> axis value is over 0.2 - so for example, when the raw value is 0.2, the return value will be 0, when the raw value is at 0.5, the return value will be 0.375, or if the raw value is 0.9, then the return value would be 0.875.</p>
-  <p> </p>
+  <p>Mit dieser Funktion können Sie den Wert der verschiedenen Achsen eines bestimmten Gamepad-Slots abfragen. Sie geben den zu prüfenden Gamepad-Slot-Index an, zusammen mit einer Achsenindex-Konstante (wie <a href="Gamepad_Input.htm">hier</a> aufgeführt) oder einem ganzzahligen Wert zwischen <span class="inline">0</span> und <span class="inline"><a href="gamepad_axis_count.htm">gamepad_axis_count()</a></span><span class="inline">-1</span>. Der zurückgegebene Wert liegt zwischen <span class="inline">-1</span> und <span class="inline">1</span> für jede der verfügbaren horizontalen und vertikalen Achsen.</p>
+  <p>Beachten Sie, dass der zurückgegebene Wert normalisiert wird, um den Wert zu berücksichtigen, der für die Totzone der Achse eingestellt wurde (mit der Funktion <span class="inline"><a href="gamepad_set_axis_deadzone.htm">gamepad_set_axis_deadzone()</a></span>), und daher immer zwischen -1 und 0 und 0 und 1 liegt.2 bedeutet zum Beispiel, dass beim Drücken des Knüppels nach rechts erst dann ein Wert zwischen 0 und 1 zurückgegeben wird, wenn der <em>Rohwert</em> der Achse über 0,2 liegt. Wenn der Rohwert also 0,2 beträgt, ist der Rückgabewert 0, wenn der Rohwert bei 0,5 liegt, ist der Rückgabewert 0,375, und wenn der Rohwert 0,9 beträgt, ist der Rückgabewert 0,875.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">gamepad_axis_value(device, axisIndex);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>device</td>
+        <td><span class="notranslate">device</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>Which gamepad device &quot;slot&quot; to check.</td>
+        <td><span class="notranslate">Which gamepad device &quot;slot&quot; to check.</span></td>
       </tr>
       <tr>
-        <td>axisIndex</td>
-        <td><span data-keyref="Type_Constant_Gamepad_Axis">Gamepad Axis Constant</span></td>
-        <td>The axis index to check (see the <a href="Gamepad_Input.htm">constants list</a>).</td>
+        <td><span class="notranslate">axisIndex</span></td>
+        <td><span data-keyref="Type_Constant_Gamepad_Axis">Gamepad-Achse Konstante</span></td>
+        <td><span class="notranslate">The axis index to check (see the <a href="Gamepad_Input.htm">constants list</a>).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Real">Real</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">var haxis = gamepad_axis_value(0, gp_axislh);<br />
     var vaxis = gamepad_axis_value(0, gp_axislv);<br />
     direction = point_direction(0, 0, haxis, vaxis);<br />
     speed = point_distance(0 ,0, haxis, vaxis) * 5;</p>
-  <p>The above code sets the speed and direction of the instance based on the returned values of the left analog controller of the gamepad plugged into device &quot;slot&quot; 0.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> legt die Geschwindigkeit und Richtung der Instanz auf der Grundlage der zurückgegebenen Werte des linken analogen Controllers des Gamepads fest, das in Gerät &quot;Slot&quot; 0 eingesteckt ist.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Gamepad_Input.htm">Gamepad Input</a></div>
-        <div style="float:right">Next: <a href="gamepad_button_check.htm"> gamepad_button_check </a></div>
+        <div style="float:left">Zurück: <a href="Gamepad_Input.htm">Gamepad-Eingabe</a></div>
+        <div style="float:right">Weiter: <a href="gamepad_button_check.htm"> gamepad_button_check </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_axis_value

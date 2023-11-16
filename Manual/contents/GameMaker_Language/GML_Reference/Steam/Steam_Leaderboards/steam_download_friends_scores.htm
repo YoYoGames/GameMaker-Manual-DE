@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_download_friends_scores</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_download_friends_scores" />
+  <meta name="rh-index-keywords" content="steam_download_friends_scores" />
+  <meta name="search-keywords" content="steam_download_friends_scores" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_download_friends_scores</h1>
+  <p>Mit dieser Funktion können Sie <i>nur</i> die Spielstände auf der Bestenliste abrufen, die zu den Personen gehören, die im <span class="notranslate">Steam</span> Client als &quot;Freunde&quot; markiert sind. Wenn Ihre Bestenliste also 200 Einträge hat und 50 davon Ihre Freunde sind, wird diese Funktion
+    nur diese 50 Ergebnisse abrufen. Der Name der Bestenliste ist eine Zeichenkette, die Sie beim Erstellen der Bestenliste mit der Funktion <a href="steam_create_leaderboard.htm"><tt>steam_create_leaderboard()</tt></a>definiert haben, und die Funktion gibt
+    einen Wert zurück, der dann zur Identifizierung des Rückrufs im <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">Steam-Async-Ereignis</a> verwendet werden kann, oder sie gibt -1 zurück, wenn sie fehlgeschlagen ist.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_download_friends_scores(lb_name);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">lb_name</span></td>
+        <td>Der Name der Rangliste, von der Sie die Ergebnisse herunterladen (eine Zeichenkette).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p class="code">score_get = steam_download_friends_scores(&quot;Game Scores&quot;);</p>
+  <p>Dies sendet eine Anfrage an <span class="notranslate">Steam</span> <span class="notranslate">Server</span> für die Spielstände der Freunde des Benutzers aus dem angegebenen Leaderboard und speichert die <b>Async-ID</b> der Anfrage in der Variablen &quot;score_get&quot;. Dies wird dann in dem <b>Steam Async Event</b> behandelt,
+    wie in dem erweiterten Beispiel für <a href="steam_download_scores.htm"><tt>steam_download_scores()</tt></a>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Zurück: <a href="Steam_Leaderboards.htm">Bestenlisten</a></div>
+        <div style="float:right">Nächste: <a href="steam_create_leaderboard.htm"><span class="notranslate">steam_create_leaderboard</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_download_friends_scores
+-->
+  <!-- TAGS
+steam_download_friends_scores
+-->
+</body>
+</html>

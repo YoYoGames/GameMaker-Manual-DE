@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>audio_sound_is_playable</title>
+  <title>audio_klang_ist_abspielbar</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function audio_sound_is_playable" />
   <meta name="rh-index-keywords" content="audio_sound_is_playable" />
@@ -15,45 +15,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">audio_sound_is_playable</span></h1>
-  <p>This function can be used to check if the given sound index can be played currently. This is needed due to the different ways streamed and unstreamed sound playback is handled on the <b>HTML5</b> target platform, and will return <span class="inline">true</span> if the sound can be played and <span class="inline">false</span> if it can&#39;t. Note that on all other platforms other than HTML5, the function will always return <span class="inline">true</span>.</p>
-  <p> </p>
+  <h1>audio_klang_ist_abspielbar</h1>
+  <p>Diese Funktion kann verwendet werden, um zu prüfen, ob der angegebene Tonindex derzeit abgespielt werden kann. Dies ist aufgrund der unterschiedlichen Art und Weise, wie gestreamte und nicht gestreamte Tonwiedergabe auf dem <b>HTML5-Ziel</b> <span class="notranslate">platform</span> gehandhabt wird, erforderlich und gibt <span class="inline">true</span> zurück, wenn der Ton abgespielt werden kann, und <span class="inline">false</span>, wenn dies nicht der Fall ist. Beachten Sie, dass die Funktion bei allen anderen <span class="notranslate">platforms</span> außer HTML5 immer <span class="inline">true</span> zurückgibt.</p>
+  <p> </p>
   <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">audio_sound_is_playable</span>(index);</p>
+  <p class="code">audio_sound_is_playable(index);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>index</td>
+        <td><span class="notranslate">index</span></td>
         <td><span data-keyref="Type_Asset_Sound"><a href="../../../../../The_Asset_Editors/Sounds.htm" target="_blank">Sound Asset</a></span></td>
-        <td>The index of the sound to check.</td>
+        <td><span class="notranslate">The index of the sound to check.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if <span data-field="title" data-format="default">audio_sound_is_playable</span>(snd_Shot)<br />
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p class="code">if audio_sound_is_playable(snd_Shot)<br />
     {<br />
         audio_play_sound(snd_Shot, 10, false);<br />
     }</p>
-  <p>The above code will play the sound &quot;snd_Shot&quot; if it is playable.</p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> spielt den Ton &quot;snd_Shot&quot; ab, wenn er abspielbar ist.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Audio.htm">Audio</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="audio_play_sound.htm">audio_play_sound</a></div>
+        <div style="float:left">Zurück: <a href="Audio.htm">Audio</a></div>
+        <div style="float:right">Nächste: <a href="audio_falloff_set_model.htm"><span class="notranslate">audio_falloff_set_model</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 audio_sound_is_playable

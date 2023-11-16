@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Send Message (Rollback)</title>
+  <title>Nachricht senden (Rollback)</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="" />
   <meta name="rh-index-keywords" content="GML Visual Action - Send Message (Rollback)" />
@@ -15,50 +15,50 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Get Random Number Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Rollback/i_send_message.jpg" /> Send Message (Rollback)</h1>
-  <p>This action is used to send a string message to other players.</p>
-  <p>You specify a string to send, with a maximum <a href="../../../GameMaker_Language/GML_Reference/Strings/string_byte_length.htm">size</a> of 128 bytes.</p>
-  <p>When the second argument is not specified, the message is sent to all players, including the sender.</p>
-  <p>You can specify a player ID in the second argument which is the player who will receive the message.</p>
-  <h3>How to Use?</h3>
-  <p>This action is meant to be used &quot;locally&quot;, and so would result from <a href="../Mouse_And_Keyboard/Mouse_And_Keyboard_Actions.htm">local input</a>, not <a href="Get_Input.htm">Rollback inputs</a>.</p>
-  <p>See the usage example at the bottom. Listen for received messages in the <a data-xref="{text}" href="../../../GameMaker_Language/GML_Reference/Rollback/Rollback_Events.htm#h1">Rollback Event</a> event. </p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Get Random Number Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Rollback/Action_Send_Message.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Nachricht senden (Rollback)</h1>
+  <p>Diese Aktion wird verwendet, um eine Nachricht an andere Spieler zu senden.</p>
+  <p>Sie geben eine zu sendende Zeichenfolge mit einer maximalen <a href="../../../GameMaker_Language/GML_Reference/Strings/string_byte_length.htm">Größe</a> von 128 Byte an.</p>
+  <p>Wenn das zweite <span class="notranslate">argument</span> nicht angegeben ist, wird die Nachricht an alle Spieler, einschließlich des Absenders, gesendet.</p>
+  <p>Sie können in der zweiten <span class="notranslate">argument</span> eine Spieler-ID angeben, die der Spieler ist, der die Nachricht erhalten soll.</p>
+  <h3>Wie verwenden?</h3>
+  <p>Diese Aktion ist für die &quot;lokale&quot; Verwendung gedacht, d. h. sie wird durch <a href="../Mouse_And_Keyboard/Mouse_And_Keyboard_Actions.htm">lokale Eingaben</a> und nicht durch <a href="Get_Input.htm">Rollback-Eingaben</a> ausgelöst.</p>
+  <p>Siehe das Anwendungsbeispiel am Ende. Warten Sie auf empfangene Nachrichten im Ereignis <a data-xref="{text}" href="../../../GameMaker_Language/GML_Reference/Rollback/Rollback_Events.htm#h1">Rollback Event</a>. </p>
+  <p> </p>
+  <h4>Aktion Syntax:</h4>
+  <p><img alt="Get Random Number Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Rollback/i_send_message.jpg" /></p>
+  <h4>Argumente:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>Message</td>
-        <td>The message to send, as a string.</td>
+        <td><span class="notranslate">Message</span></td>
+        <td>Die zu sendende Nachricht in Form einer Zeichenkette.</td>
       </tr>
       <tr>
-        <td>To</td>
-        <td><span class="optional">OPTIONAL</span> The ID of the player to which the message will be sent. Not specifying this argument, or specifying <span class="inline2">-1</span>, sends the message to all players.</td>
+        <td><span class="notranslate">To</span></td>
+        <td><span class="optional">OPTIONAL</span> Die ID des Spielers, an den die Nachricht gesendet werden soll. Wird diese <span class="notranslate">argument</span> nicht angegeben oder <span class="inline2">-1</span>, wird die Nachricht an alle Spieler gesendet.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Rollback/Example_Send_Message_1.png" />If the enter key is pressed locally, the <a href="../../../GameMaker_Language/GML_Reference/Game_Input/Keyboard_Input/keyboard_string.htm"><span class="inline">keyboard_string</span></a> value is sent to all players. That string is then cleared so a new message can be typed.</p>
-  <p>This will trigger the <a data-xref="{text}" href="../../../GameMaker_Language/GML_Reference/Rollback/Rollback_Events.htm#h1">Rollback Event</a> event when the message is received by all clients (including the sender).</p>
-  <figure><img class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Rollback/Example_Send_Message_2.png" />
-    <figcaption>Example of a Rollback Event to print a received message to the Output Log</figcaption>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p><img>Wenn die Eingabetaste lokal gedrückt wird, wird der <a href="../../../GameMaker_Language/GML_Reference/Game_Input/Keyboard_Input/keyboard_string.htm"><span class="inline">keyboard_string</span></a> Wert an alle Spieler gesendet. Diese Zeichenfolge wird dann gelöscht, damit eine neue Nachricht eingegeben werden kann.</p>
+  <p>Dadurch wird das Ereignis " <a data-xref="{text}" href="../../../GameMaker_Language/GML_Reference/Rollback/Rollback_Events.htm#h1">Rollback Event</a> " ausgelöst, wenn die Nachricht von allen Clients (einschließlich dem Absender) empfangen wird.</p>
+  <figure><img alt="Get Random Number Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Rollback/Action_Send_Message.png" />
+    <figcaption>Beispiel für ein Rollback-Ereignis zum Drucken einer empfangenen Nachricht in das Ausgabeprotokoll</figcaption>
   </figure>
-  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Rollback_Actions.htm">Rollback Multiplayer Actions</a></div>
-        <div style="float:right">Next: <a href="Use_Player_Prefs.htm">Use Player Prefs (Rollback)</a></div>
+        <div style="float:left">Zurück: <a data-xref="{title}" href="Rollback_Actions.htm">Rollback Multiplayer-Aktionen</a></div>
+        <div style="float:right">Nächste: <a data-xref="{title}" href="Create_Game.htm">Rollback-Spiel erstellen</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Send Message (Rollback)

@@ -6,7 +6,7 @@
   <title>vertex_create_buffer</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for vertex_create_buffer" />
   <meta name="rh-index-keywords" content="vertex_create_buffer" />
@@ -16,29 +16,29 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>vertex_create_buffer</h1>
-  <p>With this function you can create a new vertex buffer. This is a special <i>grow</i> buffer created by <span data-keyref="GameMaker Name">GameMaker</span> which is pre-formatted for use when building primitives (for use with shaders, for example). The function will return an index for the buffer which should then be used in all further calls to it.</p>
-  <p>When using a vertex buffer created with this function you simply call <a href="vertex_begin.htm"><span class="inline">vertex_begin()</span></a> to start assigning vertex data to it to start to define your custom primitive, which will then be held in the buffer ready for submission to the shader. The buffer can be re-used when necessary (unless you have used the <a href="vertex_freeze.htm"><span class="inline">vertex_freeze()</span></a> function), with each call of <a href="vertex_begin.htm"><span class="inline">vertex_begin()</span></a> wiping the previous buffer data ready to accept the new data.</p>
-  <p> </p>
+  <p>Mit dieser Funktion können Sie einen neuen Vertex <span class="notranslate">buffer</span> erstellen. Dabei handelt es sich um ein spezielles <i>,</i> von <span data-keyref="GameMaker Name">GameMaker</span> erstelltes <span class="notranslate">buffer</span>, das für die Verwendung bei der Erstellung von Primitiven (z. B. für die Verwendung mit Shadern) vorformatiert ist. Die Funktion gibt einen Index für <span class="notranslate">buffer</span> zurück, der bei allen weiteren Aufrufen der Funktion verwendet werden sollte.</p>
+  <p>Wenn Sie einen mit dieser Funktion erstellten Vertex <span class="notranslate">buffer</span> verwenden, rufen Sie einfach <a href="vertex_begin.htm"><span class="inline">vertex_begin()</span></a> auf, um ihm Scheitelpunktdaten zuzuweisen und damit zu beginnen, Ihr benutzerdefiniertes Primitiv zu definieren, das dann in <span class="notranslate">buffer</span> für die Übergabe an den Shader bereitgehalten wird. Die <span class="notranslate">buffer</span> kann bei Bedarf wiederverwendet werden (es sei denn, Sie haben die <a href="vertex_freeze.htm"><span class="inline">vertex_freeze()</span></a> Funktion), wobei jeder Aufruf von <a href="vertex_begin.htm"><span class="inline">vertex_begin()</span></a> die vorherigen Daten von <span class="notranslate">buffer</span> löscht, um die neuen Daten aufzunehmen.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">vertex_create_buffer();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_ID_Buffer_Vertex">Vertex Buffer ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">v_buff = vertex_create_buffer();</p>
-  <p>The above code will create a new a new vertex buffer and store its handle in the variable &quot;v_buff&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> erstellt einen neuen Scheitelpunkt <span class="notranslate">buffer</span> und speichert dessen Handle in der Variablen &quot;v_buff&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Primitives_And_Vertex_Formats.htm">Primitives And Vertex Formats</a></div>
-        <div style="float:right">Next: <a href="vertex_create_buffer_ext.htm">vertex_create_buffer_ext</a></div>
+        <div style="float:left">Zurück: <a href="Primitives_And_Vertex_Formats.htm">Primitive und Vertex-Formate</a></div>
+        <div style="float:right">Nächste: <a href="vertex_create_buffer_ext.htm"><span class="notranslate">vertex_create_buffer_ext</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 vertex_create_buffer

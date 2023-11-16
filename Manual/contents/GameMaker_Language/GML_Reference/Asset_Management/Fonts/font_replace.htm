@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>schrift_ersetzen</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page outlining the function font_replace" />
+  <meta name="rh-index-keywords" content="font_replace" />
+  <meta name="search-keywords" content="" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>schrift_ersetzen</h1>
+  <p>Mit dieser Funktion können Sie eine Schriftart in Ihrem Spiel durch eine der Schriftarten ersetzen, die auf dem System installiert sind, auf dem es läuft. Beachten Sie, dass die zu ersetzende Schriftart <em>keine</em> Schriftart aus dem Asset-Browser sein <em>kann</em>, sondern eine Schriftart sein muss, die zuvor mit der Funktion <a href="font_add.htm"><span class="inline">font_add()</span></a>.</p>
+  <p>Wenn Sie eine Schriftart auf diese Weise ersetzen, können Sie die Größe der Schrift (in Punkt) festlegen und bestimmen, ob die Schrift <b>fett</b> oder <i>kursiv</i> sein soll, und Sie können auch den Bereich der einzuschließenden Zeichen festlegen. Wenn die Funktion fehlschlägt, wird sie stillschweigend abgebrochen und die angegebene Schriftart wird nicht ersetzt.</p>
+  <p>Für das HTML5-Ziel <span class="notranslate">module</span><b>kann</b> diese Funktion <b>nur verwendet werden, um <i>Web Fonts</i></b> zu ersetzen, und sie funktioniert nur, wenn WebGL <b>nicht</b> aktiviert ist - wenn WebGL aktiviert ist, müssen Sie eine allgemeine Font-Ressource verwenden (d.h. mit <a href="../../Drawing/Text/draw_set_font.htm"><span class="inline">draw_set_font()</span></a> zusammen mit einer Schriftart aus dem Asset-Browser) oder Bitmap-Schriften (siehe <a href="font_add_sprite.htm"><span class="inline">font_add_sprite()</span></a>).</p>
+  <p class="note"><span class="optional">WICHTIG</span> Bei der Ausrichtung auf HTML5 wird kursiver und fetter Text nur unterstützt, wenn die Schriftart oder die Webschrift selbst diese Zeichen enthält. Sie werden nicht aus der Basisschriftart synthetisiert.</p>
+  <p>In der folgenden Tabelle sind die Schriftarten aufgeführt, die in allen Browsern standardmäßig vorhanden sind und problemlos verwendet werden können sollten. Jede andere Schriftart kann auf dem Computer oder Gerät, auf dem Ihr Spiel läuft, vorhanden sein oder auch nicht, daher sollte die Verwendung dieser Funktion auf diese Standardschriften beschränkt sein:</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Windows-Schriftartname</th>
+        <th>Mac Schriftart Name</th>
+        <th>Schriftfamilie</th>
+      </tr>
+      <tr>
+        <td>Arial</td>
+        <td>Arial / Helvetica</td>
+        <td>sans-serif</td>
+      </tr>
+      <tr>
+        <td>Arial Schwarz</td>
+        <td>Arial Schwarz / Gadget</td>
+        <td>sans-serif</td>
+      </tr>
+      <tr>
+        <td>Comic Sans MS</td>
+        <td>Comic Sans MS</td>
+        <td>kursiv</td>
+      </tr>
+      <tr>
+        <td>Kurier Neu</td>
+        <td>Kurier Neu</td>
+        <td>einzeilig</td>
+      </tr>
+      <tr>
+        <td>Georgien</td>
+        <td>Georgien</td>
+        <td>Serifen</td>
+      </tr>
+      <tr>
+        <td>Auswirkungen</td>
+        <td>Aufschlag / Holzkohle</td>
+        <td>sans-serif</td>
+      </tr>
+      <tr>
+        <td>Lucida-Konsole</td>
+        <td>Monaco</td>
+        <td>einzeilig</td>
+      </tr>
+      <tr>
+        <td>Lucida Sans Unicode</td>
+        <td>Lucida Grande</td>
+        <td>sans-serif</td>
+      </tr>
+      <tr>
+        <td>Palatino Linotype / Buchantiqua</td>
+        <td>Palatino</td>
+        <td>Serifen</td>
+      </tr>
+      <tr>
+        <td>Tahoma</td>
+        <td>Genf</td>
+        <td>sans-serif</td>
+      </tr>
+      <tr>
+        <td>Times New Roman</td>
+        <td>Times New Roman / Times</td>
+        <td>Serifen</td>
+      </tr>
+      <tr>
+        <td>Trebuchet MS</td>
+        <td>Trebuchet MS</td>
+        <td>sans-serif</td>
+      </tr>
+      <tr>
+        <td>Verdana</td>
+        <td>Verdana / Genf</td>
+        <td>sans-serif</td>
+      </tr>
+      <tr>
+        <td>Georgien</td>
+        <td>Georgien</td>
+        <td>Serifen</td>
+      </tr>
+      <tr>
+        <td>Symbol</td>
+        <td>Symbol</td>
+        <td>K.A.</td>
+      </tr>
+      <tr>
+        <td>Webdings</td>
+        <td>Webdings</td>
+        <td>K.A.</td>
+      </tr>
+      <tr>
+        <td>Wingdings</td>
+        <td>Zapf Dingbats</td>
+        <td>K.A.</td>
+      </tr>
+      <tr>
+        <td>MS Sans Serif</td>
+        <td>Genf</td>
+        <td>sans-serif</td>
+      </tr>
+      <tr>
+        <td>MS Serif</td>
+        <td>New York</td>
+        <td>sans-serif</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Auf allen anderen (nicht Web-)Zielen können Sie diese Funktion verwenden, um eine Schriftart aus einer Datei zu ersetzen. Die Datei <b>muss</b> mit der Funktion " <a href="../../../../Settings/Included_Files.htm">Enthaltene Dateien"</a> von <span data-keyref="GameMaker Name">GameMaker</span> <b>in das Spielpaket aufgenommen werden</b> und muss entweder eine Schriftartdatei im Format <span class="inline">*.ttf</span> oder <span class="inline">*.otf</span> sein, was nützlich ist, um nicht standardmäßige Schriftarten wie asiatische oder arabische hinzuzufügen.</p>
+  <p class="note"><span class="tip">TIPP</span><b> </b>Wenn Sie eine solche Schriftartdatei in ein Spiel einbinden, vergewissern Sie sich, dass sie <b>ordnungsgemäß</b> für den Vertrieb mit dem Spiel <b>lizenziert</b> ist.</p>
+  <p>Wenn eine Schriftart auf diese Weise aus einer Datei geladen wird, ist die <i>Größe</i> der Schriftart in <b>Pixeln</b> angegeben und der <i>erste</i> und <i>letzte</i> Wert werden ignoriert, d.h. alle Glyphen der Schriftart werden hinzugefügt. Auf diese Weise hinzugefügte Schriftarten werden einer eigenen Texturseite zugewiesen, daher ist bei der Verwendung dieser Funktion Vorsicht geboten, da sie die Anzahl der Texturwechsel beim Zeichnen erhöht. Es ist auch zu beachten, dass Schriften beim Zeichnen etwas größer erscheinen können, da Glyphen Teile haben können, die außerhalb des für die Schrift definierten Begrenzungsrahmens gezeichnet werden. Sie sollten sich auch darüber im Klaren sein, dass es eine Begrenzung von etwa 200 Glyphen gibt, die in einem einzigen Frame für eine bestimmte Schriftart gerendert werden können.</p>
+  <p class="note"><b><span class="note">HINWEIS</span> </b>Wenn Sie eine Schriftart in <span data-keyref="GameMaker Name">GameMaker</span> laden, müssen Sie daran denken, sie wieder zu entfernen (mit <span style="font-size:1px;"><a href="font_delete.htm"><span class="inline">font_delete()</span></a></span>) zu entfernen, wenn Sie sie nicht mehr benötigen, sonst besteht die Gefahr eines Speicherlecks, das Ihr Spiel verlangsamt und schließlich zum Absturz bringt.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">font_replace(ind, name, size, bold, italic, first, last);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">ind</span></td>
+        <td><span data-keyref="Type_Asset_Font">Schriftart Asset</span></td>
+        <td><span class="notranslate">The index of the (previously added) font to be replaced.</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">name</span></td>
+        <td><span data-keyref="Type_String">Zeichenfolge</span></td>
+        <td><span class="notranslate">The name of the font to be used (eg &#39;Arial&#39;), or the file path if the font is an included <span class="inline"></span>*.<span class="inline">ttf</span> oder <span class="inline">*.otf</span> Datei.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">size</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The size of the font - points for Web Fonts, pixels for file fonts.</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">bold</span></td>
+        <td><span data-keyref="Type_Bool">Boolesche</span></td>
+        <td><span class="notranslate">Whether the font is bold (true) or not (false).</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">italics</span></td>
+        <td><span data-keyref="Type_Bool">Boolesche</span></td>
+        <td><span class="notranslate">Whether the font is italic (true) or not (false).</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">first</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The first character to include (if you&#39;re unsure, go for 32).</span></td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">last</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The last character to include (if you&#39;re unsure, go for 128).</span></td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code"><span data-keyref="Type_Void">N/A</span></p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p class="code">font_replace(myfont, &quot;Arial&quot;, 24, true, true, 32, 128);</p>
+  <p>Dadurch wird die in der Variablen &quot;myfont&quot; indizierte Schriftart durch eine neue Schriftart in der Größe 24pt ersetzt, die &quot;Arial&quot; verwendet und fett und kursiv ist. Die Schriftart umfasst Groß- und Kleinbuchstaben, Zahlen und alle gängigen Interpunktionszeichen.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Zurück: <a href="Fonts.htm">Schriftarten</a></div>
+        <div style="float:right">Nächste: <a href="font_replace_sprite.htm"><span class="notranslate">font_replace_sprite</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
+  </div>
+  <!-- KEYWORDS
+font_replace_sprite
+-->
+  <!-- TAGS
+font_replace_sprite
+-->
+</body>
+</html>

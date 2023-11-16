@@ -6,7 +6,7 @@
   <title>get_login_async</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for get_login_async" />
   <meta name="rh-index-keywords" content="get_login_async" />
@@ -15,59 +15,59 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>get_login_async</h1>
-  <p>This function opens a window that asks the user to input a username and password. These arguments can be set as an empty string or you can store previously entered values to use if you wish. This is an asynchronous function, and as such <span data-keyref="GameMaker Name">GameMaker</span> does <i>not</i> block the device it is being run on while waiting for an answer, but rather keeps on running events as normal. Once the user has input the details and pressed the &quot;Okay&quot; button, an asynchronous <b>User Interaction</b> event is triggered which, for the duration of that event <i>only</i>, will have a DS map stored in the variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>.</p>
-  <p>This map will contain the two keys, &quot;<strong>username</strong>&quot; and &quot;<strong>password</strong>&quot;, with the corresponding user input stored in each. As it is a DS Map that has been created, this can then be used, for example, by the <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a> function ready to be sent to a server or written to a file on the chosen device.</p>
-  <p>This function will return an index number for the async event that was triggered, which can then be checked in the corresponding event so that you can &quot;target&quot; specific data in case you&#39;re expecting more than one async events to be triggered (perhaps from some other function).</p>
-  <p class="note"><strong><em><span class="note">NOTE</span></em></strong><em> This function is <span data-keyref="Dialog for debug only">for <strong>debugging and testing use only</strong> and should not be used in released games. For that purpose you should create a custom user interface to receive input from players so that you have complete control over how the dialogs look and behave.</span></em></p>
-  <p> </p>
+  <p>Diese Funktion öffnet ein Fenster, das den Benutzer auffordert, einen Benutzernamen und ein Passwort einzugeben. Diese <span class="notranslate">arguments</span> können als leere Zeichenkette gesetzt werden oder Sie können zuvor eingegebene Werte speichern, um sie zu verwenden, wenn Sie möchten. Da es sich um eine asynchrone Funktion handelt, blockiert <span data-keyref="GameMaker Name">der GameMaker</span> das Gerät, auf dem sie ausgeführt wird, <i>nicht</i>, während er auf eine Antwort wartet, sondern lässt die Ereignisse wie gewohnt weiterlaufen. Sobald der Benutzer die Details eingegeben und die Schaltfläche &quot;Okay&quot; gedrückt hat, wird ein asynchrones <b>Benutzerinteraktionsereignis</b> ausgelöst, das <i>nur</i> für die Dauer dieses Ereignisses eine DS-Map in der Variablen <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>.</p>
+  <p>Diese Map enthält die beiden Schlüssel &quot;<strong>Benutzername</strong>&quot; und &quot;<strong>Kennwort</strong>&quot;, in denen jeweils die entsprechenden Benutzereingaben gespeichert sind. Da es sich um eine DS-Map handelt, die erstellt wurde, kann diese dann z.B. von der <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a> Funktion an <span class="notranslate">server</span> gesendet oder in eine Datei auf dem gewählten Gerät geschrieben werden.</p>
+  <p>Diese Funktion gibt eine Indexnummer für das ausgelöste asynchrone Ereignis zurück, die dann in dem entsprechenden Ereignis überprüft werden kann, so dass Sie bestimmte Daten &quot;anvisieren&quot; können, falls Sie erwarten, dass mehr als ein asynchrones Ereignis ausgelöst wird (vielleicht von einer anderen Funktion).</p>
+  <p class="note"><strong><em><span class="note">HINWEIS</span></em></strong><em> Diese Funktion ist <span data-keyref="Dialog for debug only"> <strong>nur</strong> zum <strong>Debuggen und Testen</strong></span>gedacht <span data-keyref="Dialog for debug only">und sollte nicht in veröffentlichten Spielen verwendet werden. Zu diesem Zweck sollten Sie eine benutzerdefinierte Benutzeroberfläche erstellen, um Eingaben von Spielern zu erhalten, so dass Sie die vollständige Kontrolle darüber haben, wie die Dialoge aussehen und sich verhalten.</span></em></p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">get_login_async(name, password);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Beschreibung</th>
      </tr>
       <tr>
-        <td>username</td><td><span data-keyref="Type_String"></span></td>
-        <td>The default user name</td>
+        <td><span class="notranslate">username</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The default user name</span></td>
      </tr>
       <tr>
-        <td>password</td><td><span data-keyref="Type_String"></span></td>
-        <td>The default password</td>
+        <td><span class="notranslate">password</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The default password</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_ID_Async_Event">Async Request ID</span></p>
-  <p> </p>
-  <h4>Extended Example:</h4>
-  <p>The <b>create event</b> (for example) of the object that is controlling the login of our user would have the following code:</p>
+  <p> </p>
+  <h4>Erweitertes Beispiel:</h4>
+  <p>Das <b>Erstellungsereignis</b> (zum Beispiel) des Objekts, das die Anmeldung unseres Benutzers steuert, würde den folgenden Code enthalten:</p>
   <p class="code">ini_open(&quot;Profile.ini&quot;);<br />
     u = ini_read_string(&quot;User&quot;,&quot;0&quot;,&quot;&quot;);<br />
     p = ini_read_string(&quot;User&quot;,&quot;1&quot;,&quot;&quot;);<br />
     ini_close();<br />
     login = get_login_async(u,p);</p>
-  <p>The above code opens an ini file (or creates one if it doesn&#39;t exist) and gets the name and password stored in that file. If they do not exist, then the default of an empty string (&quot;&quot;) is returned. These values are then used in <span class="inline">get_login_async()</span> to ask the user for their username and password details, with the request index being stored in the variable &quot;login&quot;. Note that while waiting for the user to give the necessary information the game and its events will continue to run as normal.</p>
-  <p>Now that the asynchronous code has been fired off, we need to check for the return value in the <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm">asynchronous event for Dialogs</a> in the following way:</p>
+  <p>Die obige <span class="notranslate">code</span> öffnet eine ini-Datei (oder erstellt eine, wenn sie nicht existiert) und ruft den Namen und das Passwort ab, die in dieser Datei gespeichert sind. Wenn sie nicht existieren, wird als Standardwert eine leere Zeichenkette (&quot;&quot;) zurückgegeben. Diese Werte werden dann in <span class="inline">get_login_async()</span> verwendet, um den Benutzer nach seinem Benutzernamen und seinem Passwort zu fragen, wobei der Index der Anfrage in der Variablen &quot;login&quot; gespeichert wird. Beachten Sie, dass das Spiel und seine Ereignisse normal weiterlaufen, während Sie darauf warten, dass der Benutzer die erforderlichen Informationen angibt.</p>
+  <p>Nachdem nun das asynchrone <span class="notranslate">code</span> abgefeuert wurde, müssen wir den Rückgabewert im <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Dialog.htm">asynchronen Ereignis für Dialoge</a> wie folgt überprüfen:</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == login<br />
     {<br />
         u = ds_map_find_value(async_load, &quot;username&quot;);<br />
         p = ds_map_find_value(async_load, &quot;password&quot;);<br />
     }</p>
-  <p>The above code checks the &quot;id&quot; key of the <span class="inline">async_load</span> DS map and if it holds the same value as that stored in the &quot;login&quot; variable, the map details are then read into the corresponding variables which you can then store or use to check against database values etc...</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> prüft den &quot;id&quot;-Schlüssel der <span class="inline">async_load</span> DS-Map, und wenn er denselben Wert wie die &quot;login&quot;-Variable enthält, werden die Map-Details in die entsprechenden Variablen eingelesen, die Sie dann speichern oder zum Abgleich mit Datenbankwerten usw. verwenden können.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Dialog.htm">Dialog</a></div>
-        <div style="float:right">Next: <a href="get_string_async.htm">get_string_async</a></div>
+        <div style="float:left">Zurück: <a href="Dialog.htm">Dialog</a></div>
+        <div style="float:right">Nächste: <a href="get_string_async.htm"><span class="notranslate">get_string_async</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 get_login_async

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_set_stat_avg_rate</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_set_stat_avg_rate" />
+  <meta name="rh-index-keywords" content="steam_set_stat_avg_rate" />
+  <meta name="search-keywords" content="steam_set_stat_avg_rate" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_set_stat_avg_rate</h1>
+  <p>Mit dieser Funktion können Sie einen statistischen Durchschnittstyp mit einem &quot;Schiebefenster&quot;-Effekt für den Durchschnitt festlegen. Der Wert &quot;session_count&quot; ist der aktuelle Wert, der gemittelt werden soll, während &quot;session_length&quot; die Zeitspanne
+    der Spielzeit seit dem letzten Aufruf der Funktion. Weitere Einzelheiten zur Verwendung dieser Funktion finden Sie im <b>erweiterten Beispiel</b> unten.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_set_stat_avg_rate(stat_name, session_count, session_length);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">stat_name</span></td>
+        <td>Der Name der zu setzenden Statistik (eine Zeichenkette).</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">session_count</span></td>
+        <td>Der Wert, für den der Durchschnitt ermittelt werden soll (eine reelle Zahl)</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">session_length</span></td>
+        <td>Die Zeit, die seit dem letzten Setzen des Wertes verstrichen ist (eine reale Zahl).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Erweitertes Beispiel:</h4>
+  <p>Da die Funktion "Durchschnittsstatistik" sehr komplex sein kann, soll ihre Verwendung anhand des folgenden Beispiels erläutert werden. Stellen Sie sich vor, Sie möchten eine Durchschnittsstatistik verfolgen, z. B. &quot;Verdiente Punkte pro Stunde&quot;. Ein Ansatz wäre
+    wäre, zwei Statistiken zu haben: eine <i>Integer-Statistik</i>, &quot;TotalPoints&quot;, und eine <i>Float-Statistik</i> &quot;TotalPlayTimeHours&quot;, und dann die Gesamtpunkte durch die Gesamtzeit zu teilen, um den Wert &quot;Points per Hour&quot; zu erhalten.</p>
+  <p>Sobald der Spieler jedoch eine beträchtliche Menge an Spielzeit angesammelt hat, ändert sich der berechnete Durchschnitt extrem langsam, und je mehr der Benutzer das Spiel spielt, desto weniger reagiert dieser Durchschnitt. Wenn der Nutzer 100 Stunden mit dem Spiel verbracht hat
+    Spiel verbracht hat, wird der berechnete Durchschnitt um etwa 50 Stunden davon &quot;zurückbleiben&quot;, und wenn er seine Fertigkeit erhöht, wird er nicht den erwarteten Anstieg der &quot;Punkte pro Stunde&quot; sehen. Um dies zu umgehen, können wir ein &quot;gleitendes Fenster&quot; verwenden
+    verwenden, um die &quot;Punkte pro Stunde&quot; nur für die letzten 10 gespielten Stunden zu berechnen.</p>
+  <p>Um diese Funktion zu nutzen, müssen wir also eine <span class="notranslate">Steam</span> Statistik (im Kontrollpanel für das Spiel auf dem Workshop) mit dem Namen &quot;AvgPointsPerHour&quot; erstellen und ihre <b>Window-Eigenschaft</b> auf 10 setzen. In deinem Spiel müsstest du nun einige globale Variablen hinzufügen
+    in eine Instanz am Anfang einfügen:</p>
+  <p class="code">global.Points = 0;<br/> global.Time = 0;</p>
+  <p>Sie würden dann ein Controller-Objekt haben, das die globale Variable &quot;Zeit&quot; in einem Alarm (zum Beispiel) jede Sekunde hochzählt, während Ihr Spiel die globale Variable &quot;Punkte&quot; beeinflusst. In regelmäßigen Abständen während des Spiels (wieder,
+    in einem Controller-Objekt, vielleicht in einem Alarm, oder in Intervallen der Abfrage des &quot;Zeit&quot;-Wertes) würden Sie den Wert wie folgt setzen:</p>
+  <p class="code">steam_set_stat_avg_rate(&quot;AvgPointsPerHour&quot;, global.Points, (global.Time / 3600));<br/> global.Points = 0;<br/> global.Time = 0;</p>
+  <p>Beachten Sie, dass wir die Zeit durch 3600 teilen, da wir die Zeit in <i>Stunden</i> und nicht in Sekunden angeben wollen, und danach setzen wir die globale Variable &quot;Punkte&quot; und die globale Variable &quot;Zeit&quot; auf 0 zurück, damit wir beim nächsten Aufruf der Funktion
+    einen neuen Durchschnittswert für die Statistik erhalten. <span class="notranslate">Steam</span> nimmt nun diesen Wert, den Sie gesendet haben, und erstellt einen Durchschnittswert über die Zeit, die für unser &quot;Fenster&quot; festgelegt wurde.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Zurück: <a href="Steam_Achievements.htm">Errungenschaften und Statistiken</a></div>
+        <div style="float:right">Nächste: <a href="steam_get_stat_int.htm"><span class="notranslate">steam_get_stat_int</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_set_avg_rate
+-->
+  <!-- TAGS
+steam_set_avg_rate
+-->
+</body>
+</html>

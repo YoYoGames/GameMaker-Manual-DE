@@ -6,7 +6,7 @@
   <title>gpu_get_blendmode_ext</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for the function gpu_get_blendmode_ext" />
   <meta name="rh-index-keywords" content="gpu_get_blendmode_ext,bm_zero,bm_one,bm_src_colour,bm_inv_src_colour,bm_src_alpha,bm_inv_src_alpha,bm_dest_alpha,bm_inv_dest_alpha,bm_dest_colour,bm_inv_dest_colour,bm_src_alpha_sat,bm_src_color,bm_inv_src_color,bm_dest_color,bm_inv_dest_colour" />
@@ -16,12 +16,12 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gpu_get_blendmode_ext</h1>
-  <p>This function can be used to retrieve the current extended blend mode being used for drawing. The function returns a 2 element 1D array with the following elements in it:</p>
+  <p>Diese Funktion kann verwendet werden, um den aktuellen erweiterten Überblendungsmodus abzurufen, der zum Zeichnen verwendet wird. Die Funktion gibt ein 1D-Array mit 2 Elementen zurück, das die folgenden Elemente enthält:</p>
   <ul class="colour">
-    <li>[0] = Source <span data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">Blend Mode Factor Constant</a></span> (default is <span class="inline">bm_src_alpha</span>)</li>
-    <li>[1] = Destination <span data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">Blend Mode Factor Constant</a></span> (default is <span class="inline">bm_inv_src_alpha</span>)</li>
+    <li>[0] = Quelle <span data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">Blend Mode Factor Constant</a></span> (Standard ist <span class="inline">bm_src_alpha</span>)</li>
+    <li>[1] = Ziel <span data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">Überblendungsmodus-Faktor Konstante</a></span> (Standard ist <span class="inline">bm_inv_src_alpha</span>)</li>
   </ul>
-  <p>The values of the array will be one of the following constants (&quot;s&quot; denotes a value taken from the source while a &quot;d&quot; denotes a value from the destination):</p>
+  <p>Die Werte des Arrays sind eine der folgenden Konstanten (&quot;s&quot; steht für einen Wert aus der Quelle, &quot;d&quot; für einen Wert aus dem Ziel):</p>
   <table>
     <colgroup>
       <col />
@@ -29,82 +29,82 @@
     </colgroup>
     <tbody>
       <tr>
-        <th colspan="2"><span data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">Blend Mode Factor Constant</a></span></th>
+        <th colspan="2"><span data-keyref="Type_Constant_Draw_Blend_Mode_Factor"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Drawing/GPU_Control/gpu_get_blendmode_ext.htm">Blend Mode Faktor Konstante</a></span></th>
       </tr>
       <tr>
-        <th>Constant</th>
-        <th>Blend factor (Red, Green, Blue, Alpha)</th>
+        <th>Konstante</th>
+        <th>Überblendfaktor (Rot, Grün, Blau, Alpha)</th>
       </tr>
       <tr>
-        <td><span class="inline">bm_zero</span></td>
+        <td><span class="notranslate"><span class="inline">bm_zero</span></td>
         <td>(0, 0, 0, 0)</td>
       </tr>
       <tr>
-        <td><span class="inline">bm_one</span></td>
+        <td><span class="notranslate"><span class="inline">bm_one</span></td>
         <td>(1, 1, 1, 1)</td>
       </tr>
       <tr>
-        <td><span class="inline">bm_src_colour</span></td>
+        <td><span class="notranslate"><span class="inline">bm_src_colour</span></td>
         <td>(Rs, Gs, Bs, As)</td>
       </tr>
       <tr>
-        <td><span class="inline">bm_inv_src_colour</span></td>
+        <td><span class="notranslate"><span class="inline">bm_inv_src_colour</span></td>
         <td>(1-Rs, 1-Gs, 1-Bs, 1-As)</td>
       </tr>
       <tr>
-        <td><span class="inline">bm_src_alpha</span></td>
+        <td><span class="notranslate"><span class="inline">bm_src_alpha</span></td>
         <td>(As, As, As, As)</td>
       </tr>
       <tr>
-        <td><span class="inline">bm_inv_src_alpha</span></td>
+        <td><span class="notranslate"><span class="inline">bm_inv_src_alpha</span></td>
         <td>(1-As, 1-As, 1-As, 1-As)</td>
       </tr>
       <tr>
-        <td><span class="inline">bm_dest_alpha</span></td>
-        <td>(Ad, Ad, Ad, Ad)</td>
+        <td><span class="notranslate"><span class="inline">bm_dest_alpha</span></td>
+        <td>(Anzeige, Anzeige, Anzeige, Anzeige)</td>
       </tr>
       <tr>
-        <td><span class="inline">bm_inv_dest_alpha</span></td>
+        <td><span class="notranslate"><span class="inline">bm_inv_dest_alpha</span></td>
         <td>(1-Ad, 1-Ad, 1-Ad, 1-Ad)</td>
       </tr>
       <tr>
-        <td><span class="inline">bm_dest_colour</span></td>
+        <td><span class="notranslate"><span class="inline">bm_dest_colour</span></td>
         <td>(Rd, Gd, Bd, Ad)</td>
       </tr>
       <tr>
-        <td><span class="inline">bm_inv_dest_colour</span></td>
+        <td><span class="notranslate"><span class="inline">bm_inv_dest_colour</span></td>
         <td>(1-Rd, 1-Gd, 1-Bd, 1-Ad)</td>
       </tr>
       <tr>
-        <td><span class="inline">bm_src_alpha_sat</span></td>
-        <td>(f, f, f, 1) where f = min(As, 1-Ad)</td>
+        <td><span class="notranslate"><span class="inline">bm_src_alpha_sat</span></td>
+        <td>(f, f, f, 1) mit f = min(As, 1-Ad)</td>
       </tr>
     </tbody>
   </table>
-  <p>Note that you can change these values and pass the full array to the <a href="gpu_set_blendmode_ext.htm"><span class="inline">gpu_set_blendmode_ext()</span></a> function as a single argument.</p>
-  <p> </p>
+  <p>Beachten Sie, dass Sie diese Werte ändern können und das gesamte Array an die <a href="gpu_set_blendmode_ext.htm"><span class="inline">gpu_set_blendmode_ext()</span></a> Funktion als ein einziges <span class="notranslate">argument</span> übergeben.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">gpu_get_blendmode_ext();</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Array"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm">Array</a></span> (2 elements only; see above for constants)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">var bm = gpu_get_blendmode_ext();<br />
     bm[0] = bm_src_alpha;<br />
     gpu_set_blendmode_ext(bm);</p>
-  <p>The above code gets the current extended blend mode, modifies the source, and then sets the extended blend mode again.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> ruft den aktuellen erweiterten Überblendungsmodus ab, ändert die Quelle und setzt dann den erweiterten Überblendungsmodus erneut.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="GPU_Control.htm">GPU Control</a></div>
-        <div style="float:right">Next: <a href="gpu_get_blendmode_ext_sepalpha.htm">gpu_get_blendmode_ext_sepalpha</a></div>
+        <div style="float:left">Zurück: <a href="GPU_Control.htm">GPU-Steuerung</a></div>
+        <div style="float:right">Nächste: <a href="gpu_get_blendmode_ext_sepalpha.htm"><span class="notranslate">gpu_get_blendmode_ext_sepalpha</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 gpu_get_blendmode_ext

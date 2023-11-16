@@ -6,7 +6,7 @@
   <title>buffer_base64_encode</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for buffer_base64_encode" />
   <meta name="rh-index-keywords" content="buffer_base64_encode" />
@@ -16,49 +16,49 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>buffer_base64_encode</h1>
-  <p>This function will convert the data from the given buffer into a base64 format encoded string. This is a commonly used encoding scheme that is often used for any media that needs to be stored or transferred over the internet as text, and renders the
-    output unreadable to the human eye. To use this you need to specify an already created buffer, the offset value (which is the point within the buffer at which you wish to start encoding) as well as the size, in bytes, of the buffer memory to encode.</p>
-  <p> </p>
+  <p>Diese Funktion konvertiert die Daten aus der angegebenen <span class="notranslate">buffer</span> in eine Zeichenkette im base64-Format. Dies ist ein häufig verwendetes Kodierungsschema, das für alle Medien verwendet wird, die als Text gespeichert oder über das Internet übertragen werden müssen, und macht die
+    Ausgabe für das menschliche Auge unlesbar. Dazu müssen Sie ein bereits erstelltes <span class="notranslate">buffer</span>, den Offset-Wert (den Punkt innerhalb von <span class="notranslate">buffer</span>, an dem Sie mit der Kodierung beginnen möchten) sowie die Größe des zu kodierenden <span class="notranslate">buffer</span> Speichers in Bytes angeben.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">buffer_base64_encode(buffer, offset, size);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Beschreibung</th>
      </tr>
       <tr>
-        <td>buffer</td><td><span data-keyref="Type_ID_Buffer"></span></td>
-        <td>The index of the buffer to use.</td>
+        <td><span class="notranslate">buffer</span></td><td><span data-keyref="Type_ID_Buffer"></span></td>
+        <td><span class="notranslate">The index of the buffer to use.</span></td>
      </tr>
       <tr>
-        <td>offset</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The data offset value.</td>
+        <td><span class="notranslate">offset</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The data offset value.</span></td>
      </tr>
       <tr>
-        <td>size</td><td><span data-keyref="Type_Real"></span></td>
-        <td>The size of the buffer.</td>
+        <td><span class="notranslate">size</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The size of the buffer.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_String"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">var b_str = buffer_base64_encode(buff, 0, buffer_get_size(buff))</p>
-  <p>The above code will create encode the full data stored in the buffer indexed by the variable &quot;buff&quot;, and store the returned string in the local variable &quot;b_str&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> kodiert die vollständigen Daten, die in der <span class="notranslate">buffer</span> gespeichert sind und durch die Variable &quot;buff&quot; indiziert werden, und speichert die zurückgegebene Zeichenkette in der lokalen Variable &quot;b_str&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffers.htm">Buffers</a></div>
-        <div style="float:right">Next: <a href="buffer_base64_decode.htm">buffer_base64_decode</a></div>
+        <div style="float:left">Zurück: <a href="Buffers.htm">Puffer</a></div>
+        <div style="float:right">Nächste: <a href="buffer_base64_decode.htm"><span class="notranslate">buffer_base64_decode</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 buffer_base64_encode

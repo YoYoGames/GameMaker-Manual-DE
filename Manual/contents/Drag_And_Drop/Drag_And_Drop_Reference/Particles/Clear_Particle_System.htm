@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Clear Particle System</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>Klares Partikelsystem</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Clear Particle System action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Clear Particle System" />
@@ -14,39 +14,43 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Clear Particle System Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Clear_Particle_System.png" width="32" /> Clear Particle System</h1>
-  <p>With this action you can clear the given particle system to its <b>default</b> state, removing all emitters (there is also no need to call the <a href="Destroy_Particle_Emitter.htm">Destroy Particle Emitter</a> action as this is taken care of automatically) and clearing all particles from the screen. You supply the unique ID value for the system to clear, as returned when you created the system with the action <a href="Create_Particle_System.htm">Create Particle System</a>. Care must be taken when using this action since it destroys all the emitters associated with the particle system - this means that any instance in the room that uses an emitter may give an error as that emitter no longer exists, so make sure that the action is only called when you are not going to be creating any new particles from that emitter (for more information on particle emitters see <a href="Create_Particle_Emitter.htm">Create Particle Emitter</a>).</p>
-  <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> This action will only <b>clear</b> the visible particles in the room, but it does not clear the particle properties nor does it remove them from memory. For that you should use the action <a href="Destroy_Particle_Type.htm">Destroy Particle Type</a>.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Clear Particle System Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/a_Particles_Clear_Particle_System.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Klares Partikelsystem</h1>
+  <p>Mit dieser Aktion können Sie das gegebene Partikelsystem in seinen <b>Standardzustand</b> zurückversetzen, indem Sie alle Emitter entfernen (es besteht auch keine Notwendigkeit, die Aktion <a href="Destroy_Particle_Emitter.htm">Partikelemitter zerstören</a> aufzurufen, da dies automatisch erledigt wird)
+    und alle Partikel vom Bildschirm entfernen. Sie geben den eindeutigen ID-Wert für das zu löschende System an, der bei der Erstellung des Systems mit der Aktion <a href="Create_Particle_System.htm">Partikelsystem erstellen</a> zurückgegeben wurde. Vorsicht ist geboten bei der Verwendung
+    Diese Aktion zerstört alle Emitter, die mit dem Partikelsystem verbunden sind - das bedeutet, dass jede Instanz im Raum, die einen Emitter verwendet, eine Fehlermeldung ausgeben kann, da dieser Emitter nicht mehr existiert, also stelle sicher, dass die Aktion nur aufgerufen wird, wenn
+    du keine neuen Partikel von diesem Emitter erstellen wirst (für weitere Informationen über Partikelemitter siehe <a href="Create_Particle_Emitter.htm">Partikelemitter erstellen</a>).</p>
+  <p class="note"><b>HINWEIS</b>: Diese Aktion <b>löscht</b> nur die sichtbaren Partikel im Raum, aber sie löscht weder die Partikeleigenschaften noch entfernt sie diese aus dem Speicher. Hierfür sollten Sie die Aktion <a href="Destroy_Particle_Type.htm">Partikeltyp zerstören</a> verwenden.</p>
+  <p> </p>
+  <h4>Aktion Syntax:</h4>
+  <p><img alt="Clear Particle System Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/i_Particles_Clear_Particle_System.png" width="32" /></p>
+  <h4>Argumente:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>System</td>
-        <td>The unique ID value for the system to be destroyed</td>
+        <td><span class="notranslate">System</span></td>
+        <td>Der eindeutige ID-Wert für das zu vernichtende System</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Clear Particle System Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Particles/e_Particles_Clear_Particle_System.png" />The above action block code will clear all the particles from the screen if the player has 0 or less lives and then restart the room.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p><img>Der obige Aktionsblock <span class="notranslate">code</span> entfernt alle Partikel vom Bildschirm
+    wenn der Spieler 0 oder weniger Leben hat und startet dann den Raum neu.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Actions.htm">Particle Actions</a></div>
-        <div style="float:right">Next: <a href="Pause_Particle_System.htm">Pause Particle System</a></div>
+        <div style="float:left">Zurück: <a href="Particle_Actions.htm">Teilchen-Aktionen</a></div>
+        <div style="float:right">Nächste: <a href="Pause_Particle_System.htm">Pause Partikelsystem</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Clear Particle System

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>xboxlive_sprite_add_from_gamerpicture</title>
+  <title>xboxlive_spritzen_hinzufuegen_vom_Gamerpicture</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for xboxlive_sprite_add_from_gamerpicture" />
   <meta name="rh-index-keywords" content="xboxlive_sprite_add_from_gamerpicture" />
@@ -15,45 +15,45 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>xboxlive_sprite_add_from_gamerpicture</h1>
-  <p>With this function you can get the gamer picture for a given user ID pointer. The function works asynchronously, and will trigger an <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Image_Loaded.htm">Image Loaded</a> asynchronous event to inform you that the function is finished (like with HTML5/URL calls to <a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_add.htm"><span class="inline">sprite_add()</span></a>). The Asynchronous Image Loaded event will have a DS map stored in the built in variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>. The map contains the following information:</p>
+  <p>Mit dieser Funktion können Sie das Spielerbild für einen bestimmten Benutzer-ID-Zeiger abrufen. Die Funktion arbeitet asynchron und löst ein asynchrones Ereignis <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Image_Loaded.htm">Image Loaded</a> aus, um Sie zu informieren, dass die Funktion beendet ist (wie bei HTML5/URL-Aufrufen an <a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_add.htm"><span class="inline">sprite_add()</span></a>). Das Asynchronous Image Loaded-Ereignis hat eine DS-Map, die in der eingebauten Variable <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a>. Die Map enthält die folgenden Informationen:</p>
   <ul class="colour">
-    <li>&quot;<b>filename</b>&quot;: The complete path to the file you requested.</li>
-    <li>&quot;<b>id</b>&quot;: The ID of the resource that you have loaded. This will be the same as the variable that you have assigned the resource to.</li>
-    <li>&quot;<b>status</b>&quot;: Returns a value of less than 0 for an error.</li>
+    <li>&quot;<b>Dateiname</b>&quot;: Der vollständige Pfad zu der von Ihnen angeforderten Datei.</li>
+    <li>&quot;<b>id</b>&quot;: Die ID der Ressource, die Sie geladen haben. Dies ist dieselbe wie die Variable, der Sie die Ressource zugewiesen haben.</li>
+    <li>&quot;<b>Status</b>&quot;: Gibt bei einem Fehler einen Wert kleiner als 0 zurück.</li>
   </ul>
-  <p class="note"><b>NOTE</b>: When you dynamically load a sprite into your game at runtime, you must remember to remove it again using <a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_delete.htm"><span class="inline">sprite_delete()</span></a> when no longer needed, otherwise there is risk of a memory leak which will slow down and eventually crash your game.</p>
-  <p> </p>
+  <p class="note"><b>HINWEIS</b>: Wenn Sie ein <span class="notranslate">sprite</span> dynamisch in Ihr Spiel laden ( <span class="notranslate">runtime</span>), müssen Sie daran denken, es wieder zu entfernen, indem Sie <a href="../../Asset_Management/Sprites/Sprite_Manipulation/sprite_delete.htm"><span class="inline">sprite_delete()</span></a> wieder zu entfernen, wenn es nicht mehr benötigt wird. Andernfalls besteht die Gefahr eines Speicherlecks, das Ihr Spiel verlangsamt und schließlich zum Absturz bringt.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">xboxlive_sprite_add_from_gamerpicture(user_id, imagesize, xorig, yorig);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Beschreibung</th>
      </tr>
       <tr>
-        <td>user_id</td><td><span data-keyref="Type_ID_Xbox_User"></span></td>
-        <td>The user ID (a pointer) to get the gamer picture for</td>
+        <td><span class="notranslate">user_id</span></td><td><span data-keyref="Type_ID_Xbox_User"></span></td>
+        <td><span class="notranslate">The user ID (a pointer) to get the gamer picture for</span></td>
      </tr>
       <tr>
-        <td>imagesize</td><td><span data-keyref="Type_Real"></span></td>
-        <td>Size in pixels of the sprite to be returned</td>
+        <td><span class="notranslate">imagesize</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">Size in pixels of the sprite to be returned</span></td>
      </tr>
       <tr>
-        <td>xorig</td><td><span data-keyref="Type_Real"></span></td>
-        <td>Indicate the x position of the origin in the sprite</td>
+        <td><span class="notranslate">xorig</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">Indicate the x position of the origin in the sprite</span></td>
      </tr>
       <tr>
-        <td>yorig</td><td><span data-keyref="Type_Real"></span></td>
-        <td>Indicate the y position of the origin in the sprite</td>
+        <td><span class="notranslate">yorig</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">Indicate the y position of the origin in the sprite</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_ID_Async_Event">Async Request ID</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">var _a = 0;<br />
     var _num = xboxlive_get_user_count();<br />
     for (var i = 0; i &lt; _num; ++i;)<br />
@@ -68,18 +68,18 @@
             ++a;<br />
         }<br />
     }</p>
-  <p>The above code loops through the logged in users and stores their gamer data in various global arrays.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> <span class="notranslate">loops</span> durchläuft die angemeldeten Benutzer und speichert ihre Spieldaten in verschiedenen globalen Arrays.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Users_And_Accounts.htm">Users And Accounts</a></div>
-        <div style="float:right">Next: <a href="xboxlive_generate_player_session_id.htm">xboxlive_generate_player_session_id</a></div>
+        <div style="float:left">Zurück: <a href="Users_And_Accounts.htm">Benutzer und Konten</a></div>
+        <div style="float:right">Nächste: <a href="xboxlive_generate_player_session_id.htm"><span class="notranslate">xboxlive_generate_player_session_id</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 xboxlive_sprite_add_from_gamerpicture

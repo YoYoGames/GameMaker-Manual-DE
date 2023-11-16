@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>solid</title>
+  <title>solide</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the variable solid" />
   <meta name="rh-index-keywords" content="solid" />
@@ -14,32 +14,33 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">solid</span></h1>
-  <p>An instance can be flagged as <i>solid</i> through the object properties in the <a href="../../../../../The_Asset_Editors/Objects.htm">Object Editor</a>, or by changing the value of this built-in variable. If <span class="inline2">solid</span> is set to <span class="inline2">true</span> then, when a collision is detected, the colliding instance is returned automatically to the position it was at in the step previous to the collision (and then any code or actions are run in the collision event). If it is set to <span class="inline2">false</span>, all positioning must be dealt with through the collision event.</p>
-  <p> </p>
+  <h1>solide</h1>
+  <p>Eine Instanz kann über die Objekteigenschaften im <a href="../../../../../The_Asset_Editors/Objects.htm">Objekteditor</a> oder durch Ändern des Werts dieser eingebauten Variablen als <i>solide</i> gekennzeichnet werden. Wenn <span class="inline">solid</span> auf <span class="inline">true</span> gesetzt ist, wird die kollidierende Instanz bei der Erkennung einer Kollision automatisch an die Position zurückgebracht, an der sie sich im Schritt vor der Kollision befand (und dann werden alle <span class="notranslate">code</span> oder Aktionen im Kollisionsereignis ausgeführt). Wenn es auf <span class="inline">false</span> gesetzt ist, müssen alle Positionierungen durch das Kollisionsereignis behandelt werden.</p>
+  <p> </p>
   <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">solid</span></p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if other.solid == true<br />
+  <p class="code">solid;</p>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code"><span data-keyref="Type_Bool"></span></p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p class="code">if other.solid = true<br />
     {<br />
         x = xprevious;<br />
         y = yprevious;<br />
     }</p>
-  <p>The above code will check the <span class="inline2">solid</span> flag of the &quot;other&quot; instance in a collision and if it is set to <span class="inline2">true</span> move that instance back to its previous position.</p>
-  <p> </p>
-  <p> </p>
+  <p>Das obige <span class="notranslate">code</span> prüft das Solid-Flag der &quot;anderen&quot; Instanz bei einer Kollision und wenn es auf <span class="inline">true</span> gesetzt ist, wird diese Instanz zurück an ihre vorherige Position bewegt.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Instance_Variables.htm">Instance Variables</a></div>
-        <div style="float:right">Next: <a href="persistent.htm">persistent</a></div>
+        <div style="float:left">Zurück: <a href="Instance_Variables.htm">Instanzvariablen</a></div>
+        <div style="float:right">Nächste: <a href="persistent.htm"><span class="notranslate">persistent</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 solid

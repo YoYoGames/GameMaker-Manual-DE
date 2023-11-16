@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>push_get_next_local_notification</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for push_get_next_local_notification" />
+  <meta name="rh-index-keywords" content="" />
+  <meta name="search-keywords" content="push_get_next_local_notification" />
+  <meta name="is_pure" content="true" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>push_get_next_local_notification</h1>
+  <p>Diese Funktion füllt eine vorgefertigte <a href="../../Data_Structures/DS_Maps/DS_Maps.htm">DS-Map</a> mit einer Reihe von Schlüssel/Wertpaaren für die nächste lokale Push-Benachrichtigung in der Warteschlange, die angezeigt werden soll. Sie gibt -1 zurück, wenn keine weiteren Benachrichtigungen in der Warteschlange stehen, oder andernfalls einen realen Wert, der die ID für die Benachrichtigung darstellt. Diese ID kann dann verwendet werden, um die Benachrichtigung mit der Funktion <a href="push_cancel_local_notification.htm"><span class="inline">push_cancel_local_notification()</span></a>. Sie sollten die Funktion <a href="push_get_first_local_notification.htm"><span class="inline">push_get_first_local_notification()</span></a> aufrufen, um die erste Benachrichtigung in der Warteschlange zu erhalten, und dann diese Funktion verwenden, um sie zu durchlaufen.</p>
+  <p class="note"><b>HINWEIS</b>: Diese Funktion ist auf das <b>iOS-</b> und <b>Android-Ziel</b> <span class="notranslate">modules</span> beschränkt.</p>
+  <p>Die DS-Map enthält die folgenden Schlüssel/Wertpaare:</p>
+  <ul class="colour">
+    <li>&quot;<b>title</b>&quot; - Der Titel der Benachrichtigung (dieser ist nur auf <i>Android</i> <span class="notranslate">platform</span> verfügbar, da <span class="notranslate">iOS</span> die Titelinformationen nicht speichert)</li>
+    <li>&quot;<b>Nachricht</b>&quot; - Der Text der Nachricht</li>
+    <li>&quot;<b>data</b>&quot; - Die Zeichenkette des Datenpakets</li>
+  </ul>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">push_get_next_local_notification(map);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th><th>Typ</th>
+        <th>Beschreibung</th>
+     </tr>
+      <tr>
+        <td><span class="notranslate">map</span></td><td><span data-keyref="Type_ID_DS_Map"></span></td>
+        <td><span class="notranslate">The <span class="inline">DS Map</span> ID zu verwenden.</td>
+     </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code"><span data-keyref="Type_ID_PushNotif">Push Notification ID</span> or -1</p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p class="code">var map = ds_map_create();<br />
+    var ntf = push_get_first_local_notification(map);<br />
+    while(ntf &gt;= 0)<br />
+    {<br />
+        var data = ds_map_find_value(map, &quot;data&quot;);<br />
+        if data == &quot;Daily_Reward&quot;<br />
+        {<br />
+            push_cancel_local_notification(ntf);<br />
+        }<br />
+        ntf = push_get_next_local_notification(map);<br />
+    }<br />
+    ds_map_destroy(map);</p>
+  <p>Die obige <span class="notranslate">code</span> erstellt eine <span class="inline">DS Map</span> und fordert dann Daten für die erste verfügbare Meldung in der Warteschlange an. Wenn eine Meldung vorhanden ist, wird die Karte ausgefüllt, und <span class="notranslate">code</span> überprüft dann den Schlüssel &quot;data&quot; auf eine bestimmte Zeichenfolge. Wird die Zeichenfolge gefunden, wird die Meldung abgebrochen und die Prüfung der nächsten Meldung fortgesetzt, bis alle Meldungen in der Warteschlange geprüft worden sind.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Zurück: <a href="Push_Notifications.htm">Push-Benachrichtigungen</a></div>
+        <div style="float:right">Nächste: <a href="push_cancel_local_notification.htm"><span class="notranslate">push_cancel_local_notification</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
+  </div>
+  <!-- KEYWORDS
+push_get_next_local_notification
+-->
+  <!-- TAGS
+push_get_next_local_notification
+-->
+</body>
+</html>

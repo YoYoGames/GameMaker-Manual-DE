@@ -1,47 +1,47 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Instance Variables</title>
-  <meta name="generator" content="Adobe RoboHelp 2020"/>
-  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander"/>
-  <meta name="topic-comment" content="Page explaining instance variables"/>
-  <meta name="rh-index-keywords" content="Instance Variables"/>
-  <meta name="search-keywords" content="instance variables"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Instanz-Variablen</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <script src="../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Page explaining instance variables" />
+  <meta name="rh-index-keywords" content="Instance Variables" />
+  <meta name="search-keywords" content="instance variables" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Instance Variables</h1>
-  <p>An <strong>instance </strong>variable is created within an instance of an object and is considered unique to that instance - ie: many instances of the same object can have the same variable, but each variable can hold a different value as they are <em>unique </em>to
-    each instance. But <i>how</i> is an instance variable created? Well, you create new variables by simply assigning a value to them as shown in this small example (this is called <em>declaring</em> the variable):</p>
+  <h1>Instanz-Variablen</h1>
+  <p>Eine <strong>Instanzvariable </strong>wird innerhalb einer Instanz eines Objekts erstellt und gilt als eindeutig für diese Instanz - d. h., viele Instanzen desselben Objekts können dieselbe Variable haben, aber jede Variable kann einen anderen Wert enthalten, da sie <em>eindeutig </em>für
+    jede Instanz. Aber <i>wie</i> wird eine Instanzvariable erstellt? Nun, Sie erstellen neue Variablen, indem Sie ihnen einfach einen Wert zuweisen, wie in diesem kleinen Beispiel gezeigt (dies wird als <em>Deklaration</em> der Variable bezeichnet):</p>
   <p class="code">potions = 12;<br/> life = 100;<br/> name = &quot;Jock MacSweeney&quot;;<br/> strength = 5.5;<br/> armour = -2;</p>
-  <p>As you can see you just have to give the name and then a value (the value can be any <a href="../Data_Types.htm">data type</a>) to set that variable and have it ready for use within an instance of the object you are coding for (note that the value can
-    come from the return value of a function or the result of an operation between other variables, etc...). These variables can then be used and modified in a number of ways from within the instance, for example this code could be in a collision event
-    and used to take an amount off of the variable &quot;<span class="inline">life</span>&quot;:</p>
+  <p>Wie Sie sehen, müssen Sie nur den Namen und einen Wert angeben (der Wert kann ein beliebiger <a href="../Data_Types.htm">Datentyp</a> sein), um die Variable zu setzen und sie innerhalb einer Instanz des Objekts, für das Sie kodieren, zu verwenden (beachten Sie, dass der Wert
+    aus dem Rückgabewert einer Funktion oder dem Ergebnis einer Operation zwischen anderen Variablen usw. stammen kann...). Diese Variablen können dann auf verschiedene Weise innerhalb der Instanz verwendet und verändert werden, zum Beispiel könnte diese <span class="notranslate">code</span> in einem Kollisionsereignis sein
+    und verwendet werden, um einen Betrag von der Variablen &quot;<span class="inline">life</span>&quot; abzuziehen:</p>
   <p class="code">life -= 5 + armour;</p>
-  <p>If &quot;<span class="inline">life</span>&quot; is at 100 it will now have a value of 97 (100 - (5 + -2) = 97). Now, that&#39;s a simple example, and you <i>could</i> replace &quot;<span class="inline">armour</span>&quot; for the actual value of -2,
-    but what happens if that value is <a class="glossterm" data-glossterm="hard-coded" href="#">hard-coded</a> in multiple places and then you decide to change it? You would have to go through ALL your code and change every -2 to whatever the new value
-    is, which is time consuming and very error prone! But if you use a variable, all you have to do is reassign it a new value and the code will automatically use that new value from then onwards, making things far more flexible and far easier to fix
-    should there be a problem. It should also be noted that even if a value is not going to change it is far easier to remember what a variable called &quot;<span class="inline">life</span>&quot; means rather than just looking at a number.</p>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> has a collection of &quot;built in&quot; instance variables too, so you should be aware of them as you may name one of your own instance variables the same or wish to have your own global variable with the same name and wonder why
-    you are getting errors. They are easy to spot, however, as they are shown in a different colour in the code editor and also come up in auto-complete and are shown in bar at the bottom of the <a href="../../../The_Asset_Editors/Scripts.htm">code editor</a>.</p>
-  <p>There are quite a few <a href="../Runtime_Functions.htm">runtime functions</a> designed to help you when dealing with instance variables, which are all listed in the following section:</p>
+  <p>Wenn &quot;<span class="inline">life</span>&quot; auf 100 steht, hat es jetzt einen Wert von 97 (100 - (5 + -2) = 97). Nun, das ist ein einfaches Beispiel, und Sie <i>könnten</i> &quot;<span class="inline">armour</span>&quot; durch den tatsächlichen Wert von -2 ersetzen,
+    aber was passiert, wenn dieser Wert an mehreren Stellen <a class="glossterm" data-glossterm="fest codiert" href="#">fest kodiert</a> ist und Sie ihn dann ändern wollen? Sie müssten ALLE Ihre <span class="notranslate">code</span> durchgehen und jede -2 durch den neuen Wert
+    ändern, was zeitaufwendig und sehr fehleranfällig ist! Wenn Sie jedoch eine Variable verwenden, brauchen Sie ihr nur einen neuen Wert zuzuweisen, und <span class="notranslate">code</span> verwendet von da an automatisch diesen neuen Wert, was die Sache sehr viel flexibler und einfacher zu beheben macht
+    sollte es ein Problem geben. Auch wenn sich ein Wert nicht ändert, ist es viel einfacher, sich zu merken, was eine Variable mit dem Namen &quot;<span class="inline">life</span>&quot; bedeutet, als nur eine Zahl zu sehen.</p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span> hat auch eine Sammlung von &quot;eingebauten&quot; Instanzvariablen, die Sie kennen sollten, da Sie vielleicht eine Ihrer eigenen Instanzvariablen mit demselben Namen benennen oder eine eigene globale Variable mit demselben Namen haben möchten und sich wundern, warum
+    Sie Fehler erhalten. Sie sind jedoch leicht zu erkennen, da sie im <span class="notranslate">code</span> -Editor in einer anderen Farbe angezeigt werden und auch bei der automatischen Vervollständigung auftauchen und in der Leiste am unteren Rand des <a href="../../../The_Asset_Editors/Scripts.htm">Code-Editors</a> angezeigt werden.</p>
+  <p>Es gibt eine ganze Reihe von <a href="../Runtime_Functions.htm">Laufzeitfunktionen</a>, die Ihnen beim Umgang mit Instanzvariablen helfen sollen und die im folgenden Abschnitt aufgeführt sind:</p>
   <ul class="colour">
-    <li><a href="../../GML_Reference/Variable_Functions/Variable_Functions.htm">Variable Functions</a></li>
+    <li><a href="../../GML_Reference/Variable_Functions/Variable_Functions.htm">Variable Funktionen</a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Variables_And_Variable_Scope.htm">Variables And Variables Scope</a></div>
-        <div style="float:right">Next: <a href="Global_Variables.htm">Global Variables</a></div>
+        <div style="float:left">Zurück: <a href="../Variables_And_Variable_Scope.htm">Variablen und Variablenumfang</a></div>
+        <div style="float:right">Nächste: <a href="Global_Variables.htm">Globale Variablen</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 instance variables

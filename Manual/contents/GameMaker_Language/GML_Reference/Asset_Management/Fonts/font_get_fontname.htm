@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>font_get_fontname</title>
+  <title>Schriftart_get_fontname</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function font_get_fontname" />
   <meta name="rh-index-keywords" content="font_get_fontname" />
@@ -15,42 +15,42 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>font_get_fontname</h1>
-  <p>With this function you can get the actual system name of the given font asset. This function returns a <i>string</i> and not an <i>index</i>, and the name returned will depend on the font being used. For example, you may have a font asset called &quot;<strong>fnt_Main</strong>&quot; in the Asset Browser, and the font itself may be the Windows system font <b>Arial</b>. In this case the function will return <span class="inline2">&quot;Arial&quot;</span> as that is the system name of the font. If you need the name that appears in the Asset Browser, use <a href="font_get_name.htm"><span class="inline">font_get_name()</span></a>.</p>
-  <p>The behaviour described above only applies to font assets added through the IDE. When used on a font loaded at runtime (using <span class="inline"><a href="font_add.htm">font_add()</a></span>), the function will return the full path to that font file instead of its font name.</p>
-  <p> </p>
+  <h1>Schriftart_get_fontname</h1>
+  <p>Mit dieser Funktion können Sie den aktuellen Systemnamen der angegebenen Schriftart ermitteln. Diese Funktion gibt einen <i>String</i> und keinen <i>Index</i> zurück, und der zurückgegebene Name hängt von der verwendeten Schriftart ab. Sie können zum Beispiel eine Schriftart mit dem Namen &quot;<strong>fnt_Main</strong>&quot; im Asset-Browser haben, und die Schriftart selbst kann die <span class="notranslate">Windows</span> Systemschriftart <b>Arial</b> sein. In diesem Fall wird die Funktion <span class="inline2">&quot;Arial&quot;</span> zurückgeben, da dies der Systemname der Schrift ist. Wenn Sie den Namen benötigen, der im Asset-Browser erscheint, verwenden Sie <a href="font_get_name.htm"><span class="inline">font_get_name()</span></a>.</p>
+  <p>Das oben beschriebene Verhalten gilt nur für Schriftarten, die über <span class="notranslate">IDE</span> hinzugefügt wurden. Wenn die Funktion auf eine Schriftart angewendet wird, die über <span class="notranslate">runtime</span> (mit <span class="inline"><a href="font_add.htm">font_add()</a></span>) geladen wurde, gibt sie den vollständigen Pfad zu dieser Schriftartdatei anstelle des Schriftartnamens zurück.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">font_get_fontname(ind);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Beschreibung</th>
      </tr>
       <tr>
-        <td>ind</td><td><span data-keyref="Type_Asset_Font"></span></td>
-        <td>Index of the font to check.</td>
+        <td><span class="notranslate">ind</span></td><td><span data-keyref="Type_Asset_Font"></span></td>
+        <td><span class="notranslate">Index of the font to check.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_String">String</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">fnt_Name = font_get_fontname(font0);</p>
-  <p>The above code will get the system name of a font resource and store it as a string in the variable &quot;fnt_Name&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> ermittelt den Systemnamen einer Font-Ressource und speichert ihn als String in der Variablen &quot;fnt_Name&quot;.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Fonts.htm">Fonts</a></div>
-        <div style="float:right">Next: <a href="font_get_first.htm">font_get_first</a></div>
+        <div style="float:left">Zurück: <a href="Fonts.htm">Schriftarten</a></div>
+        <div style="float:right">Nächste: <a href="font_get_first.htm"><span class="notranslate">font_get_first</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 font_get_fontname

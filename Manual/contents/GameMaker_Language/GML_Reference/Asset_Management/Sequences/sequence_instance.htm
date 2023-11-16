@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>sequence_instance</title>
+  <title>sequenz_instanz</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Gurpreet S. Matharoo" />
   <meta name="topic-comment" content="Page outlining the variable sequence_instance" />
   <meta name="rh-index-keywords" content="sequence_instance" />
@@ -14,33 +14,33 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sequence_instance</h1>
-  <p>This is a <strong>built-in variable</strong> that is part of the <a href="../Instances/Instance_Variables/Instance_Variables.htm">instance variables</a> created for every object instance in your game. If the instance is being controlled by a sequence, this variable will hold the <a href="Sequence_Structs/The_Sequence_Instance_Struct.htm">sequence instance struct</a> for the Sequence controlling the instance, otherwise it will be <span class="inline">undefined</span>. This is a <strong>read-only</strong> variable and cannot be changed.</p>
-  <p>Note that this variable will become <span class="inline">undefined</span> after the controlling Sequence has ended, even if its Sequence Element still exists, and will get the struct again if that Sequence element is <a href="../Rooms/Sequence_Layers/layer_sequence_play.htm">replayed</a>.</p>
-  <p> </p>
+  <h1>sequenz_instanz</h1>
+  <p>Dies ist eine <strong>eingebaute Variable</strong>, die Teil der <a href="../Instances/Instance_Variables/Instance_Variables.htm">Instanzvariablen</a> ist, die für jede Objektinstanz in Ihrem Spiel erstellt werden. Wenn die Instanz von einer <span class="notranslate">sequence</span> kontrolliert wird, enthält diese Variable die <a href="Sequence_Structs/The_Sequence_Instance_Struct.htm">Sequenzinstanzstruktur</a> für die <span class="notranslate">Sequence</span>, die die Instanz kontrolliert, andernfalls ist es <span class="inline">undefined</span>. Diese Variable ist <strong>schreibgeschützt</strong> und kann nicht geändert werden.</p>
+  <p>Beachten Sie, dass diese Variable zu <span class="inline">undefined</span> wird, nachdem das kontrollierende <span class="notranslate">Sequence</span> beendet wurde, selbst wenn das <span class="notranslate">Sequence</span> Element noch existiert, und dass sie erneut die Struktur erhält, wenn das <span class="notranslate">Sequence</span> Element <a href="../Rooms/Sequence_Layers/layer_sequence_play.htm">erneut abgespielt</a> wird.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">sequence_instance</p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Struct_Sequence_Instance">Sequence Instance Struct</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">if (in_sequence)<br />
     {<br />
         sequence_instance.speedScale = 2;<br />
     }</p>
-  <p>The above code checks the <a href="in_sequence.htm"><span class="inline">in_sequence</span></a> variable, and if it is <span class="inline">true</span> (meaning the instance is being controlled by a sequence) then it will change the speed scale of that Sequence to 2.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> prüft die <a href="in_sequence.htm"><span class="inline">in_sequence</span></a> und wenn sie <span class="inline">true</span> ist (was bedeutet, dass die Instanz von einer <span class="notranslate">sequence</span> gesteuert wird), dann wird die Geschwindigkeitsskala dieser <span class="notranslate">Sequence</span> auf 2 geändert.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sequences.htm">Sequences</a></div>
-        <div style="float:right">Next: <a href="sequence_exists.htm">sequence_exists</a></div>
+        <div style="float:left">Zurück: <a href="Sequences.htm">Sequenzen</a></div>
+        <div style="float:right">Nächste: <a href="sequence_exists.htm"><span class="notranslate">sequence_exists</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 sequence_instance

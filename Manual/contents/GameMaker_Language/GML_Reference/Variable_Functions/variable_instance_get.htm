@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>variable_instance_get</title>
+  <title>variable_instanz_holen</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function variable_instance_get" />
   <meta name="rh-index-keywords" content="variable_instance_get" />
@@ -15,10 +15,10 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>variable_instance_get</h1>
-  <p>With this function you can get the value from a given named variable. You supply the unique instance ID value (which can be found from the <a href="../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm">Instance Properties</a> in the room editor, or is returned when you call the function <a href="../Asset_Management/Instances/instance_create_layer.htm"><span class="inline">instance_create_layer()</span></a>) as well as the name of the variable to get the value of <i>as a string</i> (see example code below). The function will return the value held by the variable, or <span class="inline">undefined</span> if the variable does not exist.</p>
-  <p class="note"><b>IMPORTANT!</b> If the variable you are getting does not exist then the function will return the keyword <span class="inline">undefined</span> and you may get errors that will stop the game from functioning, so if in doubt use the function <a href="variable_instance_exists.htm"><span class="inline">variable_instance_exists</span></a> first.</p>
-  <p> </p>
+  <h1>variable_instanz_holen</h1>
+  <p>Mit dieser Funktion können Sie den Wert einer bestimmten benannten Variablen abrufen. Sie geben den eindeutigen ID-Wert der Instanz an (der in den <a href="../../../The_Asset_Editors/Room_Properties/Layer_Properties.htm">Instanzeigenschaften</a> im Raumeditor zu finden ist oder zurückgegeben wird, wenn Sie die Funktion <a href="../Asset_Management/Instances/instance_create_layer.htm"><span class="inline">instance_create_layer()</span></a>) sowie den Namen der Variable, deren Wert Sie abrufen möchten, <i>als String</i> (siehe Beispiel <span class="notranslate">code</span> unten). Die Funktion gibt den Wert zurück, den die Variable hat, oder <span class="inline">undefined</span>, wenn die Variable nicht existiert.</p>
+  <p class="note"><b>WICHTIG!</b> Wenn die Variable, die Sie erhalten, nicht existiert, gibt die Funktion das Schlüsselwort <span class="inline">undefined</span> zurück, und Sie können Fehler erhalten, die das Spiel zum Stillstand bringen, also verwenden Sie im Zweifelsfall zuerst die Funktion <a href="variable_instance_exists.htm"><span class="inline">variable_instance_exists</span></a> zuerst.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">variable_instance_get(instance_id, name);</p>
   <table>
@@ -30,26 +30,26 @@
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>instance_id</td>
-        <td><span data-keyref="Type_ID_Instance">Instance ID</span></td>
-        <td>The unique ID value of the instance to use</td>
+        <td><span class="notranslate">instance_id</span></td>
+        <td><span data-keyref="Type_ID_Instance">Instanz-ID</span></td>
+        <td><span class="notranslate">The unique ID value of the instance to use</span></td>
       </tr>
       <tr>
-        <td>name</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The name of the variable to get (as a string)</td>
+        <td><span class="notranslate">name</span></td>
+        <td><span data-keyref="Type_String">Zeichenfolge</span></td>
+        <td><span class="notranslate">The name of the variable to get (as a string)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Any">Variable</span> (any data type) or <span data-keyref="Type_Undefined">undefined</span> (if the named variable does not exist)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">if variable_instance_exists(id, &quot;shields&quot;)<br />
     {<br />
         var ss = variable_instance_get(id, &quot;shields&quot;);<br />
@@ -58,18 +58,18 @@
     {<br />
         var ss = -1;<br />
     }</p>
-  <p>The above code will check to see if a variable exists and if it does then the value it holds is retrieved and stored in a local variable. If it does not exist, the local variable is set to -1.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> prüft, ob eine Variable existiert, und wenn ja, wird der Wert, den sie enthält, abgerufen und in einer lokalen Variable gespeichert. Wenn sie nicht existiert, wird die lokale Variable auf -1 gesetzt.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Variable_Functions.htm">Variable Functions</a></div>
-        <div style="float:right">Next: <a href="variable_instance_set.htm">variable_instance_set</a></div>
+        <div style="float:left">Zurück: <a href="Variable_Functions.htm">Variable Funktionen</a></div>
+        <div style="float:right">Nächste: <a href="variable_instance_set.htm"><span class="notranslate">variable_instance_set</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 variable_instance_get

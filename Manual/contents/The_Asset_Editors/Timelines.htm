@@ -1,81 +1,78 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Timeline Editor</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
-  <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page detailing how the timeline editor works" />
-  <meta name="rh-index-keywords" content="Timeline Editor" />
-  <meta name="search-keywords" content="timelines,timeline,timeline editor" />
-</head>
-<body>
-  <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">The Timeline Editor</span></h1>
-  <p><img alt="The Timeline Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Timelines.png" />In most games you will want certain things to happen at precise moments in time. Now, you can try to achieve this by using the alarm events but when things get too complicated this won&#39;t work any more, especially as you are limited to only twelve alarms. That&#39;s why we have the <strong>timeline </strong>asset. In a timeline you specify which actions must happen at certain moments in game time, and you can use all the actions that are also available for an object in its different events or code to define this. Once you create a time line you can then assign it to an object, and the instance of that object will then execute the actions at the indicated moments of time when placed or created within a room.</p>
-  <p>For example, assume you want to make a guard and that this guard should move 20 time steps to the left, then 10 upwards, then 20 to the right, then 10 downwards and then finally stop. To achieve this you can make a timeline where you start with setting a motion to the left. You would then create moment 20 (a &quot;moment&quot; is just another way of saying &quot;game step&quot; or &quot;game frame&quot;) and set a motion upward, then at moment 30 a motion to the right, at moment 50 a motion downwards and finally at moment 60 you would stop the motion. Once that is done, you can assign this timeline to the guard object and the guard instance will do exactly what you planned when placed in a room. You could even set an alarm in the time line so that it is repeated after a certain length of time and in this way your guard can patrol an area. You can also use a time line to control your game more globally, for example by creating an invisible controller object, then a time line that at certain moments creates enemies, and then assigning it to the controller object and placing an instance into the room. This is an easy way to get timed spawns of the enemies in a space shoorter game or something like that.</p>
-  <p class="note">On adding a new moment, you may be asked to choose between <span data-keyref="GML_Visual">GML Visual</span> and <span data-keyref="GML_Code">GML Code</span>. See <a data-xref="{title}" href="../GameMaker_Language.htm">GameMaker Language</a> for more information.</p>
-  <p>To create a time line, right click <img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> on <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a> and select &quot;Create Timeline&quot;. This will open the window pictured at the top of this page with the following sections:</p>
-  <p> </p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Name</a></p>
-  <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">Here you give your timeline resource a <strong>name</strong>. This must only contain alpha-numeric characters or the &quot;_&quot; under-bar and cannot start with a number, as it will be used to reference your timeline through code. This name will also be the unique timeline ID which can be used in GML Visual actions or code functions to identify the timeline.</p>
-    <p class="dropspot">
-      <br />
-    </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Moment</a></p>
-  <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">You can set the <strong>moment </strong>value here. The moment value is calculated as the number of game steps after the timeline has started. So if you have a timeline with moments at positions 0 and 60, then moment 0 will be triggered when the timeline is <em>started </em>and moment 60 will happen 60 steps <em>later</em>. If your room speed is set to 60 too, then moment 60 will happen one second after the timeline is started. You can do a double click <img alt="LMB Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_LMB.png" src="../assets/Images/Icons/Icon_LMB.png" /> on the moment value or you can use the right button <img alt="RMB Icon" class="icon" data-cke-saved-src="../assets/Images/Icons/Icon_RMB.png" src="../assets/Images/Icons/Icon_RMB.png" /> menu and select &quot; <em>change</em>&quot; (see the section on the button menu below) to change it. To add a new moment, simply click the <strong>Add </strong>button at the bottom of the editor. Adding new moments will open the <a href="Scripts.htm">code editor</a> (or action editor) where you can add the functions or GML Visual that you want to call in that moment. </p>
-    <p class="dropspot">
-      <br />
-    </p>
-  </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Moment Name</a></p>
-  <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">To help you understand what your timeline is doing it is permitted that you give moments a name to identify them. This is simply a string and will not be used in the game code or anywhere else, as it&#39;s purely for organising and understanding what your timeline does. To add a name/description to your moment, you need to use the <span class="inline">/// @description</span> format on the first line of the code block, for example:
-      <br />
-    </p>
-    <p class="code">/// @description Hello World</p>
-    <p class="dropspot">Which would look like this:</p>
-    <p class="dropspot"> <img src="../assets/Images/Asset_Editors/Editor_Timelines_Name.png" class="center" alt="Timeline Editor Name/Description" /> </p>
-  </div>
-  <p> </p>
-  <p>The timeline editor permits you to use <img alt="Space Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55" /> + <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> to select all moments between the first click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> and the second click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" />, or you can use <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> to click on single moments to select them independently. Timeline moments can be edited using the right mouse button <img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> menu on one of the selected elements:</p>
-  <p><img alt="Timeline RMB Menu" class="center" src="../assets/Images/Asset_Editors/Editor_Timelines_RMBMenu.png" /></p>
-  <ul class="colour">
-    <li><strong>Add</strong>: This option permits you to add a new moment to the timeline. It will be added directly after the last moment, so if the last moment in your timeline is 120, the next one you add will be 121. You can change the moment position by double clicking <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on the moment value in the editor or by right-clicking <img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png" /> and choosing &quot;<em>Change</em>&quot;.</li>
-    <li><strong>Edit</strong>: This opens the current timeline moment for editing.</li>
-    <li><strong>Change Moment</strong>: Change the value for the selected timeline moment. This is the same as slow double clicking <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on the timeline value in the editor window.</li>
-    <li><strong>Change Description</strong>: Change the descriptive name for the selected timeline moment. This is the same as slow double clicking <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on the timeline description in the editor window.</li>
-    <li><strong>Duplicate</strong>: This will duplicate all the selected timeline moments and add them consecutively to the end of the current timeline.</li>
-    <li><strong>Merge</strong>: If you select two or more moments from a timeline you can choose to merge them. This will create a single timeline moment at the position of the first moment selected with all the code and actions together concurrently.</li>
-    <li><strong>Remove</strong>: This will remove the selected moment (or moments) from the timeline.</li>
-    <li><strong>Cut </strong>/ <strong>Copy </strong>/ <strong>Paste</strong>: These options permit you to cut, copy or paste one or more timeline moments. You can use the standard keyboard shortcuts here too: <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + &quot;<span class="inline">X</span>&quot;, <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + &quot;<span class="inline">C</span>&quot;, and <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> + &quot;<span class="inline">V</span>&quot;.</li>
-    <li><strong>Select All</strong>: With this option you can select all the moments in a timeline. Selected moments can then be removed, merged, duplicated, cut, or copied.</li>
-    <li><strong>Convert to GML Visual / Code</strong>: Timeline moments will be created using the method chosen when you created the project, either using code or using GML Visual actions. With this option you can convert from one to the other, regardless of the project type.</li>
-  </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <div class="footer">
-    <div class="buttons">
-      <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="The_Asset_Editors.htm">The Asset Editors</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="Image_Editor.htm">The Image Editor</a></div>
-      </div>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Zeitleisten</title>
+    <meta name="generator" content="Adobe RoboHelp 2020" />
+    <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
+    <script src="../assets/scripts/main_script.js"></script>
+    <meta name="rh-authors" content="Mark Alexander" />
+    <meta name="topic-comment" content="Page detailing how the timeline editor works" />
+    <meta name="rh-index-keywords" content="Timeline Editor" />
+    <meta name="search-keywords" content="timelines,timeline,timeline editor" />
+  </head>
+  <body><!--<div class="body-scroll" style="top: 150px;">-->
+    <h1>Der Zeitleisten-Editor</h1>
+    <p><img>In den meisten Spielen möchte man, dass bestimmte Dinge zu bestimmten Zeitpunkten passieren. Man kann versuchen, dies mit Hilfe von Alarmereignissen zu erreichen, aber wenn die Dinge zu kompliziert werden, funktioniert das nicht mehr, zumal man auf nur zwölf Alarme beschränkt ist. Aus diesem Grund gibt es die <strong>Zeitleiste </strong>. In einer Zeitleiste legen Sie fest, welche Aktionen zu bestimmten Zeitpunkten im Spiel stattfinden müssen, und Sie können alle Aktionen verwenden, die auch für ein Objekt in seinen verschiedenen Ereignissen oder <span class="notranslate">code</span> verfügbar sind, um dies zu definieren. Sobald du eine Zeitleiste erstellt hast, kannst du sie einem Objekt zuweisen, und die Instanz dieses Objekts wird dann die Aktionen zu den angegebenen Zeitpunkten ausführen, wenn sie in einem Raum platziert oder erstellt wird.</p>
+    <p>Nehmen Sie zum Beispiel an, dass Sie einen Wächter erstellen möchten und dass sich dieser Wächter 20 Zeitschritte nach links, dann 10 nach oben, dann 20 nach rechts, dann 10 nach unten und schließlich anhalten soll. Um dies zu erreichen, können Sie eine Zeitleiste erstellen, in der Sie zunächst eine Bewegung nach links festlegen. Dann erstellen Sie den Zeitpunkt 20 (ein &quot;Zeitpunkt&quot; ist nur eine andere Bezeichnung für &quot;Spielschritt&quot; oder &quot;Spielframe&quot;) und setzen eine Bewegung nach oben, dann zum Zeitpunkt 30 eine Bewegung nach rechts, zum Zeitpunkt 50 eine Bewegung nach unten und schließlich zum Zeitpunkt 60 halten Sie die Bewegung an. Danach können Sie diese Zeitleiste dem Wächterobjekt zuweisen, und der Wächter wird genau das tun, was Sie geplant haben, wenn er sich in einem Raum befindet. Sie können in der Zeitleiste sogar einen Alarm einstellen, so dass sie nach einer bestimmten Zeit wiederholt wird, und auf diese Weise kann Ihr Wächter einen Bereich patrouillieren. Du kannst eine Zeitleiste auch verwenden, um dein Spiel globaler zu steuern, indem du zum Beispiel ein unsichtbares Controller-Objekt erstellst, dann eine Zeitleiste, die zu bestimmten Zeitpunkten Feinde erzeugt, und sie dann dem Controller-Objekt zuweist und eine Instanz in den Raum setzt. Dies ist ein einfacher Weg, um zeitgesteuertes Spawnen von Feinden in einem Weltraum-Shooter-Spiel oder ähnlichem zu erreichen.</p>
+    <p class="note">Wenn Sie einen neuen Moment hinzufügen, werden Sie möglicherweise aufgefordert, zwischen <span data-keyref="GML_Visual">GML Visual</span> und <span data-keyref="GML_Code">GML Code</span> zu wählen. Siehe <a data-xref="{title}" href="../GameMaker_Language.htm">GameMaker-Sprache</a> für weitere Informationen.</p>
+    <p>Um eine Zeitleiste zu erstellen, klicken Sie mit der rechten Maustaste auf <img> im <a href="../Introduction/The_Asset_Browser.htm">Asset-Browser</a> und wählen Sie &quot;Zeitleiste erstellen&quot;. Daraufhin wird das oben auf dieser Seite abgebildete Fenster mit den folgenden Abschnitten geöffnet:</p>
+    <p> </p>
+    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Name</a></p>
+    <div class="droptext" data-targetname="drop-down">
+      <p class="dropspot">Hier geben Sie Ihrer Zeitleistenressource einen <strong>Namen</strong>. Dieser darf nur alphanumerische Zeichen oder den Unterstrich &quot;_&quot; enthalten und darf nicht mit einer Zahl beginnen, da er zur Referenzierung Ihrer Zeitleiste über <span class="notranslate">code</span> verwendet wird. Dieser Name wird auch die eindeutige Zeitleisten-ID sein, die in <span class="notranslate">GML</span> Visuelle Aktionen oder <span class="notranslate">code</span> Funktionen zur Identifizierung der Zeitleiste verwendet werden kann.</p>
+      <p class="dropspot">
+        <br />
+      </p>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
-  </div>
-  <!-- KEYWORDS
+    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Moment</a></p>
+    <div class="droptext" data-targetname="drop-down1">
+      <p class="dropspot">Hier können Sie den <strong>Momentwert </strong>einstellen. Der Momentwert wird als die Anzahl der Spielschritte nach dem Start der Zeitleiste berechnet. Wenn Sie also eine Zeitleiste mit Zeitpunkten an den Positionen 0 und 60 haben, wird der Zeitpunkt 0 ausgelöst, wenn die Zeitleiste <em>gestartet </em>wird, und der Zeitpunkt 60 wird 60 Schritte <em>später</em> eintreten. Wenn die Raumgeschwindigkeit ebenfalls auf 60 eingestellt ist, wird der Zeitpunkt 60 eine Sekunde nach dem Start der Zeitleiste ausgelöst. Sie können einen Doppelklick <img> auf den Zeitwert machen oder Sie können das Menü der rechten Taste <img> verwenden und &quot; <em>Ändern</em>&quot; wählen (siehe den Abschnitt über das Tastenmenü unten), um ihn zu ändern. Um ein neues Moment hinzuzufügen, klicken Sie einfach auf die Schaltfläche <strong>Hinzufügen </strong>am unteren Rand des Editors. Beim Hinzufügen neuer Momente wird der <a href="Scripts.htm">Code-Editor</a> (oder Aktions-Editor) geöffnet, in dem Sie die Funktionen oder <span class="notranslate">GML</span> Visual hinzufügen können, die Sie in diesem Moment aufrufen möchten. </p>
+      <p class="dropspot">
+        <br />
+      </p>
+    </div>
+    <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Moment Name</a></p>
+    <div class="droptext" data-targetname="drop-down2">
+      <p class="dropspot">Damit Sie besser verstehen, was Ihre Zeitleiste tut, ist es erlaubt, Momenten einen Namen zu geben, um sie zu identifizieren. Dabei handelt es sich lediglich um eine Zeichenkette, die weder im Spiel <span class="notranslate">code</span> noch an anderer Stelle verwendet wird, da sie lediglich der Organisation und dem Verständnis der Vorgänge in der Zeitleiste dient. Um Ihrem Moment einen Namen/eine Beschreibung zu geben, müssen Sie das Format <span class="inline">/// @description</span> in der ersten Zeile des Blocks <span class="notranslate">code</span> verwenden, zum Beispiel:
+        <br>
+      </p>
+      <p class="code">/// @description Hello World</p>
+      <p class="dropspot">Das würde folgendermaßen aussehen:</p>
+      <p class="dropspot"> <img alt="The Timeline Editor" class="center" src="../assets/Images/Asset_Editors/Editor_Timelines.png"/> </p>
+    </div>
+    <p> </p>
+    <p>Der Zeitleisten-Editor ermöglicht es Ihnen, mit <img> + <img> alle Momente zwischen dem ersten Klick <img> und dem zweiten Klick <img> auszuwählen, oder Sie können mit <img> / <img> + <img> auf einzelne Momente klicken, um sie unabhängig voneinander auszuwählen. Die Momente der Zeitleiste können über das Menü der rechten Maustaste <img> auf einem der ausgewählten Elemente bearbeitet werden:</p>
+    <p><img alt="RMB Icon" class="icon" src="../assets/Images/Icons/Icon_RMB.png"/></p>
+    <ul class="colour">
+      <li><strong>Hinzufügen</strong>: Mit dieser Option können Sie einen neuen Moment zur Zeitleiste hinzufügen. Er wird direkt nach dem letzten Moment hinzugefügt. Wenn also der letzte Moment in Ihrer Zeitleiste 120 ist, wird der nächste Moment, den Sie hinzufügen, 121 sein. Sie können die Position des Zeitpunkts ändern, indem Sie auf <img> auf den Wert des Zeitpunkts im Editor doppelklicken oder indem Sie mit der rechten Maustaste auf <img> klicken und &quot;<em>Ändern</em>&quot; wählen.</li>
+      <li><strong>Bearbeiten</strong>: Öffnet den aktuellen Moment der Zeitleiste zur Bearbeitung.</li>
+      <li><strong>Zeitpunkt ändern</strong>: Ändern Sie den Wert für den ausgewählten Timeline-Moment. Dies ist dasselbe wie ein langsamer Doppelklick auf den Timeline-Wert im Editorfenster <img>.</li>
+      <li><strong>Beschreibung ändern</strong>: Ändern Sie den beschreibenden Namen für den ausgewählten Timeline-Moment. Dies ist dasselbe wie ein langsamer Doppelklick auf <img> auf die Beschreibung der Zeitleiste im Editorfenster.</li>
+      <li><strong>Duplizieren</strong>: Hiermit werden alle ausgewählten Momente der Zeitleiste dupliziert und nacheinander an das Ende der aktuellen Zeitleiste angehängt.</li>
+      <li><strong>Zusammenführen</strong>: Wenn Sie zwei oder mehr Momente in einer Zeitleiste auswählen, können Sie diese zusammenführen. Dadurch wird ein einziger Timeline-Moment an der Position des ersten ausgewählten Moments erstellt, in dem alle <span class="notranslate">code</span> und Aktionen gleichzeitig enthalten sind.</li>
+      <li><strong>Entfernen</strong>: Damit wird der ausgewählte Moment (oder die ausgewählten Momente) aus der Zeitleiste entfernt.</li>
+      <li><strong>Ausschneiden / </strong> <strong>Kopieren / </strong> <strong>Einfügen</strong>: Mit diesen Optionen können Sie einen oder mehrere Momente der Zeitleiste ausschneiden, kopieren oder einfügen. Sie können auch hier die Standard-Tastaturkürzel verwenden: <img> / <img> + &quot;<span class="inline">X</span>&quot;, <img> / <img> + &quot;<span class="inline">C</span>&quot;, und <img> / <img> + &quot;<span class="inline">V</span>&quot;.</li>
+      <li><strong>Alles auswählen</strong>: Mit dieser Option können Sie alle Momente in einer Zeitleiste auswählen. Die ausgewählten Momente können dann entfernt, zusammengeführt, dupliziert, ausgeschnitten oder kopiert werden.</li>
+      <li><strong>Konvertieren Sie in <span class="notranslate">GML</span> Visual / Code</strong>: Timeline-Momente werden mit der Methode erstellt, die Sie bei der Erstellung des Projekts gewählt haben, entweder mit <span class="notranslate">code</span> oder mit <span class="notranslate">GML</span> Visual-Aktionen. Mit dieser Option können Sie unabhängig vom Projekttyp von der einen zur anderen Methode wechseln.</li>
+    </ul>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <div class="footer">
+      <div class="buttons">
+        <div class="clear">
+          <div style="float:left">Zurück: <a href="The_Asset_Editors.htm">Die Asset-Redaktion</a></div>
+          <div style="float:right">Nächste: <a href="Image_Editor.htm">Bild-Editor</a></div>
+        </div>
+      </div>
+      <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
+    </div>
+    <!-- KEYWORDS
 The Timeline Editor
 Timeline Editor
--->
-  <!-- TAGS
+--><!-- TAGS
 timeline_editor
--->
-</body>
+--></body>
 </html>

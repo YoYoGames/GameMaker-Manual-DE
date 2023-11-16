@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>The Debugger</title>
+  <title>Der Debugger</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../assets/css/default.css" type="text/css" />
-  <script src="../assets/scripts/main_script.js" type="module"></script>
+  <script src="../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Section that covers the debugger." />
   <meta name="rh-index-keywords" content="Debugger,The Debugger,Debugging" />
@@ -14,122 +13,131 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">The Debugger</span></h1>
-  <p>The <strong>Debugger </strong>is a powerful tool for checking your game, and is especially useful for tracking down errors and bugs in your code, as well as checking that scripts are run when they should be, and that variables and arrays contain the values you expect, etc. You can start the Debugger by running your game from <span data-keyref="GameMaker Name">GameMaker</span> <a class="glossterm" data-glossterm="IDE" href="The_Debugger/The_Profiler.htm#">IDE</a> using the Debug button <img alt="Debug Icon" class="icon" src="../assets/Images/Icons/Icon_Debug.png" /> at the top of the IDE, or by going to the <a href="../IDE_Navigation/Menus/The_Build_Menu.htm">Build menu</a> and selecting &quot;<em>Debug</em>&quot;.</p>
-  <p class="note"><span data-conref="../assets/snippets/Tag_note.hts"> </span> You may be prompted by Windows Firewall (or any other firewall program that you run) to create a security exception for this module. <strong>You must do this otherwise it will not work correctly</strong>. This is due to the way the Debugger works and is essential for debugging mobile platforms.</p>
-  <p>When you run a game in debug mode, the IDE will display the different tools available for the Debugger:</p>
-  <p><img alt="The Debugger Windows" class="center" src="../assets/Images/IDE Tools/Debug_Module.png" />The image shown above shows the default layout for the debugger, but as with other aspects of the IDE you can customise this to suit your needs, closing windows you don&#39;t need or changing the sizes of the docs and windows that you do need. You can reset the debugger layout at any time - or reopen closed windows - from the Debugger context menu at the top of the IDE:</p>
-  <p><img alt="Debugger Context Menu" class="center" src="../assets/Images/IDE Tools/Debug_Module_Context_Menu.png" />Below we explain what each section of the debugger is for:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Graph View</a></p>
+  <h1>Der Debugger</h1>
+  <p>Der <strong>Debugger </strong>ist ein leistungsfähiges Werkzeug, um Ihr Spiel zu überprüfen. Er ist besonders nützlich, um Fehler und Bugs in Ihrem <span class="notranslate">code</span> aufzuspüren und um zu überprüfen, ob <span class="notranslate">scripts</span> zum richtigen Zeitpunkt ausgeführt wird und ob Variablen und Arrays die erwarteten Werte enthalten.
+    Werte enthalten, die Sie erwarten usw... Sie können den Debugger starten, indem Sie Ihr Spiel in der <a class="glossterm" data-glossterm="IDE" href="The_Debugger/The_Profiler.htm#">GameMaker-IDE</a> über die Debug-Schaltfläche <img> oben auf <span class="notranslate">IDE</span> starten oder indem Sie im <a href="../IDE_Navigation/Menus/The_Build_Menu.htm">Menü &quot;Build&quot;</a> die Option &quot;<em>Debug</em>&quot; wählen.</p>
+  <p class="note"><strong>HINWEIS</strong>: Möglicherweise werden Sie von <span class="notranslate">Windows</span> Firewall (oder einem anderen Firewall-Programm, das Sie ausführen) aufgefordert, eine Sicherheitsausnahme für dieses <span class="notranslate">module</span> zu erstellen. <strong>Sie müssen dies tun, da es sonst nicht richtig funktioniert</strong>. Dies liegt an der Funktionsweise
+    Funktionsweise des Debuggers und ist für <span class="notranslate">debugging</span> mobile <span class="notranslate">platforms</span> unerlässlich.</p>
+  <p>Wenn Sie ein Spiel im Debug-Modus ausführen, zeigt <span class="notranslate">IDE</span> die verschiedenen für den Debugger verfügbaren Werkzeuge an:</p>
+  <p><img>Das oben gezeigte Bild zeigt das Standard-Layout für den Debugger, aber wie bei anderen Aspekten von <span class="notranslate">IDE</span> können Sie dies an Ihre Bedürfnisse anpassen, indem Sie
+    Fenster, die Sie nicht benötigen, schließen oder die Größe der Dokumente und Fenster, die Sie benötigen, ändern. Sie können das Debugger-Layout jederzeit zurücksetzen - oder geschlossene Fenster wieder öffnen - über das Debugger-Kontextmenü am oberen Rand der IDE:</p>
+  <p><img>Im Folgenden wird erklärt, wofür die einzelnen Abschnitte des Debuggers gedacht sind:</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Graphische Ansicht</a></p>
   <div class="droptext" data-targetname="drop-down">
-    <p class="dropspot">The Graph view shows you a graphic display of how your project is using memory and its framerate over time:</p>
-    <p class="dropspot"><img alt="Debug Graph" class="center" src="../assets/Images/IDE Tools/Debug_Graph.png" />The graph shows the current and average memory use as well as the current and average FPS over time, and you can zoom in or out using the <img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55" /> / <img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55" /> along with the mouse wheel <img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png" />, and if you position the mouse cursor over any of the graph elements, it will show you the value for that element at the selected point.</p>
-    <p class="dropspot">The Graph view will also show certain debug events as points along the length of the graph. These events are generated automatically by <span data-keyref="GameMaker Name">GameMaker</span> at certain points in the running of a game to show specific important events, but you can also
-      add in your own graph elements using the functions <a href="../GameMaker_Language/GML_Reference/Debugging/show_debug_message.htm"><span class="inline">show_debug_message()</span></a> and <a href="../GameMaker_Language/GML_Reference/Debugging/debug_event.htm"><span class="inline">debug_event()</span></a>.
-      System events will be flagged in a different colour to those events that are triggered through code:</p>
-    <p class="dropspot"><img alt="Debug Graph Events" class="center" src="../assets/Images/IDE Tools/Debug_Graph_Events.png" />When running the game in debug and mousing over these events, a list will be shown of all the events that were triggered at that point in the game,
-      and you have the option of pulling the list out into a separate window for revising by clicking the &quot;<strong>Click to open in a new window</strong>&quot; text:</p>
-    <p class="dropspot"><img alt="Debug Events" class="center" src="../assets/Images/IDE Tools/Debug_Events.png" /></p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Die Diagrammansicht zeigt Ihnen eine grafische Darstellung des Speicherverbrauchs und der Framerate Ihres Projekts im Zeitverlauf:</p>
+    <p class="dropspot"><img>Das Diagramm zeigt die aktuelle und durchschnittliche Speichernutzung sowie die aktuelle und durchschnittliche FPS über die Zeit an. Sie können mit <img> / <img> und dem Mausrad <img> hinein- oder herauszoomen. Wenn Sie den Mauszeiger über eines der Elemente des Diagramms bewegen, wird der Wert für dieses Element an dem ausgewählten Punkt angezeigt.</p>
+    <p class="dropspot">In der Diagrammansicht werden auch bestimmte Debug-Ereignisse als Punkte entlang des Diagramms angezeigt. Diese Ereignisse werden von <span data-keyref="GameMaker Name">GameMaker</span> an bestimmten Punkten im Spielverlauf automatisch generiert, um bestimmte wichtige Ereignisse anzuzeigen, aber Sie können auch
+      eigene Diagrammelemente einfügen, indem Sie die Funktionen <a href="../GameMaker_Language/GML_Reference/Debugging/show_debug_message.htm"><span class="inline">show_debug_message()</span></a> und <a href="../GameMaker_Language/GML_Reference/Debugging/debug_event.htm"><span class="inline">debug_event()</span></a>.
+      Systemereignisse werden in einer anderen Farbe gekennzeichnet als Ereignisse, die durch Code ausgelöst werden:</p>
+    <p class="dropspot"><img>Wenn Sie das Spiel im Debug-Modus laufen lassen und mit der Maus über diese Ereignisse fahren, wird eine Liste mit allen Ereignissen angezeigt, die an diesem Punkt im Spiel ausgelöst wurden,
+      und Sie haben die Möglichkeit, die Liste in ein separates Fenster zu ziehen, um sie zu überarbeiten, indem Sie auf den Text &quot;<strong>In einem neuen Fenster öffnen</strong>&quot; klicken:</p>
+    <p class="dropspot"><img alt="Debug Icon" class="icon" src="../assets/Images/Icons/Icon_Debug.png"/></p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Resource View</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down1" href="#">Ressource Ansicht</a></p>
   <div class="droptext" data-targetname="drop-down1">
-    <p class="dropspot">The Resource View shows you a list of all the resources being used in the project that can contain code or GML Visual actions. This section works much like the <a href="../Introduction/The_Asset_Browser.htm">Asset Browser</a> and you can expand the items
-      in it to show more information, for example, the different events for a specific object. You can then double click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on any of the resources to open
-      the code for it in the <strong>Code View</strong> window, where you can check values and add or remove <strong>breakpoints</strong>.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Die Ressourcenansicht zeigt Ihnen eine Liste aller im Projekt verwendeten Ressourcen, die <span class="notranslate">code</span> oder <span class="notranslate">GML</span> Visual-Aktionen enthalten können. Dieser Bereich funktioniert ähnlich wie der <a href="../Introduction/The_Asset_Browser.htm">Asset-Browser</a> und Sie können die Elemente
+      erweitern, um weitere Informationen anzuzeigen, z. B. die verschiedenen Ereignisse für ein bestimmtes Objekt. Mit einem Doppelklick auf <img> auf eine der Ressourcen öffnen Sie
+      Sie können dann auf eine beliebige Ressource doppelklicken, um die <span class="notranslate">code</span> in der <strong>Codeansicht</strong> zu öffnen, wo Sie Werte überprüfen und <strong>Haltepunkte</strong> hinzufügen oder entfernen können.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Call Stack</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Stapel aufrufen</a></p>
   <div class="droptext" data-targetname="drop-down2">
-    <p class="dropspot">This window will display the current call stack of events, as well as the line number for the code being stepped through. The call stack is essentially a &quot;last in - first out&quot; data structure that shows the order of execution of all the game
-      code both from the <span data-keyref="GameMaker Name">GameMaker</span> runner - since debugging is done using the <a class="glossterm" data-glossterm="Virtual Machine (VM)" href="#">Virtual Machine (VM)</a> - and from what you have written for the game. The debugger will need to
-      have been <em>Paused </em>before any information will be shown here.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">In diesem Fenster wird der aktuelle Aufrufstapel von Ereignissen sowie die Zeilennummer der <span class="notranslate">code</span> angezeigt, die gerade durchlaufen wird. Der Aufrufstapel ist im Wesentlichen eine &quot;last in - first out&quot;-Datenstruktur, die die Ausführungsreihenfolge des gesamten Spiels anzeigt
+      <span class="notranslate">code</span> sowohl aus dem <span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">runner</span> - da <span class="notranslate">debugging</span> mit der <a class="glossterm" data-glossterm="Virtuelle Maschine (VM)" href="#">Virtual Machine (VM)</a> ausgeführt wird - als auch aus dem, was Sie für das Spiel geschrieben haben. Der Debugger muss
+     <em>pausiert </em>sein, bevor hier Informationen angezeigt werden.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Toolbar</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Symbolleiste</a></p>
   <div class="droptext" data-targetname="drop-down3">
-    <p class="dropspot">The toolbar has the debugger controls along with some basic information such as memory use, the current (real) FPS for the game and an indicator to show whether the debugger is currently connected or not (the indicator will be green when connected
-      to a running instance of your project and red otherwise). The available controls are:</p>
+    <p class="dropspot">Die Symbolleiste enthält die Debugger-Bedienelemente sowie einige grundlegende Informationen wie die Speichernutzung, die aktuellen (realen) FPS für das Spiel und eine Anzeige, die angibt, ob der Debugger derzeit verbunden ist oder nicht (die Anzeige ist grün, wenn er mit einer laufenden Instanz Ihres Projekts
+      mit einer laufenden Instanz Ihres Projekts verbunden ist und andernfalls rot). Die verfügbaren Steuerelemente sind:</p>
     <table class="icons" style="margin-left: 32auto">
       <tbody>
         <tr>
-          <td class="icons"><img alt="Play Debug Icon" src="../assets/Images/Icons/Debug_play.png" style="margin-left: 24px;" /></td>
-          <td class="text">This starts the game again after it has been paused (keyboard shortcut &quot;<span class="inline">f5</span>&quot;).</td>
+          <td class="icons"><img alt="The Debugger Windows" class="center" src="../assets/Images/IDE Tools/Debug_Module.png"/></td>
+          <td class="text">Damit starten Sie das Spiel erneut, nachdem es angehalten wurde (Tastaturkürzel &quot;<span class="inline">f5</span>&quot;).</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Pause Debug Icon" height="24" src="../assets/Images/Icons/Debug_Pause.png" style="margin-left: 24px;" width="24" /></td>
-          <td class="text">This will pause (break) the game.</td>
+          <td class="icons"><img alt="Debugger Context Menu" class="center" src="../assets/Images/IDE Tools/Debug_Module_Context_Menu.png"/></td>
+          <td class="text">Dadurch wird das Spiel angehalten (unterbrochen).</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Restart Debug Icon" src="../assets/Images/Icons/Debug_Restart.png" style="margin-left: 24px;" /></td>
-          <td class="text">Restarts the game.</td>
+          <td class="icons"><img alt="Debug Graph" class="center" src="../assets/Images/IDE Tools/Debug_Graph.png"/></td>
+          <td class="text">Startet das Spiel neu.</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Stop Debug Icon" height="24" src="../assets/Images/Icons/Debug_Stop.png" style="margin-left: 24px;" width="24" /></td>
-          <td class="text">Stops the game.</td>
+          <td class="icons"><img alt="Control Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Ctrl.png" width="55"/></td>
+          <td class="text">Stoppt das Spiel.</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Step In Debug Icon" src="../assets/Images/Icons/Debug_StepIn.png" style="margin-left: 24px;" /></td>
-          <td class="text">Step into a code block or script (keyboard shortcut &quot;<span class="inline">f11</span>&quot;).</td>
+          <td class="icons"><img alt="CMD Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Cmd.png" width="55"/></td>
+          <td class="text">Treten Sie in einen <span class="notranslate">code</span> Block oder <span class="notranslate">script</span> (Tastaturkürzel &quot;<span class="inline">f11</span>&quot;).</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Step Over Debug Icon" src="../assets/Images/Icons/Debug_StepOver.png" style="margin-left: 24px;" /></td>
-          <td class="text">Step over a code block or script (keyboard shortcut &quot;<span class="inline">f10</span>&quot;).</td>
+          <td class="icons"><img alt="MMB Icon" class="icon" src="../assets/Images/Icons/Icon_MMB.png"/></td>
+          <td class="text">Gehen Sie über einen <span class="notranslate">code</span> Block oder <span class="notranslate">script</span> (Tastaturkürzel &quot;<span class="inline">f10</span>&quot;).</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Step Out Debug Icon" src="../assets/Images/Icons/Debug_StepOut.png" style="margin-left: 24px;" /></td>
-          <td class="text">Step out of a code block or script (keyboard shortcut <img alt="Shift Icon" class="icon" height="20" src="../assets/Images/Icons/Icon_Shift.png" width="55" /> + &quot;<span class="inline">f11</span>&quot;).</td>
+          <td class="icons"><img alt="Debug Graph Events" class="center" src="../assets/Images/IDE Tools/Debug_Graph_Events.png"/></td>
+          <td class="text">Verlassen Sie einen <span class="notranslate">code</span> Block oder <span class="notranslate">script</span> (Tastaturkürzel <img> + &quot;<span class="inline">f11</span>&quot;).</td>
         </tr>
         <tr>
-          <td class="icons"><img alt="Real Time Debug Icon" src="../assets/Images/Icons/Debug_RealTime.png" style="margin-left: 24px;" /></td>
-          <td class="text">Turn on or off real time updates for the debug information (this is off by default).</td>
+          <td class="icons"><img alt="Debug Events" class="center" src="../assets/Images/IDE Tools/Debug_Events.png"/></td>
+          <td class="text">Aktivieren oder deaktivieren Sie die Echtzeitaktualisierung der Debug-Informationen (standardmäßig ist sie deaktiviert).</td>
         </tr>
       </tbody>
     </table>
-    <p class="dropspot">The first three buttons are used to control your game, permitting you to <strong>start</strong>, <strong>pause</strong>, <strong>restart </strong>or <strong>stop </strong>it at any time. When the game is paused (either by clicking the Pause button
-      or from a <strong>Breakpoint</strong>) you can then use the three <strong>step</strong> buttons for stepping through your code.</p>
-    <p class="dropspot">When we talk about &quot;stepping&quot; through the code, we simply mean that you can tell your game to run the current line of code, then &quot;step&quot; onto the next one, permitting you to run through your entire game one line of code at a time
-      should you wish. Normally you would simply use the <strong>Step In</strong> button to do this, but you also have one for stepping <strong>over </strong>code and one for stepping <strong>out </strong>of the code. Stepping over is useful when you
-      have large scripts to run through, as clicking this will run the whole script or code block as a single step and stop on the next line afterwards, while stepping out will take you out of a script (they will run, but all at once) and stop on the
-      next step afterwards when the scope changes.</p>
-    <p class="dropspot">The final icon for <strong>real time updates</strong> permits the debug window to update its data in real time, so you can see how variables change or instances are created and destroyed as it happens. Note that this may affect the games performance
-      and that not all information is available in real time. For example, the <strong>Render State</strong> watch (see the section on <a href="The_Debugger/Watches.htm">Watches</a>) cannot be viewed in real time.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">Die ersten drei Schaltflächen dienen zur Steuerung Ihres Spiels, mit denen Sie es jederzeit <strong>starten</strong>, <strong>unterbrechen</strong>, <strong>neu starten </strong>oder <strong>beenden </strong>können. Wenn das Spiel pausiert ist (entweder durch Klicken auf die Schaltfläche Pause
+      oder von einem <strong>Haltepunkt</strong> aus), können Sie mit den drei <strong>Schrittschaltflächen</strong> durch Ihr <span class="notranslate">code</span> schreiten.</p>
+    <p class="dropspot">Wenn wir von einem &quot;Schritt&quot; durch <span class="notranslate">code</span> sprechen, meinen wir einfach, dass Sie Ihr Spiel anweisen können, die aktuelle Zeile von <span class="notranslate">code</span> ablaufen zu lassen und dann mit der nächsten Zeile fortzufahren. So können Sie Ihr gesamtes Spiel mit einer Zeile von <span class="notranslate">code</span> nach der anderen durchspielen.
+      wenn Sie es wünschen. Normalerweise würden Sie dazu einfach die Schaltfläche " <strong>Step In</strong> " verwenden, aber es gibt auch eine Schaltfläche für das <strong>Überspringen von </strong>Code und eine für das <strong>Verlassen </strong>von <span class="notranslate">code</span>. Das Überspringen ist nützlich, wenn Sie
+      <span class="notranslate">scripts</span> durchlaufen müssen, denn wenn Sie darauf klicken, wird der gesamte Block <span class="notranslate">script</span> oder <span class="notranslate">code</span> in einem einzigen Schritt ausgeführt und danach in der nächsten Zeile angehalten, während Sie mit der Schaltfläche "Aussteigen" aus einem <span class="notranslate">script</span> aussteigen (sie werden ausgeführt, aber alle auf einmal) und beim nächsten Schritt
+      nächsten Schritt, wenn sich der Bereich ändert.</p>
+    <p class="dropspot">Das letzte Symbol für <strong>Echtzeit-Updates</strong> ermöglicht es dem Debug-Fenster, seine Daten in Echtzeit zu aktualisieren, so dass Sie sehen können, wie sich Variablen ändern oder Instanzen erstellt und zerstört werden, während dies geschieht. Beachten Sie, dass dies die Leistung des Spiels beeinträchtigen kann
+      und dass nicht alle Informationen in Echtzeit verfügbar sind. Zum Beispiel kann die <strong>Render-Status-Überwachung</strong> (siehe den Abschnitt über <a href="The_Debugger/Watches.htm">Überwachungen</a>) nicht in Echtzeit angezeigt werden.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Code View</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Code-Ansicht</a></p>
   <div class="droptext" data-targetname="drop-down4">
-    <p class="dropspot">The code view is where we can see and review different scripts or event code from our project as it runs. By default this starts empty, but you can double click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> on any asset from the <strong>Resource View </strong>to open it here. You can open multiple different events or scripts too, and they will be added to the Code View workspace as tabs along the top.</p>
-    <p class="dropspot">While any code window is open in the Code View, you can left click <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> in the gutter (where the line numbers are) to add or remove <strong>Breakpoints </strong>(see
-      further down this page for information on breakpoints).</p>
-    <p class="dropspot">You can also use the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> to open the <strong>Context Menu</strong>, which also permits you to add or remove breakpoints and copy any
-      selected code to the clipboard.</p>
-    <p class="dropspot"> </p>
+    <p class="dropspot">In der Ansicht <span class="notranslate">code</span> können wir verschiedene <span class="notranslate">scripts</span> oder <span class="notranslate">code</span> Ereignisse aus unserem laufenden Projekt sehen und überprüfen. Standardmäßig ist diese Ansicht leer, aber Sie können auf <img> auf ein beliebiges Asset in der <strong>Ressourcenansicht </strong>doppelklicken, um es hier zu öffnen. Sie können auch mehrere verschiedene Ereignisse oder <span class="notranslate">scripts</span> öffnen, und sie werden der <span class="notranslate">Code</span> Ansicht <span class="notranslate">workspace</span> als Registerkarten am oberen Rand hinzugefügt.</p>
+    <p class="dropspot">Während ein beliebiges <span class="notranslate">code</span> Fenster in der <span class="notranslate">Code</span> Ansicht geöffnet ist, können Sie mit der linken Maustaste auf <img> im Zwischenraum (wo sich die Zeilennummern befinden) klicken, um <strong>Haltepunkte </strong> hinzuzufügen oder zu entfernen (siehe
+      weiter unten auf dieser Seite für Informationen über Haltepunkte).</p>
+    <p class="dropspot">Sie können auch die rechte Maustaste <img> verwenden, um das <strong>Kontextmenü</strong> zu öffnen, mit dem Sie auch Haltepunkte hinzufügen oder entfernen und alle
+      ausgewählten <span class="notranslate">code</span> in die Zwischenablage zu kopieren.</p>
+    <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Watches</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down5" href="#">Uhren</a></p>
   <div class="droptext" data-targetname="drop-down5">
-    <p class="dropspot">This section is dedicated to &quot;watching&quot; different aspects of your game to permit more in depth and detailed debugging. This is covered in depth on the following page:</p>
+    <p class="dropspot">In diesem Abschnitt geht es darum, verschiedene Aspekte Ihres Spiels zu &quot;beobachten&quot;, um eine tiefere und detailliertere <span class="notranslate">debugging</span> zu ermöglichen. Dies wird auf der folgenden Seite eingehend behandelt:</p>
     <ul class="dropspotlist">
-      <li class="dropspot"><a href="The_Debugger/Watches.htm">Watches</a></li>
+      <li class="dropspot"><a href="The_Debugger/Watches.htm">Uhren</a></li>
     </ul>
   </div>
-  <p><br />
-    It is important to note that while the game is running it doesn&#39;t update the debug windows with variable values and other details by default, therefore you must first either use the Pause button <img alt="Pause Debug Icon" class="icon" src="../assets/Images/Icons/Debug_Pause.png" /> in the Debugger to pause the game before Locals, Globals and other data will be available, or enable real-time updating from the icons at the top <img alt="Real Time Debug Icon" class="icon" src="../assets/Images/Icons/Debug_RealTime.png" />. The only exception to this rule is the <strong>Profile </strong>view, which updates in real time when enabled independently of the real-time switch, as it has its own on/off button. You can find full information on this view from the following page:</p>
+  <p><br> Es ist wichtig zu beachten, dass während des Spiels die Debug-Fenster standardmäßig nicht mit Variablenwerten und anderen Details aktualisiert werden. Daher müssen Sie zunächst entweder die Schaltfläche Pause <img> im Debugger verwenden, um das Spiel anzuhalten, bevor Locals, Globals und andere Daten verfügbar sind, oder die Echtzeitaktualisierung über die Symbole oben <img> aktivieren. Die
+    einzige Ausnahme von dieser Regel ist die <strong>Profilansicht </strong>, die in Echtzeit aktualisiert wird, wenn sie unabhängig von der Echtzeitansicht <span class="notranslate">switch</span> aktiviert wird, da sie über eine eigene Schaltfläche zum Ein- und Ausschalten verfügt. Ausführliche Informationen zu dieser Ansicht finden Sie auf der folgenden Seite:</p>
   <ul class="colour">
-    <li><a href="The_Debugger/The_Profiler.htm">The Profiler</a></li>
+    <li><a href="The_Debugger/The_Profiler.htm">Der Profiler</a></li>
   </ul>
-  <p>Another important part of debugging your game is the use of <strong>Breakpoints</strong>. A breakpoint is a place in your project code that you wish it to stop at so you can see what&#39;s going on. With the Debugger running, you can add or remove breakpoints at any time and in any code or script block by left clicking <img alt="LMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_LMB.png" width="21" /> in the gutter (where the line numbers are), or you can use the right mouse button <strong><img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /></strong> to open the <strong>Context Menu</strong>, which also permits you to add or remove breakpoints:</p>
-  <p><img alt="Add/Remove Breakpoints" class="center" src="../assets/Images/IDE Tools/Add_Remove_Breakpoint.gif" />Breakpoints can also be set from the <span data-keyref="GameMaker Name">GameMaker</span> IDE. When writing your project, they can be added or removed at any time using <span class="inline">f9</span> (or using the right mouse button <img alt="RMB Icon" class="icon" height="24" src="../assets/Images/Icons/Icon_RMB.png" width="21" /> and selecting &quot;<strong>toggle breakpoint</strong>&quot;), either on an action in the object window (for GML Visual users), or on a line in a code editor window. Now, when you run your game in debug mode, it will pause at the point (or points) that you have defined.</p>
-  <p>Breakpoints set from the IDE are saved along with your project and will persist over various runs until removed again, however if you add a breakpoint to your code in the Debugger, this will be lost after the module is closed, or a new test run started. Note that all breakpoints will appear in the <a href="../Introduction/The_Output_Window.htm">Output Window</a> where they can be enabled or disabled or even removed.</p>
-  <p> </p>
-  <p> </p>
+  <p>Ein weiterer wichtiger Bestandteil von <span class="notranslate">debugging</span> ist die Verwendung von <strong>Haltepunkten</strong>. Ein Haltepunkt ist eine Stelle in Ihrem Projekt <span class="notranslate">code</span>, an der Sie anhalten möchten, damit Sie sehen können, was vor sich geht. Wenn der Debugger läuft, können Sie jederzeit und an jeder beliebigen Stelle Haltepunkte
+    jederzeit und in jedem <span class="notranslate">code</span> oder <span class="notranslate">script</span> Block hinzufügen oder entfernen, indem Sie mit der linken Maustaste auf <img> im Zwischenraum (wo sich die Zeilennummern befinden) klicken oder mit der rechten Maustaste <strong><img></strong> zum
+    das <strong>Kontextmenü</strong> öffnen, über das Sie ebenfalls Haltepunkte hinzufügen oder entfernen können:</p>
+  <p><img>Haltepunkte können auch über den <span data-keyref="GameMaker Name">GameMaker</span> <span class="notranslate">IDE</span> gesetzt werden. Beim Schreiben Ihres Projekts können Sie sie jederzeit hinzufügen oder entfernen, indem Sie
+    <span class="inline">f9</span> (oder mit der rechten Maustaste <img> und der Auswahl von &quot;<strong>Haltepunkt umschalten</strong>&quot;), entweder auf einer Aktion im Objektfenster
+      (für <span class="notranslate">GML</span> Visual-Benutzer), oder auf einer Zeile in einem <span class="notranslate">code</span> Editor-Fenster. Wenn Sie nun Ihr Spiel im Debug-Modus laufen lassen, wird es an dem Punkt (oder den Punkten) angehalten, den Sie definiert haben.</p>
+  <p>Unterbrechungspunkte, die Sie auf <span class="notranslate">IDE</span> setzen, werden zusammen mit Ihrem Projekt gespeichert und bleiben über mehrere Durchläufe erhalten, bis sie wieder entfernt werden. Wenn Sie jedoch im Debugger einen Unterbrechungspunkt zu <span class="notranslate">code</span> hinzufügen, geht dieser verloren, wenn <span class="notranslate">module</span> geschlossen oder ein neuer Testlauf gestartet wird.
+    Beachten Sie, dass alle Haltepunkte im <a href="../Introduction/The_Output_Window.htm">Ausgabefenster</a> erscheinen, wo sie aktiviert, deaktiviert oder sogar entfernt werden können.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Additional_IDE_Tools.htm">Additional IDE Tools</a></div>
-        <div style="float:right">Next: <a href="The_Micro_Web_Server.htm">The Micro Web Server</a></div>
+        <div style="float:left">Zurück: <a href="Additional_IDE_Tools.htm">Zusätzliche <span class="notranslate">IDE</span> Tools</a></div>
+        <div style="float:right">Nächste: <a href="The_Micro_Web_Server.htm">Der Micro Web Server</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 The Debugger
@@ -141,5 +149,5 @@ Debug
   <!-- TAGS
 debug_mode
 -->
-</body>
-</html>
+
+</body></html>

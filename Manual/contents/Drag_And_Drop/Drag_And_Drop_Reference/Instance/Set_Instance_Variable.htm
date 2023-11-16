@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Set Instance Variable</title>
+  <title>Instanzvariable setzen</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Set Instance Variable action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Set Instance Variable" />
@@ -14,89 +14,89 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Set Instance Variable Action" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Set_Sprite.png" width="32" /> Set Instance Variable</h1>
-  <p>With this action you can set one of the <b>built in</b> variables. All instances of all objects have a number of variables already created within them to hold essential information like the current x/y position, the speed, the direction, visibility
-    and many other things. The instance variables that you can use are:</p>
+  <h1><img> Instanzvariable setzen</h1>
+  <p>Mit dieser Aktion können Sie eine der <b>eingebauten</b> Variablen setzen. Alle Instanzen aller Objekte haben bereits eine Reihe von Variablen in sich, die wichtige Informationen wie die aktuelle x/y-Position, die Geschwindigkeit, die Richtung, die Sichtbarkeit
+    und viele andere Dinge. Die Instanzvariablen, die Sie verwenden können, sind:</p>
   <ul class="colour">
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/x.htm">X Coordinate</a>- The position along the x axis in the room.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/y.htm">Y Coordinate</a> - The position along the y axis in the room.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/direction.htm">Direction</a> - The direction of movement for the instance (default is 0, where right is 0°, up is 90°, left is 180° and down is 270°).</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/speed.htm">Speed</a> - The speed (in pixels per game frame) that the instance is moving at.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/hspeed.htm">Horizontal Speed</a> - The horizontal speed (in pixels per game frame) that the instance is moving at. A negative speed means it is moving
-      left, a positive speed is right and the default is 0.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/vspeed.htm">Vertical Speed</a> - The vertical speed (in pixels per game frame) that the instance is moving at. A negative speed means it is moving up,
-      a positive speed is down and the default is 0.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/visible.htm">Visible</a> - The visibility toggle variable (default is <span class="inline">true</span> unless set otherwise in the <a href="../../../The_Asset_Editors/Objects.htm">Object Editor</a>,
-      set to <span class="inline">false</span> to make invisible). Note that an invisible instance still runs all its events <i>except</i> the Draw Event.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/persistent.htm">Persistent</a> - The persistence toggle variable (default is <span class="inline">false</span> unless set otherwise in the <a href="../../../The_Asset_Editors/Objects.htm">Object Editor</a>,
-      set to <span class="inline">true</span> to make persistent). This will make an instance &quot;persist&quot; from room to room, ie: the instance will not be cleaned up on room end but instead will be carried over to the next room. Note that when an instance is persisted
-      it will <i>not</i> call its Create nor Destroy event, but will call the Clean Up, Room End, and Room Start events.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/layer.htm">Layer</a> - The layer that the instance has been assigned to.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/depth.htm">Depth</a> - The depth value assigned to the layer.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/sprite_index.htm">Sprite</a> - The sprite resource assigned to the instance.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_index.htm">Image Index</a>- The image index of the sprite assigned. This value sets the frame of the sprite assigned to the instance, and if
-      the value is greater than the number of frames in the animation it will &quot;loop&quot; such that a sprite with 5 frames if set to frame 7 will actually show frame 2.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_angle.htm">Image Angle</a> - The angle that the instance should be set to (default is 0, where right is 0°, up is 90°, left is 180° and down
-      is 270°).</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_alpha.htm">Image Alpha</a>- The alpha value for the instance (default is 1) from 0 to 1, where 0 is full transparent and 1 is fully opaque.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_blend.htm">Image Blend</a> - The colour to be blended with the instance sprite (default is white).</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_speed.htm">Image Speed</a> - The animation speed for the instance.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_xscale.htm">Horizontal Scale</a> - The horizontal scale at which the instance sprite should be drawn (this will also affect the instance bounding
-      box and collisions). A scale of 1 indicates no scaling (1:1), smaller values will scale down (0.5, for example, will half the width of the sprite), larger values will scale up and negative values will mirror the sprite <i>and</i> scale it unless
-      the value used is exactly -1 (in which case the sprite is just mirrored along the y-axis with no scaling).</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_yscale.htm">Vertical Scale</a> - The vertical scale at which the instance sprite should be drawn (this will also affect the instance bounding
-      box and collisions). A scale of 1 indicates no scaling (1:1), smaller values will scale down (0.5, for example, will half the height of the sprite), larger values will scale up and negative values will flip the sprite <i>and</i> scale it unless
-      the value used is exactly -1 (in which case the sprite is just flipped along the y-axis with no scaling).</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/mask_index.htm">Mask</a>- The mask index for the instance. The default value is -1 (which means the instance will use the collision mask for the
-      currently assigned sprite index), but if set to any other sprite resource, the collision mask for that instance will be used instead of the sprite assigned to the sprite index.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/friction.htm">Friction</a> - The friction to use each game frame of the game to slow down the instance. This value will simply be deducted from the current
-      speed value each game frame (or added if the speed value is negative).</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/gravity.htm">Gravity</a> - Gravity will apply a constant force in the gravity direction (see below) of the instance, influencing its speed (default is
-      0). Note that gravity is a cumulative force and will accelerate the object if you choose not to cap the final speed.</li>
-    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/gravity_direction.htm">Gravity Direction</a> - This can be used to set the direction of movement when the instances gravity is greater than 0 (default
-      is 270). Note that directions in <span data-keyref="GameMaker Name">GameMaker</span> are calculated as 0° being right, 90° being up, 180° being left and 270° being down.</li>
-    <li><a href="../Instance_Vars/Set_Score.htm">Score</a> - Set the <span class="inline">score</span> variable.</li>
-    <li><a href="../Instance_Vars/Set_Lives.htm">Lives</a> - Set the <span class="inline">lives</span> variable.</li>
-    <li><a href="../Instance_Vars/Set_Health.htm">Health</a> - Set the <span class="inline">health</span> variable.</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/x.htm">X-Koordinate -</a> Die Position entlang der X-Achse im Raum.</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/y.htm">Y-Koordinate</a> - Die Position entlang der Y-Achse im Raum.</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/direction.htm">Richtung</a> - Die Bewegungsrichtung der Instanz (Standard ist 0, wobei rechts 0°, oben 90°, links 180° und unten 270° ist).</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/speed.htm">Geschwindigkeit</a> - Die Geschwindigkeit (in Pixel pro Spielframe), mit der sich die Instanz bewegt.</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/hspeed.htm">Horizontale Geschwindigkeit</a> - Die horizontale Geschwindigkeit (in Pixel pro Spielframe), mit der sich die Instanz bewegt. Eine negative Geschwindigkeit bedeutet, dass sie sich
+      nach links, eine positive Geschwindigkeit nach rechts und der Standardwert ist 0.</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/vspeed.htm">Vertikale Geschwindigkeit</a> - Die vertikale Geschwindigkeit (in Pixel pro Spielframe), mit der sich die Instanz bewegt. Eine negative Geschwindigkeit bedeutet, dass sie sich nach oben bewegt,
+      eine positive Geschwindigkeit bedeutet nach unten und der Standardwert ist 0.</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/visible.htm">Sichtbar</a> - Die Variable zum Umschalten der Sichtbarkeit (Standard ist <span class="inline">true</span>, sofern im <a href="../../../The_Asset_Editors/Objects.htm">Objekteditor</a> nicht anders eingestellt,
+      auf <span class="inline">false</span> setzen, um unsichtbar zu machen). Beachten Sie, dass eine unsichtbare Instanz immer noch alle Ereignisse <i>mit Ausnahme</i> des Zeichnungsereignisses ausführt.</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/persistent.htm">Persistent</a> - Die Toggle-Variable für die Persistenz (Standard ist <span class="inline">false</span>, sofern im <a href="../../../The_Asset_Editors/Objects.htm">Objekteditor</a> nicht anders eingestellt,
+      setze auf <span class="inline">true</span> um persistent zu machen). Dies lässt eine Instanz von Raum zu Raum &quot;bestehen&quot;, d.h. die Instanz wird am Ende des Raumes nicht aufgeräumt, sondern wird in den nächsten Raum übertragen. Beachte, dass wenn eine Instanz persistent gemacht wird
+     <i>weder</i> das Ereignis Create noch Destroy aufruft, sondern die Ereignisse Clean Up, Room End und Room Start.</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/layer.htm">Ebene</a> - Die Ebene, der die Instanz zugewiesen wurde.</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/depth.htm">Tiefe</a> - Der der Ebene zugewiesene Tiefenwert.</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/sprite_index.htm">Sprite</a> - Die <span class="notranslate">sprite</span> Ressource, die der Instanz zugewiesen ist.</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_index.htm">Bildindex -</a> Der Bildindex des zugewiesenen <span class="notranslate">sprite</span>. Dieser Wert legt das Bild des <span class="notranslate">sprite</span> fest, das der Instanz zugewiesen ist, und wenn
+      Wenn der Wert größer ist als die Anzahl der Frames in der Animation, wird eine Schleife erstellt, so dass ein <span class="notranslate">sprite</span> mit 5 Frames, das auf Frame 7 eingestellt ist, tatsächlich Frame 2 zeigt.</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_angle.htm">Bildwinkel</a> - Der Winkel, auf den die Instanz eingestellt werden soll (Standard ist 0, wobei rechts 0°, oben 90°, links 180° und unten
+      270° ist).</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_alpha.htm">Image Alpha-</a> Der Alphawert für die Instanz (Standardwert ist 1) von 0 bis 1, wobei 0 für vollständig transparent und 1 für vollständig undurchsichtig steht.</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_blend.htm">Image Blend</a> - Die Farbe, die mit der Instanz <span class="notranslate">sprite</span> überblendet werden soll (Standard ist weiß).</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_speed.htm">Bildgeschwindigkeit</a> - Die Animationsgeschwindigkeit für die Instanz.</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_xscale.htm">Horizontaler Maßstab</a> - Der horizontale Maßstab, mit dem die Instanz <span class="notranslate">sprite</span> gezeichnet werden soll (dies wirkt sich auch auf den Begrenzungsrahmen der Instanz und die Kollisionen aus).
+      Box und Kollisionen). Ein Maßstab von 1 bedeutet keine Skalierung (1:1), kleinere Werte skalieren nach unten (0.5, zum Beispiel, halbiert die Breite der <span class="notranslate">sprite</span>), größere Werte skalieren nach oben und negative Werte spiegeln die <span class="notranslate">sprite</span> <i>und</i> skalieren sie, außer
+      der verwendete Wert ist genau -1 (in diesem Fall wird <span class="notranslate">sprite</span> einfach an der y-Achse gespiegelt und nicht skaliert).</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/image_yscale.htm">Vertikaler Maßstab</a> - Der vertikale Maßstab, mit dem die Instanz <span class="notranslate">sprite</span> gezeichnet werden soll (dies wirkt sich auch auf den Begrenzungsrahmen der Instanz und die Kollisionen aus).
+      Box und Kollisionen). Ein Maßstab von 1 bedeutet keine Skalierung (1:1), kleinere Werte skalieren nach unten (0.5, zum Beispiel, halbiert die Höhe der <span class="notranslate">sprite</span>), größere Werte skalieren nach oben und negative Werte spiegeln die <span class="notranslate">sprite</span> <i>und</i> skalieren sie, außer
+      der verwendete Wert ist genau -1 (in diesem Fall wird <span class="notranslate">sprite</span> einfach entlang der y-Achse gespiegelt und nicht skaliert).</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Sprites/Sprite_Instance_Variables/mask_index.htm">Maske -</a> Der Maskenindex für die Instanz. Der Standardwert ist -1 (was bedeutet, dass die Instanz die Kollisionsmaske für den
+      aktuell zugewiesenen Index <span class="notranslate">sprite</span> ), aber wenn er auf eine andere <span class="notranslate">sprite</span> Ressource gesetzt wird, wird die Kollisionsmaske für diese Instanz anstelle der <span class="notranslate">sprite</span> verwendet, die dem Index <span class="notranslate">sprite</span> zugewiesen ist.</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/friction.htm">Reibung</a> - Die Reibung, die bei jedem Spielframe des Spiels verwendet wird, um die Instanz zu verlangsamen. Dieser Wert wird einfach von dem aktuellen
+      Geschwindigkeitswert abgezogen (oder hinzugefügt, wenn der Geschwindigkeitswert negativ ist).</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/gravity.htm">Schwerkraft</a> - Schwerkraft übt eine konstante Kraft in Richtung der Schwerkraft (siehe unten) auf die Instanz aus und beeinflusst ihre Geschwindigkeit (Standard ist
+      0). Beachten Sie, dass die Schwerkraft eine kumulative Kraft ist und das Objekt beschleunigt, wenn Sie die Endgeschwindigkeit nicht begrenzen wollen.</li>
+    <li><a href="../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/gravity_direction.htm">Gravity Direction</a> - Hier kann die Richtung der Bewegung festgelegt werden, wenn die Schwerkraft der Instanz größer als 0 ist (Standard
+      ist 270). Beachten Sie, dass die Richtungen in <span data-keyref="GameMaker Name">GameMaker</span> so berechnet werden, dass 0° rechts, 90° oben, 180° links und 270° unten ist.</li>
+    <li><a href="../Instance_Vars/Set_Score.htm">Score</a> - Setzen Sie die Variable <span class="inline">score</span>.</li>
+    <li><a href="../Instance_Vars/Set_Lives.htm">Lives</a> - Setzen Sie die Variable <span class="inline">lives</span>.</li>
+    <li><a href="../Instance_Vars/Set_Health.htm">Gesundheit</a> - Setzen Sie die Variable <span class="inline">health</span>.</li>
   </ul>
-  <p>Once you select the built in variable to use, you then set the value for that variable. The value you use will depend on the variable selected (see the list above for defaults and ranges) and you can flag the value to be <i>relative</i> to the current
-    value for the variable. You can also add additional variables to set in the same action by clicking the plus icon <span><img alt="Expand Argument Icon" height="17" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Icon_Expand_Arguments.png" width="17"/> </span>beside
-    the action, and selecting another instance variable and giving it a value.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Set Instance Variable Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/a_Instance_Set_Instance_Variable.png" /></p>
-  <h4>Arguments:</h4>
+  <p>Sobald Sie die zu verwendende integrierte Variable ausgewählt haben, legen Sie den Wert für diese Variable fest. Der von Ihnen verwendete Wert hängt von der ausgewählten Variable ab (Standardwerte und Bereiche siehe Liste oben), und Sie können den Wert <i>relativ</i> zum aktuellen
+    Wert für die Variable. Sie können auch weitere Variablen hinzufügen, die in derselben Aktion gesetzt werden sollen, indem Sie auf das Plus-Symbol <span><img> </span>neben
+    neben der Aktion klicken, eine weitere Instanzvariable auswählen und ihr einen Wert zuweisen.</p>
+  <p> </p>
+  <h4>Aktion Syntax:</h4>
+  <p><img alt="Set Instance Variable Action" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/i_Instance_Set_Sprite.png" width="32" /></p>
+  <h4>Argumente:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>Variable</td>
-        <td>The built in variable to set</td>
+        <td><span class="notranslate">Variable</span></td>
+        <td>Die eingebaute Variable zum Setzen</td>
       </tr>
       <tr>
-        <td>Value</td>
-        <td>The value to set the variable to</td>
+        <td><span class="notranslate">Value</span></td>
+        <td>Der Wert, auf den die Variable gesetzt werden soll</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Set Instance Variable Example" class="center" height="521" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Instance/e_Instance_Set_Instance_Variable.png" width="472" />The above action block code gets the values for
-    the previous x/y position and then compares them to the current x/y position. If they are not the same, then the sprite index for the instance is changed and it&#39;s image index is set to 0.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p><img>Der obige Aktionsblock <span class="notranslate">code</span> ermittelt die Werte für
+    die vorherige x/y-Position ab und vergleicht sie dann mit der aktuellen x/y-Position. Wenn sie nicht übereinstimmen, wird der Index <span class="notranslate">sprite</span> für die Instanz geändert und ihr Bildindex auf 0 gesetzt.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Instance_Actions_Library.htm">Instance Actions</a></div>
-        <div style="float:right">Next: <a href="Get_Instance_Variable.htm">Get Instance Variable</a></div>
+        <div style="float:left">Zurück: <a href="Instance_Actions_Library.htm">Instanz-Aktionen</a></div>
+        <div style="float:right">Nächste: <a href="Get_Instance_Variable.htm">Instanzvariable holen</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Set Instance Variable

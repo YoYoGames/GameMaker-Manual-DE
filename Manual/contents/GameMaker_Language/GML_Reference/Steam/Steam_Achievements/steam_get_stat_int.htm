@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_get_stat_int</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_get_stat_int" />
+  <meta name="rh-index-keywords" content="steam_get_stat_int" />
+  <meta name="search-keywords" content="steam_get_stat_int" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_get_stat_int</h1>
+  <p>Mit dieser Funktion können Sie den Wert einer bestimmten <b>vorzeichenbehafteten Ganzzahlstatistik</b> abrufen. Die Statistik sollte zuvor auf der Kontenseite des Steamworks-Kontrollpanels für Ihr Spiel definiert worden sein und die Zeichenkette, die an die Funktion übergeben wird, sollte mit dem <b>API-Namen</b> im Kontrollpanel übereinstimmen.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_get_stat_int(stat_name);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">stat_name</span></td>
+        <td>Der Name der abzurufenden Statistik (eine Zeichenkette).</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p class="code">xp += 100;<br />
+    steam_set_stat_int(&quot;Total_XP&quot;, steam_get_stat_int(&quot;Total_XP&quot;) + 100);<br />
+    if steam_get_stat_int(&quot;Total_XP&quot;) &gt; 1000<br />
+    {<br />
+        if !steam_get_achievement(&quot;Ach_1000XP&quot;) steam_set_achievement(&quot;Ach_1000XP&quot;);<br />
+    }</p>
+  <p>Die obige <span class="notranslate">code</span> setzt eine Statistik und prüft dann den Endwert, um zu entscheiden, ob eine Leistung vergeben wird oder nicht.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Zurück: <a href="Steam_Achievements.htm">Errungenschaften und Statistiken</a></div>
+        <div style="float:right">Nächste: <a href="steam_get_stat_float.htm"><span class="notranslate">steam_get_stat_float</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_get_stat_int
+-->
+  <!-- TAGS
+steam_get_stat_int
+-->
+</body>
+</html>

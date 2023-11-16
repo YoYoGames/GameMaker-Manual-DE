@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>surface_create_ext</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>oberfläche_erstellen_ext</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for surface_create_ext" />
   <meta name="rh-index-keywords" content="surface_create_ext" />
@@ -15,60 +15,55 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">surface_create_ext</span></h1>
-  <p>This function allows you to attach a surface to a canvas element that already exists in your web page, meaning that you can effectively split up portions of your game to be drawn at various different places within the page.</p>
-  <p>To that end, you <i>must</i> have defined the canvas element correctly within the <span class="inline">*.html</span> page of your game using the correct sizes and names that correspond to the surfaces you wish to create. So, you would have your &quot;main&quot; canvas, and then your secondary surface canvas elements, which will be assigned using this function to the correct surfaces. The following image is an example of how a page with three canvas elements would be set up:</p>
-  <p><img alt="Multi canvas layour example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/surface_ext_1.png" />The page layout can be tricky, especially if you wish all the elements to line up correctly, but once the hard task of creating the layout has been completed, you can then add this <span class="inline">html</span> file as the default page file for the game using the <a href="../../../../Settings/Game_Options/HTML5.htm">HTML5 Tab</a> of the <a href="../../../../Settings/Game_Options.htm">Game Options</a>. The next thing you should do is set up your room and views, as each surface will need to be associated with a specific view to &quot;capture&quot; the game images (see the view variable <a href="../../Cameras_And_Display/Cameras_And_Viewports/view_surface_id.htm"><span class="inline">view_surface_id[0...7]</span></a>). The image below shows how the game room for the above canvas example would be set out:</p>
-  <p><img alt="Multi canvas layour example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/surface_ext_2.png" />Finally you would then use this function to create the surfaces, with the name being the same as that used for the canvas elements and the size corresponding to the size of that same canvas. The function will return the index of the surface which should be stored in a variable for future function calls. When the surface is first created, it may contain &quot;noise&quot; as basically it is just an area of memory that is put aside for the purpose (and that memory may still contain information), so you may want to clear the surface before use with a function like <span class="inline3_func"><a data-xref="{text}" href="../Colour_And_Alpha/draw_clear_alpha.htm#h">draw_clear_alpha</a></span>.</p>
-  <p>This function will always create a surface with the <a href="surface_create.htm"><span class="inline2">surface_rgba8unorm</span></a> format.</p>
-  <p class="note"><b><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> </b>This function is only available for use with the HTML5 module.</p>
-  <p> </p>
+  <h1>oberfläche_erstellen_ext</h1>
+  <p>Mit dieser Funktion können Sie eine Fläche an ein Canvas-Element anhängen, das bereits in Ihrer Webseite vorhanden ist. Das bedeutet, dass Sie Teile Ihres Spiels effektiv aufteilen können, um sie an verschiedenen Stellen innerhalb der Seite zu zeichnen. Zu diesem Zweck <i>müssen</i> Sie das Canvas-Element auf der Seite <span class="inline">*.html</span> Ihres Spiels korrekt definieren, indem Sie die richtigen Größen und Namen verwenden, die den Flächen entsprechen, die Sie erstellen möchten. Sie haben also Ihre &quot;Haupt&quot;-Leinwand und dann Ihre sekundären Oberflächen-Leinwandelemente, die mit dieser Funktion den richtigen Oberflächen zugewiesen werden. Das folgende Bild ist ein Beispiel dafür, wie eine Seite mit drei Canvas-Elementen aufgebaut sein könnte:</p>
+  <p><img>Das Seitenlayout kann knifflig sein, vor allem, wenn alle Elemente korrekt ausgerichtet sein sollen. Sobald die schwierige Aufgabe der Layouterstellung abgeschlossen ist, können Sie diese <span class="inline">html</span> Datei als Standardseitendatei für das Spiel hinzufügen, indem Sie die <a href="../../../../Settings/Game_Options/HTML5.htm">Registerkarte HTML5</a> der <a href="../../../../Settings/Game_Options.htm">Spieloptionen</a> verwenden. Als Nächstes solltest du deinen Raum und deine Ansichten einrichten, da jede Oberfläche mit einer bestimmten Ansicht verknüpft werden muss, um die Bilder des Spiels zu &quot;erfassen&quot; (siehe die Ansichtsvariable <a href="../../Cameras_And_Display/Cameras_And_Viewports/view_surface_id.htm"><span class="inline">view_surface_id[0...7]</span></a>). Die folgende Abbildung zeigt, wie der Spielraum für das obige Canvas-Beispiel eingerichtet werden würde:</p>
+  <p><img>Schließlich würden Sie diese Funktion verwenden, um die Flächen zu erstellen, wobei der Name derselbe ist wie bei den Canvas-Elementen und die Größe der Größe des Canvas entspricht. Die Funktion gibt den Index der Fläche zurück, der in einer Variablen für zukünftige Funktionsaufrufe gespeichert werden sollte. Wenn die Oberfläche zum ersten Mal erstellt wird, kann sie &quot;Rauschen&quot; enthalten, da es sich im Grunde nur um einen Speicherbereich handelt, der für diesen Zweck beiseite gelegt wird (und dieser Speicher kann immer noch Informationen enthalten), daher sollten Sie die Oberfläche vor der Verwendung mit einer Funktion wie <a href="../Colour_And_Alpha/draw_clear_alpha.htm"><span class="inline">draw_clear_alpha()</span></a>.</p>
+  <p class="note"><b>HINWEIS</b>: Diese Funktion ist nur für die Verwendung mit dem HTML5 <span class="notranslate">module</span> verfügbar.</p>
+  <p> </p>
   <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">surface_create_ext</span>(name, w, h);</p>
+  <p class="code">surface_create_ext(name, w, h);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
+        <th>Argument</th><th>Typ</th>
+        <th>Beschreibung</th>
+     </tr>
       <tr>
-        <td>name</td>
-        <td><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The name of the canvas element to link the surface to.</td>
-      </tr>
+        <td><span class="notranslate">name</span></td><td><span data-keyref="Type_String"></span></td>
+        <td><span class="notranslate">The name of the canvas element to link the surface to.</span></td>
+     </tr>
       <tr>
-        <td>w</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The width of the surface to be created.</td>
-      </tr>
+        <td><span class="notranslate">w</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The width of the surface to be created.</span></td>
+     </tr>
       <tr>
-        <td>h</td>
-        <td><span data-keyref="Type_Real"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The height of the surface to be created.</td>
-      </tr>
+        <td><span class="notranslate">h</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">The height of the surface to be created.</span></td>
+     </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Surface"><a href="GameMaker_Language/GML_Reference/Drawing/Surfaces/surface_create.htm" target="_blank">Surface ID</a></span> (or -1 if anything went wrong)</p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code"><span data-keyref="Type_ID_Surface">Surface ID</span></p>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">s1 = surface_create_ext(&quot;surface1&quot;, 192, 550);<br />
     s2 = surface_create_ext(&quot;surface2&quot;, 608, 186);<br />
     view_surface_id[1] = s1;<br />
     view_surface_id[2] = s2;</p>
-  <p>The above code creates two surfaces of different sizes, assigning each one to a different canvas element, and then those surfaces are assigned to two views so that the correct part of the room is captured.</p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> erstellt zwei unterschiedlich große Flächen, die jeweils einem anderen Canvas-Element zugewiesen werden, und diese Flächen werden dann zwei Ansichten zugewiesen, damit der richtige Teil des Raums erfasst wird.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Surfaces.htm">Surfaces</a></div>
-        <div style="float:right">Next: <a href="surface_resize.htm">surface_resize</a></div>
+        <div style="float:left">Rückseite: <a href="Surfaces.htm">Oberflächen</a></div>
+        <div style="float:right">Nächste: <a href="surface_resize.htm"><span class="notranslate">surface_resize</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 surface_create_ext

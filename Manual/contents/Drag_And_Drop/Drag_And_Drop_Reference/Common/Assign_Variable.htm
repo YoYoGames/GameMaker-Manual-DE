@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Assign Variable</title>
+  <title>Variable zuweisen</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Section detailing Assign Variable" />
   <meta name="rh-index-keywords" content="GML Visual Action - Assign Variable" />
@@ -14,52 +13,54 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Assign Variable Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_Assign_Var.png" /> Assign Variable</h1>
-  <p>This action is used to either assign a variable a value (creating it in the process) or for changing the value of an existing variable.</p>
-  <p>You give the name of the variable and then the value, which can be added <i>relative</i> to the original value if required. If you give a new variable name (ie: a variable that has never been assigned previously in the instance) then this will create the new variable and assign it the value you give, while if you give the name of an existing variable, it will simply change the value to the new one.</p>
-  <p>You can add additional variables in the same action by clicking the plus icon <img src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Icon_Expand_Arguments.png" /> beside the action, and giving another variable name and value. For more advanced information on variables please see the section on <a href="../../../GameMaker_Language/GML_Overview/Variables_And_Variable_Scope.htm">Variables And Variable Scope</a>.</p>
-  <h2>Relative Checkbox</h2>
-  <p>Checking <b>Relative</b> will add your new value to the variable&#39;s existing value (use a negative number to subtract) and you can also use <a class="glossterm" data-glossterm="expression" href="#">expression</a><span class="glossextra">s</span> and variables created previously as the value.</p>
-  <p>When we talk about &quot;values&quot;, we don&#39;t just mean numeric values, as a variable can be a string, a pointer, a resource ID or anything else that a function can return or use. In the case of a string, checking <b>Relative</b> will concatenate the value with whatever the variable previously held, so if your variable was &quot;Hello&quot; and you assign &quot; World&quot; to it using the relative check, the final variable value will be &quot;Hello World&quot;.</p>
-  <p>Care must be taken, however, to ensure that the variable values are both of the same <a href="../../../GameMaker_Language/GML_Overview/Data_Types.htm">data type</a>, as trying to add, for example, an integer and a string, will result in a compiler error.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Assign Variable Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/a_Common_Assign_Var.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Variable zuweisen</h1>
+  <p>Diese Aktion wird verwendet, um entweder einer Variablen einen Wert zuzuweisen (und sie dabei zu erstellen) oder um den Wert einer bestehenden Variablen zu ändern. Sie geben den Namen der Variablen und dann den Wert an, der bei Bedarf <i>relativ</i> zum ursprünglichen Wert hinzugefügt werden kann.
+    erforderlich. Wenn Sie einen neuen Variablennamen angeben (d. h. eine Variable, die noch nie zuvor in der Instanz zugewiesen wurde), wird die neue Variable erstellt und ihr der von Ihnen angegebene Wert zugewiesen, während, wenn Sie den Namen einer bestehenden Variable angeben, diese
+    einfach den Wert in den neuen Wert ändern. Beachten Sie, dass das Ankreuzen von <b>Is Relative</b> den Wert zu dem bestehenden Variablenwert addiert (verwenden Sie eine negative Zahl, um zu subtrahieren) und Sie können auch <span class="glossextra">Ausdrücke</span> und Variablen, die zuvor erstellt wurden, als Wert verwenden.</p>
+  <p>Wenn wir von &quot;Werten&quot; sprechen, meinen wir nicht nur numerische Werte, denn eine Variable kann eine Zeichenkette, ein Zeiger, eine Ressourcen-ID oder etwas anderes sein, das eine Funktion zurückgeben oder verwenden kann. Im Falle einer Zeichenkette wird die Überprüfung von <b>Relative</b> 
+    Wenn Ihre Variable also &quot;Hello&quot; war und Sie ihr mit der Relativprüfung &quot;World&quot; zuweisen, lautet der endgültige Variablenwert &quot;Hello World&quot;. Es muss darauf geachtet werden,
+    Es muss jedoch darauf geachtet werden, dass die Variablenwerte beide vom gleichen <a href="../../../GameMaker_Language/GML_Overview/Data_Types.htm">Datentyp</a> sind, da der Versuch, z. B. eine Ganzzahl und eine Zeichenkette zu addieren, zu einem <span class="notranslate">compiler</span> Fehler führt.</p>
+  <p>Beachten Sie, dass Sie weitere Variablen in dieselbe Aktion einfügen können, indem Sie auf das Plus-Symbol <img> neben der Aktion klicken und einen weiteren Variablennamen und
+    Wert angeben. Weitere Informationen über Variablen finden Sie im Abschnitt über <a href="../../../GameMaker_Language/GML_Overview/Variables_And_Variable_Scope.htm">Variablen und Variablenumfang</a>.</p>
+  <p> </p>
+  <h4>Aktion Syntax:</h4>
+  <p><img alt="Assign Variable Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/i_Common_Assign_Var.png"/></p>
+  <h4>Argumente:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>Name</td>
-        <td>The name of the new variable to assign, or the name of an existing variable to change.</td>
+        <td><span class="notranslate">Name</span></td>
+        <td>Der Name der neuen Variable, die zugewiesen werden soll, oder der Name einer vorhandenen Variable, die geändert werden soll.</td>
       </tr>
       <tr>
-        <td>Value</td>
-        <td>The value that the variable should hold.</td>
+        <td><span class="notranslate">Value</span></td>
+        <td>Der Wert, den die Variable enthalten soll.</td>
       </tr>
       <tr>
-        <td>Relative</td>
-        <td>Check to set the value relative to the previous one.</td>
+        <td><span class="notranslate">Relative</span></td>
+        <td>Prüfen Sie, ob der Wert relativ zum vorherigen Wert gesetzt werden soll.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Assign Variable Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Common/e_Common_Assign_Var.png" />The above action block code checks two instance variables and if one is higher than another ( if &quot;<span class="inline">my_score</span>&quot; is greater than &quot;<span class="inline">level_score</span>&quot;), then it sets a number of instance variables to new values.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p><img>Der obige Aktionsblock <span class="notranslate">code</span> prüft zwei Instanzvariablen, und wenn eine höher ist als die andere (
+    wenn &quot;<span class="inline">my_score</span>&quot; größer ist als &quot;<span class="inline">level_score</span>&quot;), dann setzt er eine Reihe von Instanzvariablen auf neue Werte.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Common_Actions_Library.htm">Common Actions</a></div>
-        <div style="float:right">Next: <a href="Declare_Temporary_Variable.htm">Declare Temporary Variable</a></div>
+        <div style="float:left">Zurück: <a href="Common_Actions_Library.htm">Gemeinsame Aktionen</a></div>
+        <div style="float:right">Weiter: <a href="Declare_Temporary_Variable.htm">Temporäre Variable deklarieren</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Assign Variable
@@ -67,5 +68,5 @@ Action - Assign Variable
   <!-- TAGS
 action_variable
 -->
-</body>
-</html>
+
+</body></html>

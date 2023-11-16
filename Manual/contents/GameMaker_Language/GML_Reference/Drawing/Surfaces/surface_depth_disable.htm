@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>surface_depth_disable</title>
+  <title>oberfläche_tiefe_deaktivieren</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference for surface_depth_disable" />
   <meta name="rh-index-keywords" content="surface_depth_disable" />
@@ -14,53 +14,53 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>surface_depth_disable</h1>
-  <p>This function disables the automatic depth buffer generation for <i>all</i> surfaces that are created after it has been disabled. Normally all surfaces have depth buffers so if you draw 3D objects to them then it&#39;ll sort them properly by depth in
-    order to maintain functional parity between rendering to surfaces and rendering to the back buffer, however allocating depth buffers essentially doubles the amount of memory required for surfaces, which could be an excessive and unnecessary overhead
-    especially if your game is very memory intensive, and for 2D games they aren&#39;t generally required.</p>
-  <p>To use this function you would call it <i>before</i> creating a surface, and then you can enable it again after (if required). All surfaces created when the depth buffer is disabled will no longer use a depth buffer when being drawn to, this results
-    in the things being drawn to the surface having parity of depth. The images below illustrate this in practice:</p>
-  <p><img alt="Surface depth buffer example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/Surface_Depth_Buffer.png" />In the above image, we are drawing a rectangle and a triangle using a vertex buffer in 3D. The
-    coordinates for the red triangle places it behind the green rectangle, but the code for drawing the triangle is called <i>after</i> the code for the rectangle, and when the depth buffer is enabled, the triangle is still drawn behind the rectangle
-    as the 3D depth is being respected. However when we disable the depth buffer for the surface, only the code order is respected and so the triangle is drawn over the rectangle.</p>
-  <p class="note"><b>NOTE</b>: To properly preserve depth in 3D when using surfaces, not only should you have the depth buffer enabled, but you should also have z-writing and z-testing enabled. See the functions <a href="../GPU_Control/gpu_get_ztestenable.htm"><span class="inline"><span style="font-size:14px;">gpu_set_ztestenable()</span></span></a>    and <a href="../GPU_Control/gpu_get_zwriteenable.htm"><span class="inline"><span style="font-size:14px;">gpu_set_zwriteenable()</span></span></a> for more information.</p>
-  <p class="note"><b>NOTE</b>: If your game is 100% 2D or you know that you don&#39;t need a surface depth buffer, then it should be fine to simply call this function once at the start of the game to disable the buffer.</p>
-  <p> </p>
+  <h1>oberfläche_tiefe_deaktivieren</h1>
+  <p>Diese Funktion deaktiviert die automatische Tiefenerzeugung <span class="notranslate">buffer</span> für <i>alle</i> Flächen, die nach der Deaktivierung erstellt werden. Normalerweise haben alle Oberflächen die Tiefe <span class="notranslate">buffers</span>, so dass, wenn Sie 3D-Objekte auf sie zeichnen, diese korrekt nach Tiefe sortiert werden.
+    um die funktionale Parität zwischen dem Rendering auf Oberflächen und dem Rendering auf der Rückseite <span class="notranslate">buffer</span> aufrechtzuerhalten. Durch die Zuweisung von Tiefe <span class="notranslate">buffers</span> verdoppelt sich jedoch die für Oberflächen benötigte Speichermenge, was ein übermäßiger und unnötiger Overhead sein kann
+    vor allem, wenn Ihr Spiel sehr speicherintensiv ist, und für 2D-Spiele sind sie im Allgemeinen nicht erforderlich.</p>
+  <p>Um diese Funktion zu verwenden, rufen Sie sie auf <i>, bevor</i> Sie eine Fläche erstellen, und können sie danach wieder aktivieren (falls erforderlich). Alle Oberflächen, die erstellt werden, wenn die Tiefenfunktion <span class="notranslate">buffer</span> deaktiviert ist, verwenden beim Zeichnen nicht mehr die Tiefenfunktion <span class="notranslate">buffer</span>, was dazu führt, dass
+    Dies führt dazu, dass die Dinge, die auf die Oberfläche gezeichnet werden, die gleiche Tiefe haben. Die folgenden Bilder veranschaulichen dies in der Praxis:</p>
+  <p><img>In der obigen Abbildung zeichnen wir ein Rechteck und ein Dreieck mit einem Scheitelpunkt <span class="notranslate">buffer</span> in 3D. Die
+    Koordinaten für das rote Dreieck platzieren es hinter dem grünen Rechteck, aber die <span class="notranslate">code</span> zum Zeichnen des Dreiecks wird <i>nach der</i> <span class="notranslate">code</span> für das Rechteck aufgerufen, und wenn die Tiefe <span class="notranslate">buffer</span> aktiviert ist, wird das Dreieck immer noch hinter dem Rechteck gezeichnet
+    gezeichnet, da die 3D-Tiefe beachtet wird. Wenn wir jedoch die Tiefe <span class="notranslate">buffer</span> für die Oberfläche deaktivieren, wird nur die Reihenfolge <span class="notranslate">code</span> beachtet und das Dreieck wird über dem Rechteck gezeichnet.</p>
+  <p class="note"><b>HINWEIS</b>: Um die Tiefe in 3D bei der Verwendung von Oberflächen korrekt zu erhalten, sollten Sie nicht nur die Tiefenfunktion <span class="notranslate">buffer</span> aktivieren, sondern auch die Funktionen z-writing und z-testing aktivieren. Siehe die Funktionen <a href="../GPU_Control/gpu_get_ztestenable.htm"><span class="inline"><span style="font-size:14px;">gpu_set_ztestenable()</span></a>    und <a href="../GPU_Control/gpu_get_zwriteenable.htm"><span class="inline"><span style="font-size:14px;">gpu_set_zwriteenable()</span></a> für weitere Informationen.</p>
+  <p class="note"><b>HINWEIS</b>: Wenn Ihr Spiel 100% 2D ist oder Sie wissen, dass Sie keine Oberflächentiefe benötigen <span class="notranslate">buffer</span>, dann sollte es in Ordnung sein, diese Funktion nur einmal zu Beginn des Spiels aufzurufen, um die <span class="notranslate">buffer</span> zu deaktivieren.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">surface_depth_disable(disable);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Beschreibung</th>
      </tr>
       <tr>
-        <td>disable</td><td><span data-keyref="Type_Bool"></span></td>
-        <td>If set to <span class="inline">true</span> the depth buffer will be disabled for created surfaces.</td>
+        <td><span class="notranslate">disable</span></td><td><span data-keyref="Type_Bool"></span></td>
+        <td><span class="notranslate">If set to <span class="inline">true</span> wird der Tiefenpuffer für erstellte Flächen deaktiviert.</td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Void"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">var _depth_setting = surface_get_depth_disable();<br/> surface_depth_disable(false);
     <br/> surface_with_depth = surface_create(room_width, room_height);<br/> surface_depth_disable(true);
     <br/> surface_without_depth = surface_create(room_width, room_height);<br/> surface_depth_disable(_depth_setting);
   </p>
-  <p>The above code stores the current depth buffer setting in a variable and then creates two surfaces, one with depth buffering enabled and one without, before restoring the original setting again.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> speichert die aktuelle Einstellung für die Tiefe <span class="notranslate">buffer</span> in einer Variablen und erstellt dann zwei Oberflächen, eine mit und eine ohne Tiefenpufferung, bevor sie die ursprüngliche Einstellung wiederherstellt.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Surfaces.htm">Surfaces</a></div>
-        <div style="float:right">Next: <a href="surface_get_height.htm">surface_get_height</a></div>
+        <div style="float:left">Rückseite: <a href="Surfaces.htm">Oberflächen</a></div>
+        <div style="float:right">Nächste: <a href="surface_get_height.htm"><span class="notranslate">surface_get_height</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 surface_depth_disable

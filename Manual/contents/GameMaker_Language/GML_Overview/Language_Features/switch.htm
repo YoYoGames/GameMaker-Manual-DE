@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>switch</title>
+  <title>Schalter</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the switch function" />
   <meta name="rh-index-keywords" content="switch,case" />
@@ -14,9 +14,9 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>switch</h1>
-  <p>In a number of situations you want to let your instances perform different actions depending on a particular value. You can do this using a number of consecutive <a href="If_Else_and_Conditional_Operators.htm"><span class="inline">if / else</span></a> statements, but when the possible choices gets above two or three it is usually easier to use the <span class="inline">switch</span> statement.</p>
-  <p>A <span class="inline">switch</span> statement has the following syntax:</p>
+  <h1>Schalter</h1>
+  <p>In einer Reihe von Situationen möchten Sie Ihre Instanzen in Abhängigkeit von einem bestimmten Wert unterschiedliche Aktionen ausführen lassen. Sie können dies mit einer Reihe von aufeinanderfolgenden <a href="If_Else_and_Conditional_Operators.htm"><span class="inline">if / else</span></a> Anweisungen tun, aber wenn die Zahl der möglichen Optionen zwei oder drei übersteigt, ist es in der Regel einfacher, die Anweisung <span class="inline">switch</span> zu verwenden.</p>
+  <p>Eine <span class="inline">switch</span> -Anweisung hat folgende Syntax:</p>
   <p class="code">switch (&lt;expression&gt;)<br />
     {<br />
         case &lt;constant1&gt;:<br />
@@ -33,15 +33,15 @@
             &lt;code&gt;;<br />
     }
   </p>
-  <p>This works as follows:</p>
+  <p>Dies funktioniert folgendermaßen:</p>
   <ul class="colour">
-    <li>First the <a class="glossterm" data-glossterm="expression" href="#">expression</a> is executed.</li>
-    <li>Next, its result is compared with the different constants after each of the <span class="inline">case</span> <a class="glossterm" data-glossterm="statement" href="#">statement</a><span class="glossextra">s</span>. When we say &quot;constant&quot; what we mean is that the value in the case cannot be a variable expression and must be a fixed value of any <a href="../Data_Types.htm">data type</a>, like <span class="inline2">&quot;fight&quot;</span> or <span class="inline2">3</span> or the keyword <span class="inline2"><span class="inline"><a href="../Instance_Keywords.htm">noone</a></span></span>. </li>
-    <li>The execution begins from the first <span class="inline">case</span> statement with the matching value, <i>until a <a href="break.htm">break</a> statement is encountered</i>.</li>
-    <li>If no <span class="inline">case</span> statement has the matching value, then the <span class="inline">default</span> statement will be executed. It is not required to have a <span class="inline">default</span> statement, and if none is supplied then no action will be taken when there are no matching cases. The <span class="inline">default</span> statement can be placed anywhere in a switch block, however it&#39;s traditionally placed at the bottom, after all the cases.</li>
+    <li>Zuerst wird der <a class="glossterm" data-glossterm="Ausdruck" href="#">Ausdruck</a> ausgeführt.</li>
+    <li>Anschließend wird das Ergebnis mit den verschiedenen Konstanten nach jeder der <span class="inline">case</span> <span class="glossextra">Anweisungen</span> verglichen. Mit &quot;Konstante&quot; ist gemeint, dass der Wert in dem Fall kein variabler Ausdruck sein kann, sondern ein fester Wert eines beliebigen <a href="../Data_Types.htm">Datentyps</a>, wie <span class="inline2">&quot;fight&quot;</span> oder <span class="inline2">3</span> oder das Schlüsselwort <span class="inline2"><span class="inline"><a href="../Instance_Keywords.htm">noone</a></span></span>. </li>
+    <li>Die Ausführung beginnt bei der ersten <span class="inline">case</span> Anweisung mit dem passenden Wert, <i>bis eine <a href="break.htm"><span class="notranslate">break</span></a> Anweisung auftaucht</i>.</li>
+    <li>Wenn keine <span class="inline">case</span> -Anweisung den passenden Wert enthält, wird die <span class="inline">default</span> -Anweisung ausgeführt. Es ist nicht erforderlich, eine <span class="inline">default</span> -Anweisung zu haben, und wenn keine angegeben ist, wird keine Aktion ausgeführt, wenn es keine passenden Fälle gibt. Die Anweisung <span class="inline">default</span> kann an beliebiger Stelle in einem <span class="notranslate">switch</span> -Block stehen, wird aber üblicherweise am Ende, nach allen Fällen, platziert.</li>
   </ul>
-  <p class="note"><span class="note">NOTE</span> The switch statement will continue to execute code within a <span class="inline">case</span>, until a <span class="inline">break</span> is encountered. If you do not use <span class="inline">break</span>s at the end of your cases, it will cause the switch to &quot;leak&quot; to the next <span class="inline">case</span>, and even to a <span class="inline">default</span> section, if there are no <span class="inline">break</span>s in the way. This can cause unintended behaviour as the execution of one <span class="inline">case</span> can result in multiple <span class="inline">case</span>s being executed, so ensure to use <span class="inline">break</span> where appropriate.</p>
-  <p>A simple example of using a switch statement would be something like this:</p>
+  <p class="note"><span class="note">HINWEIS</span> Die Anweisung <span class="notranslate">switch</span> führt <span class="notranslate">code</span> innerhalb eines <span class="inline">case</span> so lange aus, bis ein <span class="inline">break</span> auftaucht. Wenn Sie am Ende Ihrer Fälle keine <span class="inline">break</span>s verwenden, führt dies dazu, dass die <span class="notranslate">switch</span> zum nächsten <span class="inline">case</span> und sogar zu einem <span class="inline">default</span> Abschnitt &quot;durchsickert&quot;, wenn keine <span class="inline">break</span>s im Weg sind. Dies kann zu unbeabsichtigtem Verhalten führen, da die Ausführung eines <span class="inline">case</span> mehrere <span class="inline">case</span>s zur Folge haben kann. Stellen Sie daher sicher, dass Sie <span class="inline">break</span> verwenden, wo es angebracht ist.</p>
+  <p>Ein einfaches Beispiel für die Verwendung einer <span class="notranslate">switch</span> -Anweisung wäre etwa so:</p>
   <p class="code">switch (player_lives)<br />
     {<br />
         case 3:<br />
@@ -61,7 +61,7 @@
         break;<br />
     }
   </p>
-  <p>Note that multiple <span class="inline">case</span> statements can be used to execute the same statement, as the <span class="inline">break</span> is not always required for each and every <span class="inline">case</span>. If there is no <span class="inline">break</span> statement for a particular <span class="inline">case</span>, the execution simply continues with the code for the next case, e.g.:</p>
+  <p>Beachten Sie, dass mehrere <span class="inline">case</span> Anweisungen verwendet werden können, um dieselbe Anweisung auszuführen, da die <span class="inline">break</span> nicht immer für jede einzelne <span class="inline">case</span> erforderlich ist. Wenn es für eine bestimmte <span class="inline">case</span> keine <span class="inline">break</span> Anweisung gibt, wird die Ausführung einfach mit der <span class="notranslate">code</span> für den nächsten Fall fortgesetzt, z.B.:</p>
   <p class="code">switch (keyboard_key)<br />
     {<br />
         case vk_left:<br />
@@ -85,19 +85,19 @@
         break;<br />
     }
   </p>
-  <p>The above code uses <span class="inline">switch</span> to check for a keyboard event and then compares that to each <span class="inline">case</span> listed. If it meets any of the required values then the corresponding code is executed. Note how the <span class="inline">switch</span> can check multiple <span class="inline">cases</span> and execute code until the next <span class="inline">break</span>, to permit various keys to be used to get the same result.</p>
-  <p>Each <span class="inline">case</span> can have its own code, so you can set up a sort of &quot;inheritance&quot; system where a case executes its own code and then the code for the next case as well.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Das obige <span class="notranslate">code</span> verwendet <span class="inline">switch</span>, um zu prüfen, ob ein Tastaturereignis vorliegt, und vergleicht dieses dann mit den einzelnen aufgelisteten <span class="inline">case</span>. Wenn einer der erforderlichen Werte erfüllt ist, wird die entsprechende <span class="notranslate">code</span> ausgeführt. Beachten Sie, dass <span class="inline">switch</span> mehrere <span class="inline">cases</span> überprüfen und <span class="notranslate">code</span> bis zum nächsten <span class="inline">break</span> ausführen kann, damit verschiedene Tasten verwendet werden können, um dasselbe Ergebnis zu erhalten.</p>
+  <p>Jedes <span class="inline">case</span> kann seine eigene <span class="notranslate">code</span> haben, so dass Sie eine Art &quot;Vererbungssystem&quot; einrichten können, bei dem ein Fall seine eigene <span class="notranslate">code</span> und dann auch die <span class="notranslate">code</span> für den nächsten Fall ausführt.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Language_Features.htm">Language Features</a></div>
-        <div style="float:right">Next: <a href="break.htm">break</a></div>
+        <div style="float:left">Zurück: <a href="../Language_Features.htm">Sprachliche Merkmale</a></div>
+        <div style="float:right">Nächste: <a href="break.htm"><span class="notranslate">break</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 switch

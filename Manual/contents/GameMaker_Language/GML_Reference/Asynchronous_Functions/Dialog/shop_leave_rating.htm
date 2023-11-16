@@ -4,9 +4,9 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>shop_leave_rating</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for shop_leave_rating" />
   <meta name="rh-index-keywords" content="shop_leave_rating" />
@@ -15,46 +15,46 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>shop_leave_rating</h1>
-  <p>This function opens up an OS dependent dialog where you can ask the user to post a rating or comment to a particular page. You can define the text that is to appear in the dialogue, as well as the text you wish to appear on the two buttons and the URL where the comment has to be posted.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_note.hts"> </span> This function is only for Android and iOS targets.</p>
-  <p class="note"><span data-conref="../../../../assets/snippets/Tag_important.hts"> </span> On <b>iOS</b>, when using TestFlight, in development the prompt will be displayed but you won&#39;t be able to actually do anything. Once your app is in the App Store, this button becomes active and the user is given the option to write a review or leave a rating. Note that if you distribute the game through TestFlight, this window may not even be shown.</p>
-  <p> </p>
+  <p>Diese Funktion öffnet einen OS-abhängigen Dialog, in dem Sie den Benutzer auffordern können, eine Bewertung oder einen Kommentar zu einer bestimmten Seite abzugeben. Sie können den Text, der in dem Dialog erscheinen soll, sowie den Text, der auf den beiden Schaltflächen erscheinen soll, und die URL, unter der der Kommentar veröffentlicht werden soll, festlegen.</p>
+  <p class="note"><b>HINWEIS</b>: Diese Funktion ist nur für die Ziele <span class="notranslate">Android</span> und <span class="notranslate">iOS</span> verfügbar.</p>
+  <p class="note"><b>WICHTIG!</b> Unter <b>iOS</b> wird bei der Verwendung von TestFlight während der Entwicklung die Aufforderung angezeigt, aber Sie können nichts tun. Sobald Ihre App im App Store ist, wird diese Schaltfläche aktiv und der Benutzer hat die Möglichkeit, eine Rezension zu schreiben oder eine Bewertung zu hinterlassen. Wenn Sie das Spiel über TestFlight vertreiben, wird dieses Fenster möglicherweise gar nicht angezeigt.</p>
+  <p> </p>
   <h4><b>Syntax:</b></h4>
   <p class="code">shop_leave_rating(text, yes_string, no_string, url)</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>text</td>
-        <td><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>Text that appears on the dialog.</td>
+        <td><span class="notranslate">text</span></td>
+        <td><span data-keyref="Type_String">Zeichenfolge</span></td>
+        <td><span class="notranslate">Text that appears on the dialog.</span></td>
       </tr>
       <tr>
-        <td>yes_string</td>
-        <td><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>Text that appears on the &quot;yes&quot; button.</td>
+        <td><span class="notranslate">yes_string</span></td>
+        <td><span data-keyref="Type_String">Zeichenfolge</span></td>
+        <td><span class="notranslate">Text that appears on the &quot;yes&quot; button.</span></td>
       </tr>
       <tr>
-        <td>no_string</td>
-        <td><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>Text that appears on the &quot;no&quot; button.</td>
+        <td><span class="notranslate">no_string</span></td>
+        <td><span data-keyref="Type_String">Zeichenfolge</span></td>
+        <td><span class="notranslate">Text that appears on the &quot;no&quot; button.</span></td>
       </tr>
       <tr>
-        <td>url</td>
-        <td><span data-keyref="Type_String"><a href="GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The full URL where the comment has to be sent.</td>
+        <td><span class="notranslate">url</span></td>
+        <td><span data-keyref="Type_String">Zeichenfolge</span></td>
+        <td><span class="notranslate">The full URL where the comment has to be sent.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">if timer &lt;= 0<br />
     {<br />
         shop_leave_rating(&quot;Thanks for playing the game! Why not leave a comment?&quot;, &quot;Okay!&quot;, &quot;Not Today!&quot;, &quot;http://MacSweeney/comments&quot;);<br />
@@ -64,18 +64,18 @@
     {<br />
         timer -= 1;<br />
     }</p>
-  <p>The above code will ask the user to leave a comment if the variable &quot;timer&quot; has counted down to 0.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> wird den Benutzer auffordern, einen Kommentar zu hinterlassen, wenn die Variable &quot;timer&quot; auf 0 heruntergezählt wurde.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Dialog.htm">Dialog</a></div>
-        <div style="float:right">Next: <a href="get_login_async.htm">get_login_async</a></div>
+        <div style="float:left">Zurück: <a href="Dialog.htm">Dialog</a></div>
+        <div style="float:right">Nächste: <a href="get_login_async.htm"><span class="notranslate">get_login_async</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 shop_leave_rating

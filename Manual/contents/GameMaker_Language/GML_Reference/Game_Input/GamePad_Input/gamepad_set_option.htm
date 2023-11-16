@@ -6,7 +6,7 @@
   <title>gamepad_set_option</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for gamepad_set_option" />
   <meta name="rh-index-keywords" content="gamepad_set_option" />
@@ -15,62 +15,62 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>gamepad_set_option</h1>
-  <p>This function can be used to set any of the available gamepad options. You supply the gamepad &quot;slot&quot; to set the option on, as well as the option string to set and the value to use. The available option string will depend on the platform that the project is being run on, as listed below:</p>
-  <p> </p>
+  <p>Mit dieser Funktion kann jede der verfügbaren Gamepad-Optionen eingestellt werden. Sie geben den &quot;Slot&quot; des Gamepads an, auf dem die Option gesetzt werden soll, sowie die zu setzende Optionszeichenfolge und den zu verwendenden Wert. Der verfügbare Optionsstring hängt von der <span class="notranslate">platform</span> ab, auf der das Projekt ausgeführt wird, wie unten aufgeführt:</p>
+  <p> </p>
   <table>
     <tbody>
       <tr>
         <th>Option</th>
-        <th>Platform</th>
-        <th>Description</th>
-        <th>Value</th>
+        <th>Plattform</th>
+        <th>Beschreibung</th>
+        <th>Wert</th>
       </tr>
       <tr>
         <td>&quot;allow_rotation&quot;</td>
         <td>tvOS</td>
-        <td>Set whether the Siri Remote will be rotation locked (ie: can only be used vertically) or not. When unlocked (a value of <span class="inline">true</span>) rotating the control will change the input, such that a rotation of 90º to the left will make the &quot;right&quot; side of the touch pad return &quot;up&quot;, etc... such that all input will be relative to the orientation of the device. When locked (a value of <span class="inline">false</span>) then the input will not be changed relative to the position of the controller and will always be treated as if the controller is in a vertical position.</td>
-        <td>Boolean</td>
+        <td>Legen Sie fest, ob die Siri Remote drehgesperrt ist (d. h. nur vertikal verwendet werden kann) oder nicht. Wenn die Rotationssperre aufgehoben ist (ein Wert von <span class="inline">true</span>), ändert sich die Eingabe, so dass bei einer Drehung um 90º nach links die &quot;rechte&quot; Seite des Touchpads nach &quot;oben&quot; zurückkehrt usw., so dass alle Eingaben relativ zur Ausrichtung des Geräts erfolgen. Im gesperrten Zustand (ein Wert von <span class="inline">false</span>) wird die Eingabe nicht relativ zur Position des Controllers geändert und wird immer so behandelt, als ob der Controller in einer vertikalen Position wäre.</td>
+        <td>Boolesche</td>
       </tr>
       <tr>
         <td>&quot;dpad_absolute&quot;</td>
         <td>tvOS</td>
-        <td>Set whether the Siri Remote touchpad accepts absolute input, or relative input. In absolute mode (a value of <span class="inline">true</span>) the center of the touch pad is considered the (0,0) position - ie: where the analog stick is at rest or where the center of the dpad would be - and movement around this position will generate input. When set to relative (a value of <span class="inline">false</span> then the (0,0) position will be considered as being wherever the initial touch on the pad is made and all input will be generated from that position, not the center of the pad.</td>
-        <td>Boolean</td>
+        <td>Legen Sie fest, ob das Siri Remote-Touchpad eine absolute oder eine relative Eingabe akzeptiert. Im absoluten Modus (ein Wert von <span class="inline">true</span>) wird die Mitte des Touchpads als (0,0)-Position betrachtet - d. h. dort, wo sich der Analogstick in Ruhe befindet oder wo die Mitte des D-Pads wäre - und eine Bewegung um diese Position erzeugt eine Eingabe. Bei der Einstellung "Relativ" (Wert <span class="inline">false</span> ) wird die Position (0,0) als der Ort betrachtet, an dem die erste Berührung des Pads erfolgt, und alle Eingaben werden von dieser Position aus generiert, nicht von der Mitte des Pads.</td>
+        <td>Boolesche</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">gamepad_set_option(device, option_name, value);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>device</td>
+        <td><span class="notranslate">device</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>Which gamepad device &quot;slot&quot; to set.</td>
+        <td><span class="notranslate">Which gamepad device &quot;slot&quot; to set.</span></td>
       </tr>
       <tr>
-        <td>option_name</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The name of the option to set (a string, see the table above)</td>
+        <td><span class="notranslate">option_name</span></td>
+        <td><span data-keyref="Type_String">Zeichenfolge</span></td>
+        <td><span class="notranslate">The name of the option to set (a string, see the table above)</span></td>
       </tr>
       <tr>
-        <td>value</td>
-        <td><span data-keyref="Type_Real">Real</span>, <span data-keyref="Type_Bool">Boolean</span>, or <span data-keyref="Type_String">String</span></td>
-        <td>The value to set the option to (can be boolean, real or string - see the table above)</td>
+        <td><span class="notranslate">value</span></td>
+        <td><span data-keyref="Type_Real">Real</span>, <span data-keyref="Type_Bool">Boolesch</span> oder <span data-keyref="Type_String">String</span></td>
+        <td><span class="notranslate">The value to set the option to (can be boolean, real or string - see the table above)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">for(var i = 0; i &lt; 12; ++i;)<br />
     {<br />
         if gamepad_is_connected(i) &amp;&amp; gamepad_get_description(i) == &quot;tvOS Siri Remote&quot;<br />
@@ -81,18 +81,18 @@
             }<br />
         }<br />
     }</p>
-  <p>The above code loops through all the gamepad slots and checks for the &quot;Siri Remote&quot; on the tvOS platform. If one is detected, it then sets the remote to allow input rotation.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> <span class="notranslate">loops</span> durchläuft alle Gamepad-Slots und sucht auf <span class="notranslate">tvOS</span> <span class="notranslate">platform</span> nach der &quot;Siri Remote&quot;. Wenn eine solche erkannt wird, wird die Fernbedienung so eingestellt, dass sie eine Eingabedrehung zulässt.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Gamepad_Input.htm">Gamepad Input</a></div>
-        <div style="float:right">Next: <a href="gamepad_axis_count.htm"> gamepad_axis_count </a></div>
+        <div style="float:left">Zurück: <a href="Gamepad_Input.htm">Gamepad-Eingabe</a></div>
+        <div style="float:right">Weiter: <a href="gamepad_axis_count.htm"> gamepad_axis_count </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_set_option

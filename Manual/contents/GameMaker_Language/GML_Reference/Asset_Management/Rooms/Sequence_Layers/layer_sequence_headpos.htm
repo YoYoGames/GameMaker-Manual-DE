@@ -6,7 +6,7 @@
   <title>layer_sequence_headpos</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function layer_sequence_headpos" />
   <meta name="rh-index-keywords" content="layer_sequence_headpos" />
@@ -15,40 +15,40 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>layer_sequence_headpos</h1>
-  <p>With this function you can set the <a class="glossterm" data-glossterm="playhead" href="#">playhead</a> position of a sequence element to a specific frame. You supply the sequence element ID as returned by <a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a> or by one of the <a href="../General_Layer_Functions/General_Layer_Functions.htm">layer element functions</a> along with the new position to set. Note that the position is in <i>frames</i> and if you set a value greater than the total number of frames (or less than 0) then the actual final playhead position will depend on the type of sequence playback that has been selected, following these rules:</p>
+  <p>Mit dieser Funktion können Sie die <a class="glossterm" data-glossterm="Abspielkopf" href="#">Abspielposition</a> eines <span class="notranslate">sequence</span> Elements auf einen bestimmten Frame setzen. Sie geben die <span class="notranslate">sequence</span> Element-ID an, wie sie von <a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a> oder von einer der <a href="../General_Layer_Functions/General_Layer_Functions.htm">Ebenenelement-Funktionen</a> zurückgegeben wird, zusammen mit der neu zu setzenden Position. Beachten Sie, dass die Position in <i>Frames</i> angegeben wird. Wenn Sie einen Wert angeben, der größer als die Gesamtzahl der Frames (oder kleiner als 0) ist, hängt die tatsächliche endgültige Abspielposition von der Art der <span class="notranslate">sequence</span> -Wiedergabe ab, die gemäß diesen Regeln ausgewählt wurde:</p>
   <ul class="colour">
-    <li><strong>No looping</strong>: The playhead will clamp to the end of the loop (or the beginning if the value given is negative)</li>
-    <li><strong>Looping</strong>: The playhead will wrap back to the beginning of the sequence plus the extra frames, eg: if you set the playhead on a 30 frame sequence to a position of frame 45, the actual playhead position will end up being 15. If you give a negative value, then the sequence playhead will wrap in the reverse direction.</li>
-    <li><strong>Ping-pong looping</strong>: The playhead will advance to the end and then go back the extra number of frames that are over the total frame length, reversing the direction of playback, eg: If the sequence is 30 frames and you set the playhead to 40, the final playhead position will be 20 and the direction will be reversed (going down to 0). Note that you should <i>never</i> give a negative value for ping-pong playback of a sequence, as it may have undefined results.</li>
+    <li><strong>Keine Schleifenbildung</strong>: Der Abspielkopf wird am Ende von <span class="notranslate">loop</span> (oder am Anfang, wenn der angegebene Wert negativ ist) festgehalten.</li>
+    <li><strong>Schleifen</strong>: Der Abspielkopf springt zurück an den Anfang von <span class="notranslate">sequence</span> plus die zusätzlichen Frames, z. B.: Wenn Sie den Abspielkopf auf einem <span class="notranslate">sequence</span> mit 30 Frames auf eine Position von Frame 45 setzen, ist die tatsächliche Position des Abspielkopfes 15. Wenn Sie einen negativen Wert angeben, wird der <span class="notranslate">sequence</span> Abspielkopf in umgekehrter Richtung umlaufen.</li>
+    <li><strong>Ping-Pong-Schleife</strong>: Der Abspielkopf rückt bis zum Ende vor und geht dann um die zusätzliche Anzahl von Bildern zurück, die über die gesamte Bildlänge hinausgehen, wobei die Wiedergaberichtung umgekehrt wird, z. B.: Wenn die <span class="notranslate">sequence</span> 30 Frames hat und Sie den Abspielkopf auf 40 setzen, ist die endgültige Abspielkopfposition 20 und die Richtung wird umgekehrt (bis 0). Beachten Sie, dass Sie für die Ping-Pong-Wiedergabe von <span class="notranslate">sequence</span><i>niemals</i> einen negativen Wert angeben sollten, da dies zu undefinierten Ergebnissen führen kann.</li>
   </ul>
-  <p>Setting the head position in this way will not stop playback and the sequence will simply continue from the new playhead position unless it is paused.</p>
-  <p> </p>
+  <p>Wenn Sie die Kopfposition auf diese Weise einstellen, wird die Wiedergabe nicht gestoppt, sondern <span class="notranslate">sequence</span> wird einfach an der neuen Abspielkopfposition fortgesetzt, es sei denn, die Wiedergabe wird angehalten.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">layer_sequence_headpos(sequence_element_id, position)</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>sequence_element_id</td>
-        <td><span data-keyref="Type_ID_Element_Sequence">Sequence Element ID</span></td>
-        <td>The unique ID value of the sequence element to target</td>
+        <td><span class="notranslate">sequence_element_id</span></td>
+        <td><span data-keyref="Type_ID_Element_Sequence">Sequenz Element ID</span></td>
+        <td><span class="notranslate">The unique ID value of the sequence element to target</span></td>
       </tr>
       <tr>
-        <td>position</td>
+        <td><span class="notranslate">position</span></td>
         <td><span data-keyref="Type_Real">Real</span></td>
-        <td>The position within the sequence (in frames) to set the playhead position to (can be a decimal value)</td>
+        <td><span class="notranslate">The position within the sequence (in frames) to set the playhead position to (can be a decimal value)</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">var a = layer_get_all_elements(layer);<br />
     for (var i = 0; i &lt; array_length(a); i++;)<br />
     {<br />
@@ -57,18 +57,18 @@
             layer_sequence_headpos(a[i], 0)<br />
         }<br />
     }</p>
-  <p>The above code gets the IDs for all the elements assigned to the layer of the instance running the code. The code then checks to see if any of the returned elements are sequence assets and if they then their playhead position is set to 0.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> ruft die IDs für alle Elemente ab, die der Ebene der Instanz zugewiesen sind, auf der <span class="notranslate">code</span> läuft. <span class="notranslate">code</span> prüft dann, ob eines der zurückgegebenen Elemente <span class="notranslate">sequence</span> Assets sind, und wenn ja, wird die Abspielposition auf 0 gesetzt.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sequence_Layers.htm">Sequence Layers</a></div>
-        <div style="float:right">Next: <a href="layer_sequence_headdir.htm">layer_sequence_headdir</a></div>
+        <div style="float:left">Zurück: <a href="Sequence_Layers.htm">Sequenzschichten</a></div>
+        <div style="float:right">Nächste: <a href="layer_sequence_headdir.htm"><span class="notranslate">layer_sequence_headdir</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 layer_sequence_headpos

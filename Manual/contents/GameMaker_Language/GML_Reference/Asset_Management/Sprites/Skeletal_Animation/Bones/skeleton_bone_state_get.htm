@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>skeleton_bone_state_get</title>
+  <title>skelett_knochen_zustand_holen</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page explaining the function skeleton_bone_state_get" />
   <meta name="rh-index-keywords" content="skeleton_bone_state_get" />
@@ -15,53 +15,53 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>skeleton_bone_state_get</h1>
-  <p>Your skeletal animation is made up of a number of &quot;bones&quot;, which you will have defined and given names to in your animation program, and this function can be used to get certain data for the named bone at any time. Note that this data refers to the <b>current</b> pose for the skeleton, depending on the animation set used, and the function requires a previously created <a href="../../../../Data_Structures/DS_Maps/DS_Maps.htm">DS map</a>, which will then have the following keys and their equivalent values after calling the function:</p>
+  <h1>skelett_knochen_zustand_holen</h1>
+  <p>Ihre Skelettanimation besteht aus einer Reihe von &quot;Bones&quot;, die Sie in Ihrem Animationsprogramm definiert und benannt haben. Mit dieser Funktion können Sie jederzeit bestimmte Daten für den benannten Bone abrufen. Diese Funktion kann jederzeit bestimmte Daten für den benannten Bone abrufen. Beachten Sie, dass sich diese Daten auf die <b>aktuelle</b> Pose des Skeletts beziehen, je nach verwendetem Animationsset, und dass die Funktion eine zuvor erstellte <a href="../../../../Data_Structures/DS_Maps/DS_Maps.htm">DS-Map</a> benötigt, die dann nach dem Aufruf der Funktion die folgenden Schlüssel und ihre entsprechenden Werte hat:</p>
   <ul class="colour">
-    <li><b>&quot;x&quot;:</b> The local x position of the bone relative to the parent bone.</li>
-    <li><b>&quot;y&quot;:</b> The local y position of the bone relative to the parent bone.</li>
-    <li><b>&quot;angle&quot;:</b> The local rotation of the bone relative to the parent bone.</li>
-    <li><b>&quot;xscale&quot;:</b> The local horizontal scale of the bone, in reference to the parent bone.</li>
-    <li><b>&quot;yscale&quot;:</b> The local vertical scale of the bone, in reference to the parent bone.</li>
-    <li><b>&quot;worldScaleX&quot;:</b> The magnitude (always positive) of the world scale X (this is a <i>read only</i> value).</li>
-    <li><b>&quot;worldScaleY&quot;:</b> The magnitude (always positive) of the world scale Y (this is a <i>read only</i> value).</li>
-    <li><b>&quot;worldAngleX&quot;:</b> The world rotation for the X axis (this is a <i>read only</i> value).</li>
-    <li><b>&quot;worldAngleY&quot;:</b> The world rotation for the Y axis (this is a <i>read only</i> value).</li>
-    <li><b>&quot;worldX&quot;:</b> The world X position (this is a <i>read only</i> value).</li>
-    <li><b>&quot;worldY&quot;:</b> The world Y position (this is a <i>read only</i> value).</li>
-    <li><b>&quot;appliedAngle&quot;:</b> This is the local rotation used to pose the skeleton bones.</li>
-    <li><b>&quot;parent&quot;:</b> The name (a string) of the parent bone.</li>
+    <li><b>&quot;x&quot;:</b> Die lokale x-Position des Bones in Bezug auf den übergeordneten Bone.</li>
+    <li><b>&quot;y&quot;:</b> Die lokale y-Position des Bones in Bezug auf den übergeordneten Bone.</li>
+    <li><b>&quot;Winkel&quot;:</b> Die lokale Drehung des Bones relativ zum übergeordneten Bone.</li>
+    <li><b>&quot;xSkala&quot;:</b> Der lokale horizontale Maßstab des Bones, bezogen auf den übergeordneten Bone.</li>
+    <li><b>&quot;ySkala&quot;:</b> Der lokale vertikale Maßstab des Bones, bezogen auf den übergeordneten Bone.</li>
+    <li><b>&quot;worldScaleX&quot;:</b> Die Größe (immer positiv) der Weltskala X (dieser Wert ist <i>nur lesbar</i> ).</li>
+    <li><b>&quot;worldScaleY&quot;:</b> Die Größe (immer positiv) der Welt-Skala Y (dieser Wert ist <i>nur lesbar</i> ).</li>
+    <li><b>&quot;worldAngleX&quot;:</b> Die Weltdrehung für die X-Achse (dieser Wert ist <i>nur lesbar</i> ).</li>
+    <li><b>&quot;worldAngleY&quot;:</b> Die Weltdrehung für die Y-Achse (dieser Wert ist <i>nur lesbar</i> ).</li>
+    <li><b>&quot;worldX&quot;:</b> Die X-Position der Welt (dieser Wert ist <i>nur lesbar</i> ).</li>
+    <li><b>&quot;worldY&quot;:</b> Die Y-Position der Welt (dieser Wert ist <i>nur lesbar</i> ).</li>
+    <li><b>&quot;angewandterWinkel&quot;:</b> Dies ist die lokale Drehung, die zur Positionierung der Skelettknochen verwendet wird.</li>
+    <li><b>&quot;Elternteil&quot;:</b> Der Name (eine Zeichenkette) des übergeordneten Bones.</li>
   </ul>
-  <p>The map data returned is similar to that returned for the default pose when you use <a href="skeleton_bone_state_get.htm"><span class="inline">skeleton_bone_data_get()</span></a>, only now you have the extra &quot;world&quot; keys. These refer to the position of the bone relative to the <i>root</i> (origin) of the skeletal animation sprite, and the returned values do not take into consideration any scaling or rotation that has been done by setting the built-in sprite variables like <span class="inline">image_xscale</span> or <span class="inline">image_angle</span>. The world values are <i>read only</i> and cannot be set.</p>
-  <p>This function is provided so that you can &quot;intercept&quot; animation data and modify it before it is drawn on the screen, and as such you would want to use it in the <a href="../../../../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Other - Animation Update</a> event, since this event is triggered just before the Draw Events.</p>
-  <p> </p>
+  <p>Die zurückgegebenen Kartendaten ähneln denen, die für die Standard-Pose zurückgegeben werden, wenn Sie <a href="skeleton_bone_state_get.htm"><span class="inline">skeleton_bone_data_get()</span></a>zurückgegeben werden, nur dass jetzt die zusätzlichen &quot;Welt&quot;-Schlüssel hinzukommen. Diese beziehen sich auf die Position des Bones relativ zur <i>Wurzel</i> (Ursprung) der Skelettanimation <span class="notranslate">sprite</span>, und die zurückgegebenen Werte berücksichtigen keine Skalierung oder Drehung, die durch das Setzen der eingebauten <span class="notranslate">sprite</span> Variablen wie <span class="inline">image_xscale</span> oder <span class="inline">image_angle</span> vorgenommen wurde. Die Weltwerte werden <i>nur gelesen</i> und können nicht eingestellt werden.</p>
+  <p>Diese Funktion wird zur Verfügung gestellt, damit Sie Animationsdaten &quot;abfangen&quot; und ändern können, bevor sie auf dem Bildschirm gezeichnet werden. Daher sollten Sie sie im Ereignis <a href="../../../../../../The_Asset_Editors/Object_Properties/Other_Events.htm">Andere - Animation Update</a> verwenden, da dieses Ereignis unmittelbar vor den Zeichnungsereignissen ausgelöst wird.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">skeleton_bone_state_get(bone, map);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>bone</td>
-        <td><span data-keyref="Type_String">String</span></td>
-        <td>The name (as a string) of the bone.</td>
+        <td><span class="notranslate">bone</span></td>
+        <td><span data-keyref="Type_String">Zeichenfolge</span></td>
+        <td><span class="notranslate">The name (as a string) of the bone.</span></td>
       </tr>
       <tr>
-        <td>map</td>
-        <td><span data-keyref="Type_ID_DS_Map">DS Map ID</span></td>
-        <td>The (previously created) DS map that stores the bone data.</td>
+        <td><span class="notranslate">map</span></td>
+        <td><span data-keyref="Type_ID_DS_Map">DS-Karten-ID</span></td>
+        <td><span class="notranslate">The (previously created) DS map that stores the bone data.</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">var map = ds_map_create();<br />
     skeleton_bone_state_get(&quot;head&quot;, map);<br />
     var xx = ds_map_find_value(map, &quot;worldX&quot;);<br />
@@ -72,18 +72,18 @@
     ds_map_replace(map, &quot;angle&quot;, angle);<br />
     skeleton_bone_state_set(&quot;head&quot;, map);<br />
     ds_map_destroy(map);</p>
-  <p>The above code creates a DS map and then populates it with the data from the bone named &quot;head&quot;. It then extracts the world position for the bone, and uses that data to set the &quot;angle&quot; of the bone to track the mouse position in the game.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> erstellt eine DS-Map und füllt sie dann mit den Daten des Bones &quot;Kopf&quot;. Anschließend wird die Weltposition für den Bone extrahiert und mit diesen Daten der &quot;Winkel&quot; des Bones so eingestellt, dass die Mausposition im Spiel verfolgt werden kann.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Bones.htm">Bones</a></div>
-        <div style="float:right">Next: <a href="skeleton_bone_state_set.htm">skeleton_bone_state_set</a></div>
+        <div style="float:left">Rückseite: <a href="Bones.htm">Knochen</a></div>
+        <div style="float:right">Nächste: <a href="skeleton_bone_state_set.htm"><span class="notranslate">skeleton_bone_state_set</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 skeleton_bone_state_get

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Steam-Errungenschaften</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference section for the different Steam Achievement and Statistic functions" />
+  <meta name="rh-index-keywords" content="" />
+  <meta name="search-keywords" content="Steam Achievements,Steam Statistics" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>Errungenschaften und Statistiken</h1>
+  <p>Die <span class="notranslate">Steam</span> Stats and Achievements API bietet eine einfache Möglichkeit für Ihr Spiel, eine dauerhafte, roamingfähige Leistungs- und Statistikverfolgung für Ihre Benutzer bereitzustellen. Die Daten des Nutzers werden mit seinem <span class="notranslate">Steam</span> Konto verknüpft, und die Leistungen und Statistiken jedes Nutzers können formatiert und in seinem <span class="notranslate">Steam</span> Community-Profil angezeigt werden.</p>
+  <p>Achievements sind nicht nur wertvolle Belohnungen für die Spieler Ihrer Spiele, sondern auch nützlich, um Teamwork und Spielerinteraktion zu fördern und zu belohnen, den Spielzielen eine zusätzliche Dimension zu verleihen und die Benutzer dafür zu belohnen, dass sie mehr Zeit im Spiel verbringen, und daher wird empfohlen, dass Ihr Spiel einige davon enthält. Sie lassen sich leicht über das <span class="notranslate">Steam</span> Dashboard einrichten, erfordern aber, dass Sie spezielle Icons für sie erstellen.</p>
+  <p>Statistiken erfassen feinkörnige Informationen wie Spielzeit, Anzahl der verwendeten Power-Ups usw. Sie können sie auch einfach zur Verfolgung interner Spieldaten verwenden - so können Sie zum Beispiel eine Leistung auf der Grundlage von Spielstatistiken, die vom Benutzer über mehrere Computer hinweg gesammelt wurden, vergeben. Oder Sie können interessante Spieldaten für die Anzeige auf der Community-Seite des Benutzers <span class="notranslate">Steam</span> aufzeichnen, wo die Benutzer ihre eigenen Statistiken mit denen ihrer Freunde vergleichen können.</p>
+  <p>Es gibt drei Arten von Statistiken - <strong>Ganzzahlen</strong>, <strong>Fließkommazahlen </strong>und <strong>Durchschnittswerte </strong>- und <span class="notranslate">GameMaker Studio 2</span> ermöglicht es dir, jede dieser Statistiken von deinem Spiel aus zu ändern, aber sie sollten zuvor über das Steamworks-Kontrollfeld für dein Spiel initialisiert worden sein.</p>
+  <p class="note"><b><span class="note">HINWEIS</span></b> Sie müssen warten, bis <span style="font-size:1px;"><a href="../Steam_API/steam_stats_ready.htm"><tt style="font-size: 14px">steam_stats_ready()</tt></a></span> true zurückgegeben hat, bevor Sie versuchen, Statistiken und Erfolge zu lesen oder zu schreiben.</p>
+  <p>Weitere Einzelheiten und Anleitungen zur Verwendung von Statistiken und Leistungen finden Sie auf den folgenden Seiten, auf denen die Funktionen beschrieben werden:</p>
+  <ul class="colour">
+    <li><a href="steam_set_achievement.htm"><span class="notranslate">steam_set_achievement</span></a></li>
+    <li><a href="steam_get_achievement.htm"><span class="notranslate">steam_get_achievement</span></a></li>
+    <li><a href="steam_clear_achievement.htm"><span class="notranslate">steam_clear_achievement</span></a></li>
+    <li><a href="steam_set_stat_int.htm"><span class="notranslate">steam_set_stat_int</span></a></li>
+    <li><a href="steam_set_stat_float.htm"><span class="notranslate">steam_set_stat_float</span></a></li>
+    <li><a href="steam_set_stat_avg_rate.htm"><span class="notranslate">steam_set_stat_avg_rate</span></a></li>
+    <li><a href="steam_get_stat_int.htm"><span class="notranslate">steam_get_stat_int</span></a></li>
+    <li><a href="steam_get_stat_float.htm"><span class="notranslate">steam_get_stat_float</span></a></li>
+    <li><a href="steam_get_stat_avg_rate.htm"><span class="notranslate">steam_get_stat_avg_rate</span></a></li>
+    <li><a href="steam_reset_all_stats.htm"><span class="notranslate">steam_reset_all_stats</span></a></li>
+    <li><a href="steam_reset_all_stats_achievements.htm"><span class="notranslate">steam_reset_all_stats_achievements</span></a></li>
+  </ul>
+  <p> </p>
+  <p>Wenn der Benutzer im <b>Offline-Modus</b> ist, speichert <span class="notranslate">Steam</span> eine lokale <span class="notranslate">cache</span> der Statistiken und Leistungsdaten, so dass die APIs wie gewohnt verwendet werden können. Alle Statistiken, die nicht übertragen werden können, werden für das nächste Mal, wenn der Benutzer online ist, gespeichert. Für den Fall, dass Änderungen auf mehreren Rechnern vorgenommen wurden, fasst <span class="notranslate">Steam</span> automatisch die Leistungen zusammen und wählt den Satz von Statistiken aus, der die meisten Fortschritte gemacht hat. Da <span class="notranslate">Steam</span> eine lokale <span class="notranslate">cache</span> der Statistikdaten speichert, ist es nicht notwendig, dass das Spiel <i>auch</i> eine lokale <span class="notranslate">cache</span> der Daten auf der Festplatte speichert, zumal solche <span class="notranslate">caches</span> oft in Konflikt geraten und es dann für den Benutzer so aussieht, als ob sein Fortschritt rückgängig gemacht worden wäre, was eine frustrierende Erfahrung ist.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Zurück: <a href="../Steam.htm">Dampf</a></div>
+        <div style="float:right">Nächste: <a href="../Steam_Cloud/Steam_Cloud.htm">Dampfwolke</a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
+  </div>
+  <!-- KEYWORDS
+Steam Achievements
+Steam Statistics
+-->
+  <!-- TAGS
+achievement_stat_functions
+-->
+</body>
+</html>

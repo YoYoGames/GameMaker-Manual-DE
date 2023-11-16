@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>collision_ellipse</title>
-  <meta name="generator" content="Adobe RoboHelp 2022" />
+  <title>kollision_ellipse</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that gives an overview of the funtion collision_ellipse" />
   <meta name="rh-index-keywords" content="collision_ellipse" />
@@ -15,80 +15,79 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>collision_ellipse</h1>
-  <p><span class="inline">collision_ellipse</span> uses the first four arguments (x1,y1,x2,y2) to define the width and height of an ellipse within the current room and then checks to see if <b>any</b> object or tile map that is defined by the &quot;obj&quot; argument is in collision with that area. This collision can be checked as precise or not, and you may also choose to check for the instance running the code itself or not. Consider this image:</p>
-  <p><img alt="Collision ellipse example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Movement_Collisions/collision_ellipse_illustration.png" />Here, the instance in the middle is using a collision ellipse to check for ball objects. Now, the blue ones do <i>not</i> have a precise bounding box and as you can see, even if the sprite is not actually touching the ellipse, the collision can still happen (even if you set the precise option in the function to true) as the bounding box of that sprite over-laps the elliptical area defined by collision_circle. On the other hand, the green balls will only be considered in collision if the actual sprite over-laps the defined ellipse. Remember, for precise collisions to be considered <i>both</i> the object sprite and the collision function must have precise marked as on.</p>
-  <p><span data-conref="../../../../assets/snippets/Collision_instance_return_desc.hts"> </span></p>
-  <div data-conref="../../../../assets/snippets/Collisions_function_accepted_arguments.hts"> </div>
-  <p> </p>
+  <h1>kollision_ellipse</h1>
+  <p><span class="inline">Collision_ellipse</span> verwendet die ersten vier <span class="notranslate">arguments</span> (x1,y1,x2,y2), um die Breite und Höhe einer Ellipse innerhalb des aktuellen Raums zu definieren und prüft dann, ob <b>irgendein</b> Objekt, das durch &quot;obj&quot; <span class="notranslate">argument</span> definiert ist, mit diesem Bereich kollidiert. Diese Kollision kann als präzise oder nicht präzise geprüft werden, und du kannst auch wählen, ob die Instanz, auf der die <span class="notranslate">code</span> läuft, geprüft werden soll oder nicht. Betrachten Sie dieses Bild:</p>
+  <p><img>Hier verwendet die Instanz in der Mitte eine Kollisionsellipse, um nach Ballobjekten zu suchen. Die blauen Bälle haben <i>keine</i> präzise Bounding Box, und wie du sehen kannst, kann die Kollision auch dann stattfinden, wenn <span class="notranslate">sprite</span> die Ellipse nicht berührt (selbst wenn du die präzise Option in der Funktion auf true setzt), da die Bounding Box von <span class="notranslate">sprite</span> den elliptischen Bereich überlappt, der durch collision_circle definiert ist. Andererseits werden die grünen Kugeln nur dann als kollidierend betrachtet, wenn die tatsächliche <span class="notranslate">sprite</span> die definierte Ellipse überschneidet. Damit präzise Kollisionen berücksichtigt werden, müssen <i>sowohl</i> das Objekt <span class="notranslate">sprite</span> als auch die Kollisionsfunktion als präzise markiert sein. Es sollte auch beachtet werden, dass der Rückgabewert der Funktion die ID einer <i>der</i> Instanzen sein kann, die als in Kollision befindlich betrachtet werden.</p>
+  <p>Beachten Sie, dass Sie anstelle eines Objektindex eine Instanz angeben können <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span class="inline">id</span></a> angeben können, um nach einer bestimmten Instanz zu suchen, oder die <a href="../../../GML_Overview/Instance_Keywords.htm">Instanz-Schlüsselwörter</a> <span class="inline">all</span> oder <span class="inline">other</span> (je nach Ereignis und aktuellem Bereich <span class="notranslate">code</span> ).</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">collision_ellipse(x1, y1, x2, y2, obj, prec, notme);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>x1</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x coordinate of the left side of the ellipse to check.</td>
+        <td><span class="notranslate">x1</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The x coordinate of the left side of the ellipse to check.</span></td>
       </tr>
       <tr>
-        <td>y1</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y coordinate of the top side of the ellipse to check.</td>
+        <td><span class="notranslate">y1</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The y coordinate of the top side of the ellipse to check.</span></td>
       </tr>
       <tr>
-        <td>x2</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The x coordinate of the right side of the ellipse to check.</td>
+        <td><span class="notranslate">x2</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The x coordinate of the right side of the ellipse to check.</span></td>
       </tr>
       <tr>
-        <td>y2</td>
-        <td><span data-keyref="Type_Real"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span></td>
-        <td>The y coordinate of the bottom side of the ellipse to check.</td>
+        <td><span class="notranslate">y2</span></td>
+        <td><span data-keyref="Type_Real">Real</span></td>
+        <td><span class="notranslate">The y coordinate of the bottom side of the ellipse to check.</span></td>
       </tr>
       <tr>
-        <td>obj</td>
-        <td><span data-keyref="Collision_obj_type"><span data-keyref="Type_Asset_Object"><a href="../../../../../The_Asset_Editors/Objects.htm" target="_blank">Object Asset</a></span> or <span data-keyref="Type_ID_Instance"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/id.htm" target="_blank">Object Instance</a></span> or <span data-keyref="Type_ID_Element_Tilemap"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/layer_tilemap_get_id.htm" target="_blank">Tile Map Element ID</a></span> or <span data-keyref="Type_Array"><a href="../../../../../GameMaker_Language/GML_Overview/Arrays.htm" target="_blank">Array</a></span></span></td>
-        <td><span data-keyref="Collision_obj_description">An object, instance, tile map ID, keywords all/other, or array containing these items</span></td>
+        <td><span class="notranslate">obj</span></td>
+        <td><span data-keyref="Type_Asset_Object">Objekt Asset-</span> oder <span data-keyref="Type_ID_Instance">Instanz-ID</span></td>
+        <td><span class="notranslate">The object to check for instance collisions.</span></td>
       </tr>
       <tr>
-        <td>prec</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Whether the check is based on precise collisions (<span class="inline">true</span>, which is slower) or its bounding box in general (<span class="inline">false</span>, faster).</td>
+        <td><span class="notranslate">prec</span></td>
+        <td><span data-keyref="Type_Bool">Boolesche</span></td>
+        <td><span class="notranslate">Whether the check is based on precise collisions (<span class="inline">true</span>(was langsamer ist) oder seine Bounding Box im Allgemeinen (<span class="inline">false</span>, schneller).</td>
       </tr>
       <tr>
-        <td>notme</td>
-        <td><span data-keyref="Type_Bool"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></td>
-        <td>Whether the calling instance, if relevant, should be excluded (<span class="inline">true</span>) or not (<span class="inline">false</span>).</td>
+        <td><span class="notranslate">notme</span></td>
+        <td><span data-keyref="Type_Bool">Boolesche</span></td>
+        <td><span class="notranslate">Whether the calling instance, if relevant, should be excluded (<span class="inline">true</span>) oder nicht (<span class="inline">false</span>).</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_ID_Instance"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Instances/Instance_Variables/id.htm" target="_blank">Object Instance</a></span> or <span data-keyref="Type_ID_Element_Tilemap"><a href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Rooms/Tile_Map_Layers/layer_tilemap_get_id.htm" target="_blank">Tile Map Element ID</a></span> or <span data-keyref="Type_ID_noone"><a href="../../../../../GameMaker_Language/GML_Overview/Instance_Keywords.htm" target="_blank">noone</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">if collision_ellipse(50, 50, 200, 100, obj_Player, false, true) != noone<br />
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code"><span data-keyref="Type_ID_Instance">Instance ID</span> or <span data-keyref="Type_ID_noone">noone</span></p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p class="code">if collision_ellipse(50, 50, 200, 100, obj_Player, false, true)<br />
     {<br />
         instance_create_layer(obj_Player.x, obj_Player.y, &quot;Effects&quot;, obj_Splash);<br />
     }</p>
-  <p>This will check an elliptical zone within the bounds of 50x, 50y and 200x, 100y for the object &quot;obj_Player&quot;. If there is a collision with that object, then it will create an instance of &quot;obj_Splash&quot; at the x/y coordinates of obj_Player.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Dies wird eine elliptische Zone innerhalb der Grenzen von 50x, 50y und 200x, 100y für das Objekt &quot;obj_Player&quot; überprüfen. Wenn es eine Kollision mit diesem Objekt gibt, dann wird eine Instanz von &quot;obj_Splash&quot; an den x/y-Koordinaten von obj_Player erstellt.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Collisions.htm">Collisions</a></div>
-        <div style="float:right">Next: <a href="collision_ellipse_list.htm">collision_ellipse_list</a></div>
+        <div style="float:left">Zurück: <a href="Collisions.htm">Kollisionen</a></div>
+        <div style="float:right">Nächste: <a href="collision_ellipse_list.htm"><span class="notranslate">collision_ellipse_list</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 collision_ellipse

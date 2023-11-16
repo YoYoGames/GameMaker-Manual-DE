@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_ugc_submit_item_update</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_ugc_submit_item_update" />
+  <meta name="rh-index-keywords" content="steam_ugc_submit_item_update" />
+  <meta name="search-keywords" content="steam_ugc_submit_item_update" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_ugc_submit_item_update</h1>
+  <p>Diese Funktion überträgt das UGC-Element, das mit dem angegebenen Handle angegeben wurde, an den <span class="notranslate">Steam</span> Workshop <span class="notranslate">servers</span> und fügt die Änderungsnotizen hinzu, die für das angegebene Element verwendet werden sollen. Die Änderungsnotizen sollten eine Zeichenkette sein und das Update-Handle ist der Wert, der beim Aufruf der Funktion
+    Funktion <a href="steam_ugc_start_item_update.htm"><tt>steam_ugc_start_item_update()</tt></a>. Bei Verwendung dieser Funktion wird ein asynchroner ID-Wert zurückgegeben, der geparst werden kann, wenn das <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Steam.htm">asynchrone Steam-Ereignis</a> ausgelöst wird, um die Erstellung des Elements zu melden. Das Ereignis enthält die folgenden Schlüssel/Map-Werte in der <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> DS-Map:</p>
+  <ul class="colour">
+    <li>&quot;<b>id</b>&quot; - Die von der aufrufenden Funktion zurückgegebene asynchrone ID</li>
+    <li>&quot;<b>result</b>&quot; - Das Ergebnis der Operation (ein reeller Wert). Dies ist entweder die Konstante <span class="notranslate">GML</span> <tt>ugc_result_success</tt> oder eine andere reelle Zahl. Sie sollten also auf diese Konstante prüfen, um sicherzustellen, dass der Aufruf erfolgreich war, und wenn
+      andernfalls irgendetwas nicht korrekt funktioniert hat. Die übrigen möglichen Werte, die zurückgegeben werden, werden als Ergebnis des <span class="notranslate">Steam</span> &quot;EResult&quot;-Wertes angezeigt, und Sie sollten in der Datei <tt>steamclientpublic.h</tt> in den SDK-Headern alle 89 möglichen Werte finden.</li>
+    <li>&quot;<b>event_type</b>&quot; - Dieser Schlüssel enthält den Wert<b>&quot;ugc_update_item</b>&quot;.</li>
+    <li>&quot;<b>legal_agreement_required</b>&quot; - Wird <tt>true</tt> oder <tt>false</tt> sein (siehe die <a href="https://partner.steamgames.com/documentation/ugc#Legal" target="_blank">Steam-Dokumente</a> für weitere Details)</li>
+  </ul>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_ugc_submit_item_update(ugc_update_handle, change_note);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">ugc_update_handle</span></td>
+        <td>Der eindeutige Handle für die zu aktualisierende UGC.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">change_note</span></td>
+        <td>Die Änderungsnotizen (eine Zeichenkette), die für den Artikel verwendet werden sollen.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code">Async ID</p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p class="code">var app_id = steam_get_app_id();<br/> var updateHandle = steam_ugc_start_item_update(app_id, global.Publish_ID);<br/> steam_ugc_set_item_title(updateHandle, &quot;My workshop item(3)!&quot;);<br/> steam_ugc_set_item_description( updateHandle, &quot;testing
+    workshop...&quot;);<br/> steam_ugc_set_item_visibility(updateHandle, ugc_visibility_public);<br/> var tagArray;<br/> tagArray[0] = &quot;Test&quot;;<br/> tagArray[1] = &quot;New&quot;;<br/> steam_ugc_set_item_tags(updateHandle, tagArray);<br/> steam_ugc_set_item_preview(updateHandle,
+    &quot;promo.jpg&quot;);<br/> steam_ugc_set_item_content(updateHandle, &quot;WorkshopContent1&quot;);<br/> requestId = steam_ugc_submit_item_update(updateHandle, &quot;Version 1.2&quot;);</p>
+  <p>Die obige <span class="notranslate">code</span> ruft die Spiel-ID ab und verwendet diese zusammen mit einer zuvor gespeicherten veröffentlichten Datei-ID, um ein Aktualisierungs-Handle für das Objekt zu erzeugen. Dieses Handle wird dann verwendet, um verschiedene Informationen zu aktualisieren, bevor die Aktualisierung an den Workshop übermittelt wird
+    <span class="notranslate">servers</span> .</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Zurück: <a href="Steam_UGC.htm">UGC</a></div>
+        <div style="float:right">Nächste: <a href="steam_ugc_get_item_update_progress.htm"><span class="notranslate">steam_ugc_get_item_update_progress</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_ugc_submit_item_update
+-->
+  <!-- TAGS
+steam_ugc_submit_item_update
+-->
+</body>
+</html>

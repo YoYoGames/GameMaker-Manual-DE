@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>repeat</title>
+  <title>wiederholen</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the repeat function" />
   <meta name="rh-index-keywords" content="repeat" />
@@ -14,29 +14,29 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>repeat</h1>
-  <p>The GameMaker Language has a number of ways that you can perform <i>loops</i>, ie: have a statement or statements iterate over itself a certain number of times. The simplest of these is the <span class="inline">repeat</span> statement, which has the form:</p>
+  <h1>wiederholen</h1>
+  <p> <span class="notranslate">GameMaker Language</span> bietet eine Reihe von Möglichkeiten, <i>Schleifen</i> auszuführen, d. h. eine Anweisung oder mehrere Anweisungen eine bestimmte Anzahl von Wiederholungen durchlaufen zu lassen. Die einfachste dieser Möglichkeiten ist die Anweisung <span class="inline">repeat</span>, die die Form hat:</p>
   <p class="code">repeat (&lt;expression&gt;)<br />
     {<br />
         &lt;statement&gt;;<br />
         &lt;statement&gt;;<br />
         ...<br />
     }</p>
-  <p>With <span class="inline">repeat</span> the given <a class="glossterm" data-glossterm="statement" href="#">statement</a> is repeated the number of times indicated by the rounded value of the <a class="glossterm" data-glossterm="expression" href="#">expression</a>. For example, the following creates five balls at random positions:</p>
+  <p>Mit <span class="inline">repeat</span> wird die angegebene <a class="glossterm" data-glossterm="Anweisung" href="#">Anweisung</a> so oft wiederholt, wie es der gerundete Wert des <a class="glossterm" data-glossterm="Ausdruck" href="#">Ausdrucks</a> angibt. Die folgende Anweisung erzeugt zum Beispiel fünf Bälle an zufälligen Positionen:</p>
   <p class="code">repeat (5)<br />
     {<br />
         instance_create_layer(random(400), random(400), &quot;Instances&quot;, obj_ball);<br />
     }</p>
-  <p>This can be very useful to avoid typing out the same code multiple times, or for using arrays, or for counting through a number of operations etc... You are not limited to using a single statement either, and can repeat multiple statements by enclosing them within curly brackets <span class="inline">{}</span>. For example:</p>
+  <p>Dies kann sehr nützlich sein, um zu vermeiden, dass dieselbe <span class="notranslate">code</span> mehrfach eingegeben wird, oder um Arrays zu verwenden, oder um eine Reihe von Operationen durchzuzählen usw.. Sie sind auch nicht auf eine einzige Anweisung beschränkt, sondern können mehrere Anweisungen wiederholen, indem Sie sie in geschweifte Klammern <span class="inline">{}</span> einschließen. Zum Beispiel:</p>
   <p class="code">var _x = 32;<br />
     repeat (global.p_lives)<br />
     {<br />
         draw_sprite(spr_heart, 0, _x, 32);<br />
         _x += sprite_get_width(spr_heart);<br />
     }</p>
-  <p>The above example repeats the statements in the curly brackets for however many <a class="glossterm" data-glossterm="iteration" href="#">iteration</a><span class="glossextra">s</span> the &quot;lives&quot; global variable has, and each iteration draws the heart sprite at the <span class="inline">_x</span> position, then moves the position along a bit based on the heart sprite width.</p>
-  <p><strong>When should you use a <span class="inline">repeat</span> loop?</strong> Anytime that you want to repeat over one or more statements a fixed number of times without any specific need to maintain a count of the iterations.</p>
-  <p>It is worth noting that you can use the special <span class="inline"><a href="break.htm">break</a></span> and <span class="inline"><a href="continue.htm">continue</a></span> statements within a <font face="Lucida Console"><span style="font-size: 16px;"><b>repeat</b></span></font> loop too. Using <span class="inline">break</span> will immediately exit the loop and move on to any code that is in the event or function after the loop should have finished, eg:</p>
+  <p>Das obige Beispiel wiederholt die Anweisungen in den geschweiften Klammern für so viele <a class="glossterm" data-glossterm="Iteration" href="#">Iterationen</a>, wie die globale Variable &quot;lives&quot; hat, und bei jeder Iteration wird das Herz <span class="notranslate">sprite</span> an der Position <span class="inline">_x</span> gezeichnet und dann die Position entsprechend der Breite des Herzens <span class="notranslate">sprite</span> ein Stück weiter verschoben.</p>
+  <p><strong>Wann sollten Sie eine <span class="inline">repeat</span> <span class="notranslate">loop</span> verwenden?</strong> Immer dann, wenn Sie eine oder mehrere Anweisungen eine feste Anzahl von Malen wiederholen wollen, ohne dass Sie eine Zählung der Iterationen vornehmen müssen.</p>
+  <p>Es ist erwähnenswert, dass Sie die speziellen Anweisungen <span class="inline"><a href="break.htm">break</a></span> und <span class="inline"><a href="continue.htm">continue</a></span> auch innerhalb einer Schleife verwenden können. <font face="Lucida Console"><span style="font-size: 16px;"><b>Wiederholung</b></span></font> Schleife verwenden können. Wenn Sie <span class="inline">break</span> verwenden, wird <span class="notranslate">loop</span> sofort beendet und mit <span class="notranslate">code</span> fortgefahren, das sich in dem Ereignis oder der Funktion befindet, nachdem <span class="notranslate">loop</span> beendet sein sollte, z. B:</p>
   <p class="code">var i = 0;<br />
     var temp = 0;<br />
     repeat (10)<br />
@@ -51,8 +51,8 @@
             i += 1;<br />
         }<br />
     }</p>
-  <p>The above code loops through 10 <a href="../Arrays.htm">array</a> values and adds them to a local variable. If the total of the local variable is greater than the given value for <span class="inline">max_total</span>, then the loop is terminated using break, otherwise the loop will continue. </p>
-  <p>An example of using <span class="inline">continue</span> in a <span class="inline">repeat</span> loop would be:</p>
+  <p>Die obige <span class="notranslate">code</span> <span class="notranslate">loops</span> durchläuft 10 <a href="../Arrays.htm">Array-Werte</a> und addiert sie zu einer lokalen Variablen. Wenn die Summe der lokalen Variablen größer ist als der angegebene Wert für <span class="inline">max_total</span>, dann wird <span class="notranslate">loop</span> mit break beendet, ansonsten wird <span class="notranslate">loop</span> fortgesetzt. </p>
+  <p>Ein Beispiel für die Verwendung von <span class="inline">continue</span> in einer <span class="inline">repeat</span> <span class="notranslate">loop</span> wäre:</p>
   <p class="code">repeat(10)<br />
     {   <br />
         var _x = random(room_width);<br />
@@ -63,19 +63,19 @@
         }<br />
         instance_create_layer(_x, _y, &quot;Instances&quot;, obj_Enemy);<br />
     }</p>
-  <p>This code will repeat 10 times, generating a random room position then checking if an instance of the object <span class="inline">obj_Enemy</span> exists at that position. If it does, the current loop iteration is terminated using <span class="inline">continue</span> and a new iteration is started, and if it doesn&#39;t then an instance of the object <span class="inline">obj_Enemy</span> is created at the random position.</p>
-  <p>For more examples of loop functions please see the sections on <a href="while.htm"><span class="inline">while</span></a>, <a href="do___until.htm"><span class="inline">do... until</span></a>, and <a href="for.htm"><span class="inline">for</span></a>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> <span class="notranslate">code</span> wird 10 Mal wiederholt, wobei eine zufällige Raumposition erzeugt und dann geprüft wird, ob eine Instanz des Objekts <span class="inline">obj_Enemy</span> an dieser Position existiert. Ist dies der Fall, wird die aktuelle <span class="notranslate">loop</span> Iteration mit <span class="inline">continue</span> beendet und eine neue Iteration gestartet. Ist dies nicht der Fall, wird eine Instanz des Objekts <span class="inline">obj_Enemy</span> an der zufälligen Position erstellt.</p>
+  <p>Weitere Beispiele für <span class="notranslate">loop</span> Funktionen finden Sie in den Abschnitten über <a href="while.htm"><span class="inline">while</span></a>, <a href="do___until.htm"><span class="inline">do... until</span></a>, und <a href="for.htm"><span class="inline">for</span></a>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Language_Features.htm">Language Features</a></div>
-        <div style="float:right">Next: <a href="while.htm">while</a></div>
+        <div style="float:left">Zurück: <a href="../Language_Features.htm">Sprachliche Merkmale</a></div>
+        <div style="float:right">Nächste: <a href="while.htm"><span class="notranslate">while</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 repeat

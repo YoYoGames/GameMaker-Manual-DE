@@ -6,7 +6,7 @@
   <title>url_open_full</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for url_open_full" />
   <meta name="rh-index-keywords" content="url_open_full" />
@@ -14,133 +14,133 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">url_open_full</span></h1>
-  <p>This will open the specified URL on the browser of the chosen target device, or, if you are using the HTML5 module, in the currently open browser.</p>
-  <p>The &quot;target&quot; parameter that you specify is the same as the standard JavaScript &quot;name&quot; value when you use the <span class="inline3_func">open()</span> method (be aware that all but &quot;<strong>_self</strong>&quot; may result in the browser blocking, or asking the user if they wish to allow it) and the &quot;options&quot; is the same as the JavaScript &quot;specs&quot; parameter for controlling what properties the new window/tab should display (not all browsers may support all features).</p>
-  <p>Valid targets are:</p>
+  <h1>url_open_full</h1>
+  <p>Dadurch wird die angegebene URL im Browser des gewählten Zielgeräts geöffnet, oder, wenn Sie HTML5 <span class="notranslate">module</span> verwenden, im aktuell geöffneten Browser. Der von Ihnen angegebene Parameter &quot;target&quot; entspricht dem JavaScript-Standardwert &quot;name&quot;, wenn Sie die Methode <span class="inline">open()</span> verwenden (beachten Sie, dass alle Werte außer &quot;<strong>_self</strong>&quot; dazu führen können, dass der Browser den Aufruf blockiert oder den Benutzer fragt, ob er ihn zulassen möchte), und der Parameter &quot;options&quot; entspricht dem JavaScript-Parameter &quot;specs&quot; zur Steuerung der Eigenschaften, die das neue Fenster/der neue Tab anzeigen soll (nicht alle Browser unterstützen alle Funktionen).</p>
+  <p>Gültige Ziele sind:</p>
   <table>
     <tbody>
       <tr>
-        <th>Target</th>
-        <th>Description</th>
+        <th>Ziel</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
         <td>_blank</td>
-        <td>Opens the linked document in a new window or tab (this will not work if pop-ups are being blocked by the user, in which case you can use the <a href="Web_And_HTML5.htm"><span class="inline">clickable_*</span></a> functions instead).</td>
+        <td>Öffnet das verknüpfte Dokument in einem neuen Fenster oder einer neuen Registerkarte (dies funktioniert nicht, wenn Pop-ups vom Benutzer blockiert werden; in diesem Fall können Sie stattdessen die <a href="Web_And_HTML5.htm"><span class="inline">clickable_*</span></a> Funktionen verwenden).</td>
       </tr>
       <tr>
         <td>_self</td>
-        <td>Opens the linked document in the same frame as it was clicked (this is default).</td>
+        <td>Öffnet das verknüpfte Dokument in demselben Rahmen, in dem es angeklickt wurde (Standardeinstellung).</td>
       </tr>
       <tr>
-        <td>_parent</td>
-        <td>Opens the linked document in the parent frame.</td>
+        <td>_Eltern</td>
+        <td>Öffnet das verknüpfte Dokument im übergeordneten Rahmen.</td>
       </tr>
       <tr>
         <td>_top</td>
-        <td>Opens the linked document in the full body of the window.</td>
+        <td>Öffnet das verknüpfte Dokument im Volltext des Fensters.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <p>Valid options are:</p>
+  <p> </p>
+  <p>Gültige Optionen sind:</p>
   <table>
     <tbody>
       <tr>
-        <th>Parameters</th>
-        <th>Description</th>
+        <th>Parameter</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td><b>&#39;height=[</b>px<b>]&#39;</b></td>
-        <td>The height of the window, with the minimum value being 100.</td>
+        <td><b>height=[px</b><b>]'</b></td>
+        <td>Die Höhe des Fensters, wobei der Mindestwert 100 beträgt.</td>
       </tr>
       <tr>
-        <td><b>&#39;width=[</b>px<b>]&#39;</b></td>
-        <td>The width of the window, with the minimum value being 100.</td>
+        <td><b>width=[px</b><b>]'</b></td>
+        <td>Die Breite des Fensters, wobei der Mindestwert 100 beträgt.</td>
       </tr>
       <tr>
-        <td><b>&#39;left=[</b>px<b>]&#39;</b></td>
-        <td>The left position of the window.</td>
+        <td><b>left=[px</b><b>]'</b></td>
+        <td>Die linke Position des Fensters.</td>
       </tr>
       <tr>
-        <td><b>&#39;top=[</b>px<b>]&#39;</b></td>
-        <td>The top position of the window (IE only).</td>
+        <td><b>'top=[px</b><b>]'</b></td>
+        <td>Die obere Position des Fensters (nur IE).</td>
       </tr>
       <tr>
-        <td><b>&#39;location=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display the address field (default is 1).</td>
+        <td><b>location=[</b>boolean<b>]'</b></td>
+        <td>Ob das Adressfeld angezeigt werden soll oder nicht (Standardwert ist 1).</td>
       </tr>
       <tr>
-        <td><b>&#39;menubar=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display the menu bar (default is 1).</td>
+        <td><b>menubar=[</b>boolean<b>]'</b>.</td>
+        <td>Ob die Menüleiste angezeigt werden soll oder nicht (Standard ist 1).</td>
       </tr>
       <tr>
-        <td><b>&#39;resizable=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not the window is resizable (default is 1).</td>
+        <td><b>resizable=[</b>boolean<b>]'</b></td>
+        <td>Ob das Fenster in der Größe veränderbar ist oder nicht (Standard ist 1).</td>
       </tr>
       <tr>
-        <td><b>&#39;scrollbars=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display scroll bars (default is 1).</td>
+        <td><b>scrollbars=[</b>boolean<b>]'</b>.</td>
+        <td>Ob Bildlaufleisten angezeigt werden sollen oder nicht (Standard ist 1).</td>
       </tr>
       <tr>
-        <td><b>&#39;status=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to add a status bar (default is 1).</td>
+        <td><b>status=[</b>boolesch<b>]'</b></td>
+        <td>Ob eine Statusleiste hinzugefügt werden soll oder nicht (Standard ist 1).</td>
       </tr>
       <tr>
-        <td><b>&#39;titlebar=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display the title bar. This is ignored unless the calling application is an HTML Application or a trusted dialog box (default is 1);</td>
+        <td><b>titlebar=[</b>boolean<b>]'</b></td>
+        <td>Ob die Titelleiste angezeigt werden soll oder nicht. Dies wird ignoriert, es sei denn, die aufrufende Anwendung ist eine HTML-Anwendung oder ein vertrauenswürdiges Dialogfeld (Standardwert ist 1);</td>
       </tr>
       <tr>
-        <td><b>&#39;toolbar=[</b>boolean<b>]&#39;</b></td>
-        <td>Whether or not to display the browser toolbar (default is yes).</td>
+        <td><b>toolbar=[</b>boolean<b>]'</b></td>
+        <td>Ob die Browser-Symbolleiste angezeigt werden soll oder nicht (Standardeinstellung ist ja).</td>
       </tr>
     </tbody>
   </table>
   <div data-conref="../../../assets/snippets/Url_open_AV_warning.hts"> </div>
-  <p> </p>
+  <p> </p>
   <h4>Syntax:</h4>
-  <p class="code"><span data-field="title" data-format="default">url_open_full</span>(url, target, options);</p>
+  <p class="code">url_open_full(url, target, options);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>url</td>
-        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>The URL (website address) to link to.</td>
+        <td><span class="notranslate">url</span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Zeichenfolge</a></span></td>
+        <td><span class="notranslate">The URL (website address) to link to.</span></td>
       </tr>
       <tr>
-        <td>target</td>
-        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>This is the target area to open the URL in (see description). This is only used in HTML5.</td>
+        <td><span class="notranslate">target</span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Zeichenfolge</a></span></td>
+        <td><span class="notranslate">This is the target area to open the URL in (see description).</span></td>
       </tr>
       <tr>
-        <td>options</td>
-        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>Standard browser options (see description). This is only used in HTML5.</td>
+        <td><span class="notranslate">options</span></td>
+        <td><span data-keyref="Type_String"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Zeichenfolge</a></span></td>
+        <td><span class="notranslate">Standard browser options (see description).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code"><span data-field="title" data-format="default">url_open_full</span>(&quot;http://gamemaker.io&quot;, &quot;_blank&quot;, &quot;resizable=0, height=200, scrollbars=0&quot;);</p>
-  <p>This would open the <span data-keyref="GameMaker Name">GameMaker</span> homepage in a new window that can&#39;t be resized, has a height of 200 pixels and no scrollbars when running in HTML5 or in a new window in the browser of the chosen target device.</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p class="code">url_open_full(&quot;http://gamemaker.io&quot;, &quot;_blank&quot;, &quot;resizable=0, height=200, scrollbars=0&quot;);</p>
+  <p>Dies würde die GameMaker-Homepage in einem neuen Fenster öffnen, das nicht in der Größe verändert werden kann, eine Höhe von 200 Pixeln hat und keine Scrollbalken aufweist.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a data-xref="{title}" href="Web_And_HTML5.htm">Web And HTML5</a></div>
-        <div style="float:right">Next: <a data-xref="{title}" href="url_get_domain.htm">url_get_domain</a></div>
+        <div style="float:left">Zurück: <a href="Web_And_HTML5.htm">Web und HTML5</a></div>
+        <div style="float:right">Nächste: <a href="url_get_domain.htm"><span class="notranslate">url_get_domain</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2023 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 url_open_full

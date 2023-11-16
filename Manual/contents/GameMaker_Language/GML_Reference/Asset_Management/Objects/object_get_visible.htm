@@ -6,7 +6,7 @@
   <title>object_get_visible</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the function object_get_visible" />
   <meta name="rh-index-keywords" content="object_get_visible" />
@@ -16,43 +16,43 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>object_get_visible</h1>
-  <p>This function will tell you whether the object you are checking has been flagged as &quot;visible&quot; (runs its draw event) or not (does not run its draw event). Please note that this is not an instance function! So, you can have a visible object and an invisible instance of the same object and vice-versa. You can set an individual instances visibility using the <a href="../Instances/Instance_Variables/visible.htm"><span class="inline">visible</span></a> instance variable.</p>
-  <p> </p>
+  <p>Diese Funktion teilt Ihnen mit, ob das zu prüfende Objekt als &quot;sichtbar&quot; gekennzeichnet wurde (sein Zeichenereignis wird ausgeführt) oder nicht (sein Zeichenereignis wird nicht ausgeführt). Bitte beachten Sie, dass es sich hierbei nicht um eine Instanzfunktion handelt! Sie können also ein sichtbares Objekt und eine unsichtbare Instanz desselben Objekts haben und andersherum. Sie können die Sichtbarkeit einer einzelnen Instanz mit der <a href="../Instances/Instance_Variables/visible.htm"><span class="inline">visible</span></a> Instanz-Variable einstellen.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">object_get_visible(obj);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Beschreibung</th>
      </tr>
       <tr>
-        <td>obj</td><td><span data-keyref="Type_Asset_Object"></span></td>
-        <td>The index of the object to check.</td>
+        <td><span class="notranslate">obj</span></td><td><span data-keyref="Type_Asset_Object"></span></td>
+        <td><span class="notranslate">The index of the object to check.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">if (!visible) &amp;&amp; (object_get_visible(object_index))<br />
     {<br />
         visible = true;<br />
     }</p>
-  <p>The above code will check the instance running it to see if it is visible or not as well as check the object index of the instance to see if it is flagged as visible or not. If the instance is <i>not</i> visible yet the object index is flagged as on, it will set &quot;visible&quot; to true for that instance.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Das obige <span class="notranslate">code</span> prüft die Instanz, die es ausführt, um zu sehen, ob sie sichtbar ist oder nicht, und prüft den Objektindex der Instanz, um zu sehen, ob sie als sichtbar gekennzeichnet ist oder nicht. Wenn die Instanz <i>nicht</i> sichtbar ist, aber der Objektindex als sichtbar gekennzeichnet ist, wird &quot;visible&quot; für diese Instanz auf true gesetzt.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Objects.htm">Objects</a></div>
-        <div style="float:right">Next: <a href="object_get_physics.htm">object_get_physics</a></div>
+        <div style="float:left">Zurück: <a href="Objects.htm">Objekte</a></div>
+        <div style="float:right">Nächste: <a href="object_get_physics.htm"><span class="notranslate">object_get_physics</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 object_get_visible

@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Read Buffer</title>
+  <title>Lesepuffer</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Read Buffer action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Read Buffer" />
@@ -14,45 +14,45 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Read Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Read_Buffer.png" /> Read Buffer</h1>
-  <p>This action can be used to read data from a previously created buffer. You supply the unique buffer ID value (as returned by the action <a href="Create_Buffer.htm">Create Buffer</a>) and give a variable to store the returned value. If you flag the variable
-    as a temporary local variable then it will be created for you and discarded again at the end of the event or action script. All data is returned as a <b>string</b> so if you have stored any real numbers you will have to use one of the <a href="../Data_Types/Data_Type_Actions.htm">Data Type Actions</a>    to convert it from the string to the value. Keep in mind too that buffers are read and written to <i>sequentially</i> and so reading from a buffer will move the &quot;seek&quot; position to the next entry, meaning that to read various pieces of data
-    you simply call this action the number of times required and store each returned piece of data to a variable.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Read Buffer Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/a_Buffers_Read_Buffer.png" /></p>
-  <h4>Arguments:</h4>
+  <h1><img> Lesepuffer</h1>
+  <p>Diese Aktion kann verwendet werden, um Daten aus einem zuvor erstellten <span class="notranslate">buffer</span> zu lesen. Sie geben den eindeutigen <span class="notranslate">buffer</span> ID-Wert (wie von der Aktion <a href="Create_Buffer.htm">Puffer erstellen</a> zurückgegeben) und eine Variable zum Speichern des zurückgegebenen Wertes an. Wenn Sie die Variable
+    als temporäre lokale Variable kennzeichnen, wird sie für Sie erstellt und am Ende des Ereignisses oder der Aktion <span class="notranslate">script</span> wieder verworfen. Alle Daten werden als <b>Zeichenkette</b> zurückgegeben. Wenn Sie also echte Zahlen gespeichert haben, müssen Sie eine der <a href="../Data_Types/Data_Type_Actions.htm">Datentyp-Aktionen</a> verwenden, um sie von der Zeichenkette in einen Wert umzuwandeln. Denken Sie auch daran, dass <span class="notranslate">buffers</span> <i>sequentiell</i> gelesen und beschrieben wird, so dass das Lesen von <span class="notranslate">buffer</span> die &quot;Suchposition&quot; zum nächsten Eintrag verschiebt.
+    Sie rufen diese Aktion einfach so oft wie nötig auf und speichern jedes zurückgegebene Datenstück in einer Variablen.</p>
+  <p> </p>
+  <h4>Aktion Syntax:</h4>
+  <p><img alt="Read Buffer Icon" class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/i_Buffers_Read_Buffer.png" /></p>
+  <h4>Argumente:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>Buffer</td>
-        <td>The buffer index (stored in a variable)</td>
+        <td><span class="notranslate">Buffer</span></td>
+        <td>Der Index <span class="notranslate">buffer</span> (gespeichert in einer Variablen)</td>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The target variable to hold the returned data</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>Die Zielvariable, die die zurückgegebenen Daten enthält</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img alt="Read Buffer Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Buffers/e_Buffers_Read_Buffer.png" />The above action block code sets the buffer read/write position to the start of the buffer and
-    then reads back two pieces of data, storing them (as strings) in temporary local variables. These variables are then used to draw the data to the screen.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p><img>Der obige Aktionsblock <span class="notranslate">code</span> setzt die Lese-/Schreibposition von <span class="notranslate">buffer</span> an den Anfang von <span class="notranslate">buffer</span> und
+    liest dann zwei Daten zurück und speichert sie (als Strings) in temporären lokalen Variablen. Diese Variablen werden dann zum Zeichnen der Daten auf dem Bildschirm verwendet.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Buffer_Actions.htm">Buffer Actions</a></div>
-        <div style="float:right">Next: <a href="Write_Buffer.htm">Write Buffer</a></div>
+        <div style="float:left">Zurück: <a href="Buffer_Actions.htm">Puffer-Aktionen</a></div>
+        <div style="float:right">Nächste: <a href="Write_Buffer.htm">Schreibpuffer</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Read Buffer

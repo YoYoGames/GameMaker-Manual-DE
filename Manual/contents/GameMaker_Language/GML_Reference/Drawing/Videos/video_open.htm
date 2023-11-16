@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="generator" content="Adobe RoboHelp 2020" />
-  <title>video_open</title>
+  <title>video_öffnen</title>
   <meta name="topic-status" content="Draft" />
   <link rel="stylesheet" type="text/css" href="../../../../assets/css/default.css" />
   <meta name="template" content="../../../../assets/masterpages/Manual_Keyword_Page.htt" />
@@ -15,11 +15,11 @@
   <meta name="condition-tags" content="" />
 </head>
 <body>
-  <h1 id="h">video_open</h1>
-  <p>This function opens a video file using the path specified. The path can refer to a file in the <a href="../../../../Settings/Included_Files.htm">Included Files</a> of your project, a file locally present on the user&#39;s device, or a URL for loading a file from the internet (which may not work on all platforms).</p>
-  <p>As you can only load one video at a time, this function loads the specified video into the only available &quot;video slot&quot;, which is then manipulated via the other <a href="Videos.htm">Video functions</a>.</p>
-  <p>There are asynchronous callbacks associated with video playback. See <a data-xref="{text}" href="Videos.htm#h">Async Callbacks</a> for more information.</p>
-  <p> </p>
+  <h1 id="h">video_öffnen</h1>
+  <p>Mit dieser Funktion wird eine Videodatei unter dem angegebenen Pfad geöffnet. Der Pfad kann sich auf eine Datei in den <a href="../../../../Settings/Included_Files.htm">enthaltenen Dateien</a> Ihres Projekts, eine lokal auf dem Gerät des Benutzers vorhandene Datei oder eine URL zum Laden einer Datei aus dem Internet beziehen (was möglicherweise nicht auf allen <span class="notranslate">platforms</span> funktioniert).</p>
+  <p>Da immer nur ein Video gleichzeitig geladen werden kann, lädt diese Funktion das angegebene Video in den einzigen verfügbaren &quot;Video-Slot&quot;, der dann mit den anderen <a href="Videos.htm">Video-Funktionen</a> bearbeitet wird.</p>
+  <p>Es gibt asynchrone Callbacks, die mit der Videowiedergabe verbunden sind. Weitere Informationen finden Sie unter <a data-xref="{text}" href="Videos.htm#h">Async-Aufrufe</a>.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">video_open(path);</p>
   <table>
@@ -31,33 +31,33 @@
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>path</td>
-        <td><span data-keyref="Type_String"><a href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">String</a></span></td>
-        <td>Path to the video file</td>
+        <td><span class="notranslate">path</span></td>
+        <td><span data-keyref="Type_String"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Overview/Data_Types.htm">Zeichenfolge</a></span></td>
+        <td><span class="notranslate">Path to the video file</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
-  <p class="code">video_open(&quot;splash.mp4&quot;);</p>
-  <p>The code above loads <span class="inline2">splash.mp4</span> from the Included Files of the game.</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p class="code">my_video = video_open(&quot;splash.mp4&quot;);</p>
+  <p>Die obige <span class="notranslate">code</span> lädt <span class="inline2">splash.mp4</span> aus den mitgelieferten Dateien des Spiels.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div>Back: <a data-xref="{title}" href="Videos.htm">Video Playback</a></div>
-        <div>Next: <a data-xref="{title}" href="video_close.htm">video_close</a></div>
+        <div>Zurück: <a data-xref="{title}" href="Videos.htm">Video-Wiedergabe</a></div>
+        <div>Weiter: <a data-xref="{title}" href="video_close.htm">video_close</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 video_open

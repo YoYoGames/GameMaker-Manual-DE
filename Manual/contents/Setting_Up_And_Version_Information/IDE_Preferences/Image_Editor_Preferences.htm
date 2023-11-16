@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Image Editor Preferences</title>
+  <title>Bildeditor-Einstellungen</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../assets/css/default.css" type="text/css" />
-  <script src="../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="The Image Editor Preferences" />
   <meta name="rh-index-keywords" content="Prefs - Images" />
@@ -14,151 +13,131 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Image Editor Preferences</h1>
-  <p><img alt="Image Editor Prefs" class="center" src="../../assets/Images/Setup_And_Version/Preferences/Image_Editor_Prefs.png" /></p>
-  <p>The <strong>Image Editor Preferences</strong> are used to define how the <a href="../../The_Asset_Editors/Image_Editor.htm">Image Editor</a> window looks and feels. The following are the general options:</p>
+  <h1>Bildeditor-Einstellungen</h1>
+  <p><img alt="Image Editor Prefs" class="center" src="../../assets/Images/Setup_And_Version/Preferences/Image_Editor_Prefs.png"/></p>
+  <p>Mit den <strong>Voreinstellungen für den Bildeditor</strong> können Sie festlegen, wie das <a href="../../The_Asset_Editors/Image_Editor.htm">Bildeditor-Fenster</a> aussehen und funktionieren soll. Im Folgenden sind die allgemeinen Optionen aufgeführt:</p>
   <ul class="colour">
-    <li><strong>Image Selection Copy/Paste</strong>: Choose whether you want CTRL+V (paste) to insert the copied image as a brush, or as a new layer.</li>
-    <li><strong>Expand sprite controls overlay by default</strong>: When this is checked, the sprite controls and frame information will be shown in the Image Editor every time you open a sprite for editing (this can be closed again using the collapse button <img alt="Collapse Nodes Icon" class="icon" src="../../assets/Images/Icons/Icon_Collapse.png" />, but it will reopen on editing the sprite again later). When this is unchecked, the sprite controls and frame information will be hidden on opening a sprite. The default is to have this unchecked.</li>
-    <li><strong>Default Loop Mode</strong>: The loop button in the Image Editor can be set to function in two different modes: either play once, where the animation will stop when it gets to the last frame, loop from the start, where the animation will go back to the first frame when it finishes, or ping pong, where the animation will go up through the images to the end and then back down through them again to the beginning. The default value here is &quot;loop&quot;.</li>
-    <li><strong>Draw thin selection outline</strong>: If this is checked then the outline for selections will be an absolute 1px in width, regardless of the scale of the image, while having it un-checked will make the selection outline a relative 1px in width and scale with the image. The default is to have this option checked.</li>
-    <li><strong>Selection outline primary colour</strong>: The section outline is a dashed line that alternates between two colours. This option permits you to set the first of those colours to use (including alpha), and has a default value of <a class="glossterm" data-glossterm="ARGB" href="#">ARGB</a> #FFFFFD0.</li>
-    <li><strong>Selection outline secondary colour</strong>: The section outline is a dashed line that alternates between two colours. This option permits you to set the second of those colours to use (including alpha), and has a default value of ARGB #0000D0.</li>
-    <li><strong>Editor background colour</strong>: While editing a sprite frame the image may be scaled in or out or may not fit the whole drawing in window, in which case a background colour will be shown which you can set here. The default value is ARGB #282828FF.</li>
+    <li><strong>Erweitern Sie <span class="notranslate">sprite</span> Steuerelemente standardmäßig überlagern</strong>: Wenn diese Option aktiviert ist, werden die <span class="notranslate">sprite</span> Steuerelemente und Rahmeninformationen jedes Mal im Bildeditor angezeigt, wenn Sie ein <span class="notranslate">sprite</span> zur Bearbeitung öffnen (dieses kann mit der Schaltfläche
+      <img> wieder geschlossen werden, wird aber später beim Bearbeiten des <span class="notranslate">sprite</span> wieder geöffnet). Wenn diese Option nicht aktiviert ist, werden die Steuerelemente und Rahmeninformationen von <span class="notranslate">sprite</span> beim Öffnen von
+      einer <span class="notranslate">sprite</span> ausgeblendet. Standardmäßig ist diese Option nicht aktiviert.</li>
+    <li><strong>Standardmodus <span class="notranslate">Loop</span>:</strong> Die Schaltfläche <span class="notranslate">loop</span> im Bildeditor kann so eingestellt werden, dass sie in zwei verschiedenen Modi funktioniert: entweder einmalige Wiedergabe, bei der die Animation beim letzten Bild anhält, <span class="notranslate">loop</span> von Anfang an, wobei die Animation nach Beendigung zum ersten Bild zurückspringt, oder Ping-Pong, wobei die Animation bis zum Ende und dann wieder zurück zum Anfang läuft.
+      von Anfang an, wobei die Animation zum ersten Bild zurückkehrt, wenn sie beendet ist, oder Ping Pong, wobei die Animation durch die Bilder bis zum Ende und dann wieder zurück zum Anfang läuft. Der Standardwert ist hier &quot;Schleife&quot;.</li>
+    <li><strong>Dünne Auswahlkontur zeichnen</strong>: Wenn diese Option aktiviert ist, hat der Umriss der Auswahl eine absolute Breite von 1px, unabhängig von der Skalierung des Bildes; wenn sie nicht aktiviert ist, hat der Umriss der Auswahl eine relative Breite von 1px
+      und skaliert mit dem Bild. Standardmäßig ist diese Option aktiviert.</li>
+    <li><strong>Grundfarbe der Auswahlkontur</strong>: Die Auswahlkontur ist eine gestrichelte Linie, die zwischen zwei Farben wechselt. Mit dieser Option können Sie die erste dieser Farben (einschließlich Alpha) festlegen. Der Standardwert ist <a class="glossterm" data-glossterm="ARGB" href="#">ARGB</a> #FFFFFD0.</li>
+    <li><strong>Sekundärfarbe der Auswahlkontur</strong>: Die Kontur des Abschnitts ist eine gestrichelte Linie, die zwischen zwei Farben wechselt. Mit dieser Option können Sie die zweite dieser Farben festlegen (einschließlich Alpha). Der Standardwert ist ARGB #0000D0.</li>
+    <li><strong>Hintergrundfarbe des Editors</strong>: Während der Bearbeitung eines <span class="notranslate">sprite</span> Rahmens kann das Bild vergrößert oder verkleinert werden oder nicht in das gesamte Zeichenfenster passen. In diesem Fall wird eine Hintergrundfarbe angezeigt, die Sie hier einstellen können. Der Standardwert ist ARGB
+      #282828FF.</li>
   </ul>
-  <p>The Image Editor Preferences also has the following sub-categories:</p>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Background</a></p>
+  <p>Die Bildeditor-Voreinstellungen haben auch die folgenden Unterkategorien:</p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down" href="#">Hintergrund</a></p>
   <div class="droptext" data-targetname="drop-down">
     <p class="dropspot">
-      <img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_Background_Prefs.png" src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_Background_Prefs.png" class="center" alt="Image Editor Background Prefs" />
-    </p>
-    <p class="dropspot">Here you can set the options for the background that you edit your sprite images over. By default this is a grid of grey squares, but you can use the following settings to change it:</p>
+      <img alt="Collapse Nodes Icon" class="icon" src="../../assets/Images/Icons/Icon_Collapse.png"/></p>
+    <p class="dropspot">Hier können Sie die Optionen für den Hintergrund festlegen, vor dem Sie Ihre <span class="notranslate">sprite</span> Bilder bearbeiten. Standardmäßig ist dies ein Gitter aus grauen Quadraten, aber Sie können die folgenden Einstellungen verwenden, um es zu ändern:</p>
     <ul class="dropspotlist">
       <li>
-        <strong>Canvas style</strong>: Here you set the &quot;style&quot; for the background, which can either be &quot;
-        <em>Block Pattern</em>&quot; or &quot;
-        <em>Single Colour</em>&quot;. Single colour simply sets the background to the colour of your choice (using the Colour 1 setting, as explained below) while block pattern is the default setting (which can also be edited using the rest of the dialogue
-        options shown below). Default is &quot;
-        <em>Block Pattern</em>&quot;.
-      </li>
+       <strong>Stil der Leinwand</strong>: Hier stellen Sie den &quot;Stil&quot; für den Hintergrund ein, der entweder &quot;
+       <em>Block-Muster</em>&quot; oder &quot;
+       <em>Einfarbig</em>&quot;. Bei "Einfarbig" wird der Hintergrund einfach auf die von Ihnen gewählte Farbe eingestellt (mit der Einstellung "Farbe 1", wie unten erläutert), während "Blockmuster" die Standardeinstellung ist (die auch mit den übrigen Optionen des Dialogs
+        Optionen bearbeitet werden kann). Die Voreinstellung ist &quot;
+       <em>Blockmuster</em>&quot;.</li>
       <li>
-        <strong>Canvas block size</strong>: When you have selected
-        <em>Block Pattern</em> for the background, you can set the size of the individual block here. Default is 16px, with a minimum value of 2px and a maximum of 256px permitted.
-      </li>
+       <strong>Größe des Leinwandblocks</strong>: Wenn Sie für den Hintergrund ein
+       <em>Blockmuster</em> für den Hintergrund ausgewählt haben, können Sie hier die Größe des einzelnen Blocks festlegen. Der Standardwert ist 16px, wobei ein Mindestwert von 2px und ein Höchstwert von 256px zulässig sind.</li>
       <li>
-        <strong>Canvas primary colour</strong>: If you have
-        <em>Single Colour</em> chosen for the background, then the colour used is this one. You can click the colour swatch to open the colour editor and change it. When using the
-        <em>Block Pattern</em> option, this sets the first colour for alternate blocks. Default colour is (
-        <a data-glossterm="ARGB" class="glossterm" href="#">ARGB</a>) #FFC3C3C3.
-      </li>
+       <strong>Grundfarbe der Leinwand</strong>: Wenn Sie
+       <em>Single Colour</em> für den Hintergrund gewählt haben, wird diese Farbe verwendet. Sie können auf das Farbfeld klicken, um den Farbeditor zu öffnen und die Farbe zu ändern. Wenn Sie die Option
+       <em>Blockmuster</em> wird hier die erste Farbe für abwechselnde Blöcke festgelegt. Die Standardfarbe ist (
+       <a data-glossterm="ARGB" class="glossterm" href="#">ARGB</a>) #FFC3C3C3.</li>
       <li>
-        <strong>Canvas secondary colour (block pattern style)</strong>: If you have
-        <em>Block Pattern</em> chosen for the background, then the colour used to alternate with colour 1 (above) is this one. You can click the colour swatch to open the colour editor and change it. Default colour is (ARGB) #FF808080.
-      </li>
+       <strong>Sekundärfarbe der Leinwand (Blockmuster)</strong>: Wenn Sie
+       <em>Blockmuster</em> für den Hintergrund gewählt haben, wird diese Farbe im Wechsel mit Farbe 1 (oben) verwendet. Sie können auf das Farbfeld klicken, um den Farbeditor zu öffnen und die Farbe zu ändern. Die Standardfarbe ist (ARGB) #FF808080.</li>
     </ul>
-    <p> </p>
+    <p> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Confirm Dialogs</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down4" href="#">Dialoge bestätigen</a></p>
   <div class="droptext" data-targetname="drop-down4">
     <p class="dropspot">
-      <img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_Confirm_Prefs.png" src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_Confirm_Prefs.png" alt="Image Editor Confirm Prefs" class="center" width="822" height="463" />
-    </p>
-    <p class="dropspot">Here you can select the behaviour of the confirmation dialogues when you perform different actions on the current sprite. They are:</p>
+      <img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_Background_Prefs.png" src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_Background_Prefs.png" class="center" alt="Image Editor Background Prefs"/></p>
+    <p class="dropspot">Hier können Sie das Verhalten der Bestätigungsdialoge auswählen, wenn Sie verschiedene Aktionen auf der aktuellen <span class="notranslate">sprite</span> durchführen. Diese sind:</p>
     <ul class="dropspotlist">
       <li>
-        <strong>Automatic response to deleting frames</strong>: When you delete a frame by default a message shows to ask if you are sure you want to do this. By setting this option to &quot;OK&quot; you can remove this message and permit frame deletion
-        without further messages being shown. Default is &quot;Show message&quot;.
+       <strong>Automatische Reaktion auf das Löschen von Rahmen</strong>: Wenn Sie einen Rahmen löschen, wird standardmäßig eine Meldung angezeigt, in der Sie gefragt werden, ob Sie sicher sind, dass Sie dies tun wollen. Wenn Sie diese Option auf &quot;OK&quot; setzen, können Sie diese Meldung entfernen und das Löschen von Rahmen
+        ohne dass weitere Meldungen angezeigt werden. Die Voreinstellung ist &quot;Meldung anzeigen&quot;.</li>
+      <li>
+       <strong>Automatische Reaktion auf das Ersetzen von Bildern während des Streifenimports</strong>: Wenn Sie im Dropdown-Menü "Bild" die Option "Streifen importieren" wählen, wird eine Meldung angezeigt, die Sie darauf hinweist, dass alle Bilder, die sich bereits in der Ressource <span class="notranslate">sprite</span> befinden, überschrieben werden,
+        mit der Option, fortzufahren oder nicht. Sie können hier festlegen, ob diese Meldung angezeigt werden soll, oder ob <span class="notranslate">IDE</span> einfach die Option &quot;Ja&quot; oder &quot;Nein&quot; wählen soll. Der Standardwert ist &quot;Nachricht anzeigen&quot;.</li>
+      <li>
+       <strong>Automatische Reaktion auf das Festschreiben von Änderungen beim Werkzeugwechsel</strong>: Wenn Sie nach der Bearbeitung eines Rahmens das Zeichenwerkzeug wechseln, wird standardmäßig eine Meldung angezeigt, in der Sie gefragt werden, ob Sie die vorgenommenen Änderungen übernehmen möchten. Wenn Sie diese Option auf &quot;OK&quot; setzen, können Sie
+        können Sie diese Meldung entfernen, so dass die Rahmenbearbeitung ohne weitere Meldungen beim Werkzeugwechsel übernommen wird. Wenn Sie &quot;Nein&quot; wählen, wird die Rahmenbearbeitung bei einem Werkzeugwechsel stillschweigend abgebrochen. Die Voreinstellung ist &quot;Anzeigen
+        Meldung&quot;.
       </li>
       <li>
-        <strong>Automatic response to replacing images during strip import</strong>: When you select Import Strip from the Image drop down menu, you will get a message warning you that you will be overwriting any images already in the sprite resource,
-        with the option to continue or not. You can set here whether to show this message, or have the IDE simply choose the &quot;Yes&quot; or &quot;No&quot; option. The default value is &quot;Show Message&quot;.
-      </li>
+       <strong>Automatische Reaktion auf Warnung vor gesperrten Ebenen</strong>: Wenn Sie versuchen, eine gesperrte Ebene zu bearbeiten, erhalten Sie standardmäßig eine Meldung, die Sie darüber informiert, dass Sie dies nicht tun können. Wenn Sie diese Option auf &quot;OK&quot; setzen, wird keine Meldung angezeigt
+        und die Bearbeitung wird stillschweigend abgebrochen.</li>
       <li>
-        <strong>Automatic response to committing changes on tool change</strong>: When you change draw tools after editing a frame, by default a message shows to ask if you want to commit the changes made. By setting this option to &quot;OK&quot; you
-        can remove this message and permit frame edition to be committed without further messages being shown when you change tools. If you choose &quot;No&quot;, then frame edition will be silently cancelled when you change tools. Default is &quot;Show
-        message&quot;.
-      </li>
-      <li>
-        <strong>Automatic response to locked layer warning</strong>: If you try to edit a locked layer you&#39;ll get a message by default informing you that you can&#39;t do this. If you set this option to &quot;OK&quot; then no message will be shown
-        and the edition will silently fail.
-      </li>
-      <li>
-        <strong>Automatic response to group selected warning</strong>: If you select multiple layers in the layer editor and then try to draw or edit then you will be shown a message by default to inform you that it is not possible. You can select &quot;OK&quot;
-        here to remove this message and silently fail to edit the images together until only a single layer is selected. Default is &quot;Show message&quot;.
-      </li>
+       <strong>Automatische Reaktion auf die Warnung bei Gruppenauswahl</strong>: Wenn Sie im Ebenen-Editor mehrere Ebenen auswählen und dann versuchen, zu zeichnen oder zu bearbeiten, wird standardmäßig eine Meldung angezeigt, die Sie darüber informiert, dass dies nicht möglich ist. Sie können &quot;OK&quot; wählen
+        wählen, um diese Meldung zu entfernen und die Bilder erst dann gemeinsam zu bearbeiten, wenn nur eine einzige Ebene ausgewählt ist. Die Voreinstellung ist &quot;Meldung anzeigen&quot;.</li>
     </ul>
     <p>
-      <br /><br />
-    </p>
+      <br /><br /></p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Grid Settings</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">Raster-Einstellungen</a></p>
   <div class="droptext" data-targetname="drop-down2">
     <p class="dropspot">
-      <img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_GridSettings_Prefs.png" src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_GridSettings_Prefs.png" class="center" alt="Image Editor Grid Settings" />Grid
-      Settings preferences are used to set how the image grid will be presented, with the following options available:
-    </p>
+      <img> Raster
+      Mit den Voreinstellungen wird festgelegt, wie das Bildraster dargestellt wird, wobei folgende Optionen zur Verfügung stehen:</p>
     <ul class="dropspotlist">
       <li>
-        <strong>Grid horizontal spacing (px)</strong>: This value sets the spacing for the horizontal lines of the image grid. The default value is 1px.
-      </li>
+       <strong>Horizontaler Abstand des Gitters (px)</strong>: Dieser Wert legt den Abstand für die horizontalen Linien des Bildrasters fest. Der Standardwert ist 1px.</li>
       <li>
-        <strong>Grid vertical spacing (px)</strong>: This value sets the spacing for the vertical lines of the image grid. The default value is 1px.
-      </li>
+       <strong>Vertikaler Abstand des Gitters (px)</strong>: Dieser Wert legt den Abstand für die vertikalen Linien des Bildrasters fest. Der Standardwert ist 1px.</li>
       <li>
-        <strong>Display Grid</strong>: If this is checked then the Image Editor will open with the image grid on. Default is off.
-      </li>
+       <strong>Raster anzeigen</strong>: Wenn diese Option aktiviert ist, wird der Bildeditor mit eingeschaltetem Bildraster geöffnet. Die Voreinstellung ist aus.</li>
       <li>
-        <strong>Snap To Grid</strong>: If this is checked then the image editor will automatically snap certain tools to the image grid. Default is off.
-      </li>
+       <strong>Am Raster ausrichten</strong>: Wenn diese Option aktiviert ist, rastet der Bildeditor bestimmte Werkzeuge automatisch am Bildraster ein. Die Voreinstellung ist aus.</li>
       <li>
-        <strong>Grid line Colou</strong>r: Here you can set the colour (including alpha value) for the image grid. Default is (
-        <a data-glossterm="ARGB" class="glossterm" href="#">ARGB</a>) #FF000000.
-      </li>
+       <strong>Rasterlinienfarbe</strong>: Hier können Sie die Farbe (einschließlich Alphawert) für das Bildraster festlegen. Standard ist (
+       <a data-glossterm="ARGB" class="glossterm" href="#">ARGB</a>) #FF000000.</li>
     </ul>
-    <p> </p>
+    <p> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Tools</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down3" href="#">Werkzeuge</a></p>
   <div class="droptext" data-targetname="drop-down3">
     <p class="dropspot">
-      <img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_Tools_Prefs.png" src="../../assets/Images/Setup_And_Version/Preferences/ImageEditor_Tools_Prefs.png" class="center" />Here you can set the ddifferent options
-      for how some of the drawing tools operate and are shown.
-      <br /><br />
-    </p>
-    <p class="dropspot">If you are using the
-      <strong>Arc Tool</strong>
-      <img data-cke-saved-src="../../assets/Images/Setup_And_Version/Preferences/Prefs_Arctool_Icon.png" src="../../assets/Images/Setup_And_Version/Preferences/Prefs_Arctool_Icon.png" class="icon" alt="Arc Tool Icon" width="32" height="32" /> then here
-      you can set the different colours used to draw the node properties:
-    </p>
+      <img> Hier können Sie die verschiedenen Optionen einstellen
+      einstellen, wie einige der Zeichenwerkzeuge funktionieren und angezeigt werden.
+     <br><br></p>
+    <p class="dropspot">Wenn Sie das
+     <strong>Bogen-Werkzeug</strong>
+      <img> verwenden, können Sie hier
+      können Sie die verschiedenen Farben einstellen, die zum Zeichnen der Knoteneigenschaften verwendet werden:</p>
     <ul class="dropspotlist">
       <li>
-        <strong>Anchor point colour</strong>: Set the colour for the different anchor points on the spline/arc. Default is (
-        <a data-glossterm="ARGB" class="glossterm" href="#">ARGB</a>) #FFFF0000.
-      </li>
+       <strong>Ankerpunktfarbe</strong>: Legen Sie die Farbe für die verschiedenen Ankerpunkte auf dem Spline/Bogen fest. Standard ist (
+       <a data-glossterm="ARGB" class="glossterm" href="#">ARGB</a>) #FFFF0000.</li>
       <li>
-        <strong>Control point colour</strong>: Set the colour for each of the control point &quot;handles&quot; on an anchor point. Default is (ARGB) #FFFF0000.
-      </li>
+       <strong>Farbe des Kontrollpunkts</strong>: Legen Sie die Farbe für jeden der Kontrollpunkt-&quot;Griffe&quot; an einem Ankerpunkt fest. Standard ist (ARGB) #FFFF0000.</li>
       <li>
-        <strong>Tangent line colour</strong>: Set the colour for the lines linking the control points to the anchors. Default is (ARGB) #FF00FFFF.
-      </li>
+       <strong>Farbe der Tangentenlinie</strong>: Legen Sie die Farbe für die Linien fest, die die Kontrollpunkte mit den Ankern verbinden. Standard ist (ARGB) #FF00FFFF.</li>
       <li>
-        <strong>Selected point colour</strong>: Set the colour to be used for any selected anchor points on the spline/arc. Default is (ARGB) #FF00FF00.
-      </li>
+       <strong>Farbe des ausgewählten Punktes</strong>: Legen Sie die Farbe fest, die für alle ausgewählten Ankerpunkte auf dem Spline/Bogen verwendet werden soll. Standard ist (ARGB) #FF00FF00.</li>
       <li>
-        <strong>Point size</strong>: Set the size of the different anchor points and control points to be used. Default is 10px.
-      </li>
+       <strong>Punktgröße</strong>: Legen Sie die Größe der verschiedenen Anker- und Kontrollpunkte fest, die verwendet werden sollen. Standard ist 10px.</li>
     </ul>
   </div>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../IDE_Preferences.htm">IDE Preferences</a></div>
-        <div style="float:right">Next: <a href="Sprite_Editor_Preferences.htm">Sprite Editor Preferences</a></div>
+        <div style="float:left">Zurück: <a href="../IDE_Preferences.htm">IDE-Einstellungen</a></div>
+        <div style="float:right">Nächste: <a href="Sprite_Editor_Preferences.htm">Sprite-Editor-Einstellungen</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 Preferences - Image Editor
@@ -166,5 +145,5 @@ Preferences - Image Editor
   <!-- TAGS
 prefs_image_editor
 -->
-</body>
-</html>
+
+</body></html>

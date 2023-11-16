@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>leistung_laden_freunde</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for achievement_load_friends" />
+  <meta name="rh-index-keywords" content="achievement_load_friends" />
+  <meta name="search-keywords" content="achievement_load_friends,achievement_friends_info" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>leistung_laden_freunde</h1>
+  <p>Diese Funktion sendet eine Anfrage an <span class="notranslate">server</span>, um Informationen über alle Freunde des angemeldeten Benutzers zu erhalten und löst einen Callback <a href="../../../../The_Asset_Editors/Object_Properties/Async_Events/Social.htm">Social Asynchronous Event</a> aus, der Folgendes enthält
+    die <a href="../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><tt>async_load</tt></a> Map mit den relevanten Schlüssel/Wert-Paaren enthält. Der <i>id-Schlüssel</i> dieser <tt>DS-Map</tt> wird verwendet, um den richtigen Callback zu identifizieren (es
+    kann es mehr als eine Auslösefunktion für ein bestimmtes asynchrones Ereignis geben) und wird mit der <b>Konstante</b> <tt>achievement_friends_info</tt> sowie einer Reihe anderer Schlüssel/Wertpaare für jeden Freund gepaart. Der genaue Inhalt der Map ist
+    unten dargestellt:</p>
+  <p class="note"><b>HINWEIS</b>: Diese Funktion ist nur für <b>iOS</b> verfügbar.</p>
+  <ul class="colour">
+    <li>&quot;<b>id</b>&quot; - Für diese Funktion sollte es <tt>achievement_friends_info sein</tt></li>
+    <li>&quot;<b>FriendN</b>&quot; - Der Name des Freundes, wobei &quot;N&quot; ein ganzzahliger Wert ist, der seiner Position in der Freundesliste entspricht.</li>
+    <li>&quot;<b>FriendidN</b>&quot; - Die eindeutige Benutzerkennung des Freundes, &quot;N&quot;.</li>
+  </ul>
+  <p> </p>
+  <h4><b>Syntax:</b></h4>
+  <p class="code">achievement_load_friends()</p>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code">N/A</p>
+  <p> </p>
+  <h4>Erweitertes Beispiel:</h4>
+  <p>Die folgende <span class="notranslate">code</span> würde wahrscheinlich aufgerufen werden, nachdem sich der Spieler in sein Spielkonto eingeloggt hat, indem er <a href="achievement_login.htm"><tt>achievement_login()</tt></a> um eine Liste aller Freunde des Spielers zu erhalten:</p>
+  <p class="code">achievement_friends_info();</p>
+  <p>Dadurch wird eine Anfrage nach den Informationen über die Freunde des Benutzers gesendet und ein asynchroner Rückruf mit der speziellen <tt>async_load</tt> DS-Map erzeugt, die die folgenden Daten enthält:</p>
+  <p class="code">var ident = ds_map_find_value(async_load, &quot;id&quot;);<br/> if ident == achievement_friends_info<br/>     {
+    <br/>     var numfriends = ds_map_find_value(async_load, &quot;numfriends&quot;);<br/>     global.numfriends = numfriends;<br/>     for(var i=0; i &lt; numfriends; i++;)<br/>         {
+    <br/>         global.friendname[i] = ds_map_find_value(async_load, &quot;Friend&quot; + string(i));<br/>         global.friendid[i] = ds_map_find_value(async_load, &quot;Friendid&quot; + string(i));<br/>         achievement_get_pic(global.friendid[i]);
+    <br/>         }
+    <br/>     }
+  </p>
+  <p>Die obige <span class="notranslate">code</span> prüft die zurückgegebene <tt>DS Map</tt> im <b>Social Asynchronous Event</b> und wenn deren &quot;id&quot; mit der zu prüfenden Konstante übereinstimmt, dann <span class="notranslate">loops</span> durch die Map, die alle verschiedenen Werte in einer Reihe von Arrays speichert und fordert
+    ein Bild für jeden der Einträge in der Karte an (siehe <a href="achievement_get_pic.htm"><tt>achievement_get_pic()</tt></a>).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Zurück: <a href="Achievements_And_Leaderboards.htm">Errungenschaften und Bestenlisten</a></div>
+        <div style="float:right">Nächste: <a href="achievement_load_leaderboard.htm"><span class="notranslate">achievement_load_leaderboard</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
+  </div>
+  <!-- KEYWORDS
+achievement_load_friends
+achievement_friends_info
+-->
+  <!-- TAGS
+achievement_load_friends
+-->
+</body>
+</html>

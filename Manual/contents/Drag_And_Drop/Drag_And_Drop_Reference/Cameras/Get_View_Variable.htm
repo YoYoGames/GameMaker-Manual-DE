@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Get View Variable</title>
+  <title>Ansichtsvariable holen</title>
   <meta name="generator" content="Adobe RoboHelp 2019" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page that explains the Get View Variable action" />
   <meta name="rh-index-keywords" content="GML Visual Action - Get View Variable" />
@@ -14,85 +14,85 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img alt="Get View Variable Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Cameras/i_Cameras_Get_View_Variable.png" width="32" /> Get View Variable</h1>
-  <p>This action permits you to get the value of certain built in variables related to a given <b>view port</b>. You select the view port variable to retrieve, then give the view port to target (from 0 to 7) and finally the target variable to hold the returned
-    value (this can be flagged as being a temporary local variable). The view port is the area of the screen that will be used to draw a given camera view (as set up in the room editor), and the different variables that you are able to get in this way
-    are outlined in the table below:</p>
+  <h1><img> Ansichtsvariable holen</h1>
+  <p>Diese Aktion ermöglicht es Ihnen, den Wert bestimmter eingebauter Variablen in Bezug auf einen bestimmten <b>Viewport</b> abzurufen. Sie wählen die abzurufende Viewport-Variable aus, geben dann den Viewport als Ziel an (von 0 bis 7) und schließlich die Zielvariable, die den zurückgegebenen
+    Wert enthalten soll (diese kann als temporäre lokale Variable gekennzeichnet werden). Der Ansichtsanschluss ist der Bereich des Bildschirms, der zum Zeichnen einer bestimmten Kameraansicht verwendet wird (wie im Raumeditor eingestellt), und die verschiedenen Variablen, die Sie auf diese Weise erhalten können
+    sind in der folgenden Tabelle aufgeführt:</p>
   <table>
     <tbody>
       <tr>
-        <th>Variable</th>
-        <th>Description</th>
+        <th>Variabel</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
         <td><span class="inline">Camera</span></td>
-        <td>The value returned will be the unique ID value of the camera to assigned to the port (see <a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Viewports/Cameras_And_View_Ports.htm">here</a> for more information).</td>
+        <td>Der zurückgegebene Wert ist der eindeutige ID-Wert der Kamera, die dem Anschluss zugewiesen werden soll (weitere Informationen finden Sie <a href="../../../GameMaker_Language/GML_Reference/Cameras_And_Display/Cameras_And_Viewports/Cameras_And_View_Ports.htm">hier</a> ).</td>
       </tr>
       <tr>
         <td><span class="inline">Visibility</span></td>
-        <td>This will return a value of <span class="inline">true</span> or <span class="inline">false</span> where <span class="inline">true</span> is that the view port is visible (ie: it being drawn to the screen), and <span class="inline">false</span> meaning that nothing is being drawn.</td>
+        <td>Dies gibt einen Wert von <span class="inline">true</span> oder <span class="inline">false</span> zurück, wobei <span class="inline">true</span> bedeutet, dass der View Port sichtbar ist (d.h. er wird auf den Bildschirm gezeichnet), und <span class="inline">false</span> bedeutet, dass nichts gezeichnet wird.</td>
       </tr>
       <tr>
         <td><span class="inline">View Port X Coordinate</span></td>
-        <td>This is the X position of the view port within the game window.</td>
+        <td>Dies ist die X-Position des View Ports innerhalb des Spielfensters.</td>
       </tr>
       <tr>
         <td><span class="inline">View Port Y Coordinate</span></td>
-        <td>This is the Y position of the view port within the game window.</td>
+        <td>Dies ist die Y-Position des View Ports innerhalb des Spielfensters.</td>
       </tr>
       <tr>
         <td><span class="inline">View Port Width</span></td>
-        <td>This is the width (in pixels) of the view port.</td>
+        <td>Dies ist die Breite (in Pixel) des Ansichtsfensters.</td>
       </tr>
       <tr>
         <td><span class="inline">View Port Height</span></td>
-        <td>This is the height (in pixels) of the view port.</td>
+        <td>Dies ist die Höhe (in Pixeln) des View Ports.</td>
       </tr>
       <tr>
         <td><span class="inline">View Port Surface ID</span></td>
-        <td>This will return the unique ID value for the surface assigned to the view port or -1 if no surface has been assigned.</td>
+        <td>Dies gibt den eindeutigen ID-Wert für die dem View Port zugewiesene Oberfläche zurück oder -1, wenn keine Oberfläche zugewiesen wurde.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img alt="Get View Variable Action" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Cameras/a_Cameras_Get_View_Variable.png" /></p>
-  <h4>Arguments:</h4>
+  <p> </p>
+  <h4>Aktion Syntax:</h4>
+  <p><img alt="Get View Variable Icon" class="icon" height="32" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Cameras/i_Cameras_Get_View_Variable.png" width="32" /></p>
+  <h4>Argumente:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>Variable</td>
-        <td>The built in view variable to get</td>
+        <td><span class="notranslate">Variable</span></td>
+        <td>Die eingebaute Ansichtsvariable zum Abrufen</td>
       </tr>
       <tr>
-        <td>View</td>
-        <td>The view port to target (from 0 - 7)</td>
+        <td><span class="notranslate">View</span></td>
+        <td>Der anzuvisierende Ansichtsanschluss (von 0 bis 7)</td>
       </tr>
       <tr>
-        <td>Target</td>
-        <td>The target variable to hold the returned value (can be flagged as a temporary local variable)</td>
+        <td><span class="notranslate">Target</span></td>
+        <td>Die Zielvariable, die den zurückgegebenen Wert enthält (kann als temporäre lokale Variable gekennzeichnet werden)</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><span><img alt="Get View Variable Example" class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Cameras/e_Cameras_Get_View_Variable.png"/></span>The above action block code gets the current camera ID assigned to view
-    port [0] and then checks to see if it is the same as the one stored in a global variable. If it is not, the camera is set to the new one.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p><span><img></span>Der obige Aktionsblock <span class="notranslate">code</span> ermittelt die aktuelle Kamera-ID, die dem View
+    port [0] zugewiesen ist, und prüft dann, ob sie mit der in einer globalen Variablen gespeicherten identisch ist. Ist dies nicht der Fall, wird die Kamera auf die neue eingestellt.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Camera_Actions.htm">Camera Actions</a></div>
-        <div style="float:right">Next: <a href="Set_View_Variable.htm">Set View Variable</a></div>
+        <div style="float:left">Zurück: <a href="Camera_Actions.htm">Kamera-Aktionen</a></div>
+        <div style="float:right">Weiter: <a href="Set_View_Variable.htm">Ansichtsvariable setzen</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 Action - Get View Variable

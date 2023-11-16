@@ -6,7 +6,7 @@
   <title>uwp_is_constrained</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for uwp_is_constrained" />
   <meta name="rh-index-keywords" content="uwp_is_constrained" />
@@ -14,16 +14,16 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>uwp_is_constrained <span data-conref="../../../assets/snippets/Tag_obsolete.hts"> </span></h1>
-  <p>This function will return <span class="inline">true</span> if the game is running in a resource constrained mode or <span class="inline">false</span> if running normally. Resource constrained mode can be activated when the game doesn&#39;t have focus, and in this mode the game has reduced GPU resources. The response to this should normally be to pause the game (as the user no longer has control). Also, disabling any particularly taxing effects may be a good idea if slowdown is observed in this mode. Note that unlike the <a href="uwp_is_suspending.htm"><span class="inline">uwp_is_suspending()</span></a> function, this function will return <span class="inline">true</span> continuously as long as the game is in constrained mode (and not just once when it first happens).</p>
-  <p> </p>
+  <h1>uwp_is_constrained</h1>
+  <p>Diese Funktion gibt <span class="inline">true</span> zurück, wenn das Spiel in einem ressourcenbeschränkten Modus läuft, oder <span class="inline">false</span>, wenn es normal läuft. Der ressourcenbeschränkte Modus kann aktiviert werden, wenn das Spiel nicht fokussiert ist, und in diesem Modus verfügt das Spiel über reduzierte GPU-Ressourcen. Die Reaktion darauf sollte normalerweise darin bestehen, das Spiel anzuhalten (da der Benutzer keine Kontrolle mehr hat). Auch die Deaktivierung besonders belastender Effekte kann eine gute Idee sein, wenn in diesem Modus eine Verlangsamung beobachtet wird. Beachten Sie, dass im Gegensatz zur <a href="uwp_is_suspending.htm"><span class="inline">uwp_is_suspending()</span></a> Funktion, diese Funktion kontinuierlich <span class="inline">true</span> zurückgibt, solange sich das Spiel im eingeschränkten Modus befindet (und nicht nur einmal, wenn es zum ersten Mal passiert).</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">uwp_is_constrained();</p>
-  <p> </p>
-  <h4>Returns:</h4>
-  <p class="code"><span data-keyref="Type_Bool"><a href="../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Boolean</a></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code"><span data-keyref="Type_Bool"></span></p>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">if xboxliveis_constrained()<br />
     {<br />
         if !instance_exists(obj_PauseMenu)<br />
@@ -31,18 +31,18 @@
             instance_create(0,0,obj_PauseMenu);<br />
         }<br />
     }</p>
-  <p>The above code checks to see if the app is constrained and if it is it creates an instance of an object (used for pausing the game).</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> prüft, ob die Anwendung eingeschränkt ist, und wenn ja, erstellt sie eine Instanz eines Objekts (das zum Anhalten des Spiels verwendet wird).</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="UWP_And_XBox_Live.htm">UWP And XBox Live</a></div>
-        <div style="float:right">Next: <a href="uwp_was_terminated.htm">uwp_was_terminated</a></div>
+        <div style="float:left">Zurück: <a href="UWP_And_XBox_Live.htm">UWP und XBox Live</a></div>
+        <div style="float:right">Nächste: <a href="uwp_was_terminated.htm"><span class="notranslate">uwp_was_terminated</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 uwp_is_constrained

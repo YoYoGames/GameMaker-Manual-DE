@@ -1,69 +1,69 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Set Sequence Head</title>
-  <meta name="generator" content="Adobe RoboHelp 2020"/>
-  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css"/>
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
-  <meta name="rh-authors" content="Gurpreet Matharoo"/>
-  <meta name="topic-comment" content="Page that explains the Set Sequence Head action"/>
-  <meta name="rh-index-keywords" content="GML Visual Action - Set Sequence Head"/>
-  <meta name="search-keywords" content="Set Sequence Head"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Sequenzkopf einstellen</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
+  <script src="../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Gurpreet Matharoo" />
+  <meta name="topic-comment" content="Page that explains the Set Sequence Head action" />
+  <meta name="rh-index-keywords" content="GML Visual Action - Set Sequence Head" />
+  <meta name="search-keywords" content="Set Sequence Head" />
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><img class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/i_sequence_set_head.png"/> Set Sequence Head</h1>
-  <p>With this action you can set the <a class="glossterm" data-glossterm="playhead" href="#">playhead</a> position of the given sequence element in the room to a specified frame. You supply the sequence element ID (as returned by the action <a href="Create_Sequence_Element.htm">Create Sequence</a>) and
-    the new playhead position in frames. For information on the playhead, see <a href="../../../The_Asset_Editors/Sequence_Properties/Using_The_Dope_Sheet.htm">Using The Dope Sheet</a>.</p>
-  <p>Note that the position is in<span> </span><i>frames</i><span> </span>and if you set a value greater than the total number of frames (or less than 0) then the actual final playhead position will depend on the type of sequence playback that has been selected,
-    following these rules:</p>
+  <h1><img> Set <span class="notranslate">Sequence</span> Kopf</h1>
+  <p>Mit dieser Aktion können Sie die <a class="glossterm" data-glossterm="Abspielkopf" href="#">Abspielposition</a> des angegebenen <span class="notranslate">sequence</span> Elements im Raum auf ein bestimmtes Bild setzen. Sie geben die <span class="notranslate">sequence</span> Element-ID (wie von der Aktion <a href="Create_Sequence_Element.htm">Sequenz erstellen</a> zurückgegeben) und
+    die neue Position des Abspielkopfes in Frames. Informationen über den Abspielkopf finden Sie unter <a href="../../../The_Asset_Editors/Sequence_Properties/Using_The_Dope_Sheet.htm">Verwendung des Dope Sheets</a>.</p>
+  <p>Beachten Sie, dass die Position in<span> </span><i>Frames</i><span> </span>angegeben wird. Wenn Sie einen Wert eingeben, der größer als die Gesamtzahl der Frames (oder kleiner als 0) ist, hängt die tatsächliche Endposition des Abspielkopfes von der Art der <span class="notranslate">sequence</span> Wiedergabe ab, die ausgewählt wurde,
+    nach diesen Regeln:</p>
   <ul class="colour">
-    <li><strong>No looping</strong>: The playhead will clamp to the end of the loop (or the beginning if the value given is negative)</li>
-    <li><strong>Looping</strong>: The playhead will wrap back to the beginning of the sequence plus the extra frames, eg: if you set the playhead on a 30 frame sequence to a position of frame 45, the actual playhead position will end up being 15. If you give
-      a negative value, then the sequence playhead will wrap in the reverse direction.</li>
-    <li><strong>Ping-pong looping</strong>: The playhead will advance to the end and then go back the extra number of frames that are over the total frame length, reversing the direction of playback, eg: If the sequence is 30 frames and you set the playhead
-      to 40, the final playhead position will be 20 and the direction will be reversed (going down to 0). Note that you should<span> </span><i>never</i><span> </span>give a negative value for ping-pong playback of a sequence, as it may have undefined
-      results.</li>
+    <li><strong>Keine Schleifenbildung</strong>: Der Abspielkopf wird am Ende von <span class="notranslate">loop</span> (oder am Anfang, wenn der angegebene Wert negativ ist) festgehalten.</li>
+    <li><strong>Schleifen</strong>: Der Abspielkopf springt zurück zum Anfang von <span class="notranslate">sequence</span> plus die zusätzlichen Frames, z. B.: Wenn Sie den Abspielkopf auf einem <span class="notranslate">sequence</span> mit 30 Frames auf eine Position von Frame 45 setzen, liegt die tatsächliche Abspielkopfposition bei 15. Wenn Sie einen
+      einen negativen Wert angeben, wird der <span class="notranslate">sequence</span> Abspielkopf in umgekehrter Richtung umlaufen.</li>
+    <li><strong>Ping-Pong-Schleife</strong>: Der Abspielkopf bewegt sich bis zum Ende vor und geht dann um die zusätzliche Anzahl von Bildern zurück, die über die gesamte Bildlänge hinausgehen, wobei die Wiedergaberichtung umgekehrt wird, z. B.: Wenn die <span class="notranslate">sequence</span> 30 Frames hat und Sie den Abspielkopf auf
+      auf 40 setzen, ist die endgültige Abspielkopfposition 20 und die Richtung wird umgekehrt (nach unten bis 0). Beachten Sie, dass Sie<span> </span><i>niemals</i><span> </span>einen negativen Wert für die Ping-Pong-Wiedergabe eines <span class="notranslate">sequence</span> angeben sollten, da dies zu undefinierten
+      Ergebnisse haben kann.</li>
   </ul>
-  <p>Setting the head position in this way will not stop playback and the sequence will simply continue from the new playhead position unless it is paused.</p>
-  <p> </p>
-  <h4>Action Syntax:</h4>
-  <p><img class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/a_sequence_set_head.png"/></p>
-  <h4>Arguments:</h4>
+  <p>Wenn Sie die Kopfposition auf diese Weise einstellen, wird die Wiedergabe nicht gestoppt, sondern <span class="notranslate">sequence</span> wird an der neuen Abspielkopfposition fortgesetzt, es sei denn, die Wiedergabe wird angehalten.</p>
+  <p> </p>
+  <h4>Aktion Syntax:</h4>
+  <p><img class="icon" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/i_sequence_set_head.png"/></p>
+  <h4>Argumente:</h4>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Description</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>Variable</td>
-        <td>The ID of the sequence element to change the head position of.</td>
+        <td><span class="notranslate">Variable</span></td>
+        <td>Die ID des Elements <span class="notranslate">sequence</span>, dessen Kopfposition geändert werden soll.</td>
       </tr>
       <tr>
-        <td>Head (frames)</td>
-        <td>The new head position (in frames) for the sequence element.</td>
+        <td><span class="notranslate">Head (frames)</span></td>
+        <td>Die neue Kopfposition (in Frames) für das Element <span class="notranslate">sequence</span>.</td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Example:</h4>
-  <p><img class="center" src="../../../assets/Images/Scripting_Reference/Drag_And_Drop/Reference/Sequences/e_sequence_head.png" style="cursor: nwse-resize;"/>The above action block retrieves the current head position of the sequence element ID stored in
-    the variable &quot;<span class="inline">seq_id</span>&quot;. That value is then used to set the head position of the same sequence element, advancing it by 4 frames.</p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p><img>Der obige Aktionsblock ruft die aktuelle Kopfposition der Element-ID von <span class="notranslate">sequence</span> ab, die in der
+    der Variablen &quot;<span class="inline">seq_id</span>&quot; gespeichert ist. Dieser Wert wird dann verwendet, um die Kopfposition desselben <span class="notranslate">sequence</span> -Elements zu setzen und um 4 Frames zu verschieben.</p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Sequence_Actions_Library.htm">Sequence Actions</a></div>
-        <div style="float:right">Next: <a href="Create_Sequence_Element.htm">Create Sequence Element</a> </div>
+        <div style="float:left">Zurück: <a href="Sequence_Actions_Library.htm">Sequenz-Aktionen</a></div>
+        <div style="float:right">Weiter: <a href="Create_Sequence_Element.htm"> <span class="notranslate">Sequence</span> Element erstellen</a> </div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
-Action - Set Sequence Head
+Action - Set <span class="notranslate">Sequence</span> Head
 -->
   <!-- TAGS
 action_set_sequence_head

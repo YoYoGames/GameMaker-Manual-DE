@@ -6,7 +6,7 @@
   <title>return</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
-  <script src="../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Page outlining the return function" />
   <meta name="rh-index-keywords" content="return" />
@@ -15,9 +15,9 @@
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
   <h1>return</h1>
-  <p>The <span class="inline">return</span> statement has the following syntax:</p>
+  <p>Die Anweisung <span class="inline">return</span> hat die folgende Syntax:</p>
   <p class="code">return (&lt;expression&gt;)</p>
-  <p>You only use the <span class="inline">return</span> statement in<span> <a href="../Script_Functions.htm">script functions</a> and <a href="../Method_Variables.htm">methods</a></span>, and it is used to return a value from the function to be used in further code or function calls. It should be noted that the <i>execution of the function ends at the <span class="inline">return</span> statement</i>, meaning that any code which comes after <span class="inline">return</span> has been called will not be run. Here is a short example script called <span class="inline">sqr_calc</span> which calculates the square of whatever value is passed to it, and it includes error catching in case the parameter that it is passed is not a real number:</p>
+  <p>Die Anweisung <span class="inline">return</span> wird nur in<span> <a href="../Script_Functions.htm">Skriptfunktionen</a> und <a href="../Method_Variables.htm">-methoden</a></span> verwendet und dient dazu, einen Wert aus der Funktion zurückzugeben, der in weiteren <span class="notranslate">code</span> oder Funktionsaufrufen verwendet werden kann. Es ist zu beachten, dass die <i>Ausführung der Funktion an der Anweisung <span class="inline">return</span> endet</i>, was bedeutet, dass jede <span class="notranslate">code</span>, die nach dem Aufruf von <span class="inline">return</span> kommt, nicht ausgeführt wird. Hier ist ein kurzes Beispiel <span class="notranslate">script</span> mit dem Namen <span class="inline">sqr_calc</span>, das das Quadrat eines beliebigen Wertes berechnet, der ihm übergeben wird, und das eine Fehlerabfangfunktion für den Fall enthält, dass der übergebene Parameter keine reelle Zahl ist:</p>
   <p class="code">/// @function            sqr_calc(val);<br />
     /// @param {real}  val   The value to calculate the square of<br />
     /// @description         Calculate the square of the given value<br />
@@ -34,23 +34,23 @@
         }<br />
     }
   </p>
-  <p>To call a function from within a piece of code, just use it the same way as when calling runtime functions - that is, write the function name with the parameter values in parentheses. So, the above function would be called like this:</p>
+  <p>Um eine Funktion aus einem Teil von <span class="notranslate">code</span> heraus aufzurufen, verwenden Sie sie auf die gleiche Weise wie beim Aufruf von <span class="notranslate">runtime</span> Funktionen - das heißt, Sie schreiben den Funktionsnamen mit den Parameterwerten in Klammern. Die obige Funktion würde also wie folgt aufgerufen werden:</p>
   <p class="code">if keyboard_check_pressed(vk_enter)<br />
     {<br />
         val = scr_sqr(amount);<br />
     }</p>
-  <p>Here the variable <span class="inline">val</span> will either be 0 (because the variable <span class="inline">amount</span> is not a real number) or the total for <span class="inline">value * value</span>.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Hier wird die Variable <span class="inline">val</span> entweder 0 sein (weil die Variable <span class="inline">amount</span> keine reelle Zahl ist) oder die Summe für <span class="inline">value * value</span>.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="../Language_Features.htm">Language Features</a></div>
-        <div style="float:right">Next: <a href="begin_end.htm">begin / end</a></div>
+        <div style="float:left">Zurück: <a href="../Language_Features.htm">Sprachliche Merkmale</a></div>
+        <div style="float:right">Nächste: <a href="begin_end.htm"><span class="notranslate">begin / end</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 return

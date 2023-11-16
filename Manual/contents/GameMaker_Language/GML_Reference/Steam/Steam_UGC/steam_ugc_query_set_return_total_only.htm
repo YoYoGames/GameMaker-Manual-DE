@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_ugc_query_set_return_total_only</title>
+  <meta name="generator" content="Adobe RoboHelp 2019" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_ugc_query_set_return_total_only" />
+  <meta name="rh-index-keywords" content="steam_ugc_query_set_return_total_only" />
+  <meta name="search-keywords" content="steam_ugc_query_set_return_total_only" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_ugc_query_set_return_total_only</h1>
+  <p>Diese Funktion kann verwendet werden, um eine beliebige UGC-Abfrage weiter zu filtern, insbesondere um nur die Anzahl der Ergebnisse ohne weitere Informationen abzufragen (was bedeutet, dass die von der Sendefunktion erzeugte DS-Map den Schlüssel &quot;num_results&quot; ohne
+    ohne weitere Map-Daten). Das Abfragehandle ist der Wert, der bei der Erstellung der Abfrage zurückgegeben wurde (z.B. mit, <a href="steam_ugc_create_query_user.htm"><tt>steam_ugc_create_query_user()</tt></a>) und die zweite <span class="notranslate">argument</span> ist entweder <tt>true</tt> oder
+   <tt>falsch</tt>. Die Funktion gibt <tt>true</tt> zurück, wenn der Abfragefilter korrekt gesetzt wurde, andernfalls <tt>false</tt>.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_ugc_query_set_return_total_only(ugc_query_handle , total_only);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">ugc_query_handle</span></td>
+        <td>Das zu verwendende Abfragehandle.</td>
+      </tr>
+      <tr>
+        <td><span class="notranslate">total_only</span></td>
+        <td>Ob die Abfrage nur die Gesamtzahl der Treffer zurückgeben soll oder nicht.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code">Boolean</p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p class="code">var query_handle = steam_ugc_create_query_all(ugc_query_RankedByVote, ugc_match_Items, 1);<br/> steam_ugc_query_set_return_total_only(query_handle, true);<br/> steam_ugc_query_set_allow_cached_response(query_handle, true);<br/> query_ID = steam_ugc_send_query(query_handle);</p>
+  <p>Die obige <span class="notranslate">code</span> erstellt eine Abfrage und speichert deren Handle in einer lokalen Variable zur späteren Verwendung in den übrigen Funktionen, die die Abfrage vor dem Senden der Abfrage weiter definieren.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Zurück: <a href="Steam_UGC.htm">UGC</a></div>
+        <div style="float:right">Nächste: <a href="steam_ugc_query_set_allow_cached_response.htm"><span class="notranslate">steam_ugc_query_set_allow_cached_response</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_ugc_query_set_return_total_only
+-->
+  <!-- TAGS
+steam_ugc_query_set_return_total_only
+-->
+</body>
+</html>

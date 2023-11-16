@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>gamepad_is_connected</title>
+  <title>gamepad_ist_verbunden</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for gamepad_is_connected" />
   <meta name="rh-index-keywords" content="gamepad_is_connected" />
@@ -15,46 +15,46 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gamepad_is_connected</h1>
-  <p>This function will return whether a gamepad is connected to the given &quot;slot&quot; (returns <span class="inline">true</span>) or not (returns <span class="inline">false</span>). You would normally use this function in conjunction with the <a href="gamepad_get_device_count.htm"><span class="inline">gamepad_get_device_count()</span></a> function to get the correct number of available game pads and/or gamepad &quot;slots&quot;. Note that there may be a slight delay between the user connecting the gamepad and <span data-keyref="GameMaker Name">GameMaker</span> detecting it as being connected (this is especially the case when dealing with bluetooth connected controllers).</p>
-  <p class="note"><strong>NOTE</strong>: On some platfroms - especially consoles - this function may return false immediately after a gamepad has been connected/selected and may need to be checked in an alarm a few frames (steps) later for it to correctly detect the gamepad.</p>
-  <p> </p>
+  <h1>gamepad_ist_verbunden</h1>
+  <p>Diese Funktion gibt zurück, ob ein Gamepad an den angegebenen &quot;Steckplatz&quot; angeschlossen ist (gibt <span class="inline">true</span> zurück) oder nicht (gibt <span class="inline">false</span> zurück). Normalerweise verwenden Sie diese Funktion in Verbindung mit der Funktion <a href="gamepad_get_device_count.htm"><span class="inline">gamepad_get_device_count()</span></a> Funktion verwenden, um die korrekte Anzahl der verfügbaren Gamepads und/oder Gamepad-&quot;Steckplätze&quot; zu ermitteln. Beachten Sie, dass es zu einer leichten Verzögerung kommen kann, wenn der Benutzer das Gamepad anschließt und <span data-keyref="GameMaker Name">GameMaker</span> es als verbunden erkennt (dies ist insbesondere bei über Bluetooth verbundenen Controllern der Fall).</p>
+  <p class="note"><strong>HINWEIS</strong>: Auf einigen Plattformen - insbesondere Konsolen - kann diese Funktion unmittelbar nach dem Anschließen/Auswählen eines Gamepads einen falschen Wert zurückgeben und muss möglicherweise einige Frames (Schritte) später in einem Alarm überprüft werden, damit das Gamepad korrekt erkannt wird.</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">gamepad_is_connected(numb);</p>
   <table>
     <tbody>
       <tr>
-        <th>Argument</th><th>Type</th>
-        <th>Description</th>
+        <th>Argument</th><th>Typ</th>
+        <th>Beschreibung</th>
      </tr>
       <tr>
-        <td>device</td><td><span data-keyref="Type_Real"></span></td>
-        <td>Which gamepad &quot;slot&quot; to check.</td>
+        <td><span class="notranslate">device</span></td><td><span data-keyref="Type_Real"></span></td>
+        <td><span class="notranslate">Which gamepad &quot;slot&quot; to check.</span></td>
      </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">var gp_num = gamepad_get_device_count();<br />
     for (var i = 0; i &lt; gp_num; i++;)<br />
     {<br />
         if gamepad_is_connected(i) global.gp[i] = true else global.gp[i] = false;<br />
     }</p>
-  <p>The above code loops through the available game pads (or gamepad slots) and then checks each one for a connected gamepad. the returned value is then used to set a global array to <span class="inline">true</span> or <span class="inline">false</span> for use in future checks.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> <span class="notranslate">loops</span> durchläuft die verfügbaren Gamepads (oder Gamepad-Slots) und prüft dann jedes einzelne auf ein angeschlossenes Gamepad. Der zurückgegebene Wert wird dann verwendet, um ein globales Array auf <span class="inline">true</span> oder <span class="inline">false</span> für die Verwendung in zukünftigen Prüfungen zu setzen.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Gamepad_Input.htm">Gamepad Input</a></div>
-        <div style="float:right">Next: <a href="gamepad_get_guid.htm"> gamepad_get_guid </a></div>
+        <div style="float:left">Zurück: <a href="Gamepad_Input.htm">Gamepad-Eingabe</a></div>
+        <div style="float:right">Weiter: <a href="gamepad_get_guid.htm"> gamepad_get_guid </a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2021 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2021 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 gamepad_is_connected

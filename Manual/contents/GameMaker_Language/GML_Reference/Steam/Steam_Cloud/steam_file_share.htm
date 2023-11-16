@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>steam_file_share</title>
+  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
+  <script src="../../../../assets/scripts/main_script.js"></script>
+  <meta name="rh-authors" content="Mark Alexander" />
+  <meta name="topic-comment" content="Reference page for steam_file_share" />
+  <meta name="rh-index-keywords" content="steam_file_share" />
+  <meta name="search-keywords" content="steam_file_share" />
+</head>
+<body>
+  <!--<div class="body-scroll" style="top: 150px;">-->
+  <h1>steam_file_share</h1>
+  <p>Mit dieser Funktion können Sie Ihr Spiel zwingen, die angegebene Datei mit der <span class="notranslate">Steam</span> Cloud zu synchronisieren. Dies ist normalerweise nicht notwendig, da das Spiel am Ende der Spielersitzung automatisch synchronisiert wird, und wird auch nicht von <span class="notranslate">Steam</span> empfohlen, kann aber nützlich sein, um sicherzustellen, dass sensible Informationen sofort synchronisiert werden. Die Funktion gibt einen Wert von 0 zurück, wenn sie aus irgendeinem Grund fehlschlägt, und einen Wert größer als 0, wenn sie erfolgreich ist.</p>
+  <p> </p>
+  <h4>Syntax:</h4>
+  <p class="code">steam_file_share(filename);</p>
+  <table>
+    <tbody>
+      <tr>
+        <th>Argument</th>
+        <th>Beschreibung</th>
+      </tr>
+      <tr>
+        <td><span class="notranslate">filename</span></td>
+        <td>Der Name der Datei, die synchronisiert werden soll.</td>
+      </tr>
+    </tbody>
+  </table>
+  <p> </p>
+  <h4>Rückgabe:</h4>
+  <p class="code">Real</p>
+  <p> </p>
+  <h4>Beispiel:</h4>
+  <p class="code">if !steam_file_persisted(&quot;Save.txt&quot;)<br />
+    {<br />
+        steam_file_share(&quot;Save.txt&quot;);<br />
+    }</p>
+  <p>Die obige <span class="notranslate">code</span> prüft, ob eine Datei in der <span class="notranslate">Steam</span> Cloud gespeichert wurde, und wenn nicht, wird sie synchronisiert.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
+  <div class="footer">
+    <div class="buttons">
+      <div class="clear">
+        <div style="float:left">Zurück: <a href="Steam_Cloud.htm">Dampfwolke</a></div>
+        <div style="float:right">Nächste: <a href="steam_file_delete.htm"><span class="notranslate">steam_file_delete</span></a></div>
+      </div>
+    </div>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
+  </div>
+  <!-- KEYWORDS
+steam_file_share
+-->
+  <!-- TAGS
+steam_file_share
+-->
+</body>
+</html>

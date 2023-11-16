@@ -3,10 +3,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>part_system_automatic_draw</title>
+  <title>teil_system_automatisch_ziehen</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
-  <script src="../../../../../assets/scripts/main_script.js" type="module"></script>
+  <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
   <meta name="topic-comment" content="Reference page for part_system_automatic_draw" />
   <meta name="rh-index-keywords" content="part_system_automatic_draw" />
@@ -14,49 +14,49 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>part_system_automatic_draw</h1>
-  <p>This function can be used to switch off the drawing of a particle system so that any updates done to the system (automatic or otherwise) will not be seen. This is a purely visual option and when set to <span class="inline">false</span> you will not be able to see the particles as they are not drawn, but they still exists and are changing position, colour etc... as they would normally. When automatic drawing is off, you can <i>explicitly</i> order <span data-keyref="GameMaker Name">GameMaker</span> to draw the current state of the particle system using the function <a href="part_system_drawit.htm"><span class="inline">part_system_drawit()</span></a>, and if you set this function to <span class="inline">true</span> again you can switch automatic drawing back on.</p>
-  <p>One thing to note is that if you are using the simple effects created by the functions <a href="../effect_create_above.htm"><span class="inline">effect_create_above()</span></a> or <a href="../effect_create_below.htm"><span class="inline">effect_create_below()</span></a> then you can use the values of 0 (for below effects) or 1 (for above effects) as the particle system index and so toggle the automatic draw for these too (this will also work to toggle drawing for the GML Visual particle effects).</p>
-  <p> </p>
+  <h1>teil_system_automatisch_ziehen</h1>
+  <p>Diese Funktion kann verwendet werden, um <span class="notranslate">switch</span> das Zeichnen eines Partikelsystems abzuschalten, so dass alle Aktualisierungen, die am System vorgenommen werden (automatisch oder anderweitig), nicht gesehen werden. Dies ist eine rein visuelle Option, und wenn sie auf <span class="inline">false</span> gesetzt ist, kannst du die Partikel nicht sehen, da sie nicht gezeichnet werden, aber sie existieren immer noch und ändern ihre Position, Farbe etc... wie sie es normalerweise tun würden. Wenn das automatische Zeichnen ausgeschaltet ist, kannst du <span data-keyref="GameMaker Name">GameMaker</span> <i>explizit</i> anweisen, den aktuellen Zustand des Partikelsystems zu zeichnen, indem du die Funktion <a href="part_system_drawit.htm"><span class="inline">part_system_drawit()</span></a>den aktuellen Zustand des Partikelsystems zu zeichnen, und wenn du diese Funktion wieder auf <span class="inline">true</span> setzt, kannst du <span class="notranslate">switch</span> das automatische Zeichnen wieder einschalten.</p>
+  <p>Zu beachten ist, dass Sie bei der Verwendung der einfachen Effekte, die durch die Funktionen <a href="../effect_create_above.htm"><span class="inline">effect_create_above()</span></a> oder <a href="../effect_create_below.htm"><span class="inline">effect_create_below()</span></a> erstellten einfachen Effekte verwenden, können Sie die Werte 0 (für die unteren Effekte) oder 1 (für die oberen Effekte) als Partikelsystemindex verwenden und so die automatische Zeichnung auch für diese umschalten (dies funktioniert auch für die <span class="notranslate">GML</span> Visual-Partikel-Effekte).</p>
+  <p> </p>
   <h4>Syntax:</h4>
   <p class="code">part_system_automatic_draw(ind, automatic);</p>
   <table>
     <tbody>
       <tr>
         <th>Argument</th>
-        <th>Type</th>
-        <th>Description</th>
+        <th>Typ</th>
+        <th>Beschreibung</th>
       </tr>
       <tr>
-        <td>ind</td>
-        <td><span data-keyref="Type_ID_PartSys">Particle System ID</span></td>
-        <td>The index of the particle system to change.</td>
+        <td><span class="notranslate">ind</span></td>
+        <td><span data-keyref="Type_ID_PartSys">Partikel System ID</span></td>
+        <td><span class="notranslate">The index of the particle system to change.</span></td>
       </tr>
       <tr>
-        <td>automatic</td>
-        <td><span data-keyref="Type_Bool">Boolean</span></td>
-        <td>Whether automatic drawing is on (true) or not (false).</td>
+        <td><span class="notranslate">automatic</span></td>
+        <td><span data-keyref="Type_Bool">Boolesche</span></td>
+        <td><span class="notranslate">Whether automatic drawing is on (true) or not (false).</span></td>
       </tr>
     </tbody>
   </table>
-  <p> </p>
-  <h4>Returns:</h4>
+  <p> </p>
+  <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
-  <p> </p>
-  <h4>Example:</h4>
+  <p> </p>
+  <h4>Beispiel:</h4>
   <p class="code">part_system_automatic_draw(global.Sname, false);</p>
-  <p>The above code switches off automatic drawing for the particle system indexed in the global variable &quot;Sname&quot;.</p>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p>Die obige <span class="notranslate">code</span> schaltet das automatische Zeichnen für das in der globalen Variable &quot;Sname&quot; indizierte Partikelsystem aus.</p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Back: <a href="Particle_Systems.htm">Particle Systems</a></div>
-        <div style="float:right">Next: <a href="part_system_update.htm">part_system_update</a></div>
+        <div style="float:left">Zurück: <a href="Particle_Systems.htm">Partikel-Systeme</a></div>
+        <div style="float:right">Nächste: <a href="part_system_update.htm"><span class="notranslate">part_system_update</span></a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
   </div>
   <!-- KEYWORDS
 part_system_automatic_draw
