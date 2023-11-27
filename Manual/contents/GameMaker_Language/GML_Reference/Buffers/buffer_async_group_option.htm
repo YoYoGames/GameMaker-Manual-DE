@@ -26,7 +26,7 @@
   <p class="note"><b>WICHTIG!</b> Diese Funktion ist derzeit nur für die Ziele PSVita, PS4 und <span class="notranslate">XBox One</span> gültig <span class="notranslate">modules</span>. Bei allen anderen Zielen wird sie nichts bewirken.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">buffer_async_group_option(option, value);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_async_group_option</span>(option, value);</p>
   <table>
     <tbody>
       <tr>
@@ -52,9 +52,9 @@
   <p> </p>
   <h4>Beispiel:</h4>
   <p class="code">buffer_async_group_begin(&quot;save_folder_name&quot;);<br />
-    buffer_async_group_option(&quot;showdialog&quot;, false);<br />
-    buffer_async_group_option(&quot;slottitle&quot;, &quot;Catch The Haggis Save&quot;);<br />
-    buffer_async_group_option(&quot;subtitle&quot;, &quot;All your haggis are saved here!&quot;);<br />
+    <span data-field="title" data-format="default">buffer_async_group_option</span>(&quot;showdialog&quot;, false);<br />
+    <span data-field="title" data-format="default">buffer_async_group_option</span>(&quot;slottitle&quot;, &quot;Catch The Haggis Save&quot;);<br />
+    <span data-field="title" data-format="default">buffer_async_group_option</span>(&quot;subtitle&quot;, &quot;All your haggis are saved here!&quot;);<br />
     save = buffer_save_async(buff, &quot;Player_Save.sav&quot;, 0, 16384);<br />
     buffer_async_group_end();</p>
   <p>Die obige <span class="notranslate">code</span> startet eine <span class="notranslate">buffer</span> Gruppe und legt dann die Gruppenoptionen fest, bevor sie 4 Dateien für die asynchrone Speicherung festlegt. Die Gruppendefinition wird dann beendet (und das Speichern beginnt).</p>

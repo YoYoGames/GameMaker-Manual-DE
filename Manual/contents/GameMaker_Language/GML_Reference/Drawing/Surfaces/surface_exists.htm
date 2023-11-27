@@ -19,7 +19,7 @@
   <p>Diese Funktion ist bei der Arbeit mit Oberflächen aufgrund ihrer flüchtigen Natur unerlässlich. Oberflächen werden immer im Texturspeicher gehalten, was bedeutet, dass sie von einem Moment auf den anderen zerstört werden können (z.B. wenn ein Bildschirmschoner auf Fenstern gestartet wird oder wenn sie auf einem <span class="notranslate">Android</span> Gerät minimiert werden), so dass Sie immer prüfen sollten, ob eine Oberfläche existiert, bevor Sie etwas mit ihr tun (dies schließt das Zeichnen auf dem Bildschirm ein). Das folgende Beispiel <span class="notranslate">code</span> zeigt eine typische Verwendung dieses Befehls im Draw-Ereignis einer Instanz, um zu prüfen, ob eine Oberfläche vorhanden ist, und sie neu zu erstellen, wenn sie entfernt wurde (beachten Sie, dass die Oberfläche ursprünglich im Create-Ereignis des Objekts erstellt wurde).</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">surface_exists(surface_id);</p>
+  <p class="code"><span data-field="title" data-format="default">surface_exists</span>(surface);</p>
   <table>
     <tbody>
       <tr>
@@ -43,9 +43,9 @@
     }<br />
     else<br />
     {<br />
-        if view_current = 1<br />
+        if view_current == 1<br />
         {<br />
-            draw_surface(surf,0,0);<br />
+            draw_surface(surf, 0, 0);<br />
         }<br />
     }</p>
   <p>Die obige <span class="notranslate">code</span> prüft, ob eine in der Variablen &quot;surf&quot; indizierte Oberfläche existiert, und wenn nicht, wird sie neu erstellt. Ist dies der Fall, wird geprüft, welche Ansicht gerade gezeichnet wird, und wenn es Ansicht[1] ist, wird die Oberfläche gezeichnet.</p>

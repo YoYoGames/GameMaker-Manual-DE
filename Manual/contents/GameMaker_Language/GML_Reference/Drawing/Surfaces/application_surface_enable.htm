@@ -20,7 +20,7 @@
   <p>Es wird empfohlen, diese Funktion mit Bedacht zu verwenden, da sie sich darauf auswirkt, wie alles auf dem Bildschirm dargestellt wird. Im Allgemeinen sollten Sie diese Funktion als Option in einem Menü Ihres Spiels einrichten oder sie nur einmal zu Beginn des Spiels aufrufen und unter <span class="notranslate">code</span> angeben, ob Sie sie aktiviert oder deaktiviert haben.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">application_surface_enable(enable);</p>
+  <p class="code"><span data-field="title" data-format="default">application_surface_enable</span>(enable);</p>
   <table>
     <tbody>
       <tr>
@@ -42,11 +42,11 @@
     {<br />
         if application_surface_is_enabled()<br />
         {<br />
-            application_surface_enable(false);<br />
+            <span data-field="title" data-format="default">application_surface_enable</span>(false);<br />
         }<br />
         else<br />
         {<br />
-            application_surface_enable(true);<br />
+            <span data-field="title" data-format="default">application_surface_enable</span>(true);<br />
         }<br />
     }</p>
   <p>Die oben genannten <span class="notranslate">code</span> prüfen, ob eine Taste gedrückt wurde, und schalten die Anwendungsoberfläche je nach ihrem Zustand ein oder aus (wie in einem Optionsmenü).</p>

@@ -19,7 +19,7 @@
   <p>Diese Funktion kann verwendet werden, um den Namen des angegebenen Raums als String zurückzugeben. Bitte beachten Sie, dass es sich hierbei <i>nur</i> um eine Zeichenkette handelt, die nicht verwendet werden kann, um den Raum direkt zu referenzieren - dafür benötigen Sie den <i>Raumindex</i>. Sie können diese Zeichenkette jedoch verwenden, um den <i>Raumindex</i> zu ermitteln, indem Sie die zurückgegebene Zeichenkette zusammen mit der Funktion <a href="../Assets_And_Tags/asset_get_index.htm"><span class="inline">asset_get_index()</span></a>.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">room_get_name(index);</p>
+  <p class="code"><span data-field="title" data-format="default">room_get_name</span>(index);</p>
   <table>
     <tbody>
       <tr>
@@ -39,7 +39,7 @@
   <h4>Beispiel:</h4>
   <p class="code">var roomname = room_get_name(room);<br />
     <br />
-    draw_text(32, 32, roomname);
+    draw_text(32, 32, _roomname);
   </p>
   <p>Die obige <span class="notranslate">code</span> ermittelt den Namen des aktuellen Raums und zeichnet ihn auf den Bildschirm.</p>
   <p> </p>

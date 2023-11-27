@@ -20,7 +20,7 @@
   <p class="note"><b>HINWEIS</b>: Es ist wichtig, dass Sie alle dynamisch erstellten Ressourcen wie diese aus dem Speicher entfernen, wenn Sie sie nicht mehr benötigen, um Speicherlecks zu vermeiden. Wenn Sie also mit der von Ihnen erstellten <span class="notranslate">buffer</span> fertig sind, sollten Sie sie wieder freigeben mit <span style="font-size:1px;"><a href="buffer_delete.htm"><span class="inline">buffer_delete()</span></a></span>.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">buffer_base64_decode(string);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_base64_decode</span>(string);</p>
   <table>
     <tbody>
       <tr>
@@ -39,7 +39,7 @@
   <p> </p>
   <h4>Beispiel:</h4>
   <p class="code">ini_open(&quot;Save.ini&quot;);<br />
-    buff = buffer_base64_decode(ini_read_string(&quot;Save&quot;, &quot;Slot1&quot;, &quot;&quot;));<br />
+    buff = <span data-field="title" data-format="default">buffer_base64_decode</span>(ini_read_string(&quot;Save&quot;, &quot;Slot1&quot;, &quot;&quot;));<br />
     ini_close();</p>
   <p>Die obige <span class="notranslate">code</span> öffnet eine ini-Datei und liest dann eine Zeichenkette daraus in die Decode-Funktion. Diese Funktion gibt einen Index <span class="notranslate">buffer</span> zurück, der in der Variablen &quot;buff&quot; gespeichert wird und die zuvor kodierten und gespeicherten Daten enthält. Die Ini-Datei wird dann geschlossen.</p>
   <p> </p>
