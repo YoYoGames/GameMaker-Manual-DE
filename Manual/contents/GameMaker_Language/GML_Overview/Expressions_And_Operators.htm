@@ -103,6 +103,7 @@
   <div class="droptext" data-targetname="drop-down8">
     <p class="dropspot"><strong><span class="inline2">div</span>, <span class="inline2">mod</span> (<span class="inline2">%</span></strong> ) sind Division und Modulo, wobei div den Betrag angibt, in den ein Wert geteilt werden kann und nur einen ganzzahligen Quotienten ergibt, während mod nur den Rest einer Division angibt. Beachten Sie, dass Sie div oder mod nur mit ganzzahligen Werten verwenden können. Beispiele für die Verwendung: </p>
     <p class="code">secs = time mod 60;<br />
+      secs = time % 60;    // Identical to the above line<br />
       time_str = string(time div 60);</p>
     <p class="dropspot"> </p>
   </div>
@@ -152,7 +153,7 @@
     }</p>
   <p>Abschließend sei noch darauf hingewiesen, dass es für die Verwendung mit bestimmten <a href="../GML_Reference/Data_Structures/Data_Structures.htm">Datenstrukturen</a> und <a href="Arrays.htm">Arrays</a> auch einige &quot;Abkürzungen&quot; gibt, die <b>Accessors</b> genannt werden. Diese ermöglichen es Ihnen, Daten innerhalb dieser Formate schnell und einfach und ohne Funktionsaufrufe hinzuzufügen oder zu ersetzen. Ausführliche Informationen hierzu finden Sie auf der folgenden Seite</p>
   <ul class="colour">
-    <li><a href="Accessors.htm">Accessors</a></li>
+    <li><a data-xref="{title}" href="Accessors.htm">Accessors</a></li>
   </ul>
   <p> </p>
   <p> </p>
