@@ -40,7 +40,7 @@
   <p>In der obigen <span class="notranslate">code</span> für Beispiel 1 gibt es einen <a href="../GML_Reference/Asset_Management/Instances/instance_exists.htm"><span class="inline">instance_exists()</span></a> Aufruf in dem <span class="notranslate">code</span> Block. Das liegt daran, dass die Verwendung der Point-Methode, um auf den Wert einer anderen Instanz zuzugreifen oder diesen zu ändern, einen Fehler auslöst und das Spiel zum Absturz bringt, wenn die Instanz nicht existiert, und es besteht die Möglichkeit, dass dies in diesem Beispiel der Fall ist. In den Beispielen 2 und 3 brauchen wir diese Überprüfung jedoch nicht, da wir <i>wissen</i>, dass die Instanz vorhanden ist, da wir sie in Beispiel 2 erstellt haben, und in Beispiel 3 ist es die andere Instanz in einem Kollisionsereignis. Wenn jedoch die Möglichkeit <i>besteht</i>, dass die Instanz zerstört, deaktiviert oder anderweitig aus dem Raum entfernt werden könnte, während du diese Methode verwendest, solltest du <i>immer</i> vorher mit der <span class="inline">instance_exists()</span> Funktion oder der <a href="../GML_Reference/Asset_Management/Instances/instance_number.htm"><span class="inline">instance_number()</span></a> Funktion.</p>
   <p>Beachten Sie, dass Sie das spezielle <a href="Instance_Keywords.htm">Schlüsselwort</a> &quot;<span class="inline">all</span>&quot; mit dieser Methode nicht verwenden können, um alle Instanzen anzusprechen (z.B.: <span class="inline">all.val = 10</span> würde einen Fehler verursachen), aber Sie <i>können</i> die Schlüsselwörter &quot;<span class="inline">other</span>&quot; und &quot;<span class="inline">self</span>&quot; ohne Probleme verwenden. Beispiel: Verwendung von <span class="inline">other</span> in einem <a href="../../The_Asset_Editors/Object_Properties/Object_Events.htm">Kollisionsereignis</a>:</p>
   <p class="code">// Example 3 other.hp -= 10;<br />
-    if other.hp &lt;= 0<br />
+    if (other.hp &lt;= 0)<br />
     {<br />
         other.sprite_index = spr_E_Dead;<br />
     }</p>
@@ -51,8 +51,8 @@
     <br />
     //or<br />
     <br />
-    var inst = instance_nearest(x, y, obj);<br />
-    inst.speed = 0;
+    var _inst = instance_nearest(x, y, obj);<br />
+    _inst.speed = 0;
   </p>
   <p>Dies sind alles vollkommen gültige Wege, um Variablen in anderen Instanzen zu lesen, zu ändern und zu setzen, und sie funktionieren, weil der Punkt eigentlich ein <i>Operator</i> ist. Er nimmt einen Wert als linken <a class="glossterm" data-glossterm="Operand" href="#">Operanden</a> und eine Variable als rechten Operanden und gibt die Adresse dieser bestimmten Variable im angegebenen Objekt oder der Instanz zurück. Alle Objektnamen, Konstanten, IDs usw. stellen einfach Werte dar, die wie jeder andere Wert behandelt werden können.</p>
   <p>Die andere Möglichkeit, auf Variablen in einer anderen Instanz zu verweisen, besteht in der Verwendung der Funktion <span class="notranslate">GameMaker Language</span> <span class="inline">with()</span> , die <a href="Language_Features/with.htm">hier</a> im Detail erläutert wird:</p>

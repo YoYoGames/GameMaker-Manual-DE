@@ -36,7 +36,7 @@
   <p>Sie könnten dies dann in Ihrem <span class="notranslate">code</span> wie folgt verwenden:</p>
   <p class="code">pos++;<br />
     <br />
-    if (pos &gt;= total_weapons)<br />
+    if (pos &gt;= TOTAL_WEAPONS)<br />
     {<br />
         pos = 0;<br />
     }
@@ -62,38 +62,38 @@
   <p>Ein Enum ist ein &quot;Aufzähler&quot;, der es Ihnen im Wesentlichen ermöglicht, einen eigenen begrenzten Datentyp mit einer Liste konstanter Werte zu erstellen, die wie folgt aufgebaut sind</p>
   <p class="code">enum <i>&lt;variable&gt;</i><br />
     {<br />
-    <i>    &lt;constant&gt;</i> [= <i>&lt;value&gt;</i>],<br />
-    <i>    &lt;constant&gt;</i> [= <i>&lt;value&gt;</i>],<br />
+    <i>    &lt;MEMBER&gt;</i> [= <i>&lt;VALUE&gt;</i>],<br />
+    <i>    &lt;<i>MEMBER</i>&gt;</i> [= <i>&lt;<i>VALUE</i>&gt;</i>],<br />
         // etc...<br />
     }
   </p>
   <p>Im folgenden Beispiel erstellen wir ein Enum für die Farben des Regenbogens und weisen ihm verschiedene Konstanten und Standardwerte zu:</p>
   <p class="code">enum rainbowcolours<br />
     {<br />
-        red,<br />
-        orange,<br />
-        yellow,<br />
-        green,<br />
-        blue,<br />
-        indigo,<br />
-        violet<br />
+        RED,<br />
+        ORANGE,<br />
+        YELLOW,<br />
+        GREEN,<br />
+        BLUE,<br />
+        INDIGO,<br />
+        VIOLET<br />
     }</p>
   <p>Die Enum-Einträge können nur <b>Integer-Zahlen</b> oder <b><a class="glossterm" data-glossterm="Ausdruck" href="#">Ausdrücke</a></b> mit vorhergehenden Enums sein <b>, die zu einer Integer-Zahl ausgewertet werden</b>, und sind standardmäßig von 0 aufwärts nummeriert, so dass unser obiges Beispiel standardmäßig <span class="inline">red = 0</span>, <span class="inline">orange = 1</span>, <span class="inline">yellow = 2</span>, usw. lauten würde.</p>
   <p>Sie können den Enum-Variablen auch zum Zeitpunkt der Erstellung Werte zuweisen:</p>
   <p class="code">enum enum_test<br />
     {<br />
-        val = 10;<br />
+        VAL = 10<br />
     }<br />
     <br />
-    enum rainbowcolours<br />
+    enum RAINBOW<br />
     {<br />
-        red = 5,<br />
-        orange = 5 * 2,<br />
-        yellow = 15,<br />
-        green = 20,<br />
-        blue = 25,<br />
-        indigo = 30,<br />
-        violet = 35 * enum_test.val<br />
+        RED = 5,<br />
+        ORANGE = 5 * 2,<br />
+        YELLOW = 15,<br />
+        GREEN = 20,<br />
+        BLUE = 25,<br />
+        INDIGO = 30,<br />
+        VIOLET = 35 * ENUM_TEST.VAL<br />
     }
   </p>
   <p>Beachten Sie, dass im obigen Beispiel eine andere Aufzählung verwendet wird, um einen Ausdruck für &quot;violet&quot; zu erstellen. Dies funktioniert nur, wenn die Enum, auf die verwiesen wird, <i>vor</i> der Enum erstellt wurde, die sie in einem Ausdruck verwendet, aber es funktioniert nicht für Variablen oder Funktionen, da der Enum-Wert in der Lage sein muss, als Konstante ausgewertet zu werden, wenn das Projekt <a class="glossterm" data-glossterm="Kompilieren" href="#">kompiliert</a> wird. Beachten Sie auch, dass alle Enum-Werte als <b>Integer-Werte</b> ausgewertet werden, und wenn Sie Ihre eigenen erstellen, sollten Sie sich bewusst sein, dass <i>nur Integer-Werte zulässig sind</i>, damit Enums funktionieren. Dieser Wert kann eine beliebige Integer-Zahl sein, die eine Fließkommazahl mit doppelter Genauigkeit darstellen kann, einschließlich negativer Werte.</p>

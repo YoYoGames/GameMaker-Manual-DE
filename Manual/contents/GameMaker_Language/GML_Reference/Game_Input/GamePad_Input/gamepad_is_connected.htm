@@ -20,7 +20,7 @@
   <p class="note"><strong>HINWEIS</strong>: Auf einigen Plattformen - insbesondere Konsolen - kann diese Funktion unmittelbar nach dem Anschließen/Auswählen eines Gamepads einen falschen Wert zurückgeben und muss möglicherweise einige Frames (Schritte) später in einem Alarm überprüft werden, damit das Gamepad korrekt erkannt wird.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">gamepad_is_connected(numb);</p>
+  <p class="code">gamepad_is_connected(device);</p>
   <table>
     <tbody>
       <tr>
@@ -39,9 +39,12 @@
   <p> </p>
   <h4>Beispiel:</h4>
   <p class="code">var gp_num = gamepad_get_device_count();<br />
-    for (var i = 0; i &lt; gp_num; i++;)<br />
+    for (var i = 0; i &lt; gp_num; i++)<br />
     {<br />
-        if gamepad_is_connected(i) global.gp[i] = true else global.gp[i] = false;<br />
+        if gamepad_is_connected(i)<br />
+            global.gp[i] = true<br />
+        else<br />
+            global.gp[i] = false;<br />
     }</p>
   <p>Die obige <span class="notranslate">code</span> <span class="notranslate">loops</span> durchläuft die verfügbaren Gamepads (oder Gamepad-Slots) und prüft dann jedes einzelne auf ein angeschlossenes Gamepad. Der zurückgegebene Wert wird dann verwendet, um ein globales Array auf <span class="inline">true</span> oder <span class="inline">false</span> für die Verwendung in zukünftigen Prüfungen zu setzen.</p>
   <p> </p>
