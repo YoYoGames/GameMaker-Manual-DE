@@ -52,7 +52,7 @@
     <p class="dropspot">Wenn Sie die Helligkeit eines Hintergrunds einfach um 50 % reduzieren möchten, würden Sie eine Farbe wählen, die zu 50 % aus Rot, 50 % aus Grün und 50 % aus Blau besteht, also RGB (128, 128, 128). Dieser Mischmodus wird hauptsächlich zum Zeichnen von Schatten oder zum Erstellen interessanter Ausblendeffekte verwendet.</p>
     <p class="dropspot"> </p>
   </div>
-  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">bm_max</a></p>
+  <p><a class="dropspot" data-rhwidget="DropSpot" data-target="drop-down2" href="#">bm_reverse_subtract</a></p>
   <div class="droptext" data-targetname="drop-down2">
     <p class="dropspot">Dieser Mischmodus ist komplizierter zu erklären, aber im Grunde multipliziert er die Quellfarben mit dem Quellalpha und addiert sie dann zu den Zielfarbwerten, die mit den inversen Quellfarbwerten multipliziert werden. Die eigentliche Mathematik, die hinter bm_max (und den anderen Mischmodi) steckt, werden wir im zweiten Teil unseres Artikels behandeln, aber alles, was Sie wissen müssen, ist, dass das Ergebnis eine &quot;gesättigtere&quot; und hellere Farbe sein wird, ohne zu demselben reinen Weißglanz zu führen, den die Verwendung von <span class="inline">bm_add</span> verursacht.</p>
     <p class="dropspot"><img>Dieser Mischmodus kann nützlich sein, wenn Sie überlappende Bilder zeichnen müssen, ohne dass sie so hell werden, dass man sie nicht mehr sehen kann. Die hellen Teile werden zwar heller, aber sie sollten immer noch ein gewisses Maß an Farbe und Farbton beibehalten. Beachten Sie jedoch, dass der Alphawert des Quellbildes bei Verwendung dieses Mischmodus ebenfalls einen Einfluss auf den endgültigen Effekt hat.</p>
@@ -99,17 +99,29 @@
     <p class="dropspot"><img>Unser Mischmodus sieht also wie folgt aus:</p>
     <p class="code">Source: (128, 255, 64, 255) = (0.5, 1, 0.25, 1)<br />
       Destination: (64, 128, 255, 255) = (0.25, 0.5, 1, 1)<br />
+      <br />
+      <strong>Factors:</strong><br />
       bm_src_alpha (As, As, As, As) = (255, 255, 255, 255) = (1, 1, 1, 1)<br />
       bm_inv_src_alpha (1-As, 1-As, 1-As, 1-As) =  (0, 0, 0, 0)<br />
+      <br />
+      <strong>Formula:</strong><br />
       (Rs,Gs,Bs,As) * bm_src_alpha + (Rd,Gd,Bd,Ad) * bm_inv_src_alpha<br />
+      <br />
+      <strong>Apply factors</strong>:<br />
       (0.5, 1, 0.25, 1) * (1, 1, 1, 1) + (0.25, 0.5, 1, 1) * (0, 0, 0, 0)<br />
       (0.5, 1, 0.25, 1) + (0, 0, 0, 0) = (0.5, 1, 0.25, 1) = (128, 255, 64, 255)</p>
     <p class="dropspot">Wie Sie sehen können, multiplizieren wir die Zielwerte mit 0, wodurch sie ebenfalls den Wert 0 erhalten, was bedeutet, dass die Ausgangsfarben unverändert bleiben, so dass unser endgültiger Farbwert <strong>(128, 255, 64, 255)</strong> ist. Sie können sehen, wie sich die Einbeziehung von Alpha auch auf diesen Wert auswirkt:</p>
     <p class="code">Source (128, 255, 64, 128) = (0.5, 1, 0.25, 0.5)<br />
       Destination: (64, 128, 255, 255) = (0.25, 0.5, 1, 1)<br />
+      <br />
+      <strong>Factors:</strong><br />
       bm_src_alpha (As, As, As, As) = (128, 128, 128, 128) = (0.5, 0.5, 0.5, 0.5)<br />
       bm_inv_src_alpha (1-As, 1-As, 1-As, 1-As) = (0.5, 0.5, 0.5, 0.5)<br />
+      <br />
+      <strong>Formula:</strong><br />
       (Rs,Gs,Bs,As) * bm_src_alpha + (Rd,Gd,Bd,Ad) * bm_inv_src_alpha<br />
+      <br />
+      <strong>Apply factors</strong>:<br />
       (0.5, 1, 0.25, 0.5) * (0.5, 0.5, 0.5, 0.5) + (0.25, 0.5, 1, 1) * (0.5, 0.5, 0.5, 0.5)<br />
       (0.25, 0.5, 0.125, 0.25) + (0.125, 0.25, 0.5, 0.5) = (0.375, 0.75, 0.625, 0.75) = (96, 192, 159, 192)</p>
     <p class="dropspot">Dies ergibt eine endgültige Pixelfarbe (96, 192, 159, 192) und ergibt ein Bild wie das unten gezeigte:</p>
