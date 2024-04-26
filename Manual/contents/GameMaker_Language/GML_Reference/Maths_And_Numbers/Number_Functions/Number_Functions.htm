@@ -20,12 +20,12 @@
   <p>Diese Unterscheidung zwischen Ganzzahlen und Fließkommazahlen ist bei der Entwicklung von <span class="notranslate">platform</span> sehr wichtig, da die Genauigkeit von Berechnungen, die auf einem PC ( <span class="notranslate">Windows</span> ) durchgeführt werden, <i>nicht</i> dieselbe ist wie die Genauigkeit derselben Berechnungen, wenn sie auf einem mobilen Gerät durchgeführt werden. Das bedeutet, dass Sie zum Beispiel bei Vergleichen besonders aufmerksam sein sollten:</p>
   <p class="code">if (image_index == 1)<br />
     {<br />
-        do something...<br />
+        // Do something...<br />
     }</p>
   <p>Wenn wir im obigen Beispiel den Wert <span class="inline">image_speed</span> beispielsweise auf 0,25 gesetzt haben, können Sie nach vier Schritten davon ausgehen, dass der Wert <span class="inline">image_index</span> 1 sein würde, aber aufgrund der Funktionsweise der Fließkommamathematik <i>kann</i> es sich um einen Wert wie 1,0000002 handeln, so dass die Auswertung nicht <span class="inline">true</span> sein wird. Diese Art von Fehlern kann ziemlich schwer zu beheben sein, und daher ist es immer gut, sich dessen bewusst zu sein und im Voraus zu planen und andere Mittel zur Überprüfung von Werten zu verwenden oder die entsprechenden Boden- oder Rundungsfunktionen (unten aufgeführt) zu verwenden, um die zu prüfende Zahl in eine ganze Zahl umzuwandeln (weitere Informationen zur Fließkommamathematik und warum dies ein Problem ist, <a href="https://floating-point-gui.de/" target="_blank">finden Sie hier</a>). Zum Beispiel könnte die obige <span class="notranslate">code</span> geschrieben werden als:</p>
   <p class="code">if (floor(image_index) == 1)<br />
     {<br />
-        do something...<br />
+        // Do something...<br />
     }</p>
   <p>Es ist auch erwähnenswert, dass bei der Verwendung der <b>YoYo Compiler</b> Targets alle Ausdrücke und Funktionen <i>von links nach rechts ausgewertet</i> werden, während sie bei allen anderen Targets <span class="notranslate">platforms</span> <i>von rechts nach links</i> ausgewertet werden, was bedeutet, dass dies - zum Beispiel - je nach Plattform zu unterschiedlichen Ergebnissen führen wird:</p>
   <p class="code">val = max(num, ++num, num++);</p>

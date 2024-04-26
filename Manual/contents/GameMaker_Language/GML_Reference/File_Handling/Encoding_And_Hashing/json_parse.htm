@@ -24,7 +24,7 @@
   </ul>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">json_parse(json, [filter_func], [<span>inhibit_string_convert</span>])</p>
+  <p class="code"><span data-field="title" data-format="default">json_parse</span>(json, [filter_func], [inhibit_string_convert])</p>
   <table>
     <tbody>
       <tr>
@@ -61,10 +61,10 @@
   <p class="code">data = json_parse(json);<br />
     <br />
     // Check if the struct has myObj variable<br />
-    if (variable_struct_exists(data, &quot;myObj&quot;)) <br />
+    if (variable_struct_exists(data, &quot;myObj&quot;))<br />
     {<br />
         // Check if it&#39;s a struct<br />
-        if (is_struct(data.myObj)) <br />
+        if (is_struct(data.myObj))<br />
         {<br />
             // Print all struct members to the log<br />
             var _names = variable_struct_get_names(data.myObj);<br />
@@ -78,10 +78,10 @@
     }<br />
     <br />
     // Check if the struct has myArray variable<br />
-    if (variable_struct_exists(data, &quot;myArray&quot;)) <br />
+    if (variable_struct_exists(data, &quot;myArray&quot;))<br />
     {<br />
         // Check if it&#39;s an array<br />
-        if (is_array(data.myArray)) <br />
+        if (is_array(data.myArray))<br />
         {<br />
             show_debug_message(data.myArray);<br />
         }<br />

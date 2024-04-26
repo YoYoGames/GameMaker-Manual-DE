@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>layer_get_all_elements</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -19,7 +19,7 @@
   <p>Mit dieser Funktion können Sie die <i>Element-IDs</i> der angegebenen Ebene abrufen. Sie geben die ID der Ebene an (die Sie erhalten, wenn Sie die Ebene mit <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) oder den Layernamen (als String - dies hat Auswirkungen auf die Leistung) und die Funktion gibt ein <a href="../../../../GML_Overview/Arrays.htm">Array</a> von IDs zurück, wobei jeder Eintrag im Array eine eindeutige ID für ein Element auf diesem Layer ist. Wenn es sich bei der Ebene beispielsweise um eine Vermögensebene handelt, wird das Array mit den ID-Werten für jedes <span class="notranslate">sprite</span> Vermögen aufgefüllt, das der Ebene zugewiesen ist. Beachten Sie, dass die Verwendung von <span class="notranslate">code</span> für die Arbeit mit Ebenen bedeutet, dass Sie der gleichen Ebene verschiedene Elementtypen zuweisen können - so können Sie z. B. <span class="notranslate">sprite</span> Assets zusammen mit Instanzen haben - in diesem Fall können Sie dann die Funktion <a href="layer_get_element_type.htm"><span class="inline">layer_get_element_type()</span></a> verwenden, um den Typ des Elements zu ermitteln, auf den sich die ID bezieht.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">layer_get_all_elements(layer_id)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_get_all_elements</span>(layer_id)</p>
   <table>
     <tbody>
       <tr>
@@ -42,7 +42,7 @@
   <p class="code">var a = layer_get_all_elements(layer);<br />
     for (var i = 0; i &lt; array_length(a); i++;)<br />
     {<br />
-        if layer_get_element_type(a[i]) == layerelementtype_sprite<br />
+        if (layer_get_element_type(a[i]) == layerelementtype_sprite)<br />
         {<br />
             layer_sprite_destroy(a[i])<br />
         }<br />

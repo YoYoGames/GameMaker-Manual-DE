@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>json_encode</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -28,7 +28,7 @@
   <p class="note"><b>HINWEIS</b>: Die hierarchische Funktionalität von JSON ist durch spezielle DS-Map- und DS-List-Funktionen (z. B. <span class="inline"><a href="../../Data_Structures/DS_Maps/ds_map_add_list.htm" style="font-size: 14px">ds_map_add_list()</a></span> oder <span class="inline"><a href="../../Data_Structures/DS_Lists/ds_list_mark_as_map.htm" style="font-size: 14px">ds_list_mark_as_map()</a></span>) verfügbar, so dass Sie in der Lage sind, Unterlisten und Maps zu kodieren.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">json_encode(map)</p>
+  <p class="code"><span data-field="title" data-format="default">json_encode</span>(map, [prettify])</p>
   <table>
     <tbody>
       <tr>
@@ -52,7 +52,7 @@
     hiscore_map = ds_map_create();<br />
     for (i = 0; i &lt; 10; i ++;)<br />
     {<br />
-        ds_map_add(hiscore_map, name[i], score[i]);<br />
+        ds_map_add(_hiscore_map, name[i], score[i]);<br />
     }<br />
     str = json_encode(hiscore_map);<br />
     get[0] = http_post_string(&quot;http://www.angusgames.com/game?game_id=&quot; + string(global.game_id), str)<br />
