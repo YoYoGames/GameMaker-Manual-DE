@@ -61,7 +61,7 @@
   <p>Die obige <span class="notranslate">code</span> speichert den Inhalt der <span class="notranslate">buffer</span> &quot;<i>buff</i>&quot; in der angegebenen Speicherdatei und speichert die ID des Funktionsaufrufs in der Variablen &quot;<i>saveid</i>&quot;. Wenn die Speicherung abgeschlossen ist, wird das asynchrone Save/Load-Ereignis ausgelöst, und Sie können die <span class="inline">async_load</span> Map nach der korrekten ID der Funktion analysieren, etwa so:</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == saveid<br />
     {<br />
-        if (ds_map_find_value(async_load, &quot;status&quot;) == false) <br />
+        if (ds_map_find_value(async_load, &quot;status&quot;) == false)<br />
         {<br />
             show_debug_message(&quot;Save failed!&quot;);<br />
         }<br />
