@@ -21,7 +21,7 @@
   <p class="note"><strong><em><span class="note">HINWEIS</span></em></strong><em> Diese Funktion ist <span data-keyref="Dialog for debug only"> <strong>nur</strong> zum <strong>Debuggen und Testen</strong></span>gedacht <span data-keyref="Dialog for debug only">und sollte nicht in veröffentlichten Spielen verwendet werden. Zu diesem Zweck sollten Sie eine benutzerdefinierte Benutzeroberfläche erstellen, um Eingaben von Spielern zu erhalten, so dass Sie die vollständige Kontrolle darüber haben, wie die Dialoge aussehen und sich verhalten.</span></em></p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">get_login_async(name, password);</p>
+  <p class="code"><span data-field="title" data-format="default">get_login_async</span>(name, password);</p>
   <table>
     <tbody>
       <tr>
@@ -45,8 +45,8 @@
   <h4>Erweitertes Beispiel:</h4>
   <p>Das <b>Erstellungsereignis</b> (zum Beispiel) des Objekts, das die Anmeldung unseres Benutzers steuert, würde den folgenden Code enthalten:</p>
   <p class="code">ini_open(&quot;Profile.ini&quot;);<br />
-    u = ini_read_string(&quot;User&quot;,&quot;0&quot;,&quot;&quot;);<br />
-    p = ini_read_string(&quot;User&quot;,&quot;1&quot;,&quot;&quot;);<br />
+    u = ini_read_string(&quot;User&quot;, &quot;0&quot;, &quot;&quot;);<br />
+    p = ini_read_string(&quot;User&quot;, &quot;1&quot;, &quot;&quot;);<br />
     ini_close();<br />
     login = get_login_async(u,p);</p>
   <p>Die obige <span class="notranslate">code</span> öffnet eine ini-Datei (oder erstellt eine, wenn sie nicht existiert) und ruft den Namen und das Passwort ab, die in dieser Datei gespeichert sind. Wenn sie nicht existieren, wird als Standardwert eine leere Zeichenkette (&quot;&quot;) zurückgegeben. Diese Werte werden dann in <span class="inline">get_login_async()</span> verwendet, um den Benutzer nach seinem Benutzernamen und seinem Passwort zu fragen, wobei der Index der Anfrage in der Variablen &quot;login&quot; gespeichert wird. Beachten Sie, dass das Spiel und seine Ereignisse normal weiterlaufen, während Sie darauf warten, dass der Benutzer die erforderlichen Informationen angibt.</p>

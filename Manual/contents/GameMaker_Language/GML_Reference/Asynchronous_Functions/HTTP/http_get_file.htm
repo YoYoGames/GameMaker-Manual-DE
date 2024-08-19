@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>http_get_file</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -32,7 +32,7 @@
   </ul>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">http_get_file(url, local_target);</p>
+  <p class="code"><span data-field="title" data-format="default">http_get_file</span>(url, local_target);</p>
   <table>
     <tbody>
       <tr>
@@ -62,14 +62,14 @@
   <p>Die obige <span class="notranslate">code</span> fordert eine Datei von der angegebenen URL an und legt fest, dass sie in den lokalen Speicherbereich heruntergeladen wird (wie in den HTML5-Spieloptionen angegeben), und zwar in ein Verzeichnis &quot;Downloads&quot; mit dem angegebenen Dateinamen (dieser muss nicht mit dem Namen der Quelldatei übereinstimmen, sollte aber die gleiche Dateierweiterung verwenden). Der Index der Karte <span class="inline">async_load</span> wird in der Variablen &quot;file&quot; gespeichert, so dass Sie im Asynchronous Event nach dem richtigen Callback suchen können, und wenn das Speicherverzeichnis nicht existiert, wird es erstellt. Das ausgelöste asynchrone Ereignis wäre das <b>HTTP-Sub-Ereignis</b>, und in diesem Ereignis würden Sie etwas wie das Folgende haben:</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == file<br />
     {<br />
-        var status = ds_map_find_value(async_load, &quot;status&quot;);<br />
-        if (status == 0) <br />
+        var _status = ds_map_find_value(async_load, &quot;status&quot;);<br />
+        if (_status == 0)<br />
         {<br />
-            var path = ds_map_find_value(async_load, &quot;result&quot;);<br />
-            var files = zip_unzip(path, &quot;/NewContent/&quot;);<br />
-            if (files &gt; 0) <br />
+            var _path = ds_map_find_value(async_load, &quot;result&quot;);<br />
+            var _files = zip_unzip(path, &quot;/NewContent/&quot;);<br />
+            if (_files &gt; 0)<br />
             {<br />
-                global.ExtraContent = true;<br />
+                global.extra_content = true;<br />
             }<br />
         }<br />
     }</p>

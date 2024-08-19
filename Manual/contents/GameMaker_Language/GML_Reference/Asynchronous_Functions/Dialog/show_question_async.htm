@@ -20,7 +20,7 @@
   <p class="note"><strong><em><span class="note">HINWEIS</span></em></strong><em> Diese Funktion ist <span data-keyref="Dialog for debug only"> <strong>nur</strong> zum <strong>Debuggen und Testen</strong></span>gedacht <span data-keyref="Dialog for debug only">und sollte nicht in veröffentlichten Spielen verwendet werden. Zu diesem Zweck sollten Sie eine benutzerdefinierte Benutzeroberfläche erstellen, um Eingaben von Spielern zu erhalten, so dass Sie die vollständige Kontrolle darüber haben, wie die Dialoge aussehen und sich verhalten.</span></em></p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">show_question_async(string);</p>
+  <p class="code"><span data-field="title" data-format="default">show_question_async</span>(string);</p>
   <table>
     <tbody>
       <tr>
@@ -47,10 +47,10 @@
     i_d = ds_map_find_value(async_load, &quot;id&quot;);<br />
     if (i_d == msg) <br />
     {<br />
-        if (ds_map_find_value(async_load, &quot;status&quot;)) <br />
+        if (ds_map_find_value(async_load, &quot;status&quot;))<br />
         {<br />
-            coins -= armour[0,5];<br />
-            global.protection += armour[0,0];<br />
+            coins -= armour[0, 5];<br />
+            global.protection += armour[0, 0];<br />
         }<br />
     }</p>
   <p>Die obige <span class="notranslate">code</span> prüft den Schlüssel &quot;id&quot; der zurückgegebenen <span class="inline">DS Map</span> mit dem in der Variablen &quot;msg&quot; gespeicherten Wert. Wenn sie übereinstimmen, wird geprüft, ob eine der beiden Tasten gedrückt wurde, und wenn <span class="inline">true</span> zurückgegeben wird, wird ein Wert von einer Variablen abgezogen und ein Wert zu einer globalen Variablen hinzugefügt.</p>
