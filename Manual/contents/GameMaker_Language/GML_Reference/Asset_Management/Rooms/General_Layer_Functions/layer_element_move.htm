@@ -18,7 +18,7 @@
   <p>Mit dieser Funktion können Sie ein Element von einer Ebene in eine andere verschieben. Sie geben die <b>Element-ID</b> an, wie sie von der Funktion zum Erstellen des Elements oder des Raumeditors oder der Funktion <a href="layer_get_all_elements.htm"><span class="inline">layer_get_all_elements()</span></a>zurückgegeben wird, und dann geben Sie die Ebenen-ID (die Sie erhalten, wenn Sie die Ebene mit <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) oder den Ebenennamen (als String - dies hat Auswirkungen auf die Leistung).</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">layer_element_move(element_id, layer_id)</p>
+  <p class="code">layer_element_move(element_id, layer_id);</p>
   <table>
     <tbody>
       <tr>
@@ -45,7 +45,7 @@
   <h4>Beispiel:</h4>
   <p class="code">var a = layer_get_all_elements(layer);<br />
     asset_layer = layer_create(-100);<br />
-    for (var i = 0; i Alt; array_length(a); i++;)<br />
+    for (var i = 0; i &lt; array_length(a); i++)<br />
     {<br />
         if layer_get_element_type(a[i]) == layerelementtype_sprite<br />
         {<br />
