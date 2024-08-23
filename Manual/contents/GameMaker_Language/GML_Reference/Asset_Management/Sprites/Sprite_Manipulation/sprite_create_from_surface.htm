@@ -90,7 +90,7 @@
     draw_sprite(spr_Body, 0, 0, 0);<br />
     draw_sprite(spr_Clothes, 0, 0, 0);<br />
     draw_sprite(spr_Hair, 0, 0, 0);<br />
-    spr_custom = sprite_create_from_surface(surf, 0, 0, 32, 32, true, true, 16, 16);<br />
+    spr_custom = sprite_create_from_surface(surf, 0, 0, 32, 32, false, false, 16, 16);<br />
     surface_reset_target();<br />
     surface_free(surf);</p>
   <p>Die obige <span class="notranslate">code</span> erstellt eine Oberfläche und speichert ihren Index in der lokalen Variablen &quot;surf&quot;. Dann wird diese Oberfläche angepeilt, gelöscht und mehrere <span class="notranslate">sprites</span> übereinander gezeichnet. Schließlich wird ein neues <span class="notranslate">sprite</span> aus dem auf der Oberfläche gezeichneten zusammengesetzten Bild erstellt und sein Index wird &quot;spr_Custom&quot; zugewiesen, bevor der von der Oberfläche verwendete Speicher freigegeben wird.</p>
