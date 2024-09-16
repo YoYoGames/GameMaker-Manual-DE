@@ -18,7 +18,7 @@
   <p>Mit dieser Funktion können Sie den Inhalt einer Prioritätswarteschlange in eine andere kopieren. Beachten Sie, dass der Inhalt der ursprünglichen Warteschlange <i>NICHT</i> entfernt wird und die ursprüngliche Warteschlange auch nicht zerstört wird. Wenn Sie diese Funktion verwenden, muss die Warteschlange, in die kopiert werden soll, zuvor erstellt worden sein, und wenn sie vor dem Kopieren Elemente enthielt, werden diese zuerst gelöscht (d. h. diese Informationen gehen verloren).</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">ds_priority_copy(id, source);</p>
+  <p class="code">ds_priority_copy(destination, source);</p>
   <table>
     <tbody>
       <tr>
@@ -42,8 +42,8 @@
   <h4>Beispiel:</h4>
   <p class="code">with (instance_create_layer(x, y, &quot;Enemies&quot;, obj_Enemy))<br />
     {<br />
-        p_queue = ds_priority_create();<br />
-        ds_priority_copy(p_queue, other.p_queue);<br />
+    p_queue = ds_priority_create();<br />
+    ds_priority_copy(p_queue, other.p_queue);<br />
     }</p>
   <p>Die obige Funktion erstellt eine neue Instanz und erstellt dann in dieser Instanz eine neue DS-Prioritätswarteschlange und kopiert den Inhalt der Prioritätswarteschlange in der Instanz, auf der der <span class="notranslate">code</span> -Block läuft, in die neu erstellte Instanz-Prioritätswarteschlange.</p>
   <p> </p>

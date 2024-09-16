@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ds_list_copy</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -18,7 +18,7 @@
   <p>Mit dieser Funktion können Sie den Inhalt einer Liste in eine andere kopieren. Beide Listen müssen zuvor erstellt worden sein, und wenn die Liste, <i>in die</i> kopiert werden soll, bereits Informationen enthält, wird diese Liste zuerst gelöscht. Das Endergebnis sind zwei unabhängige Listen, die die gleichen Informationen enthalten.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">ds_list_copy( id, source );</p>
+  <p class="code">ds_list_copy(destination, source);</p>
   <table>
     <tbody>
       <tr>
@@ -42,9 +42,9 @@
   <h4>Beispiel:</h4>
   <p class="code">if !ds_list_empty(main_list)<br />
     {<br />
-        old_list = ds_list_create();<br />
-        ds_list_copy(old_list, main_list);<br />
-        ds_list_clear(main_list);<br />
+    old_list = ds_list_create();<br />
+    ds_list_copy(old_list, main_list);<br />
+    ds_list_clear(main_list);<br />
     }</p>
   <p>Die obige <span class="notranslate">code</span> prüft eine DS-Liste, um festzustellen, ob sie leer ist. Wenn sie nicht leer ist, wird sie in eine andere DS-Liste kopiert (die zuvor erstellt wurde) und dann wird die ursprüngliche Liste geleert.</p>
   <p> </p>
