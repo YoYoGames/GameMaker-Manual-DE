@@ -135,8 +135,8 @@
     {<br />
         gl_Position = gm_Matrices[MATRIX_WORLD_VIEW_PROJECTION] * vec4( in_Position.xyz, 1.0);<br />
         v_vColour = in_BlendWeights;<br />
-         ivec4 t = ivec4(in_BlendIndices);<br />
-         v_mat = gm_Matrices[ t.x ];<br />
+        ivec4 t = ivec4(in_BlendIndices);<br />
+        v_mat = gm_Matrices[ t.x ];<br />
     }
   </p>
   <ul class="colour">
@@ -145,9 +145,6 @@
      
   </ul>
   <p> </p>
-  <ul class="colour"><br />
-     
-  </ul>
   <h4>Syntax:</h4>
   <p class="code"><span data-field="title" data-format="default">vertex_format_add_custom</span>(type, usage);</p>
   <table>
