@@ -62,9 +62,9 @@
   <p class="code">var r_str = &quot;null&quot;;<br />
     if (ds_map_find_value(async_load, &quot;id&quot;) == post) <br />
     {<br />
-        if (ds_map_find_value(async_load, &quot;status&quot;) == 0)<br />
+        if (async_load[? &quot;status&quot;] == 0)<br />
         {<br />
-            _r_str = ds_map_find_value(async_load, &quot;result&quot;);<br />
+            _r_str = async_load[? &quot;result&quot;];<br />
         }<br />
     }</p>
   <p>Die obige <span class="notranslate">code</span> überprüft zunächst die ID der erstellten DS-Map und dann den Status des Rückrufs. Ist der Wert gleich 0 (was einen Erfolg signalisiert), wird das Ergebnis des Rückrufs in einer Variablen zur späteren Verwendung gespeichert, andernfalls enthält die Variable einfach einen Standardwert (in diesem Fall &quot;null&quot;).</p>
