@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>part_emitter_destroy</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -18,7 +18,7 @@
   <p>Diese Funktion entfernt den angegebenen Emitter aus dem angegebenen System und löscht ihn aus dem Speicher (dadurch werden auch keine Partikel mehr von dem angegebenen Emitter produziert, aber sie werden <i>NICHT</i> aus dem Raum entfernt). Diese Funktion sollte immer aufgerufen werden, wenn der angegebene Emitter nicht mehr für das System benötigt wird, um Speicherlecks und Fehler zu vermeiden.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">part_emitter_destroy( ps, ind );</p>
+  <p class="code"><span data-field="title" data-format="default">part_emitter_destroy</span>( ps, ind );</p>
   <table>
     <tbody>
       <tr>
@@ -45,7 +45,7 @@
   <h4>Beispiel:</h4>
   <p class="code">if part_emitter_exists(global.Sname, p_emit)<br />
     {<br />
-        part_emitter_destroy(global.Sname, p_emit1);<br />
+        part_emitter_destroy(global.Sname, p_emit);<br />
     }</p>
   <p>Die obige <span class="notranslate">code</span> prüft, ob der Partikelemitter, der in der Variable &quot;p_emit&quot; indiziert ist, im gegebenen Partikelsystem existiert und wenn ja, wird er zerstört.</p>
   <p> </p>

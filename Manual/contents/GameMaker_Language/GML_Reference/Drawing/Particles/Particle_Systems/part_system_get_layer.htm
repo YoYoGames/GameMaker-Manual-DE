@@ -19,7 +19,7 @@
   <p>Diese Funktion kann verwendet werden, um den eindeutigen Layer-ID-Wert für das angegebene Partikelsystem abzurufen. Sie geben den ID-Wert des Partikelsystems an (wie er von der Funktion <a href="part_system_create_layer.htm"><span class="inline">part_system_create_layer()</span></a>) und die Funktion gibt den ID-Wert der Ebene zurück.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">part_system_get_layer(ind);</p>
+  <p class="code"><span data-field="title" data-format="default">part_system_get_layer</span>(ind);</p>
   <table>
     <tbody>
       <tr>
@@ -41,7 +41,7 @@
   <h4>Beispiel:</h4>
   <p class="code">if (part_system_get_layer(global.p_sys) != &quot;effects_layer&quot;)<br />
     {<br />
-        part_system_layer(global.p_sys, &quot;effects_layer&quot;;<br />
+        part_system_layer(global.p_sys, _effects_layer);<br />
     }</p>
   <p>Die obige <span class="notranslate">code</span> überprüft ein Partikelsystem, um zu sehen, auf welcher Ebene es sich befindet, und wenn es nicht auf der angegebenen Ebene ist, wird es geändert.</p>
   <p> </p>

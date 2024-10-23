@@ -63,7 +63,7 @@
       total = array[0] + array[5];<br />
       <br />
       // Check an array value<br />
-      if array[9] == 10<br />
+      if (array[9] == 10)<br />
       {<br />
           // Do something<br />
       }<br />
@@ -76,11 +76,11 @@
       <br />
       for (var i = 0; i &lt; 10; ++i)<br />
       {<br />
-          total += array[i];<br />
-          draw_text(32, 32 + (i * 32), array[i]);<br />
+          _total += array[i];<br />
+          draw_text(32, 32 + (i * 32), array[i]);<br />
       }<br />
       <br />
-      draw_text(32, 32 + (i * 32), total);
+      draw_text(32, 32 + (i * 32), _total);
     </p>
     <p class="dropspot">Die obige <span class="notranslate">code</span> addiert alle Werte in unserem Array, zeichnet jeden einzelnen von ihnen und zeichnet dann den Gesamtwert am Ende.</p>
     <h3 class="dropspot">       Löschen von Arrays</h3>
@@ -217,7 +217,7 @@
   <p>Auch dies ist nicht erforderlich, wenn die Option <strong>"Beim Schreiben kopieren"</strong> <strong>deaktiviert</strong> ist (dies ist die Standardeinstellung und wird empfohlen).</p>
   <p>Weitere Informationen über Accessors und ihre Funktionsweise sowie ein Beispiel für Arrays finden Sie auf der folgenden Seite:</p>
   <ul class="colour">
-    <li><a href="Accessors.htm">Accessors</a></li>
+    <li><a data-xref="{title}" href="Accessors.htm">Accessors</a></li>
   </ul>
   <p> </p>
   <p> </p>
