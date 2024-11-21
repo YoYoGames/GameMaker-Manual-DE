@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>layer_tilemap_destroy</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -18,7 +18,7 @@
   <p>Diese Funktion zerstört das angegebene Kachelkartenelement. Sie geben die ID der Kachelkarte an (die Sie erhalten, wenn Sie die Kachelkarte mit <a href="layer_tilemap_create.htm"><span class="inline">layer_tilemap_create()</span></a> oder wenn Sie die Layer-ID zusammen mit <a href="layer_tilemap_get_id.htm"><span class="inline">layer_get_tilemap_id()</span></a>) und diese Funktion wird sie entfernen. Beachte, dass dies <i>nicht</i> die Ebene entfernt, sondern nur die Kachelkarte, und wenn die Kachelkarte eine ist, die im Raumeditor hinzugefügt wurde, dann wird die Kachelkarte beim nächsten Verlassen des Raums und der Rückkehr wieder neu erstellt. Wenn der Raum jedoch persistent ist, wird die Kachelkarte entfernt, es sei denn, die Raumpersistenz wird wieder ausgeschaltet.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">layer_tilemap_destroy(tilemap_element_id)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_tilemap_destroy</span>(tilemap_element_id);</p>
   <table>
     <tbody>
       <tr>
@@ -40,7 +40,7 @@
   <h4>Beispiel:</h4>
   <p class="code">var lay_id = layer_get_id(&quot;Tiles_trees&quot;);<br />
     var tile_id = layer_tilemap_get_id(lay_id);<br />
-    if layer_tilemap_exists(lay_id, tile_id)<br />
+    if (layer_tilemap_exists(lay_id, tile_id))<br />
     {<br />
         layer_tilemap_destroy(tile_id);<br />
     }</p>

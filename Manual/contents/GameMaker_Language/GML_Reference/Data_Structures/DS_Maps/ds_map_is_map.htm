@@ -20,7 +20,7 @@
   <p>Beachten Sie, dass dies nur Maps erkennt, die mit der Funktion<span> </span><span class="inline"><a href="ds_map_add_map.htm">ds_map_add_map()</a></span> <span> </span> hinzugefügt wurden.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">ds_map_is_map(id, key)</p>
+  <p class="code"><span data-field="title" data-format="default">ds_map_is_map</span>(id, key)</p>
   <table>
     <tbody>
       <tr>
@@ -46,7 +46,7 @@
     var key = ds_map_find_first(inventory);<br />
     for (var i = 0; i &lt; size; i++)<br />
     {<br />
-        if ds_map_is_map(inventory, key)<br />
+        if (ds_map_is_map(inventory, key))<br />
         {<br />
             ds_map_destroy(inventory[? key]);<br />
         }<br />

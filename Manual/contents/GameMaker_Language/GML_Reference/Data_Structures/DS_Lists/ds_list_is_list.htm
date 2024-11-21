@@ -20,7 +20,7 @@
   <p>Beachten Sie, dass dadurch nur Listen erkannt werden, die mit der Funktion<span> </span><span class="inline"><a href="ds_list_mark_as_list.htm">ds_list_mark_as_list()</a></span> <span> </span> manuell markiert wurden.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">ds_list_is_list(id, pos);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_list_is_list</span>(id, pos);</p>
   <table>
     <tbody>
       <tr>
@@ -45,7 +45,7 @@
   <p class="code">var size = ds_list_size(ships);<br />
     for (var i = 0; i &lt; size; i++)<br />
     {<br />
-        if ds_list_is_list(ships, i)<br />
+        if (ds_list_is_list(ships, i))<br />
         {<br />
             ds_list_destroy(ships[| i]);<br />
         }<br />

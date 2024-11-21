@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>layer_get_name</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -19,7 +19,7 @@
   <p>Mit dieser Funktion können Sie den <i>Namen</i> der angegebenen Ebene abrufen. Sie geben den eindeutigen Wert der Ebenen-ID an, und wenn die Ebene eine der benannten Ebenen ist, die im Raumeditor erstellt wurden, gibt die Funktion eine Zeichenkette mit dem Namen der Ebene zurück. Wenn die Ebene nicht eine der Raumeditor-Ebenen ist (d.h. sie wurde mit <a href="layer_create.htm"><span class="inline">layer_create()</span></a>), wird eine leere Zeichenkette zurückgegeben.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">layer_get_name(layer_id)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_get_name</span>(layer_id)</p>
   <table>
     <tbody>
       <tr>
@@ -42,9 +42,9 @@
   <p class="code">var a = layer_get_all();<br />
     var layer_list = ds_list_create(); for (var i = 0; i Alt; array_length(a); i++;)<br />
     {<br />
-        if layer_get_name(a[i]) != &quot;&quot;<br />
+        if (layer_get_name(_arr_layers[i]) != &quot;&quot;)<br />
         {<br />
-            ds_list_add(layer_list, a[i])<br />
+            array_push(_arr_layers_named, _arr_layers[i]);<br />
         }<br />
     }</p>
   <p>Die obige <span class="notranslate">code</span> ruft die IDs für alle Ebenen im Raum ab und prüft dann unter <span class="notranslate">loops</span>, ob es sich um benannte Ebenen handelt. Wenn dies der Fall ist, wird ihre ID zu einer Liste hinzugefügt.</p>

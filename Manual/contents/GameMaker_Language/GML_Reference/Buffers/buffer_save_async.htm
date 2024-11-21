@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>buffer_save_async</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -26,7 +26,7 @@
   <p class="note"><b>HINWEIS</b>: Bei HTML5 werden die zurückgegebenen Ergebnisse als base64-kodierte Zeichenketten gespeichert, wenn sie in einer Datei gespeichert werden.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">buffer_save_async(buffer, filename, offset, size);</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_save_async</span>(buffer, filename, offset, size);</p>
   <table>
     <tbody>
       <tr>
@@ -61,7 +61,7 @@
   <p>Die obige <span class="notranslate">code</span> speichert den Inhalt der <span class="notranslate">buffer</span> &quot;<i>buff</i>&quot; in der angegebenen Speicherdatei und speichert die ID des Funktionsaufrufs in der Variablen &quot;<i>saveid</i>&quot;. Wenn die Speicherung abgeschlossen ist, wird das asynchrone Save/Load-Ereignis ausgelöst, und Sie können die <span class="inline">async_load</span> Map nach der korrekten ID der Funktion analysieren, etwa so:</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == saveid<br />
     {<br />
-        if ds_map_find_value(async_load, &quot;status&quot;) == false<br />
+        if (ds_map_find_value(async_load, &quot;status&quot;) == false)<br />
         {<br />
             show_debug_message(&quot;Save failed!&quot;);<br />
         }<br />

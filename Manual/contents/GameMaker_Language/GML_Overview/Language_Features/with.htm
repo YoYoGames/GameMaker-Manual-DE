@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
-  <meta name="topic-comment" content="Page outlining the with function" />
+  <meta name="topic-comment" content="Page outlining the with statement" />
   <meta name="rh-index-keywords" content="with" />
   <meta name="search-keywords" content="with" />
 </head>
@@ -22,24 +22,24 @@
   <p>hat genau die gleiche Wirkung, weil es einfach eine Abkürzung der ersten Anweisung ist. Wie <i>können</i> wir also so etwas erreichen? Aus diesem Grund gibt es die Anweisung <span class="inline">with</span> in <span class="notranslate">GML</span>. Die Anweisung <span class="inline">with</span> hat die folgende Syntax:</p>
   <p class="code">with (&lt;expression&gt;)<br />
     {<br />
-        &lt;statement&gt;;<br />
-        &lt;statement&gt;;<br />
-        ...<br />
+    &lt;statement&gt;;<br />
+    &lt;statement&gt;;<br />
+    ...<br />
     }</p>
   <p>Für den <a class="glossterm" data-glossterm="Ausdruck" href="#">Ausdruck</a> können Sie eine oder mehrere Instanzen (oder eine Struktur) angeben, für die der <span class="notranslate">code</span> ausgeführt werden soll, indem Sie eine Instanz-ID, die Objekt-ID (die angibt, dass <i>alle Instanzen</i> im Raum dieses Objekts den <span class="notranslate">code</span> -Block ausführen sollen), die Struktur-ID oder eines der speziellen <a href="../Instance_Keywords.htm">Schlüsselwörter</a> (<span class="inline">all</span> oder <span class="inline">other</span>) verwenden. Dadurch wird der <strong>Geltungsbereich</strong> von <span class="notranslate">code</span> innerhalb der geschweiften Klammern <span class="inline">{}</span> von der Instanz, der Struktur oder der Funktion, die die <span class="notranslate">code</span> tatsächlich enthält, auf die im Ausdruck angegebene Instanz (oder Instanzen oder Struktur) geändert.</p>
   <p>Sobald der Ausdruck den Geltungsbereich von <span class="inline">with</span> festgelegt hat, wird die <a class="glossterm" data-glossterm="Anweisung" href="#">Anweisung</a> für jede der angegebenen Instanzen ausgeführt, als ob diese Instanz die aktuelle Instanz wäre ( <span class="inline">self</span>). Um auf unser ursprüngliches Problem zurückzukommen: Um alle Instanzen des Ball-Objekts um 8 Pixel nach unten zu verschieben, würden Sie also Folgendes eingeben:</p>
   <p class="code">with (obj_ball)<br />
     {<br />
-        y += 8;<br />
+        y += 8;<br />
     }</p>
   <p>Im Wesentlichen handelt es sich um ein <span class="notranslate">loop</span>, und jede <a class="glossterm" data-glossterm="Iteration" href="#">Iteration</a> des <span class="notranslate">loop</span>, das <span class="notranslate">code</span> wird auf einer Instanz des Objekts <span class="inline">obj_ball</span> ausgeführt.</p>
   <p>Wenn Sie mehrere Anweisungen ausführen möchten, schließen Sie diese einfach in geschweifte Klammern ein, wie Sie es auch bei jedem anderen <span class="notranslate">code</span> Block tun würden. Um zum Beispiel alle Bälle in unserem Beispiel an eine zufällige Position zu bewegen und ihnen eine zufällige Geschwindigkeit und Richtung zu geben, würden Sie verwenden:</p>
   <p class="code">with (obj_ball)<br />
     {<br />
-        x = random(room_width);<br />
-        y = random(room_height);<br />
-        speed = 1 + random(2);<br />
-        direction = random(360);<br />
+        x = random(room_width);<br />
+        y = random(room_height);<br />
+        speed = 1 + random(2);<br />
+        direction = random(360);<br />
     }</p>
   <p>Wie oben erwähnt, ist die angegebene Instanz oder Struktur innerhalb der Anweisung(en) zur Zielinstanz (<span class="inline">self</span>) geworden, die den Block <span class="notranslate">code</span> ausführt, was bedeutet, dass die ursprüngliche Instanz (die <span class="inline">with</span> und den gesamten Block <span class="notranslate">code</span> enthält) zur <a href="../Instance_Keywords.htm"><span class="inline">other</span></a> Instanz geworden ist. Um zum Beispiel alle Bälle an die Position der aktuellen Instanz zu verschieben, die den <span class="notranslate">code</span> enthält, kannst du Folgendes eingeben:</p>
   <p class="code">with (obj_ball)<br />
@@ -86,9 +86,9 @@
     {<br />
         if (++count &gt; 10)<br />
         {<br />
-            break;<br />
+            break;<br />
         }<br />
-        hp = 100;<br />
+        hp = 100;<br />
     }</p>
   <p>Das obige <span class="notranslate">code</span> <span class="notranslate">loops</span> durchsucht die Instanzen des Objekts <span class="inline">obj_Enemy</span> im Raum und setzt die Variable <span class="inline">hp</span> für die ersten 10, die es findet, auf 100. Wenn mehr als 10 Instanzen vorhanden sind, ruft <span class="notranslate">code</span> <span class="inline">break</span> auf und endet.</p>
   <p>Ein Beispiel für die Verwendung von <span class="inline">continue</span> in einer <span class="inline">with</span> -Schleife wäre:</p>
