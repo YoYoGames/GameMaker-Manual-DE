@@ -30,9 +30,9 @@
     colour_to_set = shader_get_uniform(sShaderDemo5, &quot;f_Colour2&quot;);</p>
   <p>Sobald Sie die einheitlichen Handles haben, können Sie sie im Shader <span class="notranslate">code</span> für das <b>Draw Event</b> wie folgt einstellen:</p>
   <p class="code">shader_set(sShaderDemo5);<br />
-    shader_set_uniform_f(colour_to_find, 1,1,1 );<br />
-    shader_set_uniform_f(colour_to_set, 1,0,0 );<br />
-    draw_sprite(sprite_index,image_index,x+24, y);<br />
+    shader_set_uniform_f(colour_to_find, 1, 1, 1);<br />
+    shader_set_uniform_f(colour_to_set, 1, 0, 0);<br />
+    draw_sprite(sprite_index, image_index, x + 24, y);<br />
     shader_reset();</p>
   <p>Abschließend ist zu beachten, dass Shader zwar von allen <span class="notranslate">platforms</span> akzeptiert werden, aber dennoch gerätespezifisch sind, und wenn die Hardware oder Software des Geräts Shader nicht verwenden kann, erhalten Sie einen Fehler. Daher sollten Sie überprüfen, ob der Shader kompiliert wurde, bevor Sie Uniformen festlegen oder den Shader selbst verwenden, etwa so:</p>
   <p class="code">if (shader_is_compiled(myShader))<br />
