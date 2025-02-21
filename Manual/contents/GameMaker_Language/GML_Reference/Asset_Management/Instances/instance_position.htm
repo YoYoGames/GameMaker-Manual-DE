@@ -53,7 +53,10 @@
     inst = instance_position(mouse_x, mouse_y, obj_Pause_Button);<br />
     if (inst != noone)<br />
     {<br />
-        with (inst) image_index=1;<br />
+        with (inst)<br />
+        {<br />
+            image_index = 1;<br />
+        }<br />
         instance_create_layer(room_width / 2, 0, &quot;Controllers&quot;, obj_Menu);<br />
     }</p>
   <p>Die obige <span class="notranslate">code</span> prüft, ob eine Kollision mit einer Instanz von &quot;obj_Pause_Button&quot; an der Mausposition vorliegt, und wenn dies der Fall ist, wird die zurückgegebene ID verwendet, um ihren image_index auf einen neuen Wert zu setzen, bevor eine neue Instanz des Objekts &quot;obj_Menu&quot; erstellt wird.</p>

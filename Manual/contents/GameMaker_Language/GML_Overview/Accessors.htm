@@ -23,10 +23,10 @@
     <p class="code">list_index[| index]</p>
     <p class="dropspot">Wenn Sie also <span class="inline">ds_list_create()</span> verwendet haben, um Ihre Liste zu erstellen, würden Sie den Listenindex (den Sie in einer Variablen gespeichert haben) verwenden, um darauf zu verweisen, wobei der &quot;Index&quot;-Wert die Position in der Liste ist, die gesetzt oder hinzugefügt werden soll. Zum Beispiel erstellt die folgende <span class="notranslate">code</span> eine Liste und fügt dann 10 Einträge hinzu, wobei jeder Eintrag auf eine Zufallszahl von 0 bis 9 gesetzt wird:</p>
     <p class="code">ds = ds_list_create();<br />
-      var index = 0;<br />
+      var _index = 0;<br />
       repeat(10)<br />
       {<br />
-          ds[| index++] = irandom(9);<br />
+          ds[| _index++] = irandom(9);<br />
       }</p>
     <p class="dropspot">Beachten Sie, dass, wenn Sie einen Ausdruck verwenden, um einen Verweis auf einen Index hinzuzufügen, der bereits einen Wert hat, der vorherige Wert ersetzt wird und nicht ein weiterer Index zur Liste hinzugefügt wird. Um weitere Einträge hinzuzufügen, müssen Sie die Größe von ds_list kennen und sie an das Ende anhängen. Es ist auch erwähnenswert, dass Sie einen Listenindex setzen können, der <i>größer</i> ist als die Größe der Liste, auf die verwiesen wird, und dies wird diesen Wert setzen, wobei die Liste gleichzeitig erweitert wird und alle Positionen in der Liste bis zum angegebenen Index als 0 initialisiert werden.</p>
     <p class="dropspot">Wenn Sie Ihre Listenstruktur erstellt und mit Daten gefüllt haben, können Sie Werte aus der Liste abrufen, z. B. mit</p>
@@ -56,15 +56,15 @@
     <p class="dropspot">Nachdem Sie Ihr Gitter mit der Funktion <span class="inline">ds_grid_create()</span> erstellt haben, verwenden Sie den Gitterindex, den Sie in einer Variablen gespeichert haben, um darauf zu verweisen, wobei &quot;xpos&quot; und &quot;ypos&quot; die Position innerhalb des Gitters sind, um einen Wert zu erhalten oder zu setzen. Die folgende <span class="notranslate">code</span> beispielsweise erstellt ein Raster, setzt es auf 0 und fügt dann einige Einträge hinzu:</p>
     <p class="code">ds = ds_grid_create();<br />
       ds_grid_clear(ds, 0);<br />
-      var gw = ds_grid_width(ds) - 1;<br />
-      var gh = ds_grid_height(ds) - 1;<br />
+      var _gw = ds_grid_width(ds) - 1;<br />
+      var _gh = ds_grid_height(ds) - 1;<br />
       repeat(10)<br />
       {<br />
-          var xx = irandom(gw);<br />
-          var yy = irandom(gh);<br />
-          if (ds[# xx, yy] == 0)<br />
+          var _xx = irandom(_gw);<br />
+          var _yy = irandom(_gh);<br />
+          if (ds[# _xx, _yy] == 0)<br />
           {<br />
-              ds[# xx, yy] = 1;<br />
+              ds[# _xx, _yy] = 1;<br />
           }<br />
       }</p>
     <p class="dropspot">Wenn Sie Ihre Rasterstruktur erstellt und mit Daten gefüllt haben, können Sie Werte von einer bestimmten Rasterposition abrufen, indem Sie etwas wie folgt eingeben</p>
@@ -84,7 +84,8 @@
     <p class="dropspot">Die Funktion selbst würde etwa so aussehen:</p>
     <p class="code">function array_populate(_array)<br />
       {<br />
-          var a = _array; var i = 0; repeat(25)<br />
+          var a = _array; var i = 0;<br />
+          repeat(25)<br />
           {<br />
               i = irandom(99);<br />
               while (a[i] != 0)<br />

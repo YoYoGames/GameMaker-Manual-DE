@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>camera_get_begin_script</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -19,7 +19,7 @@
   <p>Mit dieser Funktion kann die ID der <a href="../../../GML_Overview/Script_Functions.htm">Skriptfunktion</a> abgerufen werden, die als Beginn <span class="notranslate">script</span> für die angegebene Kamera zugewiesen wurde. Wenn keine <span class="notranslate">script</span> Funktion zugewiesen ist, gibt die Funktion -1 zurück.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">camera_get_begin_script(camera_id)</p>
+  <p class="code"><span data-field="title" data-format="default">camera_get_begin_script</span>(camera_id)</p>
   <table>
     <tbody>
       <tr>
@@ -40,7 +40,7 @@
   <p class="code">var scr = camera_get_begin_script(camera_view[0]);<br />
     if (scr != cutScene) <br />
     {<br />
-        camera_set_update_script(camera_view[0], cutScene);<br />
+        camera_set_begin_script(camera_view[0], cutscene);<br />
     }</p>
   <p>Die obige <span class="notranslate">code</span> prüft die Funktion <span class="notranslate">script</span>, die der Kamera, die dem Viewport[0] zugewiesen ist, als begin <span class="notranslate">script</span> zugewiesen ist, und wenn es nicht &quot;cutScene&quot; ist, wird sie auf diese Funktion gesetzt.</p>
   <p> </p>

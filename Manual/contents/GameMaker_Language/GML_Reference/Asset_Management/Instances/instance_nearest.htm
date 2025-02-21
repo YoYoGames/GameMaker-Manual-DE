@@ -19,7 +19,7 @@
   <p>Diese Funktion prüft alle Instanzen des angegebenen Objekts, um zu sehen, welche dem angegebenen x/y-Punkt am nächsten ist. Alle Prüfungen erfolgen von der angegebenen x/y-Position zum <i>Ursprung</i> (der x/y-Position) der Instanzen des angegebenen Objekts. Wenn keine Instanzen des Objekts existieren, gibt die Funktion das Schlüsselwort <a href="../../../GML_Overview/Instance_Keywords.htm"><span class="inline">noone</span></a>zurück, aber wenn es Instanzen gibt, dann gibt sie die <a href="Instance_Variables/id.htm"><span class="inline">id</span></a> der gefundenen Instanz zurück. Bitte beachten Sie, dass die Instanz, die <span class="notranslate">code</span> ausführt, in die Prüfung einbezogen wird, wenn sie den gleichen Objektindex wie das zu prüfende Objekt hat (dies schließt Prüfungen für übergeordnete Objekte ein, wenn die aufrufende Instanz auch ein Kind des übergeordneten Objekts ist).</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">instance_nearest(x, y, obj);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_nearest</span>(x, y, obj);</p>
   <table>
     <tbody>
       <tr>
@@ -49,7 +49,7 @@
     xx = x;<br />
     x -= 10000;<br />
     inst = instance_nearest(xx, y, object_index);<br />
-    if (inst != id) <br />
+    if (inst != id)<br />
     {<br />
         draw_line(x, y, inst.x, inst.y);<br />
     }<br />
