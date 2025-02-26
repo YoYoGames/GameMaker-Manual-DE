@@ -28,7 +28,10 @@
   <h4>Beispiel:</h4>
   <p class="code">if (image_speed &gt; 0)<br />
     {<br />
-        if (image_index &gt;= image_number - 1) instance_destroy();<br />
+        if (image_index &gt;= image_number - 1)<br />
+        {<br />
+            instance_destroy();<br />
+        }<br />
     }</p>
   <p>Die obige <span class="notranslate">code</span> prüft, ob die <span class="notranslate">sprite</span> animiert ist, und wenn ja, dann prüft sie, ob der aktuelle image_index auf dem letzten Frame ist und zerstört in diesem Fall die Instanz.</p>
   <p> </p>
