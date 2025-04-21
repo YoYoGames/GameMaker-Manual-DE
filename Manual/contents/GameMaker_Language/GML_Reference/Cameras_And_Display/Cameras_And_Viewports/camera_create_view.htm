@@ -20,7 +20,7 @@
   <p>Beachten Sie, dass Kameras, wie alle dynamischen Ressourcen, bei ihrer Erstellung Speicherplatz belegen. Das bedeutet, dass Sie darauf achten müssen, Kameras nicht unnötig zu erstellen und nicht benötigte Kameras durch Aufruf der Funktion <a href="camera_destroy.htm"><span class="inline">camera_destroy()</span></a>. Das bedeutet auch, dass Kameras von Raum zu Raum bestehen bleiben, wenn sie einer <span class="inline">global</span> -Variablen zugewiesen werden (sie bleiben auch bestehen, wenn sie Instanz- oder lokalen Variablen zugewiesen werden, aber Sie können nicht mehr auf sie zugreifen, nachdem Sie den Raum gewechselt haben, daher das Speicherleck), so dass Sie zum Beispiel eine neue Kamera erstellen, sie einer globalen Variablen zuweisen und dann zu Beginn jedes Raums die <span class="inline">camera_set_*</span> -Funktionen verwenden können, um die Eigenschaften einzustellen, bevor Sie sie einem Viewport zuweisen.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">camera_create_view(room_x, room_y, width, height, [angle, object, x_speed, y_speed, x_border, y_border])</p>
+  <p class="code"><span data-field="title" data-format="default">camera_create_view</span>(room_x, room_y, width, height, [angle], [object], [x_speed], [y_speed], [x_border], [y_border])</p>
   <table>
     <tbody>
       <tr>

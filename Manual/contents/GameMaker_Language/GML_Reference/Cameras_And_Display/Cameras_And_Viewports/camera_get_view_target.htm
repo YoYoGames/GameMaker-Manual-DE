@@ -19,7 +19,7 @@
   <p>Diese Funktion kann verwendet werden, um das Verfolgungsziel der angegebenen Kamera abzurufen. Der Rückgabewert kann ein Objektindex, eine Instanz-ID oder -1 sein, wenn kein Verfolgungsziel gesetzt wurde.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">camera_get_view_target(camera_id)</p>
+  <p class="code"><span data-field="title" data-format="default">camera_get_view_target</span>(camera_id)</p>
   <table>
     <tbody>
       <tr>
@@ -40,7 +40,7 @@
   <p class="code">var target = camera_get_view_target(view_camera[0]);<br />
     if (target != obj_Player)<br />
     {<br />
-        camera_set_view_target(view_camera[0], obj_Player);<br />
+        camera_set_view_target(view_camera[0], obj_player);<br />
     }</p>
   <p>Die obige <span class="notranslate">code</span> ruft das Verfolgungsziel der Kamera ab, die dem Ansichtsport[0] zugewiesen ist, und überprüft dann, ob es mit dem Objektindex &quot;obj_Player&quot; übereinstimmt. Wenn dies nicht der Fall ist, wird die Ansichtskamera so eingestellt, dass sie einer Instanz dieses Objekts folgt.</p>
   <p> </p>

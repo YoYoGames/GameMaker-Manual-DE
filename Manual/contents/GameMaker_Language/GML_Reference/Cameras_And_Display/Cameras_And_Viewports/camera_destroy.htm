@@ -18,7 +18,7 @@
   <p>Mit dieser Funktion können Sie jede beliebige Kamera zerstören. Beim Aufruf der Funktion geben Sie den eindeutigen Kamera-ID-Wert an, den Sie aus den <span class="inline">camera_create_*</span> Funktionen oder aus dem <a href="view_camera.htm"><span class="inline">view_camera</span></a> Array, wenn Sie den Raum-Editor verwenden, um den Ansichtsanschluss und die Ansicht einzurichten. Du solltest <i>niemals</i> eine Kamera zerstören, die gerade einer sichtbaren Ansicht zugeordnet ist, es sei denn, du ordnest dieser Ansicht im selben Schritt eine neue Kamera zu, und du solltest <i>immer</i> alle Kameras zerstören, die du über <span class="notranslate">code</span> erstellt hast, wenn sie von deinem Spiel nicht mehr benötigt werden, um Speicherlecks zu vermeiden, und du kannst auch die Standardkameras zerstören, wenn du welche im Raumeditor zugewiesen hast, aber du solltest dem Ansichtsanschluss eine neue Kamera zuweisen (oder sie deaktivieren), sonst erhältst du seltsame Ergebnisse.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">camera_destroy(camera_id)</p>
+  <p class="code"><span data-field="title" data-format="default">camera_destroy</span>(camera_id)</p>
   <table>
     <tbody>
       <tr>
