@@ -28,7 +28,7 @@
   <p>Die Variable &quot;score&quot; wird erhöht <i>, obwohl die Funktion <span class="inline">instance_destroy</span> aufgerufen wurde</i>, und die Instanz wird schließlich am Ende des Ereignisses aus dem Spiel entfernt. Seien Sie vorsichtig, denn wenn Sie (zum Beispiel) eine dynamische Ressource für die Instanz erstellt haben, wie eine Datenstruktur, und dann diese Ressource im Zerstörungsereignis zerstört haben, wenn es irgendwelche Verweise darauf gibt, nachdem die Zerstörungsfunktion oder -aktion ausgeführt wurde, dann erhalten Sie einen &quot;unbekannten Ressourcen&quot;-Fehler, da das Zerstörungsereignis sie aus dem Spiel entfernt hat.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">instance_destroy([id, execute_event_flag]);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_destroy</span>([id, execute_event_flag]);</p>
   <table>
     <tbody>
       <tr>
