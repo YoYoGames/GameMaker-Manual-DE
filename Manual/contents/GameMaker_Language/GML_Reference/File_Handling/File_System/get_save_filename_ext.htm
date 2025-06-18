@@ -21,7 +21,7 @@
   <p class="note"><b>HINWEIS</b>: Diese Funktion ist nur für die Ziele <span class="notranslate">Windows</span> und <span class="notranslate">macOS</span> gültig.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">get_save_filename_ext(filter, fname, directory, caption);</p>
+  <p class="code"><span data-field="title" data-format="default">get_save_filename_ext</span>(filter, fname, directory, caption)</p>
   <table>
     <tbody>
       <tr>
@@ -55,7 +55,7 @@
     file = get_save_filename_ext(&quot;screenshot|*.png&quot;, &quot;&quot;, working_directory, &quot;Save a level here&quot;);<br />
     if (file != &quot;&quot;) <br />
     {<br />
-        screen_save(file);<br />
+        screen_save(_file);<br />
     }</p>
   <p>Die obige <span class="notranslate">code</span> fordert den Benutzer auf, eine Bilddatei auszuwählen, die im Arbeitsverzeichnis gespeichert werden soll, und prüft dann den zurückgegebenen Dateinamen und den Pfad. Wenn es sich nicht um eine leere Zeichenfolge handelt, wird ein Bildschirmfoto erstellt und unter dem angegebenen Namen gespeichert.</p>
   <p> </p>
