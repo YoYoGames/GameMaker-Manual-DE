@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>mp_linear_step_object</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -19,7 +19,7 @@
   <p>Mit dieser Funktion weisen Sie eine Instanz an, einen &quot;Schritt&quot; in Richtung eines bestimmten Punktes zu machen, der durch die Werte xgoal und ygoal angegeben wird. Die Größe des Schrittes (d.h. wie viele Pixel sich die Instanz pro Schritt bewegen soll) wird durch die Schrittgröße angegeben, und wenn die Instanz bereits an der Position ist, wird sie anhalten und sich nicht weiter bewegen, im Gegensatz zu anderen, einfacheren Funktionen wie <a href="../Movement/move_towards_point.htm"><span class="inline">move_towards_point()</span></a>. Die Schrittweite ist auch der Abstand &quot;vor&quot; dem das Objekt bei jedem Schritt auf eine Kollision prüft, und du kannst wählen, ob die Instanz bei einer Kollision mit einem Objekt oder einer Instanz deiner Wahl anhält.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">mp_linear_step_object(xgoal, ygoal, stepsize, obj);</p>
+  <p class="code"><span data-field="title" data-format="default">mp_linear_step_object</span>(xgoal, ygoal, stepsize, obj)</p>
   <table>
     <tbody>
       <tr>
@@ -56,7 +56,7 @@
   <h4>Beispiel:</h4>
   <p class="code">if mp_linear_step_object(mouse_x, mouse_y, 5, obj_Wall)<br />
     {<br />
-        instance_create_layer(x, y, &quot;Effects&quot;, obj_Explosion);<br />
+        instance_create_layer(x, y, &quot;Effects&quot;, obj_explosion);<br />
         instance_destroy();<br />
     }</p>
   <p>Die obige <span class="notranslate">code</span> lässt das Objekt mit einer Geschwindigkeit von 5 Pixeln pro Schritt auf die Maus zugehen, wobei nur auf Kollisionen mit dem Objekt &quot;obj_Wall&quot; geprüft wird. Sobald es die Mausposition erreicht hat, wird es ein Objekt &quot;obj_Explosion&quot; erzeugen und sich selbst zerstören.</p>

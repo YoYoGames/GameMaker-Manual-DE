@@ -19,7 +19,7 @@
   <p>Diese Funktion gibt den nächsten in der DS-Map gespeicherten Schlüssel <i>nach dem</i> in der Funktion angegebenen Schlüssel zurück. Dies kann nützlich sein, wenn Sie die DS-Map auf der Suche nach etwas durchlaufen müssen, sollte aber nach Möglichkeit vermieden werden, da es langsam sein kann. Wenn kein solcher Schlüssel existiert, gibt die Funktion <span class="inline">undefined</span> zurück. Sie sollten dies immer mit der <a href="../../Variable_Functions/is_undefined.htm"><span class="inline">is_undefined()</span></a> Funktion.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">ds_map_find_next(id, key);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_map_find_next</span>(id, key)</p>
   <table>
     <tbody>
       <tr>
@@ -47,9 +47,10 @@
     {<br />
         if (key != &quot;gold&quot;)<br />
         {<br />
-            key = ds_map_find_next(inventory, key);<br />
+            break;<br />
         }<br />
-        else break;<br />
+        <br />
+        _key = ds_map_find_next(inventory, _key);<br />
     }</p>
   <p>Die obige <span class="notranslate">code</span> erstellt einige temporäre Variablen, ruft dann die Größe der DS-Map ab und findet den ersten Schlüssel, den der Computer in der Map gespeichert hat. Anschließend wird mit <span class="inline">for</span> <span class="notranslate">loop</span> die DS-Map auf der Suche nach dem Schlüsselwert &quot;gold&quot; durchlaufen. Wenn er ihn findet, wird die <span class="notranslate">loop</span> geöffnet.</p>
   <p> </p>

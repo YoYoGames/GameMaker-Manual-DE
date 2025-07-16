@@ -19,7 +19,7 @@
   <p>Diese Funktion berechnet den Abstand vom Rand der Bounding Box der aufrufenden Instanz zur angegebenen x/y-Position im Raum, wobei der Rückgabewert in Pixeln angegeben wird. Beachten Sie, dass die Ergebnisse falsch sind, wenn das aufrufende Objekt keine <span class="notranslate">sprite</span> oder keine Maske definiert hat.</p>
   <p> </p>
   <h4><b>Syntax:</b></h4>
-  <p class="code">distance_to_point(x, y);</p>
+  <p class="code"><span data-field="title" data-format="default">distance_to_point</span>(x, y)</p>
   <table>
     <tbody>
       <tr>
@@ -43,7 +43,7 @@
   <h4>Beispiel:</h4>
   <p class="code">if (distance_to_point(obj_Player.x, obj_Player.y) &lt; range)<br />
     {<br />
-        canshoot = true;<br />
+        can_shoot = true;<br />
     }</p>
   <p>Die obige <span class="notranslate">code</span> prüft den Abstand zur x/y-Position des Spielerobjekts, und wenn dieser kleiner ist als der in der Variable &quot;range&quot; gespeicherte Wert, wird die Variable &quot;canshoot&quot; auf true gesetzt.</p>
   <p> </p>

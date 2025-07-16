@@ -21,7 +21,7 @@
   <p>Beachte, dass du anstelle eines Objektindexes das <a href="../../../GML_Overview/Instance_Keywords.htm">Instanzschlüsselwort</a> <span class="inline">all</span> angeben kannst, um nach allen Instanzen im aktuellen Raum zu suchen, was auch die Instanz einschließen kann, die <span class="notranslate">code</span> ausführt (abhängig von <span class="inline">notme</span> <span class="notranslate">argument</span>).</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">collision_line_list(x1, y1, x2, y2, obj, prec, notme, list, ordered);</p>
+  <p class="code"><span data-field="title" data-format="default">collision_line_list</span>(x1, y1, x2, y2, obj, prec, notme, list, ordered)</p>
   <table>
     <tbody>
       <tr>
@@ -82,10 +82,10 @@
   <p> </p>
   <h4>Beispiel:</h4>
   <p class="code">var _list = ds_list_create();<br />
-    var _num = collision_line_list(x - 100, y, x + 100, y, obj_Enemy, false, true, _list, false);<br />
-    if (_num &gt; 0) <br />
+    var _num = collision_line_list(x - 100, y, x + 100, y, obj_enemy, false, true, _list, false);<br />
+    if (_num &gt; 0)<br />
     {<br />
-        for (var i = 0; i &lt; _num; ++i;)<br />
+        for (var i = 0; i &lt; _num; ++i)<br />
         {<br />
             instance_destroy(_list[| i]);<br />
         }<br />

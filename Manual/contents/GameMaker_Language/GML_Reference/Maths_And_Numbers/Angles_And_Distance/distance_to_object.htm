@@ -19,7 +19,7 @@
   <p>Diese Funktion berechnet den Abstand vom Rand der Bounding Box der aufrufenden Instanz zum nächstgelegenen Rand der nächstgelegenen Instanz des angegebenen Objekts. Das Objekt kann ein Objektindex oder eine bestimmte Instanz-ID sein, sowie die <a href="../../../GML_Overview/Instance_Keywords.htm"><i>Schlüsselwort</i></a> <b>sein</b>, und der Abstand wird in Pixel zurückgegeben. Beachten Sie, dass die Ergebnisse falsch sind, wenn eines der Objekte keine <span class="notranslate">sprite</span> oder keine Maske definiert hat.</p>
   <p> </p>
   <h4><b>Syntax:</b></h4>
-  <p class="code">distance_to_object(obj);</p>
+  <p class="code"><span data-field="title" data-format="default">distance_to_object</span>(obj)</p>
   <table>
     <tbody>
       <tr>
@@ -41,7 +41,7 @@
   <h4>Beispiel:</h4>
   <p class="code">if (distance_to_object(obj_Player) &lt; range)<br />
     {<br />
-        canshoot = true;<br />
+        can_shoot = true;<br />
     }</p>
   <p>Die obige <span class="notranslate">code</span> prüft den Abstand zum Spielerobjekt, und wenn dieser kleiner ist als der in der Variable &quot;range&quot; gespeicherte Wert, wird die Variable &quot;canshoot&quot; auf true gesetzt.</p>
   <p> </p>

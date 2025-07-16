@@ -20,7 +20,7 @@
   <p><img alt="Point direction example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Maths/point_direction.png" /></p>
   <p> </p>
   <h4><b>Syntax:</b></h4>
-  <p class="code">point_direction(x1, y1, x2, y2)</p>
+  <p class="code"><span data-field="title" data-format="default">point_direction</span>(x1, y1, x2, y2)</p>
   <table>
     <tbody>
       <tr>
@@ -55,7 +55,7 @@
     ey = instance_nearest(x, y, enemy).y;<br />
     with (instance_create_layer(x, y, &quot;Bullets&quot;, obj_Missile))<br />
     {<br />
-        direction = point_direction(x, y, ex, ey);<br />
+        direction = point_direction(x, y, _ex, _ey);<br />
     }</p>
   <p>Die obige <span class="notranslate">code</span> ermittelt die x- und y-Koordinaten des nächstgelegenen Gegners und übergibt sie dann an ein Bullet-Objekt, das in der Funktion point_direction verwendet wird, um seine Bewegungsrichtung korrekt einzustellen.</p>
   <p> </p>

@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>mp_linear_step</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -20,7 +20,7 @@
   <p class="note"><span class="note"><b>HINWEIS</b></span> Diese Funktion versucht nicht, einen Umweg zu machen, wenn sie auf ein Hindernis stößt, sie scheitert einfach und hält die Fahrt an.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">mp_linear_step(xgoal, ygoal, stepsize, checkall);</p>
+  <p class="code"><span data-field="title" data-format="default">mp_linear_step</span>(xgoal, ygoal, stepsize, checkall)</p>
   <table>
     <tbody>
       <tr>
@@ -52,7 +52,7 @@
   <h4>Beispiel:</h4>
   <p class="code">if mp_linear_step(mouse_x, mouse_y, 5, 0)<br />
     {<br />
-        instance_create_layer(x, y, &quot;Effects&quot;, obj_Explosion);<br />
+        instance_create_layer(x, y, &quot;Effects&quot;, obj_explosion);<br />
         instance_destroy();<br />
     }</p>
   <p>Die obige <span class="notranslate">code</span> wird das Objekt mit einer Geschwindigkeit von 5 Pixeln pro Schritt auf die Maus zubewegen. Sobald es die Mausposition erreicht hat, wird es ein Objekt &quot;obj_Explosion&quot; erstellen und sich selbst zerstören.</p>

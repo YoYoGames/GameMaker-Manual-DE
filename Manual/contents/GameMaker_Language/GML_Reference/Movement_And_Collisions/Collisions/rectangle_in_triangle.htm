@@ -19,7 +19,7 @@
   <p>Diese Funktion prüft einen von Ihnen definierten rechteckigen Bereich daraufhin, ob er entweder nicht kollidiert, vollständig innerhalb der Grenzen des Ziels liegt oder ob er lediglich einen definierten dreieckigen Bereich berührt. Wenn sie sich nicht berühren, gibt die Funktion den Wert 0 zurück, wenn die Quelle vollständig innerhalb des Ziels liegt, gibt sie den Wert 1 zurück, und wenn sie sich lediglich überlappen, gibt sie den Wert 2 zurück. Die folgende Abbildung veranschaulicht dies:</p>
   <p><img alt="Rectangle triangle collision example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Movement_Collisions/rectangle_in_triangle.png" /></p>
   <h4>Syntax:</h4>
-  <p class="code">rectangle_in_triangle(sx1, sy1, sx2, sy2, dx1, dy1, dx2, dy2, dx3, dy3);</p>
+  <p class="code"><span data-field="title" data-format="default">rectangle_in_triangle</span>(sx1, sy1, sx2, sy2, dx1, dy1, dx2, dy2, dx3, dy3)</p>
   <table>
     <tbody>
       <tr>
@@ -76,11 +76,11 @@
   <p class="code">var inst = instance_nearest(x, y, obj_Player);<br />
     if (instance_exists(inst)) <br />
     {<br />
-        var x1 = x + lengthdir_x(100, image_angle - 45);<br />
-        var y1 = y + lengthdir_y(100, image_angle - 45);<br />
-        var x2 = x + lengthdir_x(100, image_angle + 45);<br />
-        var y2 = y + lengthdir_y(100, image_angle + 45);<br />
-        if (rectangle_in_triangle(inst.bbox_left, inst.bbox_top, inst.bbox_right, inst.bbox_bottom, x, y, x1, y1, x2, y2) == 1) <br />
+        var _x1 = x + lengthdir_x(100, image_angle - 45);<br />
+        var _y1 = y + lengthdir_y(100, image_angle - 45);<br />
+        var _x2 = x + lengthdir_x(100, image_angle + 45);<br />
+        var _y2 = y + lengthdir_y(100, image_angle + 45);<br />
+        if (rectangle_in_triangle(_inst.bbox_left, _inst.bbox_top, _inst.bbox_right, _inst.bbox_bottom, x, y, _x1, _y1, _x2, _y2) == 1)<br />
         {<br />
             can_see = true;<br />
         }<br />

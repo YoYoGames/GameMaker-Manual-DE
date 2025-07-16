@@ -19,7 +19,7 @@
   <p class="note"><b>HINWEIS</b>: Dies ist besonders nützlich, wenn Sie alle Instanzen in einem Raum deaktivieren möchten, da ein physischer Körper auch nach der Deaktivierung weiterhin in der Physikwelt berechnet und simuliert wird.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">physics_pause_enable(flag)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_pause_enable</span>(flag)</p>
   <table>
     <tbody>
       <tr>
@@ -41,7 +41,7 @@
     {<br />
         physics_pause_enable(true);<br />
         instance_deactivate_all(true);<br />
-        instance_create_layer(x, y, &quot;Controllers&quot;, obj_PauseMenu);<br />
+        instance_create_layer(x, y, &quot;Controllers&quot;, obj_pause_menu);<br />
     }</p>
   <p>Das obige <span class="notranslate">code</span> prüft, ob das Betriebssystem angehalten wurde, und wenn dies der Fall ist, hält es die Physikwelt an, deaktiviert alles außer sich selbst und erstellt dann eine Instanz des Pausenmenüs.</p>
   <p> </p>

@@ -34,7 +34,7 @@
   <p>Die obige <span class="notranslate">code</span> startet eine <span class="notranslate">buffer</span> Gruppe und setzt sie so, dass 4 Dateien asynchron gespeichert werden. Die Gruppendefinition wird dann beendet (zu diesem Zeitpunkt beginnt die Speicherung), wobei die ID des Funktionsaufrufs in der Variablen &quot;<i>save_id</i>&quot; gespeichert wird. Wenn der Speichervorgang abgeschlossen ist, wird das asynchrone Save/Load-Ereignis ausgelöst, und Sie können die Map <span class="inline">async_load</span> nach der korrekten ID der Funktion durchsuchen, etwa so:</p>
   <p class="code">if ds_map_find_value(async_load, &quot;id&quot;) == saveid<br />
     {<br />
-        if (ds_map_find_value(async_load, &quot;status&quot;) == false) <br />
+        if (ds_map_find_value(async_load, &quot;status&quot;) == false)<br />
         {<br />
             show_debug_message(&quot;Save failed!&quot;);<br />
         }<br />

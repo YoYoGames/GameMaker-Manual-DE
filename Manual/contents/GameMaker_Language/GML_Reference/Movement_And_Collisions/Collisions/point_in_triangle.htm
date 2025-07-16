@@ -19,7 +19,7 @@
   <p>Wenn Sie diese Funktion verwenden, definieren Sie eine dreieckige Fläche und <span data-keyref="GameMaker Name">GameMaker</span> ermittelt, ob der angegebene Punkt innerhalb der Grenzen liegt oder nicht. Wenn der Punkt innerhalb des definierten Dreiecks liegt, gibt die Funktion <span class="inline">true</span> zurück, andernfalls <span class="inline">false</span>.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">point_in_triangle(px, py, x1, y1, x2, y2, x3, y3);</p>
+  <p class="code"><span data-field="title" data-format="default">point_in_triangle</span>(px, py, x1, y1, x2, y2, x3, y3)</p>
   <table>
     <tbody>
       <tr>
@@ -68,14 +68,11 @@
   <p class="code">var inst = instance_nearest(x, y, obj_Player);<br />
     if (instance_exists(inst)) <br />
     {<br />
-        var x1 = x + lengthdir_x(100, image_angle - 45);<br />
-        var y1 = y + lengthdir_y(100, image_angle - 45);<br />
-        var x2 = x + lengthdir_x(100, image_angle + 45);<br />
-        var y2 = y + lengthdir_y(100, image_angle + 45);<br />
-        if (point_in_triangle(inst.x, inst.y, x, y, x1, y1, x2, y2)) <br />
-        {<br />
-            can_see = true;<br />
-        }<br />
+        var _x1 = x + lengthdir_x(100, image_angle - 45);<br />
+        var _y1 = y + lengthdir_y(100, image_angle - 45);<br />
+        var _x2 = x + lengthdir_x(100, image_angle + 45);<br />
+        var _y2 = y + lengthdir_y(100, image_angle + 45);<br />
+        _can_see = point_in_triangle(_inst.x, _inst.y, x, y, _x1, _y1, _x2, _y2);<br />
     }</p>
   <p>Die obige <span class="notranslate">code</span> verwendet die Funktion <span class="inline">point_in_triangle</span> als &quot;Sichtkegel&quot;, um nach einer Instanz von &quot;obj_player&quot; zu suchen und setzt eine Variable auf <span class="inline">true</span>, wenn die x/y-Position des Objekts innerhalb des definierten Dreiecks liegt.</p>
   <p> </p>

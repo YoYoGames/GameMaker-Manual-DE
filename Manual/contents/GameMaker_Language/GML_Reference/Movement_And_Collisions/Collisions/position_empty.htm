@@ -19,7 +19,7 @@
   <p>Diese Funktion prüft, ob eine gegebene Position mit einer <i>Instanz</i> kollidiert, die eine gültige Kollisionsmaske an der gegebenen Position hat.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">position_empty(x, y);</p>
+  <p class="code"><span data-field="title" data-format="default">position_empty</span>(x, y)</p>
   <table>
     <tbody>
       <tr>
@@ -46,7 +46,7 @@
     yy = random(room_height);<br />
     if (position_empty(xx, yy)) <br />
     {<br />
-        instance_create_layer(xx, yy, &quot;Bullets&quot;, obj_Bomb);<br />
+        instance_create_layer(_xx, _yy, &quot;Bullets&quot;, obj_bomb);<br />
     }</p>
   <p>Dies wird eine zufällige Position irgendwo im Raum auf eine Kollision überprüfen und wenn es keine gibt, wird eine Instanz von obj_Bomb erstellt.</p>
   <p> </p>

@@ -20,7 +20,7 @@
   <p><img alt="Rectangle circle collision example" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Movement_Collisions/rectangle_in_circle.png" /></p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">rectangle_in_circle(sx1, sy1, sx2, sy2, x, y, rad);</p>
+  <p class="code"><span data-field="title" data-format="default">rectangle_in_circle</span>(sx1, sy1, sx2, sy2, x, y, rad)</p>
   <table>
     <tbody>
       <tr>
@@ -65,7 +65,7 @@
   <p class="code">inst = instance_nearest(x, y, obj_Bullet);<br />
     if (instance_exists(inst)) <br />
     {<br />
-        if (rectangle_in_circle(inst.x - 5, inst.y - 5, inst.x + 5, inst.y + 5, x, y - 25, 20) &gt; 0) <br />
+        if (rectangle_in_circle(_inst.x - 5, _inst.y - 5, _inst.x + 5, _inst.y + 5, x, y - 25, 20) &gt; 0)<br />
         {<br />
             hit = true;<br />
         }<br />
