@@ -116,7 +116,7 @@
   <p> </p>
   <p>Ein wichtiges Merkmal von Accessors ist die Tatsache, dass sie miteinander <i>verkettet</i> werden können. Das bedeutet, dass Sie bei mehreren verschachtelten Datenstrukturen und/oder Arrays nicht mehr eine Vielzahl von Funktionen verwenden müssen, um auf einen Wert zuzugreifen, der tief in der verschachtelten Struktur liegt. Nehmen wir zum Beispiel an, Sie haben ein Array, und jedes Element im Array ist eine DS-Liste, etwa so:</p>
   <p class="code">array = array_create(3);<br />
-    for (var i = 0; i &lt; 3; ++i;)<br />
+    for (var i = 0; i &lt; 3; ++i)<br />
     {<br />
         array[i] = ds_list_create();<br />
         switch(i)<br />
