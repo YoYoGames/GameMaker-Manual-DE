@@ -59,9 +59,9 @@
   <h4>Beispiel:</h4>
   <p class="code">var _a = [10, 9, 8, 7, 6, 5];<br />
     <br />
-    array_sort(_a, function(elm1, elm2)<br />
+    array_sort(_a, function(current, next)<br />
     {<br />
-        return elm1 - elm2;<br />
+        return current - next;<br />
     });
   </p>
   <p>Die obige <span class="notranslate">code</span> verwendet eine benutzerdefinierte Sortierfunktion, um das Array in aufsteigender Reihenfolge zu sortieren. Die Sortierfunktion nimmt die beiden Array-Elemente <span class="inline">elm1</span> und <span class="inline">elm2</span> und führt eine Subtraktion an ihnen durch. Wenn <span class="inline">elm1</span> größer als <span class="inline">elm2</span> ist, ergibt die Subtraktion eine positive Zahl, die <span class="inline">elm1</span> nach <span class="inline">elm2</span> verschiebt und sie somit in eine aufsteigende Reihenfolge bringt.</p>
