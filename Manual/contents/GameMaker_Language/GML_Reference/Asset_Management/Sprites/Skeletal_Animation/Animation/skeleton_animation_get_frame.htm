@@ -19,7 +19,7 @@
   <p>Diese Funktion gibt die Bildnummer der Animation auf der angegebenen Animationsspur zurück. Die Funktion gibt -1 zurück, wenn der angegebenen Spur keine Animation zugeordnet ist.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">skeleton_animation_get_frame(track);</p>
+  <p class="code"><span data-field="title" data-format="default">skeleton_animation_get_frame</span>(track)</p>
   <table>
     <tbody>
       <tr>
@@ -40,7 +40,7 @@
   <p> </p>
   <h4>Beispiel:</h4>
   <p class="code">var frame = skeleton_animation_get_frame(0);<br />
-    if (frame &gt; 0 &amp;&amp; frame &lt; 2) <br />
+    if (frame &gt; 0 &amp;&amp; frame &lt; 2)<br />
     {<br />
         var box = skeleton_get_minmax();<br />
         var ww = (box[2] - box[0]) / 2;<br />
