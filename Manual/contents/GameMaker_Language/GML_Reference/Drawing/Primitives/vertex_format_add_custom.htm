@@ -55,7 +55,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     Die Verwendung dieser Konstanten muss ebenfalls definiert werden, damit die Werte in dem zu erstellenden Shader richtig &quot;gebunden&quot; werden können. Dies ist notwendig, da DX und OpenGL unterschiedliche Anforderungen haben. Wenn Sie sie also nicht richtig binden, werden sie im Shader nicht richtig dargestellt. Die verfügbaren Verwendungskonstanten, die Sie wählen können, sind unten aufgelistet und die, die Sie verwenden, hängen von den Besonderheiten des zu erstellenden Shaders ab:</p>
   <table>
     <colgroup>
@@ -116,7 +116,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     Bei der Verwendung von benutzerdefinierten Formaten wie diesen sind einige wichtige Dinge zu beachten:</p>
   <ul class="colour">
     <li>Die Funktion <span class="inline">vertex_format_add_custom()</span> unterstützt nur <span class="inline">vertex_usage_position</span>, <span class="inline">vertex_usage_colour</span>, <span class="inline">vertex_usage_normal</span> und <span class="inline">vertex_usage_textcoord</span> bei Verwendung von GLSL-Shadern. Diese werden auf die Shader-Attribute <span class="inline">in_Position</span>, <span class="inline">in_Colour[0 - ...]</span> bzw. <span class="inline">in_Normal</span> abgebildet (alles, was nicht eines dieser drei Attribute ist - z. B. Texturkoordinaten - kann auf jedes beliebige Attribut abgebildet werden, das Sie definieren).</li>

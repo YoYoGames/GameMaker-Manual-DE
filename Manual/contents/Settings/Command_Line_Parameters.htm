@@ -36,12 +36,12 @@
   <div class="droptext" data-targetname="drop-down">
     <p class="dropspot">Die <span class="notranslate">YoYo</span> <span class="notranslate">runner</span> profitiert auch von einem speziellen Befehlszeilenparameter:</p>
     <p class="dropspot" style="padding-top: 0.5em;padding-right: 1em;padding-bottom: 0.5em;padding-left: 5em"><span class="inline">-game &lt;<em>filename</em>&gt;</span>Lädt die angegebene Spieldatei
-      <br>
+      <br />
     </p>
     <p class="dropspot">Warum sollten Sie dies verwenden? Nun, normalerweise würde man das nicht tun, aber wenn man mehr als eine Version seines Spiels gleichzeitig laufen lassen möchte, kann man das auf diese Weise tun, was vergleichende A/B-Tests viel einfacher macht. Mit dieser Methode können Sie sich auf Tests mit anderen konzentrieren oder als Designer ein besseres Gefühl für die Dinge bekommen, indem Sie Seite-an-Seite-Tests durchführen.</p>
     <p class="dropspot">Um dies einzurichten, müssen Sie vorher einige Dinge wissen. Zunächst einmal benötigen Sie den Pfad zu <span class="notranslate">Runner</span> selbst. Dieser befindet sich im Ordner " <strong>Programmdaten"</strong> Ihres <span class="notranslate">Windows</span> Betriebssystems (dieser ist möglicherweise standardmäßig ausgeblendet, so dass Sie die Anzeigeeigenschaften ändern müssen, um ihn zu sehen) und hat ein typisches Format wie dieses:
-      <br>
-      <br>
+      <br />
+      <br />
     </p>
     <p class="code">C:\ProgramData\GameMaker\Cache\runtimes\&lt;runtime_version&gt;\windows\Runner.exe
       <br />
@@ -49,14 +49,14 @@
     <p class="dropspot">Beachten Sie, dass der Ordner runtime_version von der <span class="notranslate">runtimes</span> abhängt, die Sie derzeit installiert haben. Sie benötigen auch den Pfad zur Datei <span class="inline">&lt;<em>yourgame</em>&gt;.win</span>, da wir die <span class="notranslate">runner</span> auf diese Datei verweisen werden. Am einfachsten ist es, wenn Sie im <strong>Temp-Ordner </strong>(in der Regel unter <span class="inline">%localappdata%\Temp\GameMakerStudio\&lt;game_name&gt;\</span>) nach <span class="inline">*.win</span> suchen. Dann werden Ihnen alle verfügbaren Dateien angezeigt und Sie können einfach diejenige auswählen, von der Sie den vollständigen Pfad benötigen.</p>
     <p class="dropspot">Wir könnten nun eine Verknüpfung zu <span class="notranslate">runner</span> erstellen, wie wir es für die ausführbare Datei getan haben, und dann die Parameter nach Bedarf ändern, aber das bedeutet, dass wir die Datei zwischen den Tests öffnen und bearbeiten müssen, was den Zweck dieser Funktion für Side-by-Side-Tests zunichte macht. Stattdessen werden wir ein paar kleine &quot;Batch&quot;-Dateien erstellen, um dies zu erledigen.</p>
     <p class="dropspot">Erstellen Sie dazu zunächst ein neues Textdokument auf Ihrem Desktop und öffnen Sie es in Notepad (oder einem anderen Texteditor). Fügen Sie das Folgende hinzu:
-      <br>
-      <br>
+      <br />
+      <br />
     </p>
     <p class="code">START C:\ProgramData\GameMaker\Cache\runtimes\&lt;runtime_version&gt;\windows\Runner.exe -game &lt;LOCAL TEMP PATH&gt;\&lt;GAMENAME&gt;.win
       <br />
     </p>
     <p class="dropspot">Sie müssen den temporären Pfad so einstellen, dass er auf Ihre Spieldatei <span class="inline">*.win</span> verweist, und diese dann als &quot;<span class="inline">GM_Test_1.bat</span>&quot; auf Ihrem Desktop speichern (beachten Sie, dass Notepad automatisch als Datei <span class="inline">*.txt</span> speichert, es sei denn, Sie wählen &quot;alle Dateien&quot; in den Optionen des Speicherdialogs). Ein Beispiel dafür, wie Ihr endgültiger Befehl aussehen sollte, wäre:
-      <br>
+      <br />
     </p>
     <p class="code">START C:\ProgramData\GameMaker\Cache\runtimes\runtime-9.9.1.199\windows\Runner.exe -game D:\Users\Mark\AppData\Local\Temp\GameMaker\AlphaDog_Reboot\AlphaDog_Reboot.win
       <br />

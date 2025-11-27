@@ -15,10 +15,10 @@
 </head>
 <body>
   <h1>Ein Multiplayer-Spiel erstellen</h1>
-  <p class="note">Auf dieser Seite werden Sie durch die einzelnen Schritte zur Erstellung Ihres ersten Mehrspieler-Spiels geführt.<br>
-    <br>
-    Für Informationen über das Rollback-System lesen Sie <a data-xref="{title}" href="Rollback_System.htm">Rollback-System</a>.<br>
-    <br>
+  <p class="note">Auf dieser Seite werden Sie durch die einzelnen Schritte zur Erstellung Ihres ersten Mehrspieler-Spiels geführt.<br />
+    <br />
+    Für Informationen über das Rollback-System lesen Sie <a data-xref="{title}" href="Rollback_System.htm">Rollback-System</a>.<br />
+    <br />
     Für Details zu allen Rollback-Funktionen lesen Sie <a data-xref="{title}" href="Rollback_Functions/Rollback_Functions.htm">Rollback-Funktionen</a>.
   </p>
   <h2>Projekt einrichten</h2>
@@ -26,8 +26,8 @@
   <p>Erstellen Sie zwei Objekte:</p>
   <ul class="colour">
     <li><strong>obj_game</strong>: Hier wird dein Multiplayer-Spiel verwaltet.</li>
-    <li><strong>obj_player</strong>: Dies ist Ihr eigentliches Spielerobjekt. Jeder angeschlossene Spieler hat seine eigene Instanz dieses Objekts, die er steuern kann.<br>
-      <br>
+    <li><strong>obj_player</strong>: Dies ist Ihr eigentliches Spielerobjekt. Jeder angeschlossene Spieler hat seine eigene Instanz dieses Objekts, die er steuern kann.<br />
+      <br />
       Weisen Sie dem Player-Objekt Ihren Spieler <span class="notranslate">sprite</span> zu.
     </li>
   </ul>
@@ -53,8 +53,8 @@
   <h2>Bewegliche Spieler</h2>
   <p>Die Eingaben werden durch das Rollback-System verwaltet und automatisch zwischen den Spielern synchronisiert.</p>
   <p>Rufen Sie in Ihrem Player-Objekt <span class="inline"><a href="Rollback_Functions/rollback_get_input.htm">rollback_get_input()</a></span> auf, um eine Struktur mit allen Standardeingaben abzurufen, die wie folgt lauten:</p>
-  <p class="note"><span class="inline"><strong>left</strong>, <strong>right</strong>, <strong>up</strong>, <strong>down</strong>, <strong>Z</strong>, <strong>X</strong>, <strong>C</strong>, <strong>space</strong></span><br>
-    <br>
+  <p class="note"><span class="inline"><strong>left</strong>, <strong>right</strong>, <strong>up</strong>, <strong>down</strong>, <strong>Z</strong>, <strong>X</strong>, <strong>C</strong>, <strong>space</strong></span><br />
+    <br />
     <em>Diese zeigen an, ob der Schlüssel gehalten wird.</em> <span class="inline">*<strong>_pressed</strong></span> <em>und </em><span class="inline">*<strong>_released</strong></span> <em>sind ebenfalls vorhanden.</em>
   </p>
   <p>Um Ihre eigenen Eingaben zu definieren, siehe <a data-xref="{title}" href="Defining_Inputs.htm">Eingaben definieren</a>.</p>

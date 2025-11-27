@@ -104,18 +104,18 @@
   <p class="note"><b>HINWEIS</b>: Das einzige, was Sie mit der Anwendungsoberfläche <b>nicht</b> tun <b>können</b>, ist, sie freizugeben. Sie ist immer vorhanden, obwohl sich der Indexwert für den Zugriff auf sie ändern kann.</p>
   <p>Wenn Sie Ihr Spiel ausführen, wird diese Oberfläche beim ersten Aufruf des <a href="../../../../The_Asset_Editors/Object_Properties/Draw_Events.htm">Draw-Ereignisses</a> in jedem neuen Raum, den Sie betreten, erstellt, was bedeutet, dass bis zu diesem Zeitpunkt nichts gezeichnet wird. Sie können jedoch die Position der Anwendungsoberfläche abrufen und ihre Größe im <b>Create-Ereignis</b> oder in jedem anderen Ereignis ändern, ohne dass Fehler auftreten, und die verwendeten Werte sind für die Oberfläche relevant, wenn sie erstellt wird. Die aktuelle <span class="notranslate">sequence</span> der Ereignisse für die Erstellung und das Zeichnen der Anwendungsoberfläche ist wie folgt:</p>
   <ul class="colour">
-    <li>Ereignis vor der Auslosung<br>
+    <li>Ereignis vor der Auslosung<br />
                --- &gt; <b>die Anwendungsoberfläche wird erstellt (falls sie nicht existiert) und das Rendering-Ziel wird festgelegt</b></li>
     <li><b></b>Für jeden sichtbaren Viewport, oder, wenn keine Viewports aktiv sind, einmal
       <ul class="colour">
         <li>Ereignis "Beginn der Zeichnung</li>
         <li>Ereignis "Zeichnen</li>
-        <li>Ereignis Zeichnungsende<br>
+        <li>Ereignis Zeichnungsende<br />
                   --- &gt; <b>das Rendering-Ziel der Anwendungsoberfläche wird hier zurückgesetzt</b></li>
       </ul>
     </li>
-    <li><b></b>Ereignis nach der Auslosung<br>
-              --- &gt; <b>die Anwendungsoberfläche wird nun standardmäßig in den <a class="glossterm" data-glossterm="Display-Puffer" href="#">Anzeigepuffer</a> </b> gezeichnet <b><br>
+    <li><b></b>Ereignis nach der Auslosung<br />
+              --- &gt; <b>die Anwendungsoberfläche wird nun standardmäßig in den <a class="glossterm" data-glossterm="Display-Puffer" href="#">Anzeigepuffer</a> </b> gezeichnet <b><br />
                          (obwohl Sie </b> <span class="notranslate">switch</span> dies mit <span class="inline"><a href="application_surface_draw_enable.htm">application_surface_draw_enable()</a></span> ausschalten können)</li>
     <li><b></b>Ereignis "Draw GUI begin</li>
     <li>GUI-Ereignis Zeichnen</li>

@@ -40,7 +40,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     Um die endgültigen Kacheldaten zu erhalten, müssen Sie diese Konstanten mit dem Kachelindexwert bitweise &quot;oder&quot; verknüpfen:</p>
   <p class="code">var tiledata = 8 | tile_rotate | tile_flip;</p>
   <p>Die obige <span class="notranslate">code</span> erstellt einfach eine lokale Variable, um die Kacheldaten für die Kachel mit dem Index 8 auf dem Kachelsatz zu speichern, und sie wird gedreht und gespiegelt. Dies kann dann verwendet werden, um die Kachel an diesem Index aus dem Kachelsatz zu zeichnen, den du angibst. Dies ist nicht mit einem Tilemap-Layer verbunden und die Kachel wird in der Layertiefe der Instanz gezeichnet, die das Zeichnen durchführt, an der x/y-Position, die du im Raum angibst. Beachte, dass du auch den Rahmen zum Zeichnen festlegen kannst. Wenn die indizierte Kachel Teil eines Animations-Sets ist, dann kannst du hier die Frame-Nummer einstellen (von 0 bis zur Anzahl der Frames - 1) und die indizierte Kachel wird einfach der Indikator dafür sein, welches animierte Kachel-Set du verwendest, während es der angegebene Frame ist, der gezeichnet wird. Wenn die Kachel nicht Teil eines animierten Sets ist, sollte frame auf 0 gesetzt werden.</p>

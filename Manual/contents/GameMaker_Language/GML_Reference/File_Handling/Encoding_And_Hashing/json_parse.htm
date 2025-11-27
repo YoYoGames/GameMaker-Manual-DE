@@ -48,12 +48,12 @@
     show_debug_message(data);
   </p>
   <p>Die obige <span class="notranslate">code</span> erstellt eine neue Zeichenkette, die ein gültiges JSON-Objekt enthält, und ruft dann <span class="inline">json_parse()</span> auf, um diese Zeichenkette in eine <span class="notranslate">GML</span> -Struktur zu konvertieren. Anschließend wird das Ergebnis in das Debug-Protokoll ausgegeben.</p>
-  <p class="note"><span class="note">HINWEIS</span> Sie werden feststellen, dass die JSON-Zeichenfolge vor jedem doppelten Anführungszeichen (<span class="inline2">&quot;</span>) einen Backslash<span class="inline2">(\</span>) enthält:<br>
-    <br>
-   <span class="inline2">json = &quot;{ \ <strong>&quot; </strong></span>myObj<br>
-    <br>
-    Damit soll sichergestellt werden, dass das doppelte Anführungszeichen als tatsächliches Zeichen innerhalb der Zeichenfolge gelesen wird, anstatt als Teil von <span class="notranslate">code</span> gelesen zu werden und die Zeichenfolge vorzeitig zu schließen. Auf diese Weise verwenden wir einen Backslash, um das doppelte Anführungszeichen zu &quot;entkommen&quot;.<br>
-    <br>
+  <p class="note"><span class="note">HINWEIS</span> Sie werden feststellen, dass die JSON-Zeichenfolge vor jedem doppelten Anführungszeichen (<span class="inline2">&quot;</span>) einen Backslash<span class="inline2">(\</span>) enthält:<br />
+    <br />
+   <span class="inline2">json = &quot;{ \ <strong>&quot; </strong></span>myObj<br />
+    <br />
+    Damit soll sichergestellt werden, dass das doppelte Anführungszeichen als tatsächliches Zeichen innerhalb der Zeichenfolge gelesen wird, anstatt als Teil von <span class="notranslate">code</span> gelesen zu werden und die Zeichenfolge vorzeitig zu schließen. Auf diese Weise verwenden wir einen Backslash, um das doppelte Anführungszeichen zu &quot;entkommen&quot;.<br />
+    <br />
     Wenn Sie jedoch JSON aus einer externen Datei laden, ist es nicht notwendig, Zeichen in dieser Datei zu entschlüsseln, und dies kann zu Fehlern beim Parsen führen.
   </p>
   <hr />
