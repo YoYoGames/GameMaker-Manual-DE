@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_get_all_elements</h1>
+  <h1><span data-field="title" data-format="default">layer_get_all_elements</span></h1>
   <p>Mit dieser Funktion können Sie die <i>Element-IDs</i> der angegebenen Ebene abrufen. Sie geben die ID der Ebene an (die Sie erhalten, wenn Sie die Ebene mit <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) oder den Layernamen (als String - dies hat Auswirkungen auf die Leistung) und die Funktion gibt ein <a href="../../../../GML_Overview/Arrays.htm">Array</a> von IDs zurück, wobei jeder Eintrag im Array eine eindeutige ID für ein Element auf diesem Layer ist. Wenn es sich bei der Ebene beispielsweise um eine Vermögensebene handelt, wird das Array mit den ID-Werten für jedes <span class="notranslate">sprite</span> Vermögen aufgefüllt, das der Ebene zugewiesen ist. Beachten Sie, dass die Verwendung von <span class="notranslate">code</span> für die Arbeit mit Ebenen bedeutet, dass Sie der gleichen Ebene verschiedene Elementtypen zuweisen können - so können Sie z. B. <span class="notranslate">sprite</span> Assets zusammen mit Instanzen haben - in diesem Fall können Sie dann die Funktion <a href="layer_get_element_type.htm"><span class="inline">layer_get_element_type()</span></a> verwenden, um den Typ des Elements zu ermitteln, auf den sich die ID bezieht.</p>
   <p> </p>
   <h4>Syntax:</h4>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>schicht_tiefe</title>
+  <title>layer_depth</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>schicht_tiefe</h1>
+  <h1><span data-field="title" data-format="default">layer_depth</span></h1>
   <p>Diese Funktion kann verwendet werden, um die <b>Tiefe</b> der gegebenen Ebene zu ändern und so die Reihenfolge zu ändern, in der ihr Inhalt auf dem Bildschirm dargestellt wird. Sie geben die Ebenen-ID (die Sie beim Erstellen der Ebene mit <a href="layer_create.htm"><span class="inline">layer_create()</span></a>) oder den Ebenennamen (als String - dies wirkt sich auf die Leistung aus) und geben dann die neue Tiefe an, auf die sie gesetzt werden soll (ein ganzzahliger Wert von -16000 bis 16000). Die Ebenentiefe ist so definiert, dass sie höher ist, wenn sie &quot;weiter weg&quot; von der Kamera ist, und niedriger, wenn sie &quot;näher&quot; an der Kamera ist. Wenn Sie also drei Ebenen mit den Tiefen -100, 0, 100 haben, werden die Ebenen in der Reihenfolge 100, 0, -100 gezeichnet, so dass die &quot;oberste&quot; Ebene (d. h. die Ebene, die der Kameraansicht am nächsten ist und daher über alles andere gezeichnet wird) die Ebene mit der Tiefe -100 ist.</p>
   <p>Die folgende Abbildung zeigt schematisch, wie die Tiefe bei Ebenen funktioniert:</p>
   <p><img>Beachten Sie, dass Sie die Tiefe einer Ebene jederzeit mit der Funktion <a href="layer_get_depth.htm"><span class="inline">layer_get_depth()</span></a>. Beachten Sie auch, dass die minimale und maximale Ebenentiefe zwischen -16000 und 16000 liegt und alles, was außerhalb dieser Tiefen liegt <b>, nicht gerendert wird</b>. Wenn Sie eine Tiefe außerhalb dieses Bereichs benötigen, müssen Sie die Funktion <a href="layer_force_draw_depth.htm"><span class="inline">layer_force_draw_depth()</span></a>.</p>
   <p>Beachten Sie, dass die Änderung der Tiefe einer Ebene die Anwendung von <a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">Filtern und Effekten</a> auf diese Ebene verändern kann, da eine Änderung der Tiefe unter der Tiefe einer Effekt-Ebene dazu führt, dass deren Effekt nicht mehr auf die Ebene angewendet wird.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">layer_depth(layer_id, depth)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_depth</span>(layer_id, depth)</p>
   <table>
     <tbody>
       <tr>

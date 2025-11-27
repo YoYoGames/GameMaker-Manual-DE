@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>room_instance_add</h1>
+  <h1><span data-field="title" data-format="default">room_instance_add</span></h1>
   <p>Mit dieser Funktion können Sie eine Instanz in einen beliebigen Raum, der nicht der aktuelle ist, und an einer beliebigen Position innerhalb dieses Raums hinzufügen. Die Funktion gibt die eindeutige <a href="../Instances/Instance_Variables/id.htm"><span class="inline">id</span></a> der Instanz zurück, die dann in weiteren Funktionsaufrufen verwendet werden kann, um Eigenschaften etc. der Instanz zu setzen, aber <strong>erst, wenn das Spiel den angegebenen Raum betreten hat</strong>. Wenn du eine Instanz im aktuellen Raum erstellen möchtest, solltest du die Funktion <a href="../Instances/instance_create_layer.htm"><span class="inline">instance_create_layer()</span></a>. Beachte, dass der Aufruf dieser Funktion bei einem Raum-Asset, das im Asset-Browser erstellt wurde <strong>, die Instanz dauerhaft zum Raum hinzufügt</strong>, und dass selbst der Aufruf von <span class="inline">game_restart()</span> den Raum nicht in seinen ursprünglichen Zustand zurückversetzt (nur wenn du das Spiel beendest und es erneut öffnest, wird der Raum wieder in seinem ursprünglichen Zustand beginnen).</p>
   <p> </p>
   <h4>Syntax:</h4>

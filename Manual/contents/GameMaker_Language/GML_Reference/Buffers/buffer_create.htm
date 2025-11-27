@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Puffer_erstellen</title>
+  <title>buffer_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Puffer_erstellen</h1>
+  <h1><span data-field="title" data-format="default">buffer_create</span></h1>
   <p>Sie verwenden diese Funktion, um einen Teil des Speichers als <span class="notranslate">buffer</span> in Ihrem Spiel zuzuweisen, wobei die Funktion die eindeutige <i>Puffer-ID</i> zurückgibt, die in einer Variablen gespeichert und für alle weiteren Funktionsaufrufe an den <span class="notranslate">buffer</span> verwendet werden sollte. Der <span class="notranslate">buffer</span> kann dann verwendet werden, um verschiedene Arten von Daten zu speichern (die beim Schreiben in den <span class="notranslate">buffer</span> mit der <a href="buffer_write.htm"><span class="inline">buffer_write()</span></a> Funktion, wobei die folgenden Konstanten zur Definition des <span class="notranslate">buffer</span> Typs verwendet werden:</p>
   <table>
     <colgroup>
@@ -31,23 +31,23 @@
         <th>Beschreibung</th>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">buffer_fixed</span></td>
+        <td><span class="inline">buffer_fixed</span></td>
         <td>Eine <span class="notranslate">buffer</span> mit fester Größe.</td>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">buffer_grow</span></td>
+        <td><span class="inline">buffer_grow</span></td>
         <td>Eine <span class="notranslate">buffer</span>, die dynamisch &quot;wächst&quot;, wenn Daten hinzugefügt werden</td>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">buffer_wrap</span></td>
+        <td><span class="inline">buffer_wrap</span></td>
         <td>Eine <span class="notranslate">buffer</span>, in der die Daten &quot;umbrochen&quot; werden. Wenn die hinzugefügten Daten die Grenze der Größe von <span class="notranslate">buffer</span> erreichen, wird die überschriebene Datei wieder an den Anfang von <span class="notranslate">buffer</span> gesetzt, und das weitere Schreiben wird von diesem Punkt an fortgesetzt.</td>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">buffer_fast</span></td>
+        <td><span class="inline">buffer_fast</span></td>
         <td>Spezielle &quot;gestrippte&quot; <span class="notranslate">buffer</span>, die extrem schnell zu lesen/schreiben ist. Kann nur mit <span class="inline">buffer_u8</span> <a href="buffer_read.htm">Datentypen</a> verwendet werden und <i>muss</i> an 1 Byte ausgerichtet sein.</td>
       </tr>
       <tr>
-        <td><span class="notranslate"><span class="inline">buffer_vbuffer</span></td>
+        <td><span class="inline">buffer_vbuffer</span></td>
         <td>Dieser Typ von <span class="notranslate">buffer</span> ist nur als Scheitelpunkt <span class="notranslate">buffer</span> zu verwenden.</td>
       </tr>
     </tbody>
@@ -66,7 +66,7 @@
   <p class="note"><b>HINWEIS</b>: Es ist wichtig, dass Sie alle dynamisch erstellten Ressourcen wie diese aus dem Speicher entfernen, wenn Sie sie nicht mehr benötigen, um Speicherlecks zu vermeiden. Wenn Sie also mit der von Ihnen erstellten <span class="notranslate">buffer</span> fertig sind, sollten Sie sie wieder freigeben mit <span style="font-size:1px;"><a href="buffer_delete.htm"><span class="inline">buffer_delete()</span></a></span>.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">buffer_create(size, type, alignment)</p>
+  <p class="code"><span data-field="title" data-format="default">buffer_create</span>(size, type, alignment)</p>
   <table>
     <tbody>
       <tr>

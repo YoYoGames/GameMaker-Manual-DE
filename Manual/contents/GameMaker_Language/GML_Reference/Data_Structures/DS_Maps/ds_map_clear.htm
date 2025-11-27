@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_map_clear</h1>
+  <h1><span data-field="title" data-format="default">ds_map_clear</span></h1>
   <p>Diese Funktion löscht die (zuvor erstellte) DS-Map von allen Schlüssel/Wert-Paaren, aber sie löscht nicht die DS-Map selbst aus dem Speicher. Hierfür sollten Sie die Funktion <a href="ds_map_destroy.htm"><span class="inline">ds_map_destroy()</span></a>. Beachten Sie, dass das Löschen einer Map alle in der Map gespeicherten Datenstrukturen de-referenziert, was zu einem Speicherleck führt. Dies ist nur dann nicht erforderlich, wenn Sie Elemente in der Map als <a href="../DS_Lists/DS_Lists.htm">DS-Liste</a> oder als andere <a href="DS_Maps.htm">DS-Map</a> gekennzeichnet haben. In diesem Fall werden diese Elemente zerstört (nicht gelöscht!) und ihr Speicher automatisch bereinigt, wenn die übergeordnete Map gelöscht wird.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">ds_map_clear(id);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_map_clear</span>(id);</p>
   <table>
     <tbody>
       <tr>

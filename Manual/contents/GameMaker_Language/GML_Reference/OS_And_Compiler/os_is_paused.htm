@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>os_ist_pausiert</title>
+  <title>os_is_paused</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>os_ist_pausiert</h1>
+  <h1><span data-field="title" data-format="default">os_is_paused</span></h1>
   <p>Wenn Sie für mobile Geräte entwickeln, müssen Sie eine Möglichkeit haben, zu überprüfen, ob das Gerät noch auf Ihr Spiel konzentriert ist oder nicht, vor allem, wenn Ihr Spiel auf einem <span class="notranslate">iOS</span>, <span class="notranslate">Android</span> oder <span class="notranslate">Windows Phone</span> Gerät läuft, kann es durch Telefonanrufe und andere Anwendungen unterbrochen werden. Mit dieser Funktion können Sie überprüfen, ob das Gerät angehalten ist oder nicht.</p>
   <p>Es ist zu beachten, dass diese Funktion alle <span class="notranslate">code</span>, die im <span class="notranslate">code</span> -Block enthalten sind, auf Geräten ausführt, <span data-keyref="GameMaker Name">GameMaker</span> aber unmittelbar danach angehalten wird, während das Gerät <span class="notranslate">caches</span> das Spiel als Hintergrundprozess startet. Wenn du also etwas wie das unten angegebene Beispiel <span class="notranslate">code</span> hast, wird die zu erstellende Instanz <i>erst</i> dann erscheinen oder eines ihrer Ereignisse ausführen <i>, wenn das Spiel aus dem Cache-Status neu gestartet</i> wurde. Das bedeutet, dass Sie es vorziehen könnten, dass die Funktion <span class="inline">os_is_paused</span> einen Alarm aufruft und dann im Alarm-Ereignis (das gesetzt wird, wenn das Gerät angehalten wird, aber nicht ausgeführt wird, bis es wieder freigegeben wird) ein Pausenmenü, einen Neustart der Musik usw. erstellt.</p>
   <p>Wenn Sie diese Funktion auf <span class="notranslate">Windows</span>, <span class="notranslate">Ubuntu</span> (<span class="notranslate">Linux</span>), MacOS oder HTML5 <span class="notranslate">platforms</span> verwenden, wird die Funktion nur für <b>einen Schritt</b> auf <span class="inline">true</span> umgeschaltet, wenn das Spiel den Fokus verliert, und kehrt dann wieder zu <span class="inline">false</span> zurück, bis das Spiel wieder den Fokus erhält (und ihn wieder verliert). Dies liegt daran, dass diese <span class="notranslate">platforms</span> keine <span class="notranslate">cache</span> Anwendungen und Spiele enthalten und diese daher im Hintergrund weiterlaufen.</p>
   <p class="note"><b>HINWEIS</b>: Auf mobilen Geräten werden Töne und Musik angehalten, wenn das Betriebssystem pausiert wird. Sie werden erst <b>dann</b> wieder gestartet, wenn Sie sie mit der entsprechenden Funktion gezielt starten.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">os_is_paused()</p>
+  <p class="code"><span data-field="title" data-format="default">os_is_paused</span>()</p>
   <p> </p>
   <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Bool"></span></p>

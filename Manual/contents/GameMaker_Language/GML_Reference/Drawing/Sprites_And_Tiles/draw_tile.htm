@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>fliese_zeichnen</title>
+  <title>draw_tile</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>fliese_zeichnen</h1>
+  <h1><span data-field="title" data-format="default">draw_tile</span></h1>
   <p>Mit dieser Funktion können Sie jede beliebige Kachel aus einem Kachelsatz zeichnen - mit Drehungen, Spiegelungen und Spiegelungen - und dabei den Rahmen (falls animiert) und die Position im Raum festlegen. Der ID-Wert des Kachelsatzes ist der Index des Kachelsatzes, wie er in <span class="notranslate">IDE</span> festgelegt ist, und die Kacheldaten sind der Daten-&quot;Blob&quot;, der alle Informationen über den Kachelindex und die angewandten Transformationen enthält. Sie können die Funktion <a href="../../Asset_Management/Rooms/Tile_Map_Layers/tilemap_get.htm"><span class="inline">tilemap_get()</span></a> verwenden, um die Kacheldaten zu erhalten, die dann mit den <a href="../../Asset_Management/Rooms/Tile_Map_Layers/Tile_Map_Layers.htm">Kachelfunktionen</a> bearbeitet werden können, oder Sie können sie selbst konstruieren, indem Sie die folgenden Kachelkonstanten zusammen mit dem Indexwert der zu erstellenden Kachel verwenden:</p>
   <table>
     <tbody>
@@ -46,7 +46,7 @@
   <p>Die obige <span class="notranslate">code</span> erstellt einfach eine lokale Variable, um die Kacheldaten für die Kachel mit dem Index 8 auf dem Kachelsatz zu speichern, und sie wird gedreht und gespiegelt. Dies kann dann verwendet werden, um die Kachel an diesem Index aus dem Kachelsatz zu zeichnen, den du angibst. Dies ist nicht mit einem Tilemap-Layer verbunden und die Kachel wird in der Layertiefe der Instanz gezeichnet, die das Zeichnen durchführt, an der x/y-Position, die du im Raum angibst. Beachte, dass du auch den Rahmen zum Zeichnen festlegen kannst. Wenn die indizierte Kachel Teil eines Animations-Sets ist, dann kannst du hier die Frame-Nummer einstellen (von 0 bis zur Anzahl der Frames - 1) und die indizierte Kachel wird einfach der Indikator dafür sein, welches animierte Kachel-Set du verwendest, während es der angegebene Frame ist, der gezeichnet wird. Wenn die Kachel nicht Teil eines animierten Sets ist, sollte frame auf 0 gesetzt werden.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">draw_tile(tileset, tiledata, frame, x, y)</p>
+  <p class="code"><span data-field="title" data-format="default">draw_tile</span>(tileset, tiledata, frame, x, y)</p>
   <table>
     <tbody>
       <tr>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>platz_leer</title>
+  <title>place_empty</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>platz_leer</h1>
+  <h1><span data-field="title" data-format="default">place_empty</span></h1>
   <p>Mit dieser Funktion kannst du prüfen, ob die aufrufende Instanz mit <i>einer anderen Instanz</i> eines Objekts oder mit allen Instanzen in deinem Spiel kollidieren würde. Damit die Kollision korrekt aufgelöst werden kann, muss die Instanz, die die <span class="notranslate">code</span> ausführt, eine gültige Kollisionsmaske haben (entweder für die <span class="notranslate">sprite</span> selbst, oder durch die <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/mask_index.htm"><span class="inline">mask_index</span></a>) und sie wird nur Kollisionen mit den Instanzen registrieren, die ebenfalls eine gültige Maske haben.</p>
   <p>Die Funktion prüft, ob es keine Kollisionen gibt, wenn die aufrufende Instanz an einer bestimmten Position platziert wird. Sie können eine optionale <span class="notranslate">argument</span> angeben, um die Prüfung zu verfeinern und nur zu prüfen, ob eine Position frei von Kollisionen mit Instanzen des angegebenen Typs ist. Beachte, dass wenn keine optionale Objekt-ID angegeben wird, die Prüfung für <i>alle</i> Instanzen innerhalb des Raumes durchgeführt wird. Die Kollisionsprüfung ist entweder präzise oder basiert auf der Bounding Box der Instanz, abhängig davon, welche Art von Kollisionsmaske ausgewählt wurde, aber damit präzise Kollisionen korrekt funktionieren, sollten alle Instanzen in der Prüfung präzise Kollisionsmasken haben.</p>
   <p>Beachten Sie, dass die angegebenen x/y-Koordinaten vor der Prüfung auf die nächstliegende ganze Zahl heruntergerechnet werden.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">place_empty(x, y, [object_id]);</p>
+  <p class="code"><span data-field="title" data-format="default">place_empty</span>(x, y, [object_id]);</p>
   <table>
     <tbody>
       <tr>

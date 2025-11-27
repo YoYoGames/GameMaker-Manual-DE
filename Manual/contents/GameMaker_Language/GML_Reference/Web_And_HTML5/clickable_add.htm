@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>anklickbar_hinzufügen</title>
+  <title>clickable_add</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>anklickbar_hinzufügen</h1>
+  <h1><span data-field="title" data-format="default">clickable_add</span></h1>
   <p>Mit dieser Funktion können Sie ein benutzerdefiniertes, anklickbares Symbol erstellen, das als &quot;Schaltfläche&quot; außerhalb des Spiel-Canvas, aber innerhalb des Browserfensters selbst fungiert. Die Funktion gibt einen ID-Wert zurück, der in einer Variablen gespeichert werden muss, um in allen weiteren Schaltflächenfunktionen verwendet zu werden, die auf die neue klickbare Schaltfläche verweisen. Diese Funktion ist sehr nützlich, um zu verhindern, dass der Browser ein Popup-Fenster erzeugt, wenn man auf die Schaltfläche klickt, da dies alles von <span data-keyref="GameMaker Name">GameMaker</span> selbst erledigt wird.</p>
   <p>Sie müssen zuerst die Position festlegen, die relativ zur (0,0) des Browserfensters (linke obere Ecke) ist, und dann den Eintrag der Texturseite für die <span class="notranslate">sprite</span> angeben, die das Symbol der Schaltfläche haben soll (siehe: <a href="../Asset_Management/Sprites/Sprite_Information/sprite_get_tpe.htm"><span class="inline">sprite_get_tpe()</span></a>). Sie können dann entweder eine URL angeben, die geöffnet werden soll, oder eine <span class="notranslate">script</span> (aus dem Asset Browser von <span data-keyref="GameMaker Name">GameMaker</span>), die geöffnet oder ausgeführt werden soll. Der &quot;target&quot;-Parameter, den Sie angeben, ist derselbe wie der Standard-JavaScript-&quot;name&quot;-Wert, wenn Sie die <span class="inline">open()</span> -Methode verwenden (beachten Sie, dass alle außer &quot;_self&quot; dazu führen können, dass der Browser den Aufruf blockiert oder den Benutzer fragt, ob er ihn zulassen möchte), und der &quot;params&quot;-Parameter <span class="notranslate">argument</span> ist derselbe wie der JavaScript-&quot;specs&quot;-Parameter zur Steuerung der Eigenschaften, die das neue Fenster/der neue Tab anzeigen soll (nicht alle Browser unterstützen möglicherweise alle Funktionen). Wenn Sie das Symbol verwenden, um ein internes <span class="notranslate">script</span> auszuführen, können die letzten beiden <span class="notranslate">arguments</span> als leere Strings &quot;&quot; belassen werden.</p>
   <p>Gültige Ziele sind:</p>
@@ -101,7 +101,7 @@
     Es ist auch erwähnenswert, dass, wenn die URL <span class="notranslate">argument</span>, die Sie übergeben, der Name einer <a href="../../GML_Overview/Script_Functions.htm">Script-Funktion</a> ist (d.h. sie beginnt nicht mit &quot;http://&quot;) UND die <span class="notranslate">script</span> heißt <span class="inline"><b>gmcallback_*</b></span>, dann können Sie direkte Feeds in ein html5-Ereignis erhalten. <span data-keyref="GameMaker Name">GameMaker-Script-Funktionsnamen</span> werden <i>nicht</i> verschleiert, wenn sie mit <span class="inline">gmcallback_</span> beginnen.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">clickable_add(x, y, tpe, url, target, params);</p>
+  <p class="code"><span data-field="title" data-format="default">clickable_add</span>(x, y, tpe, url, target, params);</p>
   <table>
     <tbody>
       <tr>

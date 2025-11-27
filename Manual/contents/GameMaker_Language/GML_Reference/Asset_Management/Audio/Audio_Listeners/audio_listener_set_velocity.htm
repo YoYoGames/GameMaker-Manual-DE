@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_listener_set_velocity</h1>
+  <h1><span data-field="title" data-format="default">audio_listener_set_velocity</span></h1>
   <p>Diese Funktion kann verwendet werden, um dem angegebenen Hörer <em>Doppler-Effekte </em>zu geben und eine Audio-Bewegung zu simulieren, die auf der <span class="notranslate">vector</span> basiert, die aus den angegebenen relativen x-, y- und z-Positionen aufgelöst wird. Der Standard-Hörerindex ist 0, aber Sie können die Funktion <a href="audio_get_listener_info.htm"><span class="inline">audio_get_listener_info()</span></a> verwenden, um die verschiedenen verfügbaren Indizes für das Ziel <span class="notranslate">platform</span> zu erhalten.</p>
   <p>Wenn sich der Hörer nicht bewegt oder die Bewegung nicht konstant ist, müssen Sie diese Werte normalerweise nicht einstellen, aber wenn Sie zum Beispiel ein scrollendes Spiel machen, bei dem sich der Spieler konstant von unten nach oben und die Feinde konstant von oben nach unten bewegen, würden Sie die <i>Hörer- und</i> Emitter-Geschwindigkeiten (für Emitter würden Sie <a href="../Audio_Emitters/audio_emitter_velocity.htm"><span class="inline">audio_emitter_velocity()</span></a>) auf die entsprechende <span class="notranslate">vectors</span> setzen, um den richtigen Dopplereffekt zu simulieren, wenn sie sich an der Spielerinstanz vorbeibewegen.</p>
   <p>Die folgende Abbildung zeigt, wie dies für das oben genannte Beispielspiel eingerichtet werden könnte:</p>
   <p><img alt="Audio Listener Set Velocity Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Listener_Velocity.png" /></p>
   <h4>Syntax:</h4>
-  <p class="code">audio_listener_set_velocity(index, x, y, z);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_listener_set_velocity</span>(index, x, y, z);</p>
   <table>
     <tbody>
       <tr>

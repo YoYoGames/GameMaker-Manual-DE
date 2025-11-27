@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>zip_unzip</h1>
+  <h1><span data-field="title" data-format="default">zip_unzip</span></h1>
   <p>Diese Funktion öffnet eine gespeicherte ZIP-Datei und entpackt ihren Inhalt in das angegebene Verzeichnis. Beachten Sie, dass, wenn Sie keinen vollständigen Pfad zum ZIP-Verzeichnis angeben, das aktuelle <i>Stammverzeichnis</i> des Laufwerks verwendet wird, und wenn Sie es in einem relativen Pfad zum Arbeitsverzeichnis des Spiele-Bundles platzieren möchten, sollten Sie die Variable <a href="../File_Directories/working_directory.htm"><span class="inline">working_directory</span></a> als Teil des Pfades verwenden (relative Pfade mit &quot;.&quot; oder &quot;..&quot; funktionieren nicht wie erwartet und sollten daher vermieden werden). Beachten Sie auch, dass die Zip-Datei entweder Teil des Spielepakets sein muss (d.h. eine <a href="../../../../Settings/Included_Files.htm">eingeschlossene Datei</a>) oder mit <a href="../../Asynchronous_Functions/HTTP/http_get_file.htm">http_get_file()</a> in den Speicherbereich heruntergeladen wurde.</p>
   <p>Die Funktion gibt einen Wert zurück, der die Anzahl der extrahierten Dateien angibt, oder sie gibt 0 oder weniger zurück, wenn die Extraktion fehlgeschlagen ist.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">zip_unzip(zip_file, target_directory)</p>
+  <p class="code"><span data-field="title" data-format="default">zip_unzip</span>(zip_file, target_directory)</p>
   <table>
     <tbody>
       <tr>

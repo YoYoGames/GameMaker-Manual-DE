@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_set_precision</h1>
+  <h1><span data-field="title" data-format="default">ds_set_precision</span></h1>
   <p>Beim Vergleich von Werten, z. B. beim Suchen in einer Karte oder beim Sortieren einer Liste, muss <span data-keyref="GameMaker Name">GameMaker</span> entscheiden, wann zwei Werte gleich sind. Bei Strings und Integer-Werten ist das klar, aber bei reellen Zahlen können aufgrund von Fließkomma-Rundungsfehlern aus scheinbar gleichen Zahlen leicht ungleiche werden. Zum Beispiel ist es möglich, dass <b>(5 / 3) * 3</b> <i>nicht</i> gleich 5 ist! Um dies zu vermeiden, wird bei allen Funktionen für reelle Zahlen ein Präzisionswert verwendet, und wenn die <i>Differenz zwischen zwei Zahlen kleiner</i> als diese Präzision <i>ist</i>, werden sie als gleich angesehen. Die Standardpräzision von 0,0000001 wird für alle Datenstrukturfunktionen verwendet, sofern sie nicht durch diese Funktion geändert wird.</p>
   <p class="note"><b>HINWEIS</b>: Diese Genauigkeit wird in allen Datenstrukturen verwendet, nicht aber bei anderen Vergleichen in <span class="notranslate">GML</span>!</p>
   <p> </p>

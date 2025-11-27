@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_script_begin</h1>
+  <h1><span data-field="title" data-format="default">layer_script_begin</span></h1>
   <p>Mit dieser Funktion können Sie einer Ebene eine <a href="../../../../GML_Overview/Script_Functions.htm">Skriptfunktion</a> zuweisen, die aufgerufen wird, bevor die Ebene gerendert wird. Wenn Sie einer Ebene eine Funktion zuweisen, wird diese zu Beginn <i>jedes der verschiedenen Zeichnungsereignisse</i> ausgeführt. Daher sollten Sie in der zugewiesenen Funktion prüfen, welches Ereignis gerade gerendert wird, und die <span class="notranslate">code</span> entsprechend anpassen. Dies kann durch die Überprüfung des <a href="../../Objects/Object_Events/event_type.htm"><span class="inline">event_type</span></a> und/oder der <a href="../../Objects/Object_Events/event_number.htm"><span class="inline">event_number</span></a> (siehe das erweiterte Beispiel unten). Beachte, dass die Funktion <i>nicht</i> dazu gedacht ist, in Zeichnungsereignissen oder Schritt-Ereignissen aufgerufen zu werden, sondern nur zu Beginn des Raumes im <strong>Room Creation Code</strong> oder im <strong>Create Event / </strong> <strong>Room Start Event</strong> einer Instanz aufgerufen werden muss.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">layer_script_begin(layer_id, script);</p>
+  <p class="code"><span data-field="title" data-format="default">layer_script_begin</span>(layer_id, script);</p>
   <table>
     <tbody>
       <tr>

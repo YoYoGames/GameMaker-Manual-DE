@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Alarm</title>
+  <title>alarm</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Alarm</h1>
+  <h1><span data-field="title" data-format="default">alarm</span></h1>
   <p>Dieses eindimensionale <a href="../../../../GML_Overview/Arrays.htm">Array</a> wird verwendet, um den aktuellen Wert für alle Alarme, die die Instanz haben kann, zu erhalten, oder es kann verwendet werden, um diese Alarme zu setzen. Es gibt zwölf Alarme, die in jede Instanz eines Objekts eingebaut sind, und jeder hat seine eigene <a href="../../../../../The_Asset_Editors/Object_Properties/Object_Events.htm"><span class="notranslate">event</span></a> die ausgelöst wird, wenn diese Variable den Wert 0 erreicht.</p>
   <p>Alarme werden zu Beginn jedes Schritts heruntergezählt, <strong>nach dem</strong> Ereignis "Schritt beginnen", aber <strong>vor dem</strong> Hauptereignis "Schritt", und bevor irgendetwas für das Bild gerendert wird. Das heißt, wenn Sie einen Alarm im Ereignis "Schritt beginnen" auf <span class="inline2">1</span> setzen, wird sein Ereignis im selben Frame ausgeführt (da der Alarm nach dem Ereignis "Schritt beginnen" auf 0 heruntergezählt wird), aber wenn Sie einen Alarm im Ereignis "Schritt" auf <span class="inline2">1</span> setzen, wird er im nächsten Frame ausgeführt.</p>
   <p>Es sollte beachtet werden, dass der Alarm nicht beendet ist, wenn er 0 erreicht (obwohl das Ereignis ausgelöst wurde), da er im nächsten Schritt auf -1 zurückgeht. Wenn Sie also einen Alarm aus irgendeinem Grund stoppen müssen, sollten Sie seinen Array-Wert auf -1 <i>und nicht</i> 0 setzen. Die Alarmzeiten werden in <i>Spielschritten</i> berechnet, wobei ein Wert von 30 für 30 Schritte steht, 60 für 60 Schritte, usw..</p>

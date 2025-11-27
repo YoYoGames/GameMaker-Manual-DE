@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physik_gelenk_friktion_erzeugen</title>
+  <title>physics_joint_friction_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physik_gelenk_friktion_erzeugen</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_friction_create</span></h1>
   <p>Das Reibungsgelenk unterscheidet sich von allen anderen Gelenken in der Physiksimulation insofern, als die erstellte Verbindung nicht die Position oder Bewegung der Instanz einschränkt, sondern ihre Geschwindigkeit und Drehung. Dies funktioniert, indem die maximalen Eingangswerte für Kraft und Drehmoment auf die zweite Instanz angewendet werden, um die Geschwindigkeit und den Drehimpuls auf die gleichen Werte wie die der ersten Instanz zu bringen. Wenn Sie also eine stationäre und eine sich bewegende Instanz haben und diese mit einem Reibungsgelenk verbinden, wird die sich bewegende Instanz allmählich langsamer, bis sie ebenfalls stationär ist. Wenn sich beide Instanzen bewegen, wird die Bewegungsgeschwindigkeit der zweiten Instanz an die der ersten Instanz angepasst.</p>
   <p><img>Wie bei den meisten anderen Gelenken geben Sie die Instanzen an, die miteinander verbunden werden sollen, sowie die Position, an der das Gelenk im Raum erstellt werden soll. Du gibst dann die maximale Kraft und das maximale Drehmoment (Richtungs- und Rotationsreibung) an, und wenn du den &quot;col&quot;-Wert auf <span class="inline">true</span> setzt, dann können die beiden Instanzen miteinander interagieren und kollidieren, aber <i>nur</i>, wenn sie Kollisionsereignisse haben, aber wenn es auf <span class="inline">false</span> gesetzt ist, werden sie nicht kollidieren, egal was passiert.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">physics_joint_friction_create(inst1, inst2, anchor_x, anchor_y, max_force, max_torque, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_friction_create</span>(inst1, inst2, anchor_x, anchor_y, max_force, max_torque, col)</p>
   <table>
     <tbody>
       <tr>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>netzwerk_verbinden_raw</title>
+  <title>network_connect_raw</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>netzwerk_verbinden_raw</h1>
+  <h1><span data-field="title" data-format="default">network_connect_raw</span></h1>
   <p>Mit dieser Funktion können Sie eine Verbindungsanfrage an <span class="notranslate">server</span> senden. Die Funktion nimmt die <i>Socket-ID</i>, über die die Verbindung hergestellt werden soll (siehe <a href="network_create_socket.htm"><span class="inline">network_create_socket()</span></a>) und erfordert die Angabe der IP-Adresse, zu der eine Verbindung aufgebaut werden soll (eine Zeichenkette), sowie des Ports, über den die Verbindung aufgebaut werden soll. Wenn die Verbindung fehlschlägt, wird ein Wert kleiner als 0 zurückgegeben. Der Unterschied zwischen dieser Funktion und <a href="network_connect.htm"><span class="inline">network_connect()</span></a> ist, dass diese Funktion eine Verbindung zu jeder beliebigen <span class="notranslate">server</span> herstellen kann und nichts mit den Rohdaten macht, was bedeutet, dass Sie die Protokolle selbst auf der Seite <span class="notranslate">server</span> implementieren müssen. Beachten Sie, dass die Funktion standardmäßig synchron ist, was bedeutet, dass Ihr Spiel zu &quot;hängen&quot; scheint, während die Verbindung hergestellt wird. Sie können einen Timeout-Wert für die Verbindung festlegen oder alternativ die Erstellung asynchron machen, indem Sie die Funktion <a href="network_set_config.htm"><span class="inline">network_set_config()</span></a>verwenden, oder alternativ die Funktion <a href="network_connect_raw_async.htm"><span class="inline">network_connect_async_raw()</span></a> stattdessen.</p>
   <p class="note"><span class="note">HINWEIS</span> Sie können diese Funktion nicht für HTML5 verwenden. Verwenden Sie für WebSockets die <a href="network_connect_raw_async.htm">Funktion Async</a>.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">network_connect_raw(socket, url, port);</p>
+  <p class="code"><span data-field="title" data-format="default">network_connect_raw</span>(socket, url, port);</p>
   <table>
     <tbody>
       <tr>

@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physics_particle_set_flags</h1>
+  <h1><span data-field="title" data-format="default">physics_particle_set_flags</span></h1>
   <p>Mit dieser Funktion können Sie den Partikel <span class="notranslate">flags</span> für einen einzelnen Partikel ändern. Der Wert <span class="inline">index</span> ist die Partikel-ID, wie sie von der Funktion <a href="physics_particle_create.htm"><span class="inline">physics_particle_create()</span></a>zurückgegeben wird, während die <span class="notranslate">flags</span> der Rückgabewert einer Kombination der folgenden <b>Konstanten</b> ist:</p>
   <table>
     <tbody>
@@ -63,7 +63,7 @@
   <p>Diese <span class="notranslate">flags</span> verwenden Bit-Maskierung, um einen endgültigen Ausgabewert zu erzeugen, der dann geprüft wird, um die verschiedenen grundlegenden Eigenschaften des Partikels einzustellen (wobei die Basiseigenschaft immer die von <span class="inline">phy_particle_flag_water</span> ist). Wenn Sie z. B. eine viskose Flüssigkeit mit Oberflächenspannung simulieren möchten, maskieren Sie die entsprechenden Bits <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitweise <i>oder</i></a> mit &quot;|&quot;, wie im folgenden Beispiel gezeigt. Auf diese Weise können Sie, wenn Sie möchten, für jedes einzelne erstellte Partikel unterschiedliche Eigenschaften (abgesehen von den globalen Eigenschaften) festlegen.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">physics_particle_set_flags(index, flags)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_particle_set_flags</span>(index, flags)</p>
   <table>
     <tbody>
       <tr>

@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_deactivate_all</h1>
+  <h1><span data-field="title" data-format="default">instance_deactivate_all</span></h1>
   <p>Diese Funktion deaktiviert <b>alle</b> Instanzen, die sich in dem Moment im Raum befinden, in dem <span class="notranslate">code</span> ausgeführt wird. Dies kann die Instanz einschließen, die die <span class="notranslate">code</span> ausführt, wenn das &quot;notme&quot;-Flag auf <span class="inline">false</span> gesetzt ist, aber normalerweise möchtest du, dass diese Instanz aktiv ist, in diesem Fall sollte das &quot;notme&quot;-Flag auf <span class="inline">true</span> gesetzt werden. Beachte, dass die Deaktivierung nicht sofort erfolgt und eine Instanz, die auf diese Weise deaktiviert wurde, bis zum Ende des Ereignisses, in dem die Funktion aufgerufen wurde, nicht als inaktiv betrachtet wird.</p>
   <p class="note"><b>HINWEIS</b>: Wenn Sie eine Instanz beim Start des Raums deaktivieren (d.h. aus der Raumerstellung <span class="notranslate">code</span> oder aus einem Instanzerstellungsereignis einer Instanz innerhalb des Raums), <b>werden</b> alle Instanzen, die aus dem Raumeditor im Raum platziert werden <b>, weiterhin ihr Erstellungsereignis ausführen</b>, bevor sie deaktiviert werden.</p>
   <p class="note"><b></b><b>WARNUNG</b>: Das Deaktivieren von Instanzen, bei denen die Physik aktiviert ist, verhindert <b>NICHT</b>, dass deren Einbauten innerhalb der Physiksimulation interagieren. Dafür solltest du ihre <span style="font-size:1px;"><a href="../../../Physics/Physics_Variables/phy_active.htm"><span class="inline">phy_active</span></a></span> Variable auf <span class="inline">true</span> oder <span class="inline">false</span> setzen, wenn Sie die Instanzen aktivieren/deaktivieren.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">instance_deactivate_all(notme);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_deactivate_all</span>(notme);</p>
   <table>
     <tbody>
       <tr>

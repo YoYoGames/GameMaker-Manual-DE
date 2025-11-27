@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gif_open</h1>
+  <h1><span data-field="title" data-format="default">gif_open</span></h1>
   <p>Mit dieser Funktion können Sie ein leeres Bild im GIF-Format erstellen, in das Sie Daten einfügen können. Wenn Sie die Funktion aufrufen, müssen Sie die Breite und Höhe des GIFs angeben (in Pixeln, und es gibt keine Obergrenze für die Größe, außer für den verfügbaren Speicher), und die Funktion gibt den eindeutigen ID-Wert zurück, der verwendet wird, um das Geschenk in nachfolgenden Funktionen zu identifizieren, oder sie gibt -1 zurück, wenn das GIF nicht initialisiert werden konnte (zum Beispiel, wenn die Breite/Höhe zu groß für den verfügbaren Speicher ist). Sie können auch eine optionale <span class="notranslate">argument</span> angeben, um die &quot;klare Farbe&quot; für das GIF festzulegen. Dabei handelt es sich um einen RGB-Wert (ohne Alphakomponente), der das GIF auf diese Farbe zurücksetzt, bevor ihm etwas hinzugefügt wird. Wenn Sie keine klare Farbe <span class="notranslate">argument</span> angeben, wird die Standardfarbe Schwarz verwendet.</p>
   <p>Beachten Sie, dass Sie bei Verwendung dieser Funktion die Funktion <a href="gif_save.htm"><span class="inline">gif_save()</span></a> aufrufen müssen, um die Erstellung des GIFs zu beenden, bevor Sie eine andere Datei für die Aufnahme öffnen (daher muss für jede <span class="inline">gif_open()</span> eine begleitende <span class="inline">gif_save()</span> vorhanden sein).</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">gif_open(width, height, [clear_colour]);</p>
+  <p class="code"><span data-field="title" data-format="default">gif_open</span>(width, height, [clear_colour]);</p>
   <table>
     <tbody>
       <tr>

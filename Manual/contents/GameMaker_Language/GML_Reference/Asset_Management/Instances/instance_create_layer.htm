@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Instanz_erzeugen_Schicht</title>
+  <title>instance_create_layer</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Instanz_erzeugen_Schicht</h1>
+  <h1><span data-field="title" data-format="default">instance_create_layer</span></h1>
   <p>Mit dieser Funktion können Sie eine neue Instanz des angegebenen Objekts an einem beliebigen Punkt innerhalb des Raums und auf der angegebenen Ebene erstellen. Die Ebene kann durch den Wert der Ebenen-ID identifiziert werden (wie er von der Funktion <a href="../Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a>) oder durch den Namen der Ebene (als String, z. B. &quot;instance_layer&quot;), wie er im <a href="../../../../The_Asset_Editors/Rooms.htm">Raumeditor</a> definiert ist.</p>
   <p>Diese Funktion gibt die <a href="Instance_Variables/id.htm"><span class="inline">id</span></a> der neuen Instanz zurück, die dann in einer Variablen gespeichert und für den Zugriff auf diese Instanz verwendet werden kann. Beachten Sie, dass diese Funktion auch das <a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Ereignis "Create Event</a> " der erstellten Instanz aufruft <i>, bevor</i> sie mit den <span class="notranslate">code</span> oder Aktionen für das Ereignis, das die Funktion aufgerufen hat, fortfährt.</p>
   <p class="note"><span class="important">WICHTIG</span> Es gibt eine minimale und maximale Ebenentiefe von -16000 bis 16000. Alles, was auf einer Ebene außerhalb dieses Bereichs platziert wird <b>, wird nicht gezeichnet</b>, obwohl alle Ereignisse weiterhin wie gewohnt ablaufen.</p>
@@ -26,7 +26,7 @@
   <p class="note"><span class="note">HINWEIS</span> Variablen aus der Struktur werden in die neue Instanz &quot;oberflächlich kopiert&quot;, d. h. alle Arrays, Strukturen und anderen Ressourcen werden per Verweis kopiert und nicht dupliziert.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">instance_create_layer(x, y, layer_id, obj, [var_struct]);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_create_layer</span>(x, y, layer_id, obj, [var_struct]);</p>
   <table>
     <tbody>
       <tr>

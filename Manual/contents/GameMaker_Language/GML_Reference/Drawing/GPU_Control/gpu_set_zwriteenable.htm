@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_zwriteenable</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_zwriteenable</span></h1>
   <p>Mit dieser Funktion kann die Tiefenordnung über den z-Buffer ein- (<span class="inline">true</span>) und ausgeschaltet (<span class="inline">false</span>) werden. Wenn eine Instanz in <span data-keyref="GameMaker Name">GameMaker</span> gerendert wird, wird die Tiefe eines erzeugten Pixels (seine z-Koordinate) im z-Puffer gespeichert. Wenn dann eine andere Instanz der Szene an demselben Pixel gerendert werden muss, werden die beiden Tiefen verglichen (z-Testing - siehe <a href="gpu_set_ztestenable.htm"><span class="inline">gpu_set_ztestenable()</span></a>) und diejenige, die dem Betrachter &quot;näher&quot; ist, wird dann im z-Puffer gespeichert und ersetzt die alte. Dies ist jedoch nicht immer das, was Sie wünschen, und es gibt Momente, in denen Sie möchten, dass etwas über alles andere gezeichnet wird, unabhängig davon, welchen z-Wert es hat. In solchen Fällen können Sie diese Funktion <span class="notranslate">switch</span> verwenden, um das Schreiben in den z-Puffer abzuschalten und so zu erzwingen, dass das, was gezeichnet wird, über alles andere gezeichnet wird. Beachten Sie, dass die hier gegebene Beschreibung für den <i>standardmäßigen</i> z-Test-Vergleichsmodus gilt, der aber geändert werden kann</p>
   <p>Der Standardwert ist, dass die z-Pufferung aktiviert ist (<span class="inline">true</span>).</p>
   <p> </p>

@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>part_system_create_layer</h1>
+  <h1><span data-field="title" data-format="default">part_system_create_layer</span></h1>
   <p>Diese Funktion erstellt ein neues Partikelsystem auf einer bestimmten Ebene. Du gibst die eindeutige Layer-ID an, wie sie von der Funktion <a href="../../../Asset_Management/Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a> zurückgegebene eindeutige Layer-ID oder den Namen des zu verwendenden Layers als String an - zum Beispiel &quot;instance_layer&quot; - und kennzeichnen dann das System als persistent oder nicht. Wenn das System nicht als persistent gekennzeichnet ist, wird es automatisch am Ende des Raumes, in dem es erstellt wurde, zerstört (dies ist dasselbe, als wenn du die Funktion <a href="part_system_destroy.htm"><span class="inline">part_system_destroy()</span></a> aufgerufen hätten, und es werden auch alle mit dem System verbundenen Emitter zerstört). Wenn das System jedoch als persistent gekennzeichnet ist, wird es in den nächsten Raum übertragen, wenn der Raum gewechselt wird, und wenn der folgende Raum <i>keine</i> Ebene mit dem gleichen Namen oder der gleichen Tiefe wie die zugewiesene hat, wird eine neue Ebene für das System erstellt, die über die Räume hinweg persistent ist, und sie wird den gleichen Namen wie die ursprüngliche Ebene erhalten. Wenn bei einem Raumwechsel in den folgenden Räumen eine andere Ebene mit demselben Namen vorhanden ist, wird die persistierte Instanz der Ebene mit demselben Namen zugewiesen <i>, unabhängig von der Tiefe der Ebene</i>. Bewegt sich ein persistiertes System schließlich in einen Raum mit einer Ebene in derselben Tiefe wie die Ebene, auf der das System erstellt wurde, wird es <i>nicht</i> dieser Ebene zugewiesen, sondern es wird eine neue Ebene in derselben Tiefe (mit demselben Namen wie die ursprüngliche Ebene) erstellt.</p>
   <p>Die Funktion gibt einen eindeutigen ID-Wert für das Partikelsystem zurück, der bei allen weiteren Funktionsaufrufen verwendet werden sollte, bei denen Sie eine System-ID angeben müssen.</p>
   <p class="note"><b>WICHTIG!</b> Wenn Sie das Partikelsystem als persistent kennzeichnen, müssen Sie es (und alle ihm zugewiesenen Emitter) manuell mit den entsprechenden Zerstörungsfunktionen bereinigen, wenn es nicht in Gebrauch ist, sonst riskieren Sie ein Speicherleck, das sich negativ auf Ihr endgültiges Spiel auswirkt.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">part_system_create_layer(layer_id, persistent);</p>
+  <p class="code"><span data-field="title" data-format="default">part_system_create_layer</span>(layer_id, persistent);</p>
   <table>
     <tbody>
       <tr>

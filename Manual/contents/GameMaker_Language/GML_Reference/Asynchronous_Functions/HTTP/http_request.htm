@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>http_anforderung</title>
+  <title>http_request</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>http_anforderung</h1>
+  <h1><span data-field="title" data-format="default">http_request</span></h1>
   <p>Mit dieser Funktion können Sie eine HTTP-Header-Anforderung erstellen, um die Betriebsparameter einer HTTP-Transaktion zu definieren, die für viele Dinge wie (zum Beispiel) Authentifizierung über HTTP-Header verwendet werden kann, wenn Sie RESTful-APIs verwenden. Die Funktion benötigt die vollständige IP-Adresse des <span class="notranslate">server</span>, von dem aus die Anfrage gestellt werden soll, sowie die Art der Anfrage (als String, siehe Hinweis unten): &quot;GET&quot;, &quot;HEAD&quot;, &quot;POST&quot;, &quot;PUT&quot;, &quot;DELETE&quot;, &quot;TRACE&quot;, &quot;OPTIONS&quot; oder &quot;CONNECT&quot;. Außerdem müssen Sie eine <span class="inline"><a href="../../Data_Structures/DS_Maps/DS_Maps.htm">DS map</a></span> von Schlüssel/Wert-Paaren (als Zeichenketten, wobei der Schlüssel das Header-Feld und der Wert die erforderlichen Daten für den Header ist) angeben, und die letzte <span class="notranslate">argument</span> ist eine optionale Datenzeichenkette, die Sie der Anfrage hinzufügen können, und wenn sie nicht benötigt wird, kann sie entweder 0 oder eine leere Zeichenkette &quot;&quot; sein. Beachten Sie, dass Sie auch einen <span class="notranslate">buffer</span> senden können (siehe den Abschnitt über <a href="../../Buffers/Buffers.htm">Puffer</a> für weitere Einzelheiten), in diesem Fall wäre der letzte <span class="notranslate">argument</span> der Index des zu sendenden <span class="notranslate">buffer</span>.</p>
   <p class="note"><b>HINWEIS</b>: HTTP-Header haben normalerweise das Format &quot;Schlüssel:Wert&quot;, aber da <span data-keyref="GameMaker Name">GameMaker</span> diese Paare für Sie aus der ds_map erzeugt, müssen Sie den Doppelpunkt &quot;:&quot; nicht in Ihre Map-Schlüssel- oder -Wert-Strings einfügen.</p>
   <p class="note"><b>HINWEIS</b>: Wenn ein <span class="notranslate">buffer</span> für den Body <span class="notranslate">argument</span> verwendet wird, wird kein Body gesendet, wenn die Suchposition <span class="notranslate">buffer</span> am Anfang (0) liegt, und der <span class="notranslate">buffer</span> wird mit der Antwort des http-Aufrufs gefüllt. Wenn jedoch die Suchposition <span class="notranslate">buffer</span> ungleich Null ist, wird der Inhalt der Zeichenfolge <span class="notranslate">buffer</span> als Body gesendet.</p>

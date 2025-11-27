@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>camera_set_update_script</h1>
+  <h1><span data-field="title" data-format="default">camera_set_update_script</span></h1>
   <p>Diese Funktion kann verwendet werden, um eine <a href="../../../GML_Overview/Script_Functions.htm">Skriptfunktion</a> festzulegen, die bei jedem Spielframe aufgerufen wird, bei dem die Kamera einem sichtbaren und aktiven Viewport zugewiesen ist. Sie geben den eindeutigen Kamera-ID-Wert (wie von den verschiedenen <span class="inline">camera_create</span> Funktionen zurückgegeben) und die ID der aufzurufenden Funktion an. Die Reihenfolge, in der die Funktionen den Kameras zugeordnet werden, und das tatsächliche Rendern der Kameraansicht ist wie folgt:</p>
   <ul class="colour">
     <li>Die <b>Aktualisierungsfunktion </b>der Kameras für alle sichtbaren und aktiven Viewports heißt</li>
@@ -30,7 +30,7 @@
   <p>Die Anwendung einer benutzerdefinierten Aktualisierungsfunktion auf eine Kamera überschreibt ihr standardmäßiges Aktualisierungsverhalten. Wenn Sie z. B. Ihre Kamera so einstellen, dass sie beim Aufruf von <span class="inline"><a href="camera_create_view.htm">camera_create_view()</a></span> einem Objekt (z. B. <span class="inline2">obj_player</span>) folgt, oder dies in den Raumeigenschaften festlegen, folgt sie diesem Objekt nicht mehr, sobald eine benutzerdefinierte Aktualisierungsfunktion <span class="notranslate">script</span> festgelegt wird.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">camera_set_update_script(camera_id, script)</p>
+  <p class="code"><span data-field="title" data-format="default">camera_set_update_script</span>(camera_id, script)</p>
   <table>
     <tbody>
       <tr>

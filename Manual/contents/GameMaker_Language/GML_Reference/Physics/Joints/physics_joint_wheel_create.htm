@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physik_gelenk_rad_erstellen</title>
+  <title>physics_joint_wheel_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physik_gelenk_rad_erstellen</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_wheel_create</span></h1>
   <p>Ein Radgelenk kombiniert einfach einen Kolben und ein Drehgelenk, wie ein Rad, das auf dem Stoßdämpfer eines Autos montiert ist. Sie geben den Ankerpunkt für das Gelenk sowie die beiden physikfähigen Instanzen des Gelenks an. Die erste Instanz fungiert als &quot;Körper&quot; für das Gelenk, während die zweite Instanz das &quot;Rad&quot; ist und sich frei um die Gelenkachse bewegen kann. Sie können auch eine Achse <span class="notranslate">vector</span> festlegen, die die imaginäre Linie ist, entlang der das Gelenk als &quot;Feder&quot; fungiert und dem Rad erlaubt, entlang dieser Linie auf- und abzuspringen, wenn es auf Hindernisse trifft (ähnlich wie das Kolbengelenk). Das folgende Bild veranschaulicht dies:</p>
   <p><img>Wenn Sie einen Motor aktivieren, dreht sich die zweite Instanz um die Ankerposition, und Sie können das maximale Motordrehmoment einstellen, das verwendet wird, um die gewünschte Motorgeschwindigkeit (N/m) zu erreichen, sowie die Geschwindigkeit, mit der sich der Motor drehen soll. Da das Radgelenk auch eine Achse hat, entlang der es sich bewegen kann, können Sie die Schwingungsfrequenz (in Hz) sowie das Dämpfungsverhältnis für das Gelenk einstellen - möglicherweise müssen Sie mit diesen Werten spielen, um eine Feinabstimmung vorzunehmen, und es wird empfohlen, dass Sie mit kleineren Werten beginnen und diese erhöhen, bis Sie den gewünschten Effekt erzielen.</p>
   <p>Wie bei allen Gelenken, wenn Sie die &quot;col&quot; Wert auf <span class="inline">true</span> dann die beiden Instanzen können interagieren und miteinander kollidieren, aber <i>nur</i>, wenn sie Kollisions-Ereignisse haben, aber wenn es auf <span class="inline">false</span> eingestellt ist, werden sie nicht kollidieren, egal was.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">physics_joint_wheel_create(inst1, inst2, anchor_x, anchor_y, axis_x, axis_y, enableMotor, max_motor_torque, motor_speed, freq_hz, damping_ratio, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_wheel_create</span>(inst1, inst2, anchor_x, anchor_y, axis_x, axis_y, enableMotor, max_motor_torque, motor_speed, freq_hz, damping_ratio, col)</p>
   <table>
     <tbody>
       <tr>

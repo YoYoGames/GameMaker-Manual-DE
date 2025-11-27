@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>tilemap_set_global_mask</h1>
+  <h1><span data-field="title" data-format="default">tilemap_set_global_mask</span></h1>
   <p>Diese Funktion kann verwendet werden, um die <b>Kachel-Bitmaske</b> für alle Kachelkarten im Spiel zu setzen. Die Idee ist, dass, wenn Sie zum Beispiel ziemlich kleine Kachelsätze von 16 x 16 Kacheln haben, insgesamt 256 verschiedene Kacheln in jedem Kachelsatz haben, die nur 8 Bits Ihres Index im Kacheldaten-&quot;Blob&quot; verwenden (von verfügbaren 19 Bits der Daten). Diese Bits können &quot;maskiert&quot; werden, und der Rest der Kacheldaten kann zum Speichern weiterer Werte verwendet werden.</p>
   <p>Ein einfacher Weg, den anfänglichen Maskenindexwert zu erhalten, besteht darin, die Anzahl der Kacheln im Kachelsatz zu nehmen und 1 abzuziehen. Ein 16x16-Kachelsatz hat also 256 Kacheln und einen Maskenwert von 255 (oder $ff in Hexadezimal), und wenn der Kachelsatz eine Anzahl von Kacheln hat, die <i>keine</i> Potenz von zwei ist, Wenn die Anzahl der Kacheln nicht eine Zweierpotenz ist, runden Sie auf die nächste Zweierpotenz auf, um die Maske zu erhalten. Ein Kachelsatz von 20x20 hat beispielsweise 400 Kacheln, die Sie auf 512 aufrunden würden, um einen Maskenindexwert von 511 ($1ff in Hexadezimal) zu erhalten. Abgesehen von der Indexmaske möchte man normalerweise auch die Werte für das Spiegeln, Drehen und Spiegeln, die einer Kachel zugewiesen sind, beibehalten. Diese können mit dem Wert der Indexmaske &quot;oder&quot;-verknüpft werden, um diese Datenbits zu erhalten. Die folgenden Konstanten können verwendet werden (siehe das Beispiel <span class="notranslate">code</span> unten):</p>
   <table>
