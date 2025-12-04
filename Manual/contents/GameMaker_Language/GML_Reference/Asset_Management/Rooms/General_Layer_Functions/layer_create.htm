@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Ebene_erstellen</title>
+  <title>layer_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Ebene_erstellen</h1>
+  <h1><span data-field="title" data-format="default">layer_create</span></h1>
   <p>Diese Funktion wird verwendet, um eine neue Ebene im aktuellen Raum zu erstellen. Sie geben die Tiefe an, die die neue Ebene einnehmen soll, und die Funktion gibt den eindeutigen Wert der Ebenen-ID zurück, der dann für den Zugriff auf die Ebene in weiteren Funktionen verwendet werden kann. Sie können auch einen optionalen &quot;Namen&quot; <span class="notranslate">argument</span> angeben, der es Ihnen ermöglicht, der Ebene einen bestimmten Namen (als String) zu geben, und anstelle der Ebenen-ID für den Zugriff auf die Ebene diesen Namensstring zu verwenden, obwohl zu beachten ist, dass die Verwendung von Namensstrings größere Auswirkungen auf die Leistung hat als die Verwendung nur des ID-Werts. Wenn Sie den Namen der Ebene nicht angeben, wird der erstellten Ebene ein Name im Format &quot;<span class="inline">_layer_XXX</span>&quot; zugewiesen, wobei &quot;XXX&quot; ein Hexadezimalwert ist, um der Ebene einen eindeutigen Namen zu geben.</p>
   <p>Wenn Sie einen Tiefenwert angeben, ist dieser umso höher, je weiter die Ebene von der Kamera entfernt ist, und umso niedriger, je näher die Ebene an der Kamera liegt. Wenn Sie also drei Ebenen mit den Tiefen -100, 0, 100 haben, werden die Ebenen in der Reihenfolge 100, 0, -100 gezeichnet, so dass die &quot;oberste&quot; Ebene (d. h. die Ebene, die der Kameraansicht am nächsten ist und daher über alles andere gezeichnet wird) die Ebene mit der Tiefe -100 ist.</p>
   <p>Die folgende Abbildung zeigt schematisch, wie die Tiefe bei Ebenen funktioniert:</p>
   <p><img>Es ist zu beachten, dass Sie zwar mehr als eine Ebene einer einzigen Tiefe zuweisen <i>können</i>, aber <i>nicht garantieren können, dass die Ebenen auf derselben Tiefe in einer bestimmten Reihenfolge gezeichnet werden</i>, weshalb es am besten ist, jeder Tiefe nur eine Ebene zuzuweisen. Beachten Sie auch, dass die minimale und maximale Ebenentiefe -16000 bis 16000 beträgt und alles außerhalb dieser Tiefen <b>nicht gerendert wird</b>. Wenn Sie eine Tiefe außerhalb dieses Bereichs benötigen, müssen Sie die Funktion <a href="layer_force_draw_depth.htm"><span class="inline">layer_force_draw_depth()</span></a>.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">layer_create(depth, [name])</p>
+  <p class="code"><span data-field="title" data-format="default">layer_create</span>(depth, [name])</p>
   <table>
     <tbody>
       <tr>

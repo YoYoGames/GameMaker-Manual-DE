@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>kollision_viereck_liste</title>
+  <title>collision_rectangle_list</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>kollision_viereck_liste</h1>
+  <h1><span data-field="title" data-format="default">collision_rectangle_list</span></h1>
   <p>Diese Funktion ist die gleiche wie die <a href="collision_rectangle.htm"><span class="inline">collision_rectangle()</span></a> Funktion, nur dass sie nicht nur eine Instanz in Kollision erkennt, sondern mehrere Instanzen. Sie geben die x/y-Positionen der oberen linken und unteren rechten Ecke des zu prüfenden Bereichs sowie das zu prüfende Objekt an und können festlegen, ob die Prüfung präzise sein soll (in diesem Fall müssen alle geprüften Instanzen <i>präzise</i> Kollisionsmasken haben) und ob die Prüfung die aufrufende Instanz einschließen soll oder nicht.</p>
   <p>Sie geben auch eine <a href="../../Data_Structures/DS_Lists/DS_Lists.htm">DS-Liste</a> an, so dass die <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span class="inline">id</span></a> Werte aller Instanzen, die mit der aufrufenden Instanz kollidieren, an das Ende der angegebenen Liste angehängt werden. Sie können die Liste vor dem Aufruf dieser Funktion <a href="../../Data_Structures/DS_Lists/ds_list_clear.htm">löschen</a>, so dass sie nur die Ergebnisse dieses Funktionsaufrufs enthält. Sie haben auch die Möglichkeit, die Instanzen nach ihren Abständen vom Mittelpunkt des rechteckigen Bereichs zu ihren Ursprüngen zu ordnen. Die Funktion gibt die Anzahl der gefundenen Instanzen zurück, oder 0, wenn keine gefunden wurden.</p>
   <p>Beachte, dass du anstelle eines Objektindexes das <a href="../../../GML_Overview/Instance_Keywords.htm">Instanzschlüsselwort</a> <span class="inline">all</span> angeben kannst, um nach allen Instanzen im aktuellen Raum zu suchen, was auch die Instanz einschließen kann, die <span class="notranslate">code</span> ausführt (abhängig von <span class="inline">notme</span> <span class="notranslate">argument</span>).</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">collision_rectangle_list(x1, y1, x2, y2, obj, prec, notme, list, ordered);</p>
+  <p class="code"><span data-field="title" data-format="default">collision_rectangle_list</span>(x1, y1, x2, y2, obj, prec, notme, list, ordered);</p>
   <table>
     <tbody>
       <tr>

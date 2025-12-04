@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physik_gelenk_distanz_erzeugen</title>
+  <title>physics_joint_distance_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physik_gelenk_distanz_erzeugen</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_distance_create</span></h1>
   <p>Eine der einfachsten Verbindungen ist eine Abstandsverbindung, die besagt, dass der Abstand zwischen zwei Punkten auf zwei Instanzen konstant sein muss. Wenn Sie eine Abstandsverbindung angeben, sollten die beiden Instanzen bereits erstellt sein und eine Halterung zugewiesen haben, dann definieren Sie die beiden Ankerpunkte in Raumkoordinaten. Der erste Ankerpunkt ist mit der Instanz 1 verbunden, der zweite Ankerpunkt mit der Instanz 2, und der Abstand zwischen diesen Punkten gibt die Länge der Abstandsbedingung an. Das Bild unten zeigt, wie das funktioniert:</p>
   <p><img>Wie Sie sehen können, werden die Ankerpunkte als Raumkoordinaten angegeben, so dass bei ihrer Definition Vorsicht geboten ist, insbesondere wenn die Instanzen gleichzeitig mit den Joints erstellt werden und nicht über den Raumeditor im Raum platziert werden. Sie sollten auch bedenken, dass die Joints unabhängig von der Größe der <span class="notranslate">sprite</span> der Instanzen oder der an sie angehängten Fixtures erstellt werden. Wenn Sie also ein Distanzgelenk an einem anderen Ort als dem Ursprung der Instanz erstellen, ist es immer noch gültig und schränkt die beiden Instanzen relativ zu der Position ein, an der es erstellt wurde. Wenn du den &quot;col&quot;-Wert auf <span class="inline">true</span> setzt, können die beiden Instanzen miteinander interagieren und kollidieren, aber <i>nur</i>, wenn sie Kollisionsereignisse haben; wenn er jedoch auf <span class="inline">false</span> gesetzt ist, werden sie nicht kollidieren, egal was passiert.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">physics_joint_distance_create(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_distance_create</span>(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, col)</p>
   <table>
     <tbody>
       <tr>

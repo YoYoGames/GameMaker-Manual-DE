@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>animcurve_create</h1>
+  <h1><span data-field="title" data-format="default">animcurve_create</span></h1>
   <p>Diese Funktion erstellt eine leere <a href="../../../GML_Overview/Structs.htm">Animationskurvenstruktur</a>, die Sie mit Kanaldaten füllen können. Die Funktion gibt einen Zeiger auf die Struktur zurück, der dann verwendet wird, um der Animationskurve Kanäle und andere Daten hinzuzufügen. Sie können diesen Zeiger auch an Funktionen wie <a href="animcurve_get.htm"><span class="inline">animcurve_get()</span></a> übergeben, um später die Daten aus der Kurve zu holen.</p>
   <p>Wenn Sie diese Funktion verwenden, enthält die erstellte Struktur keine Daten. Um sie zu verwenden, sollten Sie mindestens einen Kanal hinzufügen, und der Kanal sollte mit Punkten versehen sein. Um einen Kanal hinzuzufügen, siehe die Funktion <a href="animcurve_channel_new.htm"><span class="inline">animcurve_channel_new()</span></a>und zum Hinzufügen von Punkten zu einem Kanal siehe die Funktion <a href="animcurve_point_new.htm"><span class="inline">animcurve_point_new()</span></a>. Zusätzlich können Sie der Animationskurvenstruktur einen Namen geben, indem Sie die Variable &quot;name&quot; setzen (wie im Beispiel <span class="notranslate">code</span> unten gezeigt). Kanäle, die zu einer neuen Animationskurve hinzugefügt werden, sollten als <a href="../../../GML_Overview/Arrays.htm">Array</a> hinzugefügt werden, wobei jedes Element im Array auf eine Kanalstruktur verweist, und die Punkte in einem Kanal sollten ebenfalls als Array hinzugefügt werden, wobei jedes Arrayelement auf eine Punktstruktur verweist.</p>
   <p>Beachten Sie, dass auf diese Weise erstellte Animationskurven <b>gelöscht werden müssen, wenn sie nicht mehr benötigt werden</b>, da sie sonst Speicherplatz belegen, was zu einem Speicherleck führen kann, das Ihr Spiel verlangsamt und schließlich zum Absturz bringt. Sie können eine Animationskurve entfernen, wenn sie nicht mehr benötigt wird, indem Sie die Funktion <a href="animcurve_destroy.htm"><span class="inline">animcurve_destroy()</span></a>. Sie müssen keine Kanal- oder Punktdaten innerhalb der Kurve bereinigen, da dies vom Garbage Collector automatisch erledigt wird, wenn die Kurve selbst zerstört wird.</p>
   <p> </p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">animcurve_create();</p>
+  <p class="code"><span data-field="title" data-format="default">animcurve_create</span>();</p>
   <p> </p>
   <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Struct_AnimCurve"><a data-rhwidget="HyperlinkPopover" href="../../../../../GameMaker_Language/GML_Reference/Asset_Management/Animation_Curves/animcurve_get.htm">Animation Curve Struct</a></span></p>

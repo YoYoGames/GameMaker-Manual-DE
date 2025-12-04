@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physik_gelenk_pulley_erstellen</title>
+  <title>physics_joint_pulley_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physik_gelenk_pulley_erstellen</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_pulley_create</span></h1>
   <p>Das Flaschenzuggelenk wird verwendet, um zwei Instanzen innerhalb der physikalischen Welt so zu verbinden, dass die Bewegung der einen Instanz die Bewegung der anderen direkt beeinflusst. Diese Gelenke werden zunächst an zwei Punkten im Weltraum verankert, von denen jeder mit einer Instanz in deren Massenschwerpunkt verbunden ist. Dies kann geändert werden, indem die Koordinaten des lokalen Ankers relativ zum Ursprung der Instanz gesetzt werden, was bedeutet, dass die tatsächliche Verbindung von der Instanz zum Ankerpunkt der Physikwelt an einen anderen Ort als den Ursprung verlegt werden kann. Die folgende Abbildung veranschaulicht dies:</p>
   <p><img>Wenn du dir inst2 ansiehst, kannst du sehen, dass sein lokaler Ankerpunkt um 20 Pixel nach &quot;links&quot; von seinem Ursprung verschoben wurde (Zur Erinnerung! Die weltweiten Ankerpunkte werden anhand der Raumkoordinaten definiert, während die lokalen Ankerpunkte relativ zum Ursprung der Instanz definiert werden). Du kannst auch ein Verhältnis für das Flaschenzug-Gelenk angeben, das der einen oder anderen Seite sagt, dass sie sich schneller bewegen soll, wobei ein Wert unter 1 die erste Instanz schneller bewegen lässt (z.B. 0,5 lässt sie sich doppelt so schnell bewegen) und ein Wert über 1 die zweite Instanz schneller bewegen lässt (z.B. 2 lässt sie sich doppelt so schnell bewegen).</p>
   <p>Wie bei allen Gelenken, wenn Sie die &quot;col&quot;-Wert auf <span class="inline">true</span> dann die beiden Instanzen können interagieren und miteinander kollidieren, aber <i>nur</i>, wenn sie Kollisions-Ereignisse haben, aber wenn es auf <span class="inline">false</span> eingestellt ist, werden sie nicht kollidieren, egal was.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">physics_joint_pulley_create(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, l_anchor1_x, l_anchor1_y, l_anchor2_x, l_anchor2_y, ratio, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_pulley_create</span>(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, l_anchor1_x, l_anchor1_y, l_anchor2_x, l_anchor2_y, ratio, col)</p>
   <table>
     <tbody>
       <tr>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>oberfläche_erstellen_ext</title>
+  <title>surface_create_ext</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>oberfläche_erstellen_ext</h1>
+  <h1><span data-field="title" data-format="default">surface_create_ext</span></h1>
   <p>Mit dieser Funktion können Sie eine Fläche an ein Canvas-Element anhängen, das bereits in Ihrer Webseite vorhanden ist. Das bedeutet, dass Sie Teile Ihres Spiels effektiv aufteilen können, um sie an verschiedenen Stellen innerhalb der Seite zu zeichnen. Zu diesem Zweck <i>müssen</i> Sie das Canvas-Element auf der Seite <span class="inline">*.html</span> Ihres Spiels korrekt definieren, indem Sie die richtigen Größen und Namen verwenden, die den Flächen entsprechen, die Sie erstellen möchten. Sie haben also Ihre &quot;Haupt&quot;-Leinwand und dann Ihre sekundären Oberflächen-Leinwandelemente, die mit dieser Funktion den richtigen Oberflächen zugewiesen werden. Das folgende Bild ist ein Beispiel dafür, wie eine Seite mit drei Canvas-Elementen aufgebaut sein könnte:</p>
   <p><img>Das Seitenlayout kann knifflig sein, vor allem, wenn alle Elemente korrekt ausgerichtet sein sollen. Sobald die schwierige Aufgabe der Layouterstellung abgeschlossen ist, können Sie diese <span class="inline">html</span> Datei als Standardseitendatei für das Spiel hinzufügen, indem Sie die <a href="../../../../Settings/Game_Options/HTML5.htm">Registerkarte HTML5</a> der <a href="../../../../Settings/Game_Options.htm">Spieloptionen</a> verwenden. Als Nächstes solltest du deinen Raum und deine Ansichten einrichten, da jede Oberfläche mit einer bestimmten Ansicht verknüpft werden muss, um die Bilder des Spiels zu &quot;erfassen&quot; (siehe die Ansichtsvariable <a href="../../Cameras_And_Display/Cameras_And_Viewports/view_surface_id.htm"><span class="inline">view_surface_id[0...7]</span></a>). Die folgende Abbildung zeigt, wie der Spielraum für das obige Canvas-Beispiel eingerichtet werden würde:</p>
   <p><img>Schließlich würden Sie diese Funktion verwenden, um die Flächen zu erstellen, wobei der Name derselbe ist wie bei den Canvas-Elementen und die Größe der Größe des Canvas entspricht. Die Funktion gibt den Index der Fläche zurück, der in einer Variablen für zukünftige Funktionsaufrufe gespeichert werden sollte. Wenn die Oberfläche zum ersten Mal erstellt wird, kann sie &quot;Rauschen&quot; enthalten, da es sich im Grunde nur um einen Speicherbereich handelt, der für diesen Zweck beiseite gelegt wird (und dieser Speicher kann immer noch Informationen enthalten), daher sollten Sie die Oberfläche vor der Verwendung mit einer Funktion wie <a href="../Colour_And_Alpha/draw_clear_alpha.htm"><span class="inline">draw_clear_alpha()</span></a>.</p>
   <p class="note"><b>HINWEIS</b>: Diese Funktion ist nur für die Verwendung mit dem HTML5 <span class="notranslate">module</span> verfügbar.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">surface_create_ext(name, w, h);</p>
+  <p class="code"><span data-field="title" data-format="default">surface_create_ext</span>(name, w, h);</p>
   <table>
     <tbody>
       <tr>

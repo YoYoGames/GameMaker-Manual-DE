@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>layer_sequence_headpos</h1>
+  <h1><span data-field="title" data-format="default">layer_sequence_headpos</span></h1>
   <p>Mit dieser Funktion können Sie die <a class="glossterm" data-glossterm="Abspielkopf" href="#">Abspielposition</a> eines <span class="notranslate">sequence</span> Elements auf einen bestimmten Frame setzen. Sie geben die <span class="notranslate">sequence</span> Element-ID an, wie sie von <a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a> oder von einer der <a href="../General_Layer_Functions/General_Layer_Functions.htm">Ebenenelement-Funktionen</a> zurückgegeben wird, zusammen mit der neu zu setzenden Position. Beachten Sie, dass die Position in <i>Frames</i> angegeben wird. Wenn Sie einen Wert angeben, der größer als die Gesamtzahl der Frames (oder kleiner als 0) ist, hängt die tatsächliche endgültige Abspielposition von der Art der <span class="notranslate">sequence</span> -Wiedergabe ab, die gemäß diesen Regeln ausgewählt wurde:</p>
   <ul class="colour">
     <li><strong>Keine Schleifenbildung</strong>: Der Abspielkopf wird am Ende von <span class="notranslate">loop</span> (oder am Anfang, wenn der angegebene Wert negativ ist) festgehalten.</li>
@@ -24,7 +24,7 @@
   <p>Wenn Sie die Kopfposition auf diese Weise einstellen, wird die Wiedergabe nicht gestoppt, sondern <span class="notranslate">sequence</span> wird einfach an der neuen Abspielkopfposition fortgesetzt, es sei denn, die Wiedergabe wird angehalten.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">layer_sequence_headpos(sequence_element_id, position)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_sequence_headpos</span>(sequence_element_id, position)</p>
   <table>
     <tbody>
       <tr>

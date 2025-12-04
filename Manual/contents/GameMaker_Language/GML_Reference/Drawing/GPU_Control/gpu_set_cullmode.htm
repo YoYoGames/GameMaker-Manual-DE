@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_cullmode</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_cullmode</span></h1>
   <p>Diese Funktion kann verwendet werden, um den Modus für die Rückseitenauslese einzustellen. Ein Polygon (Primitiv) hat eine <i>Vorder-</i> und eine <i>Rückseite</i>. Die Vorderseite ist die Seite, auf der die Scheitelpunkte <b>gegen den Uhrzeigersinn</b> definiert sind. Normalerweise werden beide Seiten gezeichnet, aber wenn Sie eine geschlossene Form (wie eine Pyramide) erstellen, ist dies eine Verschwendung von Rechenleistung, da die Rückseite des Dreiecks nie zu sehen ist. In diesen Fällen können Sie <span class="notranslate">switch</span> auf Backface Culling zurückgreifen, da dies etwa die Hälfte der Zeichnungszeit einspart, obwohl es bedeutet, dass Sie Ihre Polygone auf die richtige Weise definieren müssen, um Probleme zu vermeiden.</p>
   <p>Der verwendete Cull-Modus-Wert muss eine der folgenden Konstanten sein (der Standardwert ist <span class="inline">cull_noculling</span>):</p>
   <table>
@@ -39,7 +39,7 @@
   </table>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">gpu_set_cullmode(cullmode);</p>
+  <p class="code"><span data-field="title" data-format="default">gpu_set_cullmode</span>(cullmode);</p>
   <table>
     <tbody>
       <tr>

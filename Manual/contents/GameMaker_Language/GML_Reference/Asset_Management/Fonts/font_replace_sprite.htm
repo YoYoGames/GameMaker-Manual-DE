@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>schrift_ersetzen_sprite</title>
+  <title>font_replace_sprite</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>schrift_ersetzen_sprite</h1>
+  <h1><span data-field="title" data-format="default">font_replace_sprite</span></h1>
   <p>Mit dieser Funktion können Sie einen &quot;Sprite Strip&quot; verwenden, um ein zuvor erstelltes <span class="notranslate">sprite</span> Font-Asset zu ersetzen, wobei jedes Teilbild ein einzelnes Symbol oder einen Buchstaben darstellt. Der Index ist die UTF8-Zuordnungsnummer für das erste zu verwendende Zeichen, und die zu verwendenden Bereiche sind die gleichen wie bei einer normalen Schriftart, beginnend mit &quot;!&quot;, aber denken Sie daran, dass Sie nur das einschließen sollten, was Sie brauchen, und dass Sie die <a href="../../Strings/ord.htm"><span class="inline">ord()</span></a> Funktion verwenden, um den richtigen UTF8-Wert für den Anfangsbuchstaben zu erhalten.</p>
   <p>Sie können auch festlegen, ob die Schrift proportional (<span class="inline">true</span>) oder nicht proportional (<span class="inline">false</span>) sein soll. Bei einer proportionalen Schrift richtet sich der Abstand nach der tatsächlichen Breite der Buchstaben (der Buchstabe &quot;i&quot; nimmt also weniger Platz ein als der Buchstabe &quot;w&quot;), während bei einer nicht proportionalen Schrift der Abstand auf der Breite des Teilbildes basiert, wie bei einer einzeiligen Schrift. Schließlich können Sie den Abstand zwischen den einzelnen Buchstaben beim Schreiben festlegen. Dieser kann ein beliebiger ganzzahliger Wert sein, wobei 0 für keinen Abstand steht (die Buchstaben &quot;berühren&quot; sich, wenn sie proportional sind). </p>
   <p>Wenn die Funktion fehlschlägt, wird sie stillschweigend abgebrochen, ohne die angegebene Schriftart <span class="notranslate">sprite</span> zu ersetzen.</p>
   <p>Wenn Sie also z. B. '.' und '0', aber nicht '/' verwenden, müssen Sie entweder trotzdem '/' einfügen oder ein leeres Teilbild zwischen den beiden verwendeten Zeichen lassen. Die folgende Abbildung zeigt ein typisches Layout der Schrift <span class="notranslate">sprite</span>:</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">font_replace_sprite(ind, spr, first, prop, sep);</p>
+  <p class="code"><span data-field="title" data-format="default">font_replace_sprite</span>(ind, spr, first, prop, sep);</p>
   <table>
     <tbody>
       <tr>

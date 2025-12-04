@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>netzwerk_senden_udp</title>
+  <title>network_send_udp</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>netzwerk_senden_udp</h1>
+  <h1><span data-field="title" data-format="default">network_send_udp</span></h1>
   <p>Mit dieser Funktion können Sie Daten über das Netzwerk mittels UDP an eine <span class="notranslate">server</span> senden. Die Funktion nimmt die <i>Socket-ID</i>, über die eine Verbindung hergestellt werden soll, die URL, zu der eine Verbindung hergestellt werden soll, und den zu verwendenden Port entgegen. Dann müssen Sie die <i>Puffer-ID</i> angeben, die die zu sendenden Daten enthält (weitere Informationen über <span class="notranslate">buffers</span> finden Sie unter <a href="../Buffers/Buffers.htm">Referenz - Puffer</a>) und schließlich die Größe (in Bytes) der Daten. UDP ist &quot;verbindungslos&quot;, d.h. Sie stellen keine Verbindung her, sondern senden ein Paket direkt an eine IP-Adresse, und <span class="notranslate">server</span> erhält die eingehenden Daten von einer IP-Adresse und muss sie &quot;wie sie sind&quot; verarbeiten. Die Funktion gibt die Anzahl der gesendeten Bytes zurück, oder eine Zahl kleiner als 0, wenn das Senden fehlgeschlagen ist. Es ist erwähnenswert, dass die endgültige Größe der gesendeten Daten, die von dieser Funktion zurückgegeben wird, auch die <span class="notranslate">GameMaker</span> Header-Informationen enthält, was zusätzliche 12 Bytes sind.</p>
   <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> Diese Funktion wird nicht funktionieren, wenn sie in einem Projekt verwendet wird, das auf dem HTML5-Ziel läuft, und HTML5-Projekte können auch kein UDP empfangen.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">network_send_udp(socket, url, port, bufferid, size);</p>
+  <p class="code"><span data-field="title" data-format="default">network_send_udp</span>(socket, url, port, bufferid, size);</p>
   <table>
     <tbody>
       <tr>

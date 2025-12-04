@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>path_set_precision</h1>
+  <h1><span data-field="title" data-format="default">path_set_precision</span></h1>
   <p>Mit dieser Funktion können Sie die &quot;Glattheit&quot; eines Pfades ändern. Dieser Wert muss zwischen 1 und 8 liegen, wobei ein niedriger Wert geradere Kanten mit schärferen Kurven zwischen den Punkten erzeugt, während ein höherer Wert die Punkte abrundet und den Pfad viel &quot;kurviger&quot; macht. Beachten Sie, dass diese Funktion keinen sichtbaren Effekt hat, wenn der Pfad nicht im Pfadeditor oder mit der Funktion <a href="path_set_kind.htm"><span class="inline">path_set_kind()</span></a>. <strong>Diese Funktion verändert das eigentliche Pfad-Asset</strong> und wirkt sich somit dauerhaft darauf aus, wie der Pfad von allen Instanzen im Spiel verwendet wird, von dem Moment an, in dem die Funktion verwendet wird, bis zum Ende des Spiels. Wenn Sie dies nicht wünschen, sollten Sie eine Funktion wie <span class="inline"><a href="path_duplicate.htm">path_duplicate()</a></span> verwenden, um zunächst eine Kopie des Pfades zu erstellen und dann diese Funktion für das duplizierte Asset aufzurufen (vergessen Sie nicht, <span class="inline"><a href="path_delete.htm">path_delete()</a></span> für das Asset aufzurufen, wenn es nicht mehr benötigt wird).</p>
   <p><img alt="Path Precision differences example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Paths/setprecision.png" /></p>
   <h4>Syntax:</h4>
-  <p class="code">path_set_precision(index, prec);</p>
+  <p class="code"><span data-field="title" data-format="default">path_set_precision</span>(index, prec);</p>
   <table>
     <tbody>
       <tr>

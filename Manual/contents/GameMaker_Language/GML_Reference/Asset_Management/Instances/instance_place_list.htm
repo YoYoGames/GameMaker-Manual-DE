@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>instanz_platz_liste</title>
+  <title>instance_place_list</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instanz_platz_liste</h1>
+  <h1><span data-field="title" data-format="default">instance_place_list</span></h1>
   <p>Mit dieser Funktion können Sie eine Position auf eine Kollision mit allen Instanzen eines Objekts prüfen, indem Sie die Kollisionsmaske der Instanz verwenden, die die <span class="notranslate">code</span> für die Prüfung ausführt. Wenn du diese Funktion verwendest, bittest du <span data-keyref="GameMaker Name">GameMaker</span>, die Instanz an die neue Position zu bewegen, auf eine Kollision zu prüfen, dann zurückzugehen und dir zu sagen, ob eine Kollision gefunden wurde oder nicht. Dies funktioniert bei präzisen Kollisionen, aber nur, wenn sowohl die Instanz als auch die Instanzen des zu prüfenden Objekts präzise Kollisionsmasken ausgewählt haben, ansonsten werden nur Bounding-Box-Kollisionen angewendet.</p>
   <p>Sie geben auch eine <a href="../../Data_Structures/DS_Lists/DS_Lists.htm">DS-Liste</a> an, so dass die <a href="Instance_Variables/id.htm"><span class="inline">id</span></a> Werte aller Instanzen, die mit der aufrufenden Instanz kollidieren, an das Ende der angegebenen Liste angehängt werden. Sie können die Liste vor dem Aufruf dieser Funktion <a href="../../Data_Structures/DS_Lists/ds_list_clear.htm">löschen</a>, so dass sie nur die Ergebnisse dieses Funktionsaufrufs enthält. Du hast auch die Möglichkeit, die Liste nach dem Abstand zwischen dem Ursprung der Instanz, die die Prüfung durchführt, und dem Ursprung der Instanzen, bei denen eine Kollision festgestellt wurde, zu ordnen.</p>
   <p>Beachten Sie, dass die Funktion auch das spezielle Schlüsselwort <a href="../../../GML_Overview/Instance_Keywords.htm"><b><span class="inline">all</span></b></a>akzeptiert. In diesem Fall werden alle Instanzen aufgelistet, die in Kollision gefunden wurden. Die Funktion gibt die Anzahl der gefundenen Instanzen zurück, oder 0, wenn keine gefunden wurden.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">instance_place_list(x, y, obj, list, ordered);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_place_list</span>(x, y, obj, list, ordered);</p>
   <table>
     <tbody>
       <tr>

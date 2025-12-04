@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Puffer_laden</title>
+  <title>buffer_load</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Puffer_laden</h1>
+  <h1><span data-field="title" data-format="default">buffer_load</span></h1>
   <p>Mit dieser Funktion können Sie eine <span class="notranslate">buffer</span> laden, die zuvor mit den <a href="buffer_save.htm"><span class="inline">buffer_save()</span></a> Funktionen gespeichert wurde, sowie alle <a href="../../../Settings/Included_Files.htm" title="Included Files">eingeschlossenen Dateien</a> oder Dateien, die extern geladen wurden. Sie gibt die ID eines neuen Puffers zurück, der von der Funktion als &quot;grow&quot; <span class="notranslate">buffer</span> (siehe <a href="buffer_create.htm">hier</a>) mit einer Byteausrichtung von 1 erstellt wird. Diese ID sollte in einer Variablen gespeichert und bei allen weiteren Funktionsaufrufen zu diesem <span class="notranslate">buffer</span> verwendet werden. Wenn das Laden aus irgendeinem Grund fehlschlägt, gibt die Funktion -1 zurück und im Ausgabefenster <span class="notranslate">compiler</span> wird eine Meldung angezeigt, dass das Laden fehlgeschlagen ist.</p>
   <p class="note"><span class="note">HINWEIS</span> Es ist wichtig, dass Sie alle dynamisch erstellten Ressourcen wie diese aus dem Speicher entfernen, wenn Sie sie nicht mehr benötigen, um Speicherlecks zu vermeiden. Wenn Sie also mit der von Ihnen erstellten <span class="notranslate">buffer</span> fertig sind, sollten Sie sie wieder freigeben mit <a href="buffer_delete.htm"><span class="inline">buffer_delete()</span></a>.</p>
   <h2>Plattformspezifische Hinweise</h2>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>kollision_ellipse</title>
+  <title>collision_ellipse</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>kollision_ellipse</h1>
+  <h1><span data-field="title" data-format="default">collision_ellipse</span></h1>
   <p><span class="inline">Collision_ellipse</span> verwendet die ersten vier <span class="notranslate">arguments</span> (x1,y1,x2,y2), um die Breite und Höhe einer Ellipse innerhalb des aktuellen Raums zu definieren und prüft dann, ob <b>irgendein</b> Objekt, das durch &quot;obj&quot; <span class="notranslate">argument</span> definiert ist, mit diesem Bereich kollidiert. Diese Kollision kann als präzise oder nicht präzise geprüft werden, und du kannst auch wählen, ob die Instanz, auf der die <span class="notranslate">code</span> läuft, geprüft werden soll oder nicht. Betrachten Sie dieses Bild:</p>
   <p><img>Hier verwendet die Instanz in der Mitte eine Kollisionsellipse, um nach Ballobjekten zu suchen. Die blauen Bälle haben <i>keine</i> präzise Bounding Box, und wie du sehen kannst, kann die Kollision auch dann stattfinden, wenn <span class="notranslate">sprite</span> die Ellipse nicht berührt (selbst wenn du die präzise Option in der Funktion auf true setzt), da die Bounding Box von <span class="notranslate">sprite</span> den elliptischen Bereich überlappt, der durch collision_circle definiert ist. Andererseits werden die grünen Kugeln nur dann als kollidierend betrachtet, wenn die tatsächliche <span class="notranslate">sprite</span> die definierte Ellipse überschneidet. Damit präzise Kollisionen berücksichtigt werden, müssen <i>sowohl</i> das Objekt <span class="notranslate">sprite</span> als auch die Kollisionsfunktion als präzise markiert sein. Es sollte auch beachtet werden, dass der Rückgabewert der Funktion die ID einer <i>der</i> Instanzen sein kann, die als in Kollision befindlich betrachtet werden.</p>
   <p>Beachten Sie, dass Sie anstelle eines Objektindex eine Instanz angeben können <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span class="inline">id</span></a> angeben können, um nach einer bestimmten Instanz zu suchen, oder die <a href="../../../GML_Overview/Instance_Keywords.htm">Instanz-Schlüsselwörter</a> <span class="inline">all</span> oder <span class="inline">other</span> (je nach Ereignis und aktuellem Bereich <span class="notranslate">code</span> ).</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">collision_ellipse(x1, y1, x2, y2, obj, prec, notme);</p>
+  <p class="code"><span data-field="title" data-format="default">collision_ellipse</span>(x1, y1, x2, y2, obj, prec, notme);</p>
   <table>
     <tbody>
       <tr>

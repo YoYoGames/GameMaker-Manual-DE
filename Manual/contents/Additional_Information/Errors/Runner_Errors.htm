@@ -19,11 +19,11 @@
   <p><img>Runner-Fehler sind in der Regel schwerwiegender als Kompilierfehler, da sie bedeuten, dass mit Ihrer <span class="notranslate">code</span> etwas ernsthaft schief läuft, was weder der <span class="notranslate">code</span> -Editor noch die <span class="notranslate">compiler</span> erkennen konnten, und deshalb sollten Sie auf solche Fehler achten. Wenn ein solcher Fehler auftritt, können Sie die Schaltfläche <strong>Kopieren</strong> auf dem Pop-up-Fenster verwenden, um den Fehler in die Zwischenablage zu kopieren, die Sie dann in eine Textdatei (oder wo auch immer) einfügen können, um später darauf Bezug zu nehmen.</p>
   <p>Die Struktur dieses Fehlers ist wie folgt:</p>
   <ul class="colour">
-    <li><img><br>
+    <li><img><br />
       Hier wird das Ereignis angezeigt, in dem der Fehler aufgetreten ist, sowie das Objekt (falls zutreffend).</li>
-    <li><img><br>
+    <li><img><br />
       Hier wird der tatsächliche Fehler angezeigt.  Er zeigt also den <em>Umfang </em>des Fehlers und die Art des Fehlers an. Der erste Wert in den Klammern ist die Instanz-ID der Instanz, auf der <span class="notranslate">code</span> läuft - oder einer der speziellen Werte, die in der Tabelle unten aufgeführt sind - und der zweite ist ein interner Wert, den <span data-keyref="GameMaker Name">GameMaker</span> zur Identifizierung von Fehlern verwendet und der ignoriert werden kann. Im Fall des obigen Bildes heißt es, dass die Variable <span class="inline">_image</span> nicht auf das Objekt <span class="inline">obj_EA_DEMO_Control</span> gesetzt wurde (d.h. nicht existiert, bevor darauf zugegriffen wird).</li>
-    <li><img><br>
+    <li><img><br />
       Dies zeigt die Zeilennummer an, in der der Fehler auftritt, sowie einen Ausschnitt von <span class="notranslate">code</span>, der die Position anzeigt. Beachten Sie, dass dies aufgrund der Art und Weise, wie das Spiel kompiliert wird, nicht immer zu 100 % genau ist, aber es sollte ausreichen, um genau herauszufinden, wo das Problem liegt.</li>
   </ul>
   <p>Wie bereits erwähnt, werden bestimmte Fehlermeldungen nicht durch einen Instanz-ID-Wert, sondern durch einen <em>negativen </em>Wert identifiziert. Diese Werte können verwendet werden, um die genaue Art des Fehlers zu bestimmen und worauf er sich bezieht, wobei die folgenden Werte möglich sind:</p>
@@ -264,7 +264,7 @@
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">With</span></td>
         <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Keine Verwendung von global in with-Anweisung möglich</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Mit</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Sie haben versucht, &quot;<span class="inline">global</span>&quot; als Variable innerhalb einer &quot;<span class="inline">with</span>&quot; Anweisung zu verwenden, d.h.:<br>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Sie haben versucht, &quot;<span class="inline">global</span>&quot; als Variable innerhalb einer &quot;<span class="inline">with</span>&quot; Anweisung zu verwenden, d.h.:<br />
           <span class="inline">with (global)<br />
                {<br />
                //do something;<br />
@@ -275,7 +275,7 @@
         <td style="text-align: center;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px"><span class="inline">With</span></td>
         <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Keine Verwendung von local in with-Anweisung möglich</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Mit</td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Sie haben versucht, &quot;<span class="inline">local</span>&quot; als Variable innerhalb einer &quot;<span class="inline">with</span>&quot; Anweisung zu verwenden, d.h.:<br>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Sie haben versucht, &quot;<span class="inline">local</span>&quot; als Variable innerhalb einer &quot;<span class="inline">with</span>&quot; Anweisung zu verwenden, d.h.:<br />
           <span class="inline">with (local)<br />
                {<br />
                //do something;<br />

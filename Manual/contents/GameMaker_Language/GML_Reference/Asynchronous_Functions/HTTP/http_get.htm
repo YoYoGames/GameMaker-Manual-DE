@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>http_get</h1>
+  <h1><span data-field="title" data-format="default">http_get</span></h1>
   <p>Mit dieser Funktion verbinden Sie sich mit der angegebenen URL, um Informationen abzurufen. Da es sich um eine asynchrone Funktion handelt, blockiert <span data-keyref="GameMaker Name">GameMaker</span> nicht, während er auf eine Antwort wartet, sondern läuft weiter, bis er eine Callback-Information erhält. Diese Information wird in Form einer Zeichenkette vorliegen und ein <b>Async-Ereignis</b> in jeder Instanz auslösen, die ein solches in ihren Objekteigenschaften definiert hat. Beachten Sie auch, dass HTTP-Anforderungsparameter (die Bits, die manchmal an das Ende einer URL angehängt werden, wenn Sie ein Formular auf einer Webseite abschicken) bei der Verwendung dieser Funktion völlig akzeptabel sind, zum Beispiel:</p>
   <p class="code">http_get(&quot;http://www.example.com/logon?username=&quot;+name);</p>
   <p>übergibt die in der Variablen &quot;name&quot; enthaltene Zeichenkette an <span class="notranslate">server</span> und ruft die Daten von dieser URL ab. Wann immer also ein einfaches, kurzes Datenstück vom Client an <span class="notranslate">server</span> weitergegeben werden muss, wäre diese Funktion die richtige Wahl.</p>

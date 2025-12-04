@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_create_depth</h1>
+  <h1><span data-field="title" data-format="default">instance_create_depth</span></h1>
   <p>Mit dieser Funktion können Sie eine neue Instanz des angegebenen Objekts an einem beliebigen Punkt innerhalb des Raums und in der angegebenen Tiefe erstellen. Die Tiefe kann ein beliebiger Wert sein, wobei die Dinge umso &quot;näher&quot; an der Kamera gezeichnet werden, je geringer die Tiefe ist, und umso weiter weg, je höher die Tiefe ist, so dass eine Instanz mit der Tiefe -200 über eine Instanz mit der Tiefe +300 gezeichnet wird (zum Beispiel).</p>
   <p>Beachte, dass diese Funktion tatsächlich eine Raumebene für die Instanz anlegt, da alle Instanzen auf einer Ebene im Raum liegen <i>müssen</i>, aber da es sich um eine <i>verwaltete</i> Ebene handelt (d.h. nicht eine, die du über <span class="notranslate">code</span> oder im Raum angelegt hast, sondern eine, die <span data-keyref="GameMaker Name">GameMaker</span> automatisch angelegt hat). Du kannst nicht auf diese Ebene zugreifen, und die <a href="Instance_Variables/layer.htm"><span class="inline">layer</span></a> Instanzvariable wird -1 zurückgeben.</p>
   <p class="note"><span class="important">WICHTIG</span> Es gibt eine minimale und maximale Ebenentiefe von -16000 bis 16000. Alles, was auf einer Tiefe außerhalb dieses Bereichs liegt <b>, wird nicht gezeichnet</b>, obwohl alle Ereignisse weiterhin normal ablaufen.</p>

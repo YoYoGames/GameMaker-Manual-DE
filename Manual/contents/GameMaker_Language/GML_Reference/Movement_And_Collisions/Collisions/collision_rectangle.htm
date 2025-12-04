@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>kollision_rechtwinklig</title>
+  <title>collision_rectangle</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>kollision_rechtwinklig</h1>
+  <h1><span data-field="title" data-format="default">collision_rectangle</span></h1>
   <p><span class="inline">Collision_rectangle</span> verwendet die ersten vier <span class="notranslate">arguments</span> (x1,y1,x2,y2), um einen Bereich innerhalb des aktuellen Raums zu definieren und prüft dann, ob <b>irgendein</b> Objekt, das durch &quot;obj&quot; <span class="notranslate">argument</span> definiert ist, mit diesem Bereich kollidiert. Diese Kollision kann als präzise oder nicht präzise geprüft werden, und du kannst auch wählen, ob du die Instanz, auf der <span class="notranslate">code</span> läuft, selbst prüfen willst oder nicht. Betrachten Sie dieses Bild:</p>
   <p><img>Hier verwendet die Instanz in der Mitte ein Kollisionsrechteck, um nach Kugelobjekten zu suchen. Die blauen Bälle haben <i>keinen</i> genauen Begrenzungsrahmen, und wie Sie sehen können, wird die Kollision auch dann stattfinden, wenn <span class="notranslate">sprite</span> das Rechteck nicht berührt (selbst wenn Sie die Option precise in der Funktion auf true setzen), da der Begrenzungsrahmen von <span class="notranslate">sprite</span> das collision_rectangle überlappt. Andererseits werden die grünen Kugeln nur dann als kollidierend betrachtet, wenn die aktuelle <span class="notranslate">sprite</span> das Rechteck überlappt. Damit präzise Kollisionen berücksichtigt werden können, müssen <i>sowohl</i> das Objekt <span class="notranslate">sprite</span> als auch die Kollisionsfunktion als präzise markiert sein. Es sollte auch beachtet werden, dass der Rückgabewert der Funktion die ID einer <i>der</i> Instanzen sein kann, die als in Kollision befindlich betrachtet werden.</p>
   <p>Beachten Sie, dass Sie anstelle eines Objektindex eine Instanz angeben können <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span class="inline">id</span></a> angeben können, um nach einer bestimmten Instanz zu suchen, oder die <a href="../../../GML_Overview/Instance_Keywords.htm">Instanz-Schlüsselwörter</a> <span class="inline">all</span> oder <span class="inline">other</span> (je nach Ereignis und aktuellem Bereich <span class="notranslate">code</span> ).</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">collision_rectangle(x1, y1, x2, y2, obj, prec, notme);</p>
+  <p class="code"><span data-field="title" data-format="default">collision_rectangle</span>(x1, y1, x2, y2, obj, prec, notme);</p>
   <table>
     <tbody>
       <tr>

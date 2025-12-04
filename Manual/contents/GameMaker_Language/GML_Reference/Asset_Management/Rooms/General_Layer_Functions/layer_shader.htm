@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>schicht_shader</title>
+  <title>layer_shader</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>schicht_shader</h1>
+  <h1><span data-field="title" data-format="default">layer_shader</span></h1>
   <p>Mit dieser Funktion können Sie jeder beliebigen Ebene eine Shader-Ressource zuweisen, und die Ebene wird dann mit diesem Shader gerendert. Sie geben entweder den eindeutigen ID-Wert der Ebene oder den Namen der Ebene (als String - dies wirkt sich auf die Leistung aus) zusammen mit der ID des zu verwendenden Shaders an. Der Shader muss zuvor im Asset-Browser erstellt worden sein und der Shader-Index (der Name der Shader-Ressource) wird dann an diese Funktion übergeben. Wenn der zugewiesenen Ebene Instanzen hinzugefügt wurden, wird der Shader auf <i>alle</i> Zeichnungsereignisse angewendet, die die Instanz verwendet - wenn die Instanz beispielsweise ein Ereignis "Draw GUI Begin" hat, wird der Shader automatisch auf dieses Ereignis angewendet. Der Shader wirkt sich auch auf alle anderen grafischen Elemente aus, die auf dieser Ebene gezeichnet werden, z. B. <span class="notranslate">sprite</span> Assets oder Tile Maps.</p>
   <p>Beachten Sie, dass die Funktion <i>nicht</i> in Zeichnungsereignissen oder Step-Ereignissen aufgerufen werden soll, sondern nur zu Beginn des Raumes im <b>Room Creation Code</b> oder im <b>Create Event / </b> <b>Room Start Event</b> einer Instanz aufgerufen werden muss.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">layer_shader(layer_id, shader)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_shader</span>(layer_id, shader)</p>
   <table>
     <tbody>
       <tr>

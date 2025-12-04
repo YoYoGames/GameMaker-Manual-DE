@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>netzwerk_set_config</title>
+  <title>network_set_config</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>netzwerk_set_config</h1>
+  <h1><span data-field="title" data-format="default">network_set_config</span></h1>
   <p>Mit dieser Funktion können Sie verschiedene Netzwerkkonfigurationen einstellen.</p>
   <p class="note"><b>HINWEIS</b>: Diese Funktion funktioniert nicht, wenn sie in einem Projekt verwendet wird, das auf dem HTML5-Ziel läuft.</p>
   <p>Diese Konfigurationen sind als <b>Konstanten</b> angegeben und die Einstellung hängt von der gewählten Konstante ab. In der nachstehenden Tabelle sind die verfügbaren Konstanten und ihre Einstellungen aufgeführt:</p>
@@ -65,7 +65,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     Die erste Option (<span class="inline">network_config_connect_timeout</span>) legt lediglich den Timeout für die Verbindung zu <span class="notranslate">server</span> fest, ändert aber nichts am Verbindungsverhalten, abgesehen von der Zeit, die Sie warten müssen. Es wird empfohlen, diesen Wert nicht zu niedrig einzustellen und ihn bei etwa 1000 für ein reines LAN-Spiel oder 4000 oder so für das Internet zu halten, da das Spiel sonst zufällig keine Verbindung herstellen kann. Wenn Sie einen Timeout-Wert für das Senden/Empfangen von Paketen einstellen möchten, verwenden Sie die Funktion <a href="network_set_timeout.htm"><span class="inline">network_set_timeout()</span></a>.</p>
   <p>Die zweite Option (<span class="inline">network_config_use_non_blocking_socket</span>) bedeutet, dass die <span class="inline">network_connect_*</span> Funktionen (nicht asynchron) alle sofort ein <span class="inline">socket_id</span> zurückgeben, <i>aber Sie können auf diesem Socket nicht senden oder empfangen, bis Sie ein asynchrones Netzwerkereignis erhalten haben</i>. Das ausgelöste Ereignis hat den &quot;Typ&quot;-Schlüssel auf <span class="inline">network_type_non_blocking_connect</span> gesetzt (weitere Details finden Sie auf der Seite über das <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Networking.htm">asynchrone Netzwerkereignis</a>). Dies ist eine <b>globale</b> Einstellung, da <span data-keyref="GameMaker Name">GameMaker</span> eine Mischung aus blockierendem und nicht-blockierendem Betrieb in einer Anwendung nicht unterstützt.</p>
   <p>Die dritte und vierte Option (<span class="inline">network_config_enable_reliable_udp</span>, <span class="inline">network_config_disable_reliable_udp</span>) dienen zum Aktivieren bzw. Deaktivieren des zuverlässigen UDP-Protokolls <span data-keyref="GameMaker Name">von GameMaker</span> und sollten daher <b>nur bei UDP-Verbindungen verwendet werden</b>. Was &quot;zuverlässig&quot; in diesem Fall bedeutet, ist, dass <span data-keyref="GameMaker Name">GameMaker</span>, wenn es auf <i>beiden</i> Seiten einer Verbindung aktiviert ist, versucht, zu überprüfen, ob die Pakete korrekt angekommen sind, und alle Pakete, die nicht angekommen sind, erneut sendet (Achtung, wir garantieren nicht, dass die Pakete in der Reihenfolge der Übertragung ankommen). Bei Verwendung eines zuverlässigen Socket-Typs wird allen udp-Paketen ein 12-Byte-Header hinzugefügt, der Informationen enthält, die der <span data-keyref="GameMaker Name">GameMaker</span> benötigt, um das Paket auf Fehler zu prüfen und fehlende Pakete erneut zu senden. Die folgenden Punkte sind bei der Verwendung dieser Option zu beachten:</p>

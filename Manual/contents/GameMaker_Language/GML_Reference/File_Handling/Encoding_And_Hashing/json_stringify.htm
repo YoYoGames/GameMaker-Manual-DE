@@ -15,15 +15,15 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>json_stringify</h1>
+  <h1><span data-field="title" data-format="default">json_stringify</span></h1>
   <p>Mit dieser Funktion können Sie einzelne oder verschachtelte Structs und Arrays in einen gültigen JSON-String konvertieren. Sie geben den zu verwendenden Ausgangswert an (einen Array-Index oder eine Struct-Referenz) und die Funktion &quot;stringifiziert&quot; ihn dann und wandelt ihn in einen JSON-String um (sie wandelt <span class="notranslate">GameMaker</span> Arrays in JSON-Arrays und <span class="notranslate">GameMaker</span> Structs in JSON-Objekte um).</p>
   <p>Bei der Verwendung dieser Funktion gibt es einige wichtige Dinge zu beachten:</p>
   <ul class="colour">
     <li>Die Funktion konvertiert <em>keine </em> DS-Maps, Listen oder andere Datenstrukturen in JSON, sondern speichert lediglich den internen Indexwert für die Struktur (der von geringem Nutzen ist, da sich der Index zwischen den Durchläufen des Spiels ändert), und daher sollten Sie nicht versuchen, einen Wert zu stringifizieren, der Verweise auf Datenstrukturen enthält (dafür gibt es <a href="json_encode.htm"><span class="inline">json_encode()</span></a>).</li>
-    <li>Die Funktion wandelt nahezu jeden Wert in eine &quot;gültige&quot; JSON-Zeichenkette um. Die tatsächlichen Werte in der Zeichenkette entsprechen jedoch aufgrund der Funktionsweise des JSON-Standards möglicherweise nicht genau dem, was Sie erwarten:<br>
-      <br>
-      &quot;JSON ist in Bezug auf Zahlen agnostisch. In jeder Programmiersprache kann es eine Vielzahl von Zahlentypen mit unterschiedlichen Kapazitäten und Ergänzungen geben, fest oder fließend, binär oder dezimal. Das kann den Austausch zwischen verschiedenen Programmiersprachen erschweren. JSON bietet stattdessen nur die Darstellung von Zahlen an, die Menschen verwenden: <span class="notranslate">sequence</span> von Ziffern. Alle Programmiersprachen wissen, wie man mit den Ziffern <span class="notranslate">sequences</span> umgeht, auch wenn sie sich über die internen Darstellungen nicht einig sind.&quot;<br>
-      <br>
+    <li>Die Funktion wandelt nahezu jeden Wert in eine &quot;gültige&quot; JSON-Zeichenkette um. Die tatsächlichen Werte in der Zeichenkette entsprechen jedoch aufgrund der Funktionsweise des JSON-Standards möglicherweise nicht genau dem, was Sie erwarten:<br />
+      <br />
+      &quot;JSON ist in Bezug auf Zahlen agnostisch. In jeder Programmiersprache kann es eine Vielzahl von Zahlentypen mit unterschiedlichen Kapazitäten und Ergänzungen geben, fest oder fließend, binär oder dezimal. Das kann den Austausch zwischen verschiedenen Programmiersprachen erschweren. JSON bietet stattdessen nur die Darstellung von Zahlen an, die Menschen verwenden: <span class="notranslate">sequence</span> von Ziffern. Alle Programmiersprachen wissen, wie man mit den Ziffern <span class="notranslate">sequences</span> umgeht, auch wenn sie sich über die internen Darstellungen nicht einig sind.&quot;<br />
+      <br />
       Weitere Informationen finden Sie im <a href="http://www.ecma-international.org/publications/standards/Ecma-404.htm">ECMA JSON Standard</a>.
     </li>
     <li>Wenn Sie einen int64 in die in JSON zu konvertierenden Werte einfügen, wird er als <i>int</i> geschrieben, wenn er im gültigen Bereich für einen int32 liegt, als <i>double</i>, wenn dies ohne Präzisionsverlust möglich ist, oder (wenn keiner dieser Fälle zutrifft) als <i>String</i> mit einer Kennung &quot;<span class="inline">@i64@</span>&quot; davor und &quot;<span class="inline">$i64$</span>&quot; danach. Wenn Sie das JSON erneut parsen, erkennt <span data-keyref="GameMaker Name">GameMaker</span> diese Bezeichner und wandelt den Wert wieder in einen int64 um. Das bedeutet, dass, wenn das JSON für <span class="notranslate">server</span> oder ein anderes Nicht-GameMaker-Ziel bestimmt ist, diese Werte nicht geeignet sind und daher vermieden werden sollten.</li>
@@ -34,7 +34,7 @@
   <p> </p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">json_stringify(val)</p>
+  <p class="code"><span data-field="title" data-format="default">json_stringify</span>(val)</p>
   <table>
     <tbody>
       <tr>

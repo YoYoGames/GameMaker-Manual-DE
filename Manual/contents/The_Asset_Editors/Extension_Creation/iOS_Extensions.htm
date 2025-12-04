@@ -26,8 +26,8 @@
       <ol>
         <li>Stellen Sie sicher, dass die Delegaten-Quelldateien den gleichen Namen wie die Delegatenklasse haben (z.B. sollte <span class="inline">@interface MyCustomAppDelegate</span> in &quot; <span class="inline">MyCustomAppDelegate.h</span>&quot; definiert werden)</li>
         <li>Fügen Sie die Umgebungsvariable <span class="inline">${YYExtAppDelegateIncludes}</span> am Anfang der Delegaten-Header-Datei Ihrer Anwendung hinzu. Diese wird zur Kompilierzeit durch die relevanten Include-Dateien für die übergeordnete Delegatenklasse ersetzt.</li>
-        <li>Verwenden Sie die Umgebungsvariable <span class="inline">${YYExtAppDelegateBaseClass}</span> als Basisklasse für Ihren benutzerdefinierten App-Delegaten. Diese wird bei der Kompilierung durch die richtige Basis-Delegiertenklasse ersetzt.<br>
-          <br>
+        <li>Verwenden Sie die Umgebungsvariable <span class="inline">${YYExtAppDelegateBaseClass}</span> als Basisklasse für Ihren benutzerdefinierten App-Delegaten. Diese wird bei der Kompilierung durch die richtige Basis-Delegiertenklasse ersetzt.<br />
+          <br />
           Um sicherzustellen, dass Ihre Erweiterung mit anderen Erweiterungen funktioniert, die benutzerdefinierte App-Delegate verwenden, sollten Sie alle Methoden der Basisklasse von überschriebenen Methoden in Ihrer Kindklasse aufrufen. Bevor Sie die Methode der Oberklasse aufrufen, müssen Sie sicherstellen, dass sie in der Klassenhierarchie implementiert ist, um Fehler zu vermeiden, z.B.:
         </li>
       </ol>
@@ -40,17 +40,17 @@
                 return TRUE;<br />
         }</p>
     </li>
-    <li class="dropspot"><strong>System-Frameworks</strong>: Hier können Sie beliebige <span class="notranslate">iOS</span> <a class="glossterm" data-glossterm="Rahmenwerk" href="#">System-Frameworks</a>in Ihre Erweiterung einfügen. Diese werden hinzugefügt, indem Sie auf die Schaltfläche <img> klicken, wodurch ein Platzhalter-Framework hinzugefügt wird, das Sie dann durch einen Doppelklick auf <img> bearbeiten können. Weitere Informationen über die verfügbaren System-Frameworks finden Sie <a href="https://developer.apple.com/documentation/">hier</a>. Um ein Systemgerüst zu entfernen, wählen Sie es einfach aus und klicken dann auf die Schaltfläche <img>.<br>
-      <br>
+    <li class="dropspot"><strong>System-Frameworks</strong>: Hier können Sie beliebige <span class="notranslate">iOS</span> <a class="glossterm" data-glossterm="Rahmenwerk" href="#">System-Frameworks</a>in Ihre Erweiterung einfügen. Diese werden hinzugefügt, indem Sie auf die Schaltfläche <img> klicken, wodurch ein Platzhalter-Framework hinzugefügt wird, das Sie dann durch einen Doppelklick auf <img> bearbeiten können. Weitere Informationen über die verfügbaren System-Frameworks finden Sie <a href="https://developer.apple.com/documentation/">hier</a>. Um ein Systemgerüst zu entfernen, wählen Sie es einfach aus und klicken dann auf die Schaltfläche <img>.<br />
+      <br />
       <img>Sie können das Kontrollkästchen für ein Framework aktivieren, um es als &quot;<strong>Schwache Referenz</strong>&quot; zu kennzeichnen. Dadurch wird es dem Abschnitt &quot;<strong>Build Phases -&gt; Link Binary with Libraries</strong>&quot; auf <span class="notranslate">Xcode</span> als &quot;<strong>optionales</strong>&quot; Framework hinzugefügt, im Gegensatz zu einem &quot;<strong>erforderlichen</strong>&quot; Framework (was das Standardverhalten ist).
     </li>
-    <li class="dropspot"><strong>3rd Party Frameworks + Bundles</strong>: Dieser Abschnitt dient zum Hinzufügen von Drittanbieter- und SDK-Bundles. Wie bei den System-Frameworks klicken Sie auf die Schaltfläche <img>, um sie hinzuzufügen, und doppelklicken Sie dann auf <img>, um sie zu bearbeiten, und wählen Sie sie aus und klicken Sie dann auf <img>, um sie zu entfernen (Informationen zum Namen des Frameworks finden Sie in der Dokumentation des von Ihnen gewählten SDK).<br>
-      <br>
-      Hier können Sie wählen, ob Sie das Framework <strong>nicht einbetten</strong>, <strong>einbetten und signieren</strong> oder <strong>ohne Signierung einbetten</strong> möchten:<br>
+    <li class="dropspot"><strong>3rd Party Frameworks + Bundles</strong>: Dieser Abschnitt dient zum Hinzufügen von Drittanbieter- und SDK-Bundles. Wie bei den System-Frameworks klicken Sie auf die Schaltfläche <img>, um sie hinzuzufügen, und doppelklicken Sie dann auf <img>, um sie zu bearbeiten, und wählen Sie sie aus und klicken Sie dann auf <img>, um sie zu entfernen (Informationen zum Namen des Frameworks finden Sie in der Dokumentation des von Ihnen gewählten SDK).<br />
+      <br />
+      Hier können Sie wählen, ob Sie das Framework <strong>nicht einbetten</strong>, <strong>einbetten und signieren</strong> oder <strong>ohne Signierung einbetten</strong> möchten:<br />
       <img>Dies entspricht der gleichen Option für ein Framework, das unter &quot;<strong>Frameworks, Bibliotheken und eingebettete Inhalte</strong>&quot; in <span class="notranslate">Xcode</span> hinzugefügt wurde.
     </li>
-    <li class="dropspot"><strong>Framework-Pfad auf dem Mac eingeben</strong>: Wenn Sie der Erweiterung ein Framework hinzufügen möchten, dessen Dateien auf dem Mac vorhanden sind, der zur Erstellung Ihres Projekts verwendet wird, können Sie den Pfad zu diesem Framework (auf dem Erstellungsrechner) in dieses Feld eingeben und dann auf die Schaltfläche <img> klicken, um es hinzuzufügen.<br>
-      <br>
+    <li class="dropspot"><strong>Framework-Pfad auf dem Mac eingeben</strong>: Wenn Sie der Erweiterung ein Framework hinzufügen möchten, dessen Dateien auf dem Mac vorhanden sind, der zur Erstellung Ihres Projekts verwendet wird, können Sie den Pfad zu diesem Framework (auf dem Erstellungsrechner) in dieses Feld eingeben und dann auf die Schaltfläche <img> klicken, um es hinzuzufügen.<br />
+      <br />
       Der Pfad muss auf eine Datei <span class="inline">.framework</span> verweisen, die als <span class="inline">.zip</span> komprimiert und im Ordner <span class="inline">iOSSourceFromMac</span> unter Ihrem Erweiterungsverzeichnis abgelegt wird. Sie können diese Datei jederzeit öffnen, indem Sie mit der rechten Maustaste auf <img> auf der Erweiterung klicken und <em>Im Explorer öffnen</em> wählen.
     </li>
     <li class="dropspot"><strong>Quelle hinzufügen</strong>: Hier können Sie die Quelldateien hinzufügen, die für die Funktion Ihrer Erweiterung erforderlich sind. Die hinzugefügten Dateien werden im Ordner <span class="inline">iOSSource</span> in Ihrem Erweiterungsverzeichnis gespeichert.</li>
@@ -96,28 +96,28 @@
       </tr>
       <tr>
         <td style=""><b>Berechtigungen</b></td>
-        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}\<br>
+        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}\<br />
          <span>${YYXCodeProjName}.entitlements</span>
         </td>
       </tr>
       <tr>
         <td style=""><b>info.plist</b></td>
-        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}\<br>
+        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}\<br />
           Unterstützungsdateien\${YYXCodeProjName}-Info<span>.plist</span></td>
       </tr>
       <tr>
         <td style=""><strong>infoPlist.strings</strong></td>
-        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}\<br>
+        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}\<br />
           de.lproj\InfoPlist.strings</td>
       </tr>
       <tr>
         <td style=""><strong>projekt.pbxproj</strong></td>
-        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}.xcodeproj\<br>
+        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}.xcodeproj\<br />
           projekt.pbxproj</td>
       </tr>
       <tr>
         <td style=""><strong>xcscheme</strong></td>
-        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}.xcodeproj\<br>
+        <td style="">{RUNTIME}\ios\TemplateProject\${YYXCodeProjName}.xcodeproj\<br />
           xcshareddata\xcschemes\${YYXCodeProjName}.xcscheme</td>
       </tr>
       <tr>
