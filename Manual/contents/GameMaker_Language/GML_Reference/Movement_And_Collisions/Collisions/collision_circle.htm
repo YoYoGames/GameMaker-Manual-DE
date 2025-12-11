@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>kollision_kreis</title>
+  <title>collision_circle</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>kollision_kreis</h1>
+  <h1><span data-field="title" data-format="default">collision_circle</span></h1>
   <p><span class="inline">Collision_circle</span> erzeugt eine kreisförmige Zone mit dem vom Benutzer angegebenen Radius um die Punkte x1,y1 und prüft dann diese Zone auf eine Kollision mit <b>einer beliebigen</b> Instanz des durch <span class="notranslate">argument</span> &quot;obj&quot; angegebenen Objekts. Diese Prüfung kann entweder präzise oder nicht präzise sein, aber damit präzise Kollisionen aktiviert werden können, <i>müssen</i> für das Objekt oder die Instanz, auf die Sie prüfen, auch präzise Kollisionen für deren <span class="notranslate">sprite</span> aktiviert sein. Ist dies nicht der Fall, basiert die Standardprüfung auf Begrenzungsrahmen. Die folgende Abbildung veranschaulicht, wie dies funktioniert:</p>
   <p><img>Hier verwendet die Instanz in der Mitte einen Kollisionskreis, um auf Ballobjekte zu prüfen. Die blauen Bälle haben <i>keine</i> präzise Bounding Box, und wie Sie sehen können, kann die Kollision auch dann stattfinden, wenn <span class="notranslate">sprite</span> den Kreis nicht berührt (selbst wenn Sie die Option precise in der Funktion auf true setzen), da die Bounding Box von <span class="notranslate">sprite</span> den durch collision_circle definierten Kreis überlappt. Andererseits werden die grünen Kugeln nur dann als kollidierend betrachtet, wenn die tatsächliche <span class="notranslate">sprite</span> mit dem definierten Kreis überlappt. Damit präzise Kollisionen berücksichtigt werden können, müssen <i>sowohl</i> das Objekt <span class="notranslate">sprite</span> als auch die Kollisionsfunktion als präzise markiert sein. Es sollte auch beachtet werden, dass der Rückgabewert der Funktion die ID einer <i>der</i> Instanzen sein kann, die als in Kollision befindlich betrachtet werden.</p>
   <p>Beachten Sie, dass Sie anstelle eines Objektindex eine Instanz angeben können <a href="../../Asset_Management/Instances/Instance_Variables/id.htm"><span class="inline">id</span></a> angeben können, um nach einer bestimmten Instanz zu suchen, oder die <a href="../../../GML_Overview/Instance_Keywords.htm">Instanz-Schlüsselwörter</a> <span class="inline">all</span> oder <span class="inline">other</span> (je nach Ereignis und aktuellem Bereich <span class="notranslate">code</span> ).</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">collision_circle(x1, y1, rad, obj, prec, notme);</p>
+  <p class="code"><span data-field="title" data-format="default">collision_circle</span>(x1, y1, rad, obj, prec, notme);</p>
   <p> </p>
   <table>
     <tbody>

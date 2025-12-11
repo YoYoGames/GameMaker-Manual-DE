@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>event_perform</h1>
+  <h1><span data-field="title" data-format="default">event_perform</span></h1>
   <p>Diese Funktion führt das angegebene Ereignis mit dem angegebenen <span class="notranslate">argument</span> für die Instanz aus, auf der <span class="notranslate">code</span> läuft. Es gibt hier viele Optionen, die eine vollständige Simulation aller möglichen Ereignisse ermöglichen, aber beachten Sie, dass dies buchstäblich nur alle <span class="notranslate">code</span> in dem Ereignis ausführt und das Spiel nichts ändert, um es selbst manuell auszulösen, z. B. wenn Sie sich entscheiden, ein Tastaturdruck-Ereignis auszuführen, wird das Ereignis ausgelöst, aber die entsprechende Taste wird nicht als gedrückt erkannt. Oder wenn Sie ein Alarmereignis auslösen, wird der Alarmzähler nicht auf -1 gesetzt, sondern weiter heruntergezählt.</p>
   <p>Asynchrone Ereignisse können aufgerufen werden mit <a href="event_perform_async.htm"><span class="inline">event_perform_async()</span></a>.</p>
   <p>In der folgenden Tabelle finden Sie alle Konstanten, die im <span data-keyref="GameMaker Name">GameMaker</span> zur Referenzierung von Ereignistypen enthalten sind, sowie deren Zahlenwert. Die Ereignisse selbst sind <b>fett</b> gedruckt und entsprechen den Rückgabewerten der <a href="event_type.htm"><span class="inline">event_type</span></a> Variablen (die in die erste <span class="notranslate">argument</span> dieser Funktion übergeben wird), während ihre Zahlenwerte <i>kursiv</i> gedruckt sind und den Rückgabewerten der <a href="event_number.htm"><span class="inline">event_number</span></a> Variablen (die an die zweite <span class="notranslate">argument</span> dieser Funktion übergeben werden):</p>
@@ -383,7 +383,7 @@
   </table>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">event_perform(type, numb);</p>
+  <p class="code"><span data-field="title" data-format="default">event_perform</span>(type, numb);</p>
   <table>
     <tbody>
       <tr>

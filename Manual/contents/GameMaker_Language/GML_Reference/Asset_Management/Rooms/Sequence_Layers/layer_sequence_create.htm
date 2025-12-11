@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>schicht_sequenz_erstellen</title>
+  <title>layer_sequence_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>schicht_sequenz_erstellen</h1>
+  <h1><span data-field="title" data-format="default">layer_sequence_create</span></h1>
   <p>Mit dieser Funktion können Sie eine Instanz eines <span class="notranslate">sequence</span> Assets auf der angegebenen Ebene erstellen. Sie geben die Ebenen-ID an, die eine Zeichenkette des Ebenennamens sein kann - wie im Raumeditor definiert - oder die eindeutige Ebenen-ID - wie von der Funktion <a href="../General_Layer_Functions/layer_get_id.htm"><span class="inline">layer_get_id()</span></a>zurückgegeben wird, sowie die X- und Y-Position im Raum, an der die <span class="notranslate">sequence</span> erstellt werden soll, und schließlich die ID der <span class="notranslate">sequence</span>, die erstellt werden soll. Die <span class="notranslate">sequence</span> ID ist die Namenskonstante, die Sie im Asset Browser für das <span class="notranslate">sequence</span> definiert haben. Die Funktion gibt die eindeutige ID des <span class="notranslate">sequence</span> Elements zurück, die dann in allen weiteren Layerfunktionen für <span class="notranslate">sequences</span> verwendet werden kann, oder sie kann verwendet werden, um die <span class="notranslate">sequence</span> Instanzstruktur mit der Funktion <a href="layer_sequence_get_sequence.htm"><span class="inline">layer_sequence_get_instance()</span></a>.</p>
   <p>Es ist erwähnenswert, dass, wenn <span class="notranslate">sequence</span> Objektspuren enthält, ihre Instanzen erstellt werden, sobald das <span class="notranslate">sequence</span> Element selbst erstellt wird, unabhängig davon, wo ihre Asset-Keys auf dem <a href="../../../../../The_Asset_Editors/Sequence_Properties/Using_The_Dope_Sheet.htm">Dope Sheet</a> positioniert sind. Der <span class="notranslate">Sequence</span> Controller schaltet einfach die <a href="../../Instances/Instance_Variables/visible.htm">Sichtbarkeit</a> der Instanz um, um sie je nach Position und Dauer des Asset-Schlüssels der Spur ein- und auszublenden, und erstellt und zerstört sie <em>nicht </em>wiederholt. Daher werden die Instanzen ihre "Create"-Ereignisse ausführen, wenn das Element <span class="notranslate">sequence</span> erstellt wird und nicht, wenn ihre Asset-Keys beginnen.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">layer_sequence_create(layer_id, x, y, sequence_id)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_sequence_create</span>(layer_id, x, y, sequence_id)</p>
   <table>
     <tbody>
       <tr>

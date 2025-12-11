@@ -3,8 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Streicher</title>
-  <meta name="generator" content="Adobe RoboHelp 2020" />
+  <title>Zeichenfolge</title>
+  <meta name="generator" content="Adobe RoboHelp 2022" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
   <meta name="rh-authors" content="Mark Alexander" />
@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Streicher</h1>
+  <h1><span data-field="title" data-format="default">Zeichenfolge</span></h1>
   <p>Irgendwann werden Sie bei der Entwicklung Ihres Spiels Text verwenden müssen. Der <span data-keyref="GameMaker Name">GameMaker</span> verfügt über eine ganze Reihe von Funktionen, die es Ihnen ermöglichen, Strings auf vielfältige Weise zu manipulieren, einschließlich des Einfügens eines Strings in einen anderen, des Kopierens von Strings und der Möglichkeit, Strings nach den darin enthaltenen Ziffern oder Buchstaben zu analysieren. Im Allgemeinen kann eine Zeichenkette <i>nur</i> durch das Hinzufügen von Text innerhalb von doppelten Anführungszeichen &quot; &quot; erstellt werden. <em>Einfache Anführungszeichen werden nicht akzeptiert</em>, und Sie können die Zeichenkette auch nicht über mehrere Zeilen aufteilen und erwarten, dass <span data-keyref="GameMaker Name">GameMaker</span> sie so wiedergibt, als wären die Zeilenumbrüche Zeilenumbrüche (es sei denn, es wird ein <strong>Stringliteral</strong> <span class="inline">@</span> verwendet, wie weiter unten erläutert).</p>
   <p>Es ist erwähnenswert, dass es bestimmte Konventionen gibt, die Sie bei der Erstellung von Zeichenketten verwenden können, die sich hauptsächlich auf die Verwendung von <i>Escape-Zeichen</i> beziehen. Dies sind Zeichen, denen ein &quot;<span class="inline">\</span>&quot; Symbol vorangestellt ist. Wenn Sie also zum Beispiel Anführungszeichen in eine Zeichenkette einfügen möchten, würden Sie etwa so vorgehen:</p>
   <p class="code">str = &quot;Hello\&quot;World\&quot;&quot;;</p>
-  <p><span data-keyref="GameMaker Name">GameMaker</span> hat auch volle vier Byte breite Unicode-Zeichen-Unterstützung, so dass Sie dekodieren und kodieren Unicode-Zeichen in den oberen Grenzen des Standards (einschließlich - aber nicht beschränkt auf - Emoji). Um mit Unicode-Zeichen umzugehen, können Sie das &quot;<span class="inline">\</span>&quot; verwenden, das jedem Unicode-Literal vorangestellt wird - Hexadezimalziffern, denen ein &quot;<span class="inline">u</span>&quot; vorangestellt wird, zum Beispiel &quot;<span class="inline"><span class="inline">\u00e2</span>&quot; für &quot;á&quot; - wobei die Ziffern die Nummer des Unicode-Zeichens sind. Wenn Sie auf diese Weise mit Unicode arbeiten, müssen Sie sich der Tatsache bewusst sein, dass <span data-keyref="GameMaker Name">GameMaker</span> <i>alle</i> Ziffern nach dem &quot;<span class="inline">u</span>&quot; interpretiert, wenn Sie also z.B. &quot;áa&quot; schreiben wollen, sollten Sie verwenden:</p>
+  <p><span data-keyref="GameMaker Name">GameMaker</span> hat auch volle vier Byte breite Unicode-Zeichen-Unterstützung, so dass Sie dekodieren und kodieren Unicode-Zeichen in den oberen Grenzen des Standards (einschließlich - aber nicht beschränkt auf - Emoji). Um mit Unicode-Zeichen umzugehen, können Sie das &quot;<span class="inline">\</span>&quot; verwenden, das jedem Unicode-Literal vorangestellt wird - Hexadezimalziffern, denen ein &quot;<span class="inline">u</span>&quot; vorangestellt wird, zum Beispiel &quot;<span class="inline">\u00e2</span>&quot; für &quot;á&quot; - wobei die Ziffern die Nummer des Unicode-Zeichens sind. Wenn Sie auf diese Weise mit Unicode arbeiten, müssen Sie sich der Tatsache bewusst sein, dass <span data-keyref="GameMaker Name">GameMaker</span> <i>alle</i> Ziffern nach dem &quot;<span class="inline">u</span>&quot; interpretiert, wenn Sie also z.B. &quot;áa&quot; schreiben wollen, sollten Sie verwenden:</p>
   <p class="code">&quot;\u00e2\a&quot;</p>
   <p>oder</p>
   <p class="code">&quot;\u00e2\u61&quot;</p>
@@ -93,7 +93,6 @@
     <li><a href="ansi_char.htm"><span class="notranslate">ansi_char</span></a></li>
     <li><a href="chr.htm"><span class="notranslate">chr</span></a></li>
     <li><a href="ord.htm"><span class="notranslate">ord</span></a></li>
-    <li><a href="real.htm"><span class="notranslate">real</span></a></li>
     <li><a href="string.htm"><span class="notranslate">string</span></a></li>
     <li><a href="string_byte_at.htm"><span class="notranslate">string_byte_at</span></a></li>
     <li><a href="string_byte_length.htm"><span class="notranslate">string_byte_length</span></a></li>
@@ -125,24 +124,24 @@
     <li><a href="string_hash_to_newline.htm"><span class="notranslate">string_hash_to_newline</span></a></li>
     <li><a href="../Variable_Functions/is_string.htm"><span class="notranslate">is_string</span></a></li>
   </ul>
-  <p> </p>
+  <p> </p>
   <p>Abgesehen von den Funktionen, die sich speziell auf Zeichenketten beziehen, ermöglichen einige Ziele auch den Zugriff auf die Zwischenablage, um Textinformationen zu erhalten und zu setzen:</p>
   <ul class="colour">
     <li><a href="clipboard_has_text.htm"><span class="notranslate">clipboard_has_text</span></a></li>
     <li><a href="clipboard_get_text.htm"><span class="notranslate">clipboard_get_text</span></a></li>
     <li><a href="clipboard_set_text.htm"><span class="notranslate">clipboard_set_text</span></a></li>
   </ul>
-  <p> </p>
-  <p> </p>
-  <p> </p>
+  <p> </p>
+  <p> </p>
+  <p> </p>
   <div class="footer">
     <div class="buttons">
       <div class="clear">
-        <div style="float:left">Zurück: <a href="../GML_Reference.htm">GML-Referenz</a></div>
-        <div style="float:right">Nächste: <a href="../Maths_And_Numbers/Maths_And_Numbers.htm">Mathe und Zahlen</a></div>
+        <div style="float:left">Zurück: <a data-xref="{title}" href="../GML_Reference.htm">GML-Code-Referenz</a></div>
+        <div style="float:right">Nächste: <a data-xref="{title}" href="../Maths_And_Numbers/Maths_And_Numbers.htm">Mathe und Zahlen</a></div>
       </div>
     </div>
-    <h5><span data-keyref="Copyright Notice">© Copyright <span class="notranslate">YoYo Games Ltd.</span> 2022 Alle Rechte vorbehalten</span></h5>
+    <h5><span data-keyref="Copyright Notice">© Copyright YoYo Games Ltd. 2022 All Rights Reserved</span></h5>
   </div>
   <!-- KEYWORDS
 Strings

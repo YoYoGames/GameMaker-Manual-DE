@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_emitter_velocity</h1>
+  <h1><span data-field="title" data-format="default">audio_emitter_velocity</span></h1>
   <p>Diese Funktion kann verwendet werden, um einem Emitter <em>Doppler-Effekte </em>zu verleihen und eine Audio-Bewegung zu simulieren, die auf der <span class="notranslate">vector</span> basiert, die von den angegebenen relativen x-, y- und z-Positionen aufgelöst wird. Wenn sich der Emitter selbst nicht bewegt, brauchst du diese Werte normalerweise nicht zu setzen, aber wenn du zum Beispiel ein scrollendes Shooter-Spiel machst, bei dem die Feinde von rechts kommen und nach links scrollen, würdest du eine Geschwindigkeit von (hspeed, 0, 0) im create event der Feinde setzen (und den Emitter jeder Instanz im step event mit <a href="audio_emitter_position.htm"><span class="inline">audio_emitter_position()</span></a>), um allen Geräuschen, die von den feindlichen Instanzen ausgesendet werden, den richtigen Doppler zu geben, wenn sie die Spielerinstanz passieren (die wiederum die Funktion <a href="../Audio_Listeners/audio_listener_position.htm"><span class="inline">audio_listener_position()</span></a> verwenden würde, um den <i>Hörer</i> auf die richtige Position zu setzen).</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">audio_emitter_velocity(emitter, vx, vy, vz);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_emitter_velocity</span>(emitter, vx, vy, vz);</p>
   <table>
     <tbody>
       <tr class="rh-cursor-column">

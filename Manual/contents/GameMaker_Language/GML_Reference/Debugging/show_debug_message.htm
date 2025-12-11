@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>show_debug_message</h1>
+  <h1><span data-field="title" data-format="default">show_debug_message</span></h1>
   <p>Mit dieser Funktion wird eine benutzerdefinierte Debug-Meldung erstellt, die im Fenster <span class="notranslate">compiler</span> unter <span class="notranslate">runtime</span> angezeigt wird. Beachten Sie, dass die Meldung <i>entweder</i> eine Zeichenkette oder eine reelle Zahl sein kann, aber wenn Sie beides benötigen, muss die Zahl zuerst mit der Funktion <a href="../Strings/Strings.htm"><span class="inline">string()</span></a> in eine Zeichenkette umgewandelt werden (siehe das Beispiel unten). Wenn die Zahl mehr als zwei Dezimalstellen hat, sollten Sie <a href="../Strings/string_format.htm"><span class="inline">string_format()</span></a> verwenden, um sie anzuzeigen, da Dezimalzahlen standardmäßig auf die nächsten zwei Dezimalstellen gerundet werden (so würde &quot;1,2468&quot; im Ausgabefenster als &quot;1,25&quot; angezeigt).</p>
   <p>Debug-Meldungen, die mit dieser Funktion angezeigt werden, werden im <a href="../../../Introduction/The_Output_Window.htm">Compiler-Ausgabefenster</a> unten auf <span class="notranslate">IDE</span> sowie in der <a href="../../../IDE_Tools/The_Debugger.htm">Grafikansicht</a> des Debuggers angezeigt, wenn das Spiel im Debug-Modus läuft. Wenn Sie die Meldungen nur im Debug-Modus sehen wollen, sollten Sie wahrscheinlich die Funktion <a href="debug_event.htm"><span class="inline">debug_event()</span></a> stattdessen verwenden.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">show_debug_message(string);</p>
+  <p class="code"><span data-field="title" data-format="default">show_debug_message</span>(string);</p>
   <table>
     <tbody>
       <tr>

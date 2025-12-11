@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>kamera_erstellen_ansicht</title>
+  <title>camera_create_view</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>kamera_erstellen_ansicht</h1>
+  <h1><span data-field="title" data-format="default">camera_create_view</span></h1>
   <p>Diese Funktion erstellt eine neue Kamera und legt dann ihre Ansicht im Raum fest, bevor sie den eindeutigen ID-Wert zurückgibt, um die Kamera in zukünftigen Funktionsaufrufen zu identifizieren. Die Kamera wird mit den Werten erstellt, die Sie in dieser Funktion für Position, Größe und andere Details festlegen, die mit den Werten korrelieren, die Sie im Raum-Editor festgelegt haben (siehe <a href="../../../../The_Asset_Editors/Rooms.htm">hier</a>). Beachten Sie, dass diese Funktion eine <i>variable Anzahl von Argumenten</i> annehmen kann, wobei nur die x/y-Position und Breite/Höhe <span class="notranslate">arguments</span> obligatorisch sind. Wenn <span class="notranslate">arguments</span> nicht angegeben wird, werden die Standardwerte <span class="notranslate">arguments</span> verwendet.</p>
   <p>Beachten Sie, dass Kameras, wie alle dynamischen Ressourcen, bei ihrer Erstellung Speicherplatz belegen. Das bedeutet, dass Sie darauf achten müssen, Kameras nicht unnötig zu erstellen und nicht benötigte Kameras durch Aufruf der Funktion <a href="camera_destroy.htm"><span class="inline">camera_destroy()</span></a>. Das bedeutet auch, dass Kameras von Raum zu Raum bestehen bleiben, wenn sie einer <span class="inline">global</span> -Variablen zugewiesen werden (sie bleiben auch bestehen, wenn sie Instanz- oder lokalen Variablen zugewiesen werden, aber Sie können nicht mehr auf sie zugreifen, nachdem Sie den Raum gewechselt haben, daher das Speicherleck), so dass Sie zum Beispiel eine neue Kamera erstellen, sie einer globalen Variablen zuweisen und dann zu Beginn jedes Raums die <span class="inline">camera_set_*</span> -Funktionen verwenden können, um die Eigenschaften einzustellen, bevor Sie sie einem Viewport zuweisen.</p>
   <p> </p>

@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>matrix_stack_push</h1>
+  <h1><span data-field="title" data-format="default">matrix_stack_push</span></h1>
   <p>Diese Funktion wird verwendet, um eine neue Matrix an die Spitze des aktuellen Matrix-Stapels zu schieben. Sie multipliziert zunächst die angegebene Matrix mit der Matrix, die sich derzeit oben auf dem Stapel befindet, und schiebt dann die resultierende Matrix auf den Stapel.</p>
   <p>Diese Funktion ist nützlich, um mehrere Matrixtransformationen auf Ihr Bildmaterial anzuwenden, ohne dass Sie verschiedene Matrizen manuell miteinander multiplizieren müssen.</p>
   <p>Sie können zum Beispiel eine Basismatrix auf den Stack schieben, die Grafiken in einen bestimmten rechteckigen Bereich (z. B. ein Fenster) zeichnet. Nachdem Sie einige Grafiken mit dieser Matrix gezeichnet haben, können Sie eine weitere Matrix auf den Stapel schieben, um Grafiken in einem Teilbereich (z. B. einer Schaltfläche im Fenster) zu zeichnen. Nachdem Sie etwas in diesem Unterbereich gezeichnet haben, können Sie <span class="inline"><a href="matrix_stack_pop.htm">matrix_stack_pop()</a></span> aufrufen, um die Matrix vom Stapel zu entfernen und mit dem Zeichnen von Grafiken im Hauptfensterbereich fortzufahren.</p>

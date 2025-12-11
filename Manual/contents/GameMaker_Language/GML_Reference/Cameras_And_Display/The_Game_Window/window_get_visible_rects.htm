@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>window_get_visible_rects</h1>
+  <h1><span data-field="title" data-format="default">window_get_visible_rects</span></h1>
   <p>Mit dieser Funktion können Sie den überlappenden Bereich des durch (x1,y1) bis (x2,y2) definierten Rechtecks auf jedem der angeschlossenen Displays finden. Die Funktion gibt ein Array mit 8 Werten pro Display zurück (d.h. wenn Sie zwei Displays haben, hat das Array eine
     Länge von 16 Indizes), wobei die Werte [0 ... 3] den Werten overlapx1, overlapy1, overlapx2, overlapy2 entsprechen - sie definieren den Bereich der Überlappung auf diesem Display und werden auf 0,0,0,0 gesetzt, wenn keine Überlappung vorliegt - und die Werte [4 ... 7] entsprechen den Werten
     monitorx1, monitory1, monitorx2, monitory2 - den Koordinaten der Anzeige im virtuellen Anzeigebereich. Dies kann verwendet werden, um zu testen, ob eine gespeicherte Fensterposition sichtbar sein wird oder nicht (der Benutzer könnte einen externen Monitor abgeschaltet oder

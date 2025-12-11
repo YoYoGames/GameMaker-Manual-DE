@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_add</h1>
+  <h1><span data-field="title" data-format="default">sprite_add</span></h1>
   <p>Mit dieser Funktion können Sie ein Bild als <span class="notranslate">sprite</span> hinzufügen, indem Sie es aus einer externen Quelle laden, wobei die zu ladende Bilddatei <b>immer</b> entweder im Format <span class="inline">*.png</span>, <span class="inline">*.gif</span>, <span class="inline">*.jpg/jpeg</span> oder <span class="inline">*.json</span> vorliegen sollte (<span class="inline">*json</span> Dateien werden zum Laden von <a href="../Skeletal_Animation/Skeletal_Animation.htm">Skelettanimations-Sprites</a> verwendet, die mit <span class="notranslate">Spine</span> erstellt wurden ). Die Funktion gibt den neuen Index <span class="notranslate">sprite</span> zurück, der dann in jedem weiteren Code verwendet werden muss, der sich auf <span class="notranslate">sprite</span> bezieht. Wenn Sie diese Funktion mit HTML5 verwenden oder ein Bild von einer URL abrufen, erzeugt diese Funktion auch ein asynchrones Ereignis <b>Image Loaded</b>. Auf <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Image_Loaded.htm">dieser Seite</a> finden Sie weitere Informationen.</p>
   <p>Alle Bilder, die in animierte <span class="notranslate">sprites</span> umgewandelt werden sollen - mit Ausnahme von <span class="inline">*.gif</span> (siehe unten) - sollten ein &quot;Streifen&quot;-Format haben (siehe das Bild unten) und werden in die angegebene Anzahl von Unterbildern aufgeteilt, wobei die Regel <b>Sprite-Breite = Streifenbreite / Unterbilder</b> gilt.</p>
   <p><img alt="Example Sprite Strip" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Sprites/spr_strip.png" /></p>
@@ -29,7 +29,7 @@
   <p class="note"><b>HINWEIS</b>: Wenn Sie bei <b>HTML5</b> ein <span class="notranslate">sprite</span> von einem sicheren <span class="notranslate">server</span> laden, müssen Sie möglicherweise den Cross-Origin-Typ festlegen und einen relativen Pfad statt eines absoluten Pfads verwenden. Siehe <span style="font-size:1px;"><a href="../../../Asynchronous_Functions/HTTP/http_set_request_crossorigin.htm"><span class="inline">http_set_request_crossorigin()</span></a></span> für weitere Einzelheiten.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">sprite_add(fname, imgnumb, removeback, smooth, xorig, yorig);</p>
+  <p class="code"><span data-field="title" data-format="default">sprite_add</span>(fname, imgnumb, removeback, smooth, xorig, yorig);</p>
   <table>
     <tbody>
       <tr>

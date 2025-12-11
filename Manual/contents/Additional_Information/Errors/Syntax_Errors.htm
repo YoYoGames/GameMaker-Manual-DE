@@ -69,7 +69,7 @@
       <tr>
         <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Unnötiger Ausdruck [val] als Anweisung verwendet</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Dieser Fehler tritt auf, wenn der <span class="notranslate">syntax</span> Checker einen Ausdruck (dargestellt in [val]) entdeckt, wo er eine Anweisung erwartet hat. Zum Beispiel wird die folgende <span class="notranslate">code</span> den Fehler auslösen, da sie den ternären Operator ? erwartet, aber auf 32 stößt:<br>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Dieser Fehler tritt auf, wenn der <span class="notranslate">syntax</span> Checker einen Ausdruck (dargestellt in [val]) entdeckt, wo er eine Anweisung erwartet hat. Zum Beispiel wird die folgende <span class="notranslate">code</span> den Fehler auslösen, da sie den ternären Operator ? erwartet, aber auf 32 stößt:<br />
           <span class="inline">temp_x = x &lt; (room_width / 2)  32: room_width - 32;</span>
         </td>
       </tr>
@@ -101,7 +101,7 @@
       <tr>
         <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Erhalten &quot;[val1]&quot;, erwartet &quot;[val2]&quot;</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Dies geschieht, wenn der <span class="notranslate">syntax</span> Checker einen Wert oder ein Symbol erwartet, aber einen anderen erhält, wobei [val1] das aktuelle Symbol oder der aktuelle Wert und [val2] das erwartete Symbol oder der erwartete Wert ist. Zum Beispiel:<br>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Dies geschieht, wenn der <span class="notranslate">syntax</span> Checker einen Wert oder ein Symbol erwartet, aber einen anderen erhält, wobei [val1] das aktuelle Symbol oder der aktuelle Wert und [val2] das erwartete Symbol oder der erwartete Wert ist. Zum Beispiel:<br />
           <span class="inline">Got &quot;{&quot;, expected &quot;(&quot;</span>
         </td>
       </tr>
@@ -118,14 +118,14 @@
       <tr>
         <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Leere [val]-Anweisung</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Dies geschieht, wenn Sie eine Anweisung beenden und sie leer lassen. Zum Beispiel führt die folgende <span class="notranslate">code</span> zu diesem Fehler (beachten Sie das abschließende Semikolon):<br>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Dies geschieht, wenn Sie eine Anweisung beenden und sie leer lassen. Zum Beispiel führt die folgende <span class="notranslate">code</span> zu diesem Fehler (beachten Sie das abschließende Semikolon):<br />
           <span class="inline">if (x &lt; 0);</span>
         </td>
       </tr>
       <tr>
         <td style="border-width: 1px;border-style: #333333;border-color: 1px;padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Verschachtelte Funktionsaufrufe sind nicht erlaubt</td>
         <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px;text-align: center"><img alt="Syntax Error Icon" height="12" src="../../assets/Images/Scripting_Reference/Additional_Information/i_Error_SyntaxError.png" width="14" /></td>
-        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Dies kann passieren, wenn Sie versuchen, Funktionsaufrufe innerhalb einer Anweisung zu verschachteln, z. B:<br>
+        <td style="padding-top: 5px;padding-right: 10px;padding-left: 10px;padding-bottom: 8px">Dies kann passieren, wenn Sie versuchen, Funktionsaufrufe innerhalb einer Anweisung zu verschachteln, z. B:<br />
           <span class="inline">ds_list_find_value(list, 0)).sprite_index</span>
         </td>
       </tr>

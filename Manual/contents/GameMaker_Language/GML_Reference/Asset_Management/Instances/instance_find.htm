@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_find</h1>
+  <h1><span data-field="title" data-format="default">instance_find</span></h1>
   <p>Alle Instanzen haben eine eindeutige Kennung (<a href="Instance_Variables/id.htm"><span class="inline">id</span></a>), mit der sie während des Spiels verändert und manipuliert werden können. Da man aber nicht immer weiß, wie die ID einer bestimmten Instanz lautet, kann diese Funktion helfen, indem sie alle Instanzen durchläuft, um das zu finden, was man braucht. Du gibst das Objekt, dessen Instanz du finden willst, und eine Zahl an, und wenn es eine Instanz an dieser Position in der Instanzliste gibt, gibt die Funktion die ID dieser Instanz zurück, und wenn nicht, gibt sie das spezielle <a href="../../../GML_Overview/Instance_Keywords.htm">Schlüsselwort</a> <span class="inline"><b>noone</b></span> zurück. Du kannst auch das Schlüsselwort <span class="inline"><b>all</b></span> verwenden, um durch alle Instanzen in einem Raum zu iterieren, sowie ein Elternobjekt, um durch alle Instanzen zu iterieren, die Teil dieser Eltern/Kind-Hierarchie sind, und du kannst sogar eine Instanz (wenn du ihre <span class="inline">id</span> hast) als Prüfung angeben, um zu sehen, ob sie tatsächlich im aktuellen Raum existiert. Bitte beachten Sie, dass es keine bestimmte Reihenfolge gibt, in der die Instanzen von dieser Funktion geprüft werden, da die Instanzen <i>willkürlich</i> sortiert werden und jede Instanz an jeder beliebigen Position stehen kann.</p>
   <p>Der Höchstwert für &quot;n&quot; in dieser Funktion wäre</p>
   <ul class="colour">

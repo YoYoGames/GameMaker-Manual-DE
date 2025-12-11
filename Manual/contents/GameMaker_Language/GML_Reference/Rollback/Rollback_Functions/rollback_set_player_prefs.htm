@@ -16,7 +16,7 @@
   <meta name="search-keywords" content="rollback_set_player_prefs" />
 </head>
 <body>
-  <h1>rollback_set_player_prefs</h1>
+  <h1><span data-field="title" data-format="default">rollback_set_player_prefs</span></h1>
   <p>Nach dem <a href="rollback_set_player_prefs.htm">Aktivieren der Einstellungen</a> wird diese Funktion verwendet, um die Einstellungen für den lokalen Spieler zu setzen. Das bedeutet, dass sich die Funktion auf die <a href="../../Game_Input/Keyboard_Input/Keyboard_Input.htm">lokale Eingabe</a> und nicht auf die <a href="rollback_get_input.htm">Rollback-Eingabe</a> verlassen muss.</p>
   <p>Die Präferenzen können von beliebigem Typ sein. Wenn Standardeinstellungen festgelegt sind, stellen Sie sicher, dass Sie denselben Datentyp und dieselbe Struktur verwenden.</p>
   <p>Wenn ein Spieler seine Präferenzen setzt, erhält jeder im Spiel ein <a data-xref="{text}" href="../Rollback_Events.htm#h1">Rollback-Ereignis</a>.</p>
@@ -24,7 +24,7 @@
   <p>Bitte lesen: <a data-xref="{title}" href="../Rollback_Preferences.htm">Spieler-Einstellungen</a><a data-xref="{text}" href="../Rollback_System.htm#h3"> </a></p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">rollback_set_player_prefs(preferences);</p>
+  <p class="code"><span data-field="title" data-format="default">rollback_set_player_prefs</span>(preferences);</p>
   <table>
     <colgroup>
       <col />
@@ -49,9 +49,9 @@
   <p class="code"><span data-keyref="Type_Void">N/A</span></p>
   <p> </p>
   <h4>Beispiel:</h4>
-  <p class="code" id="p">rollback_set_player_prefs({<br>
-        Charakter: obj_customizer.character_selected,<br>
-        color: obj_customizer.color_selected<br>
+  <p class="code" id="p">rollback_set_player_prefs({<br />
+        Charakter: obj_customizer.character_selected,<br />
+        color: obj_customizer.color_selected<br />
     });</p>
   <p>Die obige <span class="notranslate">code</span> legt die Einstellungen für den Player fest und liest Werte aus einem &quot;Customizer&quot;-Objekt, das nicht verwaltet (lokal) ist.</p>
   <p> </p>

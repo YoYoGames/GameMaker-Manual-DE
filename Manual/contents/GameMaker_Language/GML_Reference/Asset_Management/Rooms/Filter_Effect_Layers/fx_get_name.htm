@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>fx_get_name</h1>
+  <h1><span data-field="title" data-format="default">fx_get_name</span></h1>
   <p>Diese Funktion wird verwendet, um den Namen eines Filters/Effekts aus seiner Struktur abzurufen. Sie geben die zu lesende FX-Struktur an (wie von <span class="inline"><a href="fx_create.htm">fx_create()</a></span> oder <span class="inline"><a href="layer_get_fx.htm">layer_get_fx()</a></span> zurückgegeben) und die Funktion gibt den Namen als String zurück. Dieser Name kann dann an <span class="inline"><a href="fx_create.htm">fx_create()</a></span> übergeben werden, um eine neue FX-Struktur mit demselben Filter-/Effekttyp zu erstellen.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">fx_get_name(filter_or_effect);</p>
+  <p class="code"><span data-field="title" data-format="default">fx_get_name</span>(filter_or_effect);</p>
   <table>
     <tbody>
       <tr>
@@ -49,7 +49,7 @@
             }<br />
         }<br />
     }</p>
-  <p>Die obige <span class="notranslate">code</span> führt eine <a href="../../../../GML_Overview/Language_Features/for.htm"><span class="notranslate">for</span></a> Schleife durch alle im Raum vorhandenen Ebenen und prüft jede Ebene auf eine FX-Struktur. Wenn eine Ebene eine FX-Struktur hat, prüft sie den Namen des Filters/Effekts, indem sie <span class="inline">fx_get_name()</span> aufruft; wenn er gleich <span class="inline2">&quot;_filter_tintfilter&quot;</span> ist, was bedeutet, dass es sich um einen &quot;Colour Tint&quot;-Filter handelt, ändert sie die Farbtonfarbe in Blau.<br>
+  <p>Die obige <span class="notranslate">code</span> führt eine <a href="../../../../GML_Overview/Language_Features/for.htm"><span class="notranslate">for</span></a> Schleife durch alle im Raum vorhandenen Ebenen und prüft jede Ebene auf eine FX-Struktur. Wenn eine Ebene eine FX-Struktur hat, prüft sie den Namen des Filters/Effekts, indem sie <span class="inline">fx_get_name()</span> aufruft; wenn er gleich <span class="inline2">&quot;_filter_tintfilter&quot;</span> ist, was bedeutet, dass es sich um einen &quot;Colour Tint&quot;-Filter handelt, ändert sie die Farbtonfarbe in Blau.<br />
      </p>
   <p> </p>
   <p> </p>

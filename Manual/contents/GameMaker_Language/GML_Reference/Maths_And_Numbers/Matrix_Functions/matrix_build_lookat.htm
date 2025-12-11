@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>matrix_build_lookat</h1>
+  <h1><span data-field="title" data-format="default">matrix_build_lookat</span></h1>
   <p>Diese Funktion erstellt eine &quot;Look-at&quot;-Matrix (Ansichtsmatrix), die auf den unten aufgeführten Parametern basiert. Da diese Funktion die Ansichtsmatrix und nicht die Projektionsmatrix verändert, sollten Sie zunächst die Projektionsmatrix mit der anderen Matrixfunktion initialisieren <a href="matrix_build_projection_perspective.htm"><span class="inline">matrix_build_projection_perspective()</span></a>initialisieren und dann diese Funktion verwenden, um die Fachkamera innerhalb der Projektion zu bewegen.</p>
   <p>Um die Ansicht festzulegen, müssen Sie zunächst die Position bestimmen, <i>von der aus</i> Sie schauen, was durch die Parameter (xfrom, yfrom, zfrom) angegeben wird. Als Nächstes müssen Sie die Richtung angeben, in <i>die</i> Sie blicken, indem Sie mit <span class="notranslate">arguments</span> (xto, yto, zto) einen zweiten Punkt angeben, auf den Sie blicken. Schließlich können Sie die Kamera noch um die Linie zwischen dem Standpunkt und dem Blickpunkt drehen, und um dies zu spezifizieren, müssen wir ein &quot;up&quot; <span class="notranslate">vector</span> angeben - die Richtung, die in der Kamera nach oben zeigt. Dies wird durch die letzten drei <span class="notranslate">arguments</span> (xup, yup, zup) angegeben.</p>
   <p> </p>

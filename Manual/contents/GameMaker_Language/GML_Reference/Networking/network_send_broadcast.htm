@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>netzwerk_senden_broadcast</title>
+  <title>network_send_broadcast</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>netzwerk_senden_broadcast</h1>
+  <h1><span data-field="title" data-format="default">network_send_broadcast</span></h1>
   <p>Mit dieser Funktion können Sie die Daten von einem <span class="notranslate">buffer</span> lokal an einen Bereich von IP-Adressen senden (weitere Informationen zu <span class="notranslate">buffers</span> siehe <a href="../Buffers/Buffers.htm">Referenz - Puffer</a>). Der Bereich ist auf den des Geräts beschränkt, auf dem <span class="notranslate">server</span> läuft. Wenn das Gerät also eine IP-Adresse von 92.168.11.130 hat, werden die Daten über den Bereich 92.168.11.* gesendet. Die Funktion gibt die Anzahl der gesendeten Datenbytes zurück oder eine Zahl kleiner als 0, wenn das Senden fehlgeschlagen ist.</p>
   <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> Diese Funktion funktioniert nur, wenn sie mit UDP verwendet wird - Ihr <span class="notranslate">server</span> muss TCP sein und Ihr Client muss einen UDP-Client-Socket haben, der mit <span style="font-size:1px;"><a href="network_create_socket_ext.htm"><span class="inline">network_create_socket_ext()</span></a></span> erstellt werden, um alle von <span class="notranslate">server</span> gesendeten Broadcasts zu empfangen.</p>
   <p class="note"><span data-conref="../../../assets/snippets/Tag_note.hts"> </span> Diese Funktion wird nicht funktionieren, wenn sie in einem Projekt verwendet wird, das auf dem HTML5-Ziel läuft.</p>
   <div data-conref="../../../assets/snippets/iOS_14_IP_Multicast_Permissions.hts"> </div>
   <h4>Syntax:</h4>
-  <p class="code">network_send_broadcast(socket, port, bufferid, size);</p>
+  <p class="code"><span data-field="title" data-format="default">network_send_broadcast</span>(socket, port, bufferid, size);</p>
   <table>
     <tbody>
       <tr>

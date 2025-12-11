@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physik_gelenke_seil_erstellen</title>
+  <title>physics_joint_rope_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physik_gelenke_seil_erstellen</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_rope_create</span></h1>
   <p>Ein Seilgelenk wird verwendet, um zwei Vorrichtungen zu verbinden, die einen konstanten Abstand zueinander haben sollen, unabhängig davon, welche anderen Kräfte auf sie einwirken. Bei einer Abstandsfuge kann es zu einer &quot;Fugenausdehnung&quot; kommen, bei der sich die beiden Einbauten trennen und seltsam verhalten, wenn die Fuge zu stark beansprucht wird; bei einer Seilfuge ist dies nicht der Fall, sie dehnt sich nicht über die maximal definierte Länge hinaus. Wenn Sie eine Seilverbindung erstellen, sollten die beiden Instanzen bereits erstellt sein und eine Halterung zugewiesen haben, dann definieren Sie die beiden Ankerpunkte in Raumkoordinaten. Der erste Ankerpunkt wird mit Instanz 1 verbunden, der zweite Ankerpunkt mit Instanz 2 und der Abstand und die maximale Länge <span class="notranslate">argument</span> legen die maximale Längenbeschränkung für die Verbindung fest. Das Bild unten zeigt, wie das funktioniert:</p>
   <p><img>Wie Sie sehen können, werden die Ankerpunkte als Raumkoordinaten angegeben, so dass bei ihrer Definition Vorsicht geboten ist, insbesondere wenn die Instanzen gleichzeitig mit den Joints erstellt werden und nicht über den Raumeditor im Raum platziert werden. Sie sollten sich auch bewusst sein, dass die Joints unabhängig von der Größe der <span class="notranslate">sprite</span> der Instanzen oder der Einbauten, die sie angehängt haben, erstellt werden. Wenn du also ein Seilgelenk an einer anderen Stelle als dem Ursprung der Instanz erstellst, ist es immer noch gültig und wird die beiden Instanzen relativ zu der Position, an der es erstellt wurde, einschränken. Wenn du den &quot;col&quot;-Wert auf <span class="inline">true</span> setzt, können die beiden Instanzen miteinander interagieren und kollidieren, aber <i>nur</i>, wenn sie Kollisionsereignisse haben. Wenn er jedoch auf <span class="inline">false</span> gesetzt ist, werden sie nicht kollidieren, egal was passiert.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">physics_joint_rope_create(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, maxlength, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_rope_create</span>(inst1, inst2, w_anchor1_x, w_anchor1_y, w_anchor2_x, w_anchor2_y, maxlength, col)</p>
   <table>
     <tbody>
       <tr>

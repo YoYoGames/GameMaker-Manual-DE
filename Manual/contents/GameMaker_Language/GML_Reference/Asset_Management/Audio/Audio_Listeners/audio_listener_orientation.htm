@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_listener_orientation</h1>
+  <h1><span data-field="title" data-format="default">audio_listener_orientation</span></h1>
   <p>Mit dieser Funktion können Sie die Ausrichtung des <i>Hörers</i> im 3D-Audio-Raum ändern. Die <b>Blickrichtung</b> und die <b>Aufwärtsrichtung</b> basieren auf den <span class="notranslate">vectors</span>, die aus den gegebenen relativen x-, y- und z-Positionen aufgelöst werden, und sind standardmäßig <span data-keyref="Unit_Vector_Z">(0, 0, 1)</span> für die Blickrichtung und <span data-keyref="Unit_Vector_Y">(0, 1, 0)</span> für die Aufwärtsrichtung, wie in der Abbildung unten gezeigt:</p>
   <p><img alt="Listener Orientation Diagram" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Orientation_Base.png" /></p>
   <p class="note"><b><span class="note">HINWEIS</span> </b>wenn Sie mehrere Hörer haben, sollten Sie die Funktion <a href="audio_listener_set_orientation.htm"><span class="inline">audio_listener_set_orientation()</span></a>.</p>
   <p>Wenn Sie die Ausrichtung des Zuhörers mit dieser Funktion ändern, ändert sich die Art und Weise, wie die von den Audio-Emittern im Spielraum erzeugten Geräusche vom Spieler wahrgenommen werden. Im folgenden Beispiel würden die Geräusche, die vom Emitter erzeugt werden, wenn sich der Hörer an der Standardposition befindet, von unten und rechts vom Hörer kommen, aber mit der neuen Position und Ausrichtung des Hörers werden sie nun als von <i>oben</i> und rechts kommend wahrgenommen.</p>
   <p><img alt="Listener Orientation Example" class="center" src="../../../../../assets/Images/Scripting_Reference/GML/Reference/Audio/Audio_Orientation_Example.png" /></p>
   <h4>Syntax:</h4>
-  <p class="code">audio_listener_orientation(lookat_x, lookat_y, lookat_z, up_x, up_y, up_z);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_listener_orientation</span>(lookat_x, lookat_y, lookat_z, up_x, up_y, up_z);</p>
   <table>
     <tbody>
       <tr>

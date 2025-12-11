@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>effect_create_above</h1>
+  <h1><span data-field="title" data-format="default">effect_create_above</span> <span data-conref="..\..\..\..\assets\snippets\Tag_deprecated.hts"> </span></h1>
   <p>Mit dieser Funktion können Sie einen einfachen Effekt über allen Instanzen Ihres Raums erzeugen (er wird tatsächlich in einer Tiefe von -100000 erzeugt). Wenn es sich bei dem Effekt um etwas anderes als <span class="inline">ef_rain</span> oder <span class="inline">ef_snow</span> handelt, können Sie eine x/y-Position definieren, um den Effekt zu erzeugen, und die Größe kann ein Wert von 0, 1 oder 2 sein, wobei 0 für klein, 1 für mittel und 2 für groß steht.</p>
   <p>Es ist erwähnenswert, dass das Zeichnen dieser Effekte ein- und ausgeschaltet werden kann, sowie das Zeichnen angehalten werden kann, indem man die Funktionen <a href="Particle_Systems/part_system_automatic_draw.htm"><span class="inline">part_system_automatic_draw()</span></a> und <a href="Particle_Systems/part_system_automatic_update.htm"><span class="inline">part_system_automatic_update()</span></a> mit dem entsprechenden Wert für den Partikelsystemindex (wobei 0 für Effekte unterhalb und 1 für Effekte oberhalb steht).</p>
   <p>Die verfügbaren Konstanten für die verschiedenen Partikelarten sind:</p>
@@ -97,7 +97,7 @@
   </table>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">effect_create_above(kind, x, y, size, colour);</p>
+  <p class="code"><span data-field="title" data-format="default">effect_create_above</span>(kind, x, y, size, colour);</p>
   <table>
     <tbody>
       <tr>

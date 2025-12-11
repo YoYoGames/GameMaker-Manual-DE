@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_deactivate_layer</h1>
+  <h1><span data-field="title" data-format="default">instance_deactivate_layer</span></h1>
   <p>Mit dieser Funktion können Sie alle Instanzen deaktivieren, die einem bestimmten Layer zugeordnet sind. Sie müssen die <b>Layer-ID</b> angeben, die entweder der Name des Layers sein kann, wie er im <span class="notranslate">code</span> Editor geschrieben wurde (als String), oder der tatsächliche Layer-ID-Wert, wie er von der Funktion <a href="../../Rooms/General_Layer_Functions/layer_create.htm"><span class="inline">layer_create()</span></a>Beachten Sie, dass Sie mit dieser Funktion nur <i>Instanz-Ebenen</i> deaktivieren können. Wenn Sie eine Ebene deaktiviert haben, die Instanzen von Objekten enthält, die als <b>persistent</b> gekennzeichnet sind, müssen Sie die Ebene vor dem Raumwechsel erneut mit der Funktion <a href="instance_activate_layer.htm"><span class="inline">instance_activate_layer()</span></a> reaktivieren, bevor Sie den Raum wechseln, da sonst alle persistenten Instanzen auf der Ebene <i>nicht</i> übernommen werden und verworfen werden. Beachten Sie auch, dass die Deaktivierung nicht sofort erfolgt und dass eine Instanz, die auf diese Weise deaktiviert wurde, erst nach dem Ende des Ereignisses, in dem die Funktion aufgerufen wurde, als inaktiv gilt.</p>
   <p class="note"><b>HINWEIS</b>: Wenn Sie eine Instanz beim Start des Raums deaktivieren (d.h. aus der Raumerstellung <span class="notranslate">code</span> oder aus einem Instanzerstellungsereignis einer Instanz innerhalb des Raums), <b>werden</b> alle Instanzen, die aus dem Raumeditor im Raum platziert werden <b>, weiterhin ihr Erstellungsereignis ausführen</b>, bevor sie deaktiviert werden.</p>
   <p class="note"><b></b><b>WARNUNG</b>: Das Deaktivieren von Instanzen, bei denen die Physik aktiviert ist, verhindert <b>NICHT</b>, dass deren Einbauten innerhalb der Physiksimulation interagieren. Dafür solltest du ihre <span style="font-size:1px;"><a href="../../../Physics/Physics_Variables/phy_active.htm"><span class="inline">phy_active</span></a></span> Variable auf <span class="inline">true</span> oder <span class="inline">false</span> setzen, wenn Sie die Instanzen aktivieren/deaktivieren.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">instance_deactivate_layer(obj);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_deactivate_layer</span>(obj);</p>
   <table>
     <tbody>
       <tr>

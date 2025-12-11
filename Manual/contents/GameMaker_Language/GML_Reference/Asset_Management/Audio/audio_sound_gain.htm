@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_sound_gain</h1>
+  <h1><span data-field="title" data-format="default">audio_sound_gain</span></h1>
   <p>Mit dieser Funktion können Sie einen Ton über eine bestimmte Zeitspanne ein- oder ausblenden, oder Sie können die Tonverstärkung sofort einstellen.</p>
   <p>Die Zeit wird in Millisekunden gemessen, und die Funktion verlangt, dass Sie einen Endpegel eingeben, den der Sound am Ende dieser Zeit erreicht haben soll. Diese Verstärkung kann zwischen 0 (stumm) und einem beliebigen Wert über 0 liegen, obwohl man normalerweise die maximale Lautstärke als 1 ansieht. Alles über 1 kann verwendet werden, aber je nach verwendetem Sound und der <span class="notranslate">platform</span>, zu der kompiliert wird, kann es zu Verzerrungen oder Clipping kommen, wenn der Sound wiedergegeben wird. Beachten Sie, dass die Verstärkungsskala linear ist, und um die Verstärkung sofort zu ändern, setzen Sie einfach die Zeit <span class="notranslate">argument</span> auf 0.</p>
   <p>Diese Funktion wirkt sich auf <i>alle</i> Instanzen des Klangs aus, die gerade im Raum abgespielt werden, wenn der Index eine Klangressource ist, und die Endlautstärke ist die Lautstärke, mit der alle weiteren Instanzen des Klangs abgespielt werden. Wenn du jedoch den Index, der von einer Funktion wie <a href="audio_play_sound.htm"><span class="inline">audio_play_sound()</span></a> zurückgegeben wird, wirkt sich das nur auf diese eine Instanz des Tons aus.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">audio_sound_gain(index, volume, time);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_sound_gain</span>(index, volume, time);</p>
   <table>
     <tbody>
       <tr>

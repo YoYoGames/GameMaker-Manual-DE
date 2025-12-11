@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physik_gelenke_prismatisch_erzeugen</title>
+  <title>physics_joint_prismatic_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physik_gelenke_prismatisch_erzeugen</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_prismatic_create</span></h1>
   <p>Wie ein Drehgelenk hat auch das prismatische Gelenk nur einen Freiheitsgrad, aber bei diesem Gelenk handelt es sich um ein Richtungsgelenk in Bezug auf eine Achse und nicht um ein Drehgelenk, das jede Form der Drehung verhindert. Hier ist ein Bild, das Ihnen die Funktionsweise veranschaulicht:</p>
   <p><img>Wir haben zwei Instanzen, die am Ankerpunkt verbunden sind, mit einer Achse für die Bewegung, die von <span class="notranslate">vector</span> definiert wird, den beiden x/y-Koordinaten der w_axis relativ zu den (0,0)-Koordinaten der physikalischen Welt (so würde eine x-Komponente von 0 und eine y-Komponente von 1 (0,1) das Gelenk zu einem vertikalen prismatischen Gelenk machen). Dieses Gelenk kann sich dann <i>nur</i> relativ zu dieser Achse bewegen, wie eine Feder oder ein Kolben. Wenn Sie die untere oder obere Trans-Grenze festlegen, begrenzen Sie im Grunde genommen den Betrag der Bewegung entlang dieser Achse, wobei die 0-Position genau der Punkt ist, den Sie mit w_anchor x/y definiert haben, so dass ein negativer Wert nach &quot;links&quot; von diesem Punkt entlang der Achse und ein positiver Wert nach &quot;rechts&quot; gehen würde, wie im folgenden Diagramm gezeigt (beachten Sie, dass &quot;links&quot; und &quot;rechts&quot; relative Begriffe sind!):</p>
   <p><img>Sie können auch festlegen, ob das Gelenk einen Motor hat oder nicht. Diese Richtung wird durch die Motorgeschwindigkeit definiert, wobei eine positive Zahl in Richtung der Achsenkoordinaten (&quot;rechts&quot;) und eine negative Zahl in Richtung des Ankerpunkts (&quot;links&quot;) zeigt. Die &quot;max_motor_force&quot; <span class="notranslate">argument</span> dient dazu, die Geschwindigkeit der Bewegung zu begrenzen, um einen ständig beschleunigenden Motor zu vermeiden und um den Einfluss einer Kollision auf die Bewegung zu begrenzen. Auf diese Weise können Sie einen Gelenkmotor verwenden, um die Gelenkreibung zu simulieren, indem Sie die Gelenkgeschwindigkeit auf Null und die maximale Kraft auf einen kleinen, aber signifikanten Wert setzen. Der Motor wird versuchen, die Bewegung des Gelenks zu verhindern, wird aber bei einer erheblichen Belastung nachgeben.</p>
   <p>Wie bei allen Gelenken, wenn Sie die &quot;col&quot; Wert auf <span class="inline">true</span> dann die beiden Instanzen können interagieren und miteinander kollidieren, aber <i>nur</i>, wenn sie Kollisions-Ereignisse haben, aber wenn es auf <span class="inline">false</span> eingestellt ist, werden sie nicht kollidieren, egal was.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">physics_joint_prismatic_create(inst1, inst2, w_anchor_x, w_anchor_y, w_axis_x, w_axis_x, lower_trans_limit, upper_trans_limit, limit, max_motor_force, motor_speed, motor, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_prismatic_create</span>(inst1, inst2, w_anchor_x, w_anchor_y, w_axis_x, w_axis_x, lower_trans_limit, upper_trans_limit, limit, max_motor_force, motor_speed, motor, col)</p>
   <table>
     <tbody>
       <tr>

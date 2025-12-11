@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>display_set_gui_maximise</h1>
+  <h1><span data-field="title" data-format="default">display_set_gui_maximise</span></h1>
   <p>Mit dieser Funktion kann die GUI-Ebene maximiert und so eingestellt werden, dass sie in Bezug auf die Bildschirmabmessungen skaliert und verschoben wird, anstatt die Standardposition und -abmessungen der Anwendungsoberfläche zu verwenden. Standardmäßig ist die GUI-Ebene 1:1 mit der Auflösung der Anwendungsoberfläche und wird ebenfalls an der Position (0,0) der Oberfläche gezeichnet. Dies ist jedoch nicht immer das, was Sie wollen, und deshalb können Sie diese Funktion verwenden, um sie relativ zur absoluten (0,0)-Position des Anzeige- oder Spielfensters zu zeichnen. Welche <span class="notranslate">arguments</span> Sie dieser Funktion übergeben, hängt von dem Effekt ab, den Sie auf die GUI-Ebene haben möchten. Wenn Sie die Funktion ohne <span class="notranslate">arguments</span> aufrufen, wird die GUI-Ebene an der Position (0,0) des Bildschirms oder des Spielfensters gezeichnet, wobei die Breite und Höhe so skaliert wird, dass sie in den gesamten Bereich passt:</p>
   <p class="code">display_set_gui_maximise();</p>
   <p>Sie können jedoch den <i>Skalierungsfaktor</i> für die GUI-Ebene festlegen, und die Breite und Höhe werden um diesen Wert skaliert. Denken Sie daran, dass die GUI-Ebene immer an die Größe des Bildschirms, des Spielfensters oder der Anwendungsoberfläche angepasst wird. Wenn Sie also einen anderen Wert als 1 einstellen, wird die Anzahl der Pixel in Breite und Höhe skaliert. Wenn Ihr Bildschirm eine Größe von 1024x768 hat und Sie den Skalierungsfaktor auf 0,5 setzen, dann wird Ihre GUI-Ebene die Hälfte der Größe des Bildschirms haben, was effektiv eine Verdoppelung der Pixelgröße bedeutet:</p>
@@ -27,7 +27,7 @@
   <p class="code">display_set_gui_maximise(-1, -1);</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">display_set_gui_maximise(<i>xscale, yscale, xoffset, yoffset</i>);</p>
+  <p class="code"><span data-field="title" data-format="default">display_set_gui_maximise</span>(<i>xscale, yscale, xoffset, yoffset</i>);</p>
   <table>
     <tbody>
       <tr>

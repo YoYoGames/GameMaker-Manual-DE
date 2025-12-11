@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>json_parse</h1>
+  <h1><span data-field="title" data-format="default">json_parse</span></h1>
   <p>Diese Funktion kann verwendet werden, um eine JSON-Zeichenkette zu parsen (entweder vorher erstellt mit <a href="json_stringify.htm"><span class="notranslate">json_stringify</span></a> oder aus einer beliebigen gültigen Quelle) zu analysieren und in eine Sammlung von Arrays oder Structs zu konvertieren, wobei ein Array das Äquivalent eines JSON-Arrays und ein Struct das Äquivalent eines JSON-Objekts ist. Sie geben die zu parsende Zeichenkette an, und die Funktion gibt das Array oder die Struktur der obersten Ebene zurück, die dann in Ihrem <span class="notranslate">code</span> verwendet werden kann. Wenn Sie sich über den Inhalt des JSON nicht sicher sind, können Sie die verschiedenen <a href="../../Variable_Functions/Variable_Functions.htm">Variablenfunktionen</a> verwenden (wie <a href="../../Variable_Functions/typeof.htm"><span class="inline">typeof()</span></a> und <a href="../../Variable_Functions/variable_struct_get_names.htm"><span class="inline">variable_struct_get_names()</span></a> im Falle einer Struktur) verwenden, um den zurückgegebenen Inhalt zu überprüfen. Beachten Sie, dass der Versuch, einen ungültigen Wert (d.h. keine Zeichenkette) zu parsen, einen Ausnahmefehler auslöst.</p>
   <p>Bei der Verwendung dieser Funktion gibt es einige wichtige Dinge zu beachten:</p>
   <ul class="colour">
@@ -48,12 +48,12 @@
     show_debug_message(data);
   </p>
   <p>Die obige <span class="notranslate">code</span> erstellt eine neue Zeichenkette, die ein gültiges JSON-Objekt enthält, und ruft dann <span class="inline">json_parse()</span> auf, um diese Zeichenkette in eine <span class="notranslate">GML</span> -Struktur zu konvertieren. Anschließend wird das Ergebnis in das Debug-Protokoll ausgegeben.</p>
-  <p class="note"><span class="note">HINWEIS</span> Sie werden feststellen, dass die JSON-Zeichenfolge vor jedem doppelten Anführungszeichen (<span class="inline2">&quot;</span>) einen Backslash<span class="inline2">(\</span>) enthält:<br>
-    <br>
-   <span class="inline2">json = &quot;{ \ <strong>&quot; </strong></span>myObj<br>
-    <br>
-    Damit soll sichergestellt werden, dass das doppelte Anführungszeichen als tatsächliches Zeichen innerhalb der Zeichenfolge gelesen wird, anstatt als Teil von <span class="notranslate">code</span> gelesen zu werden und die Zeichenfolge vorzeitig zu schließen. Auf diese Weise verwenden wir einen Backslash, um das doppelte Anführungszeichen zu &quot;entkommen&quot;.<br>
-    <br>
+  <p class="note"><span class="note">HINWEIS</span> Sie werden feststellen, dass die JSON-Zeichenfolge vor jedem doppelten Anführungszeichen (<span class="inline2">&quot;</span>) einen Backslash<span class="inline2">(\</span>) enthält:<br />
+    <br />
+   <span class="inline2">json = &quot;{ \ <strong>&quot; </strong></span>myObj<br />
+    <br />
+    Damit soll sichergestellt werden, dass das doppelte Anführungszeichen als tatsächliches Zeichen innerhalb der Zeichenfolge gelesen wird, anstatt als Teil von <span class="notranslate">code</span> gelesen zu werden und die Zeichenfolge vorzeitig zu schließen. Auf diese Weise verwenden wir einen Backslash, um das doppelte Anführungszeichen zu &quot;entkommen&quot;.<br />
+    <br />
     Wenn Sie jedoch JSON aus einer externen Datei laden, ist es nicht notwendig, Zeichen in dieser Datei zu entschlüsseln, und dies kann zu Fehlern beim Parsen führen.
   </p>
   <hr />

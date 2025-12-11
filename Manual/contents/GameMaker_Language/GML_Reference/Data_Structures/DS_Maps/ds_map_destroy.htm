@@ -13,7 +13,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_map_destroy</h1>
+  <h1><span data-field="title" data-format="default">ds_map_destroy</span></h1>
   <p>DS-Karten benötigen Speicherplatz, der ihnen bei ihrer Erstellung zugewiesen wird. Das bedeutet, dass Sie diesen Speicher auch wieder freigeben müssen, wenn die DS-Map nicht benötigt wird, um Fehler, Speicherlecks und Leistungseinbußen bei der Ausführung Ihres Spiels zu vermeiden. Diese Funktion
     erledigt genau das. Beachten Sie, dass das Zerstören einer Karte alle Datenstrukturen, die in der Karte gespeichert sind, de-referenziert, was zu einem Speicherleck führt. Sie müssen also die Karte durchgehen und alle Datenstrukturelemente manuell zerstören, bevor Sie sie zerstören, um dies zu verhindern. Die
     Dies ist nur dann nicht erforderlich, wenn Sie Elemente in der Map als <a href="../DS_Lists/DS_Lists.htm">DS-Liste</a> oder als eine andere <a href="DS_Maps.htm">DS-Map</a> gekennzeichnet haben; in diesem Fall werden diese Elemente zerstört und ihr Speicher

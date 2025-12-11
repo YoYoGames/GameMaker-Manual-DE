@@ -25,20 +25,20 @@
   <p>Rollback ist deterministisch. Es teilt nur die Eingaben mit anderen Spielern und erwartet, dass alle Spieler dieselbe Logik auf die gegebene Eingabe anwenden und auf allen Clients dieselben Ergebnisse erzielen.</p>
   <p>Ein anderer Ansatz für den Mehrspielermodus ist die &quot;Zustandsreplikation&quot;, bei der der Zustand des Spiels ständig zwischen den Clients synchronisiert wird, um sicherzustellen, dass sie immer das Gleiche tun.</p>
   <p>Rollback tut das nicht - es sendet immer nur Eingaben, behält aber auch den Zustand im Auge, so dass es im Falle einer falschen Vorhersage zurückgesetzt werden kann.</p>
-  <p class="note"><em><strong>Was ist ein Kunde?</strong></em><br>
-    <br>
+  <p class="note"><em><strong>Was ist ein Kunde?</strong></em><br />
+    <br />
     Ein &quot;Client&quot; ist ein Spieler in Ihrem Spiel und bezieht sich auf seine Kopie des Spiels, die auf seinem Computer läuft.
   </p>
   <h2>Wie funktioniert das?</h2>
   <p>Wie bereits erwähnt, <strong>werden</strong> mit Rollback <strong>nur Eingaben</strong> zwischen Spielern <strong>übermittelt</strong>.</p>
   <p>Es gibt zwei Hauptaufgaben, die Rollback übernimmt:</p>
   <ul class="colour">
-    <li><strong>Eingabe</strong>: Die <a href="Rollback_Functions/rollback_define_input.htm">Eingaben</a> jedes Spielers werden an andere Spieler gesendet. Wenn Spieler 0 in seinem eigenen Client auf <strong>&quot;Feuer&quot;</strong> drückt, sorgt Rollback dafür, dass auch andere Clients sehen, dass Spieler 0 auf <strong>&quot;Feuer</strong>&quot; drückt <strong>.</strong><br>
-      <br>
+    <li><strong>Eingabe</strong>: Die <a href="Rollback_Functions/rollback_define_input.htm">Eingaben</a> jedes Spielers werden an andere Spieler gesendet. Wenn Spieler 0 in seinem eigenen Client auf <strong>&quot;Feuer&quot;</strong> drückt, sorgt Rollback dafür, dass auch andere Clients sehen, dass Spieler 0 auf <strong>&quot;Feuer</strong>&quot; drückt <strong>.</strong><br />
+      <br />
      <strong>Vorhersagen werden nur bei Eingaben ausgeführt.</strong>
     </li>
-    <li><strong>Zustand</strong>: Dazu gehören alle verwalteten Objekte und ihre Variablen. Diese werden NICHT zwischen Spielern synchronisiert: Die Änderung einer Variable in einem Client führt nicht automatisch zu einer Aktualisierung in einem anderen Client.<br>
-      <br>
+    <li><strong>Zustand</strong>: Dazu gehören alle verwalteten Objekte und ihre Variablen. Diese werden NICHT zwischen Spielern synchronisiert: Die Änderung einer Variable in einem Client führt nicht automatisch zu einer Aktualisierung in einem anderen Client.<br />
+      <br />
      <strong>Der Zustand wird nur zum Zweck der Rückgängigmachung verwaltet.</strong>
     </li>
   </ul>
@@ -47,8 +47,8 @@
   <p>Hier ist ein Beispiel:</p>
   <ul class="colour">
     <li><strong>Eingabe</strong>: Spieler 0 drückt <strong>&quot;Feuer&quot;.</strong></li>
-    <li><strong>Zustand</strong>: Weil Spieler 0 auf Feuer gedrückt hat, wird ein Projektil erzeugt. Dieses Projektil kollidiert schließlich mit einem Felsen. Dies führt dazu, dass Spieler 0 einen Punkt erhält.<br>
-      <br>
+    <li><strong>Zustand</strong>: Weil Spieler 0 auf Feuer gedrückt hat, wird ein Projektil erzeugt. Dieses Projektil kollidiert schließlich mit einem Felsen. Dies führt dazu, dass Spieler 0 einen Punkt erhält.<br />
+      <br />
       Dies ist im Wesentlichen Ihr ganzes Spiel, das vollständig von der Eingabe abhängt.
     </li>
   </ul>

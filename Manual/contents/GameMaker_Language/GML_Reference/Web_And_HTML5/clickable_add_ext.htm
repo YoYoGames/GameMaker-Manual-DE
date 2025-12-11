@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>anklickbar_hinzufügen_ext</title>
+  <title>clickable_add_ext</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>anklickbar_hinzufügen_ext</h1>
+  <h1><span data-field="title" data-format="default">clickable_add_ext</span></h1>
   <p>Mit dieser Funktion können Sie ein benutzerdefiniertes, anklickbares Symbol erstellen, das als &quot;Schaltfläche&quot; außerhalb des Spiel-Canvas, aber innerhalb des Browserfensters selbst fungiert. Die Funktion gibt einen ID-Wert zurück, der in einer Variablen gespeichert werden muss, um in allen weiteren Schaltflächenfunktionen verwendet zu werden, die auf die neue klickbare Schaltfläche verweisen. Diese Funktion ist sehr nützlich, um zu verhindern, dass der Browser ein Popup-Fenster erzeugt, wenn man auf die Schaltfläche klickt, da dies alles von <span data-keyref="GameMaker Name">GameMaker</span> selbst erledigt wird.</p>
   <p>Diese Funktion funktioniert genauso wie die <a href="clickable_add.htm"><span class="inline">clickable_add()</span></a> Funktion, bei der Sie die Position relativ zur (0,0) des Browser-Fensters festlegen, den Textur-Seiteneintrag für die <span class="notranslate">sprite</span> angeben, die das Button-Icon haben soll (siehe: <a href="../Asset_Management/Sprites/Sprite_Information/sprite_get_tpe.htm"><span class="inline">sprite_get_tpe()</span></a>), entweder eine zu öffnende URL oder eine <span class="notranslate">script</span> (aus dem Asset-Browser von <span data-keyref="GameMaker Name">GameMaker</span>) angeben, die geöffnet oder ausgeführt werden soll, und dann das Ziel und die zu verwendenden Parameter festlegen. Diese Funktion verfügt jedoch auch über zwei zusätzliche Optionen, mit denen Sie den Alphawert des Symbols von 0 (völlig transparent) bis 1 (völlig undurchsichtig) und die Skalierung des Symbols einstellen können, bei der es sich um einen Multiplikatorwert handelt, der auf die verwendete <span class="notranslate">sprite</span> angewendet wird. Ein Wert von 1 ist also der Standardmaßstab, während (zum Beispiel) 0,5 der halbe Maßstab und 2 das Doppelte wäre.</p>
   <p>Es ist auch erwähnenswert, dass, wenn die URL <span class="notranslate">argument</span>, die Sie übergeben, der Name einer <a href="../../GML_Overview/Script_Functions.htm">Script-Funktion</a> ist (d.h. sie beginnt nicht mit &quot;http://&quot;) UND die <span class="notranslate">script</span> heißt <span class="inline"><b>gmcallback_*</b></span>, dann können Sie direkte Feeds in ein html5-Ereignis erhalten. <span data-keyref="GameMaker Name">GameMaker-Script-Funktionsnamen</span> werden <i>nicht</i> verschleiert, wenn sie mit <span class="inline">gmcallback_</span> beginnen.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">clickable_add_ext(x, y, tpe, url, target, params, alpha, scale);</p>
+  <p class="code"><span data-field="title" data-format="default">clickable_add_ext</span>(x, y, tpe, url, target, params, alpha, scale);</p>
   <table>
     <tbody>
       <tr>

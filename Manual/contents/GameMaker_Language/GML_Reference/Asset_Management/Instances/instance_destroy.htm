@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>instanz_zerstören</title>
+  <title>instance_destroy</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instanz_zerstören</h1>
+  <h1><span data-field="title" data-format="default">instance_destroy</span></h1>
   <p>Sie rufen diese Funktion immer dann auf, wenn Sie eine Instanz &quot;zerstören&quot; wollen, was normalerweise ein <a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Zerstörungsereignis</a> und ein <a href="../../../../The_Asset_Editors/Object_Properties/Object_Events.htm">Aufräumereignis</a> auslöst. Dadurch wird sie aus dem Raum entfernt, bis der Raum neu gestartet wird (es sei denn, der Raum ist persistent). Wenn du die Funktion ohne <span class="notranslate">arguments</span> aufrufst, wird einfach die Instanz zerstört, die gerade im Bereich ist und die <span class="notranslate">code</span> ausführt, aber du kannst eine optionale &quot;id&quot; <span class="notranslate">argument</span> angeben und eine bestimmte Instanz anvisieren, indem du den Wert der Instanz <span class="inline"><a href="Instance_Variables/id.htm">id</a></span> verwendest, oder du kannst alle Instanzen eines bestimmten Objekts anvisieren, indem du ein <a href="../Objects/object_index.htm"><span class="inline">object_index</span></a>. Zum Beispiel:</p>
   <p class="code">instance_destroy(other);      // destroy the &quot;other&quot; instance in a Collision Event<br />
     instance_destroy(obj_Bullet); // destroy ALL instances of the object &quot;obj_Bullet&quot;</p>

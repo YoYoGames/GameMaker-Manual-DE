@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>schicht_sequenz_xskala</title>
+  <title>layer_sequence_xscale</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>schicht_sequenz_xskala</h1>
+  <h1><span data-field="title" data-format="default">layer_sequence_xscale</span></h1>
   <p>Mit dieser Funktion können Sie die X-Skala für das angegebene Element <span class="notranslate">sequence</span> einstellen. Sie geben die <span class="notranslate">sequence</span> Element-ID an, wie sie von <a href="layer_sequence_create.htm"><span class="inline">layer_sequence_create()</span></a> oder von einer der <a href="../General_Layer_Functions/General_Layer_Functions.htm">Ebenenelement-Funktionen</a> zurückgegeben wird, zusammen mit der neuen Skalierung, die auf der X-Achse eingestellt werden soll, und die <span class="notranslate">sequence</span> wird um diesen Betrag skaliert. Ein Maßstab von 1 bedeutet keine Skalierung (1:1), kleinere Werte skalieren nach unten (0,5 zum Beispiel halbiert die Breite von <span class="notranslate">sequence</span>), größere Werte skalieren nach oben und negative Werte spiegeln das <span class="notranslate">sequence</span> um seinen Ursprung <i>und</i> skalieren es, es sei denn, der verwendete Wert ist genau -1 (in diesem Fall wird das <span class="notranslate">sequence</span> nur um seinen Ursprung gespiegelt und nicht skaliert).</p>
   <p>Es ist sehr wichtig zu beachten, dass die Anwendung einer <em>ungleichmäßigen</em> Skalierung (z.B. Skalierung der X-Achse um 3 und der Y-Achse um 2) auf <span class="notranslate">sequence</span> Elemente, die eine Instanz enthalten, die <em>Rotation</em> verwendet, <strong>zu Problemen mit der Instanzzeichnung, Kollisionen, Culling und vielen anderen Dingen führen kann</strong>. Grundsätzlich gilt: Wenn Ihre <span class="notranslate">sequence</span> auf Instanz-Eigenschaften angewiesen ist, empfehlen wir Ihnen nicht, eine ungleichmäßige Skalierung mit einer Instanz-Rotation zu kombinieren.</p>
   <p>Beachten Sie auch, dass Sie die Variablen <span class="inline">image_xscale</span> \ <span class="inline">image_yscale</span> \ <span class="inline">image_angle</span> \ <span class="inline">x</span> \ <span class="inline">y</span> für alle Instanzen in einer <span class="notranslate">sequence</span>, die diese Funktion verwendet, nicht ändern sollten, da sie überschrieben werden, sobald die <span class="notranslate">sequence</span> nach dem Aufruf der Funktion aktualisiert wird.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">layer_sequence_xscale(sequence_element_id, xscale)</p>
+  <p class="code"><span data-field="title" data-format="default">layer_sequence_xscale</span>(sequence_element_id, xscale)</p>
   <table>
     <tbody>
       <tr>

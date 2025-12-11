@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>sprite_create_from_surface</h1>
+  <h1><span data-field="title" data-format="default">sprite_create_from_surface</span></h1>
   <p>Mit dieser Funktion können Sie eine <span class="notranslate">sprite</span> aus einer zuvor initialisierten Oberfläche erstellen (der Wert der Oberflächenindex-ID wird zurückgegeben, wenn Sie die Oberfläche mit <a href="../../../Drawing/Surfaces/surface_create.htm"><span class="inline">surface_create()</span></a>). Die x- und y-Koordinaten, die Sie dann in die Funktion eingeben, sollten sich auf die (0,0) Position der <i>Oberfläche</i> (die obere linke Ecke) beziehen und nicht auf das Spielfenster (oder die Ansicht, falls Sie eine aktiv haben). Die Breite und Höhe <span class="notranslate">arguments</span> sind in Pixeln angegeben und definieren die Breite und Höhe des zu verwendenden Teils der Oberfläche.</p>
   <p>Wenn Sie die Option &quot;removeback&quot; <span class="notranslate">argument</span> auf <span class="inline">true</span> setzen, wird eine Farbe aus <span class="notranslate">sprite</span> entfernt, indem das <i>untere linke</i> Pixel von <span class="notranslate">sprite</span> auf die dortige Farbe überprüft wird und diese dann als zu entfernende Farbe verwendet wird.</p>
   <p>Wenn Sie die Option &quot;Hintergrund entfernen&quot; wählen, möchten Sie vielleicht auch, dass <span data-keyref="GameMaker Name">GameMaker</span> die Ränder von <span class="notranslate">sprite</span> glättet, indem Sie die Option &quot;Glatt&quot; <span class="notranslate">argument</span> auf <span class="inline">true</span> setzen. Dadurch wird lediglich ein halbtransparenter Rand um die Kanten von <span class="notranslate">sprite</span> erzeugt, nachdem der Hintergrund entfernt wurde.</p>
@@ -23,7 +23,7 @@
   <p class="note"><b><span class="note">HINWEIS</span></b> Wenn Sie eine <span class="notranslate">sprite</span> in <span data-keyref="GameMaker Name">GameMaker</span> mit dieser Methode erstellen, müssen Sie daran denken, sie wieder zu entfernen (mit <a href="sprite_delete.htm"><span class="inline">sprite_delete()</span></a>), wenn sie nicht mehr benötigt wird, sonst besteht die Gefahr eines Speicherlecks, das Ihr Spiel verlangsamt und schließlich zum Absturz bringt.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">sprite_create_from_surface(index, x, y, w, h, removeback, smooth, xorig, yorig);</p>
+  <p class="code"><span data-field="title" data-format="default">sprite_create_from_surface</span>(index, x, y, w, h, removeback, smooth, xorig, yorig);</p>
   <table>
     <tbody>
       <tr>

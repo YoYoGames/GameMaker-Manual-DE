@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_clear</h1>
+  <h1><span data-field="title" data-format="default">ds_list_clear</span></h1>
   <p>Mit dieser Funktion können Sie alle Daten aus der angegebenen Listendatenstruktur löschen. Dabei wird die Datenstruktur <i>NICHT</i> zerstört (dafür sollten Sie die Funktion <a href="ds_list_destroy.htm"><span class="inline">ds_list_destroy()</span></a>), sondern löscht nur alle Daten aus der Liste und macht die Liste leer (Größe Null). Beachten Sie, dass das Löschen einer Liste alle in ihr gespeicherten Datenstrukturen de-referenziert, was zu einem Speicherleck führt, so dass Sie die Liste durchgehen und alle Datenstrukturelemente manuell zerstören müssen, bevor Sie sie löschen, um dies zu verhindern. Dies ist nur dann nicht erforderlich, wenn Sie Elemente in der Liste als eine andere <a href="DS_Lists.htm">DS-Liste</a> oder als eine <a href="../DS_Maps/DS_Maps.htm">DS-Map</a> gekennzeichnet haben. In diesem Fall werden diese Elemente zerstört (nicht gelöscht!) und ihr Speicher wird automatisch bereinigt, wenn die übergeordnete Liste gelöscht wird.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">ds_list_clear(id);</p>
+  <p class="code"><span data-field="title" data-format="default">ds_list_clear</span>(id);</p>
   <table>
     <tbody>
       <tr>

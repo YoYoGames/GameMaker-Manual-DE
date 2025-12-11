@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gamepad_axis_value</h1>
+  <h1><span data-field="title" data-format="default">gamepad_axis_value</span></h1>
   <p>Mit dieser Funktion können Sie den Wert der verschiedenen Achsen eines bestimmten Gamepad-Slots abfragen. Sie geben den zu prüfenden Gamepad-Slot-Index an, zusammen mit einer Achsenindex-Konstante (wie <a href="Gamepad_Input.htm">hier</a> aufgeführt) oder einem ganzzahligen Wert zwischen <span class="inline">0</span> und <span class="inline"><a href="gamepad_axis_count.htm">gamepad_axis_count()</a></span><span class="inline">-1</span>. Der zurückgegebene Wert liegt zwischen <span class="inline">-1</span> und <span class="inline">1</span> für jede der verfügbaren horizontalen und vertikalen Achsen.</p>
   <p>Beachten Sie, dass der zurückgegebene Wert normalisiert wird, um den Wert zu berücksichtigen, der für die Totzone der Achse eingestellt wurde (mit der Funktion <span class="inline"><a href="gamepad_set_axis_deadzone.htm">gamepad_set_axis_deadzone()</a></span>), und daher immer zwischen -1 und 0 und 0 und 1 liegt.2 bedeutet zum Beispiel, dass beim Drücken des Knüppels nach rechts erst dann ein Wert zwischen 0 und 1 zurückgegeben wird, wenn der <em>Rohwert</em> der Achse über 0,2 liegt. Wenn der Rohwert also 0,2 beträgt, ist der Rückgabewert 0, wenn der Rohwert bei 0,5 liegt, ist der Rückgabewert 0,375, und wenn der Rohwert 0,9 beträgt, ist der Rückgabewert 0,875.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">gamepad_axis_value(device, axisIndex);</p>
+  <p class="code"><span data-field="title" data-format="default">gamepad_axis_value</span>(device, axisIndex);</p>
   <table>
     <tbody>
       <tr>

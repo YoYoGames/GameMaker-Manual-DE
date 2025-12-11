@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gpu_set_ztestenable</h1>
+  <h1><span data-field="title" data-format="default">gpu_set_ztestenable</span></h1>
   <p>Diese Funktion kann verwendet werden, um den Z-Puffer-Test ein- oder auszuschalten, was sich auf die Art und Weise auswirkt, wie Dinge gezeichnet werden (im Allgemeinen nur von Nutzen, wenn man mit 3D-Projekten arbeitet). Wenn die Z-Prüfung standardmäßig ausgeschaltet ist und zwei Objekte in denselben Raum gezeichnet werden, werden beide Objekte gerendert,
     werden <i>beide</i> Objekte gerendert, unabhängig davon, ob das eine das andere überzeichnet, was zu unnötigen Zeichenaufrufen führt. Wenn Sie <span class="notranslate">switch</span> einschalten, wird der Z-Puffer getestet, um festzustellen, ob ein Objekt &quot;sichtbar&quot; ist und nicht gezeichnet wird, wenn dies nicht der Fall ist.
     nicht. Beachten Sie, dass dies das <i>Standardverhalten</i> ist, aber Sie können dies ändern, indem Sie die Art des Vergleichs, der für den Z-Buffer-Test verwendet wird, ändern (siehe die Funktion <a href="gpu_get_zfunc.htm"><span class="inline">gpu_set_zfunc()</span></a>.</p>

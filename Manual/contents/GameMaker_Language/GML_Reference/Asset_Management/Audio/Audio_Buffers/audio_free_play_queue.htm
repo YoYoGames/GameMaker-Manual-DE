@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>audio_freie_wiedergabe_warteschlange</title>
+  <title>audio_free_play_queue</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_freie_wiedergabe_warteschlange</h1>
+  <h1><span data-field="title" data-format="default">audio_free_play_queue</span></h1>
   <p>Diese Funktion wird verwendet, um den mit der angegebenen Audio-Warteschlange verbundenen Speicher freizugeben. Der Index der Warteschlange ist der Wert, der zurückgegeben wird, wenn Sie die Warteschlange mit der Funktion <a href="audio_create_play_queue.htm"><span class="inline">audio_create_play_queue()</span></a>erstellt haben, und diese Funktion sollte aufgerufen werden, wenn die Warteschlange nicht mehr benötigt wird, um Speicherlecks zu vermeiden. Das Freigeben der Warteschlange stoppt jeden Ton, der gerade abgespielt wird, und Sie können die <span class="notranslate">buffer</span>, von der ein Ton gestreamt wird, erst löschen, wenn die Warteschlange, der er zugewiesen ist, freigegeben wurde. Diese Funktion löst ein <a href="../../../../../The_Asset_Editors/Object_Properties/Async_Events/Audio_Playback.htm">asynchrones Ereignis für die Audiowiedergabe</a> aus, und in diesem Ereignis wird eine spezielle <a href="../../../Data_Structures/DS_Maps/DS_Maps.htm">DS-Map</a> in der Variablen <a href="../../../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> mit den folgenden Schlüssel/Wert-Paaren erstellt:</p>
   <ul class="colour">
     <li><strong>&quot;queue_id</strong>&quot; - die Warteschlange, die die Wiedergabe der Daten beendet hat</li>
@@ -23,7 +23,7 @@
   </ul>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">audio_free_play_queue(queueIndex);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_free_play_queue</span>(queueIndex);</p>
   <table>
     <tbody>
       <tr>

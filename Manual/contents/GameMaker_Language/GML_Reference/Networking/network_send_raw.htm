@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>netzwerk_senden_raw</title>
+  <title>network_send_raw</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>netzwerk_senden_raw</h1>
+  <h1><span data-field="title" data-format="default">network_send_raw</span></h1>
   <p>Mit dieser Funktion können Sie ein &quot;rohes&quot; Datenpaket über das Netzwerk senden. Die Funktion benötigt die <i>Socket-ID</i>, über die eine Verbindung hergestellt werden soll, und dann die <i>Buffer-ID</i>, die die zu sendenden Daten enthält (für weitere Informationen über <span class="notranslate">buffers</span> siehe <a href="../Buffers/Buffers.htm">Referenz - Buffer</a>) und schließlich die Größe (in Bytes) des Datenpakets. Die gesendeten Daten werden von <span data-keyref="GameMaker Name">GameMaker</span> in keiner Weise formatiert und die empfangenden Geräte erhalten die Daten als Stream, was bedeutet, dass du sie selbst verarbeiten musst. Die Funktion gibt die Anzahl der gesendeten Bytes zurück, oder eine Zahl kleiner als 0, wenn das Senden fehlgeschlagen ist.</p>
   <h2>Optionen Argument</h2>
   <p>Das letzte <span class="notranslate">argument</span> ist optional und wird nur bei WebSockets verwendet. Es erlaubt Ihnen, zwischen dem Senden von Binär- oder Textdaten zu wählen. In diesem Argument kann eine der beiden Konstanten angegeben werden:</p>
@@ -44,7 +44,7 @@
   <p>Die APIs für einige <span class="notranslate">platforms</span> akzeptieren nur Textnachrichten, wenn sie WebSockets verwenden (z. B. Twitch), daher kann in solchen Fällen die Konstante <span class="inline2">network_send_text</span> verwendet werden. Wird diese <span class="notranslate">argument</span> nicht angegeben, werden standardmäßig binäre Daten gesendet.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">network_send_raw(socket, bufferid, size, [options]);</p>
+  <p class="code"><span data-field="title" data-format="default">network_send_raw</span>(socket, bufferid, size, [options]);</p>
   <table>
     <tbody>
       <tr>

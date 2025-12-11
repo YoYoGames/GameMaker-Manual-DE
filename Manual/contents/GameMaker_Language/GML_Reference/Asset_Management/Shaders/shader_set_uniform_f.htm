@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>shader_set_uniform_f</h1>
+  <h1><span data-field="title" data-format="default">shader_set_uniform_f</span></h1>
   <p>Mit dieser Funktion können Sie den Wert (oder die Werte) einer Shader-Konstante setzen. Sie müssen zuvor das &quot;Handle&quot; der Konstante mit Hilfe der Funktion <a href="shader_get_uniform.htm"><span class="inline">shader_get_uniform()</span></a>erhalten haben, und Sie müssen wissen, um welchen Typ von Konstante es sich handelt, um die richtige Anzahl von Fließkommawerten an die Funktion zu übergeben, d.h. wenn Sie eine <span class="inline">vec2</span> haben, müssen Sie zwei Werte an die Funktion übergeben.</p>
   <p>Eine Ausnahme von der obigen Regel ist der Umgang mit 32bit-Farbwerten. Sie können dem Shader bis zu acht 32-Bit-Farbwerte übergeben, die dann automatisch in vec4-Werte von 0 - 1 umgewandelt werden. Dazu <i>müssen</i> Sie allerdings die Shader-Konstante <span class="inline">in_Colour</span> für eine einzelne Farbe verwenden, oder <span class="inline">in_Colour0</span>, <span class="inline">in_Colour1</span>, usw... bis zu <span class="inline">in_Colour7</span> für mehrere Eingabewerte. Die folgenden zwei Beispiele zeigen, wie dies im Shader selbst aussehen würde:</p>
   <p class="code">    //Single colour<br />

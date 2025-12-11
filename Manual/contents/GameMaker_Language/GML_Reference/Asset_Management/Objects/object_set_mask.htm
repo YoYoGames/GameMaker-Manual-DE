@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>object_set_mask</h1>
+  <h1><span data-field="title" data-format="default">object_set_mask</span></h1>
   <p>Mit dieser Funktion können Sie den mask_index eines bestimmten Objekts setzen (weitere Informationen zu Masken finden Sie unter <a href="../../../../The_Asset_Editors/Objects.htm">Der Objekteditor</a>). Das bedeutet, dass alle Instanzen dieses Objekts, die <i>nach der Änderung der Maske</i> erstellt werden, mit dieser neuen Maske erstellt werden, während Instanzen, die sich bereits im Raum befinden, möglicherweise nicht betroffen sind. Sie können diesen Wert auf -1 setzen, um eine Maske <span class="notranslate">sprite</span> zu entfernen und somit die für <span class="notranslate">sprite</span> des Objekts definierte Maske zu verwenden (oder keine Masken, wenn keine <span class="notranslate">sprite</span> gewählt wurde).</p>
   <p>Bitte beachten Sie, dass es sich hierbei nicht um eine Instanzfunktion handelt! Sie können den Maskenindex der einzelnen Instanzen mit der Variable <a href="../Sprites/Sprite_Instance_Variables/mask_index.htm"><span class="inline">mask_index</span></a> Variable setzen und so zehn Instanzen haben, die alle eine andere Maske haben als das Objekt, von dem sie erstellt wurden. Selbst wenn Sie den Maskenindex des Objekts mit dieser Funktion ändern, bleiben alle Instanzen, die sich derzeit im Raum befinden, so wie sie waren, und nur Instanzen, die nach dem Aufruf der Funktion erstellt werden, beginnen mit der neuen Maske.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">object_set_mask(index, spr);</p>
+  <p class="code"><span data-field="title" data-format="default">object_set_mask</span>(index, spr);</p>
   <table>
     <tbody>
       <tr>

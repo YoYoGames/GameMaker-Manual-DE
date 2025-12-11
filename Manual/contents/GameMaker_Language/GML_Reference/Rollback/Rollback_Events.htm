@@ -39,9 +39,9 @@
       </tr>
       <tr>
         <td><span class="inline">rollback_connect_error</span></td>
-        <td>Eine <a href="../../GML_Overview/Structs.htm">Struktur</a>, die die folgenden Variablen enthält:<br>
-          <br>
-         <span class="inline2">status</span> Der HTTP-Status <span class="notranslate">code</span> der Antwort<br>
+        <td>Eine <a href="../../GML_Overview/Structs.htm">Struktur</a>, die die folgenden Variablen enthält:<br />
+          <br />
+         <span class="inline2">status</span> Der HTTP-Status <span class="notranslate">code</span> der Antwort<br />
          <span class="inline2">error</span> Eine Zeichenkette, die den Fehler beschreibt
         </td>
       </tr>
@@ -61,18 +61,18 @@
       </tr>
       <tr>
         <td><span class="inline">rollback_chat_message</span></td>
-        <td>Wird ausgelöst, wenn eine Nachricht von <a href="Rollback_Functions/rollback_chat.htm"><span class="inline">rollback_chat()</span></a> / <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Send_Message.htm">Nachricht senden</a> empfangen wird. Während dieses Ereignisses enthält <span class="inline2">rollback_event_param</span> die folgenden Variablen:<br>
-          <br>
-         <span class="inline2">Nachricht</span>: Die empfangene Nachrichtenzeichenfolge<br>
-         <span class="inline2">from</span>: Die ID des Spielers, der die Nachricht gesendet hat<br>
+        <td>Wird ausgelöst, wenn eine Nachricht von <a href="Rollback_Functions/rollback_chat.htm"><span class="inline">rollback_chat()</span></a> / <a data-xref="{title}" href="../../../Drag_And_Drop/Drag_And_Drop_Reference/Rollback/Send_Message.htm">Nachricht senden</a> empfangen wird. Während dieses Ereignisses enthält <span class="inline2">rollback_event_param</span> die folgenden Variablen:<br />
+          <br />
+         <span class="inline2">Nachricht</span>: Die empfangene Nachrichtenzeichenfolge<br />
+         <span class="inline2">from</span>: Die ID des Spielers, der die Nachricht gesendet hat<br />
          <span class="inline2">an</span>: Die ID des Spielers, an den die Nachricht gesendet wurde; wird -1 sein, wenn die Nachricht an jeden gesendet wurde
         </td>
       </tr>
       <tr>
         <td><span class="inline">rollback_player_prefs</span></td>
-        <td>Wird ausgelöst, wenn ein Spieler seine <a href="Rollback_Preferences.htm">Einstellungen</a> ändert. Während dieses Ereignisses enthält <span class="inline2">rollback_event_param</span> die folgenden Variablen:<br>
-          <br>
-         <span class="inline2">player_id</span>: Die ID des Spielers, der seine Präferenzen gesetzt hat<br>
+        <td>Wird ausgelöst, wenn ein Spieler seine <a href="Rollback_Preferences.htm">Einstellungen</a> ändert. Während dieses Ereignisses enthält <span class="inline2">rollback_event_param</span> die folgenden Variablen:<br />
+          <br />
+         <span class="inline2">player_id</span>: Die ID des Spielers, der seine Präferenzen gesetzt hat<br />
          <span class="inline2">Einstellungen</span>: Die für diesen Spieler festgelegten Einstellungen
         </td>
       </tr>
@@ -82,10 +82,10 @@
       </tr>
       <tr>
         <td><span class="inline">rollback_synchronizing_with_peer</span></td>
-        <td>Wird ausgelöst, während sich der Spieler mit einem neuen Spieler synchronisiert. Während dieses Ereignisses enthält <span class="inline2">rollback_event_param</span> die folgenden Variablen:<br>
-          <br>
-         <span class="inline2">player_id</span>: ID des Spielers, mit dem synchronisiert wird<br>
-         <span class="inline2">count</span>: Wie viele Synchronisierungsschritte wurden bereits durchgeführt?<br>
+        <td>Wird ausgelöst, während sich der Spieler mit einem neuen Spieler synchronisiert. Während dieses Ereignisses enthält <span class="inline2">rollback_event_param</span> die folgenden Variablen:<br />
+          <br />
+         <span class="inline2">player_id</span>: ID des Spielers, mit dem synchronisiert wird<br />
+         <span class="inline2">count</span>: Wie viele Synchronisierungsschritte wurden bereits durchgeführt?<br />
          <span class="inline2">total</span>: Wie viele Synchronisationsschritte insgesamt noch ausstehen
         </td>
       </tr>
@@ -99,9 +99,9 @@
       </tr>
       <tr>
         <td><span class="inline">rollback_game_interrupted</span></td>
-        <td>Wird ausgelöst, wenn das Spiel wegen eines Spielers mit instabiler Verbindung unterbrochen wird. Während dieses Ereignisses enthält <span class="inline2">rollback_event_param</span> die folgenden Variablen:<br>
-          <br>
-         <span class="inline2">player_id</span>: ID des Spielers mit Verbindungsproblemen<br>
+        <td>Wird ausgelöst, wenn das Spiel wegen eines Spielers mit instabiler Verbindung unterbrochen wird. Während dieses Ereignisses enthält <span class="inline2">rollback_event_param</span> die folgenden Variablen:<br />
+          <br />
+         <span class="inline2">player_id</span>: ID des Spielers mit Verbindungsproblemen<br />
          <span class="inline2">timeout</span>: Die verbleibende Zeit bis zur Zeitüberschreitung und dem Abbruch der Verbindung durch den Spieler (in Millisekunden). Nach dieser Zeit wird der Spieler gekickt und das Spiel wird mit den verbleibenden Spielern fortgesetzt.
         </td>
       </tr>
@@ -115,17 +115,17 @@
       </tr>
       <tr>
         <td><span class="inline">rollback_game_info</span></td>
-        <td>Wird ausgelöst, wenn Informationen über einen Raum empfangen werden, aber bevor er vollständig verbunden ist.<br>
-          Während dieses Ereignisses enthält <span class="inline2">rollback_event_param</span> die folgenden Variablen:<br>
-          <br>
-         <span class="inline2">num_players</span>: Die Gesamtzahl der Spieler im Spiel<br>
+        <td>Wird ausgelöst, wenn Informationen über einen Raum empfangen werden, aber bevor er vollständig verbunden ist.<br />
+          Während dieses Ereignisses enthält <span class="inline2">rollback_event_param</span> die folgenden Variablen:<br />
+          <br />
+         <span class="inline2">num_players</span>: Die Gesamtzahl der Spieler im Spiel<br />
          <span class="inline2">player_id</span>: Die ID des lokalen Spielers (beginnend bei 0)
         </td>
       </tr>
       <tr>
         <td><span class="inline">rollback_connect_info</span></td>
-        <td>Wird ausgelöst, wenn ein Raum erstellt wurde und bereit ist, mit anderen Spielern geteilt zu werden. Die freigebbare URL wird in <span class="inline2">rollback_event_param.share_url</span> gespeichert.<br>
-          <br>
+        <td>Wird ausgelöst, wenn ein Raum erstellt wurde und bereit ist, mit anderen Spielern geteilt zu werden. Die freigebbare URL wird in <span class="inline2">rollback_event_param.share_url</span> gespeichert.<br />
+          <br />
           Sie können diese URL automatisch kopieren, wenn sie verfügbar wird, indem Sie <span class="inline"><a href="../Strings/clipboard_set_text.htm">clipboard_set_text()</a></span> aufrufen.
         </td>
       </tr>

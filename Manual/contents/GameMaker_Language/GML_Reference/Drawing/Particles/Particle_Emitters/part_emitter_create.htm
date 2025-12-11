@@ -15,11 +15,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>part_emitter_create</h1>
+  <h1><span data-field="title" data-format="default">part_emitter_create</span></h1>
   <p>Diese Funktion wird verwendet, um einen neuen Partikelemitter im angegebenen Partikelsystem zu erstellen. Die Funktion gibt den Indexwert für den neuen Emitter zurück, der in einer Variablen gespeichert und in allen weiteren Funktionen, die den Emitter referenzieren, verwendet werden muss. Der Emitter selbst muss zerstört werden, wenn er nicht mehr verwendet wird, um Speicherlecks zu vermeiden (dies kann mit den spezifischen Emitter-Destroy-Funktionen oder durch Zerstörung des gesamten Partikelsystems, zu dem der Emitter gehört, erreicht werden).</p>
   <p class="note"><span class="note">HINWEIS</span> Die von dieser Funktion zurückgegebenen Emitter-IDs werden wiederverwendet, d.h. wenn Sie zunächst drei Partikelemitter erstellen, werden diesen die IDs 0, 1 und 2 zugewiesen. Wenn du dann den zweiten Emitter (der eine ID von 1 hat) mit <a href="part_emitter_destroy.htm"><span class="notranslate">part_emitter_destroy</span></a> zerstören und dann einen weiteren Emitter erstellen, wird dieser Emitter die ID 1 wiederverwenden. Da die Emitter-ID 2 in Gebrauch ist, wird der nächste Emitter die ID 3 erhalten usw.</p>
   <h4>Syntax:</h4>
-  <p class="code">part_emitter_create(ps);</p>
+  <p class="code"><span data-field="title" data-format="default">part_emitter_create</span>(ps);</p>
   <table>
     <tbody>
       <tr>

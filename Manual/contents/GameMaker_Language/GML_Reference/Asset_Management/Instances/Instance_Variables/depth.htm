@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Tiefe</title>
+  <title>depth</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Tiefe</h1>
+  <h1><span data-field="title" data-format="default">depth</span></h1>
   <p>Wenn Sie ein Objekt erstellen, können Sie ihm eine anfängliche <i>Tiefe</i> zuweisen, die definiert, wie die Instanzen dieses Objekts im Raum gezeichnet werden, wenn das Spiel gespielt wird, und diese Variable kann verwendet werden, um diesen Tiefenwert zu erhalten und zu ändern, während das Spiel läuft. Normalerweise brauchst du diese Variable nicht zu verwenden, da du die Instanzen so einstellst, dass sie zu diskreten <a href="layer.htm">Layern</a> hinzugefügt werden, die wiederum auf eine bestimmte Tiefe eingestellt sind, aber es kann sein, dass du die Tiefe einer Instanz mit diesem Wert ändern willst, in welchem Fall ein &quot;temporärer Layer&quot; speziell für die Instanz mit der angegebenen Tiefe erstellt wird. In diesem Fall wird eine "temporäre Ebene" speziell für die Instanz in der angegebenen Tiefe erstellt. Beachten Sie, dass diese temporäre Ebene aus dem Speicher entfernt wird, wenn sich keine Instanzen in der gleichen Tiefe befinden (im Gegensatz zu regulären Ebenen, die auch dann erhalten bleiben, wenn sich nichts auf ihnen befindet).</p>
   <p class="note"><b>WICHTIG!</b> Wenn Sie die Variable <span class="inline">depth</span> ändern und <span data-keyref="GameMaker Name">GameMaker</span> die Ebenen verwaltet, gibt die eingebaute <span style="font-size:1px;"><a href="layer.htm"><span class="inline">layer</span></a></span> Variable -1 und nicht die Ebenen-ID zurück, da verwaltete Ebenen nicht über <span class="notranslate">code</span> manipuliert werden können.</p>
   <p>Je niedriger der Tiefenwert einer Instanz ist, desto &quot;näher an der Kamera&quot; wird diese Instanz gezeichnet, während ein höherer Tiefenwert bedeutet, dass die Instanz &quot;weiter weg von der Kamera&quot; gezeichnet wird, d.h.: -1000 wird über -100 gezeichnet, das wiederum über 0 gezeichnet wird, und so weiter.</p>
@@ -23,7 +23,7 @@
   <p>Beachten Sie, dass die Änderung der Tiefe einer Instanz die Anwendung von <a href="../../../../../The_Asset_Editors/Room_Properties/Filters_and_Effects.htm">Filtern und Effekten</a> auf die Instanz verändern kann, da bei einer Änderung der Tiefe unter die Tiefe einer Effekt-Ebene deren Effekt nicht mehr auf die Instanz angewendet wird.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">depth;</p>
+  <p class="code"><span data-field="title" data-format="default">depth</span></p>
   <p> </p>
   <h4>Rückgabe:</h4>
   <p class="code"><span data-keyref="Type_Real"><a href="../../../../../../GameMaker_Language/GML_Overview/Data_Types.htm" target="_blank">Real</a></span> (single precision floating point value)</p>

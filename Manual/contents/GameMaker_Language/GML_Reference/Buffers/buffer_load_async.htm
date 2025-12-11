@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>puffer_laden_async</title>
+  <title>buffer_load_async</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>puffer_laden_async</h1>
+  <h1><span data-field="title" data-format="default">buffer_load_async</span></h1>
   <p>Mit dieser Funktion können Sie eine Datei laden, die Sie zuvor mit der Funktion <a href="buffer_save.htm"><span class="inline">buffer_save()</span></a> (oder einer der anderen Funktionen zum Speichern von <span class="notranslate">buffers</span>) erstellt haben, in eine <span class="notranslate">buffer</span> laden. Der &quot;Offset&quot; definiert die Startposition innerhalb der <span class="notranslate">buffer</span> für das Laden (in Bytes), und die &quot;Größe&quot; ist die Größe des zu ladenden Bereichs <span class="notranslate">buffer</span> ab diesem Offset (ebenfalls in Bytes). Sie können für die Größe <span class="notranslate">argument</span> den Wert -1 angeben, dann wird der gesamte <span class="notranslate">buffer</span> geladen. Beachten Sie, dass die Funktion aus einem &quot;Standard&quot;-Ordner lädt, der <i>nicht</i> Teil des von Ihnen angegebenen Dateipfads sein muss. Dieser Ordner wird erstellt, wenn er nicht vorhanden ist oder wenn Sie eine Datei mit <a href="buffer_save_async.htm"><span class="inline">buffer_save_async()</span></a>.</p>
   <p>Die Funktion gibt einen eindeutigen ID-Wert zurück, der dann im <a href="../../../The_Asset_Editors/Object_Properties/Async_Events/Save_Load.htm">asynchronen Ereignis Speichern/Laden</a> verwendet werden kann, um den <a href="../../GML_Overview/Variables/Builtin_Global_Variables/async_load.htm"><span class="inline">async_load</span></a> ID-Wert zu überprüfen, wie im folgenden erweiterten Beispiel gezeigt. Die Karte <span class="inline">async_load</span> im Ereignis enthält die folgenden zwei Schlüssel/Wertpaare:</p>
   <ul class="colour">

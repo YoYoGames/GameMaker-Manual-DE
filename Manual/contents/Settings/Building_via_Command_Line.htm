@@ -51,10 +51,10 @@
         <tr>
           <td style=""><span class="inline">/uf=[user_folder]<strong></strong></span></td>
           <td style="">Der Benutzerordner, der zum Abrufen von Lizenzinformationen verwendet wird
-            <br>
-            <br>
+            <br />
+            <br />
             Unter <span class="notranslate">Windows</span> ist dies der folgende Ordner: <span class="inline"><span>%appdata%\GameMaker\&lt;user_name&gt;_&lt;number&gt;</span>
-            <br>
+            <br />
             Auf <span class="notranslate">macOS</span> lautet dieser Ordner: <span class="inline"><span>~/.config/GameMaker/&lt;user_name&gt;_&lt;number&gt;</span> </td>
         </tr>
         <tr>
@@ -76,8 +76,8 @@
         <tr>
           <td style=""><span class="inline">/of=[output_folder_filename]</span></td>
           <td style="">Das Ausgabeverzeichnis, in das der Build extrahiert wird; geben Sie nicht nur ein Verzeichnis an, da der letzte Eintrag immer entfernt wird (z. B.: die Angabe von <span class="inline">d:\game\output</span> legt die Spieldateien in <span class="inline">d:\game</span> ab).
-            <br>
-            <br>
+            <br />
+            <br />
             Wenn dies nicht angegeben wird, wird ein Verzeichnis mit dem Namen <span class="inline">output</span> im selben Verzeichnis wie die Datei <span class="inline">.bat</span> (oder dem Verzeichnis, von dem aus der Befehl ausgeführt wird) erstellt, das die extrahierten Build-Dateien enthält </td>
         </tr>
         <tr>
@@ -279,21 +279,21 @@
         <tr>
           <td style=""><span class="inline">Runtime ListInstalled [directory]</span></td>
           <td style="">Listet die im aktuellen Ordner verfügbaren <span class="notranslate">runtimes</span> auf (<span class="inline">directory</span>=vollständiger Pfad zum Ordner)
-            <br>
-            <br>
+            <br />
+            <br />
             Sie können ein Verzeichnis angeben, in dem gesucht werden soll, aber wenn es nicht angegeben wird, wird standardmäßig das aktuelle Verzeichnis verwendet.
-            <br>
-            <br>
+            <br />
+            <br />
             Es wird auch geprüft, ob sich in dem Verzeichnis eine Datei <span class="inline">receipt.json</span> und ein Ordner <span class="inline">manifest</span> befinden (um sicherzustellen, dass es sich tatsächlich um <span class="notranslate">runtime</span> handelt). </td>
         </tr>
         <tr>
           <td style=""><span class="inline">Runtime Info [version]</span></td>
           <td style="">Druckt Informationen über die neuesten <span class="notranslate">runtime</span> auf dem angegebenen Feed aus; benötigt auch eine Lizenzdatei, um Informationen über die für den Benutzer verfügbaren <span class="notranslate">modules</span> anzuzeigen
-            <br>
-            <br>
+            <br />
+            <br />
             <span class="inline">version</span> kann entweder durch eine Zeichenkette, die zum Durchsuchen der Feed-Titel verwendet wird (z.B.: <span class="inline">&quot;739&quot;</span> würde Informationen für alle Builds anzeigen, die 739 in ihrer Versionsnummer enthalten), oder es kann <span class="inline">all</span> sein, um Informationen für alle Feeds anzuzeigen
-            <br>
-            <br>
+            <br />
+            <br />
             Es wird die <span class="notranslate">modules</span> mit den <span class="inline">.zip</span> Dateinamen für jedes <span class="notranslate">module</span> aufgelistet. </td>
         </tr>
         <tr>
@@ -303,11 +303,11 @@
         <tr>
           <td style=""><span class="inline">Runtime Verify [folder=.]</span></td>
           <td style="">Berechnet die Prüfsummen für alle installierten Dateien und vergleicht sie mit den Prüfsummen, die im Manifest <span class="inline">folder</span> eingetragen sind. Sie können einen Ordner angeben, der geprüft werden soll. Wird dieser jedoch nicht angegeben, wird standardmäßig das aktuelle Verzeichnis verwendet.
-            <br>
-            <br>
+            <br />
+            <br />
             Es werden alle Dateien markiert, bei denen die Prüfsummen nicht übereinstimmen, Dateien, die fehlen, und Dateien, die nicht vorhanden sein sollten.
-            <br>
-            <br>
+            <br />
+            <br />
             Beachten Sie, dass die Manifestdateien selbst nicht überprüft werden und ein Benutzer die Manifestdateien ändern kann, damit sie mit den installierten Dateien übereinstimmen. </td>
         </tr>
       </tbody>
@@ -348,8 +348,8 @@
         <tr>
           <td style=""><span class="inline">/target=[list_of_targets]</span></td>
           <td style="">Kommagetrennte Liste von Zielen im Format <span class="inline">PLATFORM|DEVICE</span>, z. B: <span class="inline">/target=&quot;Windows|Local,HTML|Firefox&quot;</span>
-            <br>
-            <br>
+            <br />
+            <br />
             Wenn Sie <strong>alle</strong> angeben, wird versucht, die Tests für jedes Gerät in der Datei <span class="inline">devices.json</span> durchzuführen. </td>
         </tr>
       </tbody>

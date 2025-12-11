@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Kamera_anwenden</title>
+  <title>camera_apply</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Kamera_anwenden</h1>
+  <h1><span data-field="title" data-format="default">camera_apply</span></h1>
   <p>Diese Funktion wendet die angegebenen Kameraeinstellungen sofort auf die aktuelle Kameraansicht an, die gerade gerendert wird. Während man mit den spezifischen Funktionen von <span class="inline">camera_set_*</span> jede beliebige Ansichtskamera einstellen kann, werden die neuen Einstellungen erst im <i>nächsten</i> Spielframe zum Rendern verwendet, aber mit dieser Funktion kann man diese Änderungen sofort vornehmen. Wenn Sie mehrere Ansichten verwenden, sollte die Funktion im <b>Draw Event</b> verwendet werden und Sie können die Variable <a href="view_current.htm"><span class="inline">view_current</span></a> verwenden, um die angegebene Kamera selektiv nur auf die Kameraansicht anzuwenden, die gerade gerendert wird. Beachten Sie, dass dies NICHT den Wert der Kamera-ID ändert, sondern nur die Einstellungen für diese Kamera, und dass, wenn Sie diese Funktion auf die Standardkamera anwenden (d. h. die interne Kamera, die <span data-keyref="GameMaker Name">GameMaker</span> verwendet, wenn keine Ansichtskameras aktiv sind), die Änderungen bereits im nächsten Spielframe durch die internen Einstellungen für das Zeichnen des Raums überschrieben werden.</p>
   <p> </p>
   <h4>Syntax:</h4>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physik_verbindung_schweißen_erzeugen</title>
+  <title>physics_joint_weld_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physik_verbindung_schweißen_erzeugen</h1>
+  <h1><span data-field="title" data-format="default">physics_joint_weld_create</span></h1>
   <p>Die Schweißverbindung ist so konzipiert, dass sie zwei Vorrichtungen in einer starken, aber flexiblen Verbindung miteinander verbindet. Die Schweißverbindung ermöglicht eine Biegung zwischen den beiden verbundenen Vorrichtungen, jedoch ohne die Dehnung, die z. B. mit einer Abstandsverbindung verbunden ist, und sie versucht immer, in den Bezugswinkel zurückzuspringen, wenn sie unter Spannung oder Last steht. Sie legen den Punkt im Raum fest, an dem die Verbindung hergestellt werden soll, sowie den Winkel, den die Verbindung jederzeit beizubehalten versuchen soll, wie in der Abbildung unten dargestellt:</p>
   <p><img>Wie Sie sehen können, werden die Ankerpunkte als Raumkoordinaten angegeben, so dass bei ihrer Definition Vorsicht geboten ist, insbesondere wenn die Instanzen gleichzeitig mit den Joints erstellt werden und nicht über den Raumeditor im Raum platziert werden. Sie sollten auch bedenken, dass die Verbindungen unabhängig von der Größe der <span class="notranslate">sprite</span> der Instanzen oder der Einbauten, die sie angehängt haben, erstellt werden. Wenn Sie also eine Schweißnaht an einer anderen Stelle als dem Ursprung der Instanz erstellen, ist sie immer noch gültig und schränkt die beiden Instanzen relativ zu der Position ein, an der sie erstellt wurde.</p>
   <p>Da die Schweißnaht flexibel ist und sich bei Belastung verbiegt, können Sie die Schwingungsfrequenz (in Hz) und das Dämpfungsverhältnis für die Schweißnaht einstellen, um verschiedene Effekte zu erzielen - möglicherweise müssen Sie mit diesen Werten spielen, um sie fein abzustimmen.</p>
   <p>Wenn Sie den &quot;col&quot;-Wert auf <span class="inline">true</span> setzen, können die beiden Instanzen interagieren und miteinander kollidieren, aber <i>nur</i>, wenn sie Kollisionsereignisse haben. Wenn er jedoch auf <span class="inline">false</span> gesetzt ist, werden sie nicht kollidieren, egal was passiert.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">physics_joint_weld_create(inst1, inst2, anchor_x, anchor_y, ref_angle, freq_hz, damping_ratio, col)</p>
+  <p class="code"><span data-field="title" data-format="default">physics_joint_weld_create</span>(inst1, inst2, anchor_x, anchor_y, ref_angle, freq_hz, damping_ratio, col)</p>
   <table>
     <tbody>
       <tr>

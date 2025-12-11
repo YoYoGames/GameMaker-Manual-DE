@@ -28,22 +28,22 @@
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">buffer_fixed</span></td>
-        <td><br>
+        <td><br />
           Eine <span class="notranslate">buffer</span> mit einer festen Größe in Bytes. Die Größe wird bei der Erstellung von <span class="notranslate">buffer</span> festgelegt und kann nicht mehr geändert werden.</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">buffer_grow</span></td>
-        <td><br>
+        <td><br />
           Eine <span class="notranslate">buffer</span>, die dynamisch <i>wächst</i>, wenn Daten hinzugefügt werden. Sie legen ihn mit einer Anfangsgröße an (die in etwa der Größe der zu speichernden Daten entsprechen sollte), und dann wird er erweitert, um weitere Daten aufzunehmen, die diese Anfangsgröße überschreiten.</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">buffer_wrap</span></td>
-        <td><br>
+        <td><br />
           Eine <span class="notranslate">buffer</span>, in der die Daten <i>umbrochen</i> werden. Wenn die hinzugefügten Daten die Grenze der Größe von <span class="notranslate">buffer</span> erreichen, wird die überschriebene Datei wieder an den Anfang von <span class="notranslate">buffer</span> gesetzt, und das weitere Schreiben wird von diesem Punkt an fortgesetzt.</td>
       </tr>
       <tr>
         <td><span class="notranslate"><span class="inline">buffer_fast</span></td>
-        <td><br>
+        <td><br />
           Es handelt sich um eine spezielle &quot;abgespeckte&quot; <span class="notranslate">buffer</span>, die extrem schnell zu lesen/schreiben ist. Es kann jedoch nur mit <span class="inline"><span class="inline">buffer_u8</span> Datentypen verwendet werden und muss 1 Byte ausgerichtet sein. (Informationen zu <b>Datentypen</b> und <b>Byte-Alignment</b> finden Sie weiter unten auf dieser Seite).</td>
       </tr>
     </tbody>
@@ -53,7 +53,7 @@
   <p><img>Bei der Erstellung einer <span class="notranslate">buffer</span> sollten Sie immer versuchen, sie in einer Größe zu erstellen, die dem Typ entspricht, wobei die allgemeine Regel lautet, dass sie so erstellt werden sollte, dass sie die maximale Größe der Daten, die sie speichern soll, aufnehmen kann, und im Zweifelsfall ein grow <span class="notranslate">buffer</span> verwenden, um Überschreibungsfehler zu vermeiden.</p>
   <p>Die eigentliche <span class="notranslate">code</span> zur Erstellung einer <span class="notranslate">buffer</span> würde etwa so aussehen:</p>
   <p class="code">player_buffer = buffer_create(16384, buffer_fixed, 2);</p>
-  <p><br>
+  <p><br />
     Das würde eine feste <span class="notranslate">buffer</span> von 16384 Bytes und byte-aligned zu 2 erstellen, mit der Funktion, die einen eindeutigen ID-Wert zurückgibt, der in einer Variable für spätere Referenzierung dieser <span class="notranslate">buffer</span> gespeichert wird.</p>
   <p>Wenn Sie Daten auf <span class="notranslate">buffer</span> lesen und schreiben, tun Sie dies in &quot;Datenpaketen&quot;, die durch ihren &quot;Datentyp&quot; definiert sind. Der &quot;Datentyp&quot; legt die Anzahl der Bytes fest, die innerhalb von <span class="notranslate">buffer</span> für den zu schreibenden Wert zugewiesen werden, und es ist wichtig, dass Sie dies richtig machen, da Sie sonst sehr seltsame Ergebnisse (oder sogar Fehler) für Ihre <span class="notranslate">code</span> erhalten.</p>
   <p>Puffer werden <strong>sequentiell</strong> beschrieben (und ausgelesen), d. h. ein Datenelement wird nach dem anderen geschrieben, wobei jedes Datenelement einen bestimmten Typ hat. Das bedeutet, dass Sie sich idealerweise immer bewusst sein sollten, welche Daten Sie in <span class="notranslate">buffer</span> schreiben. Diese Datentypen werden in <span class="notranslate">GML</span> durch die folgenden Konstanten definiert:</p>
@@ -68,73 +68,73 @@
       <tr>
         <td><span class="inline">buffer_u8</span></td>
         <td>1</td>
-        <td><br>
+        <td><br />
           Eine 8-Bit-Ganzzahl ohne Vorzeichen. Dies ist ein positiver Wert von 0 bis 255.</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_s8</span></td>
         <td>1</td>
-        <td><br>
+        <td><br />
           Eine 8-Bit-Ganzzahl mit Vorzeichen. Dies kann ein positiver oder negativer Wert von -128 bis 127 sein (0 wird als positiv eingestuft).</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_u16</span></td>
         <td>2</td>
-        <td><br>
+        <td><br />
           Eine 16-Bit-Ganzzahl ohne Vorzeichen. Dies ist ein positiver Wert von 0 - 65.535.</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_s16</span></td>
         <td>2</td>
-        <td><br>
+        <td><br />
           Eine ganze Zahl mit Vorzeichen und 16 Bit. Dies kann ein positiver oder negativer Wert zwischen -32.768 und 32.767 sein (0 wird als positiv eingestuft).</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_f16</span></td>
         <td>2</td>
-        <td><br>
+        <td><br />
           Eine 16-Bit-Gleitkommazahl. Dies kann ein positiver oder negativer Wert innerhalb des Bereichs von +/- 65504 sein. <b>(Wird derzeit nicht unterstützt!)</b></td>
       </tr>
       <tr>
         <td><span class="inline">buffer_u32</span></td>
         <td>4</td>
-        <td><br>
+        <td><br />
           Eine 32-Bit-Ganzzahl ohne Vorzeichen. Dies ist ein positiver Wert von 0 bis 4.294.967.295.</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_s32</span></td>
         <td>4</td>
-        <td><br>
+        <td><br />
           Eine ganze Zahl mit Vorzeichen und 32 Bit. Dies kann ein positiver oder negativer Wert zwischen -2.147.483.648 und 2.147.483.647 sein (0 wird als positiv eingestuft).</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_f32</span></td>
         <td>4</td>
-        <td><br>
+        <td><br />
           Eine 32-Bit-Gleitkommazahl. Dies kann ein positiver oder negativer Wert innerhalb des Bereichs von +/-16777216 sein.</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_u64</span></td>
         <td>8</td>
-        <td><br>
+        <td><br />
           Ein 64bit Ganzzahlwert ohne Vorzeichen.<b>(Wird derzeit nicht von allen <span class="notranslate">buffer</span> Funktionen unterstützt!)</b></td>
       </tr>
       <tr>
         <td><span class="inline">buffer_f64</span></td>
         <td>8</td>
-        <td><br>
+        <td><br />
           Eine 64-Bit-Gleitkommazahl.</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_bool</span></td>
         <td>1</td>
-        <td><br>
+        <td><br />
           Ein boolescher Wert. Kann nur entweder 1 oder 0 sein (<span class="inline">true</span> oder <span class="inline">false</span>)</td>
       </tr>
       <tr>
         <td><span class="inline">buffer_string</span></td>
         <td>K.A.</td>
-        <td><br>
+        <td><br />
           Dies ist eine UTF-8-Zeichenkette mit Null-Terminierung (0x00). Grundsätzlich wird eine <span class="notranslate">GameMaker</span> Zeichenkette in die <span class="notranslate">buffer</span> ausgegeben und am Ende wird eine 0 angehängt.</td>
       </tr>
     </tbody>

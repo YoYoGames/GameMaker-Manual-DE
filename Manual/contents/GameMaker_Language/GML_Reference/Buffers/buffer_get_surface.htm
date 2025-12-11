@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>buffer_get_surface</h1>
+  <h1><span data-field="title" data-format="default">buffer_get_surface</span></h1>
   <p>Mit dieser Funktion können Sie Informationen aus einer Oberfläche in eine bestimmte <span class="notranslate">buffer</span> schreiben. Das <span class="notranslate">buffer</span> muss zuvor erstellt worden sein und sollte ein 1-Byte-ausgerichtetes <span class="notranslate">buffer</span> sein, das groß genug ist, um Daten für die zu schreibende Oberfläche zu speichern (wenn Sie unsicher sind, verwenden Sie einen <a href="buffer_create.htm">Wachstumspuffer</a> oder sehen Sie sich das Beispiel am Ende dieser Seite an).</p>
   <p>Die Informationen für die Oberfläche werden immer an den Anfang der <span class="notranslate">buffer</span> geschrieben (unabhängig von der Suchposition), aber Sie können einen Offset-Wert (in Bytes) wählen, um die Schreibposition vom Anfang der <span class="notranslate">buffer</span> zu verschieben.</p>
   <p>Beachten Sie, dass die Funktion jedes Pixel der Oberfläche in die <span class="notranslate">buffer</span> schreibt, wobei eine <b>RGBA-Formatierung</b> auf dem <span class="notranslate">Windows</span> Ziel verwendet wird, aber auf anderen Zielen kann dies je nach Betriebssystem oder sogar dem Gerät anders sein.</p>

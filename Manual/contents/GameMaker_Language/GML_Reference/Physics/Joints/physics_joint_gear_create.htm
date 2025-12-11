@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physik_gelenk_getriebe_erstellen</title>
+  <title>physics_joint_gear_create</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1><span data-field="title" data-format="default">physik_gelenk_getriebe_erstellen</span></h1>
+  <h1><span data-field="title" data-format="default">physics_joint_gear_create</span></h1>
   <p>Wenn Sie eine ausgeklügelte mechanische Vorrichtung erstellen möchten, sollten Sie Zahnräder verwenden. Im Prinzip können Sie Zahnräder in <span data-keyref="GameMaker Name">GameMaker</span> erstellen, indem Sie Compounding-Instanzen verwenden, um Zahnräder zu modellieren, aber das ist nicht sehr effizient und kann mühsam zu schreiben sein! Zum Glück gibt es eine einfachere Methode, und zwar die Verwendung eines <i>Zahnradgelenks</i>. Um ein Zahnrad zu erstellen, müssen Sie zuvor Ihre Einspannungen definiert und die beiden grundlegenden Gelenke erstellt haben, aus denen Ihr Zahnrad bestehen wird - diese <b>müssen</b> aus einem <a href="physics_joint_revolute_create.htm">Drehgelenk</a> und entweder einem <a href="physics_joint_prismatic_create.htm">prismatischen Gelenk</a> oder einem weiteren <i>Drehgelenk</i> bestehen. Die folgende Abbildung zeigt, wie ein Zahnrad in einem Spiel normalerweise erstellt wird:</p>
   <p><img>Was passiert also? Nun, sobald die beiden Gelenke in das Getriebe eingefügt sind, wirkt sich die Interaktion mit dem einen auf das andere aus. Wenn Sie also im obigen Beispielbild inst2 drehen, bewegt sich inst3 nach oben und unten, oder wenn Sie inst3 nach oben und unten bewegen, dreht sich inst2. Sie können auch das Übersetzungsverhältnis ändern, was bedeutet, dass Sie eine Instanz mehr (oder weniger) bewegen müssen, um den gewünschten Effekt zu erzielen. Die <span class="notranslate">code</span> im Beispiel unten zeigt, wie etwas wie das obige Bild erstellt werden kann.</p>
   <p class="note"><b>HINWEIS</b>: Wenn Sie eine der beiden Instanzen löschen wollen, die an der Zahnradverbindung beteiligt sind (oder nur deren Verbindungen löschen), <b>müssen</b> Sie zuerst die Zahnradverbindung mit <span style="font-size:1px;"><a href="physics_joint_delete.htm"><span class="inline">physics_joint_delete()</span></a></span> sonst erhalten Sie eine Fehlermeldung!</p>

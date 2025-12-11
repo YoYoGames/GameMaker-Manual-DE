@@ -45,7 +45,7 @@
       </tr>
       <tr>
         <td><span class="notranslate">Offset</span></td>
-        <td>Die Zeit (in Sekunden), auf die der Startpunkt gesetzt werden soll (Standardwert 0). Werte, die länger als die Länge des angegebenen Tons sind, werden ignoriert.<br>
+        <td>Die Zeit (in Sekunden), auf die der Startpunkt gesetzt werden soll (Standardwert 0). Werte, die länger als die Länge des angegebenen Tons sind, werden ignoriert.<br />
           Wird dieses Feld leer gelassen, wird der Offset (Spurposition) des Tondokuments verwendet.</td>
       </tr>
       <tr>
@@ -56,10 +56,10 @@
   </table>
   <p> </p>
   <h4>Beispiel 1:</h4>
-  <p><img>Der obige Aktionsblock <span class="notranslate">code</span> prüft, ob eine Maustaste gedrückt wurde, und wenn dies der Fall ist, wird eine globale Variable daraufhin überprüft, ob sie nicht <span class="inline">true</span> lautet. Ist dies nicht der Fall <span class="inline">true</span>, wird ein Ton abgespielt (und in einer Schleife wiederholt) und die globale Variable auf <span class="inline">true</span> gesetzt, andernfalls wird der Ton gestoppt und die globale Variable auf <span class="inline">false</span> gesetzt.<br>
+  <p><img>Der obige Aktionsblock <span class="notranslate">code</span> prüft, ob eine Maustaste gedrückt wurde, und wenn dies der Fall ist, wird eine globale Variable daraufhin überprüft, ob sie nicht <span class="inline">true</span> lautet. Ist dies nicht der Fall <span class="inline">true</span>, wird ein Ton abgespielt (und in einer Schleife wiederholt) und die globale Variable auf <span class="inline">true</span> gesetzt, andernfalls wird der Ton gestoppt und die globale Variable auf <span class="inline">false</span> gesetzt.<br />
     Der Ton wird mit den Standardeinstellungen abgespielt: Verstärkung und Tonhöhenmultiplikator von 1 und ein Offset von 0 (der Standard-Offset des Sound-Assets).</p>
   <h4>Beispiel 2:</h4>
-  <p><img>Der obige Aktionsblock <span class="notranslate">code</span> setzt zunächst die Spurposition des Sound-Assets &quot;snd_MusicBoss&quot; auf 20 Sekunden. Dann prüft er, ob die Instanzvariable &quot;skip_intro&quot; auf <span class="inline">true</span> gesetzt ist. Ist dies der Fall, beginnt er mit der Wiedergabe von &quot;snd_MusicBoss&quot; bei 20 Sekunden, dem zuvor eingestellten Wert für die Spurposition (da das Feld &quot;Offset&quot; leer bleibt, wird der <strong>Asset-Offset</strong> verwendet). Die ersten 20 Sekunden des Audiomaterials werden übersprungen.<br>
+  <p><img>Der obige Aktionsblock <span class="notranslate">code</span> setzt zunächst die Spurposition des Sound-Assets &quot;snd_MusicBoss&quot; auf 20 Sekunden. Dann prüft er, ob die Instanzvariable &quot;skip_intro&quot; auf <span class="inline">true</span> gesetzt ist. Ist dies der Fall, beginnt er mit der Wiedergabe von &quot;snd_MusicBoss&quot; bei 20 Sekunden, dem zuvor eingestellten Wert für die Spurposition (da das Feld &quot;Offset&quot; leer bleibt, wird der <strong>Asset-Offset</strong> verwendet). Die ersten 20 Sekunden des Audiomaterials werden übersprungen.<br />
     Wenn die Instanzvariable &quot;skip_intro&quot; auf <span class="inline">false</span> gesetzt wird, beginnt auch die Wiedergabe von &quot;snd_MusicBoss&quot;, aber da der &quot;Offset&quot; auf 0 gesetzt wurde, wird der Ton von Anfang an abgespielt. Die Spurposition von 20 Sekunden, die zuvor für das <strong>Sound-Asset</strong> definiert wurde, wird ignoriert.</p>
   <p> </p>
   <p> </p>

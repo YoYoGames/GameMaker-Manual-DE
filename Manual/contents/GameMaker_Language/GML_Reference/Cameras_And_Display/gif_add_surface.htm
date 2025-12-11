@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gif_add_surface</h1>
+  <h1><span data-field="title" data-format="default">gif_add_surface</span></h1>
   <p>Mit dieser Funktion können Sie ein Bild aus einer Oberfläche in eine GIF-Datei speichern. Sie geben die ID der GIF-Datei (wie sie von der Funktion <a href="gif_open.htm"><span class="inline">gif_open()</span></a>) und eine Oberflächen-ID (zurückgegeben von der Funktion <a href="../Drawing/Surfaces/surface_create.htm"><span class="inline">surface_create()</span></a>), sowie eine Verzögerungszeit zwischen den Bildern. Die Verzögerungszeit wird in 1/100 Sekunden berechnet, aber beachten Sie, dass nach der Erstellung des GIFs, wenn Sie es z. B. für Werbezwecke verwenden, verschiedene Browser die Frame-Verzögerung leicht unterschiedlich interpretieren können - siehe <a href="https://www.deviantart.com/humpy77/journal/Frame-Delay-Times-for-Animated-GIFs-214150546" target="_blank">hier</a> für weitere Details. Sie können (optional) X- und Y-Offset-Werte für die Fläche angeben, die zum GIF hinzugefügt werden soll. In diesem Fall beginnt der Teil, der zum GIF gezeichnet wird, an der Offset-Position und nicht an der Standardposition (0,0), so dass Sie nur einen Teil der Fläche zum Hinzufügen auswählen können. Sie können auch einen Quantisierungswert angeben, der eine ganze Zahl zwischen 0 und 3 ist, wobei 0 für volle Quantisierung und 3 für Nullquantisierung steht (niedrigere Werte führen zu einer Qualitätsverschlechterung, erzeugen aber ein kleineres GIF). Beachten Sie, dass es keinen großen Unterschied zwischen der Standardqualität von 2 und der höchsten von 3 gibt, und dass die Verwendung von 3 die Erstellung des GIFs erheblich verlangsamt, so dass Sie bei der Verwendung des Maximalwerts vorsichtig sein sollten.</p>
   <p>Beachten Sie, dass es keine eingebauten Grenzen für die Anzahl der Frames oder die Größe dieser Frames in Ihrem GIF gibt, aber wenn Sie zu viel Speicher verwenden, wird die Funktion fehlschlagen und -1 zurückgeben, andernfalls wird sie 0 zurückgeben.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">gif_add_surface(gif_index, surface, delay_time, [xoffset], [yoffset]);</p>
+  <p class="code"><span data-field="title" data-format="default">gif_add_surface</span>(gif_index, surface, delay_time, [xoffset], [yoffset]);</p>
   <table>
     <tbody>
       <tr>

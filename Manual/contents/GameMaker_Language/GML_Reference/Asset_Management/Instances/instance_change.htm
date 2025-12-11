@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Instanz_Änderung</title>
+  <title>instance_change</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,13 +15,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Instanz_Änderung</h1>
+  <h1><span data-field="title" data-format="default">instance_change</span> <span data-conref="..\..\..\..\assets\snippets\Tag_deprecated.hts"> </span></h1>
   <p>Sie können diese Funktion verwenden, um eine Instanz eines Objekts in eine andere Instanz eines anderen Objekts zu verwandeln und dabei zu entscheiden, ob die Ereignisse "Zerstören" und "Aufräumen" der ursprünglichen Instanz und das Ereignis "Erstellen" der neuen Instanz ausgeführt werden sollen. Auf diese Weise kannst du zum Beispiel eine Bombe in eine Explosion verwandeln - in diesem Fall wäre &quot;perf&quot; <span class="notranslate">argument</span> wahrscheinlich wahr, da du möchtest, dass die Bombe ihr Zerstörungs- und Aufräum-Ereignis sowie die Explosion ihr Erstellungs-Ereignis ausführt - oder du könntest deinen Spielercharakter in einen anderen verwandeln - in diesem Fall wäre &quot;perf&quot; <span class="notranslate">argument</span> wahrscheinlich falsch, da du nicht möchtest, dass die Instanzen ihre Erstellungs- und Zerstörungs-/Aufräum-Ereignisse ausführen.</p>
   <p>Es ist erwähnenswert, dass das Ändern der Instanz bedeutet, dass Sie bis zum nächsten Schritt keine weiteren Aktionen mit dieser Instanz durchführen sollten, insbesondere wenn Sie versuchen, auf Variablen usw. zuzugreifen, da dies einen Fehler verursacht. Im Grunde genommen ändern Sie die Instanz, aber sie ist bis zum Ende des aktuellen Schritts nicht wirklich verfügbar, so dass ein direkter Zugriff auf die darin enthaltenen Variablen (z. B. durch den Aufruf von <span class="inline">obj_Changed.x</span>) nicht funktioniert.</p>
   <p class="note"><b>WARNUNG!</b> Wenn Sie eine physikaktivierte Instanz ändern, werden die physischen Eigenschaften <b>nicht</b> auf die neue Instanz <b>übertragen</b>, in die sie geändert wird. Daher sollten Sie <span class="notranslate">code</span> verwenden, um den physikalischen Zustand der aktuellen Instanz auf die neue Instanz zu übertragen, oder Sie sollten die physikalischen Eigenschaften der neuen Instanz in ihrem Erstellungsereignis oder im Objekteditor definieren. Aus diesem Grund wird empfohlen, dass du diese Funktion nicht mit physikfähigen Instanzen verwendest, sondern eine Kombination aus <span style="font-size:1px;"><span class="inline">instance_destroy()</span></span> und <span><span style="font-size:1px;"><span class="inline">instance_create_layer()</span></span></span>zu verwenden.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">instance_change(obj, perf);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_change</span>(obj, perf);</p>
   <table>
     <tbody>
       <tr>

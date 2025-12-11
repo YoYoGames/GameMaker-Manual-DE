@@ -14,12 +14,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mp_grid_add_cell</h1>
+  <h1><span data-field="title" data-format="default">mp_grid_add_cell</span></h1>
   <p>Mit dieser Funktion können wir einzelne Zellen innerhalb des gegebenen MP-Gitters als &quot;verboten&quot; markieren, was bedeutet, dass die Pfadfindungsfunktionen sie niemals durchqueren werden. Normalerweise arbeitet man in <i>x/y-Raumkoordinaten</i> und nicht in <i>MP-Gitterzellenkoordinaten</i>. Betrachten wir also das folgende Bild, das zeigt, wie die beiden miteinander korrelieren können:</p>
   <p><img>Wie du sehen kannst, ist das mp_grid als eine Reihe von Zellen nummeriert (beginnend bei 0,0 in der oberen linken Ecke), und wenn du dieses Gitter über den Raum legst, gibt es eine direkte Korrelation zwischen den Raumkoordinaten (die ebenfalls bei 0,0 oben links beginnen) und den Zellen innerhalb des Gitters. Im Bild sieht man, dass eine Instanz an der Position 260,130 auf die Gitterzelle 8,4 fällt. Sie können die genaue Zelle, auf die eine Position fällt, mathematisch leicht berechnen, indem Sie entweder die Zahl durch die Gitterauflösung dividieren und dann abrunden <i>oder</i>, wenn Sie eine Potenz von 2 Gitterauflösungen (wie 8, 16, 32 usw.) verwenden, die <a href="../../../../Additional_Information/Bitwise_Operators.htm">bitweisen Operatoren</a> benutzen. Es sei darauf hingewiesen, dass die bitweise Operation schneller ist, und das folgende Beispiel zeigt beide Methoden.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">mp_grid_add_cell(id, h, v);</p>
+  <p class="code"><span data-field="title" data-format="default">mp_grid_add_cell</span>(id, h, v);</p>
   <table>
     <tbody>
       <tr>

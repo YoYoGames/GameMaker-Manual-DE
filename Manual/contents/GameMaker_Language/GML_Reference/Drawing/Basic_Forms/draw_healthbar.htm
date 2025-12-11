@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_healthbar</h1>
+  <h1><span data-field="title" data-format="default">draw_healthbar</span></h1>
   <p>Mit dieser Funktion können Sie einen farbigen Balken zeichnen, um einen konstanten Wert anzuzeigen. Obwohl die Funktion das Wort &quot;Gesundheitsbalken&quot; verwendet, können Sie damit alles anzeigen, was Sie möchten, solange der anzuzeigende Wert ein Prozentwert zwischen 0 und 100 ist (ein Prozentsatz eines beliebigen Wertes kann mit der Formel <b>(AKTUELLER_WERT / MAXIMALER_WERT) * 100</b> berechnet werden), so dass Sie damit zum Beispiel Macht, Gesundheit, Mana, Zeit oder alles andere anzeigen können, was von einer Balkenanzeige profitieren würde.</p>
   <p>Sie können verschiedene Einstellungen vornehmen, die den visuellen Aspekt des Balkens verändern. Diese sind in der folgenden Abbildung dargestellt (beachten Sie, dass die hier verwendeten Farben <span class="inline">c_green</span> für den Höchstwert und <span class="inline">c_red</span> für den Mindestwert sind, aber Sie können die von Ihnen gewünschten Farben verwenden):</p>
   <p><img alt="Healthbar examples" class="center" src="../../../../assets/Images/Scripting_Reference/GML/Reference/Drawing/draw_healthbar.png" /></p>
   <p class="note"><b>HINWEIS</b>: Wenn Sie eine Form mit einem Shader zeichnen wollen, sollten Sie wissen, dass die meisten Shader die folgenden Eingaben erwarten: Scheitelpunkt, Textur, Farbe. Wenn Sie diese Funktion verwenden, werden jedoch nur Scheitelpunkt- und Farbdaten übergeben, so dass der Shader möglicherweise nichts zeichnet (oder etwas zeichnet, aber nicht korrekt). Wenn Sie Formen auf diese Weise zeichnen müssen, sollte der Shader entsprechend angepasst werden.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">draw_healthbar(x1, y1, x2, y2, amount, backcol, mincol, maxcol, direction, showback, showborder);</p>
+  <p class="code"><span data-field="title" data-format="default">draw_healthbar</span>(x1, y1, x2, y2, amount, backcol, mincol, maxcol, direction, showback, showborder);</p>
   <table>
     <tbody>
       <tr>

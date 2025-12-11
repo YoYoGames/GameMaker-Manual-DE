@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>zeichnen_sprite</title>
+  <title>draw_sprite</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>zeichnen_sprite</h1>
+  <h1><span data-field="title" data-format="default">draw_sprite</span></h1>
   <p>Diese Funktion zeichnet das angegebene <span class="notranslate">sprite</span> und das Unterbild an einer Position innerhalb des Spielraums. Für die <span class="notranslate">sprite</span> kannst du die Instanzvariable <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_index.htm"><span class="inline">sprite_index</span></a> verwenden, um die aktuelle <span class="notranslate">sprite</span> zu erhalten, die der Instanz zugewiesen ist, auf der <span class="notranslate">code</span> läuft, oder du kannst jedes andere <span class="notranslate">sprite</span> Asset verwenden. Das Gleiche gilt für das Sub-Image, das ebenfalls auf die Instanzvariable gesetzt werden kann <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/image_index.htm"><span class="inline">image_index</span></a> gesetzt werden, wodurch das Sub-Image auf das für die aktuelle Instanz <span class="notranslate">sprite</span> ausgewählte gesetzt wird (beachten Sie, dass Sie ein anderes <span class="notranslate">sprite</span> zeichnen und trotzdem den Sub-Image-Wert für die aktuelle Instanz verwenden können), oder Sie können einen beliebigen anderen Wert dafür verwenden, um ein bestimmtes Sub-Image des gewählten <span class="notranslate">sprite</span> zu zeichnen. Wenn der Wert größer ist als die Anzahl der Unterbilder, wählt <span data-keyref="GameMaker Name">GameMaker</span> automatisch <span class="notranslate">loop</span>, um das entsprechende Bild auszuwählen (wenn z. B. das <span class="notranslate">sprite</span>, das gezeichnet werden soll, 5 Unterbilder mit den Nummern 0 bis 4 hat und wir den Indexwert auf 7 setzen, dann zeichnet die Funktion das Unterbild 3 mit der Nummer 0). Schließlich ist die x- und y-Position die Position innerhalb des Raums, an der <span class="notranslate">sprite</span> gezeichnet wird, und sie ist zentriert auf den <span class="notranslate">sprite</span> <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_xoffset.htm">x-Offset</a> und <a href="../../Asset_Management/Sprites/Sprite_Instance_Variables/sprite_yoffset.htm">y-Offset</a>.</p>
   <p class="note"><span class="note">HINWEIS</span> Diese Funktion funktioniert möglicherweise nicht wie erwartet, wenn Sie die Skelettanimation <span class="notranslate">sprites</span> verwenden, und Sie werden feststellen, dass die Funktion nur das erste Bild der Standardpose zeichnet. Sie sollten stattdessen die <span class="inline">draw_skeleton_*</span> Funktionen verwenden.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">draw_sprite(sprite, subimg, x, y);</p>
+  <p class="code"><span data-field="title" data-format="default">draw_sprite</span>(sprite, subimg, x, y);</p>
   <table>
     <tbody>
       <tr>

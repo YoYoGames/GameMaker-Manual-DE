@@ -15,12 +15,12 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>mp_grid_add_instances</h1>
+  <h1><span data-field="title" data-format="default">mp_grid_add_instances</span></h1>
   <p>Diese Funktion verwendet die Kollisionsmaske der Instanz (bestimmt durch die <span class="notranslate">sprite</span> Eigenschaften oder den Maskenindex der aufrufenden Instanz), um Zellen in einem MP-Gitter als verboten oder nicht verboten zu markieren, wobei verbotene Zellen von keiner der Pfadfindungsfunktionen durchquert werden können. Sie können in der Funktion angeben, ob präzise Kollisionen berücksichtigt werden sollen oder nicht, und die markierten verbotenen Zellen ändern sich in Abhängigkeit von dieser Einstellung. Dieses Bild veranschaulicht dieses Verhalten:</p>
   <p><img>Die beiden obigen Instanzen wurden mit der Funktion <span class="inline">mp_grid_add_instances()</span> in das MP-Gitter eingefügt, wobei "precise" auf "true" gesetzt wurde. Wie Sie sehen können, hat die grüne Instanz nur die Gitterquadrate, die sie &quot;berührt&quot;, als verboten markiert, da ihre <span class="notranslate">sprite</span> Maske ebenfalls auf präzise eingestellt ist. Die zweite Instanz hat jedoch auch andere Zellen markiert, die sich nicht zu berühren <i>scheinen</i>. Das liegt daran, dass die Maske <span class="notranslate">sprite</span> <b>nicht</b> auf präzise eingestellt ist, d. h. selbst wenn Sie die präzise Einstellung in der Funktion verwenden, wird nur der Begrenzungsrahmen der <span class="notranslate">sprite</span> berücksichtigt. Dies würde auch passieren, wenn Sie die präzise <span class="notranslate">argument</span> der Funktion auf false setzen - selbst Instanzen mit einer präzisen <span class="notranslate">sprite</span> Maske werden auf der Grundlage ihrer Begrenzungsrahmen in das Raster eingefügt.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">mp_grid_add_instances(id, obj, prec);</p>
+  <p class="code"><span data-field="title" data-format="default">mp_grid_add_instances</span>(id, obj, prec);</p>
   <table>
     <tbody>
       <tr>

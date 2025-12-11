@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>spiel_speichern_puffer</title>
+  <title>game_save_buffer</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -14,13 +14,13 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>spiel_speichern_puffer</h1>
+  <h1><span data-field="title" data-format="default">game_save_buffer</span></h1>
   <p>Dies ist eine Variante der Funktion <span class="inline"><a href="game_save.htm">game_save()</a></span>. Bitte lesen Sie zuerst die <a href="game_save.htm">entsprechende Seite</a>, da sie wichtige Informationen zu ihrer Verwendung und auch zu dieser Funktion enthält.</p>
   <p>Mit dieser Funktion können Sie den aktuellen Zustand des Spiels in einem zuvor erstellten &quot;grow&quot; <span class="notranslate">buffer</span> (siehe <a href="../Buffers/Buffers.htm">Puffer</a>) speichern, der dann jederzeit wieder mit <a href="game_load_buffer.htm"><span class="inline">game_load_buffer()</span></a> Funktion. Diese Funktion ist für die Verwendung in jeweils einem einzelnen Raum gedacht (d.h. es ist nicht ratsam, <span class="notranslate">buffer</span> in einem Raum zu speichern und dann zu versuchen, <span class="notranslate">buffer</span> aus einem anderen Raum zu laden) und sollte idealerweise nur für Checkpoints oder Level-Neustarts verwendet werden.</p>
   <p class="note"><b>HINWEIS</b>: Diese Funktion ist <i>sehr</i> begrenzt und für Anfänger gedacht, um ein Kontrollpunktsystem schnell zum Laufen zu bringen. Fortgeschrittene Benutzer ziehen es vielleicht vor, ihr eigenes System mit Hilfe der <a href="../File_Handling/File_Handling.htm">Dateifunktionen</a> auf <span class="notranslate">code</span> zu speichern, da das Spiel <i>keine</i> dynamischen Ressourcen wie Datenstrukturen, Oberflächen, hinzugefügte <span class="notranslate">sprites</span> usw. speichern wird.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">game_save_buffer(buffer);</p>
+  <p class="code"><span data-field="title" data-format="default">game_save_buffer</span>(buffer);</p>
   <table>
     <tbody>
       <tr>

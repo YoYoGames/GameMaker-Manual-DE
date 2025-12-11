@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>animcurve_get_channel</h1>
+  <h1><span data-field="title" data-format="default">animcurve_get_channel</span></h1>
   <p>Diese Funktion gibt die <a href="../../../GML_Overview/Structs.htm">Struktur</a> zurück, die die Kanaldaten für den in einem Animationskurven-Asset angegebenen Kanal enthält. Sie geben die Animationskurven-ID oder -Struktur sowie den Kanalnamen oder -index an, und die Funktion gibt eine Struktur mit dem folgenden Format zurück:</p>
   <table>
     <colgroup>
@@ -51,7 +51,7 @@
       </tr>
     </tbody>
   </table>
-  <p><br>
+  <p><br />
     Die Animationskurven-ID ist der Name der Animationskurve, wie er im Asset-Browser definiert wurde, oder der Strukturzeiger, wie er von der Funktion <a href="animcurve_create.htm"><span class="inline">animcurve_create()</span></a>. Der Kanalname ist eine Zeichenkette, die sich auf den Kanal bezieht, wie er im Animationskurven-Asset definiert wurde, oder Sie können einen Indexwert angeben, der von 0 bis <i>n</i> reicht, wobei <i>n</i> der letzte Kanal im Kurven-Asset ist (z. B.: Wenn eine Animationskurve 4 Kanäle hat, werden sie von 0 bis 3 indiziert). Beachten Sie, dass die Übergabe eines Indexwerts weniger Verarbeitung erfordert als die Übergabe eines Kanalnamens. Wenn die Funktion fehlschlägt (d. h. kein Kanal mit dem angegebenen Namen oder Index existiert), erhalten Sie eine Fehlermeldung.</p>
   <p>Die Punkte eines einzelnen Kanals werden als Structs in einem <a href="../../../GML_Overview/Arrays.htm">Array</a> gespeichert, wobei jedes Element im Array ein einzelnes Point-Struct ist. Die Punktstruktur hat die folgenden Variablen:</p>
   <table>

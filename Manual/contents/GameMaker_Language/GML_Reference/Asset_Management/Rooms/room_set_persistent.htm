@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>room_set_persistent</h1>
+  <h1><span data-field="title" data-format="default">room_set_persistent</span></h1>
   <p>Mit dieser Funktion kannst du die Persistenz eines jeden Raums in deinem Spiel ändern (oder einstellen) <i>, außer dem aktuellen Raum</i>. Ein Raum, dessen Persistenz als <span class="inline">true</span> gekennzeichnet ist, behält den Zustand aller Instanzen in diesem Raum bei, wenn der Spieler ihn verlässt und dann zurückkehrt, während er bei einer Persistenz von <span class="inline">false</span> jedes Mal auf den Anfangszustand zurückgesetzt wird. Du solltest beachten, dass ein persistenter Raum wesentlich mehr Speicherplatz benötigt als ein normaler Raum und es wird nicht empfohlen, zu viele von ihnen in deinem Spiel zu haben.</p>
   <p class="note"><b>HINWEIS</b>: Diese Funktion funktioniert <b>NICHT</b>, um <span class="notranslate">switch</span> zu deaktivieren, wenn der Raum bereits besucht wurde! Ein persistenter Raum, der einmal besucht wurde, wird im Speicher gehalten und um <span class="notranslate">switch</span> die Persistenz zu deaktivieren, musst du in diesen Raum gehen und die <span style="font-size:1px;"><a href="room_persistent.htm"><span class="inline">room_persistent</span></a></span> Variable auf <span class="inline">false</span> setzen und den Raum dann wieder verlassen.</p>
   <p> </p>

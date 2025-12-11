@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>gc_target_frame_time</h1>
+  <h1><span data-field="title" data-format="default">gc_target_frame_time</span></h1>
   <p>Mit dieser Funktion können Sie dem <span>Garbage Collector mitteilen, dass er nicht mehr als die angegebene Zeit für die Ausführung jedes Frames benötigen soll. Die Funktion nimmt einen Zeitwert an <span>, der in Mikrosekunden angegeben wird (wobei 1.000.000 Mikrosekunden einer Sekunde entsprechen), und die standardmäßige Ziel-Frame-Zeit ist 100 Mikrosekunden.</span></span></p>
   <p><span><span>Bitte beachten Sie, dass es sich hierbei lediglich um einen </span></span><span><em>Zielwert</em> ist, da einige Vorgänge noch vollständig in einem Frame ausgeführt werden müssen und manchmal länger als die Zielzeit dauern können. Beachten Sie auch, dass eine<span>Erhöhung der Zielzeit den Garbage Collector schneller auf schnelle Änderungen in der Speichernutzung reagieren lässt und dazu führt, dass der Speicher schneller freigegeben wird, obwohl dies in der Praxis in den meisten Fällen nicht erforderlich sein dürfte. Beachten Sie auch, dass das Setzen der Ziel-Frame-Zeit auf 0 <em>nicht </em>dazu führt, dass der Collector vollständig gestoppt wird - er wird weiterhin eine minimale Menge an Arbeit pro Frame verrichten. Um den Collector vollständig zu deaktivieren, verwenden Sie die Funktion <span class="inline"><a href="gc_enable.htm">gc_enable()</a></span> </span>. </span></p>
   <p> </p>

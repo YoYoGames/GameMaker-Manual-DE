@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>draw_enable_drawevent</h1>
+  <h1><span data-field="title" data-format="default">draw_enable_drawevent</span></h1>
   <p>Mit dieser Funktion können Sie wählen, ob Sie das Draw-Ereignis für <b>alle Instanzen im</b> Spiel aktivieren (<span class="inline">true</span>) oder deaktivieren (<span class="inline">false</span>) wollen. Damit haben Sie die Kontrolle darüber, wie und wann Dinge gezeichnet werden, was nützlich ist, wenn Sie eine &quot;Frame-Skip&quot;-Technik implementieren wollen. Dies ist nützlich, wenn Sie eine "Frame-Skip"-Technik implementieren möchten. Beachten Sie, dass dies nicht nur verhindert, dass Instanzen auf den Bildschirm gezeichnet werden, sondern dass das Draw-Ereignis komplett unterdrückt wird, was bedeutet, dass Sie vorsichtig sein sollten, da jegliche Spiellogik, die in diesem Ereignis vorhanden ist, ebenfalls nicht ausgeführt wird.</p>
   <p>Eine wichtige Sache, die man über diese Funktion wissen muss, ist, dass, wenn man sie gleich zu Beginn des Spiels aufruft, bevor der erste Frame gerendert wird (d.h.: das Create Event des ersten Objekts im ersten Raum des Spiels), dann wird das Spielfenster <b>nicht gerendert</b>. Dies könnte für Multiplayer-Projekte nützlich sein, die ein dediziertes <span class="notranslate">server</span> benötigen, das nichts rendern muss. Beachten Sie jedoch, dass es dadurch <strong>nicht</strong> headless wird, da <span class="notranslate">GameMaker</span> dies nicht unterstützt - Sie können es also nicht auf einem <span class="notranslate">server</span> ausführen, das keine grafische Oberfläche hat.</p>
   <p> </p>

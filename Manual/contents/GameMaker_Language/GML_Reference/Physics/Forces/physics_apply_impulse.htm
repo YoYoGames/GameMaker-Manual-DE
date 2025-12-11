@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>physik_impuls_anwenden</title>
+  <title>physics_apply_impulse</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>physik_impuls_anwenden</h1>
+  <h1><span data-field="title" data-format="default">physics_apply_impulse</span></h1>
   <p>Mit der <span data-keyref="GameMaker Name">GameMaker-Physik</span> können Sie nicht nur Kraft und Schwerkraft auf ein Objekt anwenden, sondern auch einen Impuls. Dieser unterscheidet sich insofern von einer Kraft, als dass er sich <i>sofort </i>auf die Geschwindigkeit und möglicherweise auf das Drehmoment (oder den &quot;Spin&quot;) des Objekts auswirkt, insbesondere wenn der Punkt, auf den der Impuls angewendet wird, nicht mit dem Massenschwerpunkt übereinstimmt (Hinweis: Der Massenschwerpunkt ist <i>nicht unbedingt</i> mit dem Ursprung identisch!). Hier ist eine Illustration:</p>
   <p><img>Wie Sie sehen können, hat der Spieler auf den Ball geklickt und ihm dadurch einen Impuls gegeben, sich nach rechts oben zu bewegen und sich dabei zu drehen. Der genaue Impuls wird durch die <span class="notranslate">vector</span> definiert, die wir aus den Komponenten ximpulse/yimpulse im Verhältnis zu den xpos/ypos-Koordinaten erhalten - was einfach bedeutet, dass der Impuls als die Entfernung von xpos/ypos zu ximpulse/yimpulse in Newton berechnet wird, und die Richtung ist der Winkel, den wir von xpos/ypos zu ximpulse/yimpulse erhalten.</p>
   <p class="note"><b>HINWEIS</b>: Die Physikwelt verwendet Meter für alle Berechnungen, und das Verhältnis von Pixeln pro Meter wird im Raumeditor oder mit <span style="font-size:1px;"><a href="../The_Physics_World/physics_world_create.htm"><span class="inline">physics_world_create()</span></a></span>.</p>

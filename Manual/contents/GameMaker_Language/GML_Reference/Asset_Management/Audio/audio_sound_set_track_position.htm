@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>audio_sound_set_track_position</h1>
+  <h1><span data-field="title" data-format="default">audio_sound_set_track_position</span></h1>
   <p>Diese Funktion setzt die Position (in Sekunden) für die angegebene Sound-ID oder das Asset.</p>
   <p>Der gelieferte &quot;Index&quot; kann entweder eine einzelne Instanz eines Sounds sein (wie sie von <a href="audio_play_sound.htm"><span class="inline">audio_play_sound()</span></a>) oder ein Sound-Asset (z.B. eines, das über den Asset-Browser hinzugefügt wurde). Das Verhalten dieser Funktion hängt davon ab, welche Art von Index Sie angegeben haben:</p>
   <ul class="colour">
@@ -24,7 +24,7 @@
   <p>Diese Funktion ändert nur die Spurposition für den aktuell abgespielten Sound oder dessen nächste Wiedergabe (falls ein Sound-Asset geliefert wird). Wenn der Ton mit aktivierter Schleifenfunktion abgespielt wird, beginnen die nachfolgenden Wiedergaben immer am Anfang (0,0 Sekunden) und <em>nicht</em> an der mit dieser Funktion festgelegten Spurposition. Wenn Sie z. B. einen Sound <span class="notranslate">loop</span> bei 5,7 Sekunden starten, wird der erste Sound ab diesem Punkt abgespielt, danach wird jedoch der gesamte Track von Anfang bis Ende wiederholt.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">audio_sound_set_track_position(index, time);</p>
+  <p class="code"><span data-field="title" data-format="default">audio_sound_set_track_position</span>(index, time);</p>
   <table>
     <tbody>
       <tr>

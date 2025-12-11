@@ -15,14 +15,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>instance_deactivate_region</h1>
+  <h1><span data-field="title" data-format="default">instance_deactivate_region</span></h1>
   <p>Mit dieser Funktion können Sie einen Bereich innerhalb des Raumes definieren, in dem Sie zuvor aktivierte Instanzen deaktivieren können. Dieser Bereich kann entweder als &quot;innen&quot; oder &quot;außen&quot; gekennzeichnet werden, wie in der folgenden Abbildung gezeigt:</p>
   <p><img>In der obigen Abbildung ist zu sehen, dass die Instanz &quot;Apfel&quot; immer inaktiv ist, denn auch wenn die <span class="notranslate">sprite</span> selbst die Region nicht überlappt, so tut es doch der Begrenzungsrahmen. Instanzen werden also als innerhalb der angegebenen Region befindlich betrachtet, wenn sich ihr <i>Begrenzungsrahmen</i> mit ihr überschneidet, und der Zustand der Kollisionsmaske (präzise oder nicht) wird <b>nicht</b> berücksichtigt. Beachten Sie, dass die Deaktivierung nicht sofort erfolgt und eine Instanz, die auf diese Weise deaktiviert wurde, erst nach dem Ende des Ereignisses, in dem die Funktion aufgerufen wurde, als inaktiv betrachtet wird.</p>
   <p class="note"><b>HINWEIS</b>: Wenn Sie eine Instanz beim Start des Raums deaktivieren (d.h. aus der Raumerstellung <span class="notranslate">code</span> oder aus einem Instanzerstellungsereignis einer Instanz innerhalb des Raums), <b>werden</b> alle Instanzen, die aus dem Raumeditor im Raum platziert werden <b>, weiterhin ihr Erstellungsereignis ausführen</b>, bevor sie deaktiviert werden.</p>
   <p class="note"><b>WARNUNG</b>: Das Deaktivieren von Instanzen, bei denen die Physik aktiviert ist, verhindert <b>NICHT</b>, dass deren Einbauten innerhalb der Physiksimulation interagieren. Dafür solltest du ihre <a href="../../../Physics/Physics_Variables/phy_active.htm"><span class="inline"><span style="font-size:14px;">phy_active</span></a> Variable auf <span class="inline">true</span> oder <span class="inline">false</span> setzen, wenn Sie die Instanzen aktivieren/deaktivieren.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">instance_deactivate_region(left, top, width, height, inside, notme);</p>
+  <p class="code"><span data-field="title" data-format="default">instance_deactivate_region</span>(left, top, width, height, inside, notme);</p>
   <table>
     <tbody>
       <tr>

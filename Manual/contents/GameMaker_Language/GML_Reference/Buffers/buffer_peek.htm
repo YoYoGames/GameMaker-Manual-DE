@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Pufferspeichersuche</title>
+  <title>buffer_peek</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../assets/css/default.css" type="text/css" />
   <script src="../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>Pufferspeichersuche</h1>
+  <h1><span data-field="title" data-format="default">buffer_peek</span></h1>
   <p>Mit der Funktion <a href="buffer_read.htm"><span class="inline">buffer_read()</span></a> können Sie Daten von der angegebenen Adresse <span class="notranslate">buffer</span> an der aktuellen &quot;Suchposition&quot; lesen, wobei jedes zu lesende Datenstück diese Position um die gelesenen oder geschriebenen Bytes vorverlegt. Es kann jedoch notwendig sein, ein bestimmtes Datenstück zu lesen, ohne die aktuelle Suchposition zu ändern, und in diesem Fall würden Sie diese Funktion verwenden. Sie geben der Funktion einfach eine <span class="notranslate">buffer</span> id und dann eine Offset-Position (vom Start von <span class="notranslate">buffer</span> aus) innerhalb von <span class="notranslate">buffer</span> an, von der aus gelesen werden soll, sowie den Datentyp, den Sie lesen möchten.</p>
   <p class="note"><b>HINWEIS</b>: Die Verwendung des falschen Datentyps für die zu lesenden Daten führt zu fehlerhaften Werten!</p>
   <p>Wenn die Funktion erfolgreich ist, wird ein Wert (Real, String, Boolean, etc...) je nach Datentyp zurückgegeben, während bei einem Fehler einfach 0 zurückgegeben wird.</p>

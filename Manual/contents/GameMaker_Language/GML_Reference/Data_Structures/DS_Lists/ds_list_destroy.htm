@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_list_destroy</h1>
+  <h1><span data-field="title" data-format="default">ds_list_destroy</span></h1>
   <p>Diese Funktion entfernt die gegebene Listendatenstruktur aus dem Speicher, gibt die Ressourcen frei, die sie verwendet hat und entfernt alle Werte, die sie enthielt. Diese Funktion sollte immer verwendet werden, wenn Sie die Verwendung von ds_list beendet haben, um Speicherlecks zu vermeiden, die Ihr Spiel verlangsamen und zum Absturz bringen können. Beachten Sie, dass das Zerstören einer Liste alle in ihr gespeicherten Datenstrukturen de-referenziert, was zu einem Speicherleck führt. Das einzige Mal, dass dies nicht erforderlich ist, ist, wenn Sie Elemente in der Liste als eine andere <a href="DS_Lists.htm">DS-Liste</a> oder als eine <a href="../DS_Maps/DS_Maps.htm">DS-Karte</a> gekennzeichnet haben, in diesem Fall werden diese Elemente zerstört und ihr Speicher wird automatisch bereinigt.</p>
   <p class="note"><b>WICHTIG!</b> Wenn Sie eine Datenstruktur anlegen, ist der Indexwert zu ihrer Identifizierung ein ganzzahliger Wert, der bei 0 beginnt. Das bedeutet, dass Datenstrukturen unterschiedlichen Typs <b>denselben</b> Indexwert haben können, daher sollten Sie im Zweifelsfall die <span style="font-size:1px;"><a href="../ds_exists.htm"><span class="inline">ds_exists()</span></a></span> Funktion verwenden, bevor Sie auf sie zugreifen. Beachten Sie auch, dass Indizes wiederverwendet werden, so dass ein zerstörter Indexwert einer Datenstruktur anschließend von einer neu erstellten verwendet werden kann. Wir empfehlen daher, die Variable, die den DS-Index enthielt, nach der Zerstörung immer auf -1 zu setzen.</p>
   <p> </p>

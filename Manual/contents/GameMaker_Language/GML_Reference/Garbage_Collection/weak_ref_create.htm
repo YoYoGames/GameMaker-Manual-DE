@@ -14,11 +14,11 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>weak_ref_create</h1>
+  <h1><span data-field="title" data-format="default">weak_ref_create</span></h1>
   <p>Mit dieser Funktion können Sie einen <a class="glossterm" data-glossterm="schwache Referenz" href="#">schwachen Verweis</a> auf eine Struktur erstellen, der dann verwendet werden kann, um zu prüfen, ob die Struktur im Spiel noch &quot;lebendig&quot; (referenziert) ist oder nicht. Sie geben die Referenz auf die Struktur an, die Sie verfolgen wollen, und die Funktion gibt eine andere Struktur zurück, die eine schwache Referenz auf diese Struktur ist. Beachten Sie, dass Sie überprüfen können, ob eine Referenz &quot;strong&quot; oder &quot;weak&quot; ist, indem Sie die Funktion <span class="inline"><a href="../Variable_Functions/instanceof.htm">instanceof()</a></span> verwenden, da eine &quot;strong&quot;-Referenz entweder &quot;<span class="inline">struct</span>&quot; oder den Namen der Konstruktorfunktion zurückgibt, die die Struktur erstellt hat, oder &quot;<span class="inline">weakref</span>&quot;, wenn es eine &quot;weak&quot;-Referenz ist. Beachten Sie auch, dass die &quot;weak reference&quot;-Struktur eine Variable &quot;<span class="inline">ref</span>&quot; hat, auf die zugegriffen werden kann, um die &quot;strong&quot;-Referenz auf die betreffende Struktur zu erhalten, es sei denn, sie wurde garbage collected, in diesem Fall gibt sie <span class="inline">undefined</span> zurück.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">weak_ref_create(struct_to_track);</p>
+  <p class="code"><span data-field="title" data-format="default">weak_ref_create</span>(struct_to_track);</p>
   <table>
     <tbody>
       <tr>

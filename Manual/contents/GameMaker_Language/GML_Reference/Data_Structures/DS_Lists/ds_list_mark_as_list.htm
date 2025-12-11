@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>ds_liste_markieren_als_liste</title>
+  <title>ds_list_mark_as_list</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>ds_liste_markieren_als_liste</h1>
+  <h1><span data-field="title" data-format="default">ds_list_mark_as_list</span></h1>
   <p>Diese Funktion &quot;markiert&quot; (oder &quot;kennzeichnet&quot;) eine bestimmte Position innerhalb einer zuvor erstellten DS-Liste als eine andere DS-Liste enthaltend. Diese Funktionalität ist erforderlich, wenn JSON-Strings kodiert werden (die Sie mit <a href="../../File_Handling/Encoding_And_Hashing/json_encode.htm"><span class="inline">json_encode()</span></a>), kann aber auch bei der Verschachtelung von Datenstrukturen nützlich sein, da auf diese Weise markierte Elemente automatisch entsorgt (zerstört) werden, wenn die übergeordnete DS-Liste zerstört wird. Dies bedeutet, dass Sie nicht manuell durch den Listeninhalt gehen und die markierten Datenstrukturen einzeln zerstören müssen, bevor Sie die &quot;übergeordnete&quot; Liste zerstören. Wenn Sie jedoch die Listenposition einzeln löschen, wird die darin enthaltene DS-Liste <i>nicht</i> gelöscht, und Sie sollten die entsprechende Funktion zum Zerstören der DS-Liste aufrufen, bevor Sie das Element der übergeordneten Listenposition löschen. Beachten Sie auch, dass bei einem Aufruf der Funktion <a href="ds_list_clear.htm"><span class="inline">ds_list_clear()</span></a> für eine Liste aufrufen, werden alle Elemente, die als Listen gekennzeichnet sind, ebenfalls zerstört, wenn die Liste geleert wird.</p>
   <p>Wenn sich die markierte Position innerhalb der Liste ändert, verschiebt sich auch die &quot;Markierung&quot;. Wenn Sie also z. B. die Position 3 in der Liste markiert haben und dann zwei weitere Elemente darunter einfügen, so dass die Liste auf Position 5 rückt, wird sie <i>weiterhin</i> als Liste markiert.</p>
   <p> </p>

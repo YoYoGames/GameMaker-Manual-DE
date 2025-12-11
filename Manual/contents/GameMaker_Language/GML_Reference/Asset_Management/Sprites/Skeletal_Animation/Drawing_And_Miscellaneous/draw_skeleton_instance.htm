@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>zeichnen_skelett_instanz</title>
+  <title>draw_skeleton_instance</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../../../assets/scripts/main_script.js"></script>
@@ -15,7 +15,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>zeichnen_skelett_instanz</h1>
+  <h1><span data-field="title" data-format="default">draw_skeleton_instance</span></h1>
   <p>Diese Funktion ist <i>nur</i> für Instanzen gedacht, denen <span class="notranslate">sprites</span> zugewiesen ist, die mit dem Skelettanimationsprogramm <span class="notranslate">Spine</span> erstellt wurden. Sie können diese <span class="notranslate">sprites</span> zwar mit den normalen Zeichenfunktionen (wie <a href="../../../../Drawing/Sprites_And_Tiles/draw_self.htm"><span class="inline">draw_self()</span></a>), aber es kann vorkommen, dass du ein einzelnes Bild zeichnen oder eine Änderung der Hauttextur zeigen möchtest, ohne die <span class="notranslate">sprite</span> Eigenschaften für eine Instanz zu ändern. In diesen Fällen kannst du die <span class="notranslate">sprite</span>, die der Instanz zugewiesen wurde, mit dieser Funktion zeichnen, wobei du die eindeutige Instanz-ID und dann den Namen der Animation angibst, von der du das Bild erhalten möchtest (eine Zeichenkette, wie sie in dem Programm festgelegt wurde, mit dem du die <span class="notranslate">sprite</span> erstellst). Als Nächstes gibst du den Namen des zu verwendenden Skins an (wiederum wie bei der Erstellung von <span class="notranslate">sprite</span> festgelegt) und einen Frame-Wert. Der Frame-Wert teilt <span data-keyref="GameMaker Name">GameMaker</span> mit, welcher Teil der Animation gezeigt werden soll, und ist ein Wert zwischen 0 und dem <a href="../../Sprite_Instance_Variables/image_number.htm"><span class="inline">image_number</span></a>. Der Rest von <span class="notranslate">arguments</span> ist derselbe wie beim normalen Zeichnen von <span class="notranslate">sprite</span> und ändert die Skalierung, den Winkel, die Überblendungsfarbe und den Alphawert des endgültigen Animationsrahmens, der gezeichnet wird.</p>
   <p class="note"><b>WARNUNG!</b> Aufgrund der Art und Weise, wie Skelettanimationen zwischen verschiedenen &quot;Schlüsselbildern&quot; interpoliert werden, ist mit diesem Aufruf ein zusätzlicher Overhead verbunden. Daher wird empfohlen, das Zeichnen von skelettbasierten Animationen <span class="notranslate">sprites</span> mit dieser Methode zu vermeiden, wenn es nicht unbedingt notwendig ist.</p>
   <p> </p>

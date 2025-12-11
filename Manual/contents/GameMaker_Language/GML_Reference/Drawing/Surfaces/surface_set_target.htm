@@ -14,7 +14,7 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>surface_set_target</h1>
+  <h1><span data-field="title" data-format="default">surface_set_target</span></h1>
   <p>Mit dieser Funktion legen Sie alle weiteren Zeichnungen auf die Zielfläche und nicht auf den Bildschirm fest und können so <span data-keyref="GameMaker Name">GameMaker</span> anweisen, nur bestimmte Dinge auf die angegebene Fläche zu zeichnen. Bitte beachten Sie, dass, wenn Sie nicht <a href="surface_reset_target.htm"><span class="inline">surface_reset_target()</span></a> aufrufen, wird nichts auf dem Bildschirm gezeichnet, da alle weiteren Zeichnungen (auch in anderen Instanzen) auf der Oberfläche erfolgen. Du solltest dir auch darüber im Klaren sein, dass nichts zu sehen sein wird, wenn die Oberfläche selbst nicht im draw event einer Instanz auf den Bildschirm gezeichnet wird. Sie können den Rückgabewert dieser Funktion auch als Debug-Tool verwenden, um zu prüfen, ob das Oberflächenziel gesetzt wurde oder nicht, wobei ein Rückgabewert von 0 bedeutet, dass das Ziel nicht gesetzt werden konnte, und jeder andere positive Wert ein Erfolg ist.</p>
   <p>Dabei ist zu beachten, dass die Flächen <i>gestapelt</i> sind, so dass man nicht von Ziel zu Ziel springen und am Ende wieder zum normalen Ziehziel zurückkehren kann, sondern dass man Rendering-Ziele öffnen und schließen muss. Dies wird zum Beispiel <b>nicht</b> korrekt funktionieren:</p>
   <p class="code">surface_set_target(surf1);<br />
@@ -39,7 +39,7 @@
   <p class="note"><b>HINWEIS</b>: Bei der Arbeit mit Flächen besteht die Möglichkeit, dass sie jederzeit nicht mehr existieren, da sie im Texturspeicher abgelegt sind. Sie sollten <b>IMMER</b> überprüfen, ob eine Fläche existiert, indem Sie <span style="font-size:1px;"><a href="surface_exists.htm"><span class="inline">surface_exists()</span></a></span> überprüfen, bevor Sie sie direkt referenzieren.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">surface_set_target(surface_id);</p>
+  <p class="code"><span data-field="title" data-format="default">surface_set_target</span>(surface_id);</p>
   <table>
     <tbody>
       <tr>

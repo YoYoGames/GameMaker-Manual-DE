@@ -16,13 +16,13 @@
   <meta name="condition-tags" content="" />
 </head>
 <body>
-  <h1>video_set_volume</h1>
+  <h1><span data-field="title" data-format="default">video_set_volume</span></h1>
   <p>Diese Funktion ändert die Lautstärke des aktuell geladenen Videos. Sie nimmt einen Wert zwischen <span class="inline2">0</span> und <span class="inline2">1</span> an, wobei <span class="inline2">0</span> stumm ist und <span class="inline2">1</span> die maximale Lautstärke darstellt.</p>
   <p>Stellen Sie sicher, dass diese Funktion nur nach einem Aufruf von <span class="inline"><a href="video_open.htm">video_open()</a></span>, aber vor einem Aufruf von <span class="inline"><a href="video_close.htm">video_close()</a></span> aufgerufen wird, da sie sonst nichts bewirkt (da kein Video geladen wird).</p>
   <p>Auf einigen <span class="notranslate">platforms</span> funktioniert diese Funktion erst, nachdem das Video vollständig geladen wurde. Verwenden Sie daher <a data-xref="{text}" href="Videos.htm#h">Async-Callbacks</a>, um herauszufinden, wann das Video fertig ist, und ändern Sie dann die Lautstärke.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">video_set_volume(value);</p>
+  <p class="code"><span data-field="title" data-format="default">video_set_volume</span>(value);</p>
   <table>
     <tbody>
       <tr>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>schrift_ersetzen_schrift_ext</title>
+  <title>font_replace_sprite_ext</title>
   <meta name="generator" content="Adobe RoboHelp 2020" />
   <link rel="stylesheet" href="../../../../assets/css/default.css" type="text/css" />
   <script src="../../../../assets/scripts/main_script.js"></script>
@@ -14,14 +14,14 @@
 </head>
 <body>
   <!--<div class="body-scroll" style="top: 150px;">-->
-  <h1>schrift_ersetzen_schrift_ext</h1>
+  <h1><span data-field="title" data-format="default">font_replace_sprite_ext</span></h1>
   <p>Diese Funktion ersetzt eine Schriftart <span class="notranslate">sprite</span>, die Sie zuvor mit der Funktion <a href="font_add_sprite_ext.htm"><span class="inline">font_add_sprite_ext()</span></a>. Sie verwendet einen &quot;Sprite Strip&quot;, bei dem jedes Teilbild ein einzelnes Symbol oder ein Buchstabe ist, und die Bilder werden anhand der <span class="notranslate">argument</span> &quot;string_map&quot; der Funktion auf Buchstaben abgebildet. Diese <span class="notranslate">argument</span> ist eine Zeichenkette, mit der du <span data-keyref="GameMaker Name">GameMaker</span> mitteilen kannst, in welcher Reihenfolge die Teilbilder der <span class="notranslate">sprite</span> Schriftart angeordnet sind, und die beim Schreiben von Text automatisch zugeordnet wird. Wenn du also zum Beispiel eine String-Map von &quot;AaBbCcDdEeFfGgHh&quot; hast, <i>muss</i> dein <span class="notranslate">sprite</span> Font die Unterbilder in dieser Reihenfolge haben.</p>
   <p>Sie können auch festlegen, ob die Schrift proportional (<span class="inline">true</span>) oder nicht proportional (<span class="inline">false</span>) sein soll. Bei einer proportionalen Schrift richtet sich der Abstand nach der tatsächlichen Breite der Buchstaben (der Buchstabe &quot;i&quot; nimmt also weniger Platz ein als der Buchstabe &quot;w&quot;), während bei einer nicht proportionalen Schrift der Abstand auf der Breite des Teilbildes basiert, wie bei einer einzeiligen Schrift. Schließlich können Sie den Abstand zwischen den einzelnen Buchstaben beim Schreiben festlegen. Dieser kann ein beliebiger ganzzahliger Wert sein, wobei 0 für keinen Abstand steht (die Buchstaben &quot;berühren&quot; sich, wenn sie proportional sind). Die Funktion gibt einen <i>Indexwert</i> zurück, der in einer Variablen gespeichert werden sollte, da dieser in allen weiteren <span class="notranslate">codes</span> benötigt wird, die sich auf diese Schriftart beziehen.</p>
   <p>Wenn die Funktion fehlschlägt, wird sie stillschweigend abgebrochen, ohne die angegebene Schriftart <span class="notranslate">sprite</span> zu ersetzen.</p>
   <p class="note"><b><span class="note">HINWEIS</span> </b>Diese Funktion setzt voraus, dass Sie zuvor eine Schriftart <span class="notranslate">sprite</span> hinzugefügt haben, indem Sie <span style="font-size:1px;"><a href="font_add_sprite.htm"><span class="inline">font_add_sprite()</span></a></span>hinzugefügt haben, da sie diese ersetzt und nicht für Schriftarten verwendet werden kann, die in den Spielressourcen enthalten sind.</p>
   <p> </p>
   <h4>Syntax:</h4>
-  <p class="code">font_replace_sprite_ext(font, spr, string_map, prop, sep);</p>
+  <p class="code"><span data-field="title" data-format="default">font_replace_sprite_ext</span>(font, spr, string_map, prop, sep);</p>
   <table>
     <tbody>
       <tr>
