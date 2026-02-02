@@ -53,32 +53,30 @@
   <ul class="colour">
     <li>Bevor Sie dem <span class="notranslate">sequence</span> -Objekt Spuren hinzufügen können, müssen Sie sie erstellen, d.h. Sie erstellen ein Array von <i>Asset-Spuren</i>, die mit der Funktion <a href="sequence_track_new.htm"><span class="inline">sequence_track_new()</span></a>. Beachten Sie, dass es in <span class="notranslate">code</span> eigentlich keinen Unterschied zwischen Asset-Spuren und Parameter-Spuren gibt - sie sind alle einfach nur Spuren, und wie sie sich verhalten, hängt von der Art der Spur ab, die Sie erstellen, und davon, ob sie als Unterspuren einer übergeordneten Spur zugewiesen sind oder nicht. Sie würden also eine Spur für ein Asset erstellen und ihr dann Unterspuren für die verschiedenen Parameter zuweisen, und diese Unterspuren würden als <i>Parameterspuren</i> für das Asset fungieren. Im folgenden Beispiel wird eine einzelne Spur für ein Grafik-Asset erstellt, die später zu <span class="notranslate">sequence</span> hinzugefügt wird:</li>
   </ul>
-  <p class="code">var mytracks = array_create(1);<br />
-    mytracks[0] = sequence_track_new(seqtracktype_graphic);</p>
+  <p class="code">var _graphic_track = sequence_track_new(seqtracktype_graphic);<br />
+    _graphic_track.name = &quot;TestGraphicTrack&quot;;<br />
+    <br />
+    myseq.tracks[0] = _graphic_track;
+  </p>
   <ul class="colour">
     <li>Jede Asset-Spur braucht einige Daten, um <span class="notranslate">sequence</span> mitzuteilen, wie sie aussehen wird, oder ihre Position usw., und diese werden in Form von <i>Keyframes</i> hinzugefügt. Auf der obersten Ebene einer Asset-Spur können Sie Keyframes für verschiedene Dinge festlegen (die im Abschnitt über die Spurstruktur unten aufgeführt sind), aber beachten Sie, dass diese Asset-Spur-Keyframes nicht interpoliert werden, sondern einfach den Wert ändern, auf den sie sich beziehen, wenn der angegebene Frame erreicht wird. Jeder Keyframe ist eine Struktur, die zu einem Array hinzugefügt wird, und dieses Array wird dann dem Asset-Track zugewiesen. Um die Keyframe-Struktur zu erstellen, rufen wir die Funktion <a href="sequence_keyframe_new.htm"><span class="inline">sequence_keyframe_new()</span></a> auf, und um den Keyframe mit den erforderlichen Daten zu füllen, verwenden wir die Funktion <a href="sequence_keyframedata_new.htm"><span class="inline">sequence_keyframedata_new()</span></a>:</li>
   </ul>
-  <p class="code">// Create a new keyframe struct for a graphics asset track and add it to an array (as you can have multiple keys in a frame)<br />
-    var graphickeys = array_create(1);<br />
-    graphickeys[0] = sequence_keyframe_new(seqtracktype_graphic);<br />
-    // Set the graphics keyframe top level data for the keyframe position and length, etc.<br />
-    graphickeys[0].frame = 0;<br />
-    graphickeys[0].length = 1;<br />
-    graphickeys[0].stretch = true;<br />
-    graphickeys[0].disabled = false;<br />
+  <p class="code">// Create a new keyframe struct for a graphics asset track<br />
+    var _graphic_keys = sequence_keyframe_new(seqtracktype_graphic);<br />
     <br />
-    // Create the channel data that will go into this keyframe (again an array, as each key can have multiple channels of keyframe data)<br />
-    var graphickeydata = array_create(1);<br />
-    graphickeydata[0] = sequence_keyframedata_new(seqtracktype_graphic);<br />
-    graphickeydata[0].spriteIndex = spr_Platform;<br />
-    graphickeydata[0].channel = 0;<br />
+    // Set the graphics keyframe top-level data for the keyframe position, length, etc.<br />
+    _graphic_keys.frame = 0;<br />
+    _graphic_keys.length = 1;<br />
+    _graphic_keys.stretch = true;<br />
+    _graphic_keys.disabled = false;<br />
     <br />
-    // Add the keyframe data channels to the graphics track keyframe<br />
-    graphickeys[0].channels = graphickeydata;<br />
+    // Create the channel data that will go into this keyframe (note that <span>each key can have multiple channels of keyframe data)</span><br />
+    _graphic_keys.channels[0] = sequence_keyframedata_new(seqtracktype_graphic);<br />
+    _graphic_keys.channels[0].spriteIndex = spr_platform;<br />
+    _graphic_keys.channels[0].channel = 0;<br />
     <br />
-    // Add the definied keyframes to the track<br />
-    mytracks[0].name = &quot;TestGraphicTrack&quot;;<br />
-    mytracks[0].keyframes = graphickeys;
+    // Assign the keyframe struct as the first keyframe of the graphic track<br />
+    _graphic_track.keyframes[0] = _graphic_keys;
   </p>
   <ul class="colour">
     <li>Nun müssen wir eine Parameterspur erstellen, die wir der soeben erstellten Grafikspur als Unterspur zuweisen. Dies geschieht auf ähnliche Weise wie oben gezeigt, nur müssen wir der Spur einen Namen geben, der ihren Zweck angibt, in diesem Fall &quot;Position&quot;, da wir diese Spur verwenden werden, um die Grafikspur im Verlauf der <span class="notranslate">sequence</span> Animationsframes zu bewegen:</li>
@@ -95,30 +93,34 @@
     paramkeys[1] = sequence_keyframe_new(seqtracktype_real);<br />
     paramkeys[1].frame = 120;<br />
     <br />
-    // Create the keyframe data structs<br />
-    var paramkeydata1 = array_create(2);<br />
-    paramkeydata1[0] = sequence_keyframedata_new(seqtracktype_real);<br />
-    paramkeydata1[0].channel = 0; // Channel 0 for a position track is the X position<br />
-    paramkeydata1[0].value = 0;<br />
+    // Create the keyframe and keyframe data structs to hold the parameter channel data and assign them<br />
+    var _keyframe;<br />
     <br />
-    paramkeydata1[1] = sequence_keyframedata_new(seqtracktype_real);<br />
-    paramkeydata1[1].channel = 1; // Channel 1 for a position track is the Y position<br />
-    paramkeydata1[1].value = 0;<br />
+    // Keyframe 1<br />
+    _keyframe = sequence_keyframe_new(seqtracktype_real);<br />
+    _keyframe.frame = 0;<br />
     <br />
-    var paramkeydata2 = array_create(2);<br />
-    paramkeydata2[0] = sequence_keyframedata_new(seqtracktype_real);<br />
-    paramkeydata2[0].channel = 0;<br />
-    paramkeydata2[0].value = room_width;<br />
-    paramkeydata2[1] = sequence_keyframedata_new(seqtracktype_real);<br />
-    paramkeydata2[1].channel = 1;<br />
-    paramkeydata2[1].value = room_height;<br />
+    _keyframe.channels[0] = sequence_keyframedata_new(seqtracktype_real);<br />
+    _keyframe.channels[0].channel = 0;  // Channel 0 for a position track is the X position<br />
+    _keyframe.channels[0].value = 0;<br />
+    _keyframe.channels[1] = sequence_keyframedata_new(seqtracktype_real);<br />
+    _keyframe.channels[1].channel = 1;  // Channel 1 for a position track is the Y position<br />
+    _keyframe.channels[1].value = 0;<br />
     <br />
-    // Assign the keyframe data structs to the channels for each key<br />
-    paramkeys[0].channels = paramkeydata1;<br />
-    paramkeys[1].channels = paramkeydata2;<br />
+    _param_track.keyframes[0] = _keyframe;<br />
     <br />
-    // Assign the keys to the parameter track<br />
-    paramtracks[0].keyframes = paramkeys;
+    // Keyframe 2<br />
+    _keyframe = sequence_keyframe_new(seqtracktype_real);<br />
+    _keyframe.frame = 120;<br />
+    <br />
+    _keyframe.channels[0] = sequence_keyframedata_new(seqtracktype_real);<br />
+    _keyframe.channels[0].channel = 0;<br />
+    _keyframe.channels[0].value = room_width;<br />
+    _keyframe.channels[1] = sequence_keyframedata_new(seqtracktype_real);<br />
+    _keyframe.channels[1].channel = 1;<br />
+    _keyframe.channels[1].value = room_height;<br />
+    <br />
+    _param_track.keyframes[1] = _keyframe;
   </p>
   <ul class="colour">
     <li>Nun müssen wir nur noch die Parameterspur als Unterspur zu unserer Hauptgrafikspur zuweisen, die wir zu Beginn erstellt haben, und dann diese Spuren der <span class="notranslate">sequence</span> zuweisen, von der wir dann eine Instanz im Raum erstellen können:</li>
